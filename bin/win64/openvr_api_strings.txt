@@ -284,6 +284,7 @@ $Ib?s
 11Y@
 1e+9999
 1eaB@
+2\vpP
 3 FB
 37>k
 3>N;kU
@@ -612,7 +613,7 @@ QAf?
 QueryDepthSList
 QueryPerformanceCounter
 QueryUmsThreadInformation
-RSDS
+RSDSn
 RaiseException
 ReadConsoleW
 ReadFile

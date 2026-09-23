@@ -214,6 +214,7 @@ Failed to connect to pipe %s because %s... retrying
 Failed to connect to pipe %s because %s\n
 Failed to import client event handle from pipe %s after connecting\n
 Failed to import server event handle from pipe %s after connecting\n
+Failed to parse log message
 Failed to write app container status to pipe %s after connecting because %s\n
 Failed to write event process handle after connecting because %s\n
 Format string parse failure
@@ -513,7 +514,6 @@ enable
 enableCameraSurfaces
 enableHmdLatencyHidingDisplayOffset
 enableHomeApp
-enableHomeApp2
 environmentMode
 exception thrown in JSON library
 exit

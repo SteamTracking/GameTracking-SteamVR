@@ -148,6 +148,7 @@ AITAPI_IspCommand
 AITAPI_MmpCommand
 AITAPI_OpenDeviceEx
 ASSERT: "%s" at %s:%d.\n
+A[9H"G
 Adobe
 AitH264Capture.dll
 AitUVCExtApi.dll
@@ -177,6 +178,7 @@ FORMAT=32-bit_rle_rgbe
 Failed
 Failed to acquire raw camera block for writing: %d
 Failed to join thread CameraWorkThread /+/ TID: %d\n
+Failed to parse log message
 FailedToGetFirmwareVersion
 FreeLibrary
 GetCameraHALInterface
@@ -220,6 +222,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerInternal_XXX
 IVRSettingsInternal_001
 IVRSettings_003
@@ -257,7 +260,7 @@ PermissionDenied
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS
+RSDSZ
 RaiseException
 Received camera frame of size %u that is larger than the block queue we are copying into %u
 ResetEvent

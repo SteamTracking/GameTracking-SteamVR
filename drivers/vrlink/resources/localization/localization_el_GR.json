@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Ανενεργή",
 	"Setting_AllowMultipleLinks": "Να επιτρέπονται πολλοί σύνδεσμοι",
 	"Setting_EnableHmdAutoConnect": "Αυτόματη σύνδεση υποστηριζόμενων headset με Steam Link κατά την εκκίνηση του SteamVR.",
+	"Setting_Sharpening": "Αύξηση ευκρίνειας της εικόνας πριν την κωδικοποίηση (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Ένταση ευκρίνειας",
 	"svl_hand_interaction_augmented": "Χειριστήριο ανίχνευσης κίνησης χεριών",
 	"/input/index_pinch": "Ένωση (pinch) αντίχειρα και δείκτη",
 	"/input/middle_pinch": "Ένωση (pinch) αντίχειρα και μέσου",

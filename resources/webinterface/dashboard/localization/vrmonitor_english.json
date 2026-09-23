@@ -195,6 +195,12 @@
 	"Settings_PauseOnLocked": "Pause VR when computer is locked",
 	"Settings_IpdHUD": "IPD HUD",
 	"Settings_IpdHUDDesc": "Show the IPD heads-up display, when IPD changes",
+	"Settings_DominantEye": "Dominant Eye",
+	"Settings_DominantEye_Explainer": "Select the preferred eye for screenshots and spectator view.",
+	"Settings_EyeLeft": "Left",
+	"Settings_EyeRight": "Right",
+	"Settings_SpectatorViewStabilize": "Smooth spectator view",
+	"Settings_SpectatorViewStabilizeDesc": "Apply stabilization to the headset view streamed via Steam Link to other devices for spectating.",
 	"Settings_OverlayRenderQuality": "Overlay Render Quality",
 	"Settings_Auto_Parenthesized": "Auto (%1$s)",
 	"Settings_Auto": "Auto",
@@ -389,13 +395,7 @@
 	"CameraTestStatus_Success": "Success",
 	"CameraTestStatus_Failure": "Failed",
 
-	"Settings_EyeTracking_Enable": "Enable Eye Tracking",
-	"Settings_EyeTracking_SystemAccessibility_Header": "System and Accessibility Options",
-	"Settings_EyeTracking_PupilCompensation": "Pupil Perspective Compensation",
-	"Settings_EyeTracking_PupilCompensation_Description": "Accounts for changes in IPD and per-eye perspective caused by looking around.",
-	"Settings_EyeTracking_GazeAwareReprojection": "Gaze-Aware Reprojection",
-	"Settings_EyeTracking_GazeAwareReprojection_Description": "Uses eye tracking to reduce judder for VR content running at less than full framerate.",
-
+	"Settings_EyeTracking": "Eye Tracking",
 	"Settings_PlayArea_Size": "Configured size",
 
 	"Advanced_Appearance": "Appearance",
@@ -456,6 +456,7 @@
 	"Settings_Dashboard_KeyboardPrivacy_Disabled": "Disabled",
 	"Settings_Dashboard_KeyboardPrivacy_DisabledWarning": "Warning: Disabling keyboard privacy will allow games to stream controller poses while the VR keyboard is in use. Please be careful entering passwords or other sensitive information on the VR keyboard while using multi-player / social applications.",
 	"Settings_Dashboard_LaserPointerLength": "Laser Pointer Length",
+	"Settings_Dashboard_DimGameWhenDashboardVisible": "Dim Game When Dashboard Visible",
 
 	"SettingsTime_5s": "5 Seconds",
 	"SettingsTime_30s": "30 Seconds",
@@ -477,6 +478,8 @@
 	"Settings_Chaperone_SuitableForMedium": "Suitable for medium playspaces.",
 	"Settings_Chaperone_SuitableForLarge": "Suitable for large playspaces.",
 
+	"Settings_Chaperone": "Chaperone",
+	"Settings_Chaperone_EditAppearance": "Edit Chaperone Appearance",
 	"Settings_Chaperone_Style": "Chaperone style",
 	"Settings_Chaperone_Style_0": "Grid (Dense)",
 	"Settings_Chaperone_Style_1": "Grid (Medium)",
@@ -485,6 +488,7 @@
 	"Settings_Chaperone_Style_4": "Floor only",
 
 	"Settings_Playspace_Environment": "Environment",
+	"Settings_Playspace_Environment_Style": "Environment Style",
 	"Settings_Playspace_Environment_Image": "Image",
 	"Settings_Playspace_Environment_Aurora": "Aurora",
 	"Settings_Playspace_Environment_Aurora_Brightness": "Brightness",

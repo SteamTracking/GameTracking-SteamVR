@@ -106,7 +106,7 @@ KERNEL32.dll
 LeaveCriticalSection
 MSVCP140.dll
 QueryPerformanceCounter
-RSDS
+RSDS~
 ResetEvent
 SetEvent
 SetUnhandledExceptionFilter

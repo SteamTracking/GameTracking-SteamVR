@@ -455,8 +455,8 @@ $tAUUPE
 .?AV?$_Func_impl_no_alloc@V?$_Binder@U_Unforced@std@@P8CVRMailbox@@EAAXAEBVValue@Json@@@ZPEAV3@AEBU?$_Ph@$00@2@@std@@XAEBVValue@Json@@@std@@
 .?AV?$_Iosb@H@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_242c27bc71bb2387b77685fbfac46091>@@@std@@U?$default_delete@V?$tuple@V<lambda_242c27bc71bb2387b77685fbfac46091>@@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_688183ccff0c2936f7ffcd467b71aa30>@@@std@@U?$default_delete@V?$tuple@V<lambda_688183ccff0c2936f7ffcd467b71aa30>@@@std@@@2@@std@@@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@U?$default_delete@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@@2@@std@@@std@@
 .?AV?$_Ref_count@UMultiCameraColorFrame@ST@@@std@@
 .?AV?$_Ref_count_obj@UMultiCameraColorFrame@ST@@@std@@
 .?AV?$_Ref_count_obj@V?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@nlohmann@@@std@@
@@ -837,8 +837,8 @@ $tAUUPE
 0-pixel image
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899"
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899(r$
 0123456789abcdef
-0a\v6<
 0x%08llx
 1.2.5
 1/2/4/8/16-bit only
@@ -1489,12 +1489,14 @@ Failed to load external 'uri' for image[
 Failed to parse JSON object\n
 Failed to parse `bufferView` for image[
 Failed to parse `uri` for image[
+Failed to parse log message
 Failed to read config when activating watchdog on button press: %s\n
 Failed to read file: 
 Failed to register/find class in DeviceMessageWindow_t::Create
 Failed to send OTGT result\n
 Failed to send pairing result mailbox message. Maybe it didn't have a return address?\n
 Failed to send reply to discover_dongles message: %d\n
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to set thread %p priority: invalid priority %d\n
 Failed to start pairing on dongle %s\n
 Failed to write file %s\n
@@ -1785,6 +1787,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_004
 IVRServerDriverHost_006
 IVRServerInternal_XXX
@@ -2153,8 +2156,7 @@ RENDERDOC Enabled
 RENDERDOC_GetAPI
 RENDERDOC_GetAPI failed with code %d
 RPCRT4.dll
-RSDS
-R\vpb
+RSDSA
 Radio
 RaiseException
 Reached an unintended state: CPPTYPE_MESSAGE
@@ -2278,7 +2280,6 @@ SessionID
 Set column correction %f %d %f %d\n
 Set index backlight gain: %f\n
 Set initial
-Set thread %p priority to: %d\n
 SetAllocatedMessage
 SetBool
 SetDouble

@@ -127,6 +127,7 @@ EnterCriticalSection
 Enumerated %zu vulkan displays\n
 EventRegister
 EventUnregister
+Failed to parse log message
 Format string parse failure
 FreeLibrary
 GetCurrentProcessId

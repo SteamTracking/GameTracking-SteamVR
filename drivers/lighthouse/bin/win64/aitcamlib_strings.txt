@@ -144,6 +144,7 @@ AitH264Capture.dll
 AitUVCExtApi.dll
 BMP RLE
 CAMCMD_GET_OPENCAMERA_RESULT\n
+CFailed to parse log message
 CallCreateObject
 CameraWork
 CloseHandle
@@ -209,6 +210,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerInternal_XXX
 IVRSettingsInternal_001
 IVRSettings_003
@@ -242,7 +244,7 @@ PermissionDenied
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDSx\
+RSDS&rW$z
 RaiseException
 Received camera frame of size %u that is larger than the block queue we are copying into %u
 ResetEvent

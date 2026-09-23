@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Desligado",
 	"Setting_AllowMultipleLinks": "Permitir várias ligações",
 	"Setting_EnableHmdAutoConnect": "Conectar automaticamente headsets compatíveis ao iniciar SteamVR",
+	"Setting_Sharpening": "Aumentar a nitidez da imagem antes da codificação (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Intensidade da nitidez",
 	"svl_hand_interaction_augmented": "Comando de deteção das mãos",
 	"/input/index_pinch": "Beliscar - dedo indicador",
 	"/input/middle_pinch": "Beliscar - dedo médio",

@@ -228,7 +228,6 @@ $Ib?s
 11Y@
 11eU%
 2\n0\tP
-2dLLD PDB.
 37>k
 3>N;kU
 3>fvw
@@ -515,6 +514,7 @@ LCIDToLocaleName
 LCMapStringEx
 LCMapStringW
 LINEAR_HISTOGRAM
+LLD PDB.
 LOG_FATAL
 LWG>
 LWW>

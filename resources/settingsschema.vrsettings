@@ -166,11 +166,6 @@
 	},
 
 	{
-		"title":		"#Settings_SectionTitle_EyeTracking",
-		"controller":	"eyetracking_settings"
-	},
-
-	{
 		"title":		"#Settings_SectionTitle_StartupShutdown",
 		"controller":	"startupshutdown_settings",
 		"show_without_hmd": true,

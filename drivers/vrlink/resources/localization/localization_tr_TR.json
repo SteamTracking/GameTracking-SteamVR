@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Kapalı",
 	"Setting_AllowMultipleLinks": "Birden Fazla Bağlantıya İzin Ver",
 	"Setting_EnableHmdAutoConnect": "SteamVR başlatılırken desteklenen Steam Link başlıklarına otomatik olarak bağlanılsın",
+	"Setting_Sharpening": "Kodlama öncesi görüntüyü keskinleştir (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Keskinleştirme Düzeyi",
 	"svl_hand_interaction_augmented": "El İzleme Kontrolcüsü",
 	"/input/index_pinch": "Parmak Birleşimi (Baş ve İşaret)",
 	"/input/middle_pinch": "Parmak Birleşimi (Baş ve Orta)",

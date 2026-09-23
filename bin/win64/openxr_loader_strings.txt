@@ -11,6 +11,7 @@
  filesystem operations failed for path  
  for detail.\n
  has invalid API Version.  Skipping layer.
+ has invalid implementation version.
  in HKEY_LOCAL_MACHINE
  in either HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
  is being ignored due to running from an elevated context. The value '
@@ -327,8 +328,8 @@ Unloading any previously loaded runtime
 VCRUNTIME140.dll
 VUID-XrApiLayerProperties-type-type: unknown type in api_layer_properties
 VUID-XrApplicationInfo-applicationName-parameter
+VUID-XrApplicationInfo-applicationName-parameter: application name must not be empty.
 VUID-XrApplicationInfo-engineName-parameter
-VUID-XrApplicationInfo-engineName-parameter: application name can not be empty.
 VUID-XrExtensionProperties-type-type
 VUID-XrInstanceCreateInfo-applicationInfo-parameter
 VUID-XrInstanceCreateInfo-createFlags-zerobitmask
@@ -420,7 +421,6 @@ api_layer
 api_version
 application name missing NULL terminator.
 assert json failed
-atoi
 bad allocation
 bad array new length
 bad cast
@@ -470,7 +470,6 @@ invalid messenger pointer
 invalid properties
 invalid string position
 isValidJson indicates 
-jT9M
 keylength >= 2^30
 labelInfo must be non-NULL
 layer 
@@ -503,6 +502,8 @@ strictRoot
 string too long
 strncmp
 strncpy
+strtoul
+tT>c.
 true
 ungetc
 unknown type in properties

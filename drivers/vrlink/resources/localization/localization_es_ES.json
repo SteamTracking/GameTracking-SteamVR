@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "No",
 	"Setting_AllowMultipleLinks": "Permitir múltiples conexiones",
 	"Setting_EnableHmdAutoConnect": "Conectar automáticamente los visores compatibles con Steam Link al iniciar SteamVR",
+	"Setting_Sharpening": "Aumentar la nitidez de la imagen antes de la codificación (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Intensidad de la nitidez",
 	"svl_hand_interaction_augmented": "Mando del seguimiento de manos",
 	"/input/index_pinch": "Pellizco con el índice",
 	"/input/middle_pinch": "Pellizco con el dedo corazón",

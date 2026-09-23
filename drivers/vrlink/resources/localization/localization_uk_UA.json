@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Вимк.",
 	"Setting_AllowMultipleLinks": "Дозволити кілька з’єднань",
 	"Setting_EnableHmdAutoConnect": "Автоматично підключати підтримувані Steam Link шоломи під час запуску SteamVR",
+	"Setting_Sharpening": "Підвищувати різкість зображення перед кодуванням (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Інтенсивність різкості",
 	"svl_hand_interaction_augmented": "Контролер для відстеження рук",
 	"/input/index_pinch": "Змикання зі вказівним пальцем",
 	"/input/middle_pinch": "Змикання із середнім пальцем",

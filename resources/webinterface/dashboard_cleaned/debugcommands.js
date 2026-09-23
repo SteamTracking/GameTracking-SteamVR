@@ -810,7 +810,7 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [967, 991, 602, 305, 170, 452, 797, 906, 57, 300], () =>
+  var _ = _._(void 0, [967, 991, 602, 305, 170, 452, 797, 906, 300, 57], () =>
     _(9513),
   );
   _ = _._(_);

@@ -617,10 +617,7 @@ var CLSTAMP = "steamdb";
                   (_.properties.translation = _(_, "translation")),
                   (_.properties.rotation = _(_, "rotation")),
                   (_.properties.scale = _(_, "scale")),
-                  (_.properties["should-head-align"] = _(
-                    _,
-                    "should-head-align",
-                  )),
+                  (_.properties["target-mode"] = _(_, "target-mode")),
                   (_.properties["stop-distance"] = _(_, "stop-distance")),
                   (_.properties["start-angle"] = _(_, "start-angle")),
                   (_.properties["start-quat-difference"] = _(
@@ -2518,15 +2515,19 @@ var CLSTAMP = "steamdb";
             );
         }
         get latestMeasuredPanelWorldHeight() {
-          return this.m_lastPanelMeasurement
-            ? this.m_lastPanelMeasurement.m_flRawPanelHeight *
-                this.m_lastPanelMeasurement.m_flTransformScaleDuringMeasure
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = this.m_lastPanelMeasurement) || void 0 === _
+                ? void 0
+                : _.m_flPanelHeight) && void 0 !== _
+            ? _
             : 0;
         }
         get latestMeasuredPanelLocalHeight() {
-          return this.m_lastPanelMeasurement
-            ? this.latestMeasuredPanelWorldHeight /
-                this.mainPanelWorldScaleIgnoringResizing
+          const _ = this.mainPanelWorldScaleIgnoringResizing;
+          return this.m_lastPanelMeasurement && 0 != _
+            ? this.latestMeasuredPanelWorldHeight / _
             : 0;
         }
         get mainPanelWorldScaleIgnoringResizing() {
@@ -2798,9 +2799,10 @@ var CLSTAMP = "steamdb";
           var _;
           return (
             !!this.isActiveDashboardFrameInDiminishedMode ||
-            !(null === (_ = this.panels.controlsPanel) || void 0 === _
+            (!(null === (_ = this.panels.controlsPanel) || void 0 === _
               ? void 0
-              : _.hasGamepadFocus)
+              : _.hasGamepadFocus) &&
+              !this.inputFocus.additionalOptionsHaveGamepadFocus)
           );
         }
         get frameMenuVisibilityRequiresLaser() {
@@ -3496,7 +3498,8 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         CreateControlsItemID: void 0,
         OnControlsItemRender: void 0,
@@ -3641,34 +3644,36 @@ var CLSTAMP = "steamdb";
         });
       }
       function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(_, null),
-          _.createElement(
-            _,
-            {
-              onlyVisibleIn: "additional-options",
-            },
-            !1,
-            _.createElement(_, null),
-            _.createElement(_, null),
-            _.createElement(_, {
-              controller: "left",
-            }),
-            _.createElement(_, {
-              controller: "right",
-            }),
-          ),
-        );
+        return _._.isShowingVRGuidedTour
+          ? null
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(
+                _,
+                {
+                  onlyVisibleIn: "additional-options",
+                },
+                !1,
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, {
+                  controller: "left",
+                }),
+                _.createElement(_, {
+                  controller: "right",
+                }),
+              ),
+            );
       }
       function _(_) {
         const { frame: _ } = (0, _._)(),
@@ -5947,6 +5952,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7264,6 +7270,26 @@ var CLSTAMP = "steamdb";
                 fill: "currentColor",
               }),
             );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_VREnvironment",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            _,
+          ),
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M18 2A16 16 0 1 1 18 34A16 16 0 1 1 18 2ZM6 26.05L14.5 15.05L18 19.58L19.4 21.39L22 18.05L28.22 26.05ZM25 10.05A3 3 0 1 1 25 16.05A3 3 0 1 1 25 10.05Z",
+          }),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

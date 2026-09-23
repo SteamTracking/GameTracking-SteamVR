@@ -65,11 +65,13 @@ ASCII//TRANSLIT
 April
 August
 December
+Failed to parse log message
 February
 Friday
 GCC: (SteamRT 9.3.0-17+steamrt2.5+bsrt2.1) 9.3.1 20210309
 GLIBC_2.12
 GLIBC_2.14
+GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.3
 GLIBC_2.3.2
@@ -288,6 +290,8 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
+__cxa_thread_atexit
+__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __duplocale
@@ -479,6 +483,7 @@ pthread_condattr_init
 pthread_condattr_setclock
 pthread_create
 pthread_detach
+pthread_getname_np
 pthread_getschedparam
 pthread_getspecific
 pthread_join
@@ -495,7 +500,6 @@ pthread_mutexattr_settype
 pthread_once
 pthread_self
 pthread_setname_np
-pthread_setschedparam
 pthread_setspecific
 punct
 pure virtual method called\n
@@ -506,9 +510,6 @@ readdir
 realloc
 reference temporary #
 reinterpret_cast
-rewind
-sched_get_priority_max
-sched_get_priority_min
 sched_getparam
 sched_getscheduler
 sched_setaffinity

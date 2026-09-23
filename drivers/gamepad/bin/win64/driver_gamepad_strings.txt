@@ -86,6 +86,7 @@ CreateEventW
 DeleteCriticalSection
 DisableThreadLibraryCalls
 EnterCriticalSection
+Failed to parse log message
 Gamepad
 GetCurrentProcessId
 GetCurrentThreadId
@@ -120,7 +121,7 @@ MSVCP140.dll
 MainThrd
 Out of thread local storage!\n
 QueryPerformanceCounter
-RSDSJ
+RSDSMGe
 RaiseException
 ResetEvent
 RtlCaptureContext

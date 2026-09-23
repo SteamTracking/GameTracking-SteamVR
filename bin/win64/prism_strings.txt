@@ -237,7 +237,7 @@
 .?AV?$_Func_base@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@P6AXW4ELogLevel@@PEBDPEAX@ZXW41@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@U?$default_delete@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_ad411c34508d3fca01cb19636afa7601>@@UPrismRunParameters_t@@@std@@U?$default_delete@V?$tuple@V<lambda_ad411c34508d3fca01cb19636afa7601>@@UPrismRunParameters_t@@@std@@@2@@std@@@std@@
 .?AV?$codecvt@_WDU_Mbstatet@@@std@@
 .?AV?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@
@@ -614,6 +614,8 @@ Failed to connect to pipe %s because %s... retrying
 Failed to connect to pipe %s because %s\n
 Failed to import client event handle from pipe %s after connecting\n
 Failed to import server event handle from pipe %s after connecting\n
+Failed to parse log message
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to write app container status to pipe %s after connecting because %s\n
 Failed to write event process handle after connecting because %s\n
 Foreign timelines unsupported. Leaking resource.
@@ -906,7 +908,7 @@ RPS_ERROR_UNSUPPORTED_VERSION_TOO_OLD
 RPS_ERROR_VALIDATION_FAILED
 RPS_FAILED(m_status)
 RPS_OK
-RSDS\t>`
+RSDS
 RaiseException
 RasterizerState
 RaytracingPipeline
@@ -966,7 +968,6 @@ SV_Target
 SV_VertexBuffer
 SV_Viewport
 Semantic index range overlap
-Set thread %p priority to: %d\n
 SetEvent
 SetNamedPipeHandleState
 SetSecurityDescriptorDacl

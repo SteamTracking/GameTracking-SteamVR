@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Av",
 	"Setting_AllowMultipleLinks": "Tillåt flera anslutningar",
 	"Setting_EnableHmdAutoConnect": "Anslut automatiskt Steam Link-HMD som stöds vid start av SteamVR",
+	"Setting_Sharpening": "Gör bilden skarpare innan kodning (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Skärpningsstyrka",
 	"svl_hand_interaction_augmented": "Kontroll med handspårning",
 	"/input/index_pinch": "Nyp med pekfinger",
 	"/input/middle_pinch": "Nyp med långfinger",

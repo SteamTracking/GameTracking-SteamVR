@@ -703,7 +703,7 @@ $\t?contains@QRectF@@QEBA_NAEBVQPointF@@@Z
 1!?widget@QTabWidget@@QEBAPEAVQWidget@@H@Z
 100%
 1000
-11:37:58
+11:16:42
 1DoAcquireData()
 1DoInit()
 1DoParseString( const QString & )
@@ -3844,6 +3844,7 @@ Failed to initialize mailbox!
 Failed to initialize mailbox!\n
 Failed to initialize settings.
 Failed to load playlist %s\n
+Failed to parse log message
 Failed to read device vid/pid.
 Failed to retrieve arguments for SteamVR Workshop Tools\n
 Failed to retrieve binary path for SteamVR Workshop Tools\n
@@ -4408,6 +4409,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_004
 IVRServerDriverHost_006
 IVRServerInternal_XXX
@@ -5702,7 +5704,7 @@ RPCRT4.dll
 RSDS
 RSSI: %1\n
 R\v?find@QPlainTextEdit@@QEAA_NAEBVQString@@V?$QFlags@W4FindFlag@QTextDocument@@@@@Z
-R\vpD
+R\vp4
 Radio
 Radio Version:
 Radio Version: \t%1 / %2 %3 %4\n
@@ -5978,7 +5980,7 @@ See
 Select System Report
 SelectablePart
 SelectableParts
-Sep 15 2026
+Sep 22 2026
 Serial: %1\n
 SetCurrentProcessExplicitAppUserModelID
 SetEnvironmentVariableA
@@ -6340,6 +6342,8 @@ URL Protocol
 URL:vrmonitor Protocol
 USB Service Busy (140)
 USB\VID_%04X&PID_%04X
+USB\VID_28DE&PID_2432
+USB\VID_2C7C&PID_8206
 USB\n\nUSB Connections:\n\n(?<USB>(.+\n{1,2}){2,})
 USER32.dll
 USERNAME
@@ -7779,7 +7783,6 @@ enableBluetooth
 enableCameraSurfaces
 enableHmdLatencyHidingDisplayOffset
 enableHomeApp
-enableHomeApp2
 enableSafeMode
 enableYAMLCompatibility
 enableappcontainers

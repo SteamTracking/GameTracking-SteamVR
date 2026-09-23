@@ -371,6 +371,7 @@ Extended Error: %s, %s\n
 Failed
 Failed to allocate memory
 Failed to open DFU zip file '%s'\n
+Failed to parse log message
 Failed. Base needs power cycle.\n
 Failed.\n
 File not found in the zipfile
@@ -467,7 +468,7 @@ RANDOM
 RAW:
 READ -H %4.4X
 RESET
-RSDS
+RSDSf2
 RaiseException
 ReadFile
 ReadPipeResponse

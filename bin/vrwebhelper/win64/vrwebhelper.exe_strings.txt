@@ -92,7 +92,6 @@
 .?AV<lambda_3590f0bd29cef4dd034fee01444a96da>@@
 .?AV<lambda_36bb9a91bae298d0d11850f8f507a76e>@@
 .?AV<lambda_375b4c886500551c6539c23c0dd9be63>@@
-.?AV<lambda_395c2e9012b741f3057309f0a349632d>@@
 .?AV<lambda_39c7d6cb209b5b633973f2db14de820a>@@
 .?AV<lambda_3a83a8eb888468dfb7ce80e3178cb0e7>@@
 .?AV<lambda_3f4d6bba63b965789049414bf06d4a76>@@
@@ -295,7 +294,6 @@
 .?AV?$_Func_impl_no_alloc@V<lambda_3590f0bd29cef4dd034fee01444a96da>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_36bb9a91bae298d0d11850f8f507a76e>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_375b4c886500551c6539c23c0dd9be63>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_395c2e9012b741f3057309f0a349632d>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_39c7d6cb209b5b633973f2db14de820a>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3a83a8eb888468dfb7ce80e3178cb0e7>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3f4d6bba63b965789049414bf06d4a76>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
@@ -647,8 +645,8 @@
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/remoteClientRefreshRate
 /vrlink_client_isSteamVR
-11:37:58
-126.0.0-HEAD.3163+g5c4eb82+chromium-126.0.6478.183
+11:16:42
+126.0.0-HEAD.3171+gbbb7596+chromium-126.0.6478.183
 127.0.0.1
 1e+9999
 5I)7
@@ -946,6 +944,7 @@ Failed to init mailbox\n
 Failed to initialize VR for CEF renderer process. (Error: %s)\n
 Failed to initialize VR for main CEF process. (Error: %s)\n
 Failed to parse STEAMVR_GPU_LUID=%s. defaulting to GPU 0
+Failed to parse log message
 Failed to read overlay settings file (%s)(%d), exiting ...
 Failed to register method %s: %s already exists
 Failed to register method with empty name
@@ -1134,6 +1133,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerInternal_XXX
 IVRSettingsInternal_001
 IVRSettings_003
@@ -1403,7 +1403,7 @@ QueryPerformanceFrequency
 QuitSceneApp
 QuitSteamVR
 RPCRT4.dll
-RSDS
+RSDSe
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n
@@ -1523,7 +1523,7 @@ Searching for LUID:
 Second argument must be a TransformTRS
 Second argument must be a string
 See 
-Sep 15 2026
+Sep 22 2026
 SetCurrentProcessExplicitAppUserModelID
 SetEnvironmentVariableA
 SetEvent
@@ -2008,7 +2008,6 @@ VRMonitor.SetLog
 VRMonitor.SetThisOpenXRRuntimeToCurrent
 VRMonitor.ShowBasestationSettings
 VRMonitor.ShowBluetoothSettings
-VROverlay.BAllowAurora
 VROverlay.FindOverlay
 VROverlay.GetAuroraPalettes
 VROverlay.GetOverlayMouseScale
@@ -2338,9 +2337,9 @@ c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\cefexecuteprocess_handler.
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_app.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_app.cpp:687
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5007
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5117
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5560
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5001
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5111
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5554
 cefMaxFrameRate
 cef_api_hash
 cef_browser_host_create_browser

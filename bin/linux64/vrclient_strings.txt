@@ -345,10 +345,12 @@ $3br
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
+*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZL34StartWorkerThreadForThreadPriorityRKSt8functionIFbiRKSsEEEUlvE_EEEEEE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN22CThreadWatchdogManager13InitWatchdogsEvEUlvE_EEEEEE
 *Z17sxr_xrLocateViewsP11XrSession_TPK16XrViewLocateInfoP11XrViewStatejPjP6XrViewEUlRSt6vectorIS7_SaIS7_EEE_
 *Z17sxr_xrSyncActionsP11XrSession_TPK17XrActionsSyncInfoEUlPK30XrActiveActionSetPrioritiesEXTE_
 *Z19ProcessDpadBindingsjPK25XrBindingModificationsKHRPK36XrInteractionProfileSuggestedBindingPK24XrActionSuggestedBindingP16SuggestedBindingRSt6vectorImSaImEEEUlPK34XrInteractionProfileDpadBindingEXTE_
+*Z22ThreadSetPriorityLinuxEUliRKSsE_
 *Z23ProcessAnalogThresholdsbjPK25XrBindingModificationsKHRPK10CSxrActionPK36XrInteractionProfileSuggestedBindingPK24XrActionSuggestedBindingPKSt3setI12XrActionTypeSt4lessISC_ESaISC_EEP16SuggestedBindingEUlPK40XrInteractionProfileAnalogThresholdVALVEE0_
 *Z23ProcessAnalogThresholdsbjPK25XrBindingModificationsKHRPK10CSxrActionPK36XrInteractionProfileSuggestedBindingPK24XrActionSuggestedBindingPKSt3setI12XrActionTypeSt4lessISC_ESaISC_EEP16SuggestedBindingEUlPK40XrInteractionProfileAnalogThresholdVALVEE_
 *Z24sxr_xrGetActionStatePoseP11XrSession_TPK20XrActionStateGetInfoP17XrActionStatePoseEUlP10XrAction_TmS5_PmE_
@@ -541,7 +543,7 @@ $3br
 /data/src/thirdparty/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /data/src/vrclient/hmdlatest.cpp
 /data/src/vrclient/ixrbinding.h
-/data/src/vrclient/legacyinput.cpp:542
+/data/src/vrclient/legacyinput.cpp:541
 /data/src/vrclient/openxr_common.cpp
 /data/src/vrclient/openxr_common.h
 /data/src/vrclient/openxr_compositor_openvr.cpp
@@ -668,7 +670,7 @@ $3br
 /data/src/vrclient/vrcompositorclient.cpp
 /data/src/vrclient/vrcompositorclient.cpp:1534
 /data/src/vrclient/vrcompositorclient.cpp:1790
-/data/src/vrclient/vrcompositorclient.cpp:2601
+/data/src/vrclient/vrcompositorclient.cpp:2637
 /data/src/vrclient/vrcompositorclient.cpp:464
 /data/src/vrclient/vrcompositorsharedtextures.cpp
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2568
@@ -679,7 +681,7 @@ $3br
 /data/src/vrclient/vrcompositorsharedtextures.cpp:4301
 /data/src/vrclient/vrdebug.cpp:49
 /data/src/vrclient/vrdebug.cpp:60
-/data/src/vrclient/vrinput.cpp:1612
+/data/src/vrclient/vrinput.cpp:1609
 /data/src/vrclient/vrmailboxclient.cpp
 /data/src/vrclient/vroverlay.cpp:1175
 /data/src/vrclient/vroverlay.cpp:1206
@@ -770,6 +772,8 @@ $3br
 /legacy_debugger_pid
 /mailbox/
 /menu/click
+/org/freedesktop/RealtimeKit1
+/org/freedesktop/portal/desktop
 /out/
 /output/haptic
 /perfmetrics_meta/app/gpu_frametime
@@ -1352,6 +1356,7 @@ $3br
 21CVRMsg_ServiceConnect
 21CVRMsg_StartDashboard
 21CVRMsg_UpdateZeroPose
+21CVRRuntimeInformation
 21CVirtualDisplayClient
 22CClientPropertyManager
 22CInputFilterValueStore
@@ -1562,6 +1567,7 @@ $3br
 30ChaperoneInterfaceRegistrationI16CVRChaperone_003E
 30ComponentAdapterBaseWithParentIN2vr17IVRVirtualDisplayEXadL_Z34k_pchVirtualDisplayComponentPrefixEELi2E33CVRVirtualDisplayComponent_Latest30CVRVirtualDisplayComponent_001E
 30ITrackedDeviceServerDriver_004
+30RuntimeInformationRegistrationI25CVRRuntimeInformation_001E
 31BlockQueueInterfaceRegistrationI17CVRBlockQueue_001E
 31BlockQueueInterfaceRegistrationI17CVRBlockQueue_002E
 31BlockQueueInterfaceRegistrationI17CVRBlockQueue_003E
@@ -2506,7 +2512,6 @@ Error: Provided dpad for (%s) is not valid for this interaction profile (%s)
 Error: Provided value %f for %s must be between %f and %f
 Error: XR_EXT_dpad_binding extension must be enabled to use dpad binding [%s] for action [%s]
 Error: XR_KHR_binding_modification is required for XR_EXT_dpad_binding to be enabled
-Error: failed to load dynamic SDL
 Event: %s device %u timestamp %f  data 0x%lx 0x%lx\n
 Exceeded stackLimit in readValue().
 Executable: %s\n
@@ -2536,6 +2541,8 @@ Failed Watchdog timeout in thread %s after %f seconds\n
 Failed get Texture_t from 0x%lx\n
 Failed get glTextureId from 0x%lx\n
 Failed getting mailbox response %s: %d
+Failed loading %s: %s
+Failed loading symbol %s from %s: %s
 Failed synchronize overlay access - flickering possible\n
 Failed to AllocMutex
 Failed to LockMgrMutex in AllocMutex
@@ -2584,6 +2591,7 @@ Failed to find a suitable resource value for %s:%s in driver:%s. Excessive itera
 Failed to find device data in CVRCompositorSharedTextures::BeginCommandBuffer!\n
 Failed to find device data in CVRCompositorSharedTextures::EndCommandBuffer\n
 Failed to find interface '%s'\n
+Failed to find suitable dbus connection for rtkit
 Failed to find system resource manifest %s.\n
 Failed to get AllowSteamOverlays setting (%s). Using default setting.
 Failed to get AllowVRGamepadUI Setting setting (%s). Using default setting.
@@ -2598,9 +2606,6 @@ Failed to get steamMatchesHMDFramerate setting (%s). Allowing by default.
 Failed to import cross-process image memory\n
 Failed to init camera frame buffering for device index %u\n
 Failed to init property manager\n
-Failed to init scheduler: failed to get rlimit\n
-Failed to init scheduler: failed to get sched params %d\n
-Failed to init scheduler: failed to set rlimit\n
 Failed to init vrsteamprivate mailbox
 Failed to init vulkan binding: failed to get queue\n
 Failed to init vulkan binding: renderer init error\n
@@ -2622,6 +2627,7 @@ Failed to load libvulkan\n
 Failed to load pixel shader %s! (size=%d)\n
 Failed to load vertex shader %s! (size=%d)\n
 Failed to open conformance mailbox: %d
+Failed to open dbus session connection: %s
 Failed to open frame info buffer (Vulkan)!\n
 Failed to open reply mailbox in CVRNotificationsLatest: %d\n
 Failed to parse `bufferView` for image[
@@ -2630,6 +2636,7 @@ Failed to parse chaperone file because jsonid was %s\n
 Failed to parse chaperone file because the top level json node is not an object\n
 Failed to parse chaperone file because universes was not an array\n
 Failed to parse chaperone file because version was %u\n
+Failed to parse log message
 Failed to read file: 
 Failed to read loc files specified in 'localization_files'
 Failed to receive shared FD\n
@@ -2644,10 +2651,8 @@ Failed to send set_notification_image message with %d\n
 Failed to send shared FD %d for plane %i.
 Failed to send to shared fd client\n
 Failed to set thread %p priority: invalid priority %d\n
-Failed to set thread %p priority: set failed for %d: %d: %s\n
+Failed to set thread (%p, %s) priority\n
 Failed to set thread priority: foreign thread unsupported\n
-Failed to set thread priority: scheduler init failed\n
-Failed to set thread priority: setschedparam failed %d: %d\n
 Failed to setup a shared camera frame (%d, %d) for the camera type %d
 Failed to setup the shared spline distortion images for the camera type %d
 Failed to signal shared fd server\n
@@ -2800,6 +2805,7 @@ GCC: (Ubuntu 4.8.4-1ubuntu15~12.04+steamrt1+srt2) 4.8.4
 GL timeline semaphore requested but no support for GL timeline semaphores!
 GLIBC_2.12
 GLIBC_2.14
+GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.27
 GLIBC_2.3
@@ -2858,7 +2864,6 @@ GpuSpeed
 Grip
 HAPTICDEBUG %s:%d device: 0x%x\t axis: 0x%x\t duration: %u us\n
 HAPTICDEBUG %s:%d sec: %f\t freq: %f\t amp: %f\n
-HIGH
 HMD Not Known (202)
 HMD already in use by another application (205)
 HMD detected over USB, but Monitor may be mirrored instead of extended (212)
@@ -3079,6 +3084,8 @@ IVRRenderModels_004
 IVRRenderModels_005
 IVRRenderModels_006
 IVRResources_001
+IVRRunntimeInformation_
+IVRRuntimeInformation_001
 IVRScreenshots_
 IVRScreenshots_001
 IVRServerDriverHost_004
@@ -3323,11 +3330,16 @@ MAT3
 MAT4
 MGiI
 MSFT_lod
-Mapped priority %d to SDL priority %s\n
+MakeThreadHighPriority
+MakeThreadHighPriorityWithPID
+MakeThreadRealtime
+MakeThreadRealtimeWithPID
 March
 MarkInUse
 Material has extension MSFT_lod, but does not reference other materials via their ids.\n
+MaxRealtimePriority
 Microsoft/Windows/OpenVR/controller
+MinNiceLevel
 Minidump comment truncated
 Missing ',' or ']' in array declaration
 Missing ',' or '}' in object declaration
@@ -3465,6 +3477,7 @@ N2vr21CVRApplicationsLatestE
 N2vr21CVRSteamPrivateLatestE
 N2vr21IVRInputFocusInternalE
 N2vr21IVRPropertiesInternalE
+N2vr21IVRRuntimeInformationE
 N2vr22CVRNotificationsLatestE
 N2vr22IVRExternalEventSourceE
 N2vr23IVRApplicationsInternalE
@@ -3606,6 +3619,7 @@ Not Initialized (109)
 Not available to watchdog apps (131)
 Not looking for a good app key because Steam didn't start this app\n
 Not looking for a good app key because we were launched as a child of vrserver
+Not starting vrserver for %s application but allowing client library load.
 Not starting vrserver for %s application.\n
 Not starting vrserver for background app (121)
 Not writing boolean value because it couldn't be read\n
@@ -3666,7 +3680,10 @@ PS_SAMPLESCENE
 PS_SAMPLESCENE0
 PS_SAMPLESCENEDEPTH
 PS_SAMPLESCENESTENCILMASK
+PS_SAMPLESCENESTENCILSHADOW
 PS_STENCIL
+PS_STENCILSHADOWCELL
+PS_STENCILSHADOWNEAR
 PS_main
 Parenthesis is not closed.
 Parse error in system resource manifest %s.\n
@@ -3919,6 +3936,7 @@ QuickCalibratePlayspace %f %f %f
 QuickCalibratePlayspace couldn't get a pose from the HMD\n
 RADV
 RGBAdobe
+RTTimeUSecMax
 RadialMenu missing X axis input.\n
 RadialMenu missing Y axis input.\n
 RadialMenu setting 'num_buttons' not specified.\n
@@ -3996,15 +4014,19 @@ Right_
 Ring Buffer Wrapped!\n
 Root element is not a JSON object\n
 RootNode
+RtkitSetThreadPriority(%d, %d, %ld, %s): %s failed over all retries. Original OS function %s error: %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): %s failed: (name: %s, msg: %s). Possibly retrying ...
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query MaxRealtimePriority property, falling back to default %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query MinNiceLevel property, falling back to default %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query RTTimeUSecMax property, falling back to default %lld
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_getparam failed (errno: %d)
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_getscheduler failed (errno: %d)
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_setscheduler failed (errno: %d)
 RunInputFrame
 Running_OK
 Running_OutOfRange
 Runtime escape requested for %s, using steam-runtime-launch-client --alongside-steam
 SCALAR
-SDL_GetError
-SDL_GetPowerInfo
-SDL_LinuxSetThreadPriorityAndPolicy
-SDL_SetThreadPriority
 SRT_LAUNCHER_SERVICE_ALONGSIDE_STEAM
 STEAMVR_APPKEY
 STEAMVR_DISABLE_ASSERT_MINIDUMP
@@ -4046,7 +4068,6 @@ Server
 Server could not create read event %s\n
 Server somehow created read event before reader %s\n
 ServerEventSignal
-Set thread %p priority to: %d\n
 SetGraphicsDevice
 SetHandLocationsInactive: locations was nullptr
 SetObjectDebugName
@@ -4054,8 +4075,14 @@ SetOverlayRaw can't take dimensions over %u, but was passed %u x %u. Really it s
 SetOverlayRaw failed to create a memory block for %u x %u texture\n
 SetOverlayRawBlock_
 SetOverlayTextureXR
+SetProcessRLimitRTTimeToAtMost: getrlimit(RLIMIT_RTTIME) failed: %d
+SetProcessRLimitRTTimeToAtMost: setrlimit(RLIMIT_RTTIME) failed: %d
+SetProcessRLimitRTTimeToAtMost: setrlimit(RLIMIT_RTTIME) failed: %d. A lower limit has been set concurrently.
 SetSceneAppDetails
 SetSkyboxOverride with %d textures\n
+SetStageOverride_Async: pid %u set the stage to '%s', displacing '%s' owned by pid %u\n
+SetStageOverride_Async: pid %u set the stage to '%s'\n
+SetStageOverride_Async: scene app %u owns the stage, refusing '%s'.\n
 SetState
 SetSyncTexture
 SetUsageType
@@ -4207,7 +4234,6 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
-Stage override already set to '%s'! Use ClearStageOverride to free existing resources first.\n
 Standing transform was not updated when writing the universe to paths
 Start
 StartSession
@@ -4285,6 +4311,7 @@ Thread failed to initialize 1\n
 Thread failed to initialize 2\n
 Thread watchdog timed out %s
 Thread watchdog with a small timout %f. Timeouts should usually be multiple seconds.
+ThreadSetPriorityLinuxImpl(%d, %d, %ld, %s): %s failed: %d (errno: %d)
 ThreadWatchdog
 Thursday
 Timed out waiting for a good app key\n
@@ -4374,6 +4401,7 @@ Unable to find VRWebhelper at %s\n
 Unable to find handle for input '%s' in filter %s\n
 Unable to find input '%s' in filter %s\n
 Unable to find path to current module, so vrserver can't be started\n
+Unable to find vrenv.sh at %s\n
 Unable to fork child to start process: %s\n
 Unable to fork grandchild to start process: %s\n
 Unable to get haptic vibration data\n
@@ -4587,6 +4615,7 @@ VRApplication_Other
 VRApplication_Overlay
 VRApplication_Prism
 VRApplication_RoomView
+VRApplication_RuntimeInformation
 VRApplication_Scene
 VRApplication_SteamWatchdog
 VRApplication_Utility
@@ -4635,6 +4664,7 @@ VREvent_Compositor_DisplayReconnected
 VREvent_Compositor_HDCPError
 VREvent_Compositor_OutOfVideoMemory
 VREvent_Compositor_RequestDisconnectReconnect
+VREvent_Compositor_StageOverrideCleared
 VREvent_Compositor_StageOverrideReady
 VREvent_ConsoleClosed
 VREvent_ConsoleOpened
@@ -5209,6 +5239,7 @@ XR24
 XR30\n
 XRRenderModelUuidCache
 XRStationaryReferenceCache
+XR_BOUNDARY_VISIBILITY_SUPPRESSION_NOT_ALLOWED_META
 XR_COLOCATION_DISCOVERY_ALREADY_ADVERTISING_META
 XR_COLOCATION_DISCOVERY_ALREADY_DISCOVERING_META
 XR_ENVIRONMENT_DEPTH_NOT_AVAILABLE_META
@@ -5246,6 +5277,9 @@ XR_ERROR_FORM_FACTOR_UNSUPPORTED
 XR_ERROR_FUNCTION_UNSUPPORTED
 XR_ERROR_FUTURE_INVALID_EXT
 XR_ERROR_FUTURE_PENDING_EXT
+XR_ERROR_GEOSPATIAL_CLOUD_AUTH_FAILED_ANDROID
+XR_ERROR_GEOSPATIAL_COORDINATES_INVALID_ANDROID
+XR_ERROR_GEOSPATIAL_TRACKER_NOT_RUNNING_ANDROID
 XR_ERROR_GRAPHICS_DEVICE_INVALID
 XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING
 XR_ERROR_HANDLE_INVALID
@@ -5255,6 +5289,8 @@ XR_ERROR_INDEX_OUT_OF_RANGE
 XR_ERROR_INITIALIZATION_FAILED
 XR_ERROR_INSTANCE_LOST
 XR_ERROR_INSUFFICIENT_RESOURCES_PASSTHROUGH_FB
+XR_ERROR_KEYLESS_AUTH_FAILED_ANDROID
+XR_ERROR_KEYLESS_AUTH_NOT_SETUP_ANDROID
 XR_ERROR_LAYER_INVALID
 XR_ERROR_LAYER_LIMIT_EXCEEDED
 XR_ERROR_LIMIT_REACHED
@@ -5356,6 +5392,7 @@ XR_ERROR_SPATIAL_ENTITY_ID_INVALID_EXT
 XR_ERROR_SPATIAL_PERSISTENCE_SCOPE_INCOMPATIBLE_EXT
 XR_ERROR_SPATIAL_PERSISTENCE_SCOPE_UNSUPPORTED_EXT
 XR_ERROR_SPATIAL_SENSING_SERVICE_UNAVAILABLE_BD
+XR_ERROR_SURFACE_ANCHOR_LOCATION_UNSUPPORTED_ANDROID
 XR_ERROR_SWAPCHAIN_FORMAT_UNSUPPORTED
 XR_ERROR_SWAPCHAIN_RECT_INVALID
 XR_ERROR_SYSTEM_INVALID
@@ -5448,6 +5485,7 @@ XR_TYPE_ACTION_STATE_GET_INFO
 XR_TYPE_ACTION_STATE_POSE
 XR_TYPE_ACTION_STATE_VECTOR2F
 XR_TYPE_ACTIVE_ACTION_SET_PRIORITIES_EXT
+XR_TYPE_AMBIENT_LIGHT_ANDROID
 XR_TYPE_ANCHOR_SHARING_INFO_ANDROID
 XR_TYPE_ANCHOR_SHARING_TOKEN_ANDROID
 XR_TYPE_ANCHOR_SPACE_CREATE_INFO_ANDROID
@@ -5460,9 +5498,11 @@ XR_TYPE_BINDING_MODIFICATIONS_KHR
 XR_TYPE_BODY_JOINTS_LOCATE_INFO_BD
 XR_TYPE_BODY_JOINTS_LOCATE_INFO_FB
 XR_TYPE_BODY_JOINTS_LOCATE_INFO_HTC
+XR_TYPE_BODY_JOINT_ACCELERATIONS_BD
 XR_TYPE_BODY_JOINT_LOCATIONS_BD
 XR_TYPE_BODY_JOINT_LOCATIONS_FB
 XR_TYPE_BODY_JOINT_LOCATIONS_HTC
+XR_TYPE_BODY_JOINT_VELOCITIES_BD
 XR_TYPE_BODY_SKELETON_FB
 XR_TYPE_BODY_SKELETON_HTC
 XR_TYPE_BODY_TRACKER_CREATE_INFO_BD
@@ -5471,12 +5511,15 @@ XR_TYPE_BODY_TRACKER_CREATE_INFO_HTC
 XR_TYPE_BODY_TRACKING_CALIBRATION_INFO_META
 XR_TYPE_BODY_TRACKING_CALIBRATION_STATUS_META
 XR_TYPE_BODY_TRACKING_FIDELITY_STATUS_META
+XR_TYPE_BODY_TRACKING_POSTURE_DATA_BD
+XR_TYPE_BODY_TRACKING_STATE_BD
 XR_TYPE_BOUNDARY_2D_FB
 XR_TYPE_BOUND_SOURCES_FOR_ACTION_ENUMERATE_INFO
 XR_TYPE_COLOCATION_ADVERTISEMENT_START_INFO_META
 XR_TYPE_COLOCATION_ADVERTISEMENT_STOP_INFO_META
 XR_TYPE_COLOCATION_DISCOVERY_START_INFO_META
 XR_TYPE_COLOCATION_DISCOVERY_STOP_INFO_META
+XR_TYPE_COLOR_SPACES_ENUMERATE_INFO_SONY
 XR_TYPE_COMPOSITION_LAYER_ALPHA_BLEND_FB
 XR_TYPE_COMPOSITION_LAYER_COLOR_SCALE_BIAS_KHR
 XR_TYPE_COMPOSITION_LAYER_CUBE_KHR
@@ -5517,6 +5560,8 @@ XR_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT
 XR_TYPE_DEVICE_ANCHOR_PERSISTENCE_CREATE_INFO_ANDROID
 XR_TYPE_DEVICE_PCM_SAMPLE_RATE_STATE_FB
 XR_TYPE_DIGITAL_LENS_CONTROL_ALMALENCE
+XR_TYPE_DIRECTIONAL_LIGHT_ANDROID
+XR_TYPE_DYNAMIC_OBJECT_DATA_BD
 XR_TYPE_ENVIRONMENT_DEPTH_HAND_REMOVAL_SET_INFO_META
 XR_TYPE_ENVIRONMENT_DEPTH_IMAGE_ACQUIRE_INFO_META
 XR_TYPE_ENVIRONMENT_DEPTH_IMAGE_META
@@ -5530,6 +5575,7 @@ XR_TYPE_ENVIRONMENT_RAYCASTER_CREATE_INFO_META
 XR_TYPE_ENVIRONMENT_RAYCAST_FILTER_DISTANCE_META
 XR_TYPE_ENVIRONMENT_RAYCAST_HIT_GET_INFO_META
 XR_TYPE_ENVIRONMENT_RAYCAST_HIT_META
+XR_TYPE_EVENT_DATA_BOUNDARY_VISIBILITY_CHANGED_META
 XR_TYPE_EVENT_DATA_BUFFER
 XR_TYPE_EVENT_DATA_COLOCATION_ADVERTISEMENT_COMPLETE_META
 XR_TYPE_EVENT_DATA_COLOCATION_DISCOVERY_COMPLETE_META
@@ -5537,6 +5583,7 @@ XR_TYPE_EVENT_DATA_COLOCATION_DISCOVERY_RESULT_META
 XR_TYPE_EVENT_DATA_DISPLAY_REFRESH_RATE_CHANGED_FB
 XR_TYPE_EVENT_DATA_EVENTS_LOST
 XR_TYPE_EVENT_DATA_EYE_CALIBRATION_CHANGED_ML
+XR_TYPE_EVENT_DATA_GEOSPATIAL_TRACKER_STATE_CHANGED_ANDROID
 XR_TYPE_EVENT_DATA_HEADSET_FIT_CHANGED_ML
 XR_TYPE_EVENT_DATA_IMAGE_TRACKING_LOST_ANDROID
 XR_TYPE_EVENT_DATA_INSTANCE_LOSS_PENDING
@@ -5548,6 +5595,7 @@ XR_TYPE_EVENT_DATA_MARKER_TRACKING_UPDATE_VARJO
 XR_TYPE_EVENT_DATA_PASSTHROUGH_LAYER_RESUMED_META
 XR_TYPE_EVENT_DATA_PASSTHROUGH_STATE_CHANGED_FB
 XR_TYPE_EVENT_DATA_PERF_SETTINGS_EXT
+XR_TYPE_EVENT_DATA_RECOMMENDED_RESOLUTION_CHANGED_ANDROID
 XR_TYPE_EVENT_DATA_REFERENCE_SPACE_CHANGE_PENDING
 XR_TYPE_EVENT_DATA_SCENE_CAPTURE_COMPLETE_FB
 XR_TYPE_EVENT_DATA_SENSE_DATA_PROVIDER_STATE_CHANGED_BD
@@ -5582,9 +5630,12 @@ XR_TYPE_EVENT_DATA_VISIBILITY_MASK_CHANGED_KHR
 XR_TYPE_EVENT_DATA_VIVE_TRACKER_CONNECTED_HTCX
 XR_TYPE_EXTENSION_PROPERTIES
 XR_TYPE_EXTERNAL_CAMERA_OCULUS
+XR_TYPE_EYES_ANDROID
+XR_TYPE_EYES_GET_INFO_ANDROID
 XR_TYPE_EYE_GAZES_FB
 XR_TYPE_EYE_GAZES_INFO_FB
 XR_TYPE_EYE_GAZE_SAMPLE_TIME_EXT
+XR_TYPE_EYE_TRACKER_CREATE_INFO_ANDROID
 XR_TYPE_EYE_TRACKER_CREATE_INFO_FB
 XR_TYPE_FACE_EXPRESSION_INFO2_FB
 XR_TYPE_FACE_EXPRESSION_INFO_FB
@@ -5596,6 +5647,7 @@ XR_TYPE_FACE_TRACKER_CREATE_INFO2_FB
 XR_TYPE_FACE_TRACKER_CREATE_INFO_ANDROID
 XR_TYPE_FACE_TRACKER_CREATE_INFO_BD
 XR_TYPE_FACE_TRACKER_CREATE_INFO_FB
+XR_TYPE_FACE_TRACKING_VISEMES_META
 XR_TYPE_FACIAL_EXPRESSIONS_HTC
 XR_TYPE_FACIAL_EXPRESSION_BLEND_SHAPE_GET_INFO_ML
 XR_TYPE_FACIAL_EXPRESSION_BLEND_SHAPE_PROPERTIES_ML
@@ -5627,7 +5679,17 @@ XR_TYPE_FUTURE_POLL_RESULT_EXT
 XR_TYPE_FUTURE_POLL_RESULT_PROGRESS_BD
 XR_TYPE_GEOMETRY_INSTANCE_CREATE_INFO_FB
 XR_TYPE_GEOMETRY_INSTANCE_TRANSFORM_FB
+XR_TYPE_GEOSPATIAL_ANCHOR_CREATE_INFO_ANDROID
+XR_TYPE_GEOSPATIAL_POSE_FROM_POSE_LOCATE_INFO_ANDROID
+XR_TYPE_GEOSPATIAL_POSE_LOCATE_INFO_ANDROID
+XR_TYPE_GEOSPATIAL_POSE_RESULT_ANDROID
+XR_TYPE_GEOSPATIAL_TRACKER_ANCHOR_TRACKING_INFO_ANDROID
+XR_TYPE_GEOSPATIAL_TRACKER_CREATE_INFO_ANDROID
 XR_TYPE_GLOBAL_DIMMER_FRAME_END_INFO_ML
+XR_TYPE_GOOGLE_CLOUD_AUTH_ERROR_RESULT_ANDROID
+XR_TYPE_GOOGLE_CLOUD_AUTH_INFO_API_KEY_ANDROID
+XR_TYPE_GOOGLE_CLOUD_AUTH_INFO_KEYLESS_ANDROID
+XR_TYPE_GOOGLE_CLOUD_AUTH_INFO_TOKEN_ANDROID
 XR_TYPE_GRAPHICS_BINDING_D3D11_KHR
 XR_TYPE_GRAPHICS_BINDING_D3D12_KHR
 XR_TYPE_GRAPHICS_BINDING_EGL_MNDX
@@ -5659,8 +5721,12 @@ XR_TYPE_HAND_TRACKING_DATA_SOURCE_INFO_EXT
 XR_TYPE_HAND_TRACKING_DATA_SOURCE_STATE_EXT
 XR_TYPE_HAND_TRACKING_MESH_FB
 XR_TYPE_HAND_TRACKING_SCALE_FB
+XR_TYPE_HAND_TRACKING_UNEXTRAPOLATED_POSES_META
+XR_TYPE_HAND_TRACKING_UNEXTRAPOLATED_POSES_REQUEST_META
 XR_TYPE_HAPTIC_ACTION_INFO
 XR_TYPE_HAPTIC_AMPLITUDE_ENVELOPE_VIBRATION_FB
+XR_TYPE_HAPTIC_PARAMETRIC_PROPERTIES_EXT
+XR_TYPE_HAPTIC_PARAMETRIC_VIBRATION_EXT
 XR_TYPE_HAPTIC_PCM_VIBRATION_FB
 XR_TYPE_HAPTIC_VIBRATION
 XR_TYPE_HOLOGRAPHIC_WINDOW_ATTACHMENT_MSFT
@@ -5677,6 +5743,9 @@ XR_TYPE_INTERACTION_RENDER_MODEL_SUBACTION_PATH_INFO_EXT
 XR_TYPE_INTERACTION_RENDER_MODEL_TOP_LEVEL_USER_PATH_GET_INFO_EXT
 XR_TYPE_KEYBOARD_SPACE_CREATE_INFO_FB
 XR_TYPE_KEYBOARD_TRACKING_QUERY_FB
+XR_TYPE_LIGHT_ESTIMATE_ANDROID
+XR_TYPE_LIGHT_ESTIMATE_GET_INFO_ANDROID
+XR_TYPE_LIGHT_ESTIMATOR_CREATE_INFO_ANDROID
 XR_TYPE_LIP_EXPRESSION_DATA_BD
 XR_TYPE_LOADER_INIT_INFO_ANDROID_KHR
 XR_TYPE_LOADER_INIT_INFO_PROPERTIES_EXT
@@ -5750,6 +5819,8 @@ XR_TYPE_RENDER_MODEL_SPACE_CREATE_INFO_EXT
 XR_TYPE_RENDER_MODEL_STATE_EXT
 XR_TYPE_RENDER_MODEL_STATE_GET_INFO_EXT
 XR_TYPE_ROOM_LAYOUT_FB
+XR_TYPE_ROOM_MESH_FACE_INDICES_META
+XR_TYPE_ROOM_MESH_META
 XR_TYPE_SCENE_CAPTURE_INFO_BD
 XR_TYPE_SCENE_CAPTURE_REQUEST_INFO_FB
 XR_TYPE_SCENE_COMPONENTS_GET_INFO_MSFT
@@ -5786,10 +5857,12 @@ XR_TYPE_SECONDARY_VIEW_CONFIGURATION_STATE_MSFT
 XR_TYPE_SECONDARY_VIEW_CONFIGURATION_SWAPCHAIN_CREATE_INFO_MSFT
 XR_TYPE_SEMANTIC_LABELS_FB
 XR_TYPE_SEMANTIC_LABELS_SUPPORT_INFO_FB
+XR_TYPE_SENSE_DATA_FILTER_DYNAMIC_OBJECT_TYPE_BD
 XR_TYPE_SENSE_DATA_FILTER_PLANE_ORIENTATION_BD
 XR_TYPE_SENSE_DATA_FILTER_SEMANTIC_BD
 XR_TYPE_SENSE_DATA_FILTER_UUID_BD
 XR_TYPE_SENSE_DATA_PROVIDER_CREATE_INFO_BD
+XR_TYPE_SENSE_DATA_PROVIDER_CREATE_INFO_DYNAMIC_OBJECT_BD
 XR_TYPE_SENSE_DATA_PROVIDER_CREATE_INFO_SPATIAL_MESH_BD
 XR_TYPE_SENSE_DATA_PROVIDER_START_INFO_BD
 XR_TYPE_SENSE_DATA_QUERY_COMPLETION_BD
@@ -5835,6 +5908,7 @@ XR_TYPE_SPACE_LOCATION
 XR_TYPE_SPACE_LOCATIONS
 XR_TYPE_SPACE_QUERY_INFO_FB
 XR_TYPE_SPACE_QUERY_RESULTS_FB
+XR_TYPE_SPACE_ROOM_MESH_GET_INFO_META
 XR_TYPE_SPACE_SAVE_INFO_FB
 XR_TYPE_SPACE_SHARE_INFO_FB
 XR_TYPE_SPACE_STORAGE_LOCATION_FILTER_INFO_FB
@@ -5874,6 +5948,9 @@ XR_TYPE_SPATIAL_ANCHOR_SPACE_FROM_ID_CREATE_INFO_ANDROID
 XR_TYPE_SPATIAL_ANCHOR_STATE_ML
 XR_TYPE_SPATIAL_ANCHOR_UNPERSIST_INFO_BD
 XR_TYPE_SPATIAL_AUDIO_RENDERER_CREATE_INFO_BD
+XR_TYPE_SPATIAL_BOUNDS_BOXF_ANDROID
+XR_TYPE_SPATIAL_BOUNDS_FRUSTUMF_ANDROID
+XR_TYPE_SPATIAL_BOUNDS_SPHEREF_ANDROID
 XR_TYPE_SPATIAL_BUFFER_GET_INFO_EXT
 XR_TYPE_SPATIAL_CAPABILITY_COMPONENT_TYPES_EXT
 XR_TYPE_SPATIAL_CAPABILITY_CONFIGURATION_ANCHOR_EXT
@@ -5908,10 +5985,12 @@ XR_TYPE_SPATIAL_DISCOVERY_UNIQUE_ENTITIES_FILTER_ANDROID
 XR_TYPE_SPATIAL_ENTITY_ANCHOR_CREATE_INFO_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_BOUNDING_BOX_2D_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_BOUNDING_BOX_3D_BD
+XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_DYNAMIC_OBJECT_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_LOCATION_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_PLANE_ORIENTATION_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_POLYGON_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_SEMANTIC_BD
+XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_SPHERE_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_DATA_TRIANGLE_MESH_BD
 XR_TYPE_SPATIAL_ENTITY_COMPONENT_GET_INFO_BD
 XR_TYPE_SPATIAL_ENTITY_FROM_ID_CREATE_INFO_EXT
@@ -5930,9 +6009,13 @@ XR_TYPE_SPATIAL_PERSISTENCE_CONTEXT_CREATE_INFO_EXT
 XR_TYPE_SPATIAL_RAYCAST_INFO_ANDROID
 XR_TYPE_SPATIAL_RAYCAST_SNAPSHOT_CREATE_INFO_ANDROID
 XR_TYPE_SPATIAL_UPDATE_SNAPSHOT_CREATE_INFO_EXT
+XR_TYPE_SPHERICAL_HARMONICS_ANDROID
 XR_TYPE_STATIONARY_REFERENCE_SPACE_GENERATION_ID_GET_INFO_EXT
 XR_TYPE_STATIONARY_REFERENCE_SPACE_GENERATION_ID_RESULT_EXT
+XR_TYPE_SURFACE_ANCHOR_CREATE_COMPLETION_ANDROID
+XR_TYPE_SURFACE_ANCHOR_CREATE_INFO_ANDROID
 XR_TYPE_SWAPCHAIN_CREATE_INFO
+XR_TYPE_SWAPCHAIN_CREATE_INFO_COLOR_SPACE_SONY
 XR_TYPE_SWAPCHAIN_CREATE_INFO_FOVEATION_FB
 XR_TYPE_SWAPCHAIN_IMAGE_ACQUIRE_INFO
 XR_TYPE_SWAPCHAIN_IMAGE_D3D11_KHR
@@ -5953,28 +6036,38 @@ XR_TYPE_SYSTEM_ANCHOR_SHARING_EXPORT_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_BODY_TRACKING_PROPERTIES_BD
 XR_TYPE_SYSTEM_BODY_TRACKING_PROPERTIES_FB
 XR_TYPE_SYSTEM_BODY_TRACKING_PROPERTIES_HTC
+XR_TYPE_SYSTEM_BOUNDARY_VISIBILITY_PROPERTIES_META
 XR_TYPE_SYSTEM_COLOCATION_DISCOVERY_PROPERTIES_META
 XR_TYPE_SYSTEM_COLOR_SPACE_PROPERTIES_FB
 XR_TYPE_SYSTEM_DEVICE_ANCHOR_PERSISTENCE_PROPERTIES_ANDROID
+XR_TYPE_SYSTEM_DYNAMIC_OBJECT_KEYBOARD_PROPERTIES_BD
+XR_TYPE_SYSTEM_DYNAMIC_OBJECT_MOUSE_PROPERTIES_BD
+XR_TYPE_SYSTEM_DYNAMIC_OBJECT_TRACKING_PROPERTIES_BD
 XR_TYPE_SYSTEM_ENVIRONMENT_DEPTH_PROPERTIES_META
 XR_TYPE_SYSTEM_ENVIRONMENT_RAYCAST_PROPERTIES_META
 XR_TYPE_SYSTEM_EYE_GAZE_INTERACTION_PROPERTIES_EXT
+XR_TYPE_SYSTEM_EYE_TRACKING_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_EYE_TRACKING_PROPERTIES_FB
 XR_TYPE_SYSTEM_FACE_TRACKING_PROPERTIES2_FB
 XR_TYPE_SYSTEM_FACE_TRACKING_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_FACE_TRACKING_PROPERTIES_FB
+XR_TYPE_SYSTEM_FACE_TRACKING_VISEMES_PROPERTIES_META
 XR_TYPE_SYSTEM_FACIAL_EXPRESSION_PROPERTIES_ML
 XR_TYPE_SYSTEM_FACIAL_SIMULATION_PROPERTIES_BD
 XR_TYPE_SYSTEM_FACIAL_TRACKING_PROPERTIES_HTC
 XR_TYPE_SYSTEM_FORCE_FEEDBACK_CURL_PROPERTIES_MNDX
 XR_TYPE_SYSTEM_FOVEATED_RENDERING_PROPERTIES_VARJO
 XR_TYPE_SYSTEM_FOVEATION_EYE_TRACKED_PROPERTIES_META
+XR_TYPE_SYSTEM_GEOSPATIAL_ANCHOR_PROPERTIES_ANDROID
+XR_TYPE_SYSTEM_GEOSPATIAL_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_GET_INFO
 XR_TYPE_SYSTEM_HAND_TRACKING_MESH_PROPERTIES_MSFT
 XR_TYPE_SYSTEM_HAND_TRACKING_PROPERTIES_EXT
+XR_TYPE_SYSTEM_HAPTIC_PARAMETRIC_PROPERTIES_EXT
 XR_TYPE_SYSTEM_HEADSET_ID_PROPERTIES_META
 XR_TYPE_SYSTEM_IMAGE_TRACKING_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_KEYBOARD_TRACKING_PROPERTIES_FB
+XR_TYPE_SYSTEM_LIGHT_ESTIMATION_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_MARKER_TRACKING_PROPERTIES_ANDROID
 XR_TYPE_SYSTEM_MARKER_TRACKING_PROPERTIES_VARJO
 XR_TYPE_SYSTEM_MARKER_UNDERSTANDING_PROPERTIES_ML
@@ -6048,6 +6141,7 @@ XR_TYPE_VIRTUAL_KEYBOARD_TEXT_CONTEXT_CHANGE_INFO_META
 XR_TYPE_VISIBILITY_MASK_KHR
 XR_TYPE_VISUAL_MESH_COMPUTE_LOD_INFO_MSFT
 XR_TYPE_VIVE_TRACKER_PATHS_HTCX
+XR_TYPE_VPS_AVAILABILITY_CHECK_COMPLETION_ANDROID
 XR_TYPE_VULKAN_DEVICE_CREATE_INFO_KHR
 XR_TYPE_VULKAN_GRAPHICS_DEVICE_GET_INFO_KHR
 XR_TYPE_VULKAN_INSTANCE_CREATE_INFO_KHR
@@ -6085,6 +6179,7 @@ XrProto:loop:timeout!
 XrProto:suspended
 XrQueryPerformanceMetricsCounterMETA was passed a counter struct with the wrong type member.
 XrQueryPerformanceMetricsCounterMETA was passed a null counter pointer.
+YyK1
 Zjz\v
 [%s] %s=%lu tgid=%d file=%s %s
 [AnimSkeleton] Failed to load GLTF file: %s
@@ -6370,7 +6465,7 @@ Zjz\v
 [xrLocateSpaces] required parameter was nullptr
 [xrLocateSpaces] spaceCount must not be 0 and spaceCount must equal locationCount
 [xrLocateSpaces] velocityCount must equal spaceCount
-[xrRenderModel] %s: nodePropertyCount was not equal to animatableNodeCount (was %i, expected %lu)
+[xrRenderModel] %s: nodePropertyCount was not equal to animatableNodeCount (was %i, expected %zu)
 [xrRenderModel] Asset was not loaded in memory when trying to retrieve data
 [xrRenderModel] Attempted to enumerate, but has not sycned actions yet
 [xrRenderModel] Attempted to enumerate, but session was not running
@@ -6385,7 +6480,7 @@ Zjz\v
 [xrRenderModel] Failed to initialize render model XrSpace
 [xrRenderModel] Failure occurred trying to convert render model to gltf.
 [xrRenderModel] Found matching crc (%u) in cache for %s. UUID: %s
-[xrRenderModel] Initializing render model for %s with %lu nodes
+[xrRenderModel] Initializing render model for %s with %zu nodes
 [xrRenderModel] No cached crc (%u) found for %s. Caching new UUID: %s
 [xrRenderModel] Parameter was nullptr
 [xrRenderModel] Render model attached to device index: %i had no subaction paths bound to it
@@ -6452,6 +6547,8 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
+__cxa_thread_atexit
+__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __duplocale
@@ -6671,6 +6768,7 @@ bg_bg
 bin/linux64/vrdashboard
 bin/linux64/vrmonitor
 bin/linux64/vrstartup
+bin/vrenv.sh
 bin/vrwebhelper/linux64/vrwebhelper.sh
 binary
 bind
@@ -6828,6 +6926,55 @@ data:image/gif;base64,
 data:image/jpeg;base64,
 data:image/png;base64,
 data:text/plain;base64,
+dbus_bus_add_match
+dbus_bus_get_private
+dbus_bus_get_unique_name
+dbus_bus_register
+dbus_bus_remove_match
+dbus_connection_add_filter
+dbus_connection_close
+dbus_connection_dispatch
+dbus_connection_flush
+dbus_connection_get_is_connected
+dbus_connection_open_private
+dbus_connection_read_write
+dbus_connection_read_write_dispatch
+dbus_connection_ref
+dbus_connection_remove_filter
+dbus_connection_send
+dbus_connection_send_with_reply_and_block
+dbus_connection_set_exit_on_disconnect
+dbus_connection_try_register_object_path
+dbus_connection_unref
+dbus_error_free
+dbus_error_has_name
+dbus_error_init
+dbus_error_is_set
+dbus_free
+dbus_free_string_array
+dbus_get_local_machine_id
+dbus_message_append_args
+dbus_message_append_args_valist
+dbus_message_get_args
+dbus_message_get_args_valist
+dbus_message_has_path
+dbus_message_is_signal
+dbus_message_iter_append_basic
+dbus_message_iter_close_container
+dbus_message_iter_get_arg_type
+dbus_message_iter_get_basic
+dbus_message_iter_init
+dbus_message_iter_init_append
+dbus_message_iter_next
+dbus_message_iter_open_container
+dbus_message_iter_recurse
+dbus_message_new_method_call
+dbus_message_new_signal
+dbus_message_set_no_reply
+dbus_message_unref
+dbus_shutdown
+dbus_threads_init_default
+dbus_type_is_fixed
 de_de
 deactivateStandbyOverride
 deactivate_threshold
@@ -6959,7 +7106,6 @@ enableCameraSurfaces
 enableDriverBoundsImport
 enableHmdLatencyHidingDisplayOffset
 enableHomeApp
-enableHomeApp2
 enableLegacyGameTheater
 enableSteamInput
 enableYAMLCompatibility
@@ -7063,6 +7209,7 @@ frame_controller
 framesToThrottle
 fread
 free
+free_stage_model
 french
 frequency
 frexpf
@@ -7395,8 +7542,8 @@ less-than-sign
 lhs->m_pTimeline == rhs->m_pTimeline
 libEGL.so.1
 libGL.so.1
-libSDL2-2.0.so.0
 libc.so.6
+libdbus-1.so.3
 libdl.so.2
 libm.so.6
 libpthread.so.0
@@ -7639,6 +7786,10 @@ optional
 optional member 'simulated_actions' is not an array
 options
 options field exists, but it is not an object
+org.freedesktop.DBus.Properties
+org.freedesktop.RealtimeKit1
+org.freedesktop.portal.Desktop
+org.freedesktop.portal.Realtime
 origin
 origin_position_x
 origin_position_y
@@ -7791,6 +7942,7 @@ pthread_condattr_init
 pthread_condattr_setclock
 pthread_create
 pthread_detach
+pthread_getname_np
 pthread_getschedparam
 pthread_getspecific
 pthread_join
@@ -7810,7 +7962,6 @@ pthread_mutexattr_settype
 pthread_once
 pthread_self
 pthread_setname_np
-pthread_setschedparam
 pthread_setspecific
 pthreads futex robust_list is corrupt
 pull
@@ -7866,7 +8017,6 @@ returnAddress
 returnBindingsWithHead
 returnBindingsWithLeftHand
 returnBindingsWithRightHand
-rewind
 rift
 right
 right-curly-bracket
@@ -7924,8 +8074,6 @@ scandir
 scene
 scene_graph
 scenes
-sched_get_priority_max
-sched_get_priority_min
 sched_getparam
 sched_getscheduler
 sched_setaffinity
@@ -7963,6 +8111,7 @@ set_overlay_from_file
 set_overlay_from_file_response
 setenv
 setlocale
+setprio_
 setpriority
 setrlimit
 setsid
@@ -8085,14 +8234,20 @@ shaders/vulkan/distort_ps_scene_blur.spv
 shaders/vulkan/distort_ps_scene_depth.spv
 shaders/vulkan/distort_ps_scene_depth_stencil.spv
 shaders/vulkan/distort_ps_scene_stencil_mask.spv
+shaders/vulkan/distort_ps_scene_stencil_shadow.spv
+shaders/vulkan/distort_ps_scene_stencil_shadow_cell.spv
+shaders/vulkan/distort_ps_scene_stencil_shadow_mask.spv
+shaders/vulkan/distort_ps_scene_stencil_shadow_near.spv
 shaders/vulkan/distort_vs.spv
 shaders/vulkan/distort_vs_latest_nd.spv
 shaders/vulkan/distort_vs_layered.spv
 shaders/vulkan/distort_vs_layered_nd.spv
 shaders/vulkan/distort_vs_nd.spv
 shaders/vulkan/distort_vs_reproject_fv.spv
+shaders/vulkan/distort_vs_reproject_fv_dp.spv
 shaders/vulkan/distort_vs_reproject_fv_dr.spv
 shaders/vulkan/distort_vs_reproject_layered.spv
+shaders/vulkan/distort_vs_reproject_layered_dp.spv
 shaders/vulkan/distort_vs_reproject_layered_nd.spv
 shaders/vulkan/distort_vs_reproject_mv.spv
 shaders/vulkan/distort_vs_reproject_nd.spv
@@ -8624,6 +8779,7 @@ universes
 unknown
 unknown BMP
 unknown code
+unknown error
 unknown image type
 unknown marker
 unknown token

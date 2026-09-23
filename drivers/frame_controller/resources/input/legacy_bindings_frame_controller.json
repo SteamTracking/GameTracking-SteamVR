@@ -281,6 +281,30 @@
 				},
 				{
 					"inputs": {
+						"click": {
+							"output": "/actions/legacy/in/left_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/left_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/left/input/dpad_right"
+				},
+				{
+					"inputs": {
+						"click": {
+							"output": "/actions/legacy/in/left_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/left_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/left/input/dpad_up"
+				},
+				{
+					"inputs": {
 						"pull": {
 							"output": "/actions/legacy/in/right_axis1_value"
 						}
@@ -404,6 +428,30 @@
 				{
 					"inputs": {
 						"click": {
+							"output": "/actions/legacy/in/right_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/right_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/right/input/x"
+				},
+				{
+					"inputs": {
+						"click": {
+							"output": "/actions/legacy/in/right_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/right_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/right/input/y"
+				},
+				{
+					"inputs": {
+						"click": {
 							"output": "/actions/legacy/in/left_axis1_press"
 						},
 						"touch": {
@@ -431,7 +479,7 @@
 	"options": {
 		"mirror_actions": false,
 		"simulated_controller_type": "oculus_touch",
-		"simulate_rendermodel": false
+		"simulate_rendermodel": "name_only"
 	},
 	"simulated_actions": []
 }

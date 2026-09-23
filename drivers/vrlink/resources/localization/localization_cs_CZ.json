@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Ne",
 	"Setting_AllowMultipleLinks": "Povolit více spojení",
 	"Setting_EnableHmdAutoConnect": "Při spouštění režimu SteamVR automaticky připojovat podporované headsety",
+	"Setting_Sharpening": "Zostřit obraz před kódováním (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Síla ostření",
 	"svl_hand_interaction_augmented": "Ovladač se sledováním dlaní",
 	"/input/index_pinch": "Sevření ukazováčku a palce",
 	"/input/middle_pinch": "Sevření prostředníčku a palce",

@@ -754,8 +754,8 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV?$_Iosb@H@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8CPoseExtrapolator@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8CPoseExtrapolator@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8CRemotePerfStats@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8CRemotePerfStats@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_4847441ab6a0e6d5cb10f69b19ba34ab>@@@std@@U?$default_delete@V?$tuple@V<lambda_4847441ab6a0e6d5cb10f69b19ba34ab>@@@std@@@2@@std@@@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@U?$default_delete@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_c11b31c47c43c3dd7dbf5bef5b1ecc9c>@@@std@@U?$default_delete@V?$tuple@V<lambda_c11b31c47c43c3dd7dbf5bef5b1ecc9c>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_fa3245fa43628abed5f7a06d18aa6cb6>@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@std@@U?$default_delete@V?$tuple@V<lambda_fa3245fa43628abed5f7a06d18aa6cb6>@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@std@@@2@@std@@@std@@
 .?AV?$_Node_class@DV?$regex_traits@D@std@@@std@@
@@ -1714,14 +1714,13 @@ $\n k_EProtoServiceTypeSteamMessages
 0-pixel image
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899"
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899`r<@
 0123456789ABCDEF
 0123456789abcdef
-0s6@
-0x3@
 1.2.5
 1/2/4/8/16-bit only
 11 4 22 44 44 22 444444
-11:37:58
+11:16:42
 11eU%
 127.0.0.1
 127.0.0.1:
@@ -1749,6 +1748,7 @@ $\n k_EProtoServiceTypeSteamMessages
 8d8f13b1-60eb-4b6a-a433-de86104115ac
 8e8f13b1-60eb-4b6a-a433-de86104115ac
 8giP9giP9giP9giP9
+8l3@
 9\n\noneof_decl
 9a&g
 : Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
@@ -1768,6 +1768,7 @@ $\n k_EProtoServiceTypeSteamMessages
 <unknown>
 ===== %s: state=%d, %s empty, uri=%s\n
 ================================================================================================\n
+?8l3@
 ??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ
 ??0?$basic_ios@_WU?$char_traits@_W@std@@@std@@IEAA@XZ
 ??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z
@@ -1815,6 +1816,7 @@ $\n k_EProtoServiceTypeSteamMessages
 ??_7codecvt_base@std@@6B@
 ??_7facet@locale@std@@6B@
 ??_7ios_base@std@@6B@
+?PoseUpdated for invalid object ID %d\n
 ?_BADOFF@std@@3_JB
 ?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ
 ?_Execute_once@std@@YAHAEAUonce_flag@1@P6AHPEAX1PEAPEAX@Z1@Z
@@ -1852,9 +1854,7 @@ $\n k_EProtoServiceTypeSteamMessages
 ?_Xout_of_range@std@@YAXPEBD@Z
 ?_Xregex_error@std@@YAXW4error_type@regex_constants@1@@Z
 ?always_noconv@codecvt_base@std@@QEBA_NXZ
-?c:\buildslave\steamvr_rel_win64\build\src\vrserver\vrserver.cpp:5800
 ?clear@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QEAAXH_N@Z
-?ffffff
 ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
 ?getline@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEAD_J@Z
 ?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEBA?AVlocale@2@XZ
@@ -1909,6 +1909,7 @@ $\n k_EProtoServiceTypeSteamMessages
 ?xsgetn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAA_JPEA_W_J@Z
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
 ?xsputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAA_JPEB_W_J@Z
+@8l3@
 @fff>fff>fff>fff>
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
@@ -2429,7 +2430,6 @@ CVRServer::RunFrame/Connections
 CVRServer::RunFrame/Dead connections
 CVRServer::RunFrame/Events
 CVRServer::RunSteamFrame
-CVRServer::TrackedDevicePoseUpdated
 CVRServer::UpdateActivityLevels
 CVRServer::UpdateAudioDevices
 CVRServer::UpdateControllerRoles
@@ -2576,7 +2576,6 @@ Creating webui for %s=%s
 CurrentURL
 D3DKMTEnumAdapters2
 D3DKMTQueryAdapterInfo
-D57@
 D7q/;M
 DELEGATE 
 DISABLED
@@ -2649,7 +2648,6 @@ DriverManager::Cleanup
 DriverVersion
 Dropped duplicate HTTP '%s' header
 Dropping duplicate header [%.*s]
-Ds6@
 Duplicate action '
 Duplicate key: '
 Duplicate mailbox name %s. Make one of those unique.\n
@@ -2804,6 +2802,7 @@ Failed to parse chaperone file because jsonid was %s\n
 Failed to parse chaperone file because the top level json node is not an object\n
 Failed to parse chaperone file because universes was not an array\n
 Failed to parse chaperone file because version was %u\n
+Failed to parse log message
 Failed to parse malformed CSteamVR_PushOverlayInputFocus_Message
 Failed to parse malformed CSteamVR_VRGamepadUI_Message
 Failed to parse malformed mailbox firmware_update_state
@@ -2823,6 +2822,7 @@ Failed to set '%s' due to %s\n
 Failed to set camera frame buffering for device index %u\n
 Failed to set process priority for app %s with pid %u\n
 Failed to set process priority!\n
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to set thread %p priority: invalid priority %d\n
 Failed to start server with error %d\n
 Failed to start vrservice: %s
@@ -3047,7 +3047,6 @@ HomeAppEnabled
 HostController
 How did we get here with a non-position slot?
 HwSchMode
-Hx3@
 I'm a teapot
 IAudioCaptureClient::GetBuffer failed on pass %u: hr = 0x%08x\n
 IAudioCaptureClient::GetBuffer said to read 0 frames on pass %u\n
@@ -3186,6 +3185,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_
 IVRServerDriverHost_004
 IVRServerDriverHost_005
@@ -3347,7 +3347,7 @@ Kernel32.dll
 KeyboardVisibleTime
 Kill process %s because it didn't quit in time\n
 Kill process?
-L57@
+L=8l3@
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
@@ -3390,7 +3390,6 @@ LoadLibraryA
 LoadLibraryExW
 LoadLibraryW
 LoadTemporaryActionBindingsForAppKey for controller type %s unable to read cache file %s\n
-LoadTemporaryActionBindingsForAppKey for controller type %s, which we didn't have\n
 LoadTextureImageData: Provided extension was not supported: %s
 Loaded %s
 Loaded %s in %fms\n
@@ -3634,6 +3633,8 @@ Out of thread local storage!\n
 OutputDebugStringA
 OutputDebugStringW
 Overwriting default binding file from web: %s\n
+P05@
+P8G@
 PCI\VEN_%x&DEV_%x&SUBSYS_%x&REV_%x
 PC_%08llx
 PICT
@@ -3694,10 +3695,10 @@ PerformApplicationPrelaunchCheck
 Permanent Redirect
 Perspective camera description not found.
 PerspectiveCamera
+Pl3@
 PlayAreaHeight
 PlayAreaWidth
 Playback devices:\n
-PoseUpdated for invalid object ID %d\n
 PoseUpdated from driver %s (%d) for device index %d which is owned by driver %s (%d)\n
 Positional emitter description not found.
 PowerOffTrackedDevice for %d - Could not find driver\n
@@ -3944,8 +3945,6 @@ Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Refle
 Protocol message serialized itself in invalid fashion.
 Protocol message was modified concurrently during serialization.
 Proxy Authentication Required
-Ps6@
-Pt9@
 QkkXa
 Qkkbal
 Query failed
@@ -4138,7 +4137,7 @@ See
 See Other
 Self queried namespace: %u\n
 Sending Quit event to process %s\n
-Sep 15 2026
+Sep 22 2026
 Server
 Server could not create read event %s\n
 Server somehow created read event before reader %s\n
@@ -4151,7 +4150,6 @@ ServiceDescriptorProto
 ServiceOptions
 SessionID
 SessionTime
-Set thread %p priority to: %d\n
 SetAllocatedMessage
 SetApplicationPid
 SetApplicationPid appkey=%s pid=%d, %s\n
@@ -4663,6 +4661,7 @@ VRApplication_Other
 VRApplication_Overlay
 VRApplication_Prism
 VRApplication_RoomView
+VRApplication_RuntimeInformation
 VRApplication_Scene
 VRApplication_SteamWatchdog
 VRApplication_Utility
@@ -4705,6 +4704,7 @@ VREvent_Compositor_DisplayReconnected
 VREvent_Compositor_HDCPError
 VREvent_Compositor_OutOfVideoMemory
 VREvent_Compositor_RequestDisconnectReconnect
+VREvent_Compositor_StageOverrideCleared
 VREvent_Compositor_StageOverrideReady
 VREvent_ConsoleClosed
 VREvent_ConsoleOpened
@@ -5440,12 +5440,14 @@ WorkshopSaveType_Personal
 WorkshopSaveType_Public
 WorkshopSaveType_ReplaceDefault
 WorkshopSaveType_Unknown
-WorkshopSelectConfig for BindingOutOfDate for %s(%s) attempt to set default binding failed\n
-WorkshopSelectConfig for BindingOutOfDate for %s(%s) when we don't have a binding at all for that controller type\n
+WorkshopSelectConfig for %d for %s(%s) attempt to set default binding failed\n
+WorkshopSelectConfig for %d for %s(%s) when we don't have a binding at all for that controller type\n
 WriteFile
 Wrong Platform
 X-Frame-Options: sameorigin\r\nContent-Security-Policy: default-src 'self'
 XXXX PNG chunk not known
+Xm3@
+Xn3@
 XsBI
 YUY2
 Zjz\v
@@ -5760,9 +5762,12 @@ Zjz\v
 [Workshop] [Autosave] Failed to update. API Call Invalid\n
 [Workshop] [Autosave] Failed. Binding upload failed for some other reason: %s\n
 [Workshop] [Autosave] Failed. Binding upload failed with Limit Exceeded\n
+[Workshop] [Autosave] Failed. Binding upload of newly created file (ID %llu) was denied access\n
 [Workshop] [Autosave] Failed. Call to DownloadItem failed for autosave for %s\n
+[Workshop] [Autosave] Stored autosave ID %llu is owned by another account. Creating a new autosave file.\n
 [Workshop] [Load] Failed to download fileid: '%llu'\n
 [Workshop] [Load] Failed to get action manifest for app %s.\n
+[Workshop] [Load] Failed to load the currently selected binding %s. Silently falling back to the default binding %s for %s(%s)\n
 [Workshop] [Load] Failed to parse action binding config %s: %s\n
 [Workshop] [Load] Failed to parse json content of document for: %s. Path: %s.\n
 [Workshop] [Load] Failed to read action binding config for %s. Path: %s\n
@@ -6253,7 +6258,7 @@ c:\buildslave\steamvr_rel_win64\build\src\vrserver\webinterface\web_server_threa
 c:\buildslave\steamvr_rel_win64\build\src\vrserver\webinterface\web_steam.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrserver\webinterface\web_steam.h
 c:\buildslave\steamvr_rel_win64\build\src\vrserver\webinterface\web_steam_audiosettings.cpp
-cA8\3@
+cA8l3@
 cache_path
 calloc
 camera
@@ -6507,7 +6512,6 @@ enableDriverBoundsImport
 enableHmdAutoConnect
 enableHmdLatencyHidingDisplayOffset
 enableHomeApp
-enableHomeApp2
 enablePlaybackDeviceOverride
 enablePlaybackMirror
 enablePlaybackMirrorIndependentVolume
@@ -6690,6 +6694,7 @@ group
 guid
 guided_tour_room_setup
 hPU3
+hS4@
 half_thresholds
 hand_interaction_ext
 hand_priority
@@ -6722,8 +6727,6 @@ hmd_settings_key
 holographic
 holographic_controller
 hpmotioncontroller
-hs6@
-ht9@
 html
 http:
 http://
@@ -7386,6 +7389,7 @@ pico_controller
 pinch
 pinchgrab
 pivot
+pl3@
 pl_pl
 playAreaColor
 play_area
@@ -7396,6 +7400,7 @@ playbackMirrorDevice
 playbackMirrorDeviceName
 playback_devices
 playing
+pm3@
 polish
 portrait
 portuguese
@@ -7875,7 +7880,6 @@ trigger_haptic
 trigger_path
 true
 true literal
-ts6@
 turkish
 turnOffControllersTimeout
 turnOffScreensTimeout
@@ -8070,7 +8074,6 @@ ws handshake error
 wsprintfW
 wss:
 x-steamvr-secret
-xC4@
 x_path
 xdigit
 xmag

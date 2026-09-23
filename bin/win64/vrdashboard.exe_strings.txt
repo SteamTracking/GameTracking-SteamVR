@@ -28,7 +28,7 @@
 .?AV?$_Func_impl_no_alloc@V<lambda_76601e243a234ec783a81fb8fba74a92>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_e5730e69a408f2c881c006e24b983b82>@@PEAXPEBD@std@@
 .?AV?$_Iosb@H@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@U?$default_delete@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$basic_ios@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_istream@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_istringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
@@ -132,7 +132,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-11:37:58
+11:16:42
 1e+9999
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -261,9 +261,11 @@ Failed Watchdog timeout in thread %s after %f seconds. Terminating.\n
 Failed Watchdog timeout in thread %s after %f seconds\n
 Failed to initialize vrdesktop. Exiting.\n
 Failed to load vrdesktop implementation. Exiting.\n
+Failed to parse log message
 Failed to register for device notifications.\n
 Failed to register raw input devices. Not using hardware sanity checks for physical mouse override.\n
 Failed to register window class.\n
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to set thread %p priority: invalid priority %d\n
 Failed to set up logging.
 Fatal
@@ -327,6 +329,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRScreenshots_001
 IVRServerInternal_XXX
 IVRSettingsInternal_001
@@ -369,7 +372,7 @@ ProcessVREvents
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS>u
+RSDS
 RaiseException
 ReadFile
 RealMain
@@ -414,8 +417,7 @@ STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 See 
 Sending device changed event.\n
-Sep 15 2026
-Set thread %p priority to: %d\n
+Sep 22 2026
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW

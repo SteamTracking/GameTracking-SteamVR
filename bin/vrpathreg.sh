@@ -1,13 +1,17 @@
 #!/bin/bash
 
+export QUIET=1
 VRBINDIR=$(cd $(dirname $0)/; pwd)
-[[ -n $STEAMVR_VRENV ]] || exec "$VRBINDIR/vrenv.sh" "$0" "$@"
+[[ -n $STEAMVR_VRENV ]] || exec "$VRBINDIR/vrenv.sh" "$0" "$@" 2>/dev/null
 
-case $(uname) in
-  Darwin)
+case $(uname -sm) in
+  Darwin*)
     VRPATHREG=$STEAMVR_TOOLSDIR/bin/osx32/vrpathreg
     ;;
-  Linux)
+  "Linux aarch64")
+    VRPATHREG=$STEAMVR_TOOLSDIR/bin/linuxarm64/vrpathreg
+    ;;
+  Linux*)
     VRPATHREG=$STEAMVR_TOOLSDIR/bin/linux64/vrpathreg
     ;;
   default)

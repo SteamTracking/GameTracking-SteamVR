@@ -65,6 +65,7 @@ CreateFileW
 DeleteCriticalSection
 EnterCriticalSection
 Failed string allocation\n
+Failed to parse log message
 GetCurrentProcess
 GetCurrentProcessId
 GetCurrentThreadId
@@ -88,7 +89,7 @@ OLEAUT32.dll
 PathCchAppend
 PathRemoveFileSpecW
 QueryPerformanceCounter
-RSDSr
+RSDS&3'
 ResetEvent
 RtlCaptureContext
 RtlLookupFunctionEntry

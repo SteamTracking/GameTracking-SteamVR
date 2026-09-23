@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "사용 안 함",
 	"Setting_AllowMultipleLinks": "여러 링크 허용",
 	"Setting_EnableHmdAutoConnect": "SteamVR 시작 시 지원되는 Steam Link HMD 자동으로 연결",
+	"Setting_Sharpening": "인코딩 전 이미지 선명화(FidelityFX CAS)",
+	"Setting_SharpeningStrength": "선명화 강도",
 	"svl_hand_interaction_augmented": "핸드 트래킹 컨트롤러",
 	"/input/index_pinch": "엄지와 검지로 집기",
 	"/input/middle_pinch": "엄지와 중지로 집기",

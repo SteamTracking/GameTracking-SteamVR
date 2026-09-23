@@ -99,6 +99,7 @@ EnterCriticalSection
 EventRegister
 EventUnregister
 Failed to initialize volk %i
+Failed to parse log message
 Format string parse failure
 FreeLibrary
 GetCurrentProcess

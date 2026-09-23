@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Ki",
 	"Setting_AllowMultipleLinks": "Több csatorna engedélyezése",
 	"Setting_EnableHmdAutoConnect": "Támogatott Steam Link HMD-k automatikus csatlakoztatása a SteamVR indításakor",
+	"Setting_Sharpening": "Kép élesítése a kódolás előtt (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Élesítés erőssége",
 	"svl_hand_interaction_augmented": "Kézkövetéses játékvezérlő",
 	"/input/index_pinch": "Mutatóujjas csippentés",
 	"/input/middle_pinch": "Középső ujjas csippentés",

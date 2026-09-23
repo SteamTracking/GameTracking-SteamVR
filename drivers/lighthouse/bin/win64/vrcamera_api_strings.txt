@@ -281,6 +281,7 @@
 0123456789ABCDEFabcdef-+Xx
 0123456789ABCDEFabcdef-+XxPp
 0123456789abcdefghijklmnopqrstuvwxyz
+1Mrl\vO
 1eaB@
 :AM:am:PM:pm
 :Jan:January:Feb:February:Mar:March:Apr:April:May:May:Jun:June:Jul:July:Aug:August:Sep:September:Oct:October:Nov:November:Dec:December
@@ -613,7 +614,7 @@ QueryDepthSList
 QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryUmsThreadInformation
-RSDSo
+RSDS
 RaiseException
 RegisterTraceGuidsW
 RegisterWaitForSingleObject
@@ -787,7 +788,6 @@ bad message
 blank
 broken pipe
 c:\buildslave\steamvr_rel_win64\build\src\vrcamera_api\Retail\win64\2017\vrcamera_api.pdb
-cR_L
 calloc
 cntrl
 connection aborted

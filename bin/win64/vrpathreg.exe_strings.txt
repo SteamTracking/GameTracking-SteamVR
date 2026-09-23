@@ -423,6 +423,7 @@ External Drivers:\n
 Extra non-whitespace after JSON value.
 F>qUxv
 FEMh\f
+Failed to parse log message
 February
 FfW?
 FileTimeToSystemTime

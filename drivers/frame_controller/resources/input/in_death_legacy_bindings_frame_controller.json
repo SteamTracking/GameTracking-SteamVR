@@ -253,6 +253,30 @@
 				{
 					"inputs": {
 						"click": {
+							"output": "/actions/legacy/in/left_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/left_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/left/input/dpad_right"
+				},
+				{
+					"inputs": {
+						"click": {
+							"output": "/actions/legacy/in/left_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/left_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/left/input/dpad_up"
+				},
+				{
+					"inputs": {
+						"click": {
 							"output": "/actions/legacy/in/right_axis1_press"
 						},
 						"pull": {
@@ -329,6 +353,30 @@
 				{
 					"inputs": {
 						"click": {
+							"output": "/actions/legacy/in/right_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/right_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/right/input/x"
+				},
+				{
+					"inputs": {
+						"click": {
+							"output": "/actions/legacy/in/right_applicationmenu_press"
+						},
+						"touch": {
+							"output": "/actions/legacy/in/right_applicationmenu_touch"
+						}
+					},
+					"mode": "button",
+					"path": "/user/hand/right/input/y"
+				},
+				{
+					"inputs": {
+						"click": {
 							"output": "/actions/legacy/in/right_axis0_press"
 						}
 					},
@@ -360,7 +408,7 @@
 	"name": "In Death legacy binding for Steam Frame",
 	"options": {
 		"mirror_actions": false,
-		"simulate_rendermodel": false,
+		"simulate_rendermodel": "name_only",
 		"simulated_controller_type": "oculus_touch"
 	},
 	"simulated_actions": []

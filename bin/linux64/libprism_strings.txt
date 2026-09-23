@@ -242,8 +242,10 @@
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
+*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZL34StartWorkerThreadForThreadPriorityRKSt8functionIFbiRKSsEEEUlvE_EEEEEE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN12_GLOBAL__N_114CPrismInstance5StartEPK20PrismRunParameters_tEUlS5_E_S5_EEEEEE
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN22CThreadWatchdogManager13InitWatchdogsEvEUlvE_EEEEEE
+*Z22ThreadSetPriorityLinuxEUliRKSsE_
 *ZN10CLogBufferC4EvEUl9ELogLevelPKcPvE_
 , aliased
 , flags(
@@ -315,6 +317,8 @@
 /data/src/prism/src/prismclient.cpp
 /data/src/prism/src/prismposeprovider_null.cpp
 /dev/null
+/org/freedesktop/RealtimeKit1
+/org/freedesktop/portal/desktop
 /proc/self/status
 /steamvr/
 /sys/kernel/debug/tracing/trace_marker
@@ -505,7 +509,6 @@ Error %d growing shared object manager file.
 Error %d locking shared memory file
 Error on Release(): Not the lock owner(%d) != %d\n
 Error reading from socket\n
-Error: failed to load dynamic SDL
 Executable: %s\n
 ExportTimeline
 FACET_VULKAN_VALIDATION
@@ -516,23 +519,23 @@ Failed Watchdog timeout in thread %s after %f seconds. Skipping abort because we
 Failed Watchdog timeout in thread %s after %f seconds. Skipping assert because we're in the debugger.\n
 Failed Watchdog timeout in thread %s after %f seconds. Terminating.\n
 Failed Watchdog timeout in thread %s after %f seconds\n
+Failed loading %s: %s
+Failed loading symbol %s from %s: %s
 Failed to AllocMutex
 Failed to LockMgrMutex in AllocMutex
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to create socket for shared fd id: 0x%lx\n
-Failed to init scheduler: failed to get rlimit\n
-Failed to init scheduler: failed to get sched params %d\n
-Failed to init scheduler: failed to set rlimit\n
+Failed to find suitable dbus connection for rtkit
 Failed to initialize client address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd id: 0x%lx\n
+Failed to open dbus session connection: %s
+Failed to parse log message
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
 Failed to receive shared fd id: 0x%lx\n
 Failed to set thread %p priority: invalid priority %d\n
-Failed to set thread %p priority: set failed for %d: %d: %s\n
+Failed to set thread (%p, %s) priority\n
 Failed to set thread priority: foreign thread unsupported\n
-Failed to set thread priority: scheduler init failed\n
-Failed to set thread priority: setschedparam failed %d: %d\n
 Failed to signal shared fd server\n
 Failed when reading payload of length %u: errno=%d\n
 February
@@ -553,6 +556,7 @@ GCC: (SteamRT 9.3.0-17+steamrt2.5+bsrt2.1) 9.3.1 20210309
 GLIBC_2.12
 GLIBC_2.14
 GLIBC_2.16
+GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.27
 GLIBC_2.3
@@ -567,7 +571,6 @@ GetCompatibleMemoryType
 GetEnvironmentVariableAsBool(%s): Unable to parse value '%s', using default %d\n
 GetResourceAllocInfo(resInst, allocInfo)
 Graphics Timeline
-HIGH
 HOST_CACHED_BIT
 HOST_COHERENT_BIT
 HOST_VISIBLE_BIT
@@ -643,10 +646,15 @@ MV-MeanMaxBlur
 MV-Median5x5
 MV-PingPong%d-%s
 MV-PreviousInput-%s
-Mapped priority %d to SDL priority %s\n
+MakeThreadHighPriority
+MakeThreadHighPriorityWithPID
+MakeThreadRealtime
+MakeThreadRealtimeWithPID
 March
 MarkInUse
+MaxRealtimePriority
 MeshShader
+MinNiceLevel
 Minidump comment truncated
 Monday
 Motion Vector Attenuation Pipeline
@@ -694,7 +702,6 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NONE
-NORMAL
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -888,6 +895,7 @@ RPS_ERROR_VALIDATION_FAILED
 RPS_FAILED(RenderGraphSignature::InitNodeDecl(m_cmdArena, *pNodeDesc, *pNewNodeDecl))
 RPS_FAILED(m_status)
 RPS_OK
+RTTimeUSecMax
 Ran out of IPC SharedObjectManager entries!\n
 RasterizerState
 RaytracingPipeline
@@ -909,11 +917,15 @@ Reproject Vertex Buffer-%s
 Requested Force create but SharedObjectMutex already created\n
 Reset
 RpslHostCallEntry(pCurrProgram->GetEntry()->pfnEntry, execInfo.numArgs, execInfo.ppArgs)
+RtkitSetThreadPriority(%d, %d, %ld, %s): %s failed over all retries. Original OS function %s error: %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): %s failed: (name: %s, msg: %s). Possibly retrying ...
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query MaxRealtimePriority property, falling back to default %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query MinNiceLevel property, falling back to default %d
+RtkitSetThreadPriority(%d, %d, %ld, %s): Failed to query RTTimeUSecMax property, falling back to default %lld
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_getparam failed (errno: %d)
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_getscheduler failed (errno: %d)
+RtkitSetThreadPriority(%d, %d, %ld, %s): sched_setscheduler failed (errno: %d)
 RunFrame
-SDL_GetError
-SDL_GetPowerInfo
-SDL_LinuxSetThreadPriorityAndPolicy
-SDL_SetThreadPriority
 STEAMVR_DISABLE_CRASH_REPORTING
 STEAMVR_DISABLE_THREAD_WATCHDOGS
 STEAMVR_ENABLE_THREAD_WATCHDOGS
@@ -942,8 +954,10 @@ SV_Viewport
 Saturday
 Semantic index range overlap
 September
-Set thread %p priority to: %d\n
 SetObjectDebugName
+SetProcessRLimitRTTimeToAtMost: getrlimit(RLIMIT_RTTIME) failed: %d
+SetProcessRLimitRTTimeToAtMost: setrlimit(RLIMIT_RTTIME) failed: %d
+SetProcessRLimitRTTimeToAtMost: setrlimit(RLIMIT_RTTIME) failed: %d. A lower limit has been set concurrently.
 SharedObjMgr().Init() failed
 Shutdown
 Signal
@@ -1038,6 +1052,7 @@ TLS init function for
 TLS wrapper function for 
 Thread watchdog timed out %s
 Thread watchdog with a small timout %f. Timeouts should usually be multiple seconds.
+ThreadSetPriorityLinuxImpl(%d, %d, %ld, %s): %s failed: %d (errno: %d)
 ThreadWatchdog
 Thursday
 TimestampQueryPool-%s
@@ -1178,6 +1193,8 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
+__cxa_thread_atexit
+__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __duplocale
@@ -1319,6 +1336,55 @@ currResources.imageViews.resize(accessIndices.size())
 currResources.renderPasses.resize(cmdIndices.size())
 data->IsInitialized()
 data.hIPC.IsValid()
+dbus_bus_add_match
+dbus_bus_get_private
+dbus_bus_get_unique_name
+dbus_bus_register
+dbus_bus_remove_match
+dbus_connection_add_filter
+dbus_connection_close
+dbus_connection_dispatch
+dbus_connection_flush
+dbus_connection_get_is_connected
+dbus_connection_open_private
+dbus_connection_read_write
+dbus_connection_read_write_dispatch
+dbus_connection_ref
+dbus_connection_remove_filter
+dbus_connection_send
+dbus_connection_send_with_reply_and_block
+dbus_connection_set_exit_on_disconnect
+dbus_connection_try_register_object_path
+dbus_connection_unref
+dbus_error_free
+dbus_error_has_name
+dbus_error_init
+dbus_error_is_set
+dbus_free
+dbus_free_string_array
+dbus_get_local_machine_id
+dbus_message_append_args
+dbus_message_append_args_valist
+dbus_message_get_args
+dbus_message_get_args_valist
+dbus_message_has_path
+dbus_message_is_signal
+dbus_message_iter_append_basic
+dbus_message_iter_close_container
+dbus_message_iter_get_arg_type
+dbus_message_iter_get_basic
+dbus_message_iter_init
+dbus_message_iter_init_append
+dbus_message_iter_next
+dbus_message_iter_open_container
+dbus_message_iter_recurse
+dbus_message_new_method_call
+dbus_message_new_signal
+dbus_message_set_no_reply
+dbus_message_unref
+dbus_shutdown
+dbus_threads_init_default
+dbus_type_is_fixed
 decimal128
 decimal32
 decimal64
@@ -1432,8 +1498,8 @@ kill
 lastCmdId != CMD_ID_POSTAMBLE
 ld-linux-x86-64.so.2
 lhs->m_pTimeline == rhs->m_pTimeline
-libSDL2-2.0.so.0
 libc.so.6
+libdbus-1.so.3
 libdl.so.2
 libm.so.6
 libpthread.so.0
@@ -1552,6 +1618,10 @@ opendir
 operator
 operator 
 operator"" 
+org.freedesktop.DBus.Properties
+org.freedesktop.RealtimeKit1
+org.freedesktop.portal.Desktop
+org.freedesktop.portal.Realtime
 other.perEye[ vr::Eye_Left ].input.nClientFrameIndex == other.perEye[ vr::Eye_Right ].input.nClientFrameIndex
 pAllocator
 pAllocator != nullptr
@@ -1692,6 +1762,7 @@ pthread_condattr_init
 pthread_condattr_setclock
 pthread_create
 pthread_detach
+pthread_getname_np
 pthread_getschedparam
 pthread_getspecific
 pthread_join
@@ -1708,7 +1779,6 @@ pthread_mutexattr_settype
 pthread_once
 pthread_self
 pthread_setname_np
-pthread_setschedparam
 pthread_setspecific
 pthreads futex robust_list is corrupt
 punct
@@ -1746,7 +1816,6 @@ resolve_src
 resource(%u)
 resourceId < GetResourceInstances().size()
 resourceInstance.IsTemporalParent()
-rewind
 rootBlockInstanceId == RPS_INDEX_NONE_U32
 roundf
 rpInfo.resolveTargetsMask & ~rpInfo.renderTargetsMask
@@ -1763,8 +1832,6 @@ rtas_read
 runtimeCmd.clearValues.data()
 s_nInstanceCount > 0
 scandir
-sched_get_priority_max
-sched_get_priority_min
 sched_getparam
 sched_getscheduler
 sched_setaffinity
@@ -1778,6 +1845,7 @@ sendmsg
 sendto
 setenv
 setlocale
+setprio_
 setpriority
 setrlimit
 setvbuf
@@ -1909,6 +1977,7 @@ ungetc
 ungetwc
 uninitialized __any_string
 unknown
+unknown error
 unlink
 unsetenv
 unsigned

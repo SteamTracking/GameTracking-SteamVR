@@ -1034,6 +1034,7 @@ Failed to compute polynomial roots.
 Failed to extract eigenvalues from companion matrix.
 Failed to load background image: %s\n
 Failed to load foreground image: %s\n
+Failed to parse log message
 Failed to write output image: %s\n
 Failure: Input lhs is NULL.
 Final solve with distortion model %s\n
@@ -1215,7 +1216,6 @@ OpenVR
 Optional:\n
 Original radius=%lf, expanded radius=%lf, inverse check %lf / %lf\n
 OutputDebugStringA
-P\r0x
 Parameter Block %d, size: %d\n
 Parameter Blocks: 
 Parameter block not found: 
@@ -1235,9 +1235,7 @@ QUADRATIC
 QueryPerformanceCounter
 RAW_LOG ERROR: The Message was too long!\n
 RE-SOLVING DUE TO OUTLIER REMOVAL\n
-RSDS"
-R\v0x
-R\vpx
+RSDS
 Rank of subspace basis is 0. 
 Rank of the subspace basis matrix is reported to be 
 Re-solve with %s, rough center, and cut-down radius to get the final focal length (channel %d):\n

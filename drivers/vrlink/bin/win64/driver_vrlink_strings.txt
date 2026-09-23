@@ -177,6 +177,8 @@ $d`D-laM
 %s Salt Length: 0x
 %s%02x
 %s: (%d bit)\n
+%s: Clamped historical frame length from %d -> %d
+%s: Clamping nHistoricalFrames to maximum value of %d
 %s: CoCreateInstance MMDeviceEnumerator failed: hr = 0x%08x\n
 %s:%d: OpenSSL internal error: %s\n
 %s[%s] %s file=%s
@@ -206,6 +208,7 @@ $d`D-laM
 '&%$#"! /.-,+*)(76543210?>=<;:98
 '.5<=6/7>????????????????
 '5'7'M'S'U'_'k'm's'w'
+'72q
 'DAE
 'RL6
 'SrN
@@ -248,6 +251,7 @@ $d`D-laM
 *laM-\SO
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
++10ms
 +2Hp
 +HpXhE
 +en+eo+
@@ -272,6 +276,7 @@ $d`D-laM
 ,name:
 ,value:
 -----BEGIN 
+-10ms
 -1e+9999
 -;-C-I-M-a-e-q-
 -DBF
@@ -306,11 +311,11 @@ $d`D-laM
 .?AV<lambda_1db60d98261e2e5ed663866066a32dcb>@@
 .?AV<lambda_20e1bdb94718060666138843bb694dab>@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
-.?AV<lambda_319f580a4224e01ee42ba878b8ce0cba>@@
 .?AV<lambda_32e5c6af8154400f9c9f730f600844a6>@@
 .?AV<lambda_3775199eb374ee8b8777545cef56c745>@@
 .?AV<lambda_3a1191368f2f8e8f851d1ab47ccdcdec>@@
 .?AV<lambda_3fd6e5ca82e0518e289160675f532929>@@
+.?AV<lambda_45d0b9b6ac183d80f6e72b16103b82a4>@@
 .?AV<lambda_4ee6bf3559fae922802f415d3516f18b>@@
 .?AV<lambda_4ffa50308b5d1e66dc7726341f406107>@@
 .?AV<lambda_5574022b9be48774ec6a16dc7ae493f7>@@
@@ -321,12 +326,11 @@ $d`D-laM
 .?AV<lambda_73c8c56af3739440ca8f423c010128b0>@@
 .?AV<lambda_758218a6081bd8528f1dbb1a976afb78>@@
 .?AV<lambda_7cb3ae86a555bd1884286d99351cb75a>@@
-.?AV<lambda_8137bacb2ec4a212e8515c6b4689164d>@@
 .?AV<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@
 .?AV<lambda_989ad3179003eb4da9febba03c4fa4ec>@@
+.?AV<lambda_99840cb531ef870a4cd596a96a725af6>@@
 .?AV<lambda_9d41b3ee438f80103e2698b6e104efcc>@@
 .?AV<lambda_9d812cdbb2637066dec77a23e906a3a6>@@
-.?AV<lambda_a4875eeb03f81e3c13a1c71cd10fa633>@@
 .?AV<lambda_a8e7685e4c6298bafbfcf49cd99dc73d>@@
 .?AV<lambda_af868864076d215859aa197478777fd4>@@
 .?AV<lambda_b26634d623885070e135664047f958cb>@@
@@ -334,6 +338,7 @@ $d`D-laM
 .?AV<lambda_b851adac7a94b8b26e88d6b13226e937>@@
 .?AV<lambda_bbe77a66b0026df80b4d0298587f61c6>@@
 .?AV<lambda_c0039f61ae885cb96ffed4647be5ab37>@@
+.?AV<lambda_c06232cff4893c5ac37256700f8314eb>@@
 .?AV<lambda_c95cdcc8ed7ab36646e90c1ce3a5ffde>@@
 .?AV<lambda_c96ca75bfc4488db256d3b17a674ae31>@@
 .?AV<lambda_ca19800c162a615b14dbffc218e93f9c>@@
@@ -346,6 +351,7 @@ $d`D-laM
 .?AV<lambda_d9fb5ad2b4779161ce72962e3eef40a0>@@
 .?AV<lambda_db99d3d0e9e843038cbeba219936706c>@@
 .?AV<lambda_e6c6d718dd3dc6eee0580ada32c627ff>@@
+.?AV<lambda_e90c1d83669a90c76e74f75cf4690e43>@@
 .?AV<lambda_ef563500a89503df14b1e609de2ab40e>@@
 .?AV<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@
 .?AV<lambda_f6b5d47df092c684e925186f68bd5c46>@@
@@ -358,6 +364,7 @@ $d`D-laM
 .?AV?$_Func_base@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@PEAX@std@@
 .?AV?$_Func_base@X$$V@std@@
 .?AV?$_Func_base@XAEBVValue@Json@@@std@@
+.?AV?$_Func_base@XPEAUHKEY__@@PEB_W@std@@
 .?AV?$_Func_base@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_base@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_base@X_N@std@@
@@ -385,11 +392,11 @@ $d`D-laM
 .?AV?$_Func_impl_no_alloc@V<lambda_1db60d98261e2e5ed663866066a32dcb>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_20e1bdb94718060666138843bb694dab>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_319f580a4224e01ee42ba878b8ce0cba>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_32e5c6af8154400f9c9f730f600844a6>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3775199eb374ee8b8777545cef56c745>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3a1191368f2f8e8f851d1ab47ccdcdec>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3fd6e5ca82e0518e289160675f532929>@@_NPEAXPEAU_SP_DEVINFO_DATA@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_45d0b9b6ac183d80f6e72b16103b82a4>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4ee6bf3559fae922802f415d3516f18b>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4ffa50308b5d1e66dc7726341f406107>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_5574022b9be48774ec6a16dc7ae493f7>@@XW4ValueTransportID@@_N@std@@
@@ -400,12 +407,11 @@ $d`D-laM
 .?AV?$_Func_impl_no_alloc@V<lambda_73c8c56af3739440ca8f423c010128b0>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_758218a6081bd8528f1dbb1a976afb78>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7cb3ae86a555bd1884286d99351cb75a>@@XW4ValueTransportID@@_N@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_8137bacb2ec4a212e8515c6b4689164d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_989ad3179003eb4da9febba03c4fa4ec>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_99840cb531ef870a4cd596a96a725af6>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_9d41b3ee438f80103e2698b6e104efcc>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_9d812cdbb2637066dec77a23e906a3a6>@@XAEBVValue@Json@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_a4875eeb03f81e3c13a1c71cd10fa633>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a8e7685e4c6298bafbfcf49cd99dc73d>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_af868864076d215859aa197478777fd4>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b26634d623885070e135664047f958cb>@@XW4ValueTransportID@@_N@std@@
@@ -413,6 +419,7 @@ $d`D-laM
 .?AV?$_Func_impl_no_alloc@V<lambda_b851adac7a94b8b26e88d6b13226e937>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_bbe77a66b0026df80b4d0298587f61c6>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c0039f61ae885cb96ffed4647be5ab37>@@XW4ValueTransportID@@_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_c06232cff4893c5ac37256700f8314eb>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c95cdcc8ed7ab36646e90c1ce3a5ffde>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c96ca75bfc4488db256d3b17a674ae31>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ca19800c162a615b14dbffc218e93f9c>@@XAEBVValue@Json@@@std@@
@@ -425,6 +432,7 @@ $d`D-laM
 .?AV?$_Func_impl_no_alloc@V<lambda_d9fb5ad2b4779161ce72962e3eef40a0>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_db99d3d0e9e843038cbeba219936706c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_e6c6d718dd3dc6eee0580ada32c627ff>@@XW4ValueTransportID@@_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_e90c1d83669a90c76e74f75cf4690e43>@@XPEAUHKEY__@@PEB_W@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ef563500a89503df14b1e609de2ab40e>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f6b5d47df092c684e925186f68bd5c46>@@X_N@std@@
@@ -825,7 +833,6 @@ $d`D-laM
 0.0.0.0
 0000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899x
 00P`00P`
 0123456789
 0123456789.
@@ -839,7 +846,7 @@ $d`D-laM
 0\tzc
 0\v2;i
 0`P0
-0a\v6<p
+0a\v6<
 0n\n&pa
 0pp@5tqE?|sO541
 0x%I64x
@@ -1085,7 +1092,6 @@ $d`D-laM
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
 @!@%@+@1@?@C@E@]@a@g@m@
 @0pp
-@Failed to set thread %p priority: invalid priority %d\n
 @fff>fff>fff>fff>
 @jAjB
 @n2w
@@ -1332,6 +1338,7 @@ Adapter is not supported by vrlink (vendor ID %d).\n
 Adds a directory from which ENGINEs can be loaded
 Adjust relative FOV
 Adobe
+AdvancedFrameTimeMonitoring::SetCSVLogging
 Affiliation Changed
 Ag*g*
 AlexEkd JingThom
@@ -1380,11 +1387,11 @@ AuthRSA
 AuthSRP
 Authority Information Access
 Auto
-Autodetected %s
 Autodetected Headset, using Oculus Quest 3 profile
 Autodetected Headset, using Oculus Quest Pro profile
 Autodetected Headset, using Pico 4x profile
 Autodetected Headset, using Pico/HTC Eye tracking profile
+Autodetected Headset, using Steam Frame profile
 Autodetected Oculus Quest 2
 Autonomous System Numbers
 AvRevertMmThreadCharacteristics
@@ -1806,6 +1813,7 @@ Complete reinit success. Took: %0.1fms
 Completing videonvenc::GetEncodedDataThread
 Completing videonvenc::ManageFramesThread
 Completing videonvenc::StartEncodeDataThread
+Concerning: samplesExpected (%d) != nNumEntries * nLinkCount (%d)\n
 Configuring VRLINK Chaperone Prop container %08x: Universe %llu\n
 Connection %s at %f\n
 Connection inactive for %f > %d seconds. Sending quit event.\n
@@ -1992,6 +2000,7 @@ DcO/lcK+hSK
 DeadL %4.1fms
 Debug
 Decipher Only
+Decoded
 DefWindowProcA
 Default automatic encoded video size: %i
 DeleteCriticalSection
@@ -2112,6 +2121,8 @@ ED448
 EDIPARTYNAME
 EE\fl~5
 EMPTY
+ENC Done
+ENC Start
 ENCRYPTED
 ENCRYPTED PRIVATE KEY
 ENGINE lib
@@ -2151,7 +2162,6 @@ ERROR: AMF SubmitInput() failed [ %s ]\n
 ERROR: Could not initialize UDP driver; unknown session type requested.
 ERROR: Failed to get encryption engine.
 ERROR: Failed to open log file %s, attempting timestamped filename\n
-ERROR: Null VTE_CLIENT_SESSION_ID!\n
 ERROR: Requested GRT type is not supported (type != DIRECTX)\n
 ERROR: Shaders sum to > 64kB\n
 ERROR: While trying to request retransmission of packet #%d, too many packets were missing even to retransmit.  Aborting stream.\n
@@ -2321,6 +2331,7 @@ Error: nvEncDestroyEncoder() failed to destroy. Error: %d\n
 Error: nvEncInitializeEncoder failed\n
 Error: unsupported mode in CheckOrGenerateSpatialRateControl\n
 EstBW
+Event Rate
 Event Write
 EventRegister
 EventUnregister
@@ -2384,11 +2395,14 @@ Failed to monitor mic sessions, hr = 0x%08x\n
 Failed to parse JSON object\n
 Failed to parse `bufferView` for image[
 Failed to parse `uri` for image[
+Failed to parse log message
 Failed to read file: 
 Failed to request dashboard tutorial (%d)\n
 Failed to send OGS row update\n
 Failed to send link bandwidth measurement\n
 Failed to set QoS on socket (%s)\n
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
+Failed to set thread %p priority: invalid priority %d\n
 False
 Fatal
 Fatal: Bad server address with -c [server] : %s\n
@@ -2413,6 +2427,7 @@ Forced Stream reset has failed. Code: 0x13
 Found properties for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to retrieve serial number for activation.
+Frame Done
 FreeLibrary
 Full Reinit
 Function not implemented
@@ -2682,6 +2697,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_006
 IVRServerInternal_XXX
 IVRSettingsInternal_001
@@ -2948,6 +2964,7 @@ NV_ENC_CAPS_LEVEL_MIN
 NV_ENC_CAPS_MB_NUM_MAX
 NV_ENC_CAPS_MB_PER_SEC_MAX
 NV_ENC_CAPS_NUM_ENCODER_ENGINES
+NV_ENC_CAPS_NUM_MAX_BFRAMES
 NV_ENC_CAPS_NUM_MAX_LTR_FRAMES
 NV_ENC_CAPS_NUM_MAX_TEMPORAL_LAYERS
 NV_ENC_CAPS_PREPROC_SUPPORT
@@ -2992,6 +3009,7 @@ N\r\nyd
 N`O0P@Q
 Name
 Neither required `bufferView` nor `uri` defined for image[
+NetCfgInstanceId
 Netscape
 Netscape Base Url
 Netscape CA Policy Url
@@ -3182,6 +3200,7 @@ Order:
 Orthographic camera description not found.
 OrthographicCamera
 Other Encoder Sessions:
+Our rate (%f) was not in the list. Updating default to %f FPS.\n
 Out of thread local storage!\n
 OutputDebugStringA
 OutputDebugStringW
@@ -3212,7 +3231,6 @@ PBES2
 PBKDF2
 PBKDF2PARAM
 PBMAC1
-PCGNV_ENC_CAPS_NUM_MAX_BFRAMES
 PEM lib
 PEM routines
 PEM type is '
@@ -3373,6 +3391,7 @@ PSPECIFIED
 PSS parameter restrictions:
 PUBKEY
 PUBLIC KEY
+Packet Ping
 Pairing to address: %s\n
 Pairing to broadcast address not allowed.\n
 Panic! Overwriting vCompleteFramePointer
@@ -3532,6 +3551,7 @@ RSA_verify
 RSA_verify_ASN1_OCTET_STRING
 RSA_verify_PKCS1_PSS_mgf1
 RSDS
+RX Done
 RX Fail:%d
 RaiseException
 Rbg.E
@@ -3547,7 +3567,11 @@ Received mirror stop event\n
 ReceivedHMDStaticProps. Model Number: %s, Serial Number: %s (%d)
 Refreshing audio devices\n
 RegCloseKey
+RegDisableReflectionKey
+RegEnumKeyExW
 RegEnumValueW
+RegGetValueA
+RegGetValueW
 RegOpenKeyExW
 RegQueryValueExW
 RegisterClassA
@@ -3756,7 +3780,7 @@ SVLCryptWindows Error during CryptAcquireContext for random generation (Error = 
 SVLCryptWindows Failed to CryptImportKey key %08x
 SVLCryptWindows Failed to create key.
 SVLDataLink::HandleFECChange( %d )\n
-SVLDataLink::InitCrypt() With %lu remaining key max\n
+SVLDataLink::InitCrypt() With %zd remaining key max\n
 SVLDataLink::InitCrypt() m_TransportMode = %d // %d
 SVLDataLink::InitCrypt(...,%d,%d)
 SVLDataLinkTransferUDP::Init %s dev %s %d %d IPv6: %d\n
@@ -3768,15 +3792,15 @@ SVLDataLinkTransferUDP::RXThread running: %d quit: %d (%s) done\n
 SVLDataLinkTransferUDP::RXThread start (%s)\n
 SVLDataLinkTransferUDP::RXThread zero packet length\n
 SVLDataLinkTransferUDP::SetPeer %s -> %s (Connect: %d / %s)
-SVLDataLinkUDP -> Post Shutdown Sock: %d\n
+SVLDataLinkUDP -> Post Shutdown Sock: %llu\n
 SVLDataLinkUDP -> Sending: %d\n
 SVLDataLinkUDP -> r = %d\n
 SVLDataLinkUDP: Continued to fail to create socket after failed attempt with QoS: %d\n
 SVLDataLinkUDP: Failed to create socket using QoS: %d\n
-SVLDataLinkUDP: Found available QOS service! (Socket creation = %d)
+SVLDataLinkUDP: Found available QOS service! (Socket creation = %lld)
 SVLDataLinkUDP: LocalAlloc failed with %d
 SVLDataLinkUDP: No QOS service found (But created socket anyway)
-SVLDataLinkUDP: Panic on WSAEnumProtocols
+SVLDataLinkUDP: Panic on WSAEnumProtocols (%i)
 SVLDataLinkUDP: QoS is disabled
 SVLDataLinkUDP: WSAEnumProtocols failed with %d
 SVLDataLinkUDP: WSAIoctl failed with %d
@@ -3791,8 +3815,10 @@ SVLDataLinkUDP::Shutdown(); Disconnect() complete\n
 SVLDataLinkUDP::Shutdown(); Thread Join Complete.\n
 SVLDataLinkUDP::Shutdown(); m_nQuit = %d\n
 SVLDataLinkUber: Allow multiple links (%d)\n
+SVLDataLinkUber: An adapter reports itself as an 8832CU dongle, but no adapter matched by hardware ID. Dongle links will not be detected.\n
 SVLDataLinkUber: Could not get GetAdaptersAddresses\n
 SVLDataLinkUber: Could not open iphlpapi.dll\n
+SVLDataLinkUber: Dongle network adapter %s\n
 SVLDataLinkUber: Found primary link %s\n
 SVLDataLinkUber: m_thdLinkScanChanges Join Begin
 SVLDataLinkUber: m_thdLinkScanChanges Join Done
@@ -3822,7 +3848,7 @@ SVLFEC::ProcessTXVideoFrameThreadFunction
 SVLFEC::ReportStreamReset() (m_iLastAcknowledgeFrameNumber = %d)
 SVLFECRXFrame::AcceptVideoPacket: m_pData was not suitable for video (null or insufficient size)
 SVLHMDDriver::Activate: HMD did not support multiple framerates
-SVLHMDDriver::Activate: HMD supports multiple framerates
+SVLHMDDriver::Activate: HMD informs framerates. Num supported: %d
 SVLHMDDriver::InitializeOSC: OSC failed to initialize: %i
 SVLHMDDriver::InitializeOSC: OSC was (re)initialized successfully. In Port: %i, Out Port: %i
 SVLHMDDriver::InitializeOSC: OSC was disabled
@@ -3830,6 +3856,7 @@ SVLHMDDriver::PostPresent
 SVLHMDDriver::Present
 SVLHMDDriver::Present() can't find texture %p\n
 SVLHMDDriver::ProcessEvent
+SVLHMDDriver::UpdateDisplayFrequenciesList called before property container ready
 SVLHMDDriverD3D11::AcquireSync
 SVLHMDDriverD3D11::Activate() D3D11CreateDevice(...) = %d\n
 SVLHMDDriverD3D11::CreateSwapTextureSet() completed.
@@ -3900,7 +3927,6 @@ Server Query
 Server Query Reply
 SessionID
 Set sideband error for 15s
-Set thread %p priority to: %d\n
 SetBitmapBits
 SetConsoleMode
 SetDefaultAudioDevice: device = %s, role = %d\n
@@ -4028,6 +4054,7 @@ TS_TST_INFO_set_serial
 TS_TST_INFO_set_time
 TS_TST_INFO_set_tsa
 TS_VERIFY_CTX_new
+TX Done
 TX Fail:%d
 TX Failure Streak Hit %d; Aborting and reconnecting.\n
 TYPE=
@@ -4048,6 +4075,7 @@ TlsSetValue
 Toggle Cross in center of image.
 Toggle Eye Filtering.
 Toggle MTU Growth
+Toggle Waterfall Mode between times and multilink
 Toggle dumping H265 bitstream to C:\temp\
 Toggle dumping frame timing .csv to C:\temp\
 Toggle foveated transmission (eye tracking).
@@ -4100,6 +4128,8 @@ UNKNOWN
 UNPLUGGED
 UPing
 URI:
+USB\VID_28DE&PID_2432
+USB\VID_2C7C&PID_8206
 USER32.dll
 USERNAME
 USERNOTICE
@@ -4287,6 +4317,7 @@ Warning: res field incorrect [encryption mode] %08x on packet size %d\n
 Warning: retransmit request for unknown message %d (frame number=%d\n
 Warning: unMaxBitRate (%u) over m_nMaxMBPerSecond (%u)\n
 Warning: unVbvBufferSizeBits (%u) over m_unMaxBitsPerFrame (%u)\n
+Waterfall
 Wcr"
 Whether to add a loaded ENGINE to the internal list (0=no,1=yes,2=mandatory)
 WideCharToMultiByte
@@ -4539,6 +4570,14 @@ Zjz\v
 [SVL] !!!! AcquireSync FAILED with unknown hr
 [json.exception.
 [videoenc] Received keyframe, beginning bitstream dump
+[vrlink winregistry] Giving up on the network class key after %u consecutive enumeration failures
+[vrlink winregistry] Unable to disable key reflection for the driver key %d %ls
+[vrlink winregistry] Unable to disable key reflection for the network class key %d
+[vrlink winregistry] Unable to open a driver key for enumeration %d %ls
+[vrlink winregistry] Unable to open the network class key for enumeration %d
+[vrlink winregistry] Unable to read ComponentId from key %ls, %d, %d bytes
+[vrlink winregistry] could not check any network driver keys.
+[vrlink winregistry] failed to read NetCfgInstanceId out of key %ls, %d
 [vrlink] !!!! ReleaseSync FAILED with E_FAIL
 [vrlink] !!!! ReleaseSync FAILED with unknown hr
 \%02X
@@ -4675,7 +4714,7 @@ __stdio_common_vsprintf
 __stdio_common_vsprintf_s
 __stdio_common_vsscanf
 __stdio_common_vswprintf
-_abw3
+_abw4
 _aligned_free
 _aligned_malloc
 _aligned_realloc
@@ -5017,6 +5056,7 @@ authorityKeyIdentifier
 authorityRevocationList
 authsafes
 auto
+auto_disarm
 automaticBandwidth
 automaticStreamFormatWidth
 aux error
@@ -5224,15 +5264,15 @@ c2tnb431r1
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1095
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:762
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1102
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:769
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:2593
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:2955
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3067
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:2643
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3005
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3117
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1753
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1419
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1417
 c=qx
 cACertificate
 cAoption requires an argument -- %c
@@ -5816,6 +5856,7 @@ dFrmsAddl
 dFrmsEarly
 dFrmsLate
 dHMDCompUS
+dHitchMaxBW
 dITRedirect
 dInsideQ
 dNSDomain
@@ -6393,7 +6434,9 @@ first num too large
 first octet invalid
 flags
 flushing
+fmaxf
 fminf
+fmodf
 fopen
 fopen('
 force10bit
@@ -6513,6 +6556,7 @@ hexsalt
 hexsecret
 hexseed
 hist
+history
 hkdf
 hl\tJ3o
 hmac
@@ -7272,6 +7316,7 @@ log conf invalid key
 log conf missing description
 log conf missing key
 log key invalid
+log10f
 logFirstFrames
 logf
 long_c2i
@@ -7779,6 +7824,7 @@ pU>\AL
 pXhH
 pZlNr
 p\lHtW
+p\rP\f0
 p\tK2
 p`q4r<s
 padding check failed
@@ -9035,6 +9081,8 @@ vrcombined_log.txt
 vrcompositor_systemlayer
 vrlink
 vrlink_
+vrlink_aftm_
+vrlink_aftm_*.csv
 vrlink_debug.json
 vrlink_dump_aftm_csv
 vrlink_focus_dashboard_bar_request

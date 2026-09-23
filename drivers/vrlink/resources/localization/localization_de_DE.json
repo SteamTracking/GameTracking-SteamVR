@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Aus",
 	"Setting_AllowMultipleLinks": "Mehrere Verbindungen zulassen",
 	"Setting_EnableHmdAutoConnect": "Beim Start von SteamVR automatisch unterstützte Steam-Link-HMDs verbinden",
+	"Setting_Sharpening": "Bild vor dem Kodieren schärfen (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Schärfungsstärke",
 	"svl_hand_interaction_augmented": "Hand-Tracking-Controller",
 	"/input/index_pinch": "Kneifen: Daumen- und Zeigefinger",
 	"/input/middle_pinch": "Kneifen: Daumen und Mittelfinger",

@@ -79,6 +79,7 @@ var CLSTAMP = "steamdb";
           fD8: () => _._,
           fkw: () => _._,
           gNj: () => _._,
+          hmY: () => _._,
           hqo: () => _._,
           k2$: () => _._,
           kGj: () => _._,
@@ -407,6 +408,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _,
           _ = __webpack_require__("chunkid"),
@@ -490,6 +492,13 @@ var CLSTAMP = "steamdb";
           constructor() {
             (this.vecRequired = []), (this.vecSuggested = []);
           }
+        }
+        function _(_) {
+          if (!0 === _ || "true" === _) return "name_only";
+          if (!1 === _ || "false" === _) return "none";
+          if (null == _ || "" === _) return "name_only";
+          const _ = _.trim().toLowerCase();
+          return "full" !== _ && "name_only" !== _ && "none" !== _ ? "none" : _;
         }
         class _ {
           constructor() {
@@ -3532,10 +3541,10 @@ var CLSTAMP = "steamdb";
               strLocalizedSimulatedControllerType:
                 this.LocalizeStringForSelectedControllerType(_),
               bIsSimulatingController: _ && "none" != _,
-              bIsSimulatingHMD: this.GetOptionValue("simulate_hmd"),
-              bIsSimulatingRenderModel: this.GetOptionValue(
-                "simulate_rendermodel",
+              strSimulatedRenderModelType: _(
+                this.GetOptionValue("simulate_rendermodel"),
               ),
+              bIsSimulatingHMD: this.GetOptionValue("simulate_hmd"),
             };
           }
         }
@@ -14714,6 +14723,8 @@ var CLSTAMP = "steamdb";
                   _.createElement(_, {
                     sOptionName: "simulate_rendermodel",
                     vecOptionItems: this.rendermodelTypeOptions,
+                    sDefaultValue: "name_only",
+                    fnNormalizeValue: _._,
                     bReadOnly: this.props.bReadOnly,
                   }),
                 !_ &&
@@ -14881,8 +14892,9 @@ var CLSTAMP = "steamdb";
           constructor(_) {
             super(_), (this.vecOptionValues = []);
             let _ = _._.GetOptionValue(_.sOptionName);
-            _ || (_ = "none"),
-              (!0 !== _ && "true" != _) || (_ = "name_only"),
+            null == _ || "" === _
+              ? (_ = null != _.sDefaultValue ? _.sDefaultValue : "none")
+              : null != _.fnNormalizeValue && (_ = _.fnNormalizeValue(_)),
               (this.state = {
                 sValue: _,
               });

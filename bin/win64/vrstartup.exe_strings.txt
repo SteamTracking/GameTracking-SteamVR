@@ -132,7 +132,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-11:37:58
+11:16:42
 1e+9999
 : exception thrown in JSON library
 <unknown>
@@ -246,6 +246,7 @@ Executable: %s\n
 Extra non-whitespace after JSON value.
 FATAL: Failed to open log file %s, failing out!\n
 Factory Function Not Found (104)
+Failed to parse log message
 Fatal
 File Not Found (103)
 Firmware Recovery In Progress (139)
@@ -338,6 +339,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_004
 IVRServerDriverHost_006
 IVRServerInternal_XXX
@@ -420,7 +422,7 @@ STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 STEAMVR_VKVALIDATION
 See 
-Sep 15 2026
+Sep 22 2026
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW
@@ -741,7 +743,6 @@ Warning: Watchdog %s not properly cleaned up%s%s\n
 Watchdog disabled in settings (132)
 WebInterface
 WideCharToMultiByte
-[32W
 [PROBLEM] Saving Path Registry failed: 
 [System] New Config Path: 
 [System] New Log Path: 
@@ -855,7 +856,6 @@ dutch
 el_gr
 en_us
 enableHomeApp
-enableHomeApp2
 enableYAMLCompatibility
 english
 es_es

@@ -16,6 +16,7 @@
  for 
  for detail.\n
  has invalid API Version.  Skipping layer.
+ has invalid implementation version.
  is being ignored due to running with secure execution. The value '
  is disabled
  is missing "disable_environment"
@@ -320,8 +321,8 @@ Unloading any previously loaded runtime
 VTT for 
 VUID-XrApiLayerProperties-type-type: unknown type in api_layer_properties
 VUID-XrApplicationInfo-applicationName-parameter
+VUID-XrApplicationInfo-applicationName-parameter: application name must not be empty.
 VUID-XrApplicationInfo-engineName-parameter
-VUID-XrApplicationInfo-engineName-parameter: application name can not be empty.
 VUID-XrExtensionProperties-type-type
 VUID-XrInstanceCreateInfo-applicationInfo-parameter
 VUID-XrInstanceCreateInfo-createFlags-zerobitmask
@@ -687,7 +688,6 @@ strictRoot
 string literal
 strlen
 strncpy
-strtol
 strtold_l
 strtoul
 syscall

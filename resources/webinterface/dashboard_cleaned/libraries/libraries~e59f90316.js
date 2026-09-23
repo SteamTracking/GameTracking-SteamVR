@@ -2431,6 +2431,9 @@ var CLSTAMP = "steamdb";
         );
       });
     },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      module.exports = __webpack_require__("chunkid");
+    },
     chunkid: () => {},
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

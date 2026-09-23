@@ -221,6 +221,7 @@ Failed to compute inverse blue distortion parameters!\n
 Failed to compute inverse green distortion parameters!\n
 Failed to compute inverse red distortion parameters!\n
 Failed to compute red distortion parameters!\n
+Failed to parse log message
 Format string parse failure
 FreeLibrary
 GLSL.std.450
@@ -315,7 +316,7 @@ QueryPerformanceCounter
 RPCRT4.dll
 RPSM
 RPSMt
-RSDS\r
+RSDS[
 RaiseException
 ResetEvent
 Right Eye

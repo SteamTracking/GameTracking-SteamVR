@@ -24,7 +24,6 @@ $@unknown error
 ( 8PX
 ('8PW
 (null)
-)ExH
 +v$x+v$xv$+xv+$xv$+x+$vx+$vx$v+x+$vx$+vx+v $+v $v $+v +$v $++$ v+$ v$ v++$ v$+ v+xv$+ v$v$ +v+ $v$ ++x$v+ $v$v ++ $v$ +v
 -1e+9999
 -Infinity

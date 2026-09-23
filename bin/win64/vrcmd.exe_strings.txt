@@ -540,6 +540,7 @@ Failed to connect to pipe %s because %s\n
 Failed to get runtime path\n
 Failed to import client event handle from pipe %s after connecting\n
 Failed to import server event handle from pipe %s after connecting\n
+Failed to parse log message
 Failed to read prop. What?\n
 Failed to relisten to already-disconnected connection\n
 Failed to relisten to pipe after connection\n
@@ -619,6 +620,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerInternal_XXX
 IVRSettingsInternal_001
 IVRSettings_003
@@ -903,7 +905,7 @@ PropertyContainer: High lock acquisition counters: sp:%u yd:%u re:%u\n
 PropertyContainerCreation
 QueryPerformanceCounter
 QueryPerformanceFrequency
-RSDSr^
+RSDSo2
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

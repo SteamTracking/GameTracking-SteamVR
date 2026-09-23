@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Av",
 	"Setting_AllowMultipleLinks": "Tillat flere koblinger",
 	"Setting_EnableHmdAutoConnect": "Koble til støttede hodesett automatisk ved oppstart av SteamVR",
+	"Setting_Sharpening": "Skjerp bildet før koding (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Skjerpingsstyrke",
 	"svl_hand_interaction_augmented": "Kontroller for håndsporing",
 	"/input/index_pinch": "Klyp (pekefinger)",
 	"/input/middle_pinch": "Klyp (langfinger)",

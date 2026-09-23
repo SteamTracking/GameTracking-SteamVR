@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "オフ",
 	"Setting_AllowMultipleLinks": "複数の接続を許可",
 	"Setting_EnableHmdAutoConnect": "SteamVR起動時にサポートされているSteamリンクHMDを自動的に接続する",
+	"Setting_Sharpening": "エンコード前に画像を鮮明にする（FidelityFX CAS）",
+	"Setting_SharpeningStrength": "鮮明度の度合い",
 	"svl_hand_interaction_augmented": "ハンドトラッキングコントローラ",
 	"/input/index_pinch": "ピンチ（人差し指）",
 	"/input/middle_pinch": "ピンチ（中指）",

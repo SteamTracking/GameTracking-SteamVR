@@ -414,6 +414,7 @@ FW Update Start
 Failed to download device configuration
 Failed to download device configuration\n
 Failed to get firmware attributes\n
+Failed to parse log message
 Failed to send config chunk after %d bytes\n
 Failed to start update: 
 File: 
@@ -547,7 +548,7 @@ Qkkbal
 QueryPerformanceCounter
 QueryPerformanceFrequency
 R1h58
-RSDS#\v
+RSDSs~m
 Radio version:      
 RaiseException
 ReadFile

@@ -385,7 +385,6 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV<lambda_1632588a5637fc88bae8c08feee1c11c>@@
 .?AV<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@
 .?AV<lambda_2b6946a8720252ff5d48d62f7b228872>@@
-.?AV<lambda_2bce1d05a33c7d1bc4dad80ee985224d>@@
 .?AV<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
 .?AV<lambda_30d0f29d2aa872ae28db230989e45d5d>@@
@@ -424,6 +423,7 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV<lambda_b123456ace778c116d50a79cbcf1efb8>@@
 .?AV<lambda_b2db90e26f16d2df5d837253529ec0cb>@@
 .?AV<lambda_b6a49a309ad208974985388b8cfa7310>@@
+.?AV<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@
 .?AV<lambda_b999e20ffa6154705556996545c644f8>@@
 .?AV<lambda_c64c1a9cc02f8aeec11a8ac013daf78e>@@
 .?AV<lambda_c86511a2709f120373415027cb7bae9a>@@
@@ -467,7 +467,6 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV?$_Func_impl_no_alloc@V<lambda_1632588a5637fc88bae8c08feee1c11c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2b6946a8720252ff5d48d62f7b228872>@@XAEBVValue@Json@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_2bce1d05a33c7d1bc4dad80ee985224d>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_30d0f29d2aa872ae28db230989e45d5d>@@PEAXPEBD@std@@
@@ -506,6 +505,7 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV?$_Func_impl_no_alloc@V<lambda_b123456ace778c116d50a79cbcf1efb8>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b2db90e26f16d2df5d837253529ec0cb>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b6a49a309ad208974985388b8cfa7310>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b999e20ffa6154705556996545c644f8>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c64c1a9cc02f8aeec11a8ac013daf78e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c86511a2709f120373415027cb7bae9a>@@_NAEAUVRFocusEntry_t@@@std@@
@@ -528,10 +528,10 @@ $\n k_EProtoServiceTypeSteamMessages
 .?AV?$_Iosb@H@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8CRemotePerfStats@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8CRemotePerfStats@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_02c0a559bb132226d3ef0c3e5ad21492>@@@std@@U?$default_delete@V?$tuple@V<lambda_02c0a559bb132226d3ef0c3e5ad21492>@@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_496afdfe9ed10d6d478ad9bc16153a4d>@@@std@@U?$default_delete@V?$tuple@V<lambda_496afdfe9ed10d6d478ad9bc16153a4d>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_75d2ea45d2712b1f2cdaf6a5df2693f9>@@@std@@U?$default_delete@V?$tuple@V<lambda_75d2ea45d2712b1f2cdaf6a5df2693f9>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_7e773f23216bea319112d687fe7cbabf>@@@std@@U?$default_delete@V?$tuple@V<lambda_7e773f23216bea319112d687fe7cbabf>@@@std@@@2@@std@@@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@U?$default_delete@V?$tuple@V<lambda_848be8f9a8f0f693e744ef05976b2633>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_ba0b31aa3bec7bdb92ee214a311a032d>@@@std@@U?$default_delete@V?$tuple@V<lambda_ba0b31aa3bec7bdb92ee214a311a032d>@@@std@@@2@@std@@@std@@
 .?AV?$_Ref_count_obj@V?$vector@UHmdVector2_t@vr@@V?$allocator@UHmdVector2_t@vr@@@std@@@std@@@std@@
 .?AV?$_Ref_count_obj@V?$vector@UHmdVector3_t@vr@@V?$allocator@UHmdVector3_t@vr@@@std@@@std@@@std@@
@@ -1246,12 +1246,14 @@ $\n k_EProtoServiceTypeSteamMessages
 0123456789ABCDEF
 0123456789ABCDEFundefined
 0123456789abcdef
-0TH!
+0J0@
+0\rPR
+0pt!
 0x%02x 
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
-11:37:58
+11:16:42
 123456789
 1A26b
 1e+9999
@@ -1272,6 +1274,7 @@ $\n k_EProtoServiceTypeSteamMessages
 7\n\tenum_type
 7^d[L
 7~8A
+870@
 8\n\textension
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -1287,6 +1290,7 @@ $\n k_EProtoServiceTypeSteamMessages
 <unknown>
 ================================================================================================\n
 ====> Detected GPU deadlock.. breaking cycle: %llu\n
+?/vrgamepadui/steamvr/dashboard_frames_tx
 ?333?fff?33
 ??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ
 ??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z
@@ -1372,7 +1376,6 @@ $\n k_EProtoServiceTypeSteamMessages
 ?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
 ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
-@/vrgamepadui/steamvr/dashboard_frames_tx
 @vector<T> too long
 A GrabTransform raycast did not find any intersections. %.3f
 A file with this name is already in the pool.
@@ -1534,6 +1537,7 @@ CGraphicsDevice::SetDisplayModeWinRT
 CGraphicsDevice::SignalPresentFence
 CGraphicsDevice::UpdateCollisionBounds
 CGraphicsDevice::UpdateReprojectionDepth
+CGraphicsDevice::UpdateVideoCaptureViewUVs
 CGraphicsDevice::WaitForGpuWork
 CGraphicsDevice::WaitForPresent
 CGraphicsDevice::WaitForPresent/VirtualDisplay
@@ -1907,12 +1911,14 @@ CircleFade
 Clamping render target scale to 1.5x total area.\n
 Cleaning up\n
 ClearField
+Cleared stage override '%s' owned by pid %u\n
 Clearing disable all reprojection (pid=%d)\n
 Clearing forced always-on reprojection (pid=%d)\n
 Clearing forced interleaved reprojection off (pid=%d)\n
 Clearing forced interleaved reprojection on (pid=%d)\n
 Clearing present fence (pid=%d)\n
 Clearing splash overlay (received scenegraph update)
+Clearing stage override owned by pid %u because scene app %u is running\n
 Client
 Client (%s) app container state: %d
 CloseHandle
@@ -1937,6 +1943,7 @@ CollisionBoundsStyle
 CollisionBoundsWallHeight
 Color
 Color Palette Debug
+Color Palette Readback
 ColorPaletteDebug
 CommitPlayspaceBoundsDrawing error. No forward direction.
 CommitPlayspaceCircleBoundary error. No forward direction.
@@ -2301,6 +2308,7 @@ Failed to create mirror overlay event!\n
 Failed to create mirror overlay texture!\n
 Failed to create mirror window buffer%d!\n
 Failed to create mirror window swap chain with DXGI_SWAP_EFFECT_DISCARD! Aborting.\n
+Failed to create mirror window swap chain with DXGI_SWAP_EFFECT_FLIP_DISCARD! Trying DXGI_SWAP_EFFECT_DISCARD instead.\n
 Failed to create motion smoothing filtering constant buffer!\n
 Failed to create motion vector WVPConstantBuffer!
 Failed to create motion vector align constant buffer!\n
@@ -2449,6 +2457,7 @@ Failed to load CUDA method: cuMemcpy2D\n
 Failed to map texture for playspace area rendering
 Failed to open shared resolve texture for driver direct mode (compositor)!\n
 Failed to open stats.txt for writing!\n
+Failed to parse log message
 Failed to prepare shared resource for IPC 0x%llx: does not exist\n
 Failed to ref shared resource 0x%llx: does not exist\n
 Failed to reference shared resource: 0x%llx\n
@@ -2463,6 +2472,7 @@ Failed to select a display mode!\n
 Failed to send dashboard tutorial response (%d)\n
 Failed to set display mode for NvAPI display in direct mode.\n
 Failed to set process priority!\n
+Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to set thread %p priority: invalid priority %d\n
 Failed to setup cursor overlay
 Failed to setup splash overlay
@@ -2555,6 +2565,7 @@ FrameInfoConstantBufferShared
 FrameInfoConstantBufferStaging[%d]
 FrameInfoConstantBuffer[%d]
 FreeLibrary
+Freeing displaced stage override model '%s' at the request of pid %u\n
 GC amount %0.2f\n
 GPU Measurement
 GPU Vendor: "%s" GPU Driver: "%s"\n
@@ -2643,6 +2654,8 @@ Graphics
 Grid
 H$6t
 H*0"ZOW
+H20@
+H80@
 HMD Not Known (202)
 HMD already in use by another application (205)
 HMD detected over USB, but Monitor may be mirrored instead of extended (212)
@@ -2800,6 +2813,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_004
 IVRServerDriverHost_006
 IVRServerInternal_XXX
@@ -3000,7 +3014,6 @@ Mailbox %s received message %s, which it didn't have a handler for\n
 Main
 MainThrd
 MapViewOfFile
-Mb@?o
 MeasureGpuMegaPixelsPerSecond(%d): Returning %d MP/sec. Total CPU time %.2f seconds.\n
 MeasureGpuMegaPixelsPerSecond(): Error! Initialize() failed! Skipping GPU measurement.\n
 Message class "
@@ -3042,6 +3055,8 @@ Motion Smoothing Filter (2)
 Motion Smoothing Filter (3)
 Motion Smoothing Masking
 Motion Smoothing Reproject Reference
+Motion Smoothing Stencil Shadow Cells
+Motion Smoothing Stencil Shadow Near
 Motion lock begin
 Motion lock end
 Motion unlock begin
@@ -3121,10 +3136,10 @@ OnUnifiedDashboardRemoteStateUpdate
 Oneof must have at least one field.
 OneofDescriptorProto
 OpJournal: op=death, pid=%u\n
-OpJournal: op=insert, handle=0x%llx, pid=%u\n, type=%u
-OpJournal: op=ref, handle=0x%llx, pid=%u\n
+OpJournal: op=insert, handle=0x%llx, pid=%u\n, type=%u refs=%u
+OpJournal: op=ref, handle=0x%llx, pid=%u refs=%d\n
 OpJournal: op=shutdown\n
-OpJournal: op=unref, handle=0x%llx, pid=%u\n
+OpJournal: op=unref, handle=0x%llx, pid=%u refs=%d\n
 OpenEventA
 OpenFileMappingA
 OpenMutexA
@@ -3148,12 +3163,13 @@ OverlayBuffer
 Overlays
 PICT
 PID_
+PL0@
 PLACEHOLDER_VALUE
 PNG load error %s\n
 PNG load warning %s\n
 PNG\r\n
+POP! view moved %.2f deg vs head %.2f deg
 POSITION
-PTH!
 Panel Mask
 Panel Masks
 PanelMaskConstantBuffer
@@ -3179,6 +3195,7 @@ PowerClearRequest
 PowerCreateRequest
 PowerSetRequest
 Powersave
+Ppt!
 PreRenderColor
 PreRenderDepth
 Precise timer is disabled, compositor will use additional cpu resources!\n
@@ -3424,6 +3441,8 @@ RENDERDOC_GetAPI
 RENDERDOC_GetAPI failed with code %d
 RPCRT4.dll
 RSDS
+R\npR
+R\vpR
 RaiseException
 Raw ideal render target scale = %.2f\n
 Reached an unintended state: CPPTYPE_MESSAGE
@@ -3559,11 +3578,10 @@ Second argument to SwapFields() (of type "
 See 
 Selected: width=%d height=%d refresh=%d/%d\n
 SendHmdDebugRequest resp: %s\n
-Sep 15 2026
+Sep 22 2026
 Server
 ServiceDescriptorProto
 ServiceOptions
-Set thread %p priority to: %d\n
 SetAllocatedMessage
 SetBool
 SetCursor
@@ -3678,6 +3696,8 @@ SteamVR Trace Session
 SteamVRETWProvider.man
 SteamVR_FrameStatsPath
 SteamVR_Namespace
+StencilShadow
+StencilShadowNear
 Stopping playback mirror thread\n
 String literals cannot cross line boundaries.
 StringOutputStream.
@@ -3965,6 +3985,7 @@ VREvent_Compositor_DisplayReconnected
 VREvent_Compositor_HDCPError
 VREvent_Compositor_OutOfVideoMemory
 VREvent_Compositor_RequestDisconnectReconnect
+VREvent_Compositor_StageOverrideCleared
 VREvent_Compositor_StageOverrideReady
 VREvent_ConsoleClosed
 VREvent_ConsoleOpened
@@ -4617,6 +4638,8 @@ VerifyVersionInfoW
 Video Capture Quad Debug
 Video Capture View
 Video Feed
+Video capture view mesh exceeded its fixed capacity
+VideoCaptureView t=%.4f head(roll=%7.2f pitchY=%.3f lvl=%.2f d=%6.2f) comp=%6.2f lag=%6.2f offset(twist=%6.2f swing=%5.2f total=%6.2f) view(d=%6.2f)
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL [%u messages suppressed]
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL [OMITTING additional logs for %d seconds]
@@ -4689,7 +4712,7 @@ Waiting for debugger...
 WakeAllConditionVariable
 Warning
 Warning parsing text-format 
-Warning: Overlay %s has a NaN distance.\n
+Warning: Overlay %s has a non-finite distance or transform.\n
 Warning: Unused import: "
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warp Mesh Wireframe
@@ -4704,6 +4727,7 @@ Write Error
 WriteFile
 Writing zero-length unknown chunk
 Wrote palette index exceeding num_palette
+XR_BOUNDARY_VISIBILITY_SUPPRESSION_NOT_ALLOWED_META
 XR_COLOCATION_DISCOVERY_ALREADY_ADVERTISING_META
 XR_COLOCATION_DISCOVERY_ALREADY_DISCOVERING_META
 XR_ENVIRONMENT_DEPTH_NOT_AVAILABLE_META
@@ -4741,6 +4765,9 @@ XR_ERROR_FORM_FACTOR_UNSUPPORTED
 XR_ERROR_FUNCTION_UNSUPPORTED
 XR_ERROR_FUTURE_INVALID_EXT
 XR_ERROR_FUTURE_PENDING_EXT
+XR_ERROR_GEOSPATIAL_CLOUD_AUTH_FAILED_ANDROID
+XR_ERROR_GEOSPATIAL_COORDINATES_INVALID_ANDROID
+XR_ERROR_GEOSPATIAL_TRACKER_NOT_RUNNING_ANDROID
 XR_ERROR_GRAPHICS_DEVICE_INVALID
 XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING
 XR_ERROR_HANDLE_INVALID
@@ -4750,6 +4777,8 @@ XR_ERROR_INDEX_OUT_OF_RANGE
 XR_ERROR_INITIALIZATION_FAILED
 XR_ERROR_INSTANCE_LOST
 XR_ERROR_INSUFFICIENT_RESOURCES_PASSTHROUGH_FB
+XR_ERROR_KEYLESS_AUTH_FAILED_ANDROID
+XR_ERROR_KEYLESS_AUTH_NOT_SETUP_ANDROID
 XR_ERROR_LAYER_INVALID
 XR_ERROR_LAYER_LIMIT_EXCEEDED
 XR_ERROR_LIMIT_REACHED
@@ -4851,6 +4880,7 @@ XR_ERROR_SPATIAL_ENTITY_ID_INVALID_EXT
 XR_ERROR_SPATIAL_PERSISTENCE_SCOPE_INCOMPATIBLE_EXT
 XR_ERROR_SPATIAL_PERSISTENCE_SCOPE_UNSUPPORTED_EXT
 XR_ERROR_SPATIAL_SENSING_SERVICE_UNAVAILABLE_BD
+XR_ERROR_SURFACE_ANCHOR_LOCATION_UNSUPPORTED_ANDROID
 XR_ERROR_SWAPCHAIN_FORMAT_UNSUPPORTED
 XR_ERROR_SWAPCHAIN_RECT_INVALID
 XR_ERROR_SYSTEM_INVALID
@@ -5102,7 +5132,6 @@ Zjz\v
 [systemlayer] Creating chaperone bubble because room view was turned off and room view is currently forced by compositor.
 \%03o
 \U%08x
-\fpTH!
 \gpuvis.exe
 \mfpmp.exe
 \n    Actual    : 
@@ -5154,6 +5183,7 @@ Zjz\v
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
 \rmj>zjZ
+\rp\f`\v0\nPpt!
 \t\t\n\n\v\v\f\f\f\f\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
@@ -5456,43 +5486,45 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\Retail\win64\2017\vrcompo
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\framemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\geometry.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11906
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11916
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12064
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12693
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12718
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12886
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:18218
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:19420
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20059
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20916
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21209
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4016
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4028
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4831
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:516
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6683
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6725
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:7143
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8392
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8604
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8998
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9990
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10366
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12298
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12308
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12456
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:13085
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:13110
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:13278
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:18610
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:19812
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20455
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21320
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21613
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:3654
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4326
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4338
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5141
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:524
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:7035
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:7077
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:7495
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8745
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8956
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9168
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9375
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\lasermouse.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:430
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:480
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\rendererutils.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraph.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1018
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1129
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1184
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1014
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1125
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\scenegraphrenderer.cpp:1180
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\simpledraw.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp:37
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1798
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:979
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1795
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:986
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:33
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:334
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1079
@@ -5506,7 +5538,7 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:457
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5773
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:818
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2088
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2182
 cached.last.poseIsValid
 callout-transform
 camera
@@ -5678,6 +5710,7 @@ distortionMeshResolutionOverride
 doNotFadeToGrid
 dock-location
 dock-location-preview
+dominantEye
 dot-color-hsv
 dot-half-size
 dot-inner-alpha
@@ -5737,7 +5770,6 @@ enableConstructRoomView
 enableDashboard
 enableHmdLatencyHidingDisplayOffset
 enableHomeApp
-enableHomeApp2
 enableIOBuffers
 enableMJPEGMode
 enableRawMode
@@ -5752,6 +5784,7 @@ enum
 enum_description
 enum_value_description
 envBrightnessNominal
+envBrightnessSceneAppDimming
 envBrightnessTheater
 environmentMode
 error
@@ -5841,6 +5874,7 @@ framesWithDepth,
 framesWithMotionVectors,
 fread
 free
+free_stage_model
 french
 frequency
 fresnel
@@ -5892,7 +5926,10 @@ greyscale
 gridColor
 grid_mode_cycle
 group
+h00@
+h90@
 h?33s?H
+hE0@
 hPU3
 handlers
 haveStartedTutorialForNativeChaperoneDriver
@@ -5919,7 +5956,6 @@ hue-speed
 hungarian
 i11 <= UINT16_MAX
 i91k
-iFailed to create mirror window swap chain with DXGI_SWAP_EFFECT_FLIP_DISCARD! Trying DXGI_SWAP_EFFECT_DISCARD instead.\n
 iParams < tileFloorParams.size()
 i]Wb
 iauds
@@ -6134,6 +6170,7 @@ modf
 monochromeTintHue
 motes
 motionEstInputStencilMask
+motionEstInputStencilShadow
 motionSmoothing
 motionSmoothingOverride
 motion_vector_debug_mode_cycle
@@ -6249,7 +6286,10 @@ override-pre-resize-main-panel-height
 overwrite.vrsettings
 owning_overlay
 owning_overlay_key
+p20@
+p80@
 pBegin == pEnd
+pC0@
 pDepthTexture->unWidth == pRepairedMotionVectors->unWidth && pDepthTexture->unHeight == pRepairedMotionVectors->unHeight
 pEnd > pBegin
 pGazeRays
@@ -6258,6 +6298,7 @@ pIntersectedOverlay != nullptr
 pLambdaGaze
 pMeshL->m_pHallucinatedDepth->createInfo.unArrayLayerCount == 2
 pMeshL->m_pHallucinatedFrame->createInfo.unArrayLayerCount == 2
+pN0@
 pNext == ( m_buffer.data() + m_buffer.size() )
 pOutPose != nullptr
 pOutTransformDetails
@@ -6275,7 +6316,6 @@ pSharedState != nullptr
 pSourceColorTexture
 pSourceTexture
 pSystemLayerState
-pTH!
 pTexture
 pTexture == nullptr || pTexture->unWidth == m_nAlignGridResolution
 pTexture == nullptr || pTexture->unWidth == m_nInputWidth
@@ -6293,9 +6333,9 @@ panel-anchor
 panelMask
 panelMaskVignette
 panelMaskVignetteWidth
-panel_height
 panel_height_update
 panel_id
+panel_standing_height
 panels
 params
 parent != nullptr
@@ -6336,6 +6376,7 @@ powersaveFramesToThrottle
 powersaveRefreshRate
 powersaveSteamOSManagerCustomProfile
 powf
+ppt!
 preferGamepadMode
 preferredRefreshRate
 prefersUpperDeviceIndices
@@ -6352,7 +6393,6 @@ qMFCreateMediaType failed hr = 0x%08x\n
 qsort
 quad
 quick_reset_room_setup
-r\vPTH!
 radius-range
 rand
 rawCaptureNumberOfFrames
@@ -6596,14 +6636,20 @@ shaders/d3d11/distort_ps_scene_blur.fxo
 shaders/d3d11/distort_ps_scene_depth.fxo
 shaders/d3d11/distort_ps_scene_depth_stencil.fxo
 shaders/d3d11/distort_ps_scene_stencil_mask.fxo
+shaders/d3d11/distort_ps_scene_stencil_shadow.fxo
+shaders/d3d11/distort_ps_scene_stencil_shadow_cell.fxo
+shaders/d3d11/distort_ps_scene_stencil_shadow_mask.fxo
+shaders/d3d11/distort_ps_scene_stencil_shadow_near.fxo
 shaders/d3d11/distort_vs.fxo
 shaders/d3d11/distort_vs_latest_nd.fxo
 shaders/d3d11/distort_vs_layered.fxo
 shaders/d3d11/distort_vs_layered_nd.fxo
 shaders/d3d11/distort_vs_nd.fxo
 shaders/d3d11/distort_vs_reproject_fv.fxo
+shaders/d3d11/distort_vs_reproject_fv_dp.fxo
 shaders/d3d11/distort_vs_reproject_fv_dr.fxo
 shaders/d3d11/distort_vs_reproject_layered.fxo
+shaders/d3d11/distort_vs_reproject_layered_dp.fxo
 shaders/d3d11/distort_vs_reproject_layered_nd.fxo
 shaders/d3d11/distort_vs_reproject_mv.fxo
 shaders/d3d11/distort_vs_reproject_nd.fxo
@@ -6714,7 +6760,6 @@ sharpening
 sharpeningAlpha
 sharpeningOverride
 short_name
-should-head-align
 showEnableInSettings
 showGridCircles
 showLegacyMirrorView
@@ -6829,11 +6874,13 @@ tRNS after IDAT
 tRNS before PLTE
 tRNS with alpha
 tanf
+tanhf
 target
 target-dpi-multiplier
 target-dpi-panel-id
 target-id
 target-limit
+target-mode
 target-width-anchor-id
 tchinese
 tdh.dll
@@ -6890,7 +6937,6 @@ transform
 transform-path
 transform_request
 transform_response
-transform_scale_during_measure
 transition-limit
 translation
 translation-ease-in-power
@@ -6968,6 +7014,11 @@ vector<bool> too long
 version
 version.txt
 vi_vn
+videoCaptureViewDebugLog
+videoCaptureViewMaxSwing
+videoCaptureViewRemoveRoll
+videoCaptureViewSmoothingTime
+videoCaptureViewStabilize
 videocapturequad
 videocapturequad_hide
 vietnamese
@@ -7036,6 +7087,9 @@ wrong channel count
 wrong color format
 wrong submessage type
 wrong version
+x50@
+xB0@
+xF0@
 xatten
 xrBeginSession
 xrPollEvent

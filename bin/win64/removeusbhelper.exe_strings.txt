@@ -24,9 +24,12 @@
 .?AU_Crt_new_delete@std@@
 .?AV<lambda_04103da6412327e603633ce4cd0b1ff8>@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
+.?AV<lambda_47887f2e099a34228ed6c4b1691c7e52>@@
+.?AV?$_Func_base@XPEAUHKEY__@@PEB_W@std@@
 .?AV?$_Func_base@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_04103da6412327e603633ce4cd0b1ff8>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_47887f2e099a34228ed6c4b1691c7e52>@@XPEAUHKEY__@@PEB_W@std@@
 .?AV?$_Iosb@H@std@@
 .?AV?$basic_ios@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_istream@DU?$char_traits@D@std@@@std@@
@@ -211,6 +214,7 @@ FATAL: Failed to open log file %s, failing out!\n
 Failed to create AllApplicationPackagesSid\n
 Failed to create AllRestrictedApplicationPackagesSid\n
 Failed to create WinBuiltinAnyPackageSid\n
+Failed to parse log message
 Failed to set SID on %s\n
 Failed to set a vrlink device registry key.\n
 Fatal
@@ -274,7 +278,7 @@ PID_8328
 Parsing of JSON file "%s" failed: %s\n
 QueryPerformanceCounter
 QueryPerformanceFrequency
-RSDS\
+RSDS
 RaiseException
 RegCloseKey
 RegCreateKeyExW
@@ -323,6 +327,8 @@ Syntax error: value, object or array expected.
 SystemTimeToFileTime
 TlsAlloc
 TlsFree
+USB\VID_28DE&PID_2432
+USB\VID_2C7C&PID_8206
 Unable to determine VR Path Registry filename
 Unable to enumerate registry key values: %s
 Unable to find api layer: %s
@@ -366,15 +372,16 @@ WideCharToMultiByte
 [Oxrtools] Unable to write into the OpenXR available runtimes registry key %d
 [Oxrtools] Unable to write the OpenXR ActiveRuntime registry key %d
 [vrlink winregistry] Did not find registry value inside key, this is probably fine.
-[vrlink winregistry] Registry value is already good
+[vrlink winregistry] Giving up on the network class key after %u consecutive enumeration failures
+[vrlink winregistry] Registry value is already good %ls
 [vrlink winregistry] Registry value is bad, adding to list.
 [vrlink winregistry] Unable to disable key reflection for the device key %d
-[vrlink winregistry] Unable to disable key reflection for the driver key %d %s
+[vrlink winregistry] Unable to disable key reflection for the driver key %d %ls
 [vrlink winregistry] Unable to disable key reflection for the network class key %d
-[vrlink winregistry] Unable to open a driver key for enumeration %d %s
+[vrlink winregistry] Unable to open a driver key for enumeration %d %ls
 [vrlink winregistry] Unable to open the device key for writing %d
 [vrlink winregistry] Unable to open the network class key for enumeration %d
-[vrlink winregistry] While enumerating the network class key children, an error occured %d
+[vrlink winregistry] Unable to read ComponentId from key %ls, %d, %d bytes
 [vrlink winregistry] Writing vrlink driver registry value failed %d
 [vrlink winregistry] Writing vrlink driver registry value succeeded
 [vrlink winregistry] failed to query registry value inside key %d
@@ -431,6 +438,7 @@ _set_new_mode
 _sopen_dispatch
 _stricmp
 _time64
+_wcsnicmp
 _wfsopen
 _write
 _wstat64i32

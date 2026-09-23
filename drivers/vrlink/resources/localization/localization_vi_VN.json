@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Tắt",
 	"Setting_AllowMultipleLinks": "Cho phép nhiều liên kết",
 	"Setting_EnableHmdAutoConnect": "Tự động kết nối với mũ chụp Steam Link được hỗ trợ khi khởi động SteamVR",
+	"Setting_Sharpening": "Làm nét hình ảnh trước khi mã hóa (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Cường độ làm nét",
 	"svl_hand_interaction_augmented": "Tay cầm theo dõi bàn tay",
 	"/input/index_pinch": "Chụm bằng ngón trỏ",
 	"/input/middle_pinch": "Chụm bằng ngón giữa",

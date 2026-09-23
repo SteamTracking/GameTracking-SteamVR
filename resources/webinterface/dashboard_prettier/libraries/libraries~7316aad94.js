@@ -1,8 +1,12 @@
-var CLSTAMP = "11000037";
+var CLSTAMP = "11023671";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [154, 260, 982, 47, 264, 602],
   {
+    2505: (e, t, r) => {
+      e.exports = r(8015);
+    },
     6874: (e, t, r) => {
+      "use strict";
       var n,
         o = r(7813),
         u = r(6540),
@@ -191,6 +195,7 @@ var CLSTAMP = "11000037";
       };
     },
     6035: (e, t, r) => {
+      "use strict";
       r.d(t, { P: () => p });
       var n,
         o,
@@ -281,6 +286,7 @@ var CLSTAMP = "11000037";
       };
     },
     4452: (e, t, r) => {
+      "use strict";
       r.d(t, { q: () => f });
       var n = r(7813),
         o = r(6540),
@@ -348,6 +354,7 @@ var CLSTAMP = "11000037";
       }
     },
     3438: (e, t, r) => {
+      "use strict";
       r.d(t, { Y: () => n });
       var n = new (r(2517).Xr)(function (e) {
         var t;
@@ -356,6 +363,7 @@ var CLSTAMP = "11000037";
       });
     },
     5287: (e, t) => {
+      "use strict";
       var r = Symbol.for("react.element"),
         n = Symbol.for("react.portal"),
         o = Symbol.for("react.fragment"),
@@ -453,7 +461,7 @@ var CLSTAMP = "11000037";
             })("" + e.key)
           : t.toString(36);
       }
-      function j(e, t, o, u, i) {
+      function x(e, t, o, u, i) {
         var a = typeof e;
         ("undefined" !== a && "boolean" !== a) || (e = null);
         var c = !1;
@@ -478,7 +486,7 @@ var CLSTAMP = "11000037";
             g(i)
               ? ((o = ""),
                 null != e && (o = e.replace(k, "$&/") + "/"),
-                j(i, t, o, "", function (e) {
+                x(i, t, o, "", function (e) {
                   return e;
                 }))
               : null != i &&
@@ -506,7 +514,7 @@ var CLSTAMP = "11000037";
         if (((c = 0), (u = "" === u ? "." : u + ":"), g(e)))
           for (var s = 0; s < e.length; s++) {
             var f = u + O((a = e[s]), s);
-            c += j(a, t, o, f, i);
+            c += x(a, t, o, f, i);
           }
         else if (
           ((f = (function (e) {
@@ -519,7 +527,7 @@ var CLSTAMP = "11000037";
           "function" == typeof f)
         )
           for (e = f.call(e), s = 0; !(a = e.next()).done; )
-            c += j((a = a.value), t, o, (f = u + O(a, s++)), i);
+            c += x((a = a.value), t, o, (f = u + O(a, s++)), i);
         else if ("object" === a)
           throw (
             ((t = String(e)),
@@ -533,12 +541,12 @@ var CLSTAMP = "11000037";
           );
         return c;
       }
-      function x(e, t, r) {
+      function j(e, t, r) {
         if (null == e) return e;
         var n = [],
           o = 0;
         return (
-          j(e, n, "", "", function (e) {
+          x(e, n, "", "", function (e) {
             return t.call(r, e, o++);
           }),
           n
@@ -573,9 +581,9 @@ var CLSTAMP = "11000037";
         throw Error("act(...) is not supported in production builds of React.");
       }
       (t.Children = {
-        map: x,
+        map: j,
         forEach: function (e, t, r) {
-          x(
+          j(
             e,
             function () {
               t.apply(this, arguments);
@@ -586,7 +594,7 @@ var CLSTAMP = "11000037";
         count: function (e) {
           var t = 0;
           return (
-            x(e, function () {
+            j(e, function () {
               t++;
             }),
             t
@@ -594,7 +602,7 @@ var CLSTAMP = "11000037";
         },
         toArray: function (e) {
           return (
-            x(e, function (e) {
+            j(e, function (e) {
               return e;
             }) || []
           );
@@ -747,9 +755,11 @@ var CLSTAMP = "11000037";
         (t.version = "18.3.1");
     },
     6540: (e, t, r) => {
+      "use strict";
       e.exports = r(5287);
     },
     8493: (e, t, r) => {
+      "use strict";
       var n = r(6540);
       var o =
           "function" == typeof Object.is
@@ -811,6 +821,7 @@ var CLSTAMP = "11000037";
         void 0 !== n.useSyncExternalStore ? n.useSyncExternalStore : f;
     },
     9888: (e, t, r) => {
+      "use strict";
       e.exports = r(8493);
     },
   },

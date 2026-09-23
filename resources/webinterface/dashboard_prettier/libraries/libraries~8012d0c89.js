@@ -1,10 +1,7 @@
-var CLSTAMP = "11000037";
+var CLSTAMP = "11023671";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [991],
   {
-    2505: (t, e, r) => {
-      t.exports = r(8015);
-    },
     5339: function (t, e) {
       var r =
           "function" == typeof Object.defineProperties

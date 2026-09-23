@@ -498,7 +498,7 @@ $d`D-laM
 0`P0
 0pp@5tqE?|sO541
 1!1'1-191C1E1K1]1a1g1m1s1
-11:37:58
+11:16:42
 11M|
 14 (default)
 1H@H
@@ -1748,6 +1748,7 @@ Failed to import server event handle from pipe %s after connecting\n
 Failed to load steam_api64.dll.
 Failed to lock file '%s'
 Failed to open event shared state!
+Failed to parse log message
 Failed to set scheduling priority for prism process %u
 Failed to stop system process.
 Failed to terminate service process(%d)
@@ -2509,7 +2510,8 @@ RSA_sign_ASN1_OCTET_STRING
 RSA_verify
 RSA_verify_ASN1_OCTET_STRING
 RSA_verify_PKCS1_PSS_mgf1
-RSDS
+RSDSko
+R\vp80
 RaiseException
 Rbg.E
 ReadConsoleA
@@ -2675,7 +2677,7 @@ Send Owner
 Send Proxied Owner
 Send Proxied Router
 Send Router
-Sep 15 2026
+Sep 22 2026
 Service not started.
 Service start pending...
 Service started successfully.
@@ -5944,7 +5946,6 @@ rK99
 rUUT
 rZlN
 r\tU[B
-r\vpd%
 r_32_12_16_init_key
 raise
 rand_drbg_enable_locking

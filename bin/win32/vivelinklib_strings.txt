@@ -61,7 +61,6 @@
 (UUID16:)([0-9A-F]{4})
 ([0-9A-F]{12})
 ([0-9X]*)(.)([0-9X]*)(.)([0-9X]*)
-,Agg
 -1e+9999
 -ADDR %s
 -Infinity
@@ -367,6 +366,7 @@ Extended Error: %s, %s\n
 Failed
 Failed to allocate memory
 Failed to open DFU zip file '%s'\n
+Failed to parse log message
 Failed. Base needs power cycle.\n
 Failed.\n
 File not found in the zipfile
@@ -424,7 +424,6 @@ LocalFree
 Logger.txt
 MGiI
 MSVCP140.dll
-M^lH
 Mac OS
 MacOS 10.10
 MacOS 10.11

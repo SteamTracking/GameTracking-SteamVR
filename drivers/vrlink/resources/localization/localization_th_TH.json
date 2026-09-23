@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "ปิด",
 	"Setting_AllowMultipleLinks": "อนุญาตให้มีการเชื่อมโยงหลายรายการ",
 	"Setting_EnableHmdAutoConnect": "เชื่อมต่อหน้าจอสวมศีรษะ Steam Link ที่รองรับโดยอัตโนมัติเมื่อเปิด SteamVR",
+	"Setting_Sharpening": "เพิ่มความคมชัดให้กับภาพก่อนการเข้ารหัส (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "ระดับความคมชัด",
 	"svl_hand_interaction_augmented": "คอนโทรลเลอร์ติดตามมือ",
 	"/input/index_pinch": "จีบนิ้วชี้",
 	"/input/middle_pinch": "จีบนิ้วกลาง",

@@ -115,6 +115,7 @@ D3D11CreateDevice
 DeleteCriticalSection
 DisableThreadLibraryCalls
 EnterCriticalSection
+Failed to parse log message
 FormatMessageW
 GetCurrentProcessId
 GetCurrentThreadId
@@ -139,7 +140,7 @@ MultiByteToWideChar
 OLEAUT32.dll
 QueryPerformanceCounter
 QueryPerformanceFrequency
-RSDS
+RSDS!
 ResetEvent
 RoGetActivationFactory
 RoOriginateLanguageException

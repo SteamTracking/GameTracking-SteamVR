@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Изкл.",
 	"Setting_AllowMultipleLinks": "Позволяване на множество връзки",
 	"Setting_EnableHmdAutoConnect": "Автоматично свързване на поддържани steamlink HMD портове при SteamVR стартиране",
+	"Setting_Sharpening": "Изостряне яснотата на изображението преди кодиране (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Сила на изостряне",
 	"svl_hand_interaction_augmented": "Контролер за проследяване на ръце",
 	"/input/index_pinch": "Прищипване с показалец",
 	"/input/middle_pinch": "Прищипване със среден",

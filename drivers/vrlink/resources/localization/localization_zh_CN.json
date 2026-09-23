@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "关闭",
 	"Setting_AllowMultipleLinks": "允许多端连接",
 	"Setting_EnableHmdAutoConnect": "在 SteamVR 启动时自动连接支持的运行 Steam 流式应用的头戴式显示器",
+	"Setting_Sharpening": "在编码前锐化图像（FidelityFX 对比度自适应锐化）",
+	"Setting_SharpeningStrength": "锐化强度",
 	"svl_hand_interaction_augmented": "手势追踪控制器",
 	"/input/index_pinch": "拇指食指捏合",
 	"/input/middle_pinch": "拇指中指捏合",

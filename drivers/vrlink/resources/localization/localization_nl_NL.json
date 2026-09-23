@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Uit",
 	"Setting_AllowMultipleLinks": "Meerdere verbindingen toestaan",
 	"Setting_EnableHmdAutoConnect": "Automatisch verbinding maken met ondersteunde steamlink-HMD's bij het opstarten van SteamVR",
+	"Setting_Sharpening": "Afbeelding verscherpen vóór de codering (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Verscherpingssterkte",
 	"svl_hand_interaction_augmented": "Controller met handvolging",
 	"/input/index_pinch": "Knijpen met wijsvinger",
 	"/input/middle_pinch": "Knijpen met middelvinger",

@@ -1,4 +1,4 @@
-var CLSTAMP = "11000037";
+var CLSTAMP = "11023671";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [452],
   {
@@ -3009,10 +3009,16 @@ var CLSTAMP = "11000037";
             strLocalizedSimulatedControllerType:
               this.LocalizeStringForSelectedControllerType(t),
             bIsSimulatingController: t && "none" != t,
+            strSimulatedRenderModelType: (function (e) {
+              if (!0 === e || "true" === e) return "name_only";
+              if (!1 === e || "false" === e) return "none";
+              if (null == e || "" === e) return "name_only";
+              const t = e.trim().toLowerCase();
+              return "full" !== t && "name_only" !== t && "none" !== t
+                ? "none"
+                : t;
+            })(this.GetOptionValue("simulate_rendermodel")),
             bIsSimulatingHMD: this.GetOptionValue("simulate_hmd"),
-            bIsSimulatingRenderModel: this.GetOptionValue(
-              "simulate_rendermodel",
-            ),
           };
         }
       }

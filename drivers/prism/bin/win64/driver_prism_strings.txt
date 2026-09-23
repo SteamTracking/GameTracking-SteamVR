@@ -316,6 +316,7 @@
 .xdata
 .xdata$x
 0\tFAJ
+3FVWFB
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
 8e8f13b1-60eb-4b6a-a433-de86104115ac
@@ -488,6 +489,7 @@ Failed to connect to pipe %s because %s\n
 Failed to create vrprismhost_startup
 Failed to import client event handle from pipe %s after connecting\n
 Failed to import server event handle from pipe %s after connecting\n
+Failed to parse log message
 Failed to start vrprismhost: %s
 Failed to write app container status to pipe %s after connecting because %s\n
 Failed to write event process handle after connecting because %s\n
@@ -611,7 +613,7 @@ Projection
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS?\vO
+RSDS
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

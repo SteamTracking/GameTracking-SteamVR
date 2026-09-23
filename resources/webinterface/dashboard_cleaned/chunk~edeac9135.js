@@ -758,7 +758,7 @@ var CLSTAMP = "steamdb";
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       function _(_) {
         if (!_) return;
         return Object.values(_)
@@ -768,6 +768,7 @@ var CLSTAMP = "steamdb";
           : void 0;
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1034,8 +1035,6 @@ var CLSTAMP = "steamdb";
               "DriverProvidedIPDVisibility_Bool"),
             (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
               "Prop_SupportsVRGamepadMode_Bool"),
-            (_[(_.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
-              "Prop_AllowHomeApp2Setting_Int32"),
             (_[(_.Hmd_CameraSettingsModel_Int32 = 2122)] =
               "Hmd_CameraSettingsModel_Int32"),
             (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
@@ -1132,6 +1131,10 @@ var CLSTAMP = "steamdb";
               "VRLinkClientHMDSupportsRoomSetupRequests_Bool"),
             (_[(_.TrackedDeviceProperty_Max = 1e6)] =
               "TrackedDeviceProperty_Max");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Eye_Left = 0)] = "Eye_Left"),
+            (_[(_.Eye_Right = 1)] = "Eye_Right");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_EButton_System = 0)] = "k_EButton_System"),

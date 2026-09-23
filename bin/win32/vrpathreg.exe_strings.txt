@@ -301,6 +301,7 @@
 <@En[vP
 =87M
 ?3xj
+?4oH
 ?5Wg4p
 ?5a1
 ?7Tf(
@@ -372,6 +373,7 @@ External Drivers:\n
 Extra non-whitespace after JSON value.
 F0$?3=1
 FEMh\f
+Failed to parse log message
 February
 FileTimeToSystemTime
 FindClose
@@ -516,7 +518,7 @@ PeekNamedPipe
 Pex?0
 QueryDepthSList
 QueryPerformanceCounter
-RSDS
+RSDSM
 RaiseException
 ReadConsoleW
 ReadFile
@@ -907,7 +909,7 @@ wrong protocol type
 xpxxxx
 xwpwpp
 z1}B
-z>d]H
+z>t]H
 zyC7
 {4Wf
 |W8A=

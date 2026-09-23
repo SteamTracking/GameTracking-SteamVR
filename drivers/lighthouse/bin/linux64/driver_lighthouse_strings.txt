@@ -1076,6 +1076,7 @@ Failed to join thread CameraWorkThread /+/ TID: %d\n
 Failed to load external 'uri' for image[
 Failed to parse `bufferView` for image[
 Failed to parse `uri` for image[
+Failed to parse log message
 Failed to read config when activating watchdog on button press: %s\n
 Failed to read file: 
 Failed to send OTGT result\n
@@ -1151,6 +1152,7 @@ GCC: (SteamRT 9.3.0-17+steamrt2.5+bsrt2.1) 9.3.1 20210309
 GCC: (Ubuntu 4.8.4-1ubuntu15~12.04+steamrt1+srt2) 4.8.4
 GLIBC_2.12
 GLIBC_2.14
+GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.27
 GLIBC_2.3
@@ -1264,6 +1266,7 @@ IVRProperties_001
 IVRRenderModelsInternal_XXX
 IVRRenderModels_006
 IVRResources_001
+IVRRuntimeInformation_001
 IVRServerDriverHost_006
 IVRServerInternal_XXX
 IVRSettingsInternal_001
@@ -2628,6 +2631,8 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
+__cxa_thread_atexit
+__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __duplocale
@@ -2670,7 +2675,6 @@ __xstat
 __xstat64
 _exit
 _parsefailed.json
-`TMk
 `accessors' does not contain an JSON object.
 `animations' does not contain an JSON object.
 `bufferViews' does not contain an JSON object.
@@ -3382,7 +3386,6 @@ known_objects
 known_universes
 knuckles
 knuckles_ev1
-l21[&
 l?Nb0?
 lEyeFile:%s width:%d height:%d components:%d\n
 label
@@ -3640,6 +3643,7 @@ pthread_condattr_init
 pthread_condattr_setclock
 pthread_create
 pthread_detach
+pthread_getname_np
 pthread_getschedparam
 pthread_getspecific
 pthread_join

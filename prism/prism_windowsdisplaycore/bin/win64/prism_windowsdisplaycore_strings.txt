@@ -119,6 +119,7 @@
 8d8f13b1-60eb-4b6a-a433-de86104115ac
 8e8f13b1-60eb-4b6a-a433-de86104115ac
 <P)9Y
+<unknown>
 ?_Throw_C_error@std@@YAXH@Z
 ?_Throw_Cpp_error@std@@YAXH@Z
 ?_Xbad_function_call@std@@YAXXZ
@@ -126,7 +127,7 @@
 ADVAPI32.dll
 ASSERT: "%s" at %s:%d.\n
 C++/WinRT version:1.0.190111.3
-C<unknown>
+CFailed to parse log message
 CVkAllocator::AllocateMemory
 CVkAllocator::AllocateMemoryFromType
 CVkAllocator::CreateImageWithFlags
@@ -309,7 +310,6 @@ c:\buildslave\steamvr_rel_win64\build\src\prism\plugins\prism_windowsdisplaycore
 d3d11.dll
 dxgi.dll
 free
-lC=L
 lhs->m_pTimeline == rhs->m_pTimeline
 m_nMapCount == 0
 malloc
@@ -327,5 +327,5 @@ string too long
 strncpy
 tdh.dll
 terminate
-v!ne`
+v!nep
 vector<T> too long

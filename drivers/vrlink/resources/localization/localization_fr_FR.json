@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Non",
 	"Setting_AllowMultipleLinks": "Autoriser plusieurs connexions",
 	"Setting_EnableHmdAutoConnect": "Connecter automatiquement les casques steamlink pris en charge au démarrage de SteamVR.",
+	"Setting_Sharpening": "Améliorer la netteté avant l'encodage (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Intensité de la netteté",
 	"svl_hand_interaction_augmented": "Contrôleur de suivi des mains",
 	"/input/index_pinch": "Pincement avec l'index",
 	"/input/middle_pinch": "Pincement avec le majeur",

@@ -3,6 +3,10 @@ var CLSTAMP = "steamdb";
   [267, 260, 154, 982, 47, 264, 602],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
+      module.exports = __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -200,6 +204,7 @@ var CLSTAMP = "steamdb";
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -292,6 +297,7 @@ var CLSTAMP = "steamdb";
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -361,6 +367,7 @@ var CLSTAMP = "steamdb";
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -371,6 +378,7 @@ var CLSTAMP = "steamdb";
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -571,6 +579,7 @@ var CLSTAMP = "steamdb";
       })(_.Component);
     },
     chunkid: (_, _) => {
+      "use strict";
       var _ = Symbol.for("react.element"),
         _ = Symbol.for("react.portal"),
         _ = Symbol.for("react.fragment"),
@@ -991,9 +1000,11 @@ var CLSTAMP = "steamdb";
         (_.version = "18.3.1");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       module.exports = __webpack_require__("chunkid");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _ = __webpack_require__("chunkid");
       var _ =
           "function" == typeof Object._
@@ -1071,6 +1082,7 @@ var CLSTAMP = "steamdb";
         void 0 !== _.useSyncExternalStore ? _.useSyncExternalStore : _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       module.exports = __webpack_require__("chunkid");
     },
   },

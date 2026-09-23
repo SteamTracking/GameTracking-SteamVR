@@ -898,6 +898,7 @@ Failed to initiate or continue a GATT Descriptors Discovery procedure. (nrf_erro
 Failed to initiate or continue a GATT Primary Service Discovery procedure. (nrf_error: %s)\n
 Failed to open DFU zip file '%s'\n
 Failed to open nRF BLE Driver. (nrf_error: %s)\n
+Failed to parse log message
 Failed to receive response for command
 Failed. Base needs power cycle.\n
 Failed.\n
@@ -1073,8 +1074,7 @@ QueryPerformanceFrequency
 QueueUserAPC
 RESERVED_5
 RESET_PERFORMED
-RSDS3
-R\v0n
+RSDS
 RaiseException
 Read Characteristic String
 Read Characteristic Value (handle: %d, offset: %d)\n

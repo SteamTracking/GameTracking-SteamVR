@@ -1,4 +1,4 @@
-var CLSTAMP = "11000037";
+var CLSTAMP = "11023671";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [906, 458],
   {
@@ -346,12 +346,12 @@ var CLSTAMP = "11000037";
             "object" == typeof this.props.origin
               ? (0, u.PG)(this.props.origin)
               : C(this.props.origin);
-          const F = this.props.overlay_key,
-            f = (0, h.w5)();
-          F && F.length > 0
-            ? (y.properties.key = F)
-            : f
-              ? (y.properties.key = f)
+          const f = this.props.overlay_key,
+            F = (0, h.w5)();
+          f && f.length > 0
+            ? (y.properties.key = f)
+            : F
+              ? (y.properties.key = F)
               : (y.properties.overlay_handle = (0, h.X4)()),
             this.m_UVsMin &&
               (y.properties.uv_min =
@@ -360,9 +360,9 @@ var CLSTAMP = "11000037";
               (y.properties.uv_max =
                 null !== (r = I(this.m_UVsMax)) && void 0 !== r ? r : void 0);
           const M = 1 / m.O.Current().m_fCurrentScale;
-          let P = this.props.frame_resize_scale_factor;
+          let R = this.props.frame_resize_scale_factor;
           return (
-            this.props.is_frame_page_main_panel && (P = null != P ? P : 1),
+            this.props.is_frame_page_main_panel && (R = null != R ? R : 1),
             (y.properties.width =
               null !== (i = this.props.width) && void 0 !== i ? i : void 0),
             (y.properties.height =
@@ -432,7 +432,7 @@ var CLSTAMP = "11000037";
             (y.properties["no-depth-write"] = this.props.no_depth_write),
             (y.properties["no-depth-test"] = this.props.no_depth_test),
             (y.properties.visibility = this.visibility),
-            (y.properties["frame-resize-scale-factor"] = P),
+            (y.properties["frame-resize-scale-factor"] = R),
             (y.properties["main-panel-for-frame-page"] =
               this.props.is_frame_page_main_panel),
             (y.properties["steam-input-appid"] =
@@ -490,7 +490,7 @@ var CLSTAMP = "11000037";
             { style: { display: this.visibility == a.Hidden ? "none" : null } },
             d.createElement(g.tH, null, this.props.children),
             this.props.is_frame_page_main_panel &&
-              d.createElement(F, { panel: this, panelID: this.getID() }),
+              d.createElement(f, { panel: this, panelID: this.getID() }),
           );
         }
         get inputFocusParams() {
@@ -583,7 +583,7 @@ var CLSTAMP = "11000037";
           );
         }
       }
-      function F(e) {
+      function f(e) {
         const { panel: t, panelID: o } = e,
           { page: r } = (0, S.N)();
         return (
@@ -694,39 +694,40 @@ var CLSTAMP = "11000037";
       }
     },
     4367: (e, t, o) => {
-      var r, i, n, a, s, l, _, p, d, u, m, c, h, g, S, v, D, y, I, C;
-      function B(e) {
+      var r, i, n, a, s, l, _, p, d, u, m, c, h, g, S, v, D, y, I, C, B;
+      function f(e) {
         if (!e) return;
-        return Object.values(h)
+        return Object.values(g)
           .filter((e) => "number" == typeof e)
           .includes(e)
           ? e
           : void 0;
       }
       o.d(t, {
-        $: () => d,
-        $Z: () => u,
-        Do: () => M,
-        Ee: () => w,
-        Fz: () => D,
-        JR: () => s,
-        KI: () => p,
-        QR: () => a,
-        YV: () => g,
-        Yu: () => R,
-        ZP: () => v,
-        _8: () => I,
-        ds: () => B,
-        en: () => n,
-        eo: () => m,
+        $: () => u,
+        $Z: () => m,
+        Do: () => R,
+        Ee: () => b,
+        Fz: () => y,
+        JR: () => l,
+        KI: () => d,
+        QR: () => s,
+        YV: () => S,
+        Yu: () => w,
+        ZP: () => D,
+        _8: () => C,
+        ds: () => f,
+        en: () => a,
+        eo: () => c,
         f9: () => P,
         fD: () => r,
-        fk: () => c,
-        hq: () => C,
+        fk: () => h,
+        hm: () => i,
+        hq: () => B,
         ke: () => F,
-        wB: () => S,
-        yW: () => h,
-        zw: () => b,
+        wB: () => v,
+        yW: () => g,
+        zw: () => k,
       }),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
@@ -970,8 +971,6 @@ var CLSTAMP = "11000037";
               "DriverProvidedIPDVisibility_Bool"),
             (e[(e.Prop_SupportsVRGamepadMode_Bool = 2117)] =
               "Prop_SupportsVRGamepadMode_Bool"),
-            (e[(e.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
-              "Prop_AllowHomeApp2Setting_Int32"),
             (e[(e.Hmd_CameraSettingsModel_Int32 = 2122)] =
               "Hmd_CameraSettingsModel_Int32"),
             (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
@@ -1070,6 +1069,10 @@ var CLSTAMP = "11000037";
               "TrackedDeviceProperty_Max");
         })(r || (r = {})),
         (function (e) {
+          (e[(e.Eye_Left = 0)] = "Eye_Left"),
+            (e[(e.Eye_Right = 1)] = "Eye_Right");
+        })(i || (i = {})),
+        (function (e) {
           (e[(e.k_EButton_System = 0)] = "k_EButton_System"),
             (e[(e.k_EButton_ApplicationMenu = 1)] =
               "k_EButton_ApplicationMenu"),
@@ -1100,7 +1103,7 @@ var CLSTAMP = "11000037";
             (e[(e.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
             (e[(e.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
             (e[(e.k_EButton_Max = 64)] = "k_EButton_Max");
-        })(i || (i = {})),
+        })(n || (n = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.ButtonEnter = 1)] = "ButtonEnter"),
@@ -1108,13 +1111,13 @@ var CLSTAMP = "11000037";
             (e[(e.Snap = 3)] = "Snap"),
             (e[(e.Sliding = 4)] = "Sliding"),
             (e[(e.SlidingEdge = 5)] = "SlidingEdge");
-        })(n || (n = {})),
+        })(a || (a = {})),
         (function (e) {
           (e[(e.Minimal = 1)] = "Minimal"),
             (e[(e.Modal = 2)] = "Modal"),
             (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
             (e[(e.HideDoneKey = 8)] = "HideDoneKey");
-        })(a || (a = {})),
+        })(s || (s = {})),
         (function (e) {
           (e[(e.Unknown = -1)] = "Unknown"),
             (e[(e.Idle = 0)] = "Idle"),
@@ -1122,30 +1125,30 @@ var CLSTAMP = "11000037";
             (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (e[(e.Standby = 3)] = "Standby"),
             (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
-        })(s || (s = {})),
+        })(l || (l = {})),
         (function (e) {
           (e[(e.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
             (e[(e.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
             (e[(e.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
-        })(l || (l = {})),
+        })(_ || (_ = {})),
         (function (e) {
           (e[(e.Notification_Shown = 600)] = "Notification_Shown"),
             (e[(e.Notification_Hidden = 601)] = "Notification_Hidden"),
             (e[(e.Notification_BeginInteraction = 602)] =
               "Notification_BeginInteraction"),
             (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
-        })(_ || (_ = {})),
+        })(p || (p = {})),
         (function (e) {
           (e[(e.TheaterFast = 0)] = "TheaterFast"),
             (e[(e.TheaterSlow = 1)] = "TheaterSlow");
-        })(p || (p = {})),
+        })(d || (d = {})),
         (function (e) {
           (e[(e.Constant = 0)] = "Constant"),
             (e[(e.Nearest = 1)] = "Nearest"),
             (e[(e.Linear = 2)] = "Linear"),
             (e[(e.SmoothStep = 3)] = "SmoothStep"),
             (e[(e.SmootherStep = 4)] = "SmootherStep");
-        })(d || (d = {})),
+        })(u || (u = {})),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -1153,13 +1156,13 @@ var CLSTAMP = "11000037";
             (e[(e.RoomSetupFloor = 3)] = "RoomSetupFloor"),
             (e[(e.ClearRoomSetup = 4)] = "ClearRoomSetup"),
             (e[(e.RoomSetupFull = 5)] = "RoomSetupFull");
-        })(u || (u = {})),
+        })(m || (m = {})),
         (function (e) {
           (e[(e.Near = 0)] = "Near"),
             (e[(e.Middle = 1)] = "Middle"),
             (e[(e.Far = 2)] = "Far"),
             (e[(e.VRGamepadUI = 3)] = "VRGamepadUI");
-        })(m || (m = {})),
+        })(c || (c = {})),
         (function (e) {
           (e[(e.__LocalSteamVR = 0)] = "__LocalSteamVR"),
             (e[(e.__LocalSteam = 1)] = "__LocalSteam"),
@@ -1168,7 +1171,7 @@ var CLSTAMP = "11000037";
             (e[(e.MutualLocal = 4)] = "MutualLocal"),
             (e[(e.MutualSteamVR = 5)] = "MutualSteamVR"),
             (e[(e.MutualSteam = 6)] = "MutualSteam");
-        })(c || (c = {})),
+        })(h || (h = {})),
         (function (e) {
           (e[(e.Dashboard = 1)] = "Dashboard"),
             (e[(e.LeftHand = 2)] = "LeftHand"),
@@ -1176,17 +1179,17 @@ var CLSTAMP = "11000037";
             (e[(e.World = 4)] = "World"),
             (e[(e.Theater = 5)] = "Theater"),
             (e[(e.Boot = 6)] = "Boot");
-        })(h || (h = {})),
+        })(g || (g = {})),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.SceneApp = 1)] = "SceneApp"),
             (e[(e.Panel = 2)] = "Panel");
-        })(g || (g = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.LaserMouse = 1)] = "LaserMouse"),
             (e[(e.Gamepad = 2)] = "Gamepad");
-        })(S || (S = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.ControllerPairing = 1)] = "ControllerPairing"),
@@ -1202,17 +1205,17 @@ var CLSTAMP = "11000037";
             (e[(e.PairWifiDongle = 8)] = "PairWifiDongle"),
             (e[(e.TourSendOff = 9)] = "TourSendOff"),
             (e[(e.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
-        })(v || (v = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.ThirdPartyClient = 1)] = "ThirdPartyClient"),
             (e[(e.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
             (e[(e.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
-        })(D || (D = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.Default = 0)] = "Default"),
             (e[(e.AuroraFloor = 1)] = "AuroraFloor");
-        })(y || (y = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.SceneAppNominal = 0)] = "SceneAppNominal"),
             (e[(e.SceneAppDimming = 1)] = "SceneAppDimming"),
@@ -1220,25 +1223,25 @@ var CLSTAMP = "11000037";
             (e[(e.SystemDimming = 3)] = "SystemDimming"),
             (e[(e.ConstructTheater = 4)] = "ConstructTheater"),
             (e[(e.ConstructNominal = 5)] = "ConstructNominal");
-        })(I || (I = {})),
+        })(C || (C = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.LargeDeadZone = 4)] = "LargeDeadZone"),
             (e[(e.SmallDeadZone = 8)] = "SmallDeadZone"),
             (e[(e.NoDeadZoneThenSmallElastic = 12)] =
               "NoDeadZoneThenSmallElastic");
-        })(C || (C = {}));
-      const F = C.SmallDeadZone;
-      var f, M, P, R, w, b;
+        })(B || (B = {}));
+      const F = B.SmallDeadZone;
+      var M, R, P, w, b, k;
       !(function (e) {
         (e[(e.Rect = 0)] = "Rect"),
           (e[(e.Panorama = 1)] = "Panorama"),
           (e[(e.Projection = 2)] = "Projection"),
           (e[(e.Spherical = 3)] = "Spherical");
-      })(f || (f = {})),
+      })(M || (M = {})),
         (function (e) {
           (e[(e.Curved = 0)] = "Curved"), (e[(e.Flat = 1)] = "Flat");
-        })(M || (M = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.Default = 0)] = "Default"), (e[(e.Aurora = 1)] = "Aurora");
         })(P || (P = {})),
@@ -1247,7 +1250,7 @@ var CLSTAMP = "11000037";
             (e[(e.ECameraExposure_Nominal = 1)] = "ECameraExposure_Nominal"),
             (e[(e.ECameraExposure_HighExposure = 2)] =
               "ECameraExposure_HighExposure");
-        })(R || (R = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.BULK_DEFAULT = 0)] = "BULK_DEFAULT"),
             (e[(e.BULK_64K_DMA = 1)] = "BULK_64K_DMA"),
@@ -1264,13 +1267,13 @@ var CLSTAMP = "11000037";
             (e[(e.ISO_30FPS = 12)] = "ISO_30FPS"),
             (e[(e.ISO_15FPS = 13)] = "ISO_15FPS"),
             (e[(e.MAX_CAMERA_COMPAT_MODES = 14)] = "MAX_CAMERA_COMPAT_MODES");
-        })(w || (w = {})),
+        })(b || (b = {})),
         (function (e) {
           (e[(e.ECameraSettingsModel_Default = 0)] =
             "ECameraSettingsModel_Default"),
             (e[(e.ECameraSettingsModel_SteamFrame = 1)] =
               "ECameraSettingsModel_SteamFrame");
-        })(b || (b = {}));
+        })(k || (k = {}));
     },
   },
 ]); //# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/chunk~edeac9135.js.map

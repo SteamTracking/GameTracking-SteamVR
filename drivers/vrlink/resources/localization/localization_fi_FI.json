@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Pois käytöstä",
 	"Setting_AllowMultipleLinks": "Salli useita linkkejä",
 	"Setting_EnableHmdAutoConnect": "Yhdistä Steam Linkin tukemat VR-lasit automaattisesti SteamVR:n käynnistyksen yhteydessä",
+	"Setting_Sharpening": "Terävöitä kuvaa ennen koodausta (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Terävyyden voimakkuus",
 	"svl_hand_interaction_augmented": "Käsiseurantaohjain",
 	"/input/index_pinch": "Etusormella nipistys",
 	"/input/middle_pinch": "Keskisormella nipistys",

@@ -27,6 +27,8 @@
 	"Setting_FoveationOff": "Wyłączone",
 	"Setting_AllowMultipleLinks": "Zezwalaj na wiele łączy",
 	"Setting_EnableHmdAutoConnect": "Automatycznie łącz się z obsługiwanymi goglami używającymi aplikacji Steam Link po uruchomieniu SteamVR",
+	"Setting_Sharpening": "Wyostrz obraz przed zakodowaniem (FidelityFX CAS)",
+	"Setting_SharpeningStrength": "Siła wyostrzenia",
 	"svl_hand_interaction_augmented": "Kontroler ze śledzeniem dłoni",
 	"/input/index_pinch": "Uszczypnięcie z palcem wskazującym",
 	"/input/middle_pinch": "Uszczypnięcie z palcem środkowym",

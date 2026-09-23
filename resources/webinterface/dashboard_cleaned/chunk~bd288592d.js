@@ -3030,10 +3030,16 @@ var CLSTAMP = "steamdb";
             strLocalizedSimulatedControllerType:
               this.LocalizeStringForSelectedControllerType(_),
             bIsSimulatingController: _ && "none" != _,
+            strSimulatedRenderModelType: (function (_) {
+              if (!0 === _ || "true" === _) return "name_only";
+              if (!1 === _ || "false" === _) return "none";
+              if (null == _ || "" === _) return "name_only";
+              const _ = _.trim().toLowerCase();
+              return "full" !== _ && "name_only" !== _ && "none" !== _
+                ? "none"
+                : _;
+            })(this.GetOptionValue("simulate_rendermodel")),
             bIsSimulatingHMD: this.GetOptionValue("simulate_hmd"),
-            bIsSimulatingRenderModel: this.GetOptionValue(
-              "simulate_rendermodel",
-            ),
           };
         }
       }

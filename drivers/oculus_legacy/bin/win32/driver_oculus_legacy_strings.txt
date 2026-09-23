@@ -90,6 +90,7 @@ EventWriteString
 EventWriteTransfer
 Failed to initalize OVR direct mode support.\n
 Failed to initialized Oculus device\n
+Failed to parse log message
 FreeLibrary
 GetCurrentDirectoryW
 GetCurrentProcess
@@ -140,7 +141,7 @@ Oculus
 Out of thread local storage!\n
 QueryPerformanceCounter
 RPCRT4.dll
-RSDS
+RSDS:
 RaiseException
 ResetEvent
 SDL2.dll
