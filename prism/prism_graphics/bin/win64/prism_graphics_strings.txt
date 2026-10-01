@@ -316,7 +316,7 @@ QueryPerformanceCounter
 RPCRT4.dll
 RPSM
 RPSMt
-RSDS[
+RSDS
 RaiseException
 ResetEvent
 Right Eye

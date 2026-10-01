@@ -197,6 +197,8 @@
 	"Settings_IpdHUDDesc": "Show the IPD heads-up display, when IPD changes",
 	"Settings_DominantEye": "Dominant Eye",
 	"Settings_DominantEye_Explainer": "Select the preferred eye for screenshots and spectator view.",
+	"Settings_EyeTrackingDominantEyeOnly": "Track Dominant Eye Only",
+	"Settings_EyeTrackingDominantEyeOnly_Explainer": "Eye tracking ignores the non-dominant eye.",
 	"Settings_EyeLeft": "Left",
 	"Settings_EyeRight": "Right",
 	"Settings_SpectatorViewStabilize": "Smooth spectator view",

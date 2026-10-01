@@ -645,9 +645,10 @@
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/remoteClientRefreshRate
 /vrlink_client_isSteamVR
-11:16:42
+00O\r
 126.0.0-HEAD.3171+gbbb7596+chromium-126.0.6478.183
 127.0.0.1
+19:25:56
 1e+9999
 5I)7
 7^d[L
@@ -1121,7 +1122,7 @@ IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -1403,7 +1404,7 @@ QueryPerformanceFrequency
 QuitSceneApp
 QuitSteamVR
 RPCRT4.dll
-RSDSe
+RSDS
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n
@@ -1523,7 +1524,7 @@ Searching for LUID:
 Second argument must be a TransformTRS
 Second argument must be a string
 See 
-Sep 22 2026
+Sep 30 2026
 SetCurrentProcessExplicitAppUserModelID
 SetEnvironmentVariableA
 SetEvent
@@ -2655,6 +2656,7 @@ overlay_key
 overlay_name
 overlays
 owning_overlay
+p0O\r
 pName && *pName != '\0'
 pScreenSurface
 pairing

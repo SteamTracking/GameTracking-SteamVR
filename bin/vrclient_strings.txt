@@ -35,6 +35,7 @@
  for 
  for action '
  for detail.\n
+ from xrWaitFrame
  in Buffer\n
  in Meta compatibility mode
  message of type "
@@ -495,8 +496,8 @@ $3br
 /data/src/common/vrcommon/vrrenderer/ivrrenderer.h
 /data/src/common/vrcommon/vrrenderer/sharedresource_linux.cpp
 /data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4472
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4556
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4473
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4557
 /data/src/common/vrcommon/vrsystem.cpp
 /data/src/common/vrcommon/vrsystemlayersharedstate.cpp
 /data/src/common/vrcommon/vulkan.cpp
@@ -544,6 +545,7 @@ $3br
 /data/src/vrclient/hmdlatest.cpp
 /data/src/vrclient/ixrbinding.h
 /data/src/vrclient/legacyinput.cpp:541
+/data/src/vrclient/openxr_app_space_delta_pose.cpp
 /data/src/vrclient/openxr_common.cpp
 /data/src/vrclient/openxr_common.h
 /data/src/vrclient/openxr_compositor_openvr.cpp
@@ -575,6 +577,7 @@ $3br
 /data/src/vrclient/openxr_entrypoints.cpp:1192
 /data/src/vrclient/openxr_entrypoints.cpp:1201
 /data/src/vrclient/openxr_entrypoints.cpp:1210
+/data/src/vrclient/openxr_entrypoints.cpp:1219
 /data/src/vrclient/openxr_entrypoints.cpp:174
 /data/src/vrclient/openxr_entrypoints.cpp:187
 /data/src/vrclient/openxr_entrypoints.cpp:214
@@ -667,9 +670,9 @@ $3br
 /data/src/vrclient/skeletalinpututils.cpp
 /data/src/vrclient/vrclientcore.cpp
 /data/src/vrclient/vrcompositorclient.cpp
-/data/src/vrclient/vrcompositorclient.cpp:1534
-/data/src/vrclient/vrcompositorclient.cpp:1790
-/data/src/vrclient/vrcompositorclient.cpp:2637
+/data/src/vrclient/vrcompositorclient.cpp:1569
+/data/src/vrclient/vrcompositorclient.cpp:1825
+/data/src/vrclient/vrcompositorclient.cpp:2682
 /data/src/vrclient/vrcompositorclient.cpp:464
 /data/src/vrclient/vrcompositorsharedtextures.cpp
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2568
@@ -1104,6 +1107,7 @@ $3br
 12CVRInput_008
 12CVRInput_009
 12CVRInput_010
+12CVRInput_011
 12CVRPaths_001
 12IInputFilter
 12ILogListener
@@ -1468,6 +1472,7 @@ $3br
 26InputInterfaceRegistrationI12CVRInput_008E
 26InputInterfaceRegistrationI12CVRInput_009E
 26InputInterfaceRegistrationI12CVRInput_010E
+26InputInterfaceRegistrationI12CVRInput_011E
 26PathsInterfaceRegistrationI12CVRPaths_001E
 27CDriverDirectInternalClient
 27CFixedSizePropertyContainer
@@ -2405,6 +2410,7 @@ CreateVulkanDevice
 CreateVulkanInstance
 CreateVulkanResources
 CreateXrBinding: unsupported graphics binding type: %d\n
+Created injected depth image for GL swapchain %u image %u (format %d, %ux%u, %u layers)
 Created remote GL texture 0x%llx, dimensions %d x %d, format %d
 Created remote Vulkan image 0x%llx, dimensions %d x %d, format %d, memory size %d and memory type %d.\n
 Deactivation threshold of %f will be set to the minimum allowed value %f in filter %s.
@@ -2559,6 +2565,7 @@ Failed to create PID pipe\n
 Failed to create a new FD for resource 0x%llx\n
 Failed to create compute shader module %s!\n
 Failed to create image\n
+Failed to create injected depth image for GL swapchain %u (format %d); disabling
 Failed to create opengl swapchain image: MakeCurrent failed\n
 Failed to create opengl swapchain image: Unsupported number of faces: %d\n
 Failed to create opengl swapchain image: array size must be at least 1\n
@@ -2740,6 +2747,7 @@ FnTable:IVRInput_007
 FnTable:IVRInput_008
 FnTable:IVRInput_009
 FnTable:IVRInput_010
+FnTable:IVRInput_011
 FnTable:IVROverlayView_001
 FnTable:IVROverlayView_002
 FnTable:IVROverlay_010
@@ -2835,6 +2843,7 @@ GetFrameTiming
 GetHiddenAreaMeshData: failed to invert projectin matrix\n
 GetHiddenAreaMeshData: no hidden area mesh data available\n
 GetIndices
+GetInjectedDepthTexture
 GetInputValue failed\n
 GetInstanceExtensionProperties - failed to enumerate extensions\n
 GetInstanceExtensionProperties - failed to get extension count\n
@@ -3033,6 +3042,7 @@ IVRInput_008
 IVRInput_009
 IVRInput_010
 IVRInput_011
+IVRInput_012
 IVRMailbox_001
 IVRMailbox_002
 IVRNotificationsInternal_001
@@ -3207,6 +3217,9 @@ Initialized Vulkan transfer ring buffer, mapped at offset 0x%p.\n
 Initializing CVulkanVRRenderer\n
 Initializing internal camera passthrough interface
 Initializing the limited version of CVRCompositorClient\n
+Injected depth: CreateFD failed for GL swapchain %u image %u (no export fd)
+Injected depth: fdm_injection layer depth entry points unavailable; not publishing depth
+Injected depth: layer reports no depth for GL swapchain %u image %u (fd %d)
 InputValueType_Boolean
 InputValueType_EyeTracking
 InputValueType_Haptic
@@ -4754,6 +4767,7 @@ VREvent_PropertyChanged
 VREvent_Quit
 VREvent_QuitAcknowledged
 VREvent_ReloadOverlays
+VREvent_ReloadShaders
 VREvent_ReprojectionSettingHasChanged
 VREvent_RequestDisconnectWirelessHMD
 VREvent_RequestScreenshot
@@ -5495,6 +5509,7 @@ XR_TYPE_ANCHOR_SPACE_CREATE_INFO_ANDROID
 XR_TYPE_ANCHOR_SPACE_CREATE_INFO_BD
 XR_TYPE_ANDROID_SURFACE_SWAPCHAIN_CREATE_INFO_FB
 XR_TYPE_API_LAYER_PROPERTIES
+XR_TYPE_APP_SPACE_DELTA_POSE_SET_INFO_VALVE
 XR_TYPE_AUDIO_BUFFER_BD
 XR_TYPE_BATTERY_STATE_DISPLAY_EXT
 XR_TYPE_BINDING_MODIFICATIONS_KHR
@@ -6166,6 +6181,9 @@ XR_UNKNOWN_FAILURE_%d
 XR_UNKNOWN_STRUCTURE_TYPE_%d
 XR_UNKNOWN_SUCCESS_%d
 XR_VALVE_analog_threshold
+XR_VALVE_app_space_delta_pose
+XR_VALVE_app_space_delta_pose: first xrSetAppSpaceDeltaPoseVALVE (displayTime %lld%s, nearZ %.3f, farZ %.3f)
+XR_VALVE_app_space_delta_pose: nothing published for display time %lld; the app is correlating with the wrong frame (pass XrFrameEndInfo::displayTime, or set the LAST_WAIT_FRAME flag).
 XR_VALVE_frame_controller_interaction
 XR_VALVE_timing_utils
 XXXX PNG chunk not known
@@ -6615,6 +6633,7 @@ abort
 accept
 accessor[
 accessors
+acos
 action
 actionSet
 action_manifest_version
@@ -7150,6 +7169,7 @@ false literal
 fclose
 fd-cl-
 fd-srv-
+fdm_injection layer rejected depth target for GL swapchain %u
 fdopen
 feof
 fflush
@@ -7845,6 +7865,7 @@ pTimeline->m_nRefCount > 0
 pUpdateData
 pVertexBufferBase
 pVkSemaphore != VK_NULL_HANDLE
+pVulkanData && pVulkanData->m_pDevice
 pVulkanDevice->m_pDevice == m_pExportDevice
 page
 parameters
@@ -8619,6 +8640,7 @@ sxr_xrQueryPerformanceMetricsCounterMETA
 sxr_xrReleaseSwapchainImage
 sxr_xrRequestDisplayRefreshRateFB
 sxr_xrRequestExitSession
+sxr_xrSetAppSpaceDeltaPoseVALVE
 sxr_xrSetInputDeviceLocationEXT
 sxr_xrSetPerformanceMetricsStateMETA
 sxr_xrStopHapticFeedback
@@ -9807,6 +9829,7 @@ xrReleaseSwapchainImage
 xrRequestDisplayRefreshRateFB
 xrRequestExitSession
 xrResultToString
+xrSetAppSpaceDeltaPoseVALVE
 xrSetInputDeviceActiveEXT
 xrSetInputDeviceLocationEXT
 xrSetInputDeviceStateBoolEXT

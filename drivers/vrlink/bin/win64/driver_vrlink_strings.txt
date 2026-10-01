@@ -833,6 +833,7 @@ $d`D-laM
 0.0.0.0
 0000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798998
 00P`00P`
 0123456789
 0123456789.
@@ -846,7 +847,7 @@ $d`D-laM
 0\tzc
 0\v2;i
 0`P0
-0a\v6<
+0a\v6<`G
 0n\n&pa
 0pp@5tqE?|sO541
 0x%I64x
@@ -1872,10 +1873,9 @@ Current Driver Version does not support this NvEncodeAPI version, please upgrade
 D#D)D;D?DEDKDQDSDYDeDoD
 D3D11CreateDevice
 D3DCOMPILER_47.dll
-D3DCompile2
-D3DCompileFromFile
 D3DKMTEnumAdapters2
 D3DKMTQueryAdapterInfo
+D3DReadFileToBlob
 D4tp
 D7q/;M
 D:E^F
@@ -2280,7 +2280,6 @@ Error parsing json %s\n
 Error reading %s: Bytes read invalid.\n
 Error writing file
 Error! EventWriteString Severe: %s\n
-Error: %s\n
 Error: Cannot open file %s\n
 Error: Could not allocate resource for NVENC (%d x %d, %d, %d, %p)  Error: %d\n
 Error: Could not bind socket %d on %s\n
@@ -2289,13 +2288,8 @@ Error: Could not connect to host connect(%d)\n
 Error: Could not create sampler\n
 Error: Could not create socket: %d\n
 Error: CreateRenderTargetView could not generate target view.\n
-Error: D3DCompile2 failed on pixel shader with file %s (%08x)\n
-Error: D3DCompileFromFile failed on pixel shader with file %s (%08x)\n
 Error: Failed during nvEncReconfigureEncoder. Errorcode: %d // Would be fatal: %d // %d / %d / %d / %d / %d\n
 Error: Failed nvEncEncodePicture. Errorcode: %d\n
-Error: Failed on CreateInputLayout with file %s\n
-Error: Failed on CreatePixelShader with file %s\n
-Error: Failed on CreateVertexShader with file %s\n
 Error: Failed to Unregister completion event %p. Error: %d\n
 Error: Failed to Unregister resource %p. Error: %d\n
 Error: Failed to close handle for completion event %p.\n
@@ -2360,6 +2354,10 @@ Eye and Expressions
 F2`a
 F6tr
 FAILED to Activate DirectX 11 Device.\n
+FAILED to CreateInputLayout with file '%s': 0x%08x\n
+FAILED to CreatePixelShader with file '%s': 0x%08x\n
+FAILED to CreateVertexShader with file '%s': 0x%08x\n
+FAILED to load file '%s': 0x%08x\n
 FAILED: Could not create constant buffer.\n
 FALSE
 FATAL: Failed to open log file %s, failing out!\n
@@ -2424,6 +2422,7 @@ FindNextFileW
 Finished encoder reinit (%d). Took: %0.3fms\n
 Flags
 Forced Stream reset has failed. Code: 0x13 
+Format string parse failure
 Found properties for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to retrieve serial number for activation.
@@ -2678,14 +2677,14 @@ IVRDisplayComponent_003
 IVRDriverDirectInternal_XXX
 IVRDriverDirectModeComponent_009
 IVRDriverInputInternal_XXX
-IVRDriverInput_004
+IVRDriverInput_005
 IVRDriverLog_001
 IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRIPCResourceManagerClient_004
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -3377,7 +3376,6 @@ POLICY_MAPPINGS
 POLY1305
 PPxD<<%
 PRB+
-PRECODE
 PRINTABLE
 PRINTABLESTRING
 PRIVATE KEY
@@ -3589,6 +3587,7 @@ ReleaseSync FAILED with unknown hr 0x%08x [%u messages suppressed]
 ReleaseSync FAILED with unknown hr 0x%08x [OMITTING additional logs for %d seconds]
 Reliable
 Reliable Reply
+Reloading shaders
 Remove From CRL
 RenderModelName %s\n
 ReportEventW
@@ -3769,7 +3768,6 @@ SSL_new
 STEAMVR_DISABLE_LOG_RATE_LIMITING
 STORE lib
 STORE routines
-SUCCESS: Shader compilation successful for '%s'\n
 SVLAudioWSAPI::AudioThread
 SVLAudioWSAPI::SVLAudioWSAPI(...)\n
 SVLControllerDriver::ProcessEvent
@@ -4310,6 +4308,7 @@ Warning: Trying to set a height (%d) that is higher than the max (%d). Setting t
 Warning: Trying to set a width (%d) that is higher than the max (%d). Setting to max instead.\n
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
+Warning: packet received with wrong identifier. Expected 0x02...... got: %08x (Size=%d)
 Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
 Warning: res field incorrect [clear mode] %04x\n
@@ -4607,8 +4606,6 @@ Zjz\v
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \nbad png sig
-\ncbuffer VS_CONSTANT_BUFFER : register(b2)\n{\n\tfloat4  g_uvAppSubmittedMinMax;// uMin, vMin, uMax, vMax;\n\tfloat4  g_uvSystemSubmittedMinMax;\n\tfloat4  g_nonFovealColor;\n\tfloat4  g_globalColorMult;\n\tfloat2  g_RBSize;\n\tfloat   g_extraFlags;\n\tfloat   g_nEye;\n\tfloat2  g_GameTexSize; //NOT GAME TEXT SIZE!!!! OUTPUT TEXT SIZE!!!\n\tfloat2  g_CenterAreaOffsetXY;\n\tfloat2  g_GameSubmittedSizeXY;\n\tfloat   g_unused1; // Using PRECODE macro instead\n\tfloat   g_bDirectFoveatedSample;\n\tfloat   g_unused2; // Unused on the Windows composition path\n\tfloat   g_CasSharp;\n};\n\n\nstruct vs_in\n{\n\tfloat3 position_local : POS;\n\tfloat3 texture_local : TEX;\n};\n\nstruct vs_out\n{\n\tfloat4 position_clip : SV_POSITION;\n\tfloat4 position_scr : TEXCOORD0;\n};\n\nvs_out vs_main( vs_in input )\n{\n\tvs_out output = (vs_out)0;\n\toutput.position_clip = float4( input.position_local, 1.0 );\n\toutput.position_scr = float4( input.texture_local.x, input.texture_local.y, input.texture_local.z, 0.0 );\n\treturn output;\n}\n\nTexture2D  Texture0;\n\nSamplerState SampleType;\n\nfloat3 SrgbLinearToGamma( float3 vLinearColor )\n{\n\t// 15 asm instructions\n\tfloat3 vLinearSegment = vLinearColor.rgb * 12.92;\n\tfloat3 vExpSegment = ( 1.055 * pow( vLinearColor.rgb, float3( 1.0 / 2.4, 1.0 / 2.4, 1.0 / 2.4 ) ) ) - 0.055;\n\n\tfloat3 vGammaColor = float3( ( vLinearColor.r <= 0.0031308 ) ? vLinearSegment.r : vExpSegment.r,\n\t\t\t\t\t\t\t\t ( vLinearColor.g <= 0.0031308 ) ? vLinearSegment.g : vExpSegment.g,\n\t\t\t\t\t\t\t\t ( vLinearColor.b <= 0.0031308 ) ? vLinearSegment.b : vExpSegment.b );\n\treturn vGammaColor.rgb;\n}\n\n#define B 0.0\n#define C 0.25\n\nfloat CatmullRom( float x )\n{\n\tfloat f = abs( x );\n\tfloat f2 = f * f;\n\tfloat f3 = f2 * f;\n\n\tif ( f < 1.0 )\n\t{\n\t\treturn ( ( 12 - 9 * B - 6 * C ) * f3 +\n\t\t\t\t ( -18 + 12 * B + 6 * C ) * f2 +\n\t\t\t\t ( 6 - 2 * B ) ) / 6.0;\n\t}\n\telse if ( f >= 1.0 && f < 2.0 )\n\t{\n\t\treturn ( ( -B - 6 * C ) * f3\n\t\t\t\t + ( 6 * B + 30 * C ) * f2 +\n\t\t\t\t ( -( 12 * B ) - 48 * C ) * f +\n\t\t\t\t 8 * B + 24 * C ) / 6.0;\n\t}\n\telse\n\t{\n\t\treturn 0.0;\n\t}\n}\n\n#define _KernelFcn CatmullRom\n#define _KernelScale 1.0\n#define _MinRadius2 1.0\n\nfloat4 Kernel_Iso_Circle( Texture2D tex, SamplerState samplerState, float2 textureSize, float2 invTextureSize,\n\t\t\t\t\t\t  float2 vTexCoord, float2 vDdx, float2 vDdy )\n{\n\tvTexCoord *= textureSize;\n\tvDdx *= textureSize;\n\tvDdy *= textureSize;\n\tfloat2 baseNearestTexelCenter = floor( vTexCoord ) + 0.5;\n\tfloat4 total_samp = float4( 0.0, 0.0, 0.0, 0.0 );\n\tfloat total_weight = 0;\n\tfloat ddxyRadius2 = 0.5 * ( dot( vDdx, vDdx ) + dot( vDdy, vDdy ) );\n\tddxyRadius2 = max( _MinRadius2, ddxyRadius2 );\n\tfloat ddxyRadiusInv = 1.0 / sqrt( ddxyRadius2 );\n#define DIM 2\n\tfor ( int m = -DIM; m <= DIM; m++ )\n\t{\n\t\tfor ( int n = -DIM; n <= DIM; n++ )\n\t\t{\n#undef DIM\n\t\t\tfloat2 texelCenter = baseNearestTexelCenter + float2( m, n );\n\t\t\tfloat2 pixel_offset = texelCenter - vTexCoord;\n\t\t\tfloat2 rel = pixel_offset * ddxyRadiusInv * _KernelScale;\n\t\t\tfloat r2 = dot( rel, rel );\n\t\t\tfloat weight = _KernelFcn( sqrt( r2 ) );\n\t\t\ttotal_samp += weight * tex.SampleLevel( samplerState, texelCenter * invTextureSize, 0 );\n\t\t\ttotal_weight += weight;\n\t\t}\n\t}\n\n\ttotal_samp *= 1.0 / total_weight;\n\treturn total_samp;\n}\n\n#undef _KernelScale\n#undef _MinRadius2\n\n// AMD FidelityFX Contrast Adaptive Sharpening\n// See https://github.com/GPUOpen-Effects/FidelityFX-CAS/blob/master/ffx-cas/ffx_cas.h\n\n#define AF1 float\n#define AF2 float2\n#define AF3 float3\n#define AF4 float4\n\n#define AU1 uint\n#define AU2 uint2\n#define AU3 uint3\n#define AU4 uint4\n\n#define ASU1 int\n#define ASU2 int2\n#define ASU3 int3\n#define ASU4 int4\n\n#define AF1_(a) float(a)\n#define AF2_(a) float2(a, a)\n#define AF3_(a) float3(a, a, a)\n#define AF4_(a) float4(a, a, a, a)\n\ninline AF1 AMinF1(AF1 a, AF1 b) { return min(a, b); }\ninline AF1 AMaxF1(AF1 a, AF1 b) { return max(a, b); }\n\ninline AF1 AMin3F1(AF1 x, AF1 y, AF1 z) { return min(x, min(y, z)); }\ninline AF1 AMax3F1(AF1 x, AF1 y, AF1 z) { return max(x, max(y, z)); }\n\ninline AF1 ARcpF1(AF1 a) { return 1.0f / a; }\ninline AF1 ASatF1(AF1 a) { return clamp(a, 0.0f, 1.0f); }\n\ninline AF1 APrxLoSqrtF1(AF1 a) { return asfloat((asuint(a) >> 1) + 0x1fbc4639u); }\ninline AF1 APrxLoRcpF1(AF1 a) { return asfloat(0x7ef07ebbu - asuint(a)); }\ninline AF1 APrxMedRcpF1(AF1 a) { AF1 b = asfloat(0x7ef19fffu - asuint(a)); return b * (-b * a + 2.0f); }\n\nAF4 CasFilter( AU2 sp )\n{\n    AF3 b = Texture0.Load( ASU3( sp + ASU2( 0, -1 ), 0) ).rgb;\n    AF3 d = Texture0.Load( ASU3( sp + ASU2( -1, 0 ), 0) ).rgb;\n    AF4 e = Texture0.Load( ASU3( sp, 0) );\n    AF3 f = Texture0.Load( ASU3( sp + ASU2( 1, 0 ), 0) ).rgb;\n    AF3 h = Texture0.Load( ASU3( sp + ASU2( 0, 1 ), 0) ).rgb;\n\n    AF1 mnR = AMin3F1( AMin3F1( d.r, e.r, f.r ), b.r, h.r );\n    AF1 mnG = AMin3F1( AMin3F1( d.g, e.g, f.g ), b.g, h.g );\n    AF1 mnB = AMin3F1( AMin3F1( d.b, e.b, f.b ), b.b, h.b );\n\n    AF1 mxR = AMax3F1( AMax3F1( d.r, e.r, f.r ), b.r, h.r );\n    AF1 mxG = AMax3F1( AMax3F1( d.g, e.g, f.g ), b.g, h.g );\n    AF1 mxB = AMax3F1( AMax3F1( d.b, e.b, f.b ), b.b, h.b );\n\n    AF1 rcpMR = APrxLoRcpF1( mxR );\n    AF1 rcpMG = APrxLoRcpF1( mxG );\n    AF1 rcpMB = APrxLoRcpF1( mxB );\n\n    AF1 ampR = ASatF1( min( mnR, AF1_( 1.0 ) - mxR ) * rcpMR );\n    AF1 ampG = ASatF1( min( mnG, AF1_( 1.0 ) - mxG ) * rcpMG );\n    AF1 ampB = ASatF1( min( mnB, AF1_( 1.0 ) - mxB ) * rcpMB );\n\n    ampR = APrxLoSqrtF1( ampR );\n    ampG = APrxLoSqrtF1( ampG );\n    ampB = APrxLoSqrtF1( ampB );\n\n    AF1 peak = g_CasSharp;\n    AF1 wR = ampR * peak;\n    AF1 wG = ampG * peak;\n    AF1 wB = ampB * peak;\n\n    AF1 rcpWeight = APrxMedRcpF1( AF1_( 1.0 ) + AF1_( 4.0 ) * wG );\n\n    AF1 pixR = ASatF1( ( b.r * wG + d.r * wG + f.r * wG + h.r * wG + e.r ) * rcpWeight );\n    AF1 pixG = ASatF1( ( b.g * wG + d.g * wG + f.g * wG + h.g * wG + e.g ) * rcpWeight );\n    AF1 pixB = ASatF1( ( b.b * wG + d.b * wG + f.b * wG + h.b * wG + e.b ) * rcpWeight );\n\n\treturn AF4( pixR, pixG, pixB, e.a );\n}\n\n#undef AF1\n#undef AF2\n#undef AF3\n#undef AF4\n#undef AU1\n#undef AU2\n#undef AU3\n#undef AU4\n#undef ASU1\n#undef ASU2\n#undef ASU3\n#undef ASU4\n\n#undef AF1_\n#undef AF2_\n#undef AF3_\n#undef AF4_\n\nfloat4 FoveatedSample( vs_out input, float SampleScale )\n{\n\tfloat2 uv = input.position_scr.xy;\n\tfloat4 samp;\n\t\n\t#if PRECODE == 0\n\tif( uv.y < 0.5 )\n\t#elif PRECODE == 1\n\tif( uv.x < 0.5 )\n\t#else\n\tif( true )\n\t#endif\n\t{\n\t\t#if PRECODE == 0\n\t\t\t// Bottom Image (Fit) (Works the way for scene app + overlays)\n\t\t\tuv.y = uv.y * 2.0;\n\t\t#elif PRECODE == 1\n\t\t\tuv.x = uv.x * 2.0;\n\t\t#else\n\t\t\t// Don't do anything if 1:1\n\t\t#endif\n\t\n\t\tfloat2 rv = float2( uv.x, 1.0 - uv.y ); // Flip so we're in normal UV space. (the UV going in is flipped)\n\n\t\t// I think this is the right way to do this conversion, back into the soruce image's UVs.\n\t\trv.xy = rv.xy * (g_uvAppSubmittedMinMax.zw - g_uvAppSubmittedMinMax.xy) + g_uvAppSubmittedMinMax.xy;\n\n\t\tint3 texsizelevels;\n\t\tTexture0.GetDimensions( 0, texsizelevels.x, texsizelevels.y, texsizelevels.z );\n\t\tfloat2 textureSize = float2( texsizelevels.x, texsizelevels.y );\n\t\tfloat2 invTextureSize = 1.0 / textureSize;\n\t\tsamp.rgba = Kernel_Iso_Circle( Texture0, SampleType, textureSize, invTextureSize, rv.xy, SampleScale * ddx_fine( rv.xy ), SampleScale * ddy_fine( rv.xy ) );\n\t\tsamp.rgba *= g_nonFovealColor;\n\t}\n\telse if ( g_bDirectFoveatedSample > 0 )\n\t{\n\t\t// Top Image (Foveated), Luma\n\t\tint3 texsizelevels;\n\t\tTexture0.GetDimensions( 0, texsizelevels.x, texsizelevels.y, texsizelevels.z );\n\t\t\n\t\tfloat2 rv = input.position_clip.xy * ((int)SampleScale);\n\t\t\n\t\t#if PRECODE == 0\n\t\t// If we're drawing on the bottom part of the screen, do this, to make our 0,0 map to 0,0 not halfway through the image.\n\t\tif ( g_nEye > 0 )\n\t\t{\n\t\t\trv.y -= g_RBSize.y/2;\n\t\t}\n\t\t#elif PRECODE == 1\t\t\n\t\t// We're drawing on the right side of the image, need to do this to make our 0,0 map to 0,0 not halfway through the image.\n\t\tif ( g_nEye > 0 )\n\t\t{\n\t\t\trv.y -= g_RBSize.y/2;\n\t\t}\n\t\trv.x -= g_RBSize.y/2;\n\t\t#endif\n\t\t\n\t\t// Address it so (0,0) is in the top left\n\t\trv += g_CenterAreaOffsetXY;\n\t\t\n\t\t// Convert back into normalized space.\n\t\trv /= g_GameSubmittedSizeXY.xy;\n\n\t\t// Correctly apply app submitted UVs.\n\t\trv = g_uvAppSubmittedMinMax.xy + ( rv * (g_uvAppSubmittedMinMax.zw - g_uvAppSubmittedMinMax.xy ) );\n\n\t\t// We have to add 0.1 because if we do 0.0 then the floating point math will sometimes end us up on the wrong side of the pixel and we'll get crunchy pixels.\n\t\t// There's also occasionally an issue at 0.5, since that bumps us into the next pixels, so we're going to do +0.1\n\t\tint2 SampleCoordFromSubmittedTexture = int2( rv * texsizelevels.xy + 0.1 );\n\n\t\tif ( g_CasSharp < 0 )\n        {\n            samp = CasFilter( uint2( SampleCoordFromSubmittedTexture ) );\n        }\n\t\telse\n        {\n\t\t\tsamp = Texture0.Load( int3( SampleCoordFromSubmittedTexture, 0 ) );\n        }\n\n\t\tif ( ( ( ( uint ) g_extraFlags ) & 0x100 ) ) // 256\n\t\t{\n\t\t\tfloat2 uvcx = (uv - float2(0.5,0.75)) * float2(1.0,2.0);\n\t\t\tuvcx = abs( uvcx );\n\t\t\tfloat centert = 0.;\n\t\t\t// Only show pip if filtering is off.\n\t\t\tif( !( ( ( uint ) g_extraFlags ) & 0x200 ) ) // 512\n\t\t\t{\n\t\t\t\tfloat r = length( uvcx );\n\t\t\t\tcentert =  saturate(sin(r*400.0+0.1)*0.5+0.5-r*30.);\n\t\t\t}\n\t\t\tfloat outert = max(uvcx.x, uvcx.y) > 0.48;\n\t\t\tsamp = lerp( samp, float( 1.0 ), max( centert, outert ) );\n\t\t}\n\t}\n\telse\n\t{\n\t\t// Chroma for foveated region.\n\t\t\n\t\tint3 texsizelevels;\n\t\tTexture0.GetDimensions( 0, texsizelevels.x, texsizelevels.y, texsizelevels.z );\n\t\t\n\t\tfloat2 rv = input.position_clip.xy * ((int)SampleScale);\n\t\t// If we're drawing on the bottom part of the screen, do this, to make our 0,0 map to 0,0 not halfway through the image.\n\t\t#if PRECODE == 0\n\t\tif ( g_nEye > 0 )\n\t\t{\n\t\t\trv.y -= g_RBSize.y/2;\n\t\t}\n\t\t#else\n\t\t// We're drawing on the right side of the image, need to do this to make our 0,0 map to 0,0 not halfway through the image.\n\t\tif ( g_nEye > 0 )\n\t\t{\n\t\t\trv.y -= g_RBSize.y/2;\n\t\t}\n\t\trv.x -= g_RBSize.y/2;\n\t\t#endif\n\t\t// rv is in 0...g_RBSize space.\n\n\t\trv += g_CenterAreaOffsetXY;\n\n\t\t// Now it's in [gamesubmittedxy] space, where top corner of box is 0,0.\n\t\t\n\t\t// Convert back into normalized space.\n\t\trv /= g_GameSubmittedSizeXY.xy;\n\n\t\t// Correctly apply app submitted UVs.\n\t\trv = g_uvAppSubmittedMinMax.xy + ( rv * (g_uvAppSubmittedMinMax.zw - g_uvAppSubmittedMinMax.xy ) );\n\t\tfloat2 textureSize = float2( texsizelevels.x, texsizelevels.y );\n\t\tfloat2 invTextureSize = 1.0 / textureSize;\n        if (g_CasSharp < 0)\n        {\n            samp = CasFilter( uint2( rv * textureSize + 0.1 ) );\n        }\n\t\telse\n        {\n\t\t\tsamp.rgba = Kernel_Iso_Circle( Texture0, SampleType, textureSize, invTextureSize, rv.xy, SampleScale * ddx_fine( rv.xy ), SampleScale * ddy_fine( rv.xy ) );\n        }\n\t}\n\n    samp.rgb = g_globalColorMult.rgb * samp.rgb;\n\tsamp.rgb = SrgbLinearToGamma( samp.rgb );\n\t//samp.rgb = float3( 1000.0/1023.0, 100.0/1023.0, 100.0/1023.0 );\n\treturn samp;\n}\n\nfloat3 RGB709_to_YUV( float3 rgb )\n{\n\tfloat a = 0.2126;\n\tfloat b = 0.7152;\n\tfloat c = 0.0722;\n\tfloat d_inv = 0.5389092476826902;\n\tfloat e_inv = 0.63500127000254;\n\tfloat midpoint = 512.0/1023.0;\n\tfloat Y = a * rgb.r + b * rgb.g + c * rgb.b;\n\tfloat cb = ( rgb.b - Y ) * d_inv;\n\tfloat cr = ( rgb.r - Y ) * e_inv;\n\treturn saturate( float3( Y, cb + midpoint, cr + midpoint ) );\n}\n\nfloat4 ps_main( vs_out input, float4 screenSpace : SV_Position ) : SV_TARGET{\n\tfloat4 samp = FoveatedSample( input, 1.0 );\n\tfloat3 fYUV = RGB709_to_YUV( samp );\n\treturn float4( fYUV.r, 0, 0, samp.a );\n}\n\nfloat4 ps_main_chroma( vs_out input ) : SV_TARGET{\n\tfloat4 samp = FoveatedSample( input, 2.0 );\n\tfloat3 fYUV = RGB709_to_YUV( samp );\n\treturn float4( fYUV.g, fYUV.b, 0, samp.a );\n}\n
-\ncbuffer VS_CONSTANT_BUFFER : register(b2)\n{\n\tfloat4 uvMinMax;\n\tfloat4 clockParameters; // clockParameters[01] = coordinate of clock 0,0; clockParameters[2] = clock\n};\n\n/* vertex attributes go here to input to the vertex shader */\nstruct vs_in {\n    float3 position_local : POS;\n    float3 texture_local : TEX;\n};\n\n/* outputs from vertex shader go here. can be interpolated to pixel shader */\nstruct vs_out {\n    float4 position_clip : SV_POSITION; // required output of VS\n    float4 position_tex   : TEXCOORD0;\n};\n\nvs_out vs_main(vs_in input) {\n  //vs_out output = (vs_out)0; // zero the memory first\n  vs_out output;\n  output.position_clip = float4(input.position_local, 1.0);\n  output.position_tex = float4(input.texture_local, 1.0);\n\n  float4 muvMinMax = uvMinMax;\n  output.position_tex = float4( \n\tinput.texture_local.x * ( muvMinMax.z - muvMinMax.x ) + muvMinMax.x,\n\tinput.texture_local.y * ( muvMinMax.y - muvMinMax.w ) + muvMinMax.w,\n\t0. , 0. );\n\n  return output;\n}\n\nTexture2D  Texture0;\n\nSamplerState SampleType;\n\n#define CLOCKX 8\n#define CLOCKY 8\n\n#define CLOCK_CURSOR_SIZE (8.)\n#define CLOCK_TIME_STEP (1.)\n\nfloat4 ps_main(vs_out input, float4 Pos : SV_Position ) : SV_TARGET {\n\tint2 fragpos = (Pos.xy-clockParameters.xy)/CLOCK_CURSOR_SIZE;\n\tint fid = floor(clockParameters.z/CLOCK_TIME_STEP + 0.5 );\n\tint frameid = floor(clockParameters.z + 0.5);\n\tint fidx = 0;\n\tint fidy = (fid % (CLOCKX*CLOCKY)) / CLOCKX;\n\tif( fidy & 1 )\n\t{\n\t\tfidx = (CLOCKX-1) - fid % CLOCKX;\n\t}\n\telse\n\t{\n\t\tfidx = fid % CLOCKX;\n\t}\n\n\tfloat cx = fragpos.x%CLOCKX;\n\tfloat cy = (fragpos.y%CLOCKY);\n\t//float col;\n\tfloat col_r;\n\tfloat col_g;\n\tfloat col_b;\n\tint redpixel_at_zero_pos = 0; //used for debugging\n\t\n\t//if (redpixel_at_zero_pos && (!fidx && !fidy && !cx && !cy)) {\n\tif (redpixel_at_zero_pos && !(frameid % 64)) {\n\t\tcol_r = 1.0;\n\t\tcol_g = 0.0;\n\t\tcol_b = 0.0;\n\t}\n\telse {\n\t\tcol_r = (fidx == cx && fidy == cy) ? 1.0 : 0.0;\n\t\tcol_g = (fidx == cx && fidy == cy) ? 1.0 : 0.0;\n\t\tcol_b = (fidx == cx && fidy == cy) ? 1.0 : 0.0;\n\t}\n\n\treturn float4(col_r, col_g, col_b, 1.);\n}\n\n\nfloat4 ps_main_chroma(vs_out input, float4 Pos : SV_Position ) : SV_TARGET {\n\treturn 0.5;\n}\n\n
 \nkhT
 \r!\r+\r-\r=\r?\rO\rU\ri\ry\r
 \r7AO\n
@@ -4668,7 +4665,7 @@ Zjz\v
 ] is not a JSON object.
 ],"subtype":
 ]1bO
-]c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1784
+]c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1181
 ^4MZ
 ^J_spY
 ^lX8k
@@ -5227,8 +5224,6 @@ buffer_ctrl
 buffers
 build_chain
 buildingName
-built-in shader
-builtin
 bulgarian
 businessCategory
 by_file_ctrl
@@ -5264,13 +5259,14 @@ c2tnb431r1
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
+c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\strtools_public.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1102
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:769
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:2643
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3005
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3117
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1753
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:2682
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3044
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3156
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1150
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1417
 c=qx
@@ -5397,6 +5393,7 @@ check_name_constraints
 check_padding_md
 check_policy
 children
+chroma
 cipher
 cipher has no object identifier
 cipher initialisation error
@@ -6465,6 +6462,7 @@ fseek
 fsetpos
 fstat
 ftell
+full_stack
 fullname
 func(%lu)
 functionality not supported
@@ -7219,6 +7217,7 @@ jurisdictionL
 jurisdictionLocalityName
 jurisdictionST
 jurisdictionStateOrProvinceName
+k%X3!
 k22Vd22Vd
 k?KPm?
 kV!DA
@@ -7324,6 +7323,7 @@ lookup returned nothing
 lookup_certs_sk
 loop
 lpHP
+luma
 m>gh
 mC4\n
 mK1f
@@ -7649,6 +7649,7 @@ not suitable generator
 not supported for this key type
 notAfter
 notBefore
+not_foveated
 noticeNumbers
 notice_section
 noticenos
@@ -8044,9 +8045,6 @@ providesOffsetOverride
 proxyCertInfo
 proxyPolicy
 psC3
-ps_5_0
-ps_main
-ps_main_chroma
 pseudonym
 pss saltlen too small
 pt_br
@@ -8791,6 +8789,7 @@ tsa name mismatch
 tsa untrusted
 tst info setup error
 turkish
+two_by_two
 txTimeMS
 type
 type not compressed data
@@ -9092,8 +9091,6 @@ vrlink_room_setup
 vrlink_show_steamvr_setting
 vrlink_store
 vrwebui_dashboardactionstore
-vs_5_0
-vs_main
 w8i_q
 w?6r
 wF\ro
@@ -9259,10 +9256,13 @@ zy:HO
 {vrlink}/shaders/client_fov_override.vert
 {vrlink}/shaders/client_nf_override.frag
 {vrlink}/shaders/client_nf_override.vert
-{vrlink}/shaders/clock.hlsl
 {vrlink}/shaders/cursor.frag
 {vrlink}/shaders/cursor.vert
-{vrlink}/shaders/genforencode.hlsl
+{vrlink}/shaders/d3d11/clock_ps_chroma.fxo
+{vrlink}/shaders/d3d11/clock_ps_luma.fxo
+{vrlink}/shaders/d3d11/clock_vs.fxo
+{vrlink}/shaders/d3d11/genforencode_ps_%s_%s.fxo
+{vrlink}/shaders/d3d11/genforencode_vs.fxo
 {vrlink}/shaders/override_shader_params.json
 |<C!FReQ
 |sG2

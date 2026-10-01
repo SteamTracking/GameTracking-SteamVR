@@ -294,7 +294,7 @@ Out of thread local storage!\n
 Parsing of JSON file "%s" failed: %s\n
 PeekNamedPipe
 QueryPerformanceCounter
-RSDS
+RSDS3
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

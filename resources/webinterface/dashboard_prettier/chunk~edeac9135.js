@@ -1,4 +1,4 @@
-var CLSTAMP = "11023671";
+var CLSTAMP = "11065908";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [906, 458],
   {
@@ -451,6 +451,7 @@ var CLSTAMP = "11023671";
                     : S.bCanTakeKeyboardFocus) ||
               void 0 === v ||
               v),
+            (y.properties["focus-target-sgid"] = this.props.focus_target_sgid),
             [D, y]
           );
         }

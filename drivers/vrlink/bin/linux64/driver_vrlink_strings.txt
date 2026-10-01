@@ -194,9 +194,9 @@ $ORIGIN/../../../../bin/linux64
 /data/src/common/vrcore/src/vripcsharedstate.cpp
 /data/src/vrlink/common/SVLFEC.cpp:1102
 /data/src/vrlink/common/SVLFEC.cpp:769
-/data/src/vrlink/driver_vrlink/hmd.cpp:2643
-/data/src/vrlink/driver_vrlink/hmd.cpp:3005
-/data/src/vrlink/driver_vrlink/hmd.cpp:3117
+/data/src/vrlink/driver_vrlink/hmd.cpp:2682
+/data/src/vrlink/driver_vrlink/hmd.cpp:3044
+/data/src/vrlink/driver_vrlink/hmd.cpp:3156
 /data/src/vrlink/driver_vrlink/hmdvulkan.cpp
 /data/src/vrlink/driver_vrlink/steamvrlink.cpp
 /data/src/vrlink/driver_vrlink/videovulkan.cpp
@@ -809,14 +809,14 @@ IVRDisplayComponent_003
 IVRDriverDirectInternal_XXX
 IVRDriverDirectModeComponent_009
 IVRDriverInputInternal_XXX
-IVRDriverInput_004
+IVRDriverInput_005
 IVRDriverLog_001
 IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRIPCResourceManagerClient_004
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -1091,6 +1091,7 @@ Ran out of IPC SharedObjectManager entries!\n
 Received frame outside of backtrack window.  Resetting.\n
 ReceivedHMDStaticProps. Model Number: %s, Serial Number: %s (%d)
 Release
+Reloading shaders
 RenderModelName %s\n
 ReqEncMode
 Request to create shared vulkan image failed: format=%u dimensions=%ux%u\n
@@ -1531,6 +1532,7 @@ Warning: Trying to set a height (%d) that is higher than the max (%d). Setting t
 Warning: Trying to set a width (%d) that is higher than the max (%d). Setting to max instead.\n
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
+Warning: packet received with wrong identifier. Expected 0x02...... got: %08x (Size=%d)
 Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
 Warning: res field incorrect [clear mode] %04x\n
@@ -3831,8 +3833,8 @@ znear
 {vrlink}/shaders/client_nf_override.vert
 {vrlink}/shaders/cursor.frag
 {vrlink}/shaders/cursor.vert
-{vrlink}/shaders/genforencode_comp_chroma.spv
-{vrlink}/shaders/genforencode_comp_luma.spv
-{vrlink}/shaders/genforencode_comp_rgb.spv
 {vrlink}/shaders/override_shader_params.json
+{vrlink}/shaders/vulkan/genforencode_cs_chroma.spv
+{vrlink}/shaders/vulkan/genforencode_cs_luma.spv
+{vrlink}/shaders/vulkan/genforencode_cs_rgb.spv
 ~%d~%d~%d,%d,%d~~~~

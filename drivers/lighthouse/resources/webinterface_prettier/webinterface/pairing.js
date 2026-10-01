@@ -1,4 +1,4 @@
-var CLSTAMP = "11023671";
+var CLSTAMP = "11065908";
 (() => {
   var e,
     t = {
@@ -3249,6 +3249,8 @@ var CLSTAMP = "11023671";
                       : p.bCanTakeKeyboardFocus) ||
                 void 0 === h ||
                 h),
+              (_.properties["focus-target-sgid"] =
+                this.props.focus_target_sgid),
               [g, _]
             );
           }
@@ -22166,6 +22168,9 @@ var CLSTAMP = "11023671";
               ? void 0
               : t.supported_rates;
           }
+          get defaultPerAppRefreshRateValue() {
+            return j_.settings.get(ri) || j_.settings.get(ai);
+          }
           PadResolution(e) {
             const t = this.supersampleScalePixelsStep || 4;
             return Math.trunc(e / t) * t;
@@ -22394,6 +22399,12 @@ var CLSTAMP = "11023671";
           (0, r.Cg)([h.computed], Mc.prototype, "actualRefreshRate", null),
           (0, r.Cg)([h.computed], Mc.prototype, "refreshRatesAvailable", null),
           (0, r.Cg)(
+            [h.computed],
+            Mc.prototype,
+            "defaultPerAppRefreshRateValue",
+            null,
+          ),
+          (0, r.Cg)(
             [h.action],
             Mc.prototype,
             "setSupersampleManualOverride",
@@ -22456,7 +22467,7 @@ var CLSTAMP = "11023671";
         const wc = new Mc();
         function Ec(e, t) {
           var n;
-          const r = j_.settings.get(ri);
+          const r = wc.defaultPerAppRefreshRateValue;
           return (null == t ? void 0 : t.length) &&
             e !== r &&
             null !== (n = t[Math.floor(t.length / 2)]) &&
@@ -22502,7 +22513,7 @@ var CLSTAMP = "11023671";
                         (this.displayRate =
                           t.preferred_refresh_rate > 0
                             ? t.preferred_refresh_rate
-                            : j_.settings.get(ri)),
+                            : wc.defaultPerAppRefreshRateValue),
                           this.SetFramesToThrottle(t.throttling),
                           (this.fixedThrottling =
                             void 0 !== t.throttling || void 0 !== t.prediction),
@@ -22549,12 +22560,11 @@ var CLSTAMP = "11023671";
               : Ec(this.frameLimit, e);
           }
           RestoreDefaultDisplayRate() {
-            const e = j_.settings.get(ri);
-            this.displayRate = e > 0 ? e : j_.settings.get(ai);
-            const t = Math.round(this.displayRate / this.frameLimit);
+            this.displayRate = wc.defaultPerAppRefreshRateValue;
+            const e = Math.round(this.displayRate / this.frameLimit);
             this.SetFramesToThrottle(
-              Math.round(this.frameLimit * t) === Math.round(this.displayRate)
-                ? t - 1
+              Math.round(this.frameLimit * e) === Math.round(this.displayRate)
+                ? e - 1
                 : 0,
             );
           }
@@ -32321,6 +32331,7 @@ var CLSTAMP = "11023671";
                     curvature_origin_id: this.props.curvature_origin_id,
                     width: this.props.width,
                     panelRef: this.m_panelRef,
+                    focus_target_sgid: this.props.focus_target_sgid,
                   }),
                 ),
               ),
@@ -32355,6 +32366,7 @@ var CLSTAMP = "11023671";
               ref: e.panelRef,
               scrollable: !0,
               explicitSGID: e.explicitSGID,
+              focus_target_sgid: e.focus_target_sgid,
             },
             i.createElement(
               Va,
@@ -38267,6 +38279,7 @@ var CLSTAMP = "11023671";
                           debug_name: "ResizeHandle",
                           hide_lasermouse_when_clicking: !0,
                           explicitSGID: this.m_grabHandleSGID,
+                          focus_target_sgid: this.props.focus_target_sgid,
                         },
                         i.createElement(
                           Va,
@@ -38296,29 +38309,34 @@ var CLSTAMP = "11023671";
           (0, r.Cg)([g], Sp.prototype, "endResize", null),
           (Sp = (0, r.Cg)([o.PA], Sp));
         const bp = (0, o.PA)(function (e) {
-          var t, n;
-          const { frame: r } = Zt(),
-            a =
-              null === (t = null == r ? void 0 : r.activePage) || void 0 === t
+          var t, n, r;
+          const { frame: a } = Zt(),
+            o =
+              null === (t = null == a ? void 0 : a.activePage) || void 0 === t
                 ? void 0
                 : t.mainPanelID;
-          return null == a
+          return null == o
             ? null
             : i.createElement(
                 Ft,
                 {
                   parent_id:
-                    null === (n = null == r ? void 0 : r.activePage) ||
+                    null === (n = null == a ? void 0 : a.activePage) ||
                     void 0 === n
                       ? void 0
                       : n.GetPanelAnchorID(Xt.BottomRight),
                 },
                 i.createElement(Sp, {
-                  id: a + ".ResizeHandle",
-                  target_id: a,
+                  id: o + ".ResizeHandle",
+                  target_id: o,
                   scale:
-                    0.5 * (null == r ? void 0 : r.size.scaleForBottomControls),
+                    0.5 * (null == a ? void 0 : a.size.scaleForBottomControls),
                   tint: Fh.GrabHandleTint,
+                  focus_target_sgid:
+                    null === (r = null == a ? void 0 : a.activePage) ||
+                    void 0 === r
+                      ? void 0
+                      : r.mainPanelSGID,
                 }),
               );
         });
@@ -41827,35 +41845,35 @@ var CLSTAMP = "11023671";
               e.docking && e.docking.SetJustFloatedFromDashboard(!1);
           }
           renderTheaterFrame() {
-            var e, t, n, r, a, o, s;
-            const l = this.props.frame,
-              c =
-                null === (e = null == l ? void 0 : l.activePage) || void 0 === e
+            var e, t, n, r, a, o, s, l;
+            const c = this.props.frame,
+              d =
+                null === (e = null == c ? void 0 : c.activePage) || void 0 === e
                   ? void 0
                   : e.mainPanelID,
-              d =
+              u =
                 null !==
                   (t = j_.settings.get(
                     "/settings/dashboard/enableLTCReflections",
                   )) &&
                 void 0 !== t &&
                 t,
-              u = c && !Fh.isGroupMode && Fh.isDarkMode && d,
-              m =
+              m = d && !Fh.isGroupMode && Fh.isDarkMode && u,
+              p =
                 null !==
                   (n = j_.settings.get(
                     "/settings/dashboard/theaterModeReflection",
                   )) && void 0 !== n
                   ? n
                   : 0.5,
-              p = 0.5 * Math.pow(m, 2.2),
-              h =
+              h = 0.5 * Math.pow(p, 2.2),
+              g =
                 0.5 *
                 (null !==
                   (o =
                     null ===
                       (a =
-                        null === (r = null == l ? void 0 : l.activePage) ||
+                        null === (r = null == c ? void 0 : c.activePage) ||
                         void 0 === r
                           ? void 0
                           : r.size) || void 0 === a
@@ -41864,7 +41882,7 @@ var CLSTAMP = "11023671";
                   ? o
                   : 0);
             return (
-              null === (s = null == l ? void 0 : l.activePage) || void 0 === s
+              null === (s = null == c ? void 0 : c.activePage) || void 0 === s
                 ? void 0
                 : s.latestContentSize
             )
@@ -41873,7 +41891,7 @@ var CLSTAMP = "11023671";
                   null,
                   i.createElement(
                     pp,
-                    { frame_id: l.frameID },
+                    { frame_id: c.frameID },
                     i.createElement(
                       Ft,
                       { parent_path: void 0 },
@@ -41885,7 +41903,7 @@ var CLSTAMP = "11023671";
                         },
                         i.createElement(
                           Ft,
-                          { translation: { y: h } },
+                          { translation: { y: g } },
                           i.createElement(
                             _u,
                             {
@@ -41900,13 +41918,13 @@ var CLSTAMP = "11023671";
                             },
                             i.createElement(
                               Ft,
-                              { translation: { y: -1 * h } },
-                              u &&
+                              { translation: { y: -1 * g } },
+                              m &&
                                 i.createElement(_n, {
-                                  target_id: c,
+                                  target_id: d,
                                   "near-z": -0.1,
                                   "far-z": 0.1,
-                                  specular: { color: { r: p, g: p, b: p } },
+                                  specular: { color: { r: h, g: h, b: h } },
                                   diffuse: { size: 20, resolution: 512 },
                                   debug: !1,
                                 }),
@@ -41915,15 +41933,19 @@ var CLSTAMP = "11023671";
                               i.createElement(
                                 Ft,
                                 {
-                                  parent_id: l.frameControlsTransformID,
+                                  parent_id: c.frameControlsTransformID,
                                   translation: { z: -0.005, y: -0.28 },
                                 },
                                 i.createElement(bu, {
                                   tint: Fh.GrabHandleTint,
                                   curvature_origin_id:
-                                    l.curvature.curvatureTransformOriginID,
+                                    c.curvature.curvatureTransformOriginID,
                                   scale: 2,
                                   width: 350,
+                                  focus_target_sgid:
+                                    null === (l = c.activePage) || void 0 === l
+                                      ? void 0
+                                      : l.mainPanelSGID,
                                 }),
                               ),
                             ),
@@ -41936,44 +41958,45 @@ var CLSTAMP = "11023671";
               : null;
           }
           renderFloatingFrame() {
-            const e = this.props.frame,
-              t = e.docking.dockLocation;
-            let n,
-              r,
-              a = this.state.xfTransform,
-              o = this.state.sParentDevice,
-              s = !0;
+            var e;
+            const t = this.props.frame,
+              n = t.docking.dockLocation;
+            let r,
+              a,
+              o = this.state.xfTransform,
+              s = this.state.sParentDevice,
+              l = !0;
             return (
-              e.docking.beingDragged &&
+              t.docking.beingDragged &&
                 this.state.dragSnapPreview.location == ie.Dashboard &&
-                ((a = void 0),
-                (o = void 0),
-                (n = Uh.GetDockLocationTransformID(ie.Dashboard)),
-                (s = !1)),
-              null != (null == a ? void 0 : a.translation) &&
-                (r = N(null == a ? void 0 : a.translation)),
+                ((o = void 0),
+                (s = void 0),
+                (r = Uh.GetDockLocationTransformID(ie.Dashboard)),
+                (l = !1)),
+              null != (null == o ? void 0 : o.translation) &&
+                (a = N(null == o ? void 0 : o.translation)),
               i.createElement(
                 Ht,
                 null,
                 i.createElement(
                   pp,
-                  { frame_id: e.frameID },
+                  { frame_id: t.frameID },
                   i.createElement(
                     Ft,
                     {
-                      parent_path: o,
-                      parent_id: n,
-                      transform: a,
+                      parent_path: s,
+                      parent_id: r,
+                      transform: o,
                       id: this.m_sUnpushedOriginID,
                     },
                     i.createElement(
                       wn,
                       {
-                        is_active: s,
-                        event_panel_sgid: e.docking.beingDragged
+                        is_active: l,
+                        event_panel_sgid: t.docking.beingDragged
                           ? this.m_grabHandleSGID
                           : void 0,
-                        base_distance: r,
+                        base_distance: a,
                         min_distance: 0.25,
                         max_distance: 5,
                         scroll_speed: 10,
@@ -41981,23 +42004,27 @@ var CLSTAMP = "11023671";
                       },
                       i.createElement(Ft, { id: this.m_sPushedOriginID }),
                       i.createElement(Mm, {
-                        dockLocation: t,
-                        forFrameID: e.frameID,
+                        dockLocation: n,
+                        forFrameID: t.frameID,
                       }),
                       i.createElement(
                         Ft,
                         {
-                          parent_id: e.frameControlsTransformID,
+                          parent_id: t.frameControlsTransformID,
                           translation: vh,
                           id: this.m_sDragSnapLineOriginID,
                         },
                         i.createElement(yu, {
                           onMouseDown: this.startFloatingWindowMove,
                           onMouseUp: this.endFloatingWindowMove,
-                          active: e.docking.beingDragged,
+                          active: t.docking.beingDragged,
                           width: 350,
                           uniformScale: 1.3,
                           explicitSGID: this.m_grabHandleSGID,
+                          focus_target_sgid:
+                            null === (e = t.activePage) || void 0 === e
+                              ? void 0
+                              : e.mainPanelSGID,
                         }),
                       ),
                     ),
@@ -45134,7 +45161,7 @@ var CLSTAMP = "11023671";
                 ? void 0
                 : e.call(VRHTML)) + "",
             ),
-              n.set_webpack_build_timestamp(1790100414);
+              n.set_webpack_build_timestamp(1790821588);
             const r =
               null ===
                 (t =
@@ -49393,7 +49420,7 @@ var CLSTAMP = "11023671";
             }),
             i.createElement(os, {
               label: d("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1790100414e3).toLocaleString() + "",
+              value: new Date(1790821588e3).toLocaleString() + "",
             }),
             i.createElement(os, {
               label: d("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -49485,6 +49512,15 @@ var CLSTAMP = "11023671";
                       { value: q.Eye_Right, sLabel: d("#Settings_EyeRight") },
                     ],
                   }),
+                  vg.m_bSupportsEyeTracking &&
+                    i.createElement(ls, {
+                      name: "/settings/steamvr/eyeTrackingDominantEyeOnly",
+                      label: d("#Settings_EyeTrackingDominantEyeOnly"),
+                      explainer: d(
+                        "#Settings_EyeTrackingDominantEyeOnly_Explainer",
+                      ),
+                      visibility: Xo.Advanced,
+                    }),
                   VRHTML.VRMonitor.HasVRMonitor() &&
                     i.createElement(
                       ts,

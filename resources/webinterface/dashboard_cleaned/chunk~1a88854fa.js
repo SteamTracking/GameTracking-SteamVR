@@ -423,6 +423,7 @@ var CLSTAMP = "steamdb";
                     : _.bCanTakeKeyboardFocus) ||
               void 0 === _ ||
               _),
+            (_.properties["focus-target-sgid"] = this.props.focus_target_sgid),
             [_, _]
           );
         }

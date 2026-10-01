@@ -132,7 +132,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-11:16:42
+19:25:56
 1e+9999
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -317,7 +317,7 @@ IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -372,7 +372,7 @@ ProcessVREvents
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS
+RSDS\t;
 RaiseException
 ReadFile
 RealMain
@@ -417,7 +417,7 @@ STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 See 
 Sending device changed event.\n
-Sep 22 2026
+Sep 30 2026
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW

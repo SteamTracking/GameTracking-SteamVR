@@ -321,6 +321,26 @@
     {
       "app_key": "steam.app.2897700",
       "binding_url": "arizona_sunshine_vr_remake_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.587470",
+      "binding_url": "chromalab_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.502820",
+      "binding_url": "batman_arkham_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.927270",
+      "binding_url": "accountingplus_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.577530",
+      "binding_url": "pixelripped1989_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.1178140",
+      "binding_url": "pixelripped1995_bindings_frame_controller.json"
     }
   ]
 }

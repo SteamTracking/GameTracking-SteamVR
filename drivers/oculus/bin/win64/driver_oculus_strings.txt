@@ -585,14 +585,14 @@ IVRDisplayComponent_003
 IVRDriverDirectInternal_XXX
 IVRDriverDirectModeComponent_009
 IVRDriverInputInternal_XXX
-IVRDriverInput_004
+IVRDriverInput_005
 IVRDriverLog_001
 IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRIPCResourceManagerClient_004
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX

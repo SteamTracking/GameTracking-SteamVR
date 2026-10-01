@@ -607,7 +607,7 @@ IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVRNotifications_002
@@ -905,7 +905,7 @@ PropertyContainer: High lock acquisition counters: sp:%u yd:%u re:%u\n
 PropertyContainerCreation
 QueryPerformanceCounter
 QueryPerformanceFrequency
-RSDSo2
+RSDS
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

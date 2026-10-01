@@ -1,0 +1,264 @@
+{
+   "bindings" : {
+      "/actions/default" : {
+         "chords" : [],
+         "haptics" : [
+            {
+               "output" : "/actions/default/out/haptics",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/default/out/haptics",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
+         "poses" : [],
+         "skeleton" : [],
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/lefttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/lefttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/bumper"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/recenter"
+                  },
+                  "position" : {
+                     "output" : "/actions/default/in/movement"
+                  }
+               },
+               "mode" : "joystick",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/lefttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/dpad_down"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/leftgrip"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {
+                  "click_activate_threshold" : "0.75",
+                  "click_deactivate_threshold" : "0.2",
+                  "force_input" : "force",
+                  "haptic_amplitude" : "0.3",
+                  "touchy_click" : "false"
+               },
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/bumper"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/rightgrip"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {
+                  "click_activate_threshold" : "0.75",
+                  "click_deactivate_threshold" : "0.2",
+                  "force_input" : "force",
+                  "haptic_amplitude" : "0.3",
+                  "touchy_click" : "false"
+               },
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/pause"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/dpad_left"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/pause"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/dpad_right"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/pause"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/dpad_up"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/attackreturn"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/b"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/attackreturn"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/x"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/attackreturn"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/y"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/b"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/x"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/y"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/jumpaccept"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttriggeraction"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/lefttrackpad"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/righttrackpad"
+                  }
+               },
+               "mode" : "button",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/recenter"
+                  }
+               },
+               "mode" : "joystick",
+               "parameters" : {},
+               "path" : "/user/hand/right/input/thumbstick"
+            }
+         ]
+      }
+   },
+   "controller_type" : "frame_controller",
+   "description" : "(simulating Valve Index)",
+   "name" : "Recommended Steam Frame Controller bindings",
+   "options" : {
+      "simulate_hmd" : true,
+      "simulate_rendermodel" : "name_only",
+      "simulated_controller_type" : "knuckles"
+   }
+}

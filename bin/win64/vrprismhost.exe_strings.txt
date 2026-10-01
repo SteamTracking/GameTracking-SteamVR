@@ -153,7 +153,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-11:16:42
+19:25:56
 1e+9999
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -366,7 +366,7 @@ IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -522,7 +522,7 @@ STEAMVR_DISABLE_CRASH_REPORTING
 STEAMVR_DISABLE_THREAD_WATCHDOGS
 STEAMVR_ENABLE_THREAD_WATCHDOGS
 See 
-Sep 22 2026
+Sep 30 2026
 ServerConnectionFailed
 ServiceConnectMessageFailed
 SetEnvironmentVariableA

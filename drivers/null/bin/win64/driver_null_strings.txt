@@ -108,7 +108,7 @@ KERNEL32.dll
 LeaveCriticalSection
 MSVCP140.dll
 QueryPerformanceCounter
-RSDSvx
+RSDS
 ResetEvent
 RtlCaptureContext
 RtlLookupFunctionEntry

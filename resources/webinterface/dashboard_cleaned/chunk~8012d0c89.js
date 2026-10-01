@@ -8591,7 +8591,7 @@ var CLSTAMP = "steamdb";
           }),
           _.createElement(_._, {
             label: (0, _._)("#Settings_VersionInfo_WebpackBuildTime"),
-            value: new Date(1790100414e3).toLocaleString() + "",
+            value: new Date(1790821588e3).toLocaleString() + "",
           }),
           _.createElement(_._, {
             label: (0, _._)("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -8705,6 +8705,15 @@ var CLSTAMP = "steamdb";
                     },
                   ],
                 }),
+                _._.m_bSupportsEyeTracking &&
+                  _.createElement(_._, {
+                    name: _._,
+                    label: (0, _._)("#Settings_EyeTrackingDominantEyeOnly"),
+                    explainer: (0, _._)(
+                      "#Settings_EyeTrackingDominantEyeOnly_Explainer",
+                    ),
+                    visibility: _._.Advanced,
+                  }),
                 VRHTML.VRMonitor.HasVRMonitor() &&
                   _.createElement(
                     _._,
@@ -15960,7 +15969,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         var _;
-        const _ = _._.settings.get(_._);
+        const _ = _._.defaultPerAppRefreshRateValue;
         return (null == _ ? void 0 : _.length) &&
           _ !== _ &&
           null !== (_ = _[Math.floor(_.length / 2)]) &&
@@ -16004,7 +16013,7 @@ var CLSTAMP = "steamdb";
                       (this.displayRate =
                         _.preferred_refresh_rate > 0
                           ? _.preferred_refresh_rate
-                          : _._.settings.get(_._)),
+                          : _._.defaultPerAppRefreshRateValue),
                         this.SetFramesToThrottle(_.throttling),
                         (this.fixedThrottling =
                           void 0 !== _.throttling || void 0 !== _.prediction),
@@ -16050,8 +16059,7 @@ var CLSTAMP = "steamdb";
             : _(this.frameLimit, _);
         }
         RestoreDefaultDisplayRate() {
-          const _ = _._.settings.get(_._);
-          this.displayRate = _ > 0 ? _ : _._.settings.get(_._);
+          this.displayRate = _._.defaultPerAppRefreshRateValue;
           const _ = Math.round(this.displayRate / this.frameLimit);
           this.SetFramesToThrottle(
             Math.round(this.frameLimit * _) === Math.round(this.displayRate)
@@ -21949,6 +21957,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = "openvr.tool.steamvr_environments",
         _ = "system.generated.steam.exe",
@@ -22046,6 +22055,7 @@ var CLSTAMP = "steamdb";
         _ = "/settings/steamvr/auroraPalette",
         _ = "/settings/steamvr/auroraUserColor",
         _ = "/settings/steamvr/allowEyeTracking",
+        _ = "/settings/steamvr/eyeTrackingDominantEyeOnly",
         _ = "/settings/dashboard/expectSteam",
         _ = "/settings/dashboard/allowLegacyControlBar",
         _ = "/settings/openxr/metaUnityPluginCompatibility",
@@ -27821,6 +27831,7 @@ var CLSTAMP = "steamdb";
                         debug_name: "ResizeHandle",
                         hide_lasermouse_when_clicking: !0,
                         explicitSGID: this.m_grabHandleSGID,
+                        focus_target_sgid: this.props.focus_target_sgid,
                       },
                       _.createElement(
                         _._,
@@ -27852,7 +27863,7 @@ var CLSTAMP = "steamdb";
         (0, _._)([_._], _.prototype, "endResize", null),
         (_ = (0, _._)([_._], _));
       const _ = (0, _._)(function (_) {
-        var _, _;
+        var _, _, _;
         const { frame: _ } = (0, _._)(),
           _ =
             null === (_ = null == _ ? void 0 : _.activePage) || void 0 === _
@@ -27875,6 +27886,11 @@ var CLSTAMP = "steamdb";
                 scale:
                   0.5 * (null == _ ? void 0 : _.size.scaleForBottomControls),
                 tint: _._.GrabHandleTint,
+                focus_target_sgid:
+                  null === (_ = null == _ ? void 0 : _.activePage) ||
+                  void 0 === _
+                    ? void 0
+                    : _.mainPanelSGID,
               }),
             );
       });
@@ -29251,6 +29267,9 @@ var CLSTAMP = "steamdb";
             ? void 0
             : _.supported_rates;
         }
+        get defaultPerAppRefreshRateValue() {
+          return _._.settings.get(_._) || _._.settings.get(_._);
+        }
         PadResolution(_) {
           const _ = this.supersampleScalePixelsStep || 4;
           return Math.trunc(_ / _) * _;
@@ -29453,6 +29472,12 @@ var CLSTAMP = "steamdb";
         (0, _._)([_.computed], _.prototype, "refreshRateValue", null),
         (0, _._)([_.computed], _.prototype, "actualRefreshRate", null),
         (0, _._)([_.computed], _.prototype, "refreshRatesAvailable", null),
+        (0, _._)(
+          [_.computed],
+          _.prototype,
+          "defaultPerAppRefreshRateValue",
+          null,
+        ),
         (0, _._)([_.action], _.prototype, "setSupersampleManualOverride", null),
         (0, _._)([_.action], _.prototype, "setSupersampleScaleValue", null),
         (0, _._)([_.computed], _.prototype, "supersampleManualOverride", null),
@@ -30295,6 +30320,7 @@ var CLSTAMP = "steamdb";
                   curvature_origin_id: this.props.curvature_origin_id,
                   width: this.props.width,
                   panelRef: this.m_panelRef,
+                  focus_target_sgid: this.props.focus_target_sgid,
                 }),
               ),
             ),
@@ -30331,6 +30357,7 @@ var CLSTAMP = "steamdb";
             ref: _.panelRef,
             scrollable: !0,
             explicitSGID: _.explicitSGID,
+            focus_target_sgid: _.focus_target_sgid,
           },
           _.createElement(
             _._,
@@ -33790,7 +33817,7 @@ var CLSTAMP = "steamdb";
             _.docking && _.docking.SetJustFloatedFromDashboard(!1);
         }
         renderTheaterFrame() {
-          var _, _, _, _, _, _, _;
+          var _, _, _, _, _, _, _, _;
           const _ = this.props.frame,
             _ =
               null === (_ = null == _ ? void 0 : _.activePage) || void 0 === _
@@ -33884,7 +33911,7 @@ var CLSTAMP = "steamdb";
                                 specular: {
                                   color: {
                                     _: _,
-                                    _,
+                                    _: _,
                                     _: _,
                                   },
                                 },
@@ -33913,6 +33940,10 @@ var CLSTAMP = "steamdb";
                                   _.curvature.curvatureTransformOriginID,
                                 scale: 2,
                                 width: 350,
+                                focus_target_sgid:
+                                  null === (_ = _.activePage) || void 0 === _
+                                    ? void 0
+                                    : _.mainPanelSGID,
                               }),
                             ),
                           ),
@@ -33925,6 +33956,7 @@ var CLSTAMP = "steamdb";
             : null;
         }
         renderFloatingFrame() {
+          var _;
           const _ = this.props.frame,
             _ = _.docking.dockLocation;
           let _,
@@ -33991,6 +34023,10 @@ var CLSTAMP = "steamdb";
                         width: 350,
                         uniformScale: 1.3,
                         explicitSGID: this.m_grabHandleSGID,
+                        focus_target_sgid:
+                          null === (_ = _.activePage) || void 0 === _
+                            ? void 0
+                            : _.mainPanelSGID,
                       }),
                     ),
                   ),

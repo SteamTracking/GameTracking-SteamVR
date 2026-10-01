@@ -100,7 +100,7 @@ IVRCameraComponent_003
 IVRCompositorPluginProvider_001
 IVRDisplayComponent_003
 IVRDriverDirectModeComponent_009
-IVRDriverInput_004
+IVRDriverInput_005
 IVRDriverLog_001
 IVRDriverManager_001
 IVRIPCResourceManagerClient_004
@@ -121,7 +121,7 @@ MSVCP140.dll
 MainThrd
 Out of thread local storage!\n
 QueryPerformanceCounter
-RSDSMGe
+RSDS=
 RaiseException
 ResetEvent
 RtlCaptureContext

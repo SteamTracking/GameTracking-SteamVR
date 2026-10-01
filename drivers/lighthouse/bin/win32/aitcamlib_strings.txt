@@ -148,7 +148,6 @@ AITAPI_IspCommand
 AITAPI_MmpCommand
 AITAPI_OpenDeviceEx
 ASSERT: "%s" at %s:%d.\n
-A[9H"G
 Adobe
 AitH264Capture.dll
 AitUVCExtApi.dll
@@ -210,7 +209,7 @@ IVRDriverManager_001
 IVRExtendedDisplay_001
 IVRInputFocusInternal_XXX
 IVRInputInternal_002
-IVRInput_011
+IVRInput_012
 IVRMailbox_002
 IVRNotificationsInternal_001
 IVROverlayInternal_XXX
@@ -260,7 +259,7 @@ PermissionDenied
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDSZ
+RSDSd
 RaiseException
 Received camera frame of size %u that is larger than the block queue we are copying into %u
 ResetEvent

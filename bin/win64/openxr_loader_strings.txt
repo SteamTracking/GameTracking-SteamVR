@@ -282,7 +282,7 @@ OpenXR-Loader
 OutputDebugStringA
 PERF
 QueryPerformanceCounter
-RSDS
+RSDS1
 ReadLayerDataFilesInRegistry - failed to read registry location 
 ReadRuntimeDataFilesInRegistry - failed to open registry key 
 ReadRuntimeDataFilesInRegistry - failed to read registry value 
@@ -503,7 +503,6 @@ string too long
 strncmp
 strncpy
 strtoul
-tT>c.
 true
 ungetc
 unknown type in properties

@@ -1,4 +1,4 @@
-var CLSTAMP = "11023671";
+var CLSTAMP = "11065908";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [305],
   {
@@ -7758,7 +7758,7 @@ var CLSTAMP = "11023671";
           }),
           l.createElement(v.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_WebpackBuildTime"),
-            value: new Date(1790100414e3).toLocaleString() + "",
+            value: new Date(1790821588e3).toLocaleString() + "",
           }),
           l.createElement(v.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -7863,6 +7863,15 @@ var CLSTAMP = "11023671";
                     },
                   ],
                 }),
+                R.c.m_bSupportsEyeTracking &&
+                  l.createElement(v.Al, {
+                    name: m.WL,
+                    label: (0, p.we)("#Settings_EyeTrackingDominantEyeOnly"),
+                    explainer: (0, p.we)(
+                      "#Settings_EyeTrackingDominantEyeOnly_Explainer",
+                    ),
+                    visibility: v.Z3.Advanced,
+                  }),
                 VRHTML.VRMonitor.HasVRMonitor() &&
                   l.createElement(
                     v.YO,
@@ -14256,7 +14265,7 @@ var CLSTAMP = "11023671";
         S = r(5026);
       function y(e, t) {
         var r;
-        const n = g.HR.settings.get(m.H0);
+        const n = _.p.defaultPerAppRefreshRateValue;
         return (null == t ? void 0 : t.length) &&
           e !== n &&
           null !== (r = t[Math.floor(t.length / 2)]) &&
@@ -14300,7 +14309,7 @@ var CLSTAMP = "11023671";
                       (this.displayRate =
                         t.preferred_refresh_rate > 0
                           ? t.preferred_refresh_rate
-                          : g.HR.settings.get(m.H0)),
+                          : _.p.defaultPerAppRefreshRateValue),
                         this.SetFramesToThrottle(t.throttling),
                         (this.fixedThrottling =
                           void 0 !== t.throttling || void 0 !== t.prediction),
@@ -14346,12 +14355,11 @@ var CLSTAMP = "11023671";
             : y(this.frameLimit, e);
         }
         RestoreDefaultDisplayRate() {
-          const e = g.HR.settings.get(m.H0);
-          this.displayRate = e > 0 ? e : g.HR.settings.get(m.Lh);
-          const t = Math.round(this.displayRate / this.frameLimit);
+          this.displayRate = _.p.defaultPerAppRefreshRateValue;
+          const e = Math.round(this.displayRate / this.frameLimit);
           this.SetFramesToThrottle(
-            Math.round(this.frameLimit * t) === Math.round(this.displayRate)
-              ? t - 1
+            Math.round(this.frameLimit * e) === Math.round(this.displayRate)
+              ? e - 1
               : 0,
           );
         }
@@ -19696,17 +19704,17 @@ var CLSTAMP = "11023671";
     3606: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $Z: () => Qe,
+        $Z: () => Xe,
         A_: () => Te,
         Bf: () => ue,
         Bn: () => A,
         Bz: () => R,
         C6: () => B,
-        C_: () => ot,
+        C_: () => lt,
         D1: () => be,
-        E2: () => rt,
-        Ec: () => Xe,
-        El: () => Ze,
+        E2: () => nt,
+        Ec: () => Ye,
+        El: () => Qe,
         Eo: () => i,
         F2: () => oe,
         GM: () => se,
@@ -19721,23 +19729,23 @@ var CLSTAMP = "11023671";
         Ij: () => j,
         J5: () => Ee,
         Ju: () => me,
-        KP: () => je,
+        KP: () => Ke,
         Kh: () => g,
         Lh: () => Ve,
-        Lx: () => ut,
+        Lx: () => ct,
         M1: () => c,
         MM: () => p,
         NX: () => x,
         Ni: () => te,
         P: () => H,
         P0: () => ge,
-        Pi: () => Ye,
+        Pi: () => et,
         QV: () => K,
         Qv: () => P,
         Qz: () => Ae,
         R9: () => Le,
-        R_: () => Je,
-        SF: () => st,
+        R_: () => Ze,
+        SF: () => ot,
         So: () => V,
         Sx: () => v,
         TH: () => F,
@@ -19746,15 +19754,16 @@ var CLSTAMP = "11023671";
         Uv: () => M,
         Vq: () => $,
         Vv: () => ve,
-        Vz: () => at,
+        Vz: () => st,
+        WL: () => qe,
         WS: () => ne,
         Wm: () => D,
         Wq: () => Pe,
         Wt: () => T,
-        Ww: () => dt,
+        Ww: () => mt,
         XO: () => le,
         Y: () => ae,
-        Y8: () => nt,
+        Y8: () => it,
         Zw: () => E,
         _b: () => xe,
         _c: () => Ge,
@@ -19770,10 +19779,10 @@ var CLSTAMP = "11023671";
         gS: () => f,
         gs: () => o,
         hw: () => He,
-        i8: () => Ke,
+        i8: () => $e,
         iW: () => O,
         iZ: () => N,
-        iv: () => lt,
+        iv: () => ut,
         j5: () => ee,
         kk: () => m,
         kx: () => U,
@@ -19790,25 +19799,25 @@ var CLSTAMP = "11023671";
         q8: () => _e,
         qU: () => Ne,
         qf: () => q,
-        qt: () => qe,
+        qt: () => je,
         qx: () => l,
-        r4: () => tt,
+        r4: () => rt,
         rG: () => Re,
-        tX: () => it,
-        tZ: () => et,
+        tX: () => at,
+        tZ: () => tt,
         te: () => s,
         uB: () => de,
         ui: () => Me,
         uv: () => z,
         v0: () => h,
-        v_: () => ct,
+        v_: () => dt,
         w5: () => Y,
         wR: () => ie,
         wi: () => L,
         wt: () => X,
         xP: () => we,
         xY: () => pe,
-        x_: () => $e,
+        x_: () => Je,
         xz: () => Se,
         y5: () => he,
         yl: () => ye,
@@ -19910,27 +19919,28 @@ var CLSTAMP = "11023671";
         xe = "/settings/steamvr/auroraPalette",
         Ge = "/settings/steamvr/auroraUserColor",
         Ue = "/settings/steamvr/allowEyeTracking",
-        qe = "/settings/dashboard/expectSteam",
-        je = "/settings/dashboard/allowLegacyControlBar",
-        Ke = "/settings/openxr/metaUnityPluginCompatibility",
-        $e = "/settings/input/overlayFilteringEnabled",
-        Je = "/settings/input/overlayFilteringMinCutoff",
-        Ze = "/settings/input/overlayFilteringBeta",
-        Qe = "/settings/input/overlayFilteringDerivCutoff",
-        Xe = "/settings/input/overlayMagnetismEnabled",
-        Ye = "/settings/input/overlayMagnetismLockDistance",
-        et = "/settings/input/overlayMagnetismDeadZone",
-        tt = "/steam/websocketconnected",
-        rt = "/steam/oobe",
-        nt = "/steamvr/fakeoobe",
-        it = "/steam/locked",
-        at = "/steam/guidedtour",
-        st = "/settings/perfcheck/showPerfCriteriaSettings",
-        ot = "/settings/perfcheck/drawPerfCriteriaOverlay",
-        lt = "/settings/perfcheck/drawPerfCriteriaGameTextures",
-        ut = "/user/head",
-        ct = "/user/hand/left",
-        dt = "/user/hand/right";
+        qe = "/settings/steamvr/eyeTrackingDominantEyeOnly",
+        je = "/settings/dashboard/expectSteam",
+        Ke = "/settings/dashboard/allowLegacyControlBar",
+        $e = "/settings/openxr/metaUnityPluginCompatibility",
+        Je = "/settings/input/overlayFilteringEnabled",
+        Ze = "/settings/input/overlayFilteringMinCutoff",
+        Qe = "/settings/input/overlayFilteringBeta",
+        Xe = "/settings/input/overlayFilteringDerivCutoff",
+        Ye = "/settings/input/overlayMagnetismEnabled",
+        et = "/settings/input/overlayMagnetismLockDistance",
+        tt = "/settings/input/overlayMagnetismDeadZone",
+        rt = "/steam/websocketconnected",
+        nt = "/steam/oobe",
+        it = "/steamvr/fakeoobe",
+        at = "/steam/locked",
+        st = "/steam/guidedtour",
+        ot = "/settings/perfcheck/showPerfCriteriaSettings",
+        lt = "/settings/perfcheck/drawPerfCriteriaOverlay",
+        ut = "/settings/perfcheck/drawPerfCriteriaGameTextures",
+        ct = "/user/head",
+        dt = "/user/hand/left",
+        mt = "/user/hand/right";
     },
     2929: (e, t, r) => {
       "use strict";
@@ -25496,6 +25506,7 @@ var CLSTAMP = "11023671";
                         debug_name: "ResizeHandle",
                         hide_lasermouse_when_clicking: !0,
                         explicitSGID: this.m_grabHandleSGID,
+                        focus_target_sgid: this.props.focus_target_sgid,
                       },
                       i.createElement(
                         o.$,
@@ -25525,29 +25536,34 @@ var CLSTAMP = "11023671";
         (0, n.Cg)([a.o], g.prototype, "endResize", null),
         (g = (0, n.Cg)([s.PA], g));
       const v = (0, s.PA)(function (e) {
-        var t, r;
-        const { frame: n } = (0, d.N)(),
-          a =
-            null === (t = null == n ? void 0 : n.activePage) || void 0 === t
+        var t, r, n;
+        const { frame: a } = (0, d.N)(),
+          s =
+            null === (t = null == a ? void 0 : a.activePage) || void 0 === t
               ? void 0
               : t.mainPanelID;
-        return null == a
+        return null == s
           ? null
           : i.createElement(
               u.dLy,
               {
                 parent_id:
-                  null === (r = null == n ? void 0 : n.activePage) ||
+                  null === (r = null == a ? void 0 : a.activePage) ||
                   void 0 === r
                     ? void 0
                     : r.GetPanelAnchorID(u.OiK.BottomRight),
               },
               i.createElement(g, {
-                id: a + ".ResizeHandle",
-                target_id: a,
+                id: s + ".ResizeHandle",
+                target_id: s,
                 scale:
-                  0.5 * (null == n ? void 0 : n.size.scaleForBottomControls),
+                  0.5 * (null == a ? void 0 : a.size.scaleForBottomControls),
                 tint: c.SW.GrabHandleTint,
+                focus_target_sgid:
+                  null === (n = null == a ? void 0 : a.activePage) ||
+                  void 0 === n
+                    ? void 0
+                    : n.mainPanelSGID,
               }),
             );
       });
@@ -26906,6 +26922,9 @@ var CLSTAMP = "11023671";
             ? void 0
             : t.supported_rates;
         }
+        get defaultPerAppRefreshRateValue() {
+          return a.HR.settings.get(u.H0) || a.HR.settings.get(u.Lh);
+        }
         PadResolution(e) {
           const t = this.supersampleScalePixelsStep || 4;
           return Math.trunc(e / t) * t;
@@ -27108,6 +27127,12 @@ var CLSTAMP = "11023671";
         (0, n.Cg)([i.computed], h.prototype, "refreshRateValue", null),
         (0, n.Cg)([i.computed], h.prototype, "actualRefreshRate", null),
         (0, n.Cg)([i.computed], h.prototype, "refreshRatesAvailable", null),
+        (0, n.Cg)(
+          [i.computed],
+          h.prototype,
+          "defaultPerAppRefreshRateValue",
+          null,
+        ),
         (0, n.Cg)(
           [i.action],
           h.prototype,
@@ -27890,6 +27915,7 @@ var CLSTAMP = "11023671";
                   curvature_origin_id: this.props.curvature_origin_id,
                   width: this.props.width,
                   panelRef: this.m_panelRef,
+                  focus_target_sgid: this.props.focus_target_sgid,
                 }),
               ),
             ),
@@ -27924,6 +27950,7 @@ var CLSTAMP = "11023671";
             ref: e.panelRef,
             scrollable: !0,
             explicitSGID: e.explicitSGID,
+            focus_target_sgid: e.focus_target_sgid,
           },
           o.createElement(
             l.$,
@@ -31012,35 +31039,35 @@ var CLSTAMP = "11023671";
             e.docking && e.docking.SetJustFloatedFromDashboard(!1);
         }
         renderTheaterFrame() {
-          var e, t, r, n, a, s, l;
-          const u = this.props.frame,
-            c =
-              null === (e = null == u ? void 0 : u.activePage) || void 0 === e
+          var e, t, r, n, a, s, l, u;
+          const c = this.props.frame,
+            m =
+              null === (e = null == c ? void 0 : c.activePage) || void 0 === e
                 ? void 0
                 : e.mainPanelID,
-            m =
+            p =
               null !==
                 (t = _.HR.settings.get(
                   "/settings/dashboard/enableLTCReflections",
                 )) &&
               void 0 !== t &&
               t,
-            p = c && !d.SW.isGroupMode && d.SW.isDarkMode && m,
-            h =
+            h = m && !d.SW.isGroupMode && d.SW.isDarkMode && p,
+            g =
               null !==
                 (r = _.HR.settings.get(
                   "/settings/dashboard/theaterModeReflection",
                 )) && void 0 !== r
                 ? r
                 : 0.5,
-            g = 0.5 * Math.pow(h, 2.2),
-            v =
+            v = 0.5 * Math.pow(g, 2.2),
+            b =
               0.5 *
               (null !==
                 (s =
                   null ===
                     (a =
-                      null === (n = null == u ? void 0 : u.activePage) ||
+                      null === (n = null == c ? void 0 : c.activePage) ||
                       void 0 === n
                         ? void 0
                         : n.size) || void 0 === a
@@ -31049,7 +31076,7 @@ var CLSTAMP = "11023671";
                 ? s
                 : 0);
           return (
-            null === (l = null == u ? void 0 : u.activePage) || void 0 === l
+            null === (l = null == c ? void 0 : c.activePage) || void 0 === l
               ? void 0
               : l.latestContentSize
           )
@@ -31058,7 +31085,7 @@ var CLSTAMP = "11023671";
                 null,
                 o.createElement(
                   ht.w,
-                  { frame_id: u.frameID },
+                  { frame_id: c.frameID },
                   o.createElement(
                     i.dLy,
                     { parent_path: void 0 },
@@ -31070,7 +31097,7 @@ var CLSTAMP = "11023671";
                       },
                       o.createElement(
                         i.dLy,
-                        { translation: { y: v } },
+                        { translation: { y: b } },
                         o.createElement(
                           F,
                           {
@@ -31085,13 +31112,13 @@ var CLSTAMP = "11023671";
                           },
                           o.createElement(
                             i.dLy,
-                            { translation: { y: -1 * v } },
-                            p &&
+                            { translation: { y: -1 * b } },
+                            h &&
                               o.createElement(i.lqd, {
-                                target_id: c,
+                                target_id: m,
                                 "near-z": -0.1,
                                 "far-z": 0.1,
-                                specular: { color: { r: g, g, b: g } },
+                                specular: { color: { r: v, g: v, b: v } },
                                 diffuse: { size: 20, resolution: 512 },
                                 debug: !1,
                               }),
@@ -31102,15 +31129,19 @@ var CLSTAMP = "11023671";
                             o.createElement(
                               i.dLy,
                               {
-                                parent_id: u.frameControlsTransformID,
+                                parent_id: c.frameControlsTransformID,
                                 translation: { z: -0.005, y: -0.28 },
                               },
                               o.createElement(N, {
                                 tint: d.SW.GrabHandleTint,
                                 curvature_origin_id:
-                                  u.curvature.curvatureTransformOriginID,
+                                  c.curvature.curvatureTransformOriginID,
                                 scale: 2,
                                 width: 350,
+                                focus_target_sgid:
+                                  null === (u = c.activePage) || void 0 === u
+                                    ? void 0
+                                    : u.mainPanelSGID,
                               }),
                             ),
                           ),
@@ -31123,44 +31154,45 @@ var CLSTAMP = "11023671";
             : null;
         }
         renderFloatingFrame() {
-          const e = this.props.frame,
-            t = e.docking.dockLocation;
-          let r,
-            n,
-            a = this.state.xfTransform,
-            s = this.state.sParentDevice,
-            l = !0;
+          var e;
+          const t = this.props.frame,
+            r = t.docking.dockLocation;
+          let n,
+            a,
+            s = this.state.xfTransform,
+            l = this.state.sParentDevice,
+            u = !0;
           return (
-            e.docking.beingDragged &&
+            t.docking.beingDragged &&
               this.state.dragSnapPreview.location == i.yWq.Dashboard &&
-              ((a = void 0),
-              (s = void 0),
-              (r = M.JJ.GetDockLocationTransformID(i.yWq.Dashboard)),
-              (l = !1)),
-            null != (null == a ? void 0 : a.translation) &&
-              (n = (0, i.Ujb)(null == a ? void 0 : a.translation)),
+              ((s = void 0),
+              (l = void 0),
+              (n = M.JJ.GetDockLocationTransformID(i.yWq.Dashboard)),
+              (u = !1)),
+            null != (null == s ? void 0 : s.translation) &&
+              (a = (0, i.Ujb)(null == s ? void 0 : s.translation)),
             o.createElement(
               Y.tH,
               null,
               o.createElement(
                 ht.w,
-                { frame_id: e.frameID },
+                { frame_id: t.frameID },
                 o.createElement(
                   i.dLy,
                   {
-                    parent_path: s,
-                    parent_id: r,
-                    transform: a,
+                    parent_path: l,
+                    parent_id: n,
+                    transform: s,
                     id: this.m_sUnpushedOriginID,
                   },
                   o.createElement(
                     i.t$O,
                     {
-                      is_active: l,
-                      event_panel_sgid: e.docking.beingDragged
+                      is_active: u,
+                      event_panel_sgid: t.docking.beingDragged
                         ? this.m_grabHandleSGID
                         : void 0,
-                      base_distance: n,
+                      base_distance: a,
                       min_distance: 0.25,
                       max_distance: 5,
                       scroll_speed: 10,
@@ -31168,23 +31200,27 @@ var CLSTAMP = "11023671";
                     },
                     o.createElement(i.dLy, { id: this.m_sPushedOriginID }),
                     o.createElement(ge.in, {
-                      dockLocation: t,
-                      forFrameID: e.frameID,
+                      dockLocation: r,
+                      forFrameID: t.frameID,
                     }),
                     o.createElement(
                       i.dLy,
                       {
-                        parent_id: e.frameControlsTransformID,
+                        parent_id: t.frameControlsTransformID,
                         translation: vt,
                         id: this.m_sDragSnapLineOriginID,
                       },
                       o.createElement(x, {
                         onMouseDown: this.startFloatingWindowMove,
                         onMouseUp: this.endFloatingWindowMove,
-                        active: e.docking.beingDragged,
+                        active: t.docking.beingDragged,
                         width: 350,
                         uniformScale: 1.3,
                         explicitSGID: this.m_grabHandleSGID,
+                        focus_target_sgid:
+                          null === (e = t.activePage) || void 0 === e
+                            ? void 0
+                            : e.mainPanelSGID,
                       }),
                     ),
                   ),
