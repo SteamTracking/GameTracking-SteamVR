@@ -48,6 +48,7 @@
 .tls$ZZZ
 .xdata
 .xdata$x
+1Xh2
 ?_Throw_C_error@std@@YAXH@Z
 ?_Xbad_function_call@std@@YAXXZ
 ?_Xlength_error@std@@YAXPEBD@Z
@@ -89,7 +90,7 @@ OLEAUT32.dll
 PathCchAppend
 PathRemoveFileSpecW
 QueryPerformanceCounter
-RSDSH
+RSDSfh
 ResetEvent
 RtlCaptureContext
 RtlLookupFunctionEntry

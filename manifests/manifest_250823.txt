@@ -1,10 +1,10 @@
 Content Manifest for Depot 250823 
 
-Manifest ID / date     : 2307606059615446935 / 10/01/2026 02:48:00 
+Manifest ID / date     : 4810326278721470285 / 10/01/2026 22:27:49 
 Total number of files  : 333 
 Total number of chunks : 1178 
 Total bytes on disk    : 1064339027 
-Total bytes compressed : 379149520 
+Total bytes compressed : 379149504 
 
 
           Size Chunks File SHA                                 Flags Name
@@ -76,17 +76,17 @@ Total bytes compressed : 379149520
         578064      1 afac28727188f7057e88b3a8438e1fd5c49780bd     0 bin/linux64/restarthelper
         825504      1 9138686a8f60fdd89f8dcaa0f60c7d9eeddf1268     0 bin/linux64/trace-cmd
            989      1 954c9024dcbad624980a17423cae4feb448c1d59     0 bin/linux64/VkLayer_envextensions_layer.json
-       6990456      7 f1844954cf1679d4eda4592a7c4f94b4324686f9     0 bin/linux64/vrclient.so
+       6990456      7 2ccdec049eb280dac02fc5a3d1bbf523c4801570     0 bin/linux64/vrclient.so
         856112      1 37286a94dbc9c328a4ccc7971c9164d4dd12deb7     0 bin/linux64/vrcmd
-       5139520      5 ca2e91a895886077ae09e8e8a333bc8a08c6bb15     0 bin/linux64/vrcompositor
+       5139520      5 87b8277ae8ddc5b1179986278433573a3bfb4099     0 bin/linux64/vrcompositor
         111976      1 d18d7433673c23edc12c5bb5190ba2907940afd7     0 bin/linux64/vrcompositor-launcher
           3094      1 8ee1e047513a5403f233369ebb417700a020d6c8     0 bin/linux64/vrcompositor-launcher.sh
-        676712      1 11713ea1863de605ea5b132f35ae6779a412fe48     0 bin/linux64/vrdashboard
-       3751264      4 a3aa9cdfd517a77bfdcd2d5db8bb1f3a82e560b9     0 bin/linux64/vrmonitor
+        676712      1 0dc9340cbaaf87f89bc86aba3d22ee17fa2f82ee     0 bin/linux64/vrdashboard
+       3751264      4 0778f107c73071c3f3727cfc3fd4c9319c1e0184     0 bin/linux64/vrmonitor
         651352      1 eda622b7a2916a055e32717b416c45257aaa69f3     0 bin/linux64/vrpathreg
-        814896      1 12b5797fac84209e0f928ba65c53416efbd54942     0 bin/linux64/vrprismhost
-       5730096      6 508886371bb99798e453d0a14a5b6509f90fc8cd     0 bin/linux64/vrserver
-        748456      1 f5f34adcd3f19af27da196976b356f5729911213     0 bin/linux64/vrstartup
+        814896      1 2a95ed4e3f739e2406d9920b21a6b0b2fef053fa     0 bin/linux64/vrprismhost
+       5730096      6 94c7a5c9d4be555c92ca062b5014b662f3c065e1     0 bin/linux64/vrserver
+        748456      1 fd7a432f1b94e9e7492d24797dd8a8bd7c8bb038     0 bin/linux64/vrstartup
         771872      1 d8ce2eb81878955f129e1af427a0e25ea671d583     0 bin/linux64/vrurlhandler
           2000      1 db3f880cc8b6ddb7d16464f37adecfb51b153a4e     0 bin/steamvr_msg.sh
            945      1 334c149e8a4cc9c0b0a35fce39e2da236bc39143     0 bin/steamvr_question.sh
@@ -167,11 +167,11 @@ Total bytes compressed : 379149520
         477144      1 047c2ed334256eba28e959bd895381e8cbcf4a1b     0 bin/vrwebhelper/linux64/locales/zh-TW.pak
        8733826     11 87b2ce0a69d5bb213fa2948161c3128229402758     0 bin/vrwebhelper/linux64/resources.pak
            107      1 08a83ab661feb866ab881fc7cf0e2b1dc4a5c43d     0 bin/vrwebhelper/linux64/vk_swiftshader_icd.json
-       2334544      3 61fcae2c915c1d3c8cba7ad743ba57f92ce42e92     0 bin/vrwebhelper/linux64/vrwebhelper
+       2334544      3 58273e5fa72b8540351a09c3d4af049d60295f61     0 bin/vrwebhelper/linux64/vrwebhelper
            717      1 d8a9326b8b46b25c935d9fdd5148fd0e923ef685     0 bin/vrwebhelper/linux64/vrwebhelper.sh
         577688      1 a8640d973276c86ecb62adec7c0bc9b036580377     0 drivers/gamepad/bin/linux32/driver_gamepad.so
         592712      1 31be32871c78508e799801d00eb412d4dffb0a5d     0 drivers/gamepad/bin/linux64/driver_gamepad.so
-       3581220      4 c134d58f43a1c6072c389da5ffbe9840b12341ad     0 drivers/lighthouse/bin/linux32/driver_lighthouse.so
+       3581220      4 e20f636e20f3b17f0ab2f480ed0a83d0dec54674     0 drivers/lighthouse/bin/linux32/driver_lighthouse.so
        3646320      4 75980304e32fe9918f122a2d004b70897dd42c43     0 drivers/lighthouse/bin/linux64/driver_lighthouse.so
              0      0 0000000000000000000000000000000000000000     0 drivers/lighthouse/bin/linux64/empty.dir
         164291      1 a0b48676165a9d5b7a9946e89a24ffc394f9f82d     0 drivers/lighthouse/bin/linux64/libaitcamlib.so

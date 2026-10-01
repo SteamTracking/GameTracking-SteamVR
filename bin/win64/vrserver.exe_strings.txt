@@ -1725,7 +1725,7 @@ $\n k_EProtoServiceTypeSteamMessages
 11eU%
 127.0.0.1
 127.0.0.1:
-19:25:56
+14:57:24
 1A26b
 1\f514
 1e+9999
@@ -3603,6 +3603,7 @@ OSBuild
 OSType
 OZw3(?
 Object
+Oct  1 2026
 OculusSDKStart for %s\n
 Old connection found for pid %d. Forcing it to disconnect before processing Msg_Connect\n
 On laptop, HMD detected over USB, but Monitor not found (213)
@@ -3973,7 +3974,7 @@ Quitting parent process %u because a quit was requested for its child %u.\n
 R1h58
 RGBG
 RPCRT4.dll
-RSDS+
+RSDS
 RaiseException
 Range
 Reached an unintended state: CPPTYPE_MESSAGE
@@ -4143,7 +4144,6 @@ See
 See Other
 Self queried namespace: %u\n
 Sending Quit event to process %s\n
-Sep 30 2026
 Server
 Server could not create read event %s\n
 Server somehow created read event before reader %s\n

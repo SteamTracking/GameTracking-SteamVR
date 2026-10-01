@@ -114,13 +114,12 @@ InitializeSListHead
 IsDebuggerPresent
 IsProcessorFeaturePresent
 KERNEL32.dll
-K}%0$jJ
 LeaveCriticalSection
 MSVCP140.dll
 MainThrd
 Out of thread local storage!\n
 QueryPerformanceCounter
-RSDS
+RSDS.Z
 RaiseException
 ResetEvent
 SDL2.dll

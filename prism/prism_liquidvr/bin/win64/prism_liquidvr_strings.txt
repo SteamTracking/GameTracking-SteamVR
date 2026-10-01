@@ -161,7 +161,7 @@ PRISM_Stop
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS
+RSDSB
 RaiseException
 ResetEvent
 RtlCaptureContext
@@ -173,7 +173,6 @@ S-1-15-3-1024-3424233489-972189580-2057154623-747635277-1604371224-316187997-378
 SetEvent
 SetUnhandledExceptionFilter
 SleepConditionVariableCS
-TH3a``@
 TdhEnumerateManifestProviderEvents
 TlsAlloc
 TlsFree

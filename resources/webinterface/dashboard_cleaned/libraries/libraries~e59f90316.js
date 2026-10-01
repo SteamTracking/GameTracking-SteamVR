@@ -1,6 +1,6 @@
 var CLSTAMP = "steamdb";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
-  [908, 260, 154, 982, 47, 264, 602],
+  [908, 260, 154, 982, 47, 602, 264],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

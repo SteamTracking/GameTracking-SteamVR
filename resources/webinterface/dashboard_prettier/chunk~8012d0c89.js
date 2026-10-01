@@ -1,4 +1,4 @@
-var CLSTAMP = "11065908";
+var CLSTAMP = "11069895";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [305],
   {
@@ -7758,7 +7758,7 @@ var CLSTAMP = "11065908";
           }),
           l.createElement(v.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_WebpackBuildTime"),
-            value: new Date(1790821588e3).toLocaleString() + "",
+            value: new Date(1790891877e3).toLocaleString() + "",
           }),
           l.createElement(v.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),

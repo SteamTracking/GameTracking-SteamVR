@@ -1254,7 +1254,7 @@ $\n k_EProtoServiceTypeSteamMessages
 1.5.26
 1/2/4/8/16-bit only
 123456789
-19:25:56
+14:57:24
 1A26b
 1e+9999
 1wsHp
@@ -3123,6 +3123,7 @@ NvOpticalFlow::NvOFD3D11::CalculateMotion
 NvOptimusEnablement
 O*9y]
 OZw3(?
+Oct  1 2026
 On laptop, HMD detected over USB, but Monitor not found (213)
 OnDefaultDeviceChanged: flow = %s, role = %s, device = %s\n
 OnDeviceAdded: device = %s\n
@@ -3576,7 +3577,6 @@ Second argument to SwapFields() (of type "
 See 
 Selected: width=%d height=%d refresh=%d/%d\n
 SendHmdDebugRequest resp: %s\n
-Sep 30 2026
 Server
 ServiceDescriptorProto
 ServiceOptions

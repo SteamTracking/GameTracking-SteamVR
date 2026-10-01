@@ -612,7 +612,7 @@ Projection
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS
+RSDSe
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

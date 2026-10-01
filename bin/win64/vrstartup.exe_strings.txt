@@ -132,7 +132,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-19:25:56
+14:57:24
 1e+9999
 : exception thrown in JSON library
 <unknown>
@@ -389,6 +389,7 @@ None
 Not Initialized (109)
 Not available to watchdog apps (131)
 Not starting vrserver for background app (121)
+Oct  1 2026
 On laptop, HMD detected over USB, but Monitor not found (213)
 OpenProcess
 Out of thread local storage!\n
@@ -396,7 +397,7 @@ OutputDebugStringA
 Platform handles tutorial / initial home app launch %s. Starting Event Polling...
 QueryPerformanceCounter
 QueryPerformanceFrequency
-RSDS
+RSDSQR
 RaiseException
 Rebooting In Progress (137)
 RegCloseKey
@@ -422,7 +423,6 @@ STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 STEAMVR_VKVALIDATION
 See 
-Sep 30 2026
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW

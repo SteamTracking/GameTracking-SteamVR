@@ -132,7 +132,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-19:25:56
+14:57:24
 1e+9999
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -364,6 +364,7 @@ Missing ':' after object member name
 Missing '}' or object member name
 MoveFileExW
 NULL
+Oct  1 2026
 Out of thread local storage!\n
 OutputDebugStringA
 PeekMessageA
@@ -372,7 +373,7 @@ ProcessVREvents
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
-RSDS\t;
+RSDS
 RaiseException
 ReadFile
 RealMain
@@ -417,7 +418,6 @@ STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 See 
 Sending device changed event.\n
-Sep 30 2026
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW

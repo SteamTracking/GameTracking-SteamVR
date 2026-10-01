@@ -676,7 +676,6 @@ White Balance:\t\t\t
 WideCharToMultiByte
 WinRTInitialization
 Writing failed at 0x%X/0x%X Bytes\n
-ZH\fZJ
 \r\f\v\v\n\n\t\t\t\t\t
 _CIexp
 _CIpow

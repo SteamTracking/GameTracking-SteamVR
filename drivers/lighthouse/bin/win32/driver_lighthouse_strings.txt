@@ -2080,7 +2080,7 @@ RENDERDOC Enabled
 RENDERDOC_GetAPI
 RENDERDOC_GetAPI failed with code %d
 RPCRT4.dll
-RSDS
+RSDS~
 Radio
 RaiseException
 Reached an unintended state: CPPTYPE_MESSAGE
