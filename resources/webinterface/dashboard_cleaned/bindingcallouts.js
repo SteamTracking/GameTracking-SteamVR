@@ -64,7 +64,6 @@ var CLSTAMP = "steamdb";
           Zkm: () => _._,
           _: () => _._,
           _81: () => _._,
-          _h3: () => _._,
           _nH: () => _._,
           aXN: () => _._,
           aqc: () => _._,
@@ -86,7 +85,6 @@ var CLSTAMP = "steamdb";
           k2$: () => _._,
           kGj: () => _._,
           kSV: () => _._,
-          ke3: () => _._,
           kuU: () => _._,
           lo4: () => _._,
           lqd: () => _._,
@@ -548,37 +546,6 @@ var CLSTAMP = "steamdb";
           (0, _._)([_.computed], _.prototype, "isScrolling", null),
           (0, _._)([_._], _.prototype, "onParentScroll", null),
           (0, _._)([_._], _.prototype, "onScrollStopTimeout", null);
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid");
-        const _ = 20,
-          _ = [
-            "Steam",
-            "Desktop",
-            "Desktop 1",
-            "Desktop 2",
-            "Desktop 3",
-            "Now Playing",
-            "Old Library",
-            "Library",
-            "Settings",
-          ],
-          _ = [
-            _.OiK.TopCenter,
-            _.OiK.CenterLeft,
-            _.OiK.CenterRight,
-            _.OiK.BottomCenter,
-            _.OiK.BottomRight,
-          ];
-        function _(_, _) {
-          return !!_ && !!_ && _.frameID === _.frameID;
-        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = __webpack_require__("chunkid"),
@@ -1517,7 +1484,9 @@ var CLSTAMP = "steamdb";
                                     {
                                       className: "BindingCalloutTitle",
                                     },
-                                    "Controller Bindings",
+                                    (0, _._)(
+                                      "#BindingUI_WindowTitle_ControllerBindings",
+                                    ),
                                   ),
                                   _.createElement(
                                     "div",
@@ -1539,7 +1508,7 @@ var CLSTAMP = "steamdb";
                                     className: "ButtonControl CloseButton",
                                     onClick: this.OnCloseCallouts,
                                   },
-                                  "Close",
+                                  (0, _._)("#BindingUI_Close"),
                                 ),
                               ),
                             ),
@@ -1685,7 +1654,7 @@ var CLSTAMP = "steamdb";
     })();
   var _ = _._(
     void 0,
-    [967, 991, 47, 305, 527, 170, 452, 554, 500, 458, 838],
+    [967, 991, 47, 305, 527, 170, 452, 500, 554, 366, 458, 838],
     () => _(1278),
   );
   _ = _._(_);

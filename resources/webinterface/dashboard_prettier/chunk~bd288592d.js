@@ -1,4 +1,4 @@
-var CLSTAMP = "11139766";
+var CLSTAMP = "11196359";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [452],
   {
@@ -1468,7 +1468,7 @@ var CLSTAMP = "11139766";
               this.m_ModifiedSimulatedActions.forEach((t) => {
                 if (this.GetActionTypeFromSimulatedActionType(t.type) == e) {
                   this.ComputeSimulatedActionPathFromId(t.id),
-                    t.name ? t.name : ((0, c.we)("UnnamedSimAction"), t.id);
+                    t.name ? t.name : ((0, c.we)("#UnnamedSimAction"), t.id);
                   o.push(this.CreateActionDefinitionForSimulatedAction(t));
                 }
               }),
@@ -1489,7 +1489,7 @@ var CLSTAMP = "11139766";
             name: this.ComputeSimulatedActionPathFromId(e.id),
             localized_name: e.name
               ? e.name
-              : (0, c.we)("UnnamedSimAction") + e.id,
+              : (0, c.we)("#UnnamedSimAction") + e.id,
             type: this.GetActionTypeFromSimulatedActionType(e.type),
           };
         }
@@ -3288,7 +3288,7 @@ var CLSTAMP = "11139766";
       window.controllerBindingStore = P;
     },
     6795: (e, t, i) => {
-      i.d(t, { n: () => g });
+      i.d(t, { n: () => S });
       var o,
         n = i(1635),
         s = i(9118),
@@ -3298,7 +3298,8 @@ var CLSTAMP = "11139766";
         c = i(3714),
         a = i(5802),
         p = i(1532),
-        u = i(8108);
+        u = i(8108),
+        h = i(6759);
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.List = 1)] = "List"),
@@ -3307,7 +3308,7 @@ var CLSTAMP = "11139766";
           (e[(e.AppSelect = 4)] = "AppSelect"),
           (e[(e.Debugger = 5)] = "Debugger");
       })(o || (o = {}));
-      class h {
+      class g {
         constructor() {
           (this.m_State = o.None),
             (this.m_bLoading = !1),
@@ -3349,12 +3350,12 @@ var CLSTAMP = "11139766";
             (0, l.autorun)(this.UpdateWindowTitle);
         }
         ShowOverlayInDashboard() {
-          null === d.Ay$ ||
-            void 0 === d.Ay$ ||
-            d.Ay$.VRClient.ShowDashboardOverlay({
-              overlayKey: "system.vrwebhelper.controllerbinding",
-              sReason: "cinputui_showoverlayindashboard",
-            });
+          (0, h.Du)(
+            h.yM.ShowDashboardAndSwitchToFrame(
+              "system.vrwebhelper.controllerbinding",
+              "cinputui_showoverlayindashboard",
+            ),
+          );
         }
         OnShowAppSelect(e) {
           (this.m_bStandaloneSettingsPage = !1), this.ShowAppSelect();
@@ -3533,7 +3534,7 @@ var CLSTAMP = "11139766";
         }
         get CurrentBinding() {
           if (this.BindingQueryResults)
-            return g.BindingQueryResults.find(
+            return S.BindingQueryResults.find(
               (e) => e.url == a.B$.SelectedBindingURL,
             );
         }
@@ -3637,51 +3638,51 @@ var CLSTAMP = "11139766";
           }, 0);
         }
       }
-      (0, n.Cg)([l.observable], h.prototype, "m_State", void 0),
-        (0, n.Cg)([l.observable], h.prototype, "m_bLoading", void 0),
-        (0, n.Cg)([l.observable], h.prototype, "m_rBindingList", void 0),
+      (0, n.Cg)([l.observable], g.prototype, "m_State", void 0),
+        (0, n.Cg)([l.observable], g.prototype, "m_bLoading", void 0),
+        (0, n.Cg)([l.observable], g.prototype, "m_rBindingList", void 0),
         (0, n.Cg)(
           [l.observable],
-          h.prototype,
+          g.prototype,
           "m_bShowBindingListError",
           void 0,
         ),
-        (0, n.Cg)([l.observable], h.prototype, "m_sBindingListError", void 0),
+        (0, n.Cg)([l.observable], g.prototype, "m_sBindingListError", void 0),
         (0, n.Cg)(
           [l.observable],
-          h.prototype,
+          g.prototype,
           "m_bCanCloseBindingListError",
           void 0,
         ),
-        (0, n.Cg)([l.observable], h.prototype, "m_bDesktopMode", void 0),
-        (0, n.Cg)([r.o], h.prototype, "OnShowAppSelect", null),
-        (0, n.Cg)([r.o], h.prototype, "OnShowInputDebugger", null),
-        (0, n.Cg)([r.o], h.prototype, "OnShowAppBinding", null),
-        (0, n.Cg)([r.o], h.prototype, "OnBindingLoadFailed", null),
-        (0, n.Cg)([l.computed], h.prototype, "DesktopMode", null),
-        (0, n.Cg)([r.o], h.prototype, "SetBindingListError", null),
-        (0, n.Cg)([l.computed], h.prototype, "ShowBindingListError", null),
-        (0, n.Cg)([l.computed], h.prototype, "BindingListError", null),
-        (0, n.Cg)([l.computed], h.prototype, "CanCloseBindingListError", null),
-        (0, n.Cg)([r.o], h.prototype, "OnPopState", null),
-        (0, n.Cg)([r.o], h.prototype, "GoBackPage", null),
-        (0, n.Cg)([r.o], h.prototype, "GoForwardPage", null),
-        (0, n.Cg)([l.computed], h.prototype, "GetUIState", null),
-        (0, n.Cg)([l.computed], h.prototype, "BindingQueryResults", null),
-        (0, n.Cg)([l.computed], h.prototype, "Loading", null),
-        (0, n.Cg)([r.o], h.prototype, "IsSafeToResetControllerType", null),
-        (0, n.Cg)([l.action.bound], h.prototype, "EditCurrentBinding", null),
-        (0, n.Cg)([r.o], h.prototype, "ViewCurrentBinding", null),
-        (0, n.Cg)([r.o], h.prototype, "ShowBindingList", null),
-        (0, n.Cg)([l.computed], h.prototype, "CurrentBinding", null),
-        (0, n.Cg)([r.o], h.prototype, "ReturnToSettingsUI", null),
-        (0, n.Cg)([r.o], h.prototype, "ShowAppSelect", null),
-        (0, n.Cg)([r.o], h.prototype, "UpdatePathsTimeout", null),
-        (0, n.Cg)([r.o], h.prototype, "ShowDebugger", null),
-        (0, n.Cg)([r.o], h.prototype, "GetBindingList", null),
-        (0, n.Cg)([r.o], h.prototype, "UpdateWindowTitle", null);
-      const g = new h();
-      window.inputUI = g;
+        (0, n.Cg)([l.observable], g.prototype, "m_bDesktopMode", void 0),
+        (0, n.Cg)([r.o], g.prototype, "OnShowAppSelect", null),
+        (0, n.Cg)([r.o], g.prototype, "OnShowInputDebugger", null),
+        (0, n.Cg)([r.o], g.prototype, "OnShowAppBinding", null),
+        (0, n.Cg)([r.o], g.prototype, "OnBindingLoadFailed", null),
+        (0, n.Cg)([l.computed], g.prototype, "DesktopMode", null),
+        (0, n.Cg)([r.o], g.prototype, "SetBindingListError", null),
+        (0, n.Cg)([l.computed], g.prototype, "ShowBindingListError", null),
+        (0, n.Cg)([l.computed], g.prototype, "BindingListError", null),
+        (0, n.Cg)([l.computed], g.prototype, "CanCloseBindingListError", null),
+        (0, n.Cg)([r.o], g.prototype, "OnPopState", null),
+        (0, n.Cg)([r.o], g.prototype, "GoBackPage", null),
+        (0, n.Cg)([r.o], g.prototype, "GoForwardPage", null),
+        (0, n.Cg)([l.computed], g.prototype, "GetUIState", null),
+        (0, n.Cg)([l.computed], g.prototype, "BindingQueryResults", null),
+        (0, n.Cg)([l.computed], g.prototype, "Loading", null),
+        (0, n.Cg)([r.o], g.prototype, "IsSafeToResetControllerType", null),
+        (0, n.Cg)([l.action.bound], g.prototype, "EditCurrentBinding", null),
+        (0, n.Cg)([r.o], g.prototype, "ViewCurrentBinding", null),
+        (0, n.Cg)([r.o], g.prototype, "ShowBindingList", null),
+        (0, n.Cg)([l.computed], g.prototype, "CurrentBinding", null),
+        (0, n.Cg)([r.o], g.prototype, "ReturnToSettingsUI", null),
+        (0, n.Cg)([r.o], g.prototype, "ShowAppSelect", null),
+        (0, n.Cg)([r.o], g.prototype, "UpdatePathsTimeout", null),
+        (0, n.Cg)([r.o], g.prototype, "ShowDebugger", null),
+        (0, n.Cg)([r.o], g.prototype, "GetBindingList", null),
+        (0, n.Cg)([r.o], g.prototype, "UpdateWindowTitle", null);
+      const S = new g();
+      window.inputUI = S;
     },
   },
 ]); //# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/chunk~bd288592d.js.map

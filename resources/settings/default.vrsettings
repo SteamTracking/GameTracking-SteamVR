@@ -80,6 +80,7 @@
         "videoCaptureViewRemoveRoll": true,
         "videoCaptureViewSmoothingTime": 0.2,
         "videoCaptureViewMaxSwing": 5.0,
+        "videoCaptureViewFillFromOtherEye": true,
         "videoCaptureViewDebugLog": false,
         "inputBindingUI": true,
         "legacyInputRebinding": true,
@@ -103,8 +104,8 @@
         "blockOculusSDKOnOpenVRLaunchOption": false,
         "blockOculusSDKOnAllLaunches": false,
         "overlayRenderQuality_2": 0,
-        "overlayMips": 0,
-        "overlayMipbias": 0.0,
+        "overlayMipbias": -0.2,
+        "overlayOuterMipbias": 0.2,
         "edgeSharpness": 1.0,
         "sharpeningAlpha": 1.0,
         "displayPortTrainingMode": 0,
@@ -125,7 +126,10 @@
         "envBrightnessTheater": 0.0,
         "envBrightnessSceneAppDimming": 1.0,
         "performanceProfile": "Performance",
-        "proxThresholdMode": 0
+        "proxThresholdMode": 0,
+        "preferredFoveatedAngle": 0.0,
+        "streamQuality": 0,
+        "highlightFoveatedArea": 0
     },
     "openxr": {
         "metaUnityPluginCompatibility": 0
@@ -242,7 +246,6 @@
         "allowExitVR": true,
         "allowPlacementDuringRecenter": false,
         "arcadeMode": false,
-        "cefMaxFrameRate": 120.0,
         "classicDashboardLayout": false,
         "dashboardScale": 1.0,
         "desktopScale": 1.1,

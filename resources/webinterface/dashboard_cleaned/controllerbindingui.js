@@ -62,7 +62,6 @@ var CLSTAMP = "steamdb";
           Zkm: () => _._,
           _: () => _._,
           _81: () => _._,
-          _h3: () => _._,
           _nH: () => _._,
           aXN: () => _._,
           aqc: () => _._,
@@ -84,7 +83,6 @@ var CLSTAMP = "steamdb";
           k2$: () => _._,
           kGj: () => _._,
           kSV: () => _._,
-          ke3: () => _._,
           kuU: () => _._,
           lo4: () => _._,
           lqd: () => _._,
@@ -198,7 +196,8 @@ var CLSTAMP = "steamdb";
             (_[(_.Auto = 0)] = "Auto"),
               (_[(_.Low = 1)] = "Low"),
               (_[(_.Medium = 2)] = "Medium"),
-              (_[(_.High = 3)] = "High");
+              (_[(_.High = 3)] = "High"),
+              (_[(_.Ultra = 4)] = "Ultra");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.TrackingResult_Uninitialized = 1)] =
@@ -1923,7 +1922,7 @@ var CLSTAMP = "steamdb";
                 this.m_ModifiedSimulatedActions.forEach((_) => {
                   if (this.GetActionTypeFromSimulatedActionType(_.type) == _) {
                     this.ComputeSimulatedActionPathFromId(_._),
-                      _.name ? _.name : ((0, _._)("UnnamedSimAction"), _._);
+                      _.name ? _.name : ((0, _._)("#UnnamedSimAction"), _._);
                     _.push(this.CreateActionDefinitionForSimulatedAction(_));
                   }
                 }),
@@ -1944,7 +1943,7 @@ var CLSTAMP = "steamdb";
               name: this.ComputeSimulatedActionPathFromId(_._),
               localized_name: _.name
                 ? _.name
-                : (0, _._)("UnnamedSimAction") + _._,
+                : (0, _._)("#UnnamedSimAction") + _._,
               type: this.GetActionTypeFromSimulatedActionType(_.type),
             };
           }
@@ -3848,6 +3847,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         !(function (_) {
           (_[(_.None = 0)] = "None"),
@@ -3914,12 +3914,12 @@ var CLSTAMP = "steamdb";
               (0, _.autorun)(this.UpdateWindowTitle);
           }
           ShowOverlayInDashboard() {
-            null === _.Ay$ ||
-              void 0 === _.Ay$ ||
-              _.Ay$.VRClient.ShowDashboardOverlay({
-                overlayKey: "system.vrwebhelper.controllerbinding",
-                sReason: "cinputui_showoverlayindashboard",
-              });
+            (0, _._)(
+              _._.ShowDashboardAndSwitchToFrame(
+                "system.vrwebhelper.controllerbinding",
+                "cinputui_showoverlayindashboard",
+              ),
+            );
           }
           OnShowAppSelect(_) {
             (this.m_bStandaloneSettingsPage = !1), this.ShowAppSelect();
@@ -4411,6 +4411,14 @@ var CLSTAMP = "steamdb";
           );
         }
         window.LocalizationManager = _;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        function _(_, _, _) {
+          return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
+        }
+        __webpack_require__._(_, {
+          _: () => _,
+        });
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(_, {
@@ -5952,7 +5960,7 @@ var CLSTAMP = "steamdb";
                 })
                 .catch((_) => {
                   this.setState({
-                    sError: (0, _._)("InputDebugger_ActionManifestFailed"),
+                    sError: (0, _._)("#InputDebugger_ActionManifestFailed"),
                   });
                 });
           }
@@ -15243,7 +15251,9 @@ var CLSTAMP = "steamdb";
                   rows: 5,
                   ref: this.BindDescriptionInput,
                   defaultValue: this.props.sDescription,
-                  placeholder: (0, _._)("BindingUI_SaveDescriptionPlaceholder"),
+                  placeholder: (0, _._)(
+                    "#BindingUI_SaveDescriptionPlaceholder",
+                  ),
                 }),
                 _.createElement(
                   "div",
@@ -16513,7 +16523,7 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [967, 991, 908, 305, 527, 170, 797, 906, 300], () =>
+  var _ = _._(void 0, [967, 991, 908, 305, 527, 170, 797, 148, 906], () =>
     _(9424),
   );
   _ = _._(_);

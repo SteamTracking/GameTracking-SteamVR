@@ -1,19 +1,89 @@
     %X, %X: s/n %s: %s (interface %d)\n
     No devices\n
+  Comment started here.
  (VID:%04X PID:%04X)
  (current)
  - %dx%d format=%d refresh=%d/%d scan=%d scale=%d dsc: mode=%d version=%d slice=%d out16=%d
  /name 
  /page 
+ = { <proto text format> }". To set fields within it, use syntax like "
+ Outdent() without matching Indent().
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
+ Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
+ [default = $0
+ args were given.  Full format string was: "
+ bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+ bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
  for detail.\n
  formatting error code 
+ is not valid for field 
+ message of type "
+ of the Protocol Buffer runtime library, but the installed version is 
+ of the Protocol Buffer runtime library, which is not compatible with the installed version (
+ of type 
  quads\n
  running out of [Main] SteamVR\n
 !! refusing to trigger minidump with debugger attached\n
 !systeminfo,os,gpu,cpu,cores,osmajor,osminor,osspversion
+" because it is missing required fields: 
+" conflicts with the existing symbol "
+" for field "
+" for option "
+" has no field named "
+" has no value named "
+" has not been loaded.
+" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
+" imports "
+" in type "
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
+" is already defined in "
+" is already defined in file "
+" is already defined.
+" is an atomic type, not a message.
+" is not a field or extension of message "
+" is not a message type.
+" is not a type.
+" is not a valid identifier.
+" is not an enum type.
+" is not defined or is not an extension of "
+" is not defined.
+" is resolved to "
+" is resolved to "(
+" is specified along with field "
+" is specified multiple times.
+" must be unique within 
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" seems to be defined in "
+" unknown.
+" uses the same enum value as "
+" was already set.
+" was listed twice.
+" was not found or had errors.
+" which is not used.
+" which is.
+"$0" does not declare $1 as an extension number.
+") is not compatible with this reflection object (which is for type "
+") to start from the outermost scope.
+").  Note that the exact same class is required; not just the same descriptor.
+", another member of oneof "
+", but only 
+", field number 
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+", which is not imported by "
+".  To use it here, please add the necessary import.
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
+". This appears to be a value from a sibling type.
+". Value: "
+"/*" inside block comment.  Block comments cannot be nested.
+"0x" must be followed by hex digits.
 "Language
+"MutableRawRepeatedField"
 "Tokens
 "[english]
+"e" must be followed by exponent.
 "lang
 #007acc
 #81b818
@@ -21,8 +91,17 @@
 #c80a0a
 #f4d330
 #ff38ff
+$0  extend .$1 {\n
+$0  extensions $1 to $2;\n
+$0  message $1
+$0 oneof $1 {\n
+$0$1$2 $3 = $4
+$0enum $1 {\n
+$0option $1;\n
 %%%d
 %%.%dg
+%.*g
+%.1f
 %02X
 %1 (%2, %3 bytes)\n
 %1 / %2 / %3
@@ -58,6 +137,7 @@
 %d Updates scheduled for %s %s\n
 %d.%02d
 %d.%d
+%d.%d.%d
 %d.%d.%d.%d
 %d: Probe for base station disk with name %s. Found: %d\n
 %d: Probe for controller with serial %s. Found controllers: %d\n
@@ -105,10 +185,16 @@
 (Reset)
 (Update necessary)
 (VID:%04X PID:%04X)
+(cannot determine missing fields for lite message)
+(merge 
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 *.dmp
 *.txt
 , Provider: 
+, from:
 , last executing in 
+, not just within "
 --- %1 - %2\n\n
 ---------------------------\n
 --------------------------\n
@@ -126,6 +212,7 @@
 -external
 -fnt
 -forcestatus
+-inf
 -internal
 -language
 -launchurl
@@ -151,7 +238,28 @@
 -startupreason
 -steam
 -v -v -v dfu usb_serial -cd 1 -pkg
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 ../content/vrmonitor/sounds/
+..\src\google\protobuf\descriptor.cc
+..\src\google\protobuf\descriptor.pb.cc
+..\src\google\protobuf\descriptor_database.cc
+..\src\google\protobuf\dynamic_message.cc
+..\src\google\protobuf\extension_set.cc
+..\src\google\protobuf\extension_set_heavy.cc
+..\src\google\protobuf\generated_message_reflection.cc
+..\src\google\protobuf\io\coded_stream.cc
+..\src\google\protobuf\io\strtod.cc
+..\src\google\protobuf\io\tokenizer.cc
+..\src\google\protobuf\io\zero_copy_stream.cc
+..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc
+..\src\google\protobuf\message.cc
+..\src\google\protobuf\message_lite.cc
+..\src\google\protobuf\reflection_ops.cc
+..\src\google\protobuf\stubs\common.cc
+..\src\google\protobuf\stubs\substitute.cc
+..\src\google\protobuf\text_format.cc
+..\src\google\protobuf\wire_format.cc
+..\src\google\protobuf\wire_format_lite.cc
 .00cfg
 .?AUALVRDisplayNotification@@
 .?AUBuiltStyledStreamWriter@Json@@
@@ -208,6 +316,10 @@
 .?AV?$codecvt@_WDU_Mbstatet@@@std@@
 .?AV?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@
 .?AV?$wstring_convert@V?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@_WV?$allocator@_W@2@V?$allocator@D@2@@std@@
+.?AVAggregateErrorCollector@?A0x247e964a@protobuf@google@@
+.?AVAggregateOptionFinder@OptionInterpreter@DescriptorBuilder@protobuf@google@@
+.?AVArrayInputStream@io@protobuf@google@@
+.?AVArrayOutputStream@io@protobuf@google@@
 .?AVCAudioEndpointVolumeCallback@@
 .?AVCBaseRenderer@@
 .?AVCCallbackBase@@
@@ -353,6 +465,9 @@
 .?AVCQWindowTitleDivider@@
 .?AVCSettingsManager@@
 .?AVCSingletonCriticalSection@@
+.?AVCSteamVR_DashboardRequest@@
+.?AVCSteamVR_DashboardRequest_Relatch@@
+.?AVCSteamVR_DashboardRequest_Target@@
 .?AVCVRAudioDeviceImpl@@
 .?AVCVRAudioDevices@@
 .?AVCVRMailbox@@
@@ -360,9 +475,36 @@
 .?AVCVRTimingHistory@@
 .?AVCharReader@Json@@
 .?AVCharReaderBuilder@Json@@
+.?AVClosure@protobuf@google@@
+.?AVDescriptorDatabase@protobuf@google@@
+.?AVDescriptorPoolExtensionFinder@internal@protobuf@google@@
+.?AVDescriptorProto@protobuf@google@@
+.?AVDescriptorProto_ExtensionRange@protobuf@google@@
+.?AVDynamicMessage@protobuf@google@@
+.?AVDynamicMessageFactory@protobuf@google@@
+.?AVEncodedDescriptorDatabase@protobuf@google@@
+.?AVEnumDescriptorProto@protobuf@google@@
+.?AVEnumOptions@protobuf@google@@
+.?AVEnumValueDescriptorProto@protobuf@google@@
+.?AVEnumValueOptions@protobuf@google@@
+.?AVErrorCollector@io@protobuf@google@@
 .?AVException@Json@@
+.?AVExtensionFinder@internal@protobuf@google@@
 .?AVFactory@CharReader@Json@@
 .?AVFactory@StreamWriter@Json@@
+.?AVFatalException@protobuf@google@@
+.?AVFieldDescriptorProto@protobuf@google@@
+.?AVFieldOptions@protobuf@google@@
+.?AVFieldSkipper@internal@protobuf@google@@
+.?AVFieldValuePrinter@TextFormat@protobuf@google@@
+.?AVFileDescriptorProto@protobuf@google@@
+.?AVFileDescriptorSet@protobuf@google@@
+.?AVFileOptions@protobuf@google@@
+.?AVFinder@TextFormat@protobuf@google@@
+.?AVFunctionClosure0@internal@protobuf@google@@
+.?AVGeneratedExtensionFinder@internal@protobuf@google@@
+.?AVGeneratedMessageFactory@?A0xaa88a5bd@protobuf@google@@
+.?AVGeneratedMessageReflection@internal@protobuf@google@@
 .?AVIAudioEndpointVolumeCallbackImpl@@
 .?AVIBaseStationWirelessListener@@
 .?AVIEvent@IPC@@
@@ -378,7 +520,16 @@
 .?AVIVRSettings@vr@@
 .?AVIVRSettingsInternal@vr@@
 .?AVLogicError@Json@@
+.?AVMessage@protobuf@google@@
+.?AVMessageFactory@protobuf@google@@
+.?AVMessageLite@protobuf@google@@
+.?AVMessageOptions@protobuf@google@@
+.?AVMethodDescriptorProto@protobuf@google@@
+.?AVMethodOptions@protobuf@google@@
+.?AVNoResponse@@
+.?AVOneofDescriptorProto@protobuf@google@@
 .?AVOurCharReader@Json@@
+.?AVParserErrorCollector@ParserImpl@Parser@TextFormat@protobuf@google@@
 .?AVQAbstractAnimation@@
 .?AVQAbstractButton@@
 .?AVQAbstractItemDelegate@@
@@ -469,14 +620,25 @@
 .?AVQVRComboBoxDelegate@@
 .?AVQVariantAnimation@@
 .?AVQWidget@@
+.?AVReflection@protobuf@google@@
 .?AVRuntimeError@Json@@
+.?AVServiceDescriptorProto@protobuf@google@@
+.?AVServiceOptions@protobuf@google@@
+.?AVSourceCodeInfo@protobuf@google@@
+.?AVSourceCodeInfo_Location@protobuf@google@@
 .?AVStreamWriter@Json@@
 .?AVStreamWriterBuilder@Json@@
+.?AVStringOutputStream@io@protobuf@google@@
 .?AVStyledWriter@Json@@
+.?AVUninterpretedOption@protobuf@google@@
+.?AVUninterpretedOption_NamePart@protobuf@google@@
+.?AVUnknownFieldSetFieldSkipper@internal@protobuf@google@@
 .?AVWin32Event@IPC@@
 .?AVWin32Mutex@IPC@@
 .?AVWin32SharedMemory@IPC@@
 .?AVWriter@Json@@
+.?AVZeroCopyInputStream@io@protobuf@google@@
+.?AVZeroCopyOutputStream@io@protobuf@google@@
 .?AV_Facet_base@std@@
 .?AV_com_error@@
 .?AVbad_alloc@std@@
@@ -506,6 +668,7 @@
 .CRT$XTZ
 .P6AXPEBD0I_NPEAXPEA_N@Z
 .P6A_ND@Z
+.PLACEHOLDER_VALUE
 .arc
 .arj
 .backup
@@ -513,7 +676,9 @@
 .csv
 .data
 .data$r
+.dummy
 .edata
+.foo = value".
 .gif
 .idata$2
 .idata$3
@@ -523,6 +688,7 @@
 .json
 .lzh
 .pdata
+.placeholder.proto
 .png
 .previous.txt
 .rdata
@@ -628,14 +794,16 @@
 /vivepro2
 /vrlinkdongledriver
 /wmr
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899"
 0123456789ABCDEF
+0123456789abcdef
 0:00
 0x%016llx
 0x%08llx
 0x%llx
 100%
 1000
-13:51:51
+12:25:10
 1DoAcquireData()
 1DoInit()
 1DoParseString( const QString & )
@@ -1221,6 +1389,9 @@
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
 8e8f13b1-60eb-4b6a-a433-de86104115ac
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
 : exception thrown in JSON library
 </Chaperone>\n\n
 </ChaperoneFile>\n\n
@@ -1636,6 +1807,7 @@
 ?_Throw_C_error@std@@YAXH@Z
 ?_Throw_Cpp_error@std@@YAXH@Z
 ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+?_Xbad_alloc@std@@YAXXZ
 ?_Xbad_function_call@std@@YAXXZ
 ?_Xinvalid_argument@std@@YAXPEBD@Z
 ?_Xlength_error@std@@YAXPEBD@Z
@@ -3281,9 +3453,12 @@
 ?y@QWidget@@QEBAHXZ
 ?zoomIn@QTextEdit@@QEAAXH@Z
 ?zoomOut@QTextEdit@@QEAAXH@Z
+A file with this name is already in the pool.
+A protocol message was rejected because it was too big (more than 
 A valid JSON document must be either an array or an object value.
 A wireless HMD driver is present, but the wireless HMD has not connected and Steam is not running (216)
 A wireless HMD driver is present, but the wireless HMD has not connected yet (215)
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ACTIVE
 ADVAPI32.dll
 ALVRDisplayInit
@@ -3304,6 +3479,16 @@ ActionButton
 ActionLabel
 Add Json firmware manifest from %s\n
 AddAccessAllowedAce
+AddBool
+AddDouble
+AddEnum
+AddFloat
+AddInt32
+AddInt64
+AddMessage
+AddString
+AddUInt32
+AddUInt64
 Address0
 Address1
 Address: %1\n
@@ -3341,6 +3526,7 @@ Alert
 Alias
 AllocateAndInitializeSid
 Already at maximum refresh rate: %f!\n
+Already saw decimal point or exponent; can't have another one.
 Another app was already launching (117)
 Another copy of this program is already running on this machine. Only one instance at a time is allowed.
 App info manager init failed (114)
@@ -3453,6 +3639,7 @@ BS_PromotePowerManagement_Enable
 BS_PromotePowerManagement_ExitNow
 BS_PromotePowerManagement_Explanation
 BS_PromotePowerManagement_Explanation2
+BackUp() can only be called after a successful Next().
 Background
 Bad escape sequence in string
 Bad unicode escape sequence in string: four digits expected.
@@ -3504,6 +3691,7 @@ BluetoothControllerStatus_NoBluetoothDeviceUpdateNeeded
 BluetoothControllerStatus_ServiceError
 BluetoothControllerStatus_ServiceNotFound
 BluetoothDetailLogging
+Boolean default must be true or false.
 Bootloader
 Bootloader Version:
 Bootloader Version: \t%1 / %2 %3\n
@@ -3539,6 +3727,7 @@ BuiltLabel
 Button0
 Button1
 ButtonRow
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 CAudioEndpointVolumeCallback::CAudioEndpointVolumeCallback
 CAudioEndpointVolumeCallback::Register
 CD3D11::EndScene
@@ -3550,6 +3739,51 @@ CD3DRenderer::CreateShaders: Failed to load pixel shader %s! (size=%d)\n
 CD3DRenderer::CreateShaders: Failed to load vertex shader %s! (size=%d)\n
 CD3DRenderer::CreateShaders: Failed to sampler state!\n
 CDisplayInfo::MonitorEnumProc
+CHECK failed: !coded_out.HadError(): 
+CHECK failed: !out.HadError(): 
+CHECK failed: (&from) != (this): 
+CHECK failed: (&from) != (to): 
+CHECK failed: (&other) != (this): 
+CHECK failed: (buffer_size) >= (0): 
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
+CHECK failed: (count) <= (last_returned_size_): 
+CHECK failed: (count) <= (target_->size()): 
+CHECK failed: (count) >= (0): 
+CHECK failed: (field->message_type()) == (desc): 
+CHECK failed: (field->options().ctype()) == (ctype): 
+CHECK failed: (from.GetDescriptor()) == (descriptor): 
+CHECK failed: (last_returned_size_) > (0): 
+CHECK failed: (message1->GetReflection()) == (this): 
+CHECK failed: (message2->GetReflection()) == (this): 
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
+CHECK failed: (output->ByteCount()) == (expected_endpoint): 
+CHECK failed: (size) <= (6): 
+CHECK failed: (temp[0]) == ('1'): 
+CHECK failed: (temp[size-1]) == ('5'): 
+CHECK failed: (to->GetDescriptor()) == (descriptor): 
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
+CHECK failed: allow_unknown_field_: 
+CHECK failed: builder_: 
+CHECK failed: dynamic.get() != NULL: 
+CHECK failed: field != NULL: 
+CHECK failed: file != NULL: 
+CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
+CHECK failed: has_default_value(): 
+CHECK failed: is_prototype(): 
+CHECK failed: iter != extensions_.end(): 
+CHECK failed: options->ParseFromString(buf): 
+CHECK failed: options_descriptor: 
+CHECK failed: original_uninterpreted_options_field != NULL: 
+CHECK failed: output->message_prototype != NULL: 
+CHECK failed: prototype != NULL: 
+CHECK failed: result != NULL: 
+CHECK failed: trees: 
+CHECK failed: uninterpreted_options_field != NULL: 
+CHECK failed: value.size() <= kint32max: 
 CHidDevice: Can't open USB device VID %08x, PID %08x %s %d\n
 CMMNotificationClient::Register
 CM_Get_Parent
@@ -3558,6 +3792,16 @@ COLOR
 COMPUTERNAME
 CONFIG
 CONTENT
+CPPTYPE_BOOL
+CPPTYPE_DOUBLE
+CPPTYPE_ENUM
+CPPTYPE_FLOAT
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_MESSAGE
+CPPTYPE_STRING
+CPPTYPE_UINT32
+CPPTYPE_UINT64
 CPUHeaderLabel
 CPULabel1
 CPULabel2
@@ -3807,6 +4051,9 @@ CSharedResourceNamespaceClient::Init(): still waiting for vrserver to reply with
 CSharedResourceNamespaceClient::Init(): timed out contacting vrserver for a namespace\n
 CSharedResourceNamespaceClient::Init(): timed out waiting for server reply\n
 CSharedResourceNamespaceClient::InitIfNeeded
+CSteamVR_DashboardRequest
+CSteamVR_DashboardRequest.Relatch
+CSteamVR_DashboardRequest.Target
 CVRAudioDeviceImpl::CVRAudioDeviceImpl
 CVRAudioDeviceImpl::EnumAudioDevices
 CVRAudioDeviceImpl::GetDeviceSoundVolume
@@ -3845,13 +4092,17 @@ CameraRecovery1
 CameraRecovery2
 Cameras and Bases
 Can not start firmware update at this time: there is already an update in progress.
+Can't 
 Can't add null element
 Can't add null element to row/column:
+Can't get here.
+Can't get here: failed to get default value as string
 Can't take null element
 CanIdentify
 CanUpdateMultiple
 CancelButton
 CancelIo
+Cannot allocate buffer larger than kint32max for 
 Cannot initialize crash handling in a project without the Steam API available
 Cannot start SteamVR when not in 'Paused' state.\n
 Center of scaling operation doesn't lie in same logarithmic sign domain as range:
@@ -3881,6 +4132,7 @@ CheckTokenMembership
 Checking for Vive wireless receivers. %d detected.\n
 City
 ClearContent
+ClearField
 Client (%s) app container state: %d
 ClientFrameIntervalMs
 CloseHandle
@@ -3959,11 +4211,15 @@ Controller VRC Update: %s\n
 Controller Watchman FPGA Update: %s\n
 ConvertStringSidToSidA
 CopySid
+Could not create an instance of 
+Could not find field named "
+Could not find field type.
 Could not open %s for writing\n
 Could not open pipe: 20 second wait timed out.(error_no:%lu)\n
 Couldn't activate painter on buffer. This usually happens because QCustomPlot has width or height zero.
 Couldn't create/open file
 Couldn't determine current display mode from current and available frequencies!\n  Current=%f Available=%s\n
+Couldn't parse default value "
 Crashing so we can test breakpad uploading
 CreateDXGIFactory1
 CreateDXGIFactory2
@@ -4010,6 +4266,7 @@ DISPLAY
 DebuggerEnabled
 Default Playback Audio Devices: %s, %s (Comm)\n
 Default Record Audio Device: %s, %s (Comm)\n
+Default value for an enum field must be an identifier.
 Delay done\n
 Delay: %1:%2
 Delaying for %d milliseconds...\n
@@ -4173,6 +4430,7 @@ EBaseStationWirelessError_t
 EDFUProgress_t
 EPowerManagementStatusUpdate_t
 EPowerState_t
+ERROR
 ERROR! Did not find %s in firmware manifest for 0x%llx\n
 ERROR! Did not find bin '%s' on disk for 0x%llx\n
 ERROR: Failed to open log file %s, attempting timestamped filename\n
@@ -4183,21 +4441,26 @@ Empty escape sequence in string
 Enable
 Enabled
 Encountered error 
+End-of-file inside block comment.
 EndState
 EndingStyle
 Endpoint Activate(IDeviceTopology) failed: id = %s hr = 0x%08x\n
 Endpoint topology GetConnector(0) failed: hr = 0x%08x\n
 EnterBootloader
 EnterCriticalSection
+Enum type "
 EnumAudioEndpoints failed: hr = 0x%08x\n
 EnumDisplayDevicesA
 EnumDisplayMonitors
+Enums must contain at least one value.
 Environment(.|\n)*?VR_OVERRIDE.*
 Error
 Error parsing news post JSON. There will be no update popup\n
+Error parsing text-format 
 Error reading file
 Error to Connect!!\n
 Error when creating overlay %s (%s): %s\n
+Error while parsing option value for "
 Error writing to file
 Error! EventWriteString Severe: %s\n
 Error! Unable to load firmware manifest %s after allocating memory\n
@@ -4229,9 +4492,32 @@ Exit Code:
 Exit Status:
 ExitBootloader
 Exiting Firmware Update\n
+Expect a decimal number.
 ExpectWirelessHeadset: %d
+Expected "
+Expected double.
+Expected eight hex digits up to 10ffff for \U escape sequence
+Expected four hex digits for \u escape sequence.
+Expected hex digits for escape sequence.
+Expected identifier.
+Expected integer or identifier.
+Expected integer.
+Expected string.
 Extended Display
+Extension "
+Extension conflicts with extension already in database: extend 
+Extension factory's GetPrototype() returned NULL for extension: 
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Extension number $0 has already been used in "$1" by extension "$2".
+Extension numbers cannot be greater than $0.
+Extension numbers must be positive integers.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Extension range end number must be greater than start number.
+Extensions of MessageSets must be optional messages.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra non-whitespace after JSON value.
+FATAL
 FATAL: Failed to open log file %s, failing out!\n
 FOV Bottom:
 FOV Left:
@@ -4298,14 +4584,37 @@ Failed with exit code: %d. Attempting retry: %d\n
 Failed with invalid or missing hardware revision. Attempting retry: %d\n
 Fails: %1
 Failure
+False
 Fatal
 Feature Request
 Feedback
+Field "
+Field does not match message type.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
+Field number $0 has already been used in "$1" by field "$2".
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+Field numbers cannot be greater than $0.
+Field numbers must be positive integers.
+Field with message or enum type missing type_name.
+Field with primitive type has type_name.
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldSize
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File Not Found (103)
+File already exists in database: 
+File appears to be in generated pool but wasn't registered: 
+File is already registered: 
 File not found in the zipfile
+File recursively imports itself: 
 FileTimeToDosDateTime
 FileTimeToLocalFileTime
 FileTimeToSystemTime
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
 FilledWithData
 FindClose
 FindFirstFileW
@@ -4536,6 +4845,8 @@ FirmwareWizard_WatchmanUpdate
 FirmwareWizard_WirelessServicesRequired
 FirmwareWizard_WirelessServicesRequired_Title
 FirmwareWizard_WizardIsAlreadyBusy_Message
+First argument to Swap() (of type "
+First argument to SwapFields() (of type "
 FirstAction
 ForceDXGICreateFactory\t(?<VALUE>.*)
 Format string parse failure
@@ -4576,6 +4887,7 @@ GPULabel7
 Game
 Geometry:\t(?<VALUE>.*)
 GetACP
+GetBool
 GetCommandLineW
 GetContent
 GetCurrentProcess
@@ -4585,9 +4897,11 @@ GetDateFormatA
 GetDefaultAudioEndpoint failed for role eCommunications: hr = 0x%08x\n
 GetDefaultAudioEndpoint failed for role eConsole: hr = 0x%08x\n
 GetDefaultAudioEndpoint failed: hr = 0x%08x\n
+GetDouble
 GetDriveTypeA
 GetEffectiveRightsFromAclW
 GetEffectiveRightsFromAclW Error %u for %s\n
+GetEnum
 GetEnvironmentVariableA
 GetEnvironmentVariableAsBool(%s): Unable to parse value '%s', using default %d\n
 GetExitCodeProcess
@@ -4600,11 +4914,15 @@ GetFileType
 GetFileVersionInfoSizeA
 GetFileVersionInfoSizeW
 GetFileVersionInfoW
+GetFloat
 GetFullPathNameW
+GetInt32
+GetInt64
 GetLastError
 GetLengthSid
 GetLocalTime
 GetMediaSubtype failed hr = 0x%08x\n
+GetMessage
 GetModuleFileNameA
 GetModuleFileNameW
 GetModuleHandleA
@@ -4617,8 +4935,21 @@ GetOverlappedResult
 GetPlaybackVolumeGainStatus
 GetProcAddress
 GetProcessHeap
+GetRepeatedBool
+GetRepeatedDouble
+GetRepeatedEnum
+GetRepeatedFloat
+GetRepeatedInt32
+GetRepeatedInt64
+GetRepeatedMessage
+GetRepeatedString
+GetRepeatedStringReference
+GetRepeatedUInt32
+GetRepeatedUInt64
 GetStartupInfoW
 GetStdHandle
+GetString
+GetStringReference
 GetSystemDirectoryW
 GetSystemInfo
 GetSystemTime
@@ -4626,6 +4957,8 @@ GetSystemTimeAsFileTime
 GetTickCount64
 GetTokenInformation
 GetTokenInformation failed. GetLastError returned: %d\n
+GetUInt32
+GetUInt64
 GetVersionExA
 GetVolumeInformationA
 GetWindowLongPtrW
@@ -4675,6 +5008,7 @@ Hardware Id:
 Hardware Id: \t0x%1\n
 Hardware Revision:
 HardwareId
+HasField
 Header
 HeaderIcon
 Headset
@@ -4704,6 +5038,7 @@ HeadsetView_Title
 HeadsetView_UndockButtonLabel
 HeapAlloc
 HeapFree
+Hex and octal numbers must be integers.
 HidD_FreePreparsedData
 HidD_GetAttributes
 HidD_GetFeature
@@ -4779,6 +5114,8 @@ IMMDevice::GetId failed: hr = 0x%08x\n
 IMMDevice::GetState failed: hr = 0x%08x\n
 IMMDevice::Item(%u) failed: hr = 0x%08x\n
 IMMDevice::OpenPropertyStore failed: hr = 0x%08x\n
+INFO
+INVALID_CPPTYPE
 IPC::CIPCHandle::InitForExport
 IPCPipe(%s) failed to read payload of %u bytes
 IPCPipe(%s) failed to write message of %u bytes because %s\n
@@ -4858,8 +5195,10 @@ Image
 Image Bridge Firmware:
 Image Bridge Firmware: \t%1 / %2 %3\n
 ImageBridge
+Import "
 InactivityTimeoutForBaseStations
 Index controllers active while wired\n
+Index out-of-bounds (field is empty).
 Infinity
 Info
 Info_UnknownURL_Message
@@ -4883,20 +5222,37 @@ Installation Corrupt (101)
 Installation Not Found (100)
 Installation path could not be located (110)
 Installing
+Integer out of range.
 Interface Not Found (105)
 Internal Retry (115)
+Interpreting non ascii codepoint %d.
 Invalid
 Invalid Application Type (130)
 Invalid Arguments
 Invalid Interface (106)
+Invalid control characters encountered in text.
+Invalid escape sequence in string literal.
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
+Invalid float number: 
 Invalid headset display frequency reported: %f\n
 Invalid logarithmic scale base (must be greater 1):
 Invalid margin side passed:
 Invalid number format code (first char not in 'eEfgG'):
 Invalid number format code (second char not 'b' or first char neither 'e' nor 'g'):
 Invalid number format code (third char neither 'c' nor 'd'):
+Invalid proto descriptor for file "
+Invalid public dependency index.
 Invalid range for logarithmic plot: 
 Invalid stretch factor, must be positive:
+Invalid strings::Substitute() format string: "
+Invalid symbol name: 
+Invalid value for boolean field "
+Invalid weak dependency index.
+Invalid wire type for CPPTYPE_INT32: 
+Invalid wire type for CPPTYPE_INT64: 
+Invalid wire type for CPPTYPE_MESSAGE: 
+Invalid wire type for CPPTYPE_UINT32: 
+Invalid wire type for CPPTYPE_UINT64: 
 IsDebuggerPresent
 IsProcessorFeaturePresent
 IsValidSid
@@ -5094,6 +5450,10 @@ MenuAction_Workshop_RunTools
 MenuAction_Workshop_UploadItem
 MenuAction_Workshop_ViewWiki
 Message
+Message class "
+Message extensions cannot have required fields.
+Message missing required fields: 
+Message type "
 MessageBoxA
 MessageBox_Cancel
 MessageBox_Continue
@@ -5109,6 +5469,9 @@ MessageBox_Retry
 MessageBox_Stop
 MessageBox_Submit
 MessageBox_Yes
+MessageSets cannot have fields, only extensions.
+Messages can't have default values!
+Messages can't have default values.
 MiddleText
 MinimizeToTray
 Minor
@@ -5118,6 +5481,8 @@ Missing ',' or ']' in array declaration
 Missing ',' or '}' in object declaration
 Missing ':' after object member name
 Missing '}' or object member name
+Missing field: FileDescriptorProto.name.
+Missing name.
 Missing required OpenVR interfaces!\n
 Mode
 Mode:
@@ -5163,6 +5528,9 @@ MoreContentText
 MotionEstimationLabel
 MoveFileExW
 MultiByteToWideChar
+Multiple extension registrations for type "
+MutableRawRepeatedField
+MutableRepeatedMessage
 N@33
 NAME
 NOTPRESENT
@@ -5176,6 +5544,8 @@ Name: %1\n
 NameBase
 Names
 Nature
+Need space between identifier and decimal point.
+Need space between number and identifier.
 NeedRoomSetupNoLaunch_Header
 NeedRoomSetupNoLaunch_Message
 New Config Path: %s\n
@@ -5196,10 +5566,14 @@ No System Report or Logs Attached!\n
 No VRApplications!\n
 No date information available
 No default audio device found to listen to\n
+No default value
+No field named "uninterpreted_option" in the Options proto.
 No key axis defined
 No key axis or axis rect defined
 NoAction
 NoAction()
+Non-primitive types can't be packed.
+Non-repeated field "
 None
 None found\n
 Not Detected
@@ -5211,11 +5585,14 @@ Not available to watchdog apps (131)
 Not starting vrserver for background app (121)
 Not yet implemented
 NotReady
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing set.
+Nov  2 2026
 Null element passed
 NumDroppedFrames
 NumFramePresents
 NumMisPresented
+Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:
 NvAPI: DirectModeGetDisplayModes reported more than 1024 entries!\n
@@ -5230,7 +5607,6 @@ OS Version:
 OS Version:\t(?<VALUE>.*)
 OS:\t%1 (%2)\n
 OS:\t(?<VALUE>.*)
-Oct 16 2026
 Old Style single quad\n
 On laptop, HMD detected over USB, but Monitor not found (213)
 OnAboutAction
@@ -5722,6 +6098,7 @@ OnWorker_BluetoothShutdown
 OnZoomHappened
 On_BS2_SetPowerStateDone
 On_BS2_SetSyncOnBeamChannelDone
+Oneof must have at least one field.
 Open URL %s\n
 OpenDebugCommands
 OpenEventA
@@ -5739,6 +6116,10 @@ OpenServiceW
 OpenVR Playlist (*.vrpl *.json *.txt)
 Operating System
 Operating System(.|\n)*?Power:.*
+Option "
+Option field "
+Option must have a name.
+Option must not use reserved name "uninterpreted_option".
 Out of thread local storage!\n
 OutputDebugStringA
 OutputDebugStringW
@@ -5748,6 +6129,7 @@ PID_
 PID_%04X
 PLACECARD: No Overlay Bridge (1)\n
 PLACECARD: No Overlay Bridge (2) 0x%p\n
+PLACEHOLDER_VALUE
 POSITION
 POWRPROF.dll
 PainterMode
@@ -5939,6 +6321,9 @@ ProgressTextRow
 ProgressTextTotal
 PromptForRecovery
 PropVariantClear
+Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Protocol message serialized itself in invalid fashion.
+Protocol message was modified concurrently during serialization.
 PseudoState_ReadyWithNoApp
 PseudoState_Waiting
 PseudoState_Welcome
@@ -6077,12 +6462,14 @@ RaiseException
 Range Maximum (m):
 Range Minimum (m):
 RawCheckboxContainer
+Reached an unintended state: CPPTYPE_MESSAGE
 Read Error.
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n
 ReadFile failed on %s read %u bytes when only %u bytes were available in the buffer\n
 ReadFile() failed and reach max try count!!\n
 ReadFile(error_no:%ld) is failed!!\n
+Reading dangerously large protocol message.  If the message turns out to be larger than 
 Ready
 ReadyAlert
 ReadyAlertLow
@@ -6123,10 +6510,14 @@ RegSetValueExA
 RegSetValueExW
 RegisterHotKey
 Rejecting Base station incompatible rollback: Existing:%llu, Required:%llu\n
+ReleaseLast
+ReleaseMessage
 ReleaseMutex
 RemindMeLaterButton
+RemoveLast
 Renamed file %s\n
 Render Target Size:\t(?<VALUE>.*)
+Repeated fields can't have default values.
 ReplaceFileW
 Report
 ReprojectionFlags
@@ -6325,22 +6716,43 @@ ScatterShape
 ScrollArea
 Searching
 SearchingAlert
+Second argument to Swap() (of type "
+Second argument to SwapFields() (of type "
 See 
 Select System Report
 SelectablePart
 SelectableParts
 Serial: %1\n
+SetAllocatedMessage
+SetBool
 SetCurrentProcessExplicitAppUserModelID
 SetDefaultAudioDevice: device = %s, role = %d\n
+SetDouble
+SetEnum
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW
 SetFilePointer
+SetFloat
+SetInt32
+SetInt64
 SetLastError
 SetNamedPipeHandleState
 SetNamedPipeHandleState(error_no:%ld) is failed!!\n
 SetPlaybackVolumeGainStatus
+SetRepeatedBool
+SetRepeatedDouble
+SetRepeatedEnum
+SetRepeatedFloat
+SetRepeatedInt32
+SetRepeatedInt64
+SetRepeatedString
+SetRepeatedUInt32
+SetRepeatedUInt64
 SetSecurityDescriptorDacl
+SetString
+SetUInt32
+SetUInt64
 SetUnhandledExceptionFilter
 SetWindowLongPtrA
 SetWindowLongPtrW
@@ -6563,13 +6975,17 @@ SteamVR_Namespace
 Still more data to unzip
 Stop
 Stopping playback mirror thread\n
+String literals cannot cross line boundaries.
 StringFromGUID2
+StringOutputStream.
 Submit Time
 SubmitFrameMs
 Submitter
 Success
 Supported Buttons:
+Swap
 Switching headset refresh rate from %d to %d.\n
+Symbol name "
 Syntax error: value, object or array expected.
 System Report
 SystemReportWorker
@@ -6612,8 +7028,13 @@ TextContent_Recovery
 The current HMD requires an additional driver that is not installed (214)
 The parent plot's mCurrentLayer will be a dangling pointer. Should have been set to a valid layer or 0 beforehand.
 The requested interface is incompatible with the compositor and the compositor is running (122)
+The total number of bytes read was 
 There is already an element in the specified row/column:
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This interface is not available to utility applications (123)
+This program requires version 
+This program was compiled against version 
+This shouldn't be called if all the sizes are equal.
 Thumbnail
 Time
 Title
@@ -6669,8 +7090,13 @@ Tracking:
 Tracking:\t%1\n
 Tracking:\t(?<VALUE>.*)
 TrayIcon_Tooltip_vrmonitor
+Tried to merge messages of different types 
+True
 Try to connect to VR Runtime: Control panel interface couldn't be retrieved.\n
 Try to connect to VR Runtime: VRSystem might not point to the correct runtime.\n
+Type appears to be in generated pool but wasn't 
+Type is already registered: 
+U:\p4clients\thirdpartycode\nonredist\protobuf\protobuf-2.6.1\src\google/protobuf/repeated_field.h
 UNKNOWN
 UNPLUGGED
 URL Protocol
@@ -6722,7 +7148,10 @@ Undefined
 Unexpected Shutdown.
 Unexpected WaitForMultipleObjects return value %u on pass %u\n
 Unexpected WaitForMultipleObjects return value %u\n
+Unexpected end of string.
+Unexpected failure while serializing option submessage 
 UnhandledExceptionFilter
+Unimplemented type: 
 Unknown
 Unknown 
 Unknown BaseStationWirelessError (%d)
@@ -6736,6 +7165,7 @@ Unknown URL called\n
 Unknown Update (%1)
 Unknown VRSettingsError (%d)
 Unknown Version
+Unknown enumeration value of "
 Unknown error (%d)
 Unknown exception
 Unknown property error (%d)
@@ -7058,6 +7488,20 @@ VR_WebHelperMutex
 VR_WebHelperState
 VSync to Photons:
 VSync to Photons: \t%1\nDisplay Frequency:\t%2\nUser IPD (m):\t%3\nCurrent Universe ID:\t%4\n
+Value 
+Value must be "true" or "false" for boolean option "
+Value must be identifier for boolean option "
+Value must be identifier for enum-valued option "
+Value must be integer for int32 option "
+Value must be integer for int64 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for double option "
+Value must be number for float option "
+Value must be quoted string for string option "
+Value out of range for int32 option "
+Value out of range for int64 option "
+Value out of range for uint32 option "
 Valve
 VerQueryValueA
 VerSetConditionMask
@@ -7067,6 +7511,7 @@ Version:\t(?<VALUE>.*)
 VersionLabel
 VirtualQuery
 ViveLinkLib_GetBaseStationWirelessInterface
+WARNING
 WINRT_AcquireDisplay
 WINRT_GetAdapterLuid
 WINRT_GetCurrentDriverVersion
@@ -7097,9 +7542,11 @@ WaitingForShutdownVRApps
 WakeAllConditionVariable
 Warned about Index controllers wired use\n
 Warning
+Warning parsing text-format 
 Warning: Asking to add a Frame Listener that is already in the list\n
 Warning: Asking to remove a Frame Listener that isn't in the list\n
 Warning: Tried to remove a listener and removed %d somehow\n
+Warning: Unused import: "
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning_%1_Action
 Warning_%1_ActionURL
@@ -7424,9 +7871,21 @@ Zipfile is corrupt or not a zipfile
 [Wizard] Start with %s (Modality: %d)\n
 [Wizard] Transition to state %s from %s\n
 [Wizard] WizardDialog not available.\n
+[lazy = true] can only be specified for submessage fields.
+[libprotobuf %s %s:%d] %s\n
+[packed = true] can only be specified for repeated primitive fields.
+\%03o
 \Floppy
+\U%08x
 \\bugsub.valve.org\bugsub_jira
 \mfpmp.exe
+\n    Actual    : 
+\n    Field type: 
+\n  Field       : 
+\n  Message type: 
+\n  Problem     : 
+\n  Problem     : Enum value did not match field type:\n    Expected  : 
+\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n==================================================================================================\n\n
 \nAdditional Log Attachments:\n
 \nCrash Dump Attachments:\n
@@ -7450,6 +7909,7 @@ Zipfile is corrupt or not a zipfile
 \t%s%s,%u,%s,%s,VID_%04X/PID_%04X,%s,%s\n
 \tDriver mfctr: %s
 \tDriver version: %s
+\x%02x
 ^%1( \t|\t)(?<VALUE>.*)
 ^\s*Hardware revision:\s*(?<HWID>\d{1,8})\s*
 _Cnd_destroy_in_situ
@@ -7529,6 +7989,8 @@ _set_new_mode
 _stricmp
 _strlwr
 _strnicmp
+_strtoi64
+_strtoui64
 _strupr_s
 _time64
 _tzset
@@ -7660,6 +8122,7 @@ bin\win64\vrmonitor.exe
 bin\win64\vrservice.exe
 bin\win64\vrstartup.exe
 block
+bool
 bool __cdecl QCPAxisRect::removeAxis(class QCPAxis *)
 bool __cdecl QCPColorScale::rangeDrag(void) const
 bool __cdecl QCPColorScale::rangeZoom(void) const
@@ -7682,6 +8145,10 @@ bug.txt
 bugreport.zip
 bugsub
 bulgarian
+bytes
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\steammessages_unified_base.steamclient.pb.cc
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_base.pb.cc
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_dashboardrequest.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrserviceclient.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\ipcwin32.cpp
@@ -7796,6 +8263,7 @@ disableAsyncCompositor
 disableenhancedpowermanagement
 dismissedWarnings
 doNotFadeToGrid
+double
 double __cdecl QCPBars::selectTest(const class QPointF &,bool,class QVariant *) const
 double __cdecl QCPGraph::pointDistance(const class QPointF &) const
 double __cdecl QCPGraph::selectTest(const class QPointF &,bool,class QVariant *) const
@@ -7847,6 +8315,7 @@ enabled
 english
 entries
 entryName
+enum
 enum QCPAxis::AxisType __cdecl QCPAxis::marginSideToAxisType(enum QCP::MarginSide)
 environment
 environmentMode
@@ -7884,6 +8353,7 @@ exitCode
 exitStatus
 expecting another \u token to begin the second half of a unicode surrogate pair
 explorer
+extend .$0 {\n
 external
 externalUpdate
 external_drivers
@@ -7908,7 +8378,10 @@ firmware2.bin
 firmware_update
 firmware_update.txt
 firmwareupdate
+fixed32
+fixed64
 flOpacity
+float
 font
 font-size: 16pt;
 fopen
@@ -7939,6 +8412,16 @@ glClear
 glClearColor
 global
 globalMousePosition
+google.protobuf.Empty
+google.protobuf.EnumOptions
+google.protobuf.EnumValueOptions
+google.protobuf.FieldOptions
+google.protobuf.FileOptions
+google.protobuf.MessageOptions
+google.protobuf.MethodOptions
+google.protobuf.ServiceOptions
+google.protobuf.StreamOptions
+google/protobuf/descriptor.proto
 gpCandy
 gpCold
 gpGeography
@@ -7964,6 +8447,7 @@ graphKey
 greek
 green_color
 grid
+group
 hContext
 hWebConsole
 handlers
@@ -8074,9 +8558,12 @@ indentation
 index
 index out of bounds:
 indexhmd
+infinity
 installdriver
 insufficient lookahead
 int __cdecl QCPAxisRect::calculateAutoMargin(enum QCP::MarginSide)
+int32
+int64
 internal
 internal axis rect was deleted
 internal color axis undefined
@@ -8131,6 +8618,7 @@ layerChanged
 layerable is already child of this layer
 layerable is not child of this layer
 layout
+ldiv
 legend
 legendClick
 legendDoubleClick
@@ -8186,7 +8674,11 @@ main
 makecompositorfullscreen
 malloc
 manifest.vrfirmware
+map key must name a scalar or string field.
+map type is only allowed for fields with a message type.
+map type is only allowed for repeated fields.
 map/set<T> too long
+map_key must not name a repeated field.
 margins
 maximum
 maximumSize
@@ -8197,6 +8689,7 @@ memcmp
 memcpy
 memmove
 memset
+message
 message_id
 mfplat.dll
 minimum
@@ -8294,6 +8787,7 @@ openvr.tool.steamvr_tutorial
 openvr_api.dll
 openvrpaths.vrpath
 openxr
+optional
 outerRect
 outlierStyle
 outliers
@@ -8311,6 +8805,7 @@ parent plot not defined
 parentLayerable
 parentLegend
 parentPlot
+parse
 part
 parts
 passed axis doesn't have this axis rect as parent axis rect
@@ -8395,16 +8890,19 @@ refreshPriority
 refresh_openxr_tab
 refreshrate
 refreshstatus
+registered: 
 rejectDupKeys
 reloadstylesheets
 remove
 removeallrelevantusbdevices
 removeusbhelper.exe
 removeusbhelper.exe.log
+repeated
 replot
 request_handlers
 request_handlers_response
 requested point distance on graph
+required
 rescaleAxes
 resetcamerasettings
 resetcollisionbounds
@@ -8498,12 +8996,16 @@ setup-end
 setup-runroomsetup
 setup-showui
 setupwindow
+sfixed32
+sfixed64
 shaders/d3d11/overlay_viewer_ps.fxo
 shaders/d3d11/overlay_viewer_vs.fxo
 shell32.dll,Control_RunDLL mmsys.cpl,,0
 showMirrorView
 showPerfGraph
 show_window
+sint32
+sint64
 size
 soundcontrolpanel
 spAxis
@@ -8572,6 +9074,7 @@ steam://url/CommunityFilePage/%llu
 steam://url/SteamWorkshopPage/%u
 steam_api64
 steam_api64.dll
+steammessages_unified_base.steamclient.proto
 steamvr
 steamvr.vrsettings
 steamvr://overlayviewer
@@ -8610,10 +9113,13 @@ strURLLink
 strValue
 strWorkingDirectory
 strcat_s
+strchr
 strcmp
 strftime
 strictRoot
+string
 string too long
+strings::Substitute format string invalid: asked for "$
 strncat
 strncmp
 strncpy
@@ -8638,6 +9144,7 @@ subTickCount
 subTickLengthIn
 subTickLengthOut
 subTickPen
+subtype mismatch
 successful
 supersampleManualOverride
 supersampleScale
@@ -8659,12 +9166,14 @@ terminate
 test_error
 testcontrollerwindow
 text
+text format contains deprecated field "
 text/plain
 text/uri-list
 textAlignment
 textColor
 th_th
 thai
+the global scope
 there is no layer with name
 thumbSize
 thumbnail
@@ -8717,13 +9226,16 @@ twoColored
 type
 ui/SystemReportTextBrowser/fontSize
 uint16_t
+uint32
 uint32_t
+uint64
 uintptr_t
 uk_ua
 ukrainian
 unBaseStationSerialNumber
 unBasestationSerialNumber
 unDevice
+uninterpreted_option
 unknown
 unknown zip result code
 upLayout
@@ -8874,6 +9386,7 @@ vrserver.exe
 vrserver.previous.txt
 vrserver.txt
 vrservice
+vrshared_base.proto
 vrstartup.exe
 vrwebhelper
 vrwebhelper.exe
@@ -8905,6 +9418,7 @@ wizard_height
 wizard_width
 workingDirectory
 workshop_%s/lastFile
+wrong submessage type
 wtAbsolute
 wtAxisRectRatio
 wtPlotCoords

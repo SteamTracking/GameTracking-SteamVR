@@ -63,7 +63,6 @@ var CLSTAMP = "steamdb";
           Zkm: () => _._,
           _: () => _._,
           _81: () => _._,
-          _h3: () => _._,
           _nH: () => _._,
           aXN: () => _._,
           aqc: () => _._,
@@ -85,7 +84,6 @@ var CLSTAMP = "steamdb";
           k2$: () => _._,
           kGj: () => _._,
           kSV: () => _._,
-          ke3: () => _._,
           kuU: () => _._,
           lo4: () => _._,
           lqd: () => _._,
@@ -200,7 +198,8 @@ var CLSTAMP = "steamdb";
             (_[(_.Auto = 0)] = "Auto"),
               (_[(_.Low = 1)] = "Low"),
               (_[(_.Medium = 2)] = "Medium"),
-              (_[(_.High = 3)] = "High");
+              (_[(_.High = 3)] = "High"),
+              (_[(_.Ultra = 4)] = "Ultra");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.TrackingResult_Uninitialized = 1)] =
@@ -570,6 +569,14 @@ var CLSTAMP = "steamdb";
         window.LocalizationManager = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
+        function _(_, _, _) {
+          return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
+        }
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
@@ -684,6 +691,8 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return _.createElement(
@@ -695,7 +704,7 @@ var CLSTAMP = "steamdb";
             _.label,
           );
         }
-        (0, __webpack_require__("chunkid").configure)({
+        (0, _.configure)({
           enforceActions: "never",
         });
         let _ = class extends _.Component {
@@ -767,12 +776,12 @@ var CLSTAMP = "steamdb";
                 sMessageText: _.sMessageText,
                 sButtonTexts: _.sButtonTexts,
               }),
-              null === _.Ay$ ||
-                void 0 === _.Ay$ ||
-                _.Ay$.VRClient.ShowDashboardOverlay({
-                  overlayKey: _._,
-                  sReason: "OnRenderMessageOverlay",
-                });
+              (0, _._)(
+                _._.ShowDashboardAndSwitchToFrame(
+                  _._,
+                  "OnRenderMessageOverlay",
+                ),
+              );
           }
           ButtonClicked(_) {
             if (!_.Ay$)
@@ -978,7 +987,7 @@ var CLSTAMP = "steamdb";
     })();
   var _ = _._(
     void 0,
-    [967, 991, 982, 305, 527, 170, 452, 797, 906, 500, 300],
+    [967, 991, 982, 305, 527, 170, 452, 797, 500, 148, 906],
     () => _(1583),
   );
   _ = _._(_);

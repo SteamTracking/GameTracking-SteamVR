@@ -343,6 +343,9 @@ var CLSTAMP = "steamdb";
       _.Message;
       _.Message;
       _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -404,6 +407,232 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "VRLink_DashboardActionInvoked";
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.reason || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  reason: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  target: {
+                    _: 2,
+                    _: _,
+                  },
+                  dashboard_visibility_action: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  relatch_dashboard: {
+                    _: 4,
+                    _: _,
+                  },
+                  vrlink_request_split: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamVR_DashboardRequest";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.frame_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  frame_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  page_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  overlay_key: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  overlay_key_references_entire_frame: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  overlay_key_vrlink_namespace: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamVR_DashboardRequest_Target";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.condition || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  condition: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  deadzone: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamVR_DashboardRequest_Relatch";
         }
       }
     },
@@ -553,7 +782,7 @@ var CLSTAMP = "steamdb";
                     _: 6,
                     _: _,
                   },
-                  steamui_page_overlay_keys: {
+                  overlay_keys: {
                     _: 7,
                     _: !0,
                     _: !0,
@@ -2717,6 +2946,103 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.request || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  request: {
+                    _: 1,
+                    _: _._.readBytes,
+                    _: _._.writeBytes,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ShowOrHideDashboardOrFrame_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ShowOrHideDashboardOrFrame_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.user_brightness_value || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -4829,6 +5155,11 @@ var CLSTAMP = "steamdb";
           msgClassRequest_t: _,
           msgClassResponse_t: _,
           strMethod: "ShowOverlay",
+        },
+        "ShowOrHideDashboardOrFrame#1": {
+          msgClassRequest_t: _,
+          msgClassResponse_t: _,
+          strMethod: "ShowOrHideDashboardOrFrame",
         },
         "SetDisplayBrightness#1": {
           msgClassRequest_t: _,
@@ -7096,7 +7427,7 @@ var CLSTAMP = "steamdb";
           }),
           _.createElement(_._, {
             label: (0, _._)("#Settings_VersionInfo_WebpackBuildTime"),
-            value: new Date(1792183943e3).toLocaleString() + "",
+            value: new Date(1793651043e3).toLocaleString() + "",
           }),
           _.createElement(_._, {
             label: (0, _._)("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -7252,6 +7583,7 @@ var CLSTAMP = "steamdb";
         }
       });
       (_.Name = "general_settings"), (_ = _ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       const _ = (_) => {
         var _;
@@ -7602,8 +7934,1004 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      const _ = -1,
+        _ = "__unset__",
+        _ = "__custom__";
+      function _() {
+        return {
+          sReason: "Manual Dashboard Request",
+          eVisibilityAction: 1,
+          bIncludeTarget: !0,
+          sFrame: _,
+          sCustomFrameID: "",
+          sPage: _,
+          sCustomPageID: "",
+          sOverlayKey: _,
+          sCustomOverlayKey: "",
+          nReferencesEntireFrame: _,
+          eNamespace: _,
+          bIncludeRelatch: !1,
+          eRelatchCondition: _,
+          eRelatchDeadzone: _,
+          eSplit: _,
+          nDelaySec: 0,
+        };
+      }
+      const _ = (0, _.observable)(_()),
+        _ = _.observable.array([], {
+          deep: !1,
+        }),
+        _ = (0, _.observable)({
+          nSecondsLeft: 0,
+        });
+      let _ = 0;
+      const _ = (0, _.action)((_, _) => {
+          _[_] = _;
+        }),
+        _ = (0, _.action)(() => {
+          Object.assign(_, _());
+        });
+      function _(_) {
+        if (/^\s*\d+\s*$/.test(_)) return Number.parseInt(_, 10);
+      }
+      const _ = (0, _.action)((_) => {
+          console.log("Manual Dashboard Request: sending", _),
+            (0, _._)(_),
+            _.unshift({
+              sTime: new Date().toLocaleTimeString(),
+              request: _,
+            }),
+            _.length > 10 && _.splice(10);
+        }),
+        _ = (0, _.action)(() => {
+          window.clearInterval(_), (_ = 0), (_.nSecondsLeft = 0);
+        }),
+        _ = (0, _.action)((_, _) => {
+          _(),
+            _ <= 0
+              ? _(_)
+              : ((_.nSecondsLeft = _),
+                (_ = window.setInterval(
+                  (0, _.action)(() => {
+                    _.nSecondsLeft--, _.nSecondsLeft <= 0 && (_(), _(_));
+                  }),
+                  1e3,
+                )));
+        });
+      const _ = (_) =>
+          _.createElement(
+            _._,
+            {
+              className: "SettingsItem",
+            },
+            _.createElement(
+              "div",
+              {
+                className: "Label",
+              },
+              _.label,
+            ),
+            _.createElement("input", {
+              type: "text",
+              style: {
+                minWidth: "24em",
+                fontSize: "inherit",
+              },
+              value: _.value,
+              placeholder: _.placeholder,
+              onChange: (_) => _.onChange(_.target.value),
+            }),
+          ),
+        _ = (0, _._)(() => {
+          var _, _;
+          const _ = _._.frames,
+            _ =
+              _.sFrame != _ && _.sFrame != _
+                ? _._.GetFrame(Number(_.sFrame))
+                : void 0,
+            _ = [
+              {
+                value: _,
+                sLabel: "Unset",
+              },
+              {
+                value: _,
+                sLabel: "Custom (type an ID)",
+              },
+              _._.Separator,
+              ...__webpack_require__.map((_) => {
+                var _;
+                return {
+                  value: String(_.frameID),
+                  sLabel: `${_.title}  [#${_.frameID}, ${_.isRemoteFrame ? "remote" : "local"}, ${null !== (_ = _.yWq[_.docking.dockLocation]) && void 0 !== _ ? _ : _.docking.dockLocation}]`,
+                };
+              }),
+            ],
+            _ =
+              null !==
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.asLocalFrame) ||
+                  void 0 === _
+                    ? void 0
+                    : _.pages) && void 0 !== _
+                ? _
+                : [],
+            _ = [
+              {
+                value: _,
+                sLabel: "Unset",
+              },
+              {
+                value: _,
+                sLabel: "Custom (type an ID)",
+              },
+            ];
+          if (_.length > 0) {
+            _.push(_._.Separator);
+            for (const _ of _)
+              _.push({
+                value: String(_.pageID),
+                sLabel: `Page ${_.pageID}${_.summonOverlayKey ? `: ${_.summonOverlayKey}` : ""}${_.isActivePage ? " (active)" : ""}`,
+              });
+          }
+          const _ = new Map();
+          for (const _ of _)
+            for (const _ of _.associatedSummonOverlayKeys)
+              _.has(_) || _.set(_, `${_}  [${_.title}, #${_.frameID}]`);
+          for (const _ of [_._, _._, _._, _._, _._])
+            _.has(_) || _.set(_, `${_}  [no Frame here]`);
+          const _ = [
+            {
+              value: _,
+              sLabel: "Unset",
+            },
+            {
+              value: _,
+              sLabel: "Custom (type a key)",
+            },
+            _._.Separator,
+            ...Array.from(_, ([_, _]) => ({
+              value: _,
+              sLabel: _,
+            })),
+          ];
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_._, {
+              label: "frame_id",
+              items: _,
+              value: _.sFrame,
+              onChange: (_) => {
+                _("sFrame", _), _("sPage", _);
+              },
+              subsection:
+                _.sFrame == _ &&
+                _.createElement(_, {
+                  label: "Frame ID",
+                  value: _.sCustomFrameID,
+                  placeholder: "e.g. 2147483649",
+                  onChange: (_) => _("sCustomFrameID", _),
+                }),
+            }),
+            _.createElement(_._, {
+              label: "page_id",
+              items: _,
+              value: _.sPage,
+              onChange: (_) => _("sPage", _),
+              subsection:
+                _.sPage == _ &&
+                _.createElement(_, {
+                  label: "Page ID",
+                  value: _.sCustomPageID,
+                  onChange: (_) => _("sCustomPageID", _),
+                }),
+            }),
+            _.createElement(_._, {
+              label: "overlay_key",
+              items: _,
+              value: _.sOverlayKey,
+              onChange: (_) => _("sOverlayKey", _),
+              subsection:
+                _.sOverlayKey == _ &&
+                _.createElement(_, {
+                  label: "Overlay Key",
+                  value: _.sCustomOverlayKey,
+                  onChange: (_) => _("sCustomOverlayKey", _),
+                }),
+            }),
+            _.createElement(_._, {
+              label: "overlay_key_references_entire_frame",
+              items: [
+                {
+                  value: _,
+                  sLabel: "Unset",
+                },
+                {
+                  value: 0,
+                  sLabel: "False",
+                },
+                {
+                  value: 1,
+                  sLabel: "True",
+                },
+              ],
+              value: _.nReferencesEntireFrame,
+              onChange: (_) => _("nReferencesEntireFrame", _),
+            }),
+            _.createElement(_._, {
+              label: "overlay_key_vrlink_namespace",
+              items: [
+                {
+                  value: _,
+                  sLabel: "Unset",
+                },
+                {
+                  value: 0,
+                  sLabel: "Origin",
+                },
+                {
+                  value: 1,
+                  sLabel: "Client",
+                },
+                {
+                  value: 2,
+                  sLabel: "Server",
+                },
+              ],
+              value: _.eNamespace,
+              onChange: (_) => _("eNamespace", _),
+            }),
+          );
+        }),
+        _ = (0, _._)(() =>
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_._, {
+              label: "condition",
+              items: [
+                {
+                  value: _,
+                  sLabel: "Unset",
+                },
+                {
+                  value: 0,
+                  sLabel: "When Shown",
+                },
+                {
+                  value: 1,
+                  sLabel: "Always",
+                },
+              ],
+              value: _.eRelatchCondition,
+              onChange: (_) => _("eRelatchCondition", _),
+            }),
+            _.createElement(_._, {
+              label: "deadzone",
+              items: [
+                {
+                  value: _,
+                  sLabel: "Unset",
+                },
+                {
+                  value: 4,
+                  sLabel: "Large",
+                },
+                {
+                  value: 8,
+                  sLabel: "Small",
+                },
+                {
+                  value: 12,
+                  sLabel: "None, then Small Elastic",
+                },
+              ],
+              value: _.eRelatchDeadzone,
+              onChange: (_) => _("eRelatchDeadzone", _),
+            }),
+          ),
+        ),
+        _ = (0, _._)(() =>
+          0 == _.length
+            ? null
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement("hr", null),
+                _.createElement(
+                  "div",
+                  {
+                    className: "SettingsItem",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: "Label",
+                    },
+                    "Sent",
+                  ),
+                ),
+                _.map((_, _) =>
+                  _.createElement(
+                    _._,
+                    {
+                      key: _,
+                      className: "SettingsItem",
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        className: "ButtonControl",
+                        onClick: () => _(_.request),
+                      },
+                      "Resend",
+                    ),
+                    _.createElement(
+                      "pre",
+                      {
+                        style: {
+                          margin: "0 0 0 1em",
+                          whiteSpace: "pre-wrap",
+                        },
+                      },
+                      _.sTime,
+                      " ",
+                      JSON.stringify(_.request),
+                    ),
+                  ),
+                ),
+              ),
+        ),
+        _ = (0, _._)(() => {
+          const _ = "dashboardrequests",
+            _ = _._.routePageSection == _,
+            { request: _, rgErrors: _ } = (function (_) {
+              const _ = [],
+                _ = {};
+              if (
+                (_.sReason && (_.reason = _.sReason),
+                _.eVisibilityAction != _ &&
+                  (_.dashboard_visibility_action = _.eVisibilityAction),
+                _.bIncludeTarget)
+              ) {
+                const _ = {};
+                if (_.sFrame == _) {
+                  const _ = _(_.sCustomFrameID);
+                  null == _
+                    ? _.push(
+                        `Frame ID "${_.sCustomFrameID}" isn't a number; leaving frame_id out.`,
+                      )
+                    : (_.frame_id = _);
+                } else _.sFrame != _ && (_.frame_id = Number(_.sFrame));
+                if (_.sPage == _) {
+                  const _ = _(_.sCustomPageID);
+                  null == _
+                    ? _.push(
+                        `Page ID "${_.sCustomPageID}" isn't a number; leaving page_id out.`,
+                      )
+                    : (_.page_id = _);
+                } else _.sPage != _ && (_.page_id = Number(_.sPage));
+                _.sOverlayKey == _
+                  ? _.sCustomOverlayKey
+                    ? (_.overlay_key = _.sCustomOverlayKey)
+                    : _.push(
+                        "Custom overlay key is empty; leaving overlay_key out.",
+                      )
+                  : _.sOverlayKey != _ && (_.overlay_key = _.sOverlayKey),
+                  _.nReferencesEntireFrame != _ &&
+                    (_.overlay_key_references_entire_frame =
+                      1 == _.nReferencesEntireFrame),
+                  _.eNamespace != _ &&
+                    (_.overlay_key_vrlink_namespace = _.eNamespace),
+                  (_.target = _);
+              }
+              return (
+                _.bIncludeRelatch &&
+                  ((_.relatch_dashboard = {}),
+                  _.eRelatchCondition != _ &&
+                    (_.relatch_dashboard.condition = _.eRelatchCondition),
+                  _.eRelatchDeadzone != _ &&
+                    (_.relatch_dashboard.deadzone = _.eRelatchDeadzone)),
+                _.eSplit != _ && (_.vrlink_request_split = _.eSplit),
+                {
+                  request: _,
+                  rgErrors: _,
+                }
+              );
+            })(_),
+            _ = _.nDelaySec > 0 ? `Send in ${_.nDelaySec}sec` : "Send";
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: "SettingsItem Button",
+              },
+              _.createElement(
+                _._,
+                {
+                  className: "ButtonControl",
+                  onClick: () => _._.setRoutePageSection(_),
+                },
+                "Manual Dashboard Requests",
+              ),
+            ),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  fullScreen: !0,
+                  header: "Manual Dashboard Requests",
+                  subheader: `${_._.m_bIsVRLinkClient ? "VRLink client (headset)" : _._.m_bIsVRLinkServer ? "VRLink server (PC)" : "Not VRLink"}${_._.unifiedDashboardEnabled ? ", unified dashboard" : ""}, VR Settings ${(0, _.R$f)() == _.OH$.Overlay ? "in VR" : "on the desktop"}`,
+                  footer: _.createElement(_._, {
+                    leftControls: [
+                      _.nSecondsLeft > 0
+                        ? _.createElement(
+                            _._,
+                            {
+                              key: "cancel",
+                              className: "ButtonControl",
+                              onClick: _,
+                            },
+                            "Cancel (sending in ",
+                            _.nSecondsLeft,
+                            "sec)",
+                          )
+                        : _.createElement(
+                            _._,
+                            {
+                              key: "send",
+                              className: "ButtonControl",
+                              onClick: () => _(_, _.nDelaySec),
+                            },
+                            _,
+                          ),
+                      _.createElement(
+                        _._,
+                        {
+                          key: "reset",
+                          className: "ButtonControl",
+                          onClick: _,
+                        },
+                        "Reset Form",
+                      ),
+                    ],
+                    onDismissRequested: () => _._.setRoutePageSection(null),
+                  }),
+                },
+                _.createElement(_, {
+                  label: "reason",
+                  value: _.sReason,
+                  onChange: (_) => _("sReason", _),
+                }),
+                _.createElement(_._, {
+                  label: "dashboard_visibility_action",
+                  items: [
+                    {
+                      value: _,
+                      sLabel: "Unset",
+                    },
+                    _._.Separator,
+                    {
+                      value: 0,
+                      sLabel: "No Visibility Change",
+                    },
+                    {
+                      value: 1,
+                      sLabel: "Show Or Hide Depending On Target",
+                    },
+                    {
+                      value: 2,
+                      sLabel: "Show",
+                    },
+                    {
+                      value: 3,
+                      sLabel: "Hide",
+                    },
+                    {
+                      value: 4,
+                      sLabel: "Toggle",
+                    },
+                    {
+                      value: 5,
+                      sLabel: "Enter Diminished",
+                    },
+                  ],
+                  value: _.eVisibilityAction,
+                  onChange: (_) => _("eVisibilityAction", _),
+                }),
+                _.createElement(_._, {
+                  label: "target",
+                  value: _.bIncludeTarget,
+                  onLabel: "Include",
+                  offLabel: "Omit",
+                  onChange: (_) => _("bIncludeTarget", _),
+                  onSubsection: _.createElement(_, null),
+                }),
+                _.createElement(_._, {
+                  label: "relatch_dashboard",
+                  value: _.bIncludeRelatch,
+                  onLabel: "Include",
+                  offLabel: "Omit",
+                  onChange: (_) => _("bIncludeRelatch", _),
+                  onSubsection: _.createElement(_, null),
+                }),
+                _.createElement(_._, {
+                  label:
+                    "vrlink_request_split (routing internals; normally Unset)",
+                  items: [
+                    {
+                      value: _,
+                      sLabel: "Unset",
+                    },
+                    {
+                      value: 0,
+                      sLabel: "Not Split",
+                    },
+                    {
+                      value: 1,
+                      sLabel: "For Client",
+                    },
+                    {
+                      value: 2,
+                      sLabel: "For Server",
+                    },
+                  ],
+                  value: _.eSplit,
+                  onChange: (_) => _("eSplit", _),
+                }),
+                _.createElement(_._, {
+                  label:
+                    "Send delay (time to hide the dashboard, float a Frame, etc.)",
+                  items: [0, 3, 5, 10].map((_) => ({
+                    value: _,
+                    sLabel: _ ? `${_}sec` : "None",
+                  })),
+                  value: _.nDelaySec,
+                  onChange: (_) => _("nDelaySec", _),
+                }),
+                _.createElement("hr", null),
+                _.map((_, _) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: "SettingsItem",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: "Label",
+                      },
+                      "Warning: ",
+                      _,
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "pre",
+                  {
+                    style: {
+                      userSelect:
+                        (0, _.R$f)() == _.OH$.Overlay ? "none" : "all",
+                    },
+                  },
+                  JSON.stringify(_, null, 2),
+                ),
+                _.createElement(_, null),
+              ),
+          );
+        }),
+        _ = "/settings/driver_vrlink/automaticBandwidth",
+        _ = "/settings/driver_vrlink/targetBandwidth",
+        _ = "/settings/driver_vrlink/automaticStreamFormatWidth",
+        _ = "/settings/driver_vrlink/streamFormatWidth",
+        _ = "/settings/driver_vrlink/enableEncryption",
+        _ = "/settings/driver_vrlink/wirelessShutdownTimeout",
+        _ = "/settings/driver_vrlink/useSharpening",
+        _ = "/settings/driver_vrlink/sharpeningStrength",
+        _ = "/settings/steamvr/streamQuality",
+        _ = "/settings/steamvr/preferredFoveatedAngle",
+        _ = "/settings/driver_vrlink/useOSC",
+        _ = "/settings/driver_vrlink/useOSCFace",
+        _ = "/settings/driver_vrlink/OSCOutPort",
+        _ = "/settings/driver_vrlink/enableHandTracking",
+        _ = "/settings/driver_vrlink/showAdvancedGraphs",
+        _ = "/settings/driver_vrlink/allowVolumeSync",
+        _ = "/settings/driver_vrlink/enableQoS",
+        _ = "/settings/driver_vrlink/allowMultipleLinks",
+        _ = "/settings/driver_vrlink/enableHmdAutoConnect",
+        _ = "/settings/steamvr/highlightFoveatedArea",
+        _ = [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _._];
+      function _() {
+        const _ = (0, _._)("/driver_vrlink/network_tested_bandwidth");
+        return _.createElement(_._, {
+          name: _,
+          label: (0, _._)("#Settings_VRLink_TargetBandwidthMbps"),
+          min: 25,
+          max: 350,
+          step: 5,
+          detents: void 0 !== _ ? [_] : void 0,
+          valueStyleVariant: _._.OnHandle,
+          renderValue: (_) => _.toFixed(0),
+        });
+      }
+      const _ = (0, _._)(() => {
+        var _, _;
+        const _ = null !== (_ = _._.settings.get(_)) && void 0 !== _ ? _ : 0,
+          _ = (0, _._)("/driver_vrlink/foveation_enabled"),
+          _ = (0, _._)("/driver_vrlink/default_inner_horizontal_degrees"),
+          _ = (0, _._)("/driver_vrlink/default_stream_format_width"),
+          _ =
+            null === (_ = _._.settings.get(_)) || void 0 === _ || _
+              ? _
+              : _._.settings.get(_),
+          _ = 1 == _._.settings.get(_);
+        if (!_ || !_ || !_ || _) return null;
+        const _ = Math.max(_ - 20, 20),
+          _ = Math.min(_ + 20, 90),
+          _ = Math.min(Math.max(_ + _, _), _),
+          _ = (_) =>
+            Math.round(
+              ((_ / (2 * Math.tan((0.5 * _ * Math._) / 180))) * Math._) / 180,
+            );
+        return _.createElement(_._, {
+          label: (0, _._)("#Settings_VRLink_PreferredFoveatedSharpness"),
+          value: -_,
+          onChange: (_) => _._.SetSettingsValue(_, (-_ - _).toString()),
+          min: -_,
+          max: -_,
+          step: 1,
+          detents: [-_],
+          valueStyleVariant: _._.OnHandle,
+          renderValue: (_) => _(-_).toFixed(0),
+          minLabel: (0, _._)(
+            "#Settings_VRLink_PreferredFoveatedSharpness_MoreArea",
+          ),
+          maxLabel: (0, _._)(
+            "#Settings_VRLink_PreferredFoveatedSharpness_MoreDetail",
+          ),
+          explainer: _.createElement(
+            "span",
+            {
+              style: {
+                fontVariantNumeric: "tabular-nums",
+              },
+            },
+            (0, _._)(
+              "#Settings_VRLink_FoveatedPixelsPerDegreeAndAngle",
+              _(_).toFixed(0),
+              _.toFixed(0),
+            ),
+          ),
+          enabled: _._.m_bIsVRLinkServer,
+        });
+      });
+      function _() {
+        const _ = (0, _._)("/driver_vrlink/min_stream_format_width"),
+          _ = (0, _._)("/driver_vrlink/max_stream_format_width"),
+          _ = (0, _._)("/driver_vrlink/default_stream_format_width") || void 0;
+        return _.createElement(_._, {
+          name: _,
+          label: (0, _._)("#Settings_VRLink_FoveatedEncodedVideoSize"),
+          min: null != _ ? _ : 0,
+          max: null != _ ? _ : 0,
+          step: 64,
+          detents: void 0 !== _ ? [_] : void 0,
+          valueStyleVariant: _._.OnHandle,
+          renderValue: (_) => _.toFixed(0),
+        });
+      }
+      const _ = (0, _._)(() => {
+        var _;
+        const _ = (0, _._)("/driver_vrlink/foveation_enabled"),
+          _ = (0, _._)("/driver_vrlink/default_stream_format_width"),
+          _ = null === (_ = _._.settings.get(_)) || void 0 === _ || _,
+          _ = _ ? _ : "/settings/driver_vrlink/nonFoveatedStreamFormatWidth",
+          _ = _ ? _ : _._.settings.get(_),
+          _ = _ ? (((_ ? 4 : 2) * _ * _) / 1e6).toFixed(1) : void 0;
+        return _.createElement(_._, {
+          name: _,
+          label: (0, _._)("#Settings_VRLink_EncodedVideoSize"),
+          onLabel: (0, _._)("#Settings_Default"),
+          offLabel: (0, _._)("#Settings_Manual"),
+          offSubsection: _.createElement(_, null),
+          explainer:
+            void 0 !== _ &&
+            _.createElement(
+              "span",
+              {
+                style: {
+                  fontVariantNumeric: "tabular-nums",
+                },
+              },
+              (0, _._)("#Settings_VRLink_EncodedMegapixelsPerFrame", _),
+            ),
+        });
+      });
+      function _() {
+        return (0, _._)("/driver_vrlink/supports_eye_and_face_tracking")
+          ? _.createElement(_._, {
+              name: _._,
+              label: (0, _._)("#Settings_VRLink_ShareEyeTrackingData"),
+            })
+          : null;
+      }
+      function _() {
+        return (0, _._)("/driver_vrlink/supports_eye_and_face_tracking")
+          ? _.createElement(_._, {
+              name: _,
+              label: (0, _._)("#Settings_VRLink_UseOSC"),
+              explainer: (0, _._)("#Settings_VRLink_UseOSC_Explainer"),
+              visibility: _._.Advanced,
+              onSubsection: _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_._, {
+                  name: _,
+                  label: (0, _._)("#Settings_VRLink_UseOSCFace"),
+                }),
+                _.createElement(_._, {
+                  name: _,
+                  label: (0, _._)("#Settings_VRLink_OSCOutPort"),
+                  items: [
+                    {
+                      value: 9e3,
+                      sLabel: "9000 (Direct)",
+                    },
+                    {
+                      value: 9015,
+                      sLabel: "9015 (Alt)",
+                    },
+                  ],
+                }),
+              ),
+            })
+          : null;
+      }
+      function _() {
+        return (0, _._)("/driver_vrlink/supports_hand_tracking")
+          ? _.createElement(_._, {
+              name: _,
+              label: (0, _._)("#Settings_VRLink_EnableHandTracking"),
+            })
+          : null;
+      }
+      function _() {
+        const _ = (0, _._)("/driver_vrlink/client_version");
+        return _.createElement(_._, {
+          label: (0, _._)("#Settings_VRLink_ClientVersion"),
+          value: _,
+        });
+      }
+      function _() {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: "SettingsItem",
+            },
+            _.createElement(
+              "div",
+              {
+                className: "Label Title Large",
+              },
+              (0, _._)("#Settings_VRLink_ImageQuality"),
+            ),
+          ),
+          _.createElement(_._, {
+            name: _,
+            label: (0, _._)("#Settings_VRLink_TargetBandwidth"),
+            onLabel: (0, _._)("#Settings_Auto"),
+            offLabel: (0, _._)("#Settings_Manual"),
+            offSubsection: _.createElement(_, null),
+          }),
+          _.createElement(_, null),
+          _.createElement(_, null),
+          _.createElement(_._, {
+            name: _,
+            label: (0, _._)("#Settings_VRLink_Sharpening"),
+            onSubsection: _.createElement(_._, {
+              name: _,
+              label: (0, _._)("#Settings_VRLink_SharpeningStrength"),
+              min: 0,
+              max: 1,
+              step: 0.05,
+              valueStyleVariant: _._.OnHandle,
+              renderValue: (_) => _.toFixed(2),
+            }),
+          }),
+          !_._.m_bIsVRLinkClient && _.createElement(_._, null),
+          !_._.m_bIsVRLinkClient &&
+            _.createElement(_._, {
+              name: _,
+              label: (0, _._)("#Settings_VRLink_HighlightFoveatedArea"),
+              visibility: _._.Advanced,
+              items: [
+                {
+                  value: _._.Off,
+                  sLabel: (0, _._)("#Settings_ToggleButton_Off"),
+                },
+                {
+                  value: _._._,
+                  sLabel: (0, _._)("#Settings_ToggleButton_On"),
+                },
+                {
+                  value: _._.OnSolid,
+                  sLabel: (0, _._)(
+                    "#Settings_VRLink_HighlightFoveatedArea_OnSolid",
+                  ),
+                },
+              ],
+            }),
+          !_._.m_bIsVRLinkClient &&
+            _.createElement(_._, {
+              name: _,
+              label: (0, _._)("#Settings_VRLink_StreamQuality"),
+              visibility: _._.Advanced,
+              items: [
+                {
+                  value: 1,
+                  sLabel: (0, _._)("#Settings_VRLink_StreamQuality_Legacy"),
+                },
+                {
+                  value: 0,
+                  sLabel: (0, _._)("#Settings_VRLink_StreamQuality_Default"),
+                },
+              ],
+            }),
+          _.createElement("hr", null),
+        );
+      }
+      function _() {
+        return (0, _._)()
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: "SettingsItem",
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: "Label Title",
+                  },
+                  (0, _._)("#Settings_VRLink_Advanced"),
+                ),
+              ),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_._, {
+                name: _,
+                label: (0, _._)("#Settings_VRLink_AllowVolumeControlSync"),
+                items: [
+                  {
+                    value: !0,
+                    sLabel: (0, _._)("#Settings_ToggleButton_Enable"),
+                  },
+                  {
+                    value: !1,
+                    sLabel: (0, _._)("#Settings_ToggleButton_Disable"),
+                  },
+                ],
+                explainer: (0, _._)(
+                  "#Settings_VRLink_AllowVolumeControlSync_Explainer",
+                ),
+                visibility: _._.Advanced,
+              }),
+              _.createElement(_._, {
+                name: _,
+                label: (0, _._)("#Settings_VRLink_EnableQoS"),
+                explainer: (0, _._)("#Settings_VRLink_EnableQoS_Explainer"),
+                visibility: _._.Advanced,
+              }),
+              _.createElement(_._, {
+                name: _,
+                label: (0, _._)("#Settings_VRLink_AllowMultipleLinks"),
+                items: [
+                  {
+                    value: !0,
+                    sLabel: (0, _._)("#Settings_ToggleButton_Enable"),
+                  },
+                  {
+                    value: !1,
+                    sLabel: (0, _._)("#Settings_ToggleButton_Disable"),
+                  },
+                ],
+                visibility: _._.Advanced,
+              }),
+              _.createElement(_._, {
+                name: _,
+                label: (0, _._)("#Settings_VRLink_Encryption"),
+                requiresRestart: !0,
+                visibility: _._.Advanced,
+              }),
+              _.createElement(_._, {
+                name: _,
+                label: (0, _._)("#Settings_VRLink_ShowAdvancedGraphs"),
+                visibility: _._.Advanced,
+              }),
+              _.createElement("hr", null),
+            )
+          : null;
+      }
+      let _ = class extends _._ {
+        constructor(_) {
+          super(_);
+        }
+        ResetToDefaults() {
+          for (const _ of _) _._.SetSettingsValue(_, null);
+        }
+        render() {
+          return this.props.active
+            ? _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, null),
+                _.createElement(_._, {
+                  name: _,
+                  label: (0, _._)("#Settings_VRLink_WirelessShutdownTimeout"),
+                  items: [
+                    {
+                      value: 0,
+                      sLabel: (0, _._)("#SettingsTime_Never"),
+                    },
+                    {
+                      value: 30,
+                      sLabel: (0, _._)("#SettingsTime_30s"),
+                    },
+                    {
+                      value: 60,
+                      sLabel: (0, _._)("#SettingsTime_1m"),
+                    },
+                    {
+                      value: 300,
+                      sLabel: (0, _._)("#SettingsTime_5m"),
+                    },
+                    {
+                      value: 600,
+                      sLabel: (0, _._)("#SettingsTime_10m"),
+                    },
+                    {
+                      value: 1200,
+                      sLabel: (0, _._)("#SettingsTime_20m"),
+                    },
+                    {
+                      value: 1800,
+                      sLabel: (0, _._)("#SettingsTime_30m"),
+                    },
+                    {
+                      value: 3600,
+                      sLabel: (0, _._)("#SettingsTime_1h"),
+                    },
+                  ],
+                }),
+                _.createElement(_._, {
+                  name: _,
+                  label: (0, _._)("#Settings_VRLink_EnableHmdAutoConnect"),
+                  explainer: (0, _._)(
+                    "#Settings_VRLink_EnableHmdAutoConnect_Explainer",
+                  ),
+                  visibility: _._.Advanced,
+                }),
+                _.createElement("hr", null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                this.makeResetToDefaultButton(),
+              )
+            : null;
+        }
+      };
       function _() {
         const [_, _] = _.useState();
         return _.createElement(
@@ -7641,6 +8969,9 @@ var CLSTAMP = "steamdb";
             ),
         );
       }
+      (_.Name = "driver_vrlink"),
+        (0, _._)([_._], _.prototype, "ResetToDefaults", null),
+        (_ = (0, _._)([_._], _));
       const _ = (0, _._)(() =>
           _.createElement(
             _._,
@@ -8208,6 +9539,10 @@ var CLSTAMP = "steamdb";
             _.Fragment,
             null,
             !1,
+            _.createElement("hr", null),
+            !1,
+            !1,
+            !1,
             !1,
             !1,
             !1,
@@ -8272,33 +9607,6 @@ var CLSTAMP = "steamdb";
                   sLabel: "8x",
                 },
               ],
-            }),
-            _.createElement(_._, {
-              name: "/settings/steamvr/overlayMips",
-              label: "System UI Mipmaps",
-              items: [
-                {
-                  value: 0,
-                  sLabel: "Off",
-                },
-                {
-                  value: 1,
-                  sLabel: "Box",
-                },
-                {
-                  value: 2,
-                  sLabel: "2x Downsample [8x8]",
-                },
-              ],
-            }),
-            _.createElement(_._, {
-              label: "System UI Mipbias",
-              name: "/settings/steamvr/overlayMipbias",
-              min: -0.5,
-              max: 0,
-              resetValue: -0.2,
-              valueStyleVariant: _._.OnHandle,
-              renderValue: (_) => _.toFixed(2),
             }),
             _._.m_bSupportsEyeTracking &&
               _.createElement(_._, {
@@ -8373,10 +9681,6 @@ var CLSTAMP = "steamdb";
               detents: [0.2],
               renderValue: (_) => (100 * _).toFixed(0) + " cm",
               step: 0.01,
-            }),
-            _.createElement(_._, {
-              label: "Enable Per-App Refresh Rate",
-              name: "/settings/internal/enablePerAppFPS",
             }),
             _.createElement(_._, {
               label: "Allow Dashboard auto-launch with SteamVR Home",
@@ -8488,6 +9792,7 @@ var CLSTAMP = "steamdb";
             !1,
             !1,
             !1,
+            _.createElement(_, null),
             _.createElement(_, null),
             _.createElement(_, null),
             _.createElement(_, null),
@@ -9634,51 +10939,9 @@ var CLSTAMP = "steamdb";
         }
       };
       (_.Name = "startupshutdown_settings"), (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _._ {
-        constructor(_) {
-          super(_);
-        }
-        render() {
-          var _;
-          if (!this.props.active) return null;
-          const _ =
-            null === VRHTML || void 0 === VRHTML
-              ? void 0
-              : VRHTML.VRProperties.GetBoolProperty(
-                  "/user/head",
-                  _.fD8.SupportsInHMDRoomSetup_Bool,
-                );
-          return _.createElement(
-            _.Fragment,
-            null,
-            this.schemaComponents,
-            !_._.m_bIsVRLinkClient &&
-              _ &&
-              _.createElement(_._, {
-                label: "Debug Region Coloring",
-                visibility: _._.Advanced,
-                value:
-                  null !==
-                    (_ = _._.settings.get(
-                      "/settings/driver_vrlink/debugRegionColoring",
-                    )) &&
-                  void 0 !== _ &&
-                  _,
-                onChange: (_) =>
-                  VRHTML.VRSettings.Set(
-                    "driver_vrlink",
-                    "debugRegionColoring",
-                    _,
-                  ),
-              }),
-            this.makeResetToDefaultButton(),
-          );
-        }
-      };
-      (_.Name = "driver_vrlink"), (_ = (0, _._)([_._], _));
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "vr_settings_top_center";
@@ -13907,6 +15170,8 @@ var CLSTAMP = "steamdb";
                   this.props.additionalClassName,
                 ),
                 title: this.props.title,
+                visibility: this.props.visibility,
+                explainer: this.props.explainer,
               },
               this.props.label &&
                 _.createElement(
@@ -13919,7 +15184,23 @@ var CLSTAMP = "steamdb";
                   },
                   this.props.label,
                 ),
-              _.createElement(_._, Object.assign({}, _)),
+              this.props.minLabel || this.props.maxLabel
+                ? _.createElement(
+                    "div",
+                    {
+                      className: "SliderWithMinMaxLabels",
+                    },
+                    _.createElement(_._, Object.assign({}, _)),
+                    _.createElement(
+                      "div",
+                      {
+                        className: "SliderMinMaxLabels",
+                      },
+                      _.createElement("span", null, this.props.minLabel),
+                      _.createElement("span", null, this.props.maxLabel),
+                    ),
+                  )
+                : _.createElement(_._, Object.assign({}, _)),
               void 0 !== this.props.resetValue &&
                 this.props.resetValue !== _._.settings.get(this.props.name) &&
                 _.createElement(
@@ -13943,7 +15224,10 @@ var CLSTAMP = "steamdb";
                       {
                         className: "ButtonControl",
                         onClick: () =>
-                          _._.SetSettingsValue(this.props.name, null),
+                          _._.SetSettingsValue(
+                            this.props.name,
+                            this.props.resetValue,
+                          ),
                       },
                       (0, _._)("#Settings_ResetToDefault"),
                     ),
@@ -14561,6 +15845,7 @@ var CLSTAMP = "steamdb";
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -15424,7 +16709,12 @@ var CLSTAMP = "steamdb";
                 value: _.pMg.High,
                 sLabel: (0, _._)("#Settings_High"),
               },
+              {
+                value: _.pMg.Ultra,
+                sLabel: (0, _._)("#Settings_Ultra"),
+              },
             ],
+            explainer: (0, _._)("#Settings_OverlayRenderQuality_Explainer"),
             visibility: _._.Advanced,
           });
         }
@@ -15453,9 +16743,8 @@ var CLSTAMP = "steamdb";
             : null;
         }
       }
-      const _ = (0, _._)(() => {
-        if (!VRHTML) return null;
-        let _ = !0;
+      function _() {
+        if (!VRHTML) return !1;
         if (
           VRHTML.VRProperties.GetBoolProperty(
             "/user/head",
@@ -15470,48 +16759,57 @@ var CLSTAMP = "steamdb";
               "/user/head",
               _.fD8.ActualTrackingSystemName_String,
             );
-          _ = !("oculus" === _ || "vrlink" === _);
+          return !("oculus" === _ || "vrlink" === _);
         }
-        const _ = VRHTML.VRClient.GetGraphicsHardwareVendorInfo();
-        _ = _ && _.bSupportsMotionSmoothing;
-        const _ =
-            _._.systemInfo &&
-            _._.systemInfo.os_type > 0 &&
-            _._.systemInfo.os_type < _._,
-          _ = (0, _._)(
-            _
-              ? "#Settings_Advanced_MotionSmoothing_Disabled_Win7"
-              : "#Settings_Advanced_MotionSmoothing_Disabled",
-          );
-        return _
-          ? _.createElement(_._, {
-              value: _._.motionSmoothing,
-              onChange: (_) => _._.setMotionSmoothing(_),
-              label: (0, _._)("#Settings_Advanced_MotionSmoothing_Header"),
-              title: (0, _._)("#Settings_Advanced_MotionSmoothing_Description"),
-            })
-          : _.createElement(
-              _._,
-              {
-                className: "SettingsItem",
-                title: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "Label",
-                },
-                (0, _._)("#Settings_Advanced_MotionSmoothing_Header"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: "Label Right",
-                },
-                (0, _._)("#Settings_NotSupported"),
-              ),
+        return VRHTML.VRClient.GetGraphicsHardwareVendorInfo()
+          .bSupportsMotionSmoothing;
+      }
+      const _ = (0, _._)(() => {
+          const _ =
+              _._.systemInfo &&
+              _._.systemInfo.os_type > 0 &&
+              _._.systemInfo.os_type < _._,
+            _ = (0, _._)(
+              _
+                ? "#Settings_Advanced_MotionSmoothing_Disabled_Win7"
+                : "#Settings_Advanced_MotionSmoothing_Disabled",
             );
-      });
+          return _.createElement(
+            _._,
+            {
+              className: "SettingsItem",
+              title: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: "Label",
+              },
+              (0, _._)("#Settings_Advanced_MotionSmoothing_Header"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: "Label Right",
+              },
+              (0, _._)("#Settings_NotSupported"),
+            ),
+          );
+        }),
+        _ = (0, _._)(() =>
+          VRHTML
+            ? _()
+              ? _.createElement(_._, {
+                  value: _._.motionSmoothing,
+                  onChange: (_) => _._.setMotionSmoothing(_),
+                  label: (0, _._)("#Settings_Advanced_MotionSmoothing_Header"),
+                  title: (0, _._)(
+                    "#Settings_Advanced_MotionSmoothing_Description",
+                  ),
+                })
+              : _.createElement(_, null)
+            : null,
+        );
       var _, _, _, _;
       !(function (_) {
         (_[(_.UseGlobal = 0)] = "UseGlobal"),
@@ -15646,25 +16944,6 @@ var CLSTAMP = "steamdb";
               ) && this.m_disableAsyncReprojection
             )
           );
-        }
-        get enableMotionSmoothingOverrideSettings() {
-          if (!VRHTML) return !1;
-          if (
-            VRHTML.VRProperties.GetBoolProperty(
-              "/user/head",
-              _.fD8.HasDriverDirectModeComponent_Bool,
-            )
-          ) {
-            return (
-              "oculus" !==
-              VRHTML.VRProperties.GetStringProperty(
-                "/user/head",
-                _.fD8.TrackingSystemName_String,
-              )
-            );
-          }
-          return VRHTML.VRClient.GetGraphicsHardwareVendorInfo()
-            .bSupportsMotionSmoothing;
         }
         get enableLegacyReprojectionSettings() {
           return (
@@ -15925,7 +17204,10 @@ var CLSTAMP = "steamdb";
           _._.setRoutePageSection(null);
         }
         get allowPerAppRefreshRate() {
-          return !!_._.settings.get(_._);
+          return VRHTML.VRProperties.GetBoolProperty(
+            "/user/head",
+            _.fD8.Hmd_EnablePerAppFPS_Bool,
+          );
         }
         render() {
           var _, _, _, _, _, _, _;
@@ -16055,43 +17337,44 @@ var CLSTAMP = "steamdb";
                     _.Fragment,
                     null,
                     !_._.isPlaytimeProfile && _,
-                    this.enableMotionSmoothingOverrideSettings &&
-                      null !== this.m_eSmoothingMode &&
+                    null !== this.m_eSmoothingMode &&
                       !this.m_disableAsyncReprojection &&
-                      _.createElement(_._, {
-                        label: (0, _._)(
-                          "#Settings_Advanced_MotionSmoothing_Header",
-                        ),
-                        items: [
-                          {
-                            value: _.UseGlobal,
-                            sLabel: (0, _._)(
-                              "#Settings_PerApplication_MotionSmoothing_Global",
+                      (_()
+                        ? _.createElement(_._, {
+                            label: (0, _._)(
+                              "#Settings_Advanced_MotionSmoothing_Header",
                             ),
-                          },
-                          {
-                            value: _.ForceOn,
-                            sLabel: (0, _._)(
-                              "#Settings_PerApplication_MotionSmoothing_On",
-                            ),
-                          },
-                          {
-                            value: _.ForceOff,
-                            sLabel: (0, _._)(
-                              "#Settings_PerApplication_MotionSmoothing_Off",
-                            ),
-                          },
-                          {
-                            value: _.ForceAlwaysOn,
-                            sLabel: (0, _._)(
-                              "#Settings_PerApplication_MotionSmoothing_AlwaysOn",
-                            ),
-                          },
-                        ],
-                        value: this.m_eSmoothingMode,
-                        onChange: this.onMotionSmoothChange,
-                        subsection: _,
-                      }),
+                            items: [
+                              {
+                                value: _.UseGlobal,
+                                sLabel: (0, _._)(
+                                  "#Settings_PerApplication_MotionSmoothing_Global",
+                                ),
+                              },
+                              {
+                                value: _.ForceOn,
+                                sLabel: (0, _._)(
+                                  "#Settings_PerApplication_MotionSmoothing_On",
+                                ),
+                              },
+                              {
+                                value: _.ForceOff,
+                                sLabel: (0, _._)(
+                                  "#Settings_PerApplication_MotionSmoothing_Off",
+                                ),
+                              },
+                              {
+                                value: _.ForceAlwaysOn,
+                                sLabel: (0, _._)(
+                                  "#Settings_PerApplication_MotionSmoothing_AlwaysOn",
+                                ),
+                              },
+                            ],
+                            value: this.m_eSmoothingMode,
+                            onChange: this.onMotionSmoothChange,
+                            subsection: _,
+                          })
+                        : _.createElement(_, null)),
                     _ &&
                       null !== this.m_eSharpening &&
                       _.createElement(_._, {
@@ -16251,7 +17534,11 @@ var CLSTAMP = "steamdb";
                               ? (_) => Math.round(100 * _).toString() + "%"
                               : void 0,
                             onChange: this.onFovScaleSliderChange,
-                            label: _ ? "Outer" : void 0,
+                            label: _
+                              ? (0, _._)(
+                                  "#Settings_PerApplication_FovScale_Outer",
+                                )
+                              : void 0,
                           }),
                           _ &&
                             _.createElement(
@@ -16266,7 +17553,9 @@ var CLSTAMP = "steamdb";
                                 renderValue: (_) =>
                                   Math.round(100 * _).toString() + "%",
                                 onChange: this.onFovScaleSliderChangeInner,
-                                label: "Inner",
+                                label: (0, _._)(
+                                  "#Settings_PerApplication_FovScale_Inner",
+                                ),
                               }),
                               _.createElement(_._, {
                                 min: 0.5,
@@ -16277,7 +17566,9 @@ var CLSTAMP = "steamdb";
                                 renderValue: (_) =>
                                   Math.round(100 * _).toString() + "%",
                                 onChange: this.onFovScaleSliderChangeUpper,
-                                label: "Upper",
+                                label: (0, _._)(
+                                  "#Settings_PerApplication_FovScale_Upper",
+                                ),
                               }),
                               _.createElement(_._, {
                                 min: 0.5,
@@ -16288,7 +17579,9 @@ var CLSTAMP = "steamdb";
                                 renderValue: (_) =>
                                   Math.round(100 * _).toString() + "%",
                                 onChange: this.onFovScaleSliderChangeLower,
-                                label: "Lower",
+                                label: (0, _._)(
+                                  "#Settings_PerApplication_FovScale_Lower",
+                                ),
                               }),
                             ),
                           (1 != this.m_nFovScaleMultiplier || _) &&
@@ -16296,15 +17589,21 @@ var CLSTAMP = "steamdb";
                               items: [
                                 {
                                   value: _.Default,
-                                  sLabel: "Default",
+                                  sLabel: (0, _._)(
+                                    "#Settings_PerApplication_FovScaleFormat_Default",
+                                  ),
                                 },
                                 {
                                   value: _.Letterbox,
-                                  sLabel: "Letterbox",
+                                  sLabel: (0, _._)(
+                                    "#Settings_PerApplication_FovScaleFormat_Letterbox",
+                                  ),
                                 },
                                 {
                                   value: _.Advanced,
-                                  sLabel: "Advanced",
+                                  sLabel: (0, _._)(
+                                    "#Settings_PerApplication_FovScaleFormat_Advanced",
+                                  ),
                                 },
                               ],
                               value: this.m_eFovScaleFormat,
@@ -16635,7 +17934,6 @@ var CLSTAMP = "steamdb";
         (0, _._)([_._], _.prototype, "resetAppToDefaults", null),
         (0, _._)([_._], _.prototype, "show", null),
         (0, _._)([_._], _.prototype, "close", null),
-        (0, _._)([_.computed], _.prototype, "allowPerAppRefreshRate", null),
         (_ = _ = (0, _._)([_._], _));
       let _ = (_ = class extends _._ {
         constructor() {
@@ -16655,6 +17953,10 @@ var CLSTAMP = "steamdb";
             _ = VRHTML.VRProperties.GetBoolProperty(
               "/user/head",
               _.fD8.Hmd_SupportsGpuBusMonitoring_Bool,
+            ),
+            _ = VRHTML.VRProperties.GetBoolProperty(
+              "/user/head",
+              _.fD8.Hmd_AllowSupersampleFiltering_Bool,
             );
           return _.createElement(
             _.Fragment,
@@ -16719,11 +18021,12 @@ var CLSTAMP = "steamdb";
                   "#Settings_Advanced_FoveatedSharpening_Description",
                 ),
               }),
-            _.createElement(_._, {
-              name: "/settings/steamvr/allowSupersampleFiltering",
-              label: (0, _._)("#Settings_Advanced_AllowSupersampleFiltering"),
-              visibility: _._.Advanced,
-            }),
+            _ &&
+              _.createElement(_._, {
+                name: "/settings/steamvr/allowSupersampleFiltering",
+                label: (0, _._)("#Settings_Advanced_AllowSupersampleFiltering"),
+                visibility: _._.Advanced,
+              }),
             _.createElement(_, null),
             _ &&
               _.createElement(_._, {
@@ -16906,6 +18209,8 @@ var CLSTAMP = "steamdb";
               this.props.ignore_resize_amount),
             (_.properties["main-panel-focus-outline"] =
               this.props.main_panel_focus_outline),
+            (_.properties["main-panel-stereoscopy"] =
+              this.props.main_panel_stereoscopy),
             "object" == typeof this.props.main_panel_origin
               ? (_.properties["main-panel-origin"] = (0, _._)(
                   (0, _._)(this.props.main_panel_origin, {
@@ -18178,6 +19483,633 @@ var CLSTAMP = "steamdb";
       });
       const _ = "set_dashboard_force_bounds_visible",
         _ = "set_dashboard_fade_suppression";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _;
+      function _(_) {
+        if (!_) return;
+        return Object.values(_)
+          .filter((_) => "number" == typeof _)
+          .includes(_)
+          ? _
+          : void 0;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.TrackingSystemName_String = 1e3)] =
+              "TrackingSystemName_String"),
+            (_[(_.ModelNumber_String = 1001)] = "ModelNumber_String"),
+            (_[(_.SerialNumber_String = 1002)] = "SerialNumber_String"),
+            (_[(_.RenderModelName_String = 1003)] = "RenderModelName_String"),
+            (_[(_.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+            (_[(_.ManufacturerName_String = 1005)] = "ManufacturerName_String"),
+            (_[(_.TrackingFirmwareVersion_String = 1006)] =
+              "TrackingFirmwareVersion_String"),
+            (_[(_.HardwareRevision_String = 1007)] = "HardwareRevision_String"),
+            (_[(_.AllWirelessDongleDescriptions_String = 1008)] =
+              "AllWirelessDongleDescriptions_String"),
+            (_[(_.ConnectedWirelessDongle_String = 1009)] =
+              "ConnectedWirelessDongle_String"),
+            (_[(_.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+            (_[(_.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+            (_[(_.DeviceBatteryPercentage_Float = 1012)] =
+              "DeviceBatteryPercentage_Float"),
+            (_[(_.StatusDisplayTransform_Matrix34 = 1013)] =
+              "StatusDisplayTransform_Matrix34"),
+            (_[(_.Firmware_UpdateAvailable_Bool = 1014)] =
+              "Firmware_UpdateAvailable_Bool"),
+            (_[(_.Firmware_ManualUpdate_Bool = 1015)] =
+              "Firmware_ManualUpdate_Bool"),
+            (_[(_.Firmware_ManualUpdateURL_String = 1016)] =
+              "Firmware_ManualUpdateURL_String"),
+            (_[(_.HardwareRevision_Uint64 = 1017)] = "HardwareRevision_Uint64"),
+            (_[(_.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+            (_[(_.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+            (_[(_.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+            (_[(_.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+            (_[(_.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+            (_[(_.BlockServerShutdown_Bool = 1023)] =
+              "BlockServerShutdown_Bool"),
+            (_[(_.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+              "CanUnifyCoordinateSystemWithHmd_Bool"),
+            (_[(_.ContainsProximitySensor_Bool = 1025)] =
+              "ContainsProximitySensor_Bool"),
+            (_[(_.DeviceProvidesBatteryStatus_Bool = 1026)] =
+              "DeviceProvidesBatteryStatus_Bool"),
+            (_[(_.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+            (_[(_.Firmware_ProgrammingTarget_String = 1028)] =
+              "Firmware_ProgrammingTarget_String"),
+            (_[(_.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+            (_[(_.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+            (_[(_.DriverVersion_String = 1031)] = "DriverVersion_String"),
+            (_[(_.Firmware_ForceUpdateRequired_Bool = 1032)] =
+              "Firmware_ForceUpdateRequired_Bool"),
+            (_[(_.ViveSystemButtonFixRequired_Bool = 1033)] =
+              "ViveSystemButtonFixRequired_Bool"),
+            (_[(_.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+            (_[(_.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+            (_[(_.RegisteredDeviceType_String = 1036)] =
+              "RegisteredDeviceType_String"),
+            (_[(_.InputProfilePath_String = 1037)] = "InputProfilePath_String"),
+            (_[(_.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+            (_[(_.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+            (_[(_.CameraFrameLayout_Int32 = 1040)] = "CameraFrameLayout_Int32"),
+            (_[(_.CameraStreamFormat_Int32 = 1041)] =
+              "CameraStreamFormat_Int32"),
+            (_[(_.AdditionalDeviceSettingsPath_String = 1042)] =
+              "AdditionalDeviceSettingsPath_String"),
+            (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+            (_[(_.ActualTrackingSystemName_String = 1054)] =
+              "ActualTrackingSystemName_String"),
+            (_[(_.AllowCameraToggle_Bool = 1055)] = "AllowCameraToggle_Bool"),
+            (_[(_.AllowLightSourceFrequency_Bool = 1056)] =
+              "AllowLightSourceFrequency_Bool"),
+            (_[(_.IsDedicatedVRHeadset_Bool = 1058)] =
+              "IsDedicatedVRHeadset_Bool"),
+            (_[(_.HasEyeTracker_Bool = 1060)] = "HasEyeTracker_Bool"),
+            (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
+              "ReportsTimeSinceVSync_Bool"),
+            (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
+              "SecondsFromVsyncToPhotons_Float"),
+            (_[(_.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+            (_[(_.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+            (_[(_.CurrentUniverseId_Uint64 = 2004)] =
+              "CurrentUniverseId_Uint64"),
+            (_[(_.PreviousUniverseId_Uint64 = 2005)] =
+              "PreviousUniverseId_Uint64"),
+            (_[(_.DisplayFirmwareVersion_Uint64 = 2006)] =
+              "DisplayFirmwareVersion_Uint64"),
+            (_[(_.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+            (_[(_.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+            (_[(_.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+            (_[(_.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+            (_[(_.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+            (_[(_.DisplayMCImageLeft_String = 2012)] =
+              "DisplayMCImageLeft_String"),
+            (_[(_.DisplayMCImageRight_String = 2013)] =
+              "DisplayMCImageRight_String"),
+            (_[(_.DisplayGCBlackClamp_Float = 2014)] =
+              "DisplayGCBlackClamp_Float"),
+            (_[(_.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+            (_[(_.CameraToHeadTransform_Matrix34 = 2016)] =
+              "CameraToHeadTransform_Matrix34"),
+            (_[(_.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+            (_[(_.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+            (_[(_.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+            (_[(_.DisplayGCPrescale_Float = 2020)] = "DisplayGCPrescale_Float"),
+            (_[(_.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+            (_[(_.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+            (_[(_.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+            (_[(_.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+            (_[(_.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+            (_[(_.UserHeadToEyeDepthMeters_Float = 2026)] =
+              "UserHeadToEyeDepthMeters_Float"),
+            (_[(_.CameraFirmwareVersion_Uint64 = 2027)] =
+              "CameraFirmwareVersion_Uint64"),
+            (_[(_.CameraFirmwareDescription_String = 2028)] =
+              "CameraFirmwareDescription_String"),
+            (_[(_.DisplayFPGAVersion_Uint64 = 2029)] =
+              "DisplayFPGAVersion_Uint64"),
+            (_[(_.DisplayBootloaderVersion_Uint64 = 2030)] =
+              "DisplayBootloaderVersion_Uint64"),
+            (_[(_.DisplayHardwareVersion_Uint64 = 2031)] =
+              "DisplayHardwareVersion_Uint64"),
+            (_[(_.AudioFirmwareVersion_Uint64 = 2032)] =
+              "AudioFirmwareVersion_Uint64"),
+            (_[(_.CameraCompatibilityMode_Int32 = 2033)] =
+              "CameraCompatibilityMode_Int32"),
+            (_[(_.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+              "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+            (_[(_.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+              "ScreenshotVerticalFieldOfViewDegrees_Float"),
+            (_[(_.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+            (_[(_.DisplayAllowNightMode_Bool = 2037)] =
+              "DisplayAllowNightMode_Bool"),
+            (_[(_.DisplayMCImageWidth_Int32 = 2038)] =
+              "DisplayMCImageWidth_Int32"),
+            (_[(_.DisplayMCImageHeight_Int32 = 2039)] =
+              "DisplayMCImageHeight_Int32"),
+            (_[(_.DisplayMCImageNumChannels_Int32 = 2040)] =
+              "DisplayMCImageNumChannels_Int32"),
+            (_[(_.DisplayMCImageData_Binary = 2041)] =
+              "DisplayMCImageData_Binary"),
+            (_[(_.SecondsFromPhotonsToVblank_Float = 2042)] =
+              "SecondsFromPhotonsToVblank_Float"),
+            (_[(_.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+              "DriverDirectModeSendsVsyncEvents_Bool"),
+            (_[(_.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+            (_[(_.GraphicsAdapterLuid_Uint64 = 2045)] =
+              "GraphicsAdapterLuid_Uint64"),
+            (_[(_.DriverProvidedChaperonePath_String = 2048)] =
+              "DriverProvidedChaperonePath_String"),
+            (_[(_.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+              "ExpectedTrackingReferenceCount_Int32"),
+            (_[(_.ExpectedControllerCount_Int32 = 2050)] =
+              "ExpectedControllerCount_Int32"),
+            (_[(_.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+              "NamedIconPathControllerLeftDeviceOff_String"),
+            (_[(_.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+              "NamedIconPathControllerRightDeviceOff_String"),
+            (_[(_.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+              "NamedIconPathTrackingReferenceDeviceOff_String"),
+            (_[(_.DoNotApplyPrediction_Bool = 2054)] =
+              "DoNotApplyPrediction_Bool"),
+            (_[(_.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+              "CameraToHeadTransforms_Matrix34_Array"),
+            (_[(_.DistortionMeshResolution_Int32 = 2056)] =
+              "DistortionMeshResolution_Int32"),
+            (_[(_.DriverIsDrawingControllers_Bool = 2057)] =
+              "DriverIsDrawingControllers_Bool"),
+            (_[(_.DriverRequestsApplicationPause_Bool = 2058)] =
+              "DriverRequestsApplicationPause_Bool"),
+            (_[(_.DriverRequestsReducedRendering_Bool = 2059)] =
+              "DriverRequestsReducedRendering_Bool"),
+            (_[(_.MinimumIpdStepMeters_Float = 2060)] =
+              "MinimumIpdStepMeters_Float"),
+            (_[(_.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+              "AudioBridgeFirmwareVersion_Uint64"),
+            (_[(_.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+              "ImageBridgeFirmwareVersion_Uint64"),
+            (_[(_.ImuToHeadTransform_Matrix34 = 2063)] =
+              "ImuToHeadTransform_Matrix34"),
+            (_[(_.ImuFactoryGyroBias_Vector3 = 2064)] =
+              "ImuFactoryGyroBias_Vector3"),
+            (_[(_.ImuFactoryGyroScale_Vector3 = 2065)] =
+              "ImuFactoryGyroScale_Vector3"),
+            (_[(_.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+              "ImuFactoryAccelerometerBias_Vector3"),
+            (_[(_.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+              "ImuFactoryAccelerometerScale_Vector3"),
+            (_[(_.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+              "ConfigurationIncludesLighthouse20Features_Bool"),
+            (_[(_.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+              "Prop_AdditionalRadioFeatures_Uint64"),
+            (_[(_.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+              "Prop_CameraWhiteBalance_Vector4_Array"),
+            (_[(_.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+              "Prop_CameraDistortionFunction_Int32_Array"),
+            (_[(_.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+              "Prop_CameraDistortionCoefficients_Float_Array"),
+            (_[(_.Prop_ExpectedControllerType_String = 2074)] =
+              "Prop_ExpectedControllerType_String"),
+            (_[(_.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+            (_[(_.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+              "DriverProvidedChaperoneVisibility_Bool"),
+            (_[(_.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+              "HmdColumnCorrectionSettingPrefix_String"),
+            (_[(_.CameraSupportsCompatibilityModes_Bool = 2078)] =
+              "CameraSupportsCompatibilityModes_Bool"),
+            (_[(_.SupportsRoomViewDepthProjection_Bool = 2079)] =
+              "SupportsRoomViewDepthProjection_Bool"),
+            (_[(_.DisplayAvailableFrameRates_Float_Array = 2080)] =
+              "DisplayAvailableFrameRates_Float_Array"),
+            (_[(_.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+              "DisplaySupportsRuntimeFramerateChange_Bool"),
+            (_[(_.DisplaySupportsAnalogGain_Bool = 2085)] =
+              "DisplaySupportsAnalogGain_Bool"),
+            (_[(_.DisplayMinAnalogGain_Float = 2086)] =
+              "DisplayMinAnalogGain_Float"),
+            (_[(_.DisplayMaxAnalogGain_Float = 2087)] =
+              "DisplayMaxAnalogGain_Float"),
+            (_[(_.DashboardLinkSupport_Int32 = 2097)] =
+              "DashboardLinkSupport_Int32"),
+            (_[(_.DisplayMinUIAnalogGain_Float = 2098)] =
+              "DisplayMinUIAnalogGain_Float"),
+            (_[(_.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+            (_[(_.IpdUIRangeMinMeters_Float = 2100)] =
+              "IpdUIRangeMinMeters_Float"),
+            (_[(_.IpdUIRangeMaxMeters_Float = 2101)] =
+              "IpdUIRangeMaxMeters_Float"),
+            (_[(_.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+              "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+            (_[(_.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+              "Hmd_SupportsMicMonitoring_Bool"),
+            (_[(_.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+              "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+            (_[(_.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+              "Hmd_SupportsRoomViewDirect_Bool"),
+            (_[(_.Hmd_SupportsAppThrottling_Bool = 2106)] =
+              "Hmd_SupportsAppThrottling_Bool"),
+            (_[(_.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+              "Hmd_SupportsGpuBusMonitoring_Bool"),
+            (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
+              "DriverProvidedIPDVisibility_Bool"),
+            (_[(_.Hmd_AllowSupersampleFiltering_Bool = 2115)] =
+              "Hmd_AllowSupersampleFiltering_Bool"),
+            (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+              "Prop_SupportsVRGamepadMode_Bool"),
+            (_[(_.Hmd_SupportsChromaKeyPassthrough_Bool = 2119)] =
+              "Hmd_SupportsChromaKeyPassthrough_Bool"),
+            (_[(_.Hmd_CameraSettingsModel_Int32 = 2122)] =
+              "Hmd_CameraSettingsModel_Int32"),
+            (_[(_.Hmd_EnablePerAppFPS_Bool = 2133)] =
+              "Hmd_EnablePerAppFPS_Bool"),
+            (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+              "DriverRequestedMuraCorrectionMode_Int32"),
+            (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+              "DriverRequestedMuraFeather_InnerLeft_Int32"),
+            (_[(_.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+              "DriverRequestedMuraFeather_InnerRight_Int32"),
+            (_[(_.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+              "DriverRequestedMuraFeather_InnerTop_Int32"),
+            (_[(_.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+              "DriverRequestedMuraFeather_InnerBottom_Int32"),
+            (_[(_.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+              "DriverRequestedMuraFeather_OuterLeft_Int32"),
+            (_[(_.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+              "DriverRequestedMuraFeather_OuterRight_Int32"),
+            (_[(_.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+              "DriverRequestedMuraFeather_OuterTop_Int32"),
+            (_[(_.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+              "DriverRequestedMuraFeather_OuterBottom_Int32"),
+            (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+              "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+            (_[(_.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+              "Hmd_ForceRoomViewOutsideChaperone_Bool"),
+            (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
+            (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
+            (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+            (_[(_.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+            (_[(_.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+            (_[(_.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+            (_[(_.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+            (_[(_.ControllerRoleHint_Int32 = 3007)] =
+              "ControllerRoleHint_Int32"),
+            (_[(_.Prop_ControllerHasLargeStatusArea_Bool = 3008)] =
+              "Prop_ControllerHasLargeStatusArea_Bool"),
+            (_[(_.FieldOfViewLeftDegrees_Float = 4e3)] =
+              "FieldOfViewLeftDegrees_Float"),
+            (_[(_.FieldOfViewRightDegrees_Float = 4001)] =
+              "FieldOfViewRightDegrees_Float"),
+            (_[(_.FieldOfViewTopDegrees_Float = 4002)] =
+              "FieldOfViewTopDegrees_Float"),
+            (_[(_.FieldOfViewBottomDegrees_Float = 4003)] =
+              "FieldOfViewBottomDegrees_Float"),
+            (_[(_.TrackingRangeMinimumMeters_Float = 4004)] =
+              "TrackingRangeMinimumMeters_Float"),
+            (_[(_.TrackingRangeMaximumMeters_Float = 4005)] =
+              "TrackingRangeMaximumMeters_Float"),
+            (_[(_.ModeLabel_String = 4006)] = "ModeLabel_String"),
+            (_[(_.IconPathName_String = 5e3)] = "IconPathName_String"),
+            (_[(_.NamedIconPathDeviceOff_String = 5001)] =
+              "NamedIconPathDeviceOff_String"),
+            (_[(_.NamedIconPathDeviceSearching_String = 5002)] =
+              "NamedIconPathDeviceSearching_String"),
+            (_[(_.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+              "NamedIconPathDeviceSearchingAlert_String"),
+            (_[(_.NamedIconPathDeviceReady_String = 5004)] =
+              "NamedIconPathDeviceReady_String"),
+            (_[(_.NamedIconPathDeviceReadyAlert_String = 5005)] =
+              "NamedIconPathDeviceReadyAlert_String"),
+            (_[(_.NamedIconPathDeviceNotReady_String = 5006)] =
+              "NamedIconPathDeviceNotReady_String"),
+            (_[(_.NamedIconPathDeviceStandby_String = 5007)] =
+              "NamedIconPathDeviceStandby_String"),
+            (_[(_.NamedIconPathDeviceAlertLow_String = 5008)] =
+              "NamedIconPathDeviceAlertLow_String"),
+            (_[(_.DisplayHiddenArea_Binary_Start = 5100)] =
+              "DisplayHiddenArea_Binary_Start"),
+            (_[(_.DisplayHiddenArea_Binary_End = 5150)] =
+              "DisplayHiddenArea_Binary_End"),
+            (_[(_.ParentContainer = 5151)] = "ParentContainer"),
+            (_[(_.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+            (_[(_.InstallPath_String = 6001)] = "InstallPath_String"),
+            (_[(_.HasDisplayComponent_Bool = 6002)] =
+              "HasDisplayComponent_Bool"),
+            (_[(_.HasControllerComponent_Bool = 6003)] =
+              "HasControllerComponent_Bool"),
+            (_[(_.HasCameraComponent_Bool = 6004)] = "HasCameraComponent_Bool"),
+            (_[(_.HasDriverDirectModeComponent_Bool = 6005)] =
+              "HasDriverDirectModeComponent_Bool"),
+            (_[(_.HasVirtualDisplayComponent_Bool = 6006)] =
+              "HasVirtualDisplayComponent_Bool"),
+            (_[(_.HasSpatialAnchorsSupport_Bool = 6007)] =
+              "HasSpatialAnchorsSupport_Bool"),
+            (_[(_.SupportsXrEyeGazeInteraction_Bool = 6009)] =
+              "SupportsXrEyeGazeInteraction_Bool"),
+            (_[(_.ControllerType_String = 7e3)] = "ControllerType_String"),
+            (_[(_.LegacyInputProfile_String = 7001)] =
+              "LegacyInputProfile_String"),
+            (_[(_.VendorSpecific_Reserved_Start = 1e4)] =
+              "VendorSpecific_Reserved_Start"),
+            (_[(_.VendorSpecific_Reserved_End = 10999)] =
+              "VendorSpecific_Reserved_End"),
+            (_[(_.SupportsInHMDRoomSetup_Bool = 11003)] =
+              "SupportsInHMDRoomSetup_Bool"),
+            (_[(_.VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004)] =
+              "VRLinkClientHMDSupportsRoomSetupRequests_Bool"),
+            (_[(_.TrackedDeviceProperty_Max = 1e6)] =
+              "TrackedDeviceProperty_Max");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Eye_Left = 0)] = "Eye_Left"),
+            (_[(_.Eye_Right = 1)] = "Eye_Right");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EButton_System = 0)] = "k_EButton_System"),
+            (_[(_.k_EButton_ApplicationMenu = 1)] =
+              "k_EButton_ApplicationMenu"),
+            (_[(_.k_EButton_Grip = 2)] = "k_EButton_Grip"),
+            (_[(_.k_EButton_DPad_Left = 3)] = "k_EButton_DPad_Left"),
+            (_[(_.k_EButton_DPad_Up = 4)] = "k_EButton_DPad_Up"),
+            (_[(_.k_EButton_DPad_Right = 5)] = "k_EButton_DPad_Right"),
+            (_[(_.k_EButton_DPad_Down = 6)] = "k_EButton_DPad_Down"),
+            (_[(_.k_EButton_A = 7)] = "k_EButton_A"),
+            (_[(_.k_EButton_ProximitySensor = 31)] =
+              "k_EButton_ProximitySensor"),
+            (_[(_.k_EButton_Axis0 = 32)] = "k_EButton_Axis0"),
+            (_[(_.k_EButton_Axis1 = 33)] = "k_EButton_Axis1"),
+            (_[(_.k_EButton_Axis2 = 34)] = "k_EButton_Axis2"),
+            (_[(_.k_EButton_Axis3 = 35)] = "k_EButton_Axis3"),
+            (_[(_.k_EButton_Axis4 = 36)] = "k_EButton_Axis4"),
+            (_[(_.k_EButton_SteamVR_Touchpad = 32)] =
+              "k_EButton_SteamVR_Touchpad"),
+            (_[(_.k_EButton_SteamVR_Trigger = 33)] =
+              "k_EButton_SteamVR_Trigger"),
+            (_[(_.k_EButton_Dashboard_Back = 2)] = "k_EButton_Dashboard_Back"),
+            (_[(_.k_EButton_IndexController_A = 2)] =
+              "k_EButton_IndexController_A"),
+            (_[(_.k_EButton_IndexController_B = 1)] =
+              "k_EButton_IndexController_B"),
+            (_[(_.k_EButton_IndexController_JoyStick = 35)] =
+              "k_EButton_IndexController_JoyStick"),
+            (_[(_.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
+            (_[(_.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
+            (_[(_.k_EButton_Max = 64)] = "k_EButton_Max");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.ButtonEnter = 1)] = "ButtonEnter"),
+            (_[(_.ButtonLeave = 2)] = "ButtonLeave"),
+            (_[(_.Snap = 3)] = "Snap"),
+            (_[(_.Sliding = 4)] = "Sliding"),
+            (_[(_.SlidingEdge = 5)] = "SlidingEdge");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Minimal = 1)] = "Minimal"),
+            (_[(_.Modal = 2)] = "Modal"),
+            (_[(_.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+            (_[(_.HideDoneKey = 8)] = "HideDoneKey");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Unknown = -1)] = "Unknown"),
+            (_[(_.Idle = 0)] = "Idle"),
+            (_[(_.UserInteraction = 1)] = "UserInteraction"),
+            (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (_[(_.Standby = 3)] = "Standby"),
+            (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (_[(_.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (_[(_.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
+            (_[(_.Notification_Hidden = 601)] = "Notification_Hidden"),
+            (_[(_.Notification_BeginInteraction = 602)] =
+              "Notification_BeginInteraction"),
+            (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.TheaterFast = 0)] = "TheaterFast"),
+            (_[(_.TheaterSlow = 1)] = "TheaterSlow");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Constant = 0)] = "Constant"),
+            (_[(_.Nearest = 1)] = "Nearest"),
+            (_[(_.Linear = 2)] = "Linear"),
+            (_[(_.SmoothStep = 3)] = "SmoothStep"),
+            (_[(_.SmootherStep = 4)] = "SmootherStep");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
+            (_[(_.FloorAdjustExisting = 2)] = "FloorAdjustExisting"),
+            (_[(_.RoomSetupFloor = 3)] = "RoomSetupFloor"),
+            (_[(_.ClearRoomSetup = 4)] = "ClearRoomSetup"),
+            (_[(_.RoomSetupFull = 5)] = "RoomSetupFull");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Near = 0)] = "Near"),
+            (_[(_.Middle = 1)] = "Middle"),
+            (_[(_.Far = 2)] = "Far"),
+            (_[(_.VRGamepadUI = 3)] = "VRGamepadUI");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.__LocalSteamVR = 0)] = "__LocalSteamVR"),
+            (_[(_.__LocalSteam = 1)] = "__LocalSteam"),
+            (_[(_.__RemoteSteamVR = 2)] = "__RemoteSteamVR"),
+            (_[(_.__RemoteSteam = 3)] = "__RemoteSteam"),
+            (_[(_.MutualLocal = 4)] = "MutualLocal"),
+            (_[(_.MutualSteamVR = 5)] = "MutualSteamVR"),
+            (_[(_.MutualSteam = 6)] = "MutualSteam");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Dashboard = 1)] = "Dashboard"),
+            (_[(_.LeftHand = 2)] = "LeftHand"),
+            (_[(_.RightHand = 3)] = "RightHand"),
+            (_[(_.World = 4)] = "World"),
+            (_[(_.Theater = 5)] = "Theater"),
+            (_[(_.Boot = 6)] = "Boot");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.SceneApp = 1)] = "SceneApp"),
+            (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Unknown = 0)] = "Unknown"),
+            (_[(_.LaserMouse = 1)] = "LaserMouse"),
+            (_[(_.Gamepad = 2)] = "Gamepad");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
+            (_[(_.LaserMouse = 4)] = "LaserMouse"),
+            (_[(_.SystemButtonHideDashboard = 5)] =
+              "SystemButtonHideDashboard"),
+            (_[(_.SystemButtonDashboardHidden = 6)] =
+              "SystemButtonDashboardHidden"),
+            (_[(_.SystemButtonShowDashboard = 7)] =
+              "SystemButtonShowDashboard"),
+            (_[(_.PairWifiDongle = 8)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 9)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
+            (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
+            (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Off = 0)] = "Off"),
+            (_[(_._ = 1)] = "On"),
+            (_[(_.OnSolid = 2)] = "OnSolid");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.AuroraFloor = 1)] = "AuroraFloor");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.SceneAppNominal = 0)] = "SceneAppNominal"),
+            (_[(_.SceneAppDimming = 1)] = "SceneAppDimming"),
+            (_[(_.RoomSetup = 2)] = "RoomSetup"),
+            (_[(_.SystemDimming = 3)] = "SystemDimming"),
+            (_[(_.ConstructTheater = 4)] = "ConstructTheater"),
+            (_[(_.ConstructNominal = 5)] = "ConstructNominal");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.LargeDeadZone = 4)] = "LargeDeadZone"),
+            (_[(_.SmallDeadZone = 8)] = "SmallDeadZone"),
+            (_[(_.NoDeadZoneThenSmallElastic = 12)] =
+              "NoDeadZoneThenSmallElastic");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Rect = 0)] = "Rect"),
+            (_[(_.Panorama = 1)] = "Panorama"),
+            (_[(_.Projection = 2)] = "Projection"),
+            (_[(_.Spherical = 3)] = "Spherical");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Curved = 0)] = "Curved"), (_[(_.Flat = 1)] = "Flat");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.Sensitive = 1)] = "Sensitive");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.ECameraExposure_Unknown = 0)] = "ECameraExposure_Unknown"),
+            (_[(_.ECameraExposure_Nominal = 1)] = "ECameraExposure_Nominal"),
+            (_[(_.ECameraExposure_HighExposure = 2)] =
+              "ECameraExposure_HighExposure");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.BULK_DEFAULT = 0)] = "BULK_DEFAULT"),
+            (_[(_.BULK_64K_DMA = 1)] = "BULK_64K_DMA"),
+            (_[(_.BULK_16K_DMA = 2)] = "BULK_16K_DMA"),
+            (_[(_.BULK_8K_DMA = 3)] = "BULK_8K_DMA"),
+            (_[(_.ISO_52FPS = 4)] = "ISO_52FPS"),
+            (_[(_.ISO_50FPS = 5)] = "ISO_50FPS"),
+            (_[(_.ISO_48FPS = 6)] = "ISO_48FPS"),
+            (_[(_.ISO_46FPS = 7)] = "ISO_46FPS"),
+            (_[(_.ISO_44FPS = 8)] = "ISO_44FPS"),
+            (_[(_.ISO_42FPS = 9)] = "ISO_42FPS"),
+            (_[(_.ISO_40FPS = 10)] = "ISO_40FPS"),
+            (_[(_.ISO_35FPS = 11)] = "ISO_35FPS"),
+            (_[(_.ISO_30FPS = 12)] = "ISO_30FPS"),
+            (_[(_.ISO_15FPS = 13)] = "ISO_15FPS"),
+            (_[(_.MAX_CAMERA_COMPAT_MODES = 14)] = "MAX_CAMERA_COMPAT_MODES");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.ECameraSettingsModel_Default = 0)] =
+            "ECameraSettingsModel_Default"),
+            (_[(_.ECameraSettingsModel_SteamFrame = 1)] =
+              "ECameraSettingsModel_SteamFrame");
+        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19594,6 +21526,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.Value = 0)] = "Value"), (_[(_.Color = 1)] = "Color");
@@ -19843,15 +21776,17 @@ var CLSTAMP = "steamdb";
           return _.map(this.externalToNormalized);
         }
         externalToNormalized(_) {
-          return _ === this.props.specialMaxValue
-            ? 1
-            : _ === this.props.specialMinValue
-              ? 0
-              : Math.pow(
-                  (_ - this.externalRangeMin) /
-                    (this.externalRangeMax - this.externalRangeMin),
-                  1 / this.exponent,
-                );
+          if (_ === this.props.specialMaxValue) return 1;
+          if (_ === this.props.specialMinValue) return 0;
+          {
+            const _ = (0, _._)(
+              (_ - this.externalRangeMin) /
+                (this.externalRangeMax - this.externalRangeMin),
+              0,
+              1,
+            );
+            return Math.pow(_, 1 / this.exponent);
+          }
         }
         normalizedToExternal(_) {
           return 0 == _ && void 0 !== this.props.specialMinValue
@@ -20455,253 +22390,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      const _ = "openvr.tool.steamvr_environments",
-        _ = "system.generated.steam.exe",
-        _ = "vrlink.client",
-        _ = 250820,
-        _ = 330050,
-        _ = 769,
-        _ = 413080,
-        _ = 4161800,
-        _ = 202355,
-        _ = "steam.app." + _,
-        _ = "steam.app." + _,
-        _ = "system.dashboard.",
-        _ = "system.dashboard.quicklaunch",
-        _ = "system.dashboard.nowplaying",
-        _ = "XRServiceDashboard",
-        _ = 0.25,
-        _ = 2,
-        _ = 0.03,
-        _ = "current.scene.app.binding.list",
-        _ = "system.desktop",
-        _ = "system.window",
-        _ = "system.standalone",
-        _ = "system.systemui",
-        _ = "system.settings",
-        _ = "system.keyboard",
-        _ = "system.vrwebhelper.controllerbinding",
-        _ = "system.messageoverlay",
-        _ = "valve.steam",
-        _ = "valve.steam.desktopgame",
-        _ = "valve.steam.gamepadui.main",
-        _ = "valve.steam.gamepadui.appoverlay",
-        _ = "valve.steam.gamepadui.keyboard",
-        _ = "valve.steam.desktop",
-        _ = "steamlink_openvr-overlay",
-        _ = "valve.plasma.recoverymode",
-        _ = "valve.plasma.desktopmode",
-        _ = "DashboardCurvatureOrigin",
-        _ = 2.667 / 1694,
-        _ = "DashboardGrabHandleTransform",
-        _ = "DashboardOverlayDashboardBarOrigin",
-        _ = "DashboardGrabHandleTransform_Legacy",
-        _ = "/settings/steamvr/enableHomeApp",
-        _ = "/settings/dashboard/enableDashboard",
-        _ = "/settings/steamvr/disableChaperone",
-        _ = "/settings/steamvr/recommendedResolutionMultiplierMin",
-        _ = "/settings/steamvr/recommendedResolutionMultiplierMax",
-        _ = "/settings/steamvr/recommendedResolutionMultiplierSteps",
-        _ = "/settings/steamvr/showRecommendedResolutionPercentage",
-        _ = "/settings/steamvr/supersampleManualOverride",
-        _ = "/settings/steamvr/supersampleScale",
-        _ = "/settings/GpuSpeed/gpuSpeedRenderTargetScale",
-        _ = "/settings/camera/roomViewStyle",
-        _ = "/settings/steamvr/backgroundCameraHeight",
-        _ = "/settings/steamvr/backgroundDomeRadius",
-        _ = "/settings/steamvr/dominantEye",
-        _ = "/settings/steamvr/analogGain",
-        _ = "/settings/driver_lighthouse/indexHmdColumnCorrection",
-        _ = "/settings/steamvr/showAdvancedSettings",
-        _ = "/settings/dashboard/lastAccessedExternalOverlayKey",
-        _ = "/settings/internal/dashboardInitialOverlay",
-        _ = "/settings/dashboard/position_2",
-        _ = "/settings/dashboard/laserLength",
-        _ = "/settings/dashboard/theaterCurvature",
-        _ = "/settings/dashboard/theaterScreenAlignment",
-        _ = "/settings/dashboard/defaultTheaterScale",
-        _ = "/settings/dashboard/defaultTheaterDistance",
-        _ = "/settings/collisionBounds/CollisionBoundsFadeDistance",
-        _ = "/settings/camera/AllowBubbleInImmersiveApps",
-        _ = "/settings/camera/roomView",
-        _ = "/settings/camera/enableCamera",
-        _ = "/settings/dashboard/enableWindowView",
-        _ = "/settings/dashboard/maxInlineTabs",
-        _ = "/settings/steamvr/maxRecommendedResolution",
-        _ = "/settings/steamvr/disableKeyboardPrivacy",
-        _ = "/settings/camera/lightSourceFrequency",
-        _ = "/settings/camera/autoLowerPassthroughResolution",
-        _ = "/settings/steamvr/ipdHUD",
-        _ = "/settings/steamvr/inHMDRoomSetupDebug",
-        _ = "/settings/steamvr/enablePerAppFPS",
-        _ = "/settings/steamvr/defaultPerAppRefreshRate",
-        _ = "/settings/steamvr/unifiedPerAppRefreshRateAndThrottling",
-        _ = "/settings/steamvr/preferredRefreshRate",
-        _ = "/settings/steamvr/motionSmoothing",
-        _ = "/settings/steamvr/framesToThrottle",
-        _ = "/settings/steamvr/performanceProfile",
-        _ = "/settings/perfcheck/perfGraphInHMD",
-        _ = "/settings/perfcheck/recordStats",
-        _ = "/settings/steamvr/environmentMode",
-        _ = "/settings/steamvr/envBrightnessTheater",
-        _ = "/settings/steamvr/envBrightnessNominal",
-        _ = "/settings/steamvr/envBrightnessSceneAppDimming",
-        _ = "/settings/steamvr/backgroundUseDomeProjection",
-        _ = "/settings/steamvr/auroraPalette",
-        _ = "/settings/steamvr/auroraUserColor",
-        _ = "/settings/steamvr/allowEyeTracking",
-        _ = "/settings/steamvr/eyeTrackingDominantEyeOnly",
-        _ = "/settings/steamvr/proxThresholdMode",
-        _ = "/settings/dashboard/expectSteam",
-        _ = "/settings/dashboard/allowLegacyControlBar",
-        _ = "/settings/openxr/metaUnityPluginCompatibility",
-        _ = "/settings/input/overlayFilteringEnabled",
-        _ = "/settings/input/overlayFilteringMinCutoff",
-        _ = "/settings/input/overlayFilteringBeta",
-        _ = "/settings/input/overlayFilteringDerivCutoff",
-        _ = "/settings/input/overlayMagnetismEnabled",
-        _ = "/settings/input/overlayMagnetismLockDistance",
-        _ = "/settings/input/overlayMagnetismDeadZone",
-        _ = "/steam/websocketconnected",
-        _ = "/steam/oobe",
-        _ = "/steamvr/fakeoobe",
-        _ = "/steam/locked",
-        _ = "/steam/guidedtour",
-        _ = "/steam/streamingtodevice",
-        _ = "/steam/scene_app_input_preference/app_id",
-        _ = "/steam/scene_app_input_preference/prefers_steam_input",
-        _ = "/settings/perfcheck/showPerfCriteriaSettings",
-        _ = "/settings/perfcheck/drawPerfCriteriaOverlay",
-        _ = "/settings/perfcheck/drawPerfCriteriaGameTextures",
-        _ = "/user/head",
-        _ = "/user/hand/left",
-        _ = "/user/hand/right";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -23393,476 +25081,6 @@ var CLSTAMP = "steamdb";
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        if (0 != _.roomSetupStep && 1 != _.roomSetupStep)
-          return _._81.RoomSetup;
-        if (
-          _._.isOOBE ||
-          _._.isLocked ||
-          _._.showLoadingThrobberOrBootOverlay ||
-          "recovery" == _._.bareSessionMode
-        )
-          return _._81.SystemDimming;
-        if (_._.sceneAppDimmingActive) return _._81.SceneAppDimming;
-        const _ =
-          _._.m_bIsVRLinkClient &&
-          _._.m_bVRLinkStreamingActive &&
-          _._.unifiedDashboardEnabled;
-        return _._.Instance.SceneApplicationState == _.HWH.None || _
-          ? _._.isTheaterMode
-            ? _._81.ConstructTheater
-            : _._81.ConstructNominal
-          : _._81.SceneAppNominal;
-      }
-      class _ {
-        constructor() {
-          (this.m_bShowFloor = !1),
-            (this.m_bShowFloorFar = !1),
-            (this.m_fBackgroundDomeRadius = void 0),
-            (this.m_fBackgroundOffsetX = void 0),
-            (this.m_fBackgroundOffsetZ = void 0),
-            (this.m_bFloorDetectAtStart = void 0),
-            (this.m_bBoundsVisible = void 0),
-            (this.m_bIsRoomViewForcedOnByChaperone = void 0),
-            (this.m_bOutOfBoundsPlayAllowed = !1),
-            (this.m_bIsSceneAppShowing = !1),
-            (this.m_eRoomSetupStep = 0),
-            (this.m_bRoomSetupAllowsCancel = !0),
-            (this.m_nSilentRoomSetupTimeout = void 0),
-            (0, _.makeObservable)(this);
-        }
-        Init() {
-          return (0, _._)(this, void 0, void 0, function* () {
-            yield this.Load(),
-              (0, _.autorun)(() => this.Save()),
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.RegisterForChaperoneStatusEvents(
-                  this.onChaperoneStatusEvents,
-                ),
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.RegisterForRoomSetupButtonEvents(
-                  this.HandleRoomSetupButton,
-                ),
-              this.m_bFloorDetectAtStart && this.restartSilentRoomSetup(),
-              (0, _.reaction)(
-                _,
-                (_) => {
-                  var _;
-                  null ===
-                    (_ =
-                      null === VRHTML || void 0 === VRHTML
-                        ? void 0
-                        : VRHTML.VRCompositor) ||
-                    void 0 === _ ||
-                    _.SetEnvBrightnessMode(_);
-                },
-                {
-                  fireImmediately: !0,
-                },
-              );
-          });
-        }
-        get supportsInHmdRoomSetup() {
-          return (
-            !!(null === VRHTML || void 0 === VRHTML
-              ? void 0
-              : VRHTML.VRProperties.GetBoolProperty(
-                  "/user/head",
-                  _.fD8.SupportsInHMDRoomSetup_Bool,
-                )) || !!_._.settings.get(_._)
-          );
-        }
-        get roomSetupStep() {
-          return this.m_eRoomSetupStep;
-        }
-        get roomSetupAllowsCancel() {
-          return this.m_bRoomSetupAllowsCancel;
-        }
-        get inRoomSetup() {
-          return 0 != this.m_eRoomSetupStep && 6 != this.m_eRoomSetupStep;
-        }
-        restartSilentRoomSetup() {
-          console.log("Enabling silent floor detection"),
-            this.m_nSilentRoomSetupTimeout &&
-              window.clearTimeout(this.m_nSilentRoomSetupTimeout);
-          this.setRoomSetupStep(6),
-            null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRChaperoneSetup.ResetPlayspaceFloorHeight(_._._),
-            (this.m_nSilentRoomSetupTimeout = window.setTimeout(() => {
-              6 == this.m_eRoomSetupStep &&
-                (console.log("Disabling silent floor detection"),
-                null === VRHTML ||
-                  void 0 === VRHTML ||
-                  VRHTML.VRChaperoneSetup.CommitSilentPlayspaceFloorHeight(),
-                this.setRoomSetupStep(0),
-                (this.m_nSilentRoomSetupTimeout = void 0));
-            }, 5e3));
-        }
-        startRequiredRoomSetupIfNeeded() {
-          var _, _;
-          if (
-            null === (_ = (_ = VRHTML.VRChaperoneSetup).IsRoomSetupDone) ||
-            void 0 === _
-              ? void 0
-              : _.call(_)
-          )
-            return void console.log(
-              "Skipping redundent call to startRequiredRoomSetupIfNeeded. Calibration state ok.",
-            );
-          let _ = !!(null === VRHTML || void 0 === VRHTML
-            ? void 0
-            : VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.fD8.VRLinkClientHMDSupportsRoomSetupRequests_Bool,
-              ));
-          _ &&
-            _._.m_bIsVRLinkServer &&
-            console.error(
-              "startRequiredRoomSetupIfNeeded not supported in current configuration",
-              _,
-              _._.m_bIsVRLinkServer,
-            ),
-            (this.m_bRoomSetupAllowsCancel = !1),
-            (0 != this.m_eRoomSetupStep &&
-              2 != this.m_eRoomSetupStep &&
-              6 != this.m_eRoomSetupStep &&
-              1 != this.m_eRoomSetupStep) ||
-              (console.log("Starting required roomsetup"),
-              this.setRoomSetupStep(7));
-        }
-        setRoomSetupStep(_, _) {
-          var _;
-          let _ = !!(null === VRHTML || void 0 === VRHTML
-            ? void 0
-            : VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.fD8.VRLinkClientHMDSupportsRoomSetupRequests_Bool,
-              ));
-          if (
-            !!(null === VRHTML || void 0 === VRHTML
-              ? void 0
-              : VRHTML.VRProperties.GetBoolProperty(
-                  "/user/head",
-                  _.fD8.VRLinkClientHMDSupportsRoomSetupRequests_Bool,
-                )) &&
-            _._.m_bIsVRLinkServer
-          ) {
-            const _ = (function (_) {
-              switch (_) {
-                case 1:
-                  return _.$Zy.RecenterCountdown;
-                case 3:
-                case 7:
-                  return _.$Zy.RoomSetupFull;
-                case 2:
-                  return _.$Zy.FloorAdjustExisting;
-                default:
-                  return _.$Zy.Invalid;
-              }
-            })(_);
-            _ != _.$Zy.Invalid
-              ? (console.log(
-                  `Remoting RoomSetupStep change request to client ${_}`,
-                ),
-                VRHTML.VRLink.SendRoomSetupRequest(_))
-              : console.log(`Invalid remote RoomSetupStep change request ${_}`);
-          } else {
-            if (
-              (_ ||
-                (_ = null !== (_ = _._.settings.get(_._)) && void 0 !== _ && _),
-              !_ &&
-                (function (_) {
-                  switch (_) {
-                    case 0:
-                    case 1:
-                      return !1;
-                    default:
-                      return !0;
-                  }
-                })(_))
-            )
-              return void console.warn(
-                "HMD doesnt support setRoomSetupStep " + JSON.stringify(_),
-              );
-            (7 != _ && 2 != _) ||
-              null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRChaperoneSetup.SetUpRoomSetupTransform(),
-              (2 != _ && 3 != _) ||
-                4 == this.m_eRoomSetupStep ||
-                null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.ResetPlayspaceFloorHeight(
-                  2 == _ ? _._.Manual : _._.PendingResetIfNeeded,
-                ),
-              7 == _
-                ? (null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceBoundsDrawing(),
-                  null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceRadius(),
-                  null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceFloorHeight(
-                      _._.PendingResetIfNeeded,
-                    ))
-                : 4 == _ &&
-                  3 == this.m_eRoomSetupStep &&
-                  (null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceRadius()),
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.SetPlayspaceMode(
-                  (function (_) {
-                    switch (_) {
-                      case 4:
-                        return _._.Circle;
-                      case 5:
-                        return _._.Drawn;
-                      case 7:
-                        return _._.Full;
-                      default:
-                        return _._.None;
-                    }
-                  })(_),
-                ),
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.NotifyRoomSetupStep(_, !!_),
-              (this.m_eRoomSetupStep = _);
-          }
-        }
-        AcceptRoomSetupStep() {
-          switch (this.m_eRoomSetupStep) {
-            case 1:
-              this.setRoomSetupStep(0),
-                null === VRHTML ||
-                  void 0 === VRHTML ||
-                  VRHTML.VRChaperone.ResetZeroPose();
-              break;
-            case 7:
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.CommitPlayspaceFull(),
-                this.setRoomSetupStep(0);
-              break;
-            case 2:
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.CommitPlayspaceFloorHeight(),
-                this.setRoomSetupStep(0);
-              break;
-            case 3:
-              this.setRoomSetupStep(4);
-              break;
-            case 4:
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.CommitPlayspaceCircleBoundary(),
-                this.setRoomSetupStep(0);
-              break;
-            case 5:
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRChaperoneSetup.CommitPlayspaceBoundsDrawing(),
-                this.setRoomSetupStep(0);
-          }
-        }
-        BackRoomSetupStep() {
-          switch (this.m_eRoomSetupStep) {
-            case 4:
-              this.setRoomSetupStep(3);
-              break;
-            case 5:
-              this.setRoomSetupStep(4);
-              break;
-            default:
-              this.CancelRoomSetupStep();
-          }
-        }
-        CancelRoomSetupStep() {
-          if (1 != this.m_eRoomSetupStep) {
-            if (this.m_bRoomSetupAllowsCancel) {
-              switch (this.m_eRoomSetupStep) {
-                case 7:
-                  null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceBoundsDrawing(),
-                    null === VRHTML ||
-                      void 0 === VRHTML ||
-                      VRHTML.VRChaperoneSetup.ResetPlayspaceRadius(),
-                    null === VRHTML ||
-                      void 0 === VRHTML ||
-                      VRHTML.VRChaperoneSetup.ResetPlayspaceFloorHeight(
-                        _._.Inactive,
-                      );
-                  break;
-                case 2:
-                case 3:
-                  null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRChaperoneSetup.ResetPlayspaceFloorHeight(
-                      _._.Inactive,
-                    );
-                  break;
-                case 4:
-                case 5:
-                  break;
-                default:
-                  return;
-              }
-              this.setRoomSetupStep(0, !0);
-            }
-          } else this.setRoomSetupStep(0, !0);
-        }
-        HandleRoomSetupButton(_) {
-          if (!this.inRoomSetup) return !1;
-          switch (_) {
-            case _.aqc.Accept:
-              return this.AcceptRoomSetupStep(), !0;
-            case _.aqc.Back:
-              return this.BackRoomSetupStep(), !0;
-          }
-          return !1;
-        }
-        Load() {
-          return (0, _._)(this, void 0, void 0, function* () {
-            var _, _, _, _, _, _;
-            (this.m_bShowFloor =
-              null !== (_ = _._.settings.get("/settings/steamvr/showFloor")) &&
-              void 0 !== _ &&
-              _),
-              (this.m_bShowFloorFar =
-                null !==
-                  (_ = _._.settings.get("/settings/steamvr/showFloorFar")) &&
-                void 0 !== _ &&
-                _),
-              (this.m_fBackgroundDomeRadius =
-                null !==
-                  (_ = _._.settings.get(
-                    "/settings/steamvr/backgroundDomeRadius",
-                  )) && void 0 !== _
-                  ? _
-                  : 20),
-              (this.m_fBackgroundOffsetX =
-                null !==
-                  (_ = _._.settings.get(
-                    "/settings/steamvr/backgroundOffsetX",
-                  )) && void 0 !== _
-                  ? _
-                  : 0),
-              (this.m_fBackgroundOffsetZ =
-                null !==
-                  (_ = _._.settings.get(
-                    "/settings/steamvr/backgroundOffsetZ",
-                  )) && void 0 !== _
-                  ? _
-                  : 0),
-              (this.m_bFloorDetectAtStart =
-                null !==
-                  (_ = _._.settings.get(
-                    "/settings/steamvr/floorDetectAtStart",
-                  )) && void 0 !== _
-                  ? _
-                  : 0);
-          });
-        }
-        Save() {
-          return (0, _._)(this, void 0, void 0, function* () {});
-        }
-        onChaperoneStatusEvents(_) {
-          const _ = !!(1 & _),
-            _ = !!(2 & _),
-            _ = !!(4 & _),
-            _ = !!(8 & _);
-          _ != this.m_bBoundsVisible && (this.m_bBoundsVisible = _),
-            _ != this.m_bIsRoomViewForcedOnByChaperone &&
-              (this.m_bIsRoomViewForcedOnByChaperone = _),
-            _ != this.m_bOutOfBoundsPlayAllowed &&
-              (this.m_bOutOfBoundsPlayAllowed = _),
-            _ != this.m_bIsSceneAppShowing && (this.m_bIsSceneAppShowing = _);
-        }
-      }
-      (0, _._)([_.observable], _.prototype, "m_bShowFloor", void 0),
-        (0, _._)([_.observable], _.prototype, "m_bShowFloorFar", void 0),
-        (0, _._)(
-          [_.observable],
-          _.prototype,
-          "m_fBackgroundDomeRadius",
-          void 0,
-        ),
-        (0, _._)([_.observable], _.prototype, "m_fBackgroundOffsetX", void 0),
-        (0, _._)([_.observable], _.prototype, "m_fBackgroundOffsetZ", void 0),
-        (0, _._)([_.observable], _.prototype, "m_bFloorDetectAtStart", void 0),
-        (0, _._)([_.observable], _.prototype, "m_bBoundsVisible", void 0),
-        (0, _._)(
-          [_.observable],
-          _.prototype,
-          "m_bIsRoomViewForcedOnByChaperone",
-          void 0,
-        ),
-        (0, _._)(
-          [_.observable],
-          _.prototype,
-          "m_bOutOfBoundsPlayAllowed",
-          void 0,
-        ),
-        (0, _._)([_.observable], _.prototype, "m_bIsSceneAppShowing", void 0),
-        (0, _._)([_.observable], _.prototype, "m_eRoomSetupStep", void 0),
-        (0, _._)(
-          [_.observable],
-          _.prototype,
-          "m_bRoomSetupAllowsCancel",
-          void 0,
-        ),
-        (0, _._)([_.computed], _.prototype, "supportsInHmdRoomSetup", null),
-        (0, _._)([_.computed], _.prototype, "inRoomSetup", null),
-        (0, _._)([_.action], _.prototype, "restartSilentRoomSetup", null),
-        (0, _._)(
-          [_.action],
-          _.prototype,
-          "startRequiredRoomSetupIfNeeded",
-          null,
-        ),
-        (0, _._)([_.action], _.prototype, "setRoomSetupStep", null),
-        (0, _._)([_.action.bound], _.prototype, "AcceptRoomSetupStep", null),
-        (0, _._)([_.action.bound], _.prototype, "BackRoomSetupStep", null),
-        (0, _._)([_.action.bound], _.prototype, "CancelRoomSetupStep", null),
-        (0, _._)([_.action.bound], _.prototype, "HandleRoomSetupButton", null),
-        (0, _._)([_._], _.prototype, "Load", null),
-        (0, _._)([_._], _.prototype, "Save", null),
-        (0, _._)(
-          [_.action.bound],
-          _.prototype,
-          "onChaperoneStatusEvents",
-          null,
-        );
-      const _ = new _();
-      window.ConstructStore = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -24274,8 +25492,194 @@ var CLSTAMP = "steamdb";
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new (__webpack_require__("chunkid")._)("DashboardRequest"),
+        _ = new (class {
+          ShowDashboard(_) {
+            return {
+              dashboard_visibility_action: 2,
+              reason: _,
+            };
+          }
+          HideDashboard(_) {
+            return {
+              dashboard_visibility_action: 3,
+              reason: _,
+            };
+          }
+          ToggleDashboard(_) {
+            return {
+              dashboard_visibility_action: 4,
+              reason: _,
+            };
+          }
+          ShowFrame(_, _) {
+            return {
+              dashboard_visibility_action: 1,
+              target: _(_),
+              reason: _,
+            };
+          }
+          SwitchDashboardToFrame(_, _) {
+            return {
+              dashboard_visibility_action: 0,
+              target: _(_),
+              reason: _,
+            };
+          }
+          ShowDashboardAndSwitchToFrame(_, _) {
+            return {
+              dashboard_visibility_action: 2,
+              target: _(_),
+              reason: _,
+            };
+          }
+        })();
+      function _(_) {
+        var _, _;
+        return "number" == typeof _
+          ? {
+              frame_id: _,
+            }
+          : "string" == typeof _
+            ? {
+                overlay_key: _,
+              }
+            : (function (_) {
+                  return null != _ && "pageID" in _;
+                })(_)
+              ? {
+                  frame_id:
+                    null === (_ = _.frame) || void 0 === _ ? void 0 : _.frameID,
+                  page_id: _.pageID,
+                  overlay_key: _.summonOverlayKey,
+                }
+              : {
+                  frame_id: null == _ ? void 0 : _.frameID,
+                  page_id: null == _ ? void 0 : _.activePageID,
+                  overlay_key:
+                    null === (_ = null == _ ? void 0 : _.activePage) ||
+                    void 0 === _
+                      ? void 0
+                      : _.summonOverlayKey,
+                };
+      }
+      let _, _;
+      function _(_) {
+        null != _ &&
+          _.Error("_RegisterLocalDashboardRequestHandler called twice"),
+          (_ = _);
+      }
+      function _(_, _) {
+        const _ = (function (_) {
+          var _, _, _, _, _, _, _;
+          const { target: _ } = _,
+            _ = (0, _._)(_, ["target"]),
+            _ = Object.assign(
+              Object.assign(Object.assign({}, _), {
+                dashboard_visibility_action:
+                  null !== (_ = _.dashboard_visibility_action) && void 0 !== _
+                    ? _
+                    : 0,
+                vrlink_request_split:
+                  null !== (_ = _.vrlink_request_split) && void 0 !== _ ? _ : 0,
+                relatch_dashboard: {
+                  condition:
+                    null !==
+                      (_ =
+                        null === (_ = _.relatch_dashboard) || void 0 === _
+                          ? void 0
+                          : _.condition) && void 0 !== _
+                      ? _
+                      : 0,
+                  deadzone:
+                    null !==
+                      (_ =
+                        null === (_ = _.relatch_dashboard) || void 0 === _
+                          ? void 0
+                          : _.deadzone) && void 0 !== _
+                      ? _
+                      : 8,
+                },
+              }),
+              null != _ && {
+                target: Object.assign(Object.assign({}, _), {
+                  overlay_key_vrlink_namespace:
+                    null !== (_ = _.overlay_key_vrlink_namespace) &&
+                    void 0 !== _
+                      ? _
+                      : 0,
+                }),
+              },
+            );
+          return _.Info("Normalize", JSON.stringify(_), JSON.stringify(_)), _;
+        })(_);
+        null == _
+          ? (_.Info(
+              "No local handler; routing via dashboard mailbox",
+              _.reason,
+            ),
+            (function (_) {
+              const _ = (function () {
+                null == _ &&
+                  ((_ = new _._nH()), _.Init("dashboardrequest_sender"));
+                return _;
+              })();
+              if (_.SendMessage(_.Xun, _)) return;
+              _.WaitForConnect().then(() => {
+                _.SendMessage(_.Xun, _) ||
+                  _.Error(
+                    "Failed to send show_or_hide_dashboard_or_frame to the dashboard mailbox",
+                  );
+              });
+            })({
+              type: "show_or_hide_dashboard_or_frame",
+              request_base64: _._.fromObject(_).serializeBase64String(),
+            }))
+          : _(_, _);
+      }
+      function _(_) {
+        let _;
+        try {
+          _ = _._.deserializeBinary(_).toObject();
+        } catch (_) {
+          return void _.Error(
+            "ShowOrHideDashboardOrFrameFromBase64 failed to deserialize",
+            null == _ ? void 0 : _.length,
+            _,
+          );
+        }
+        _(_, _);
+      }
+      function _(_) {
+        _(
+          (function (_) {
+            const _ = 32768;
+            let _ = "";
+            for (let _ = 0; _ < _.length; _ += _)
+              _ += String.fromCharCode.apply(
+                null,
+                Array.from(_.subarray(_, _ + _)),
+              );
+            return btoa(_);
+          })(_),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -24378,15 +25782,15 @@ var CLSTAMP = "steamdb";
         }
         onDesktopWindowClicked(_) {
           const _ = this.windows.find((_) => _.hwnd == _);
-          _._.HasFramesWithAssociatedSummonKeys(
+          _._.HasLocalFramesWithAssociatedSummonKeys(
             null == _ ? void 0 : _.overlay_key,
           )
-            ? null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRClient.ShowDashboardOverlay({
-                overlayKey: _.overlay_key,
-                sReason: "desktopstore_ondesktopwindowclicked",
-              })
+            ? (0, _._)(
+                _._.ShowDashboardAndSwitchToFrame(
+                  _.overlay_key,
+                  "desktopstore_ondesktopwindowclicked",
+                ),
+              )
             : this.SpawnFrameForWindow(_);
         }
         _setRemoteWindowsProto(_) {
@@ -24499,12 +25903,12 @@ var CLSTAMP = "steamdb";
           this.m_setDesktopWindowFrames.delete(_);
         }
         OnWindowViewCreatedMsg(_) {
-          null === VRHTML ||
-            void 0 === VRHTML ||
-            VRHTML.VRClient.ShowDashboardOverlay({
-              overlayKey: _.overlay_key,
-              sReason: "DesktopStore_OnWindowViewCreatedMsg",
-            });
+          (0, _._)(
+            _._.ShowDashboardAndSwitchToFrame(
+              _.overlay_key,
+              "DesktopStore_OnWindowViewCreatedMsg",
+            ),
+          );
         }
         OnUpdateWindowListMsg(_) {
           var _;
@@ -25405,7 +26809,7 @@ var CLSTAMP = "steamdb";
             ? _._.EnterDiminishedState()
             : this.canHideDashboard &&
               (this.PushInputFocus(),
-              _._.Instance.hideDashboard("Gamepad Mode Button"));
+              (0, _._)(_._.HideDashboard("Gamepad Mode Button")));
         }
         HandleLaserMouseRequiredPromptClick() {
           _._.ForceActivateLaserMouse();
@@ -25914,6 +27318,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         get dockLocation() {
@@ -26025,7 +27430,7 @@ var CLSTAMP = "steamdb";
           this.m_bBeingDragged != _ && (this.m_bBeingDragged = _);
         }
         SetDockLocation(_) {
-          var _, _, _, _, _, _;
+          var _, _, _, _;
           if (null == _ || _ == this.dockLocation) return;
           const _ = (function (_) {
             switch (_) {
@@ -26037,68 +27442,59 @@ var CLSTAMP = "steamdb";
                 return _.kGj.TrackedControllerRole_Invalid;
             }
           })(_);
-          _ == _.kGj.TrackedControllerRole_Invalid ||
-          (null === VRHTML || void 0 === VRHTML
-            ? void 0
-            : VRHTML.VRSystem.GetTrackedDeviceIndexForControllerRole(_)) !=
-            _.neN
-            ? _._.m_bIsVRLinkServer && _._.unifiedDashboardEnabled
-              ? (null === (_ = this.frame) || void 0 === _
-                  ? void 0
-                  : _.frameID) &&
-                (null ===
-                  (_ =
-                    null === VRHTML || void 0 === VRHTML
-                      ? void 0
-                      : VRHTML.VRLink) ||
-                  void 0 === _ ||
-                  __webpack_require__.SendFrameDockLocationRequest(
-                    null === (_ = this.frame) || void 0 === _
-                      ? void 0
-                      : _.frameID,
-                    _,
-                  ))
-              : (_ == _.yWq.Dashboard &&
-                  ((_._.isFullyVisible &&
-                    this.frame.isActiveDashboardFrame &&
-                    this.frame.inputFocus.anyPanelHasFocus) ||
-                    null === VRHTML ||
-                    void 0 === VRHTML ||
-                    VRHTML.VRClient.ShowDashboardOverlay({
-                      overlayKey:
-                        null ===
-                          (_ =
-                            null === (_ = this.frame) || void 0 === _
-                              ? void 0
-                              : _.activePage) || void 0 === _
-                          ? void 0
-                          : _.summonOverlayKey,
-                      sReason: "SetDockLocation",
-                    })),
-                _._._setDockLocation(
+          if (
+            _ != _.kGj.TrackedControllerRole_Invalid &&
+            (null === VRHTML || void 0 === VRHTML
+              ? void 0
+              : VRHTML.VRSystem.GetTrackedDeviceIndexForControllerRole(_)) ==
+              _.neN
+          )
+            return void this.Log.Error(
+              "Can't get device index for controller docking target:",
+              _.yWq[_],
+            );
+          if (_._.m_bIsVRLinkServer && _._.unifiedDashboardEnabled)
+            return void (
+              (null === (_ = this.frame) || void 0 === _
+                ? void 0
+                : _.frameID) &&
+              (null ===
+                (_ =
+                  null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.VRLink) ||
+                void 0 === _ ||
+                __webpack_require__.SendFrameDockLocationRequest(
                   null === (_ = this.frame) || void 0 === _
                     ? void 0
                     : _.frameID,
                   _,
-                ),
-                this.frame.docking.SetJustFloatedFromDashboard(
-                  _ == _.yWq.World,
                 ))
-            : this.Log.Error(
-                "Can't get device index for controller docking target:",
-                _.yWq[_],
+            );
+          const _ = !(
+            _ != _.yWq.Dashboard ||
+            (_._.isFullyVisible &&
+              this.frame.isActiveDashboardFrame &&
+              this.frame.inputFocus.anyPanelHasFocus)
+          );
+          _._._setDockLocation(
+            null === (_ = this.frame) || void 0 === _ ? void 0 : _.frameID,
+            _,
+          ),
+            this.frame.docking.SetJustFloatedFromDashboard(_ == _.yWq.World),
+            _ &&
+              (0, _._)(
+                _._.ShowDashboardAndSwitchToFrame(
+                  this.frame,
+                  "SetDockLocation",
+                ),
               );
         }
         SetInTheater(_ = !0) {
           this.frame.docking.SetDockLocation(_.yWq.Theater),
             _ &&
               !(0, _._)(this.frame, _._.mainSteamFrame) &&
-              (null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRDashboardManager.HideDashboard(
-                  "AutoHideDashboardForOverlay",
-                  !1,
-                ));
+              (0, _._)(_._.HideDashboard("AutoHideDashboardForOverlay"));
         }
       }
       function _(_) {
@@ -26557,6 +27953,9 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("Frame");
       class _ {
@@ -26643,12 +28042,7 @@ var CLSTAMP = "steamdb";
           this.frame.docking.SetDockLocation(_.yWq.Theater),
             _ &&
               !(0, _._)(this.frame, _._.mainSteamFrame) &&
-              (null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRDashboardManager.HideDashboard(
-                  "AutoHideDashboardForOverlay",
-                  !1,
-                ));
+              (0, _._)(_._.HideDashboard("AutoHideDashboardForOverlay"));
         }
       }
       (0, _._)(
@@ -26714,7 +28108,14 @@ var CLSTAMP = "steamdb";
           return !1;
         }
         get associatedSummonOverlayKeys() {
-          return [];
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = this.m_protoForSteam) || void 0 === _
+                ? void 0
+                : _.overlay_keys) && void 0 !== _
+            ? _
+            : [];
         }
         get isCurrentlyVisible() {
           var _, _;
@@ -26766,8 +28167,23 @@ var CLSTAMP = "steamdb";
         get activePage() {}
         GetPageWithID(_) {}
         GetPageWithOverlaySummonKey(_) {}
-        SwitchToPage(_) {
-          _.Error("unimplemented! RemoteFrame.SwitchToPage");
+        SwitchToPage(_, _) {
+          const _ = _ instanceof _._ ? _.pageID : _;
+          null != _ || null != _
+            ? (0, _._)({
+                reason: "CRemoteFrame.SwitchToPage",
+                target: {
+                  frame_id: this.frameID,
+                  page_id: _,
+                  overlay_key: _,
+                  overlay_key_vrlink_namespace: 2,
+                },
+                dashboard_visibility_action: 0,
+              })
+            : _.Error(
+                "RemoteFrame.SwitchToPage with neither a page ID nor an overlay key",
+                this.frameID,
+              );
         }
         _update(_) {
           var _;
@@ -26810,7 +28226,6 @@ var CLSTAMP = "steamdb";
           "shouldSuppressPanelBacksides",
           null,
         ),
-        (0, _._)([_.action], _.prototype, "SwitchToPage", null),
         (0, _._)([_.action], _.prototype, "_update", null),
         (0, _._)([_.computed.struct], _.prototype, "protoForSteam", null),
         (0, _._)([_.computed.struct], _.prototype, "protoForVRLink", null);
@@ -26947,7 +28362,7 @@ var CLSTAMP = "steamdb";
             return void (_ && this.ShowGamepadUnsupportedMessage());
           if (17 == _)
             return void (
-              _ && _._.Instance.toggleDashboard("Gamepad Guide Button")
+              _ && (0, _._)(_._.ToggleDashboard("Gamepad Guide Button"))
             );
           if (_._.inRoomSetup) {
             const _ = (function (_) {
@@ -27206,7 +28621,6 @@ var CLSTAMP = "steamdb";
           (this.m_mapAllOverlays = new Map()),
             (this.m_rgOverlayCreatedCallbacks = new _._()),
             (this.m_rgOverlayDestroyedCallbacks = new _._()),
-            (this.m_rgSwitchToOverlayKeyCallbacks = new _._()),
             (0, _.makeObservable)(this);
         }
         Init() {
@@ -27514,6 +28928,7 @@ var CLSTAMP = "steamdb";
             (this.m_bDebugCameraViewEnabled = !1),
             (this.m_bRoomViewMonochrome = void 0),
             (this.m_bSupportsEyeTracking = void 0),
+            (this.m_bVRLinkEyeTrackingActive = !1),
             (this.m_bRoomViewShowing = void 0),
             (this.m_bRoomViewEnabled = void 0),
             (this.m_bRoomViewStreaming = void 0),
@@ -27522,7 +28937,7 @@ var CLSTAMP = "steamdb";
         }
         Init() {
           return (0, _._)(this, void 0, void 0, function* () {
-            var _, _, _, _;
+            var _, _, _, _, _;
             null === VRHTML ||
               void 0 === VRHTML ||
               VRHTML.RegisterForHmdCameraStateChanged(
@@ -27549,6 +28964,13 @@ var CLSTAMP = "steamdb";
                     : VRHTML.RegisterForActivityLevelChanged) ||
                 void 0 === _ ||
                 __webpack_require__.call(VRHTML, this.onActivityLevelChanged),
+              null ===
+                (_ =
+                  null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.RegisterForVRLinkEyeTrackingActive) ||
+                void 0 === _ ||
+                _.call(VRHTML, this.onVRLinkEyeTrackingActiveChanged),
               (this.m_bSupportsEyeTracking =
                 null !==
                   (_ =
@@ -27575,12 +28997,24 @@ var CLSTAMP = "steamdb";
           (this.m_bRoomViewShowing = _), (this.m_bRoomViewEnabled = _);
         }
         get showRoomViewButton() {
-          var _;
+          var _, _;
           return (
-            _._.settings.get(_._) &&
-            (null !== (_ = _._.settings.get(_._)) && void 0 !== _ ? _ : 0) >
-              0 &&
-            !_._.m_bIsVRLinkServer
+            !(
+              null ===
+                (_ =
+                  null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.VRProperties.GetBoolProperty(
+                        "/user/head",
+                        _._.Hmd_SupportsChromaKeyPassthrough_Bool,
+                      )) ||
+              void 0 === _ ||
+              !_
+            ) ||
+            (_._.settings.get(_._) &&
+              (null !== (_ = _._.settings.get(_._)) && void 0 !== _ ? _ : 0) >
+                0 &&
+              !_._.m_bIsVRLinkServer)
           );
         }
         get roomViewShowing() {
@@ -27594,6 +29028,9 @@ var CLSTAMP = "steamdb";
         }
         onActivityLevelChanged(_) {
           this.m_nActivityLevel = _;
+        }
+        onVRLinkEyeTrackingActiveChanged(_) {
+          this.m_bVRLinkEyeTrackingActive = _;
         }
       }
       (0, _._)([_.observable], _.prototype, "m_bAllowCameraToggle", void 0),
@@ -27624,6 +29061,12 @@ var CLSTAMP = "steamdb";
         ),
         (0, _._)([_.observable], _.prototype, "m_bRoomViewMonochrome", void 0),
         (0, _._)([_.observable], _.prototype, "m_bSupportsEyeTracking", void 0),
+        (0, _._)(
+          [_.observable],
+          _.prototype,
+          "m_bVRLinkEyeTrackingActive",
+          void 0,
+        ),
         (0, _._)([_.observable], _.prototype, "m_bRoomViewShowing", void 0),
         (0, _._)([_.observable], _.prototype, "m_bRoomViewEnabled", void 0),
         (0, _._)([_.observable], _.prototype, "m_bRoomViewStreaming", void 0),
@@ -27632,7 +29075,8 @@ var CLSTAMP = "steamdb";
         (0, _._)([_._], _.prototype, "onRoomViewChanged", null),
         (0, _._)([_.computed], _.prototype, "showRoomViewButton", null),
         (0, _._)([_._], _.prototype, "onRoomViewStreamChanged", null),
-        (0, _._)([_._], _.prototype, "onActivityLevelChanged", null);
+        (0, _._)([_._], _.prototype, "onActivityLevelChanged", null),
+        (0, _._)([_._], _.prototype, "onVRLinkEyeTrackingActiveChanged", null);
       const _ = new _();
       window.RoomViewStore = _;
     },
@@ -28068,7 +29512,7 @@ var CLSTAMP = "steamdb";
             _.set_env_brightness_construct_theater(
               _._.fromObject({
                 value: _._.settings.get(_._),
-                min: -1,
+                min: -1.1,
                 max: 1,
                 default: 0,
               }),
@@ -28410,42 +29854,43 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
-          var { variant: _, gamepadFocused: _, focusRing: _, className: _ } = _,
-            _ = (0, _._)(_, [
-              "variant",
-              "gamepadFocused",
-              "focusRing",
-              "className",
-            ]);
-          const _ = "primary" == _;
-          return _.createElement(
-            _._,
-            Object.assign({}, _, {
-              className: (0, _._)(
-                "GamepadUIButton",
-                _.GamepadUIButton,
-                [_.Primary, _],
-                [
-                  _.Highlighted,
-                  _ &&
-                    (null === _._ || void 0 === _._
-                      ? void 0
-                      : _._.computedInputFocus.m_eSystemPanelInteractionMode) ==
-                      _.wBp.LaserMouse &&
-                    !_._.hasControllers,
-                ],
-                [_.FocusRing, !!_],
-                _,
-                ["gpfocus", !!_],
-              ),
-            }),
-          );
-        }),
-        _ = (_) => {
-          if (null == _) return "";
-          let _ = _.image_path_capsule || _.image_path;
-          return _.startsWith("/app/image?") && (_ += "&aspect=portrait"), _;
-        };
+        var { variant: _, gamepadFocused: _, focusRing: _, className: _ } = _,
+          _ = (0, _._)(_, [
+            "variant",
+            "gamepadFocused",
+            "focusRing",
+            "className",
+          ]);
+        const _ = "primary" == _;
+        return _.createElement(
+          _._,
+          Object.assign({}, _, {
+            className: (0, _._)(
+              "GamepadUIButton",
+              _.GamepadUIButton,
+              [_.Primary, _],
+              [
+                _.Highlighted,
+                _ &&
+                  (null === _._ || void 0 === _._
+                    ? void 0
+                    : _._.computedInputFocus.m_eSystemPanelInteractionMode) ==
+                    _.wBp.LaserMouse &&
+                  !_._.hasControllers,
+              ],
+              [_.FocusRing, !!_],
+              _,
+              ["gpfocus", !!_],
+            ),
+          }),
+        );
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        if (null == _) return "";
+        let _ = _.image_path_capsule || _.image_path;
+        return _.startsWith("/app/image?") && (_ += "&aspect=portrait"), _;
+      };
       function _(_) {
         const _ = (0, _.useObserver)(
             () => _._.Instance.SceneApplicationState != _.HWH.None,
@@ -28493,9 +29938,7 @@ var CLSTAMP = "steamdb";
         }
         onReturnToGame() {
           _._.roomViewShowing && (0, _._)(!1),
-            null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRDashboardManager.HideDashboard("return_to_game", !1);
+            (0, _._)(_._.HideDashboard("return_to_game"));
         }
         onOpenAppControllerBindingSettings() {
           const _ = _._.Instance.SceneAppKey;
@@ -30032,7 +31475,6 @@ var CLSTAMP = "steamdb";
                           scrollable: !1,
                           meters_per_pixel: 2 * _._,
                           reflect: 0.005,
-                          sampler: _._h3.SingleTap,
                           sort_depth_bias: this.props.sort_depth_bias,
                           debug_name: "control-bar-tray-bg",
                         },
@@ -30756,6 +32198,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -30785,7 +32228,29 @@ var CLSTAMP = "steamdb";
               }, [])
             );
           })(_, [_, _]);
-        _.useEffect(() => _._.SetMainSteamFrame(_), [_]);
+        _.useEffect(() => _._.SetMainSteamFrame(_), [_]),
+          (function (_) {
+            _.useEffect(
+              () =>
+                (0, _.reaction)(
+                  () =>
+                    !!_ &&
+                    _._.locksDashboardToSteamFrame &&
+                    _.docking.dockLocation != _.yWq.Dashboard,
+                  (_) => {
+                    _ &&
+                      (_.Log.Info(
+                        "Re-docking in the dashboard for the guided tour",
+                      ),
+                      _.docking.SetDockLocation(_.yWq.Dashboard));
+                  },
+                  {
+                    fireImmediately: !0,
+                  },
+                ),
+              [_],
+            );
+          })(_);
         const _ = (0, _.useObserver)(() => {
             var _;
             return null === (_ = _._.legacyFloatingMainMenuPopup) ||
@@ -30858,7 +32323,7 @@ var CLSTAMP = "steamdb";
                           (null == _ ? void 0 : _.activePage) == _),
                     }),
                     onInvoked: () => {
-                      var _, _;
+                      var _;
                       (null == _ ? void 0 : _.activePage) == _ &&
                       (null == _ ? void 0 : _.isCurrentlyVisible)
                         ? __webpack_require__.SwitchToPage(
@@ -30869,15 +32334,12 @@ var CLSTAMP = "steamdb";
                           ),
                         _.isCurrentlyVisible
                           ? setTimeout(() => _.inputFocus.FocusMainPanel(), 100)
-                          : (null === (_ = _.activePage) || void 0 === _
-                              ? void 0
-                              : _.summonOverlayKey) &&
-                            (null === VRHTML ||
-                              void 0 === VRHTML ||
-                              VRHTML.VRClient.ShowDashboardOverlay({
-                                overlayKey: _.activePage.summonOverlayKey,
-                                sReason: "FrameMenuItem_Action",
-                              }));
+                          : (0, _._)(
+                              _._.ShowDashboardAndSwitchToFrame(
+                                _,
+                                "FrameMenuItem_Action",
+                              ),
+                            );
                     },
                   }),
               ),
@@ -31468,53 +32930,37 @@ var CLSTAMP = "steamdb";
             _ = _.bVRSceneApp,
             [_, _] = _.useState(_ ? 0 : 1);
           _.useEffect(() => _(_ ? 0 : 1), [_]);
-          const _ = _.useCallback(() => {
-              var _;
-              _(0);
-              const _ =
-                (null == _ ? void 0 : _.docking.dockLocation) ==
-                _.yWq.Dashboard;
-              null === (_ = _.Instance) ||
-                void 0 === _ ||
-                _.showDashboardOverlay(
-                  {
-                    frameId: null == _ ? void 0 : _.frameID,
-                    sReason: "fnShowNowPlayingPage",
-                  },
-                  _,
-                );
-            }, [_]),
-            _ = _.useCallback(
+          const _ = _.useCallback(
               (_, _) => {
-                var _;
-                _(1);
-                const _ =
-                  _ &&
-                  (null == _ ? void 0 : _.docking.dockLocation) ==
-                    _.yWq.Dashboard;
-                null === (_ = _.Instance) ||
-                  void 0 === _ ||
-                  __webpack_require__.showDashboardOverlay(
-                    {
-                      frameId: null == _ ? void 0 : _.frameID,
-                      sReason: `fnShowGameOrGameOverlayPage${_ ? " - " : ""}${_}`,
-                    },
-                    _,
-                  );
-              },
-              [_],
-            ),
-            _ = _.useCallback(
-              (_) => {
-                !_ ||
-                  (_ != (null == _ ? void 0 : _.summonOverlayKey) &&
-                    _ != (null == _ ? void 0 : _.summonOverlayKey)) ||
-                  _(`fnOnOverlaySummonRequest(${_})`, !1);
+                const _ = (_) =>
+                  null != _ &&
+                  (_ == _ || (null != _ && _ == _.summonOverlayKey));
+                return __webpack_require__(_)
+                  ? (_(0), !0)
+                  : !(!__webpack_require__(_) && !__webpack_require__(_)) &&
+                      (_(1), !0);
               },
               [_, _, _],
-            );
-          (0, _._)(_._.m_rgSwitchToOverlayKeyCallbacks, _);
-          const _ = 2 != _.eUICompositionState && 3 != _.eUICompositionState;
+            ),
+            _ = _.useCallback((_, _) => (0, _._)(_._.ShowFrame(_, _)), []),
+            _ = _.useCallback(() => {
+              _
+                ? _(_, "fnShowNowPlayingPage")
+                : _ &&
+                  (_(0),
+                  (0, _._)(_._.ShowFrame(_.frameID, "fnShowNowPlayingPage")));
+            }, [_, _, _]),
+            _ = _.useCallback(
+              (_) => {
+                const _ = `fnShowGameOrGameOverlayPage${_ ? " - " : ""}${_}`,
+                  _ = null != _ ? _ : _;
+                _
+                  ? _(_, _)
+                  : _ && (_(1), (0, _._)(_._.ShowFrame(_.frameID, _)));
+              },
+              [_, _, _, _],
+            ),
+            _ = 2 != _.eUICompositionState && 3 != _.eUICompositionState;
           let _ = _.eUICompositionState;
           switch (_) {
             case 2:
@@ -31582,28 +33028,24 @@ var CLSTAMP = "steamdb";
                 (0, _.when)(
                   () => (null == _ ? void 0 : _.state) == _._.Alive,
                   () => {
-                    var _, _, _;
+                    var _, _;
                     null === (_ = _.Instance) ||
                       void 0 === _ ||
                       _.switchToFrameInternal(_, void 0, "GameFrame now alive"),
-                      !_ &&
-                        null !==
+                      _ ||
+                        _._.locksDashboardToSteamFrame ||
+                        null ===
                           (_ = _._.settings.get(
                             "/settings/dashboard/autoShowGameTheater",
-                          )) &&
-                        void 0 !== _ &&
-                        _ &&
+                          )) ||
+                        void 0 === _ ||
+                        !_ ||
                         (_.docking.SetInTheater(),
-                        null ===
-                          (_ =
-                            null === VRHTML || void 0 === VRHTML
-                              ? void 0
-                              : VRHTML.VRDashboardManager) ||
-                          void 0 === _ ||
-                          __webpack_require__.HideDashboard(
+                        (0, _._)(
+                          _._.HideDashboard(
                             "GameFrame now alive, auto-theatering",
-                            !1,
-                          ));
+                          ),
+                        ));
                   },
                 ),
               [_, _],
@@ -31629,6 +33071,7 @@ var CLSTAMP = "steamdb";
                   },
                   isStreamingClient: _.bStreamingClient,
                   gameAppID: _.appid,
+                  onPageSwitch: _,
                   componentProps: {
                     tab: {
                       overlayKeyForTabVisibility:
@@ -31666,7 +33109,7 @@ var CLSTAMP = "steamdb";
                         _.createElement(_._, {
                           info: _,
                           showForSingleWindow: _ || _,
-                          onInvoked: () => _("app window menu button", !0),
+                          onInvoked: () => _("app window menu button"),
                           allowShowAsActive: 1 == _,
                         }),
                       !_ &&
@@ -31717,7 +33160,7 @@ var CLSTAMP = "steamdb";
                       _ &&
                         _.createElement(_._, {
                           info: _,
-                          onInvoked: () => _("app overlay menu button", !0),
+                          onInvoked: () => _("app overlay menu button"),
                           allowShowAsActive: 1 == _,
                         }),
                     ),
@@ -32704,7 +34147,8 @@ var CLSTAMP = "steamdb";
         (_ = _ = (0, _._)([_._], _));
       var _,
         _ = __webpack_require__("chunkid");
-      const _ = new _._("Dashboard");
+      const _ = new _._("Dashboard"),
+        _ = new _._("DashboardRequest");
       class _ extends _.Component {
         componentDidMount() {
           null === VRHTML ||
@@ -32744,14 +34188,6 @@ var CLSTAMP = "steamdb";
         }
         return 0;
       }
-      function _(_) {
-        return {
-          overlayKey: null == _ ? void 0 : _.overlay_key,
-          sReason: null == _ ? void 0 : _.reason,
-          bSourceIsVRLinkRemote: null == _ ? void 0 : _.source_is_vrlink_remote,
-          eDashboardRelatch: null == _ ? void 0 : _.dashboard_relatch,
-        };
-      }
       let _ = (_ = class extends _.Component {
         static get Instance() {
           return _.s_Instance;
@@ -32770,44 +34206,29 @@ var CLSTAMP = "steamdb";
             (this.m_dashboardThumbnailsChangedEventHandle = void 0),
             (this.m_ePreviousSceneApplicationState = _.HWH.None),
             (this.m_vrGamepadUIPathPropertiesAutorunDisposer = void 0),
+            (this.m_GuidedTourSnapBackReactionDisposer = void 0),
             (this.m_mailbox = new _._nH()),
             (0, _.makeObservable)(this),
             (this.state = {}),
             (_.s_Instance = this),
             _._.Init(!1),
             _.uS7.getInstance(),
+            (0, _._)(this.showOrHideDashboardOrFrameInternal),
             this.m_mailbox.Init(_.Xun).then(() => {
               this.m_mailbox.RegisterHandler(
                 _.k_sDashboardOverlayDestroyedMessage,
                 this.onDashboardOverlayDestroyed,
               ),
                 this.m_mailbox.RegisterHandler(
-                  "show_dashboard_requested",
-                  (_) => this.showDashboardOverlay(_(_), !0),
-                ),
-                this.m_mailbox.RegisterHandler(
-                  "switch_dashboard_overlay_requested",
-                  (_) => this.showDashboardOverlay(_(_), !1),
-                ),
-                this.m_mailbox.RegisterHandler(
                   "vrcmd_dock_overlay",
                   this.onVrCmdDockOverlayRequested,
                 ),
                 this.m_mailbox.RegisterHandler(
-                  "hide_dashboard_requested",
-                  (_) =>
-                    this.hideDashboard(
-                      null == _ ? void 0 : _.reason,
-                      null == _ ? void 0 : _.source_is_vrlink_remote,
-                    ),
-                ),
-                this.m_mailbox.RegisterHandler(
-                  "toggle_dashboard_requested",
-                  (_) =>
-                    this.toggleDashboard(
-                      null == _ ? void 0 : _.reason,
-                      null == _ ? void 0 : _.source_is_vrlink_remote,
-                    ),
+                  "show_or_hide_dashboard_or_frame",
+                  (_) => {
+                    (null == _ ? void 0 : _.request_base64) &&
+                      (0, _._)(_.request_base64);
+                  },
                 );
             }),
             _._.SteamVR.SetImplementation(
@@ -32823,7 +34244,7 @@ var CLSTAMP = "steamdb";
                     ),
                     _.Warning("DashboardTabClicked on undefined frame", _)),
                   _ == _._.LegacyFloatingSteamMainMenu_VRSettings &&
-                    ((_ = _._.GetFramesWithAssociatedSummonKeys(_._)[0]),
+                    ((_ = _._.GetLocalFramesWithAssociatedSummonKeys(_._)[0]),
                     (null === (_ = null == _ ? void 0 : _.activePage) ||
                     void 0 === _
                       ? void 0
@@ -32865,6 +34286,12 @@ var CLSTAMP = "steamdb";
                         : "null") +
                       ")",
                   );
+              },
+            ),
+            _._.SteamVR.SetImplementation(
+              "ShowOrHideDashboardOrFrame",
+              ({ request: _ }) => {
+                _ && (0, _._)(_);
               },
             ),
             _._.SteamVR.SetImplementation("ShowGame", (_) => {
@@ -32933,6 +34360,22 @@ var CLSTAMP = "steamdb";
             (this.m_vrGamepadUIPathPropertiesAutorunDisposer = (0, _.autorun)(
               () => {
                 this.updateVRGamepadUIPathProperties();
+              },
+            )),
+            (this.m_GuidedTourSnapBackReactionDisposer = (0, _.reaction)(
+              () =>
+                _._.locksDashboardToSteamFrame &&
+                !(0, _._)(_._.activeFrame, _._.mainSteamFrame),
+              (_) => {
+                _ &&
+                  this.switchToFrameInternal(
+                    _._.mainSteamFrame,
+                    void 0,
+                    "Guided tour",
+                  );
+              },
+              {
+                fireImmediately: !0,
               },
             ));
         }
@@ -33215,7 +34658,7 @@ var CLSTAMP = "steamdb";
             _._.SetProtoPathProperty(_);
         }
         componentWillUnmount() {
-          var _, _, _, _, _;
+          var _, _, _, _, _, _;
           clearTimeout(this.m_timeoutHoverStateEnd),
             _._.clearPopoverMenuTimeout(),
             null === (_ = this.m_appStateChangedAutorunDisposer) ||
@@ -33228,6 +34671,9 @@ var CLSTAMP = "steamdb";
               void 0 === _ ||
               __webpack_require__.call(this),
             null === (_ = this.m_LegacyKeyboardAutorunDisposer) ||
+              void 0 === _ ||
+              _.call(this),
+            null === (_ = this.m_GuidedTourSnapBackReactionDisposer) ||
               void 0 === _ ||
               _.call(this),
             null === (_ = this.m_dashboardThumbnailsChangedEventHandle) ||
@@ -33246,29 +34692,19 @@ var CLSTAMP = "steamdb";
               };
         }
         onShowOverlayRequestFromSteam(_) {
-          const _ = _._.GetFramesWithAssociatedSummonKeys(_.overlay_key)[0];
-          if (!_)
-            return void console.log(
-              "ShowGame/ShowOverlay called with invalid overlay_key",
-              _.overlay_key,
+          _._.HasFramesWithAssociatedSummonKeys(
+            null == _ ? void 0 : _.overlay_key,
+          ) ||
+            console.log(
+              "ShowGame/ShowOverlay called with an overlay_key we can't resolve locally",
+              null == _ ? void 0 : _.overlay_key,
+            ),
+            (0, _._)(
+              _._.ShowFrame(
+                null == _ ? void 0 : _.overlay_key,
+                "ShowGame/ShowOverlay",
+              ),
             );
-          const _ = null == _ ? void 0 : _.overlay_key;
-          if (_) {
-            const _ = _.GetPageWithOverlaySummonKey(_);
-            _ && _.SwitchToPage(_);
-          }
-          _.docking.dockLocation == _.yWq.Dashboard
-            ? null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRClient.ShowDashboardOverlay({
-                overlayKey: _.overlay_key,
-                sReason: "onShowOverlayRequestFromSteam",
-              })
-            : (0, _._)(_, _._.mainSteamFrame) ||
-              this.hideDashboard(
-                `ShowGame/${_.yWq[_.docking.dockLocation]}`,
-                !1,
-              );
         }
         onGrabStart() {
           _._.m_OnDashboardGrabStart.Dispatch();
@@ -33293,23 +34729,19 @@ var CLSTAMP = "steamdb";
           _._._updateLastActiveOverlaySummonKey(),
             this.autoSwitchOverlayIfNeeded(),
             this.m_activeOverlayThatVanished &&
-              _._.HasFramesWithAssociatedSummonKeys(
+              _._.HasLocalFramesWithAssociatedSummonKeys(
                 this.m_activeOverlayThatVanished.sSummonKey,
               ) &&
               (this.m_activeOverlayThatVanished = void 0);
           const _ = this.GetDesiredInitialOverlayKey();
           this.m_bWaitingOnInitialOverlayToAutoShow &&
-            _._.HasFramesWithAssociatedSummonKeys(_) &&
+            _._.HasLocalFramesWithAssociatedSummonKeys(_) &&
             ((this.m_bWaitingOnInitialOverlayToAutoShow = !1),
-            this.showDashboardOverlay(
-              {
-                overlayKey: _,
-                sReason: "InitialOverlayToAutoShow",
-              },
-              !0,
+            (0, _._)(
+              _._.ShowDashboardAndSwitchToFrame(_, "InitialOverlayToAutoShow"),
             )),
             _ &&
-              !_._.HasFramesWithAssociatedSummonKeys(_) &&
+              !_._.HasLocalFramesWithAssociatedSummonKeys(_) &&
               (this.m_activeOverlayThatVanished = {
                 sSummonKey: _,
                 timeVanished: new Date(),
@@ -33335,76 +34767,80 @@ var CLSTAMP = "steamdb";
         switchToHomeOverlay() {
           const _ = [_._, _._];
           for (const _ of _)
-            if (_._.HasFramesWithAssociatedSummonKeys(_)) {
+            if (_._.HasLocalFramesWithAssociatedSummonKeys(_)) {
               this.switchToOverlayInternal(_, "switchToDashboardLibrary");
               break;
             }
         }
         switchToOverlayInternal(_, _) {
-          var _;
-          if ((_._.m_rgSwitchToOverlayKeyCallbacks.Dispatch(_), _ == _._)) {
-            let _ = {
-                type: "show_app_binding",
-                app_key:
-                  null !==
-                    (_ =
-                      null === VRHTML || void 0 === VRHTML
-                        ? void 0
-                        : VRHTML.VRApplications.GetSceneApplicationKey()) &&
-                  void 0 !== _
-                    ? _
-                    : void 0,
-              },
-              _ = "bindingui/" + _.OH$[(0, _.R$f)()];
-            _._.m_mailbox.SendMessage(_, _), (_ = _._);
-          }
+          _ == _._ && ((0, _._)(), (_ = _._));
           const _ = _._.GetFramesWithAssociatedSummonKeys(_)[0];
           if (!_) return !1;
-          const _ = _.GetPageWithOverlaySummonKey(_);
-          return !!_ && this.switchToFrameInternal(_, _.pageID, _);
+          const _ = __webpack_require__.GetPageWithOverlaySummonKey(_);
+          return this.switchToFrameInternal(
+            _,
+            null == _ ? void 0 : _.pageID,
+            _,
+            _,
+          );
         }
-        switchToFrameInternal(_, _, _) {
-          var _;
+        switchToFrameInternal(_, _, _, _, _ = !0) {
+          var _, _;
           const _ = "number" == typeof _ ? _._.GetFrame(_) : _;
           if (
             (_.Debug("switchToFrameInternal", null == _ ? void 0 : _.title, {
               frame: _,
               unPageID: _,
               sCause: _,
+              strSummonOverlayKey: _,
             }),
             !_)
           )
             return !1;
+          if (
+            _._.locksDashboardToSteamFrame &&
+            !(0, _._)(_, _._.mainSteamFrame)
+          )
+            return (
+              _.Info(
+                "switchToFrameInternal: ignoring switch to",
+                _.title,
+                "during the guided tour",
+                {
+                  sCause: _,
+                },
+              ),
+              !1
+            );
           null === (_ = null == _ ? void 0 : _.activePage) ||
             void 0 === _ ||
             _.inputFocus.PushInputFocus(),
             _._.m_bIsVRLinkClient &&
               (null == _ ? void 0 : _.isRemoteFrame) &&
               _._.roomViewShowing &&
+              !_._.chromaKeyPassthroughActive &&
               (console.log(
                 "Disabling roomview as user clicked on remote frame",
               ),
               (0, _._)(!1));
-          const _ = null != _ ? _.GetPageWithID(_) : _.activePage;
+          const _ = _ && null != _ ? _.GetPageWithID(_) : _.activePage;
+          (this.m_activeOverlayThatVanished = void 0),
+            !_ || (null == _ && null == _) || _.SwitchToPage(_, _);
+          const _ =
+            null !== (_ = null == _ ? void 0 : _.summonOverlayKey) &&
+            void 0 !== _
+              ? _
+              : _;
           return (
-            (this.m_activeOverlayThatVanished = void 0),
-            null != _ && _.SwitchToPage(_),
-            _._._setActiveFrame(
-              _.frameID,
-              null == _ ? void 0 : _.summonOverlayKey,
-            ),
-            (null == _ ? void 0 : _.summonOverlayKey) &&
+            _._._setActiveFrame(_.frameID, _),
+            _ &&
               (_.instance.RecordUIEvent(
                 "SetDashboardOverlay",
                 null != _ ? _ : "Button",
-                null == _ ? void 0 : _.summonOverlayKey,
+                _,
               ),
               setTimeout(() => {
-                null != (null == _ ? void 0 : _.summonOverlayKey) &&
-                  sessionStorage.setItem(
-                    "last_active_overlay_key",
-                    null == _ ? void 0 : _.summonOverlayKey,
-                  );
+                sessionStorage.setItem("last_active_overlay_key", _);
               }, 300)),
             !0
           );
@@ -33444,7 +34880,7 @@ var CLSTAMP = "steamdb";
               __webpack_require__.push(_._),
               __webpack_require__.push(_._));
           for (const _ of _) {
-            const _ = _._.GetFramesWithAssociatedSummonKeys(_).filter(
+            const _ = _._.GetLocalFramesWithAssociatedSummonKeys(_).filter(
               (_) => _.tab.visibleInDashboardBar,
             );
             if (_.length > 0) {
@@ -33477,23 +34913,429 @@ var CLSTAMP = "steamdb";
             ? void 0
             : _.summonOverlayKey) == _._ && this.switchToHomeOverlay();
         }
-        showDashboardOverlay(_, _) {
-          var _, _, _, _;
+        showOrHideDashboardOrFrameInternal(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(_, _),
+            _ =
+              _.eMode == _.Fzk.SteamVRClientUnified ||
+              _.eMode == _.Fzk.SteamVRClientLegacyDual;
+          if (_.bActiveServer && _ && 0 == _.vrlink_request_split)
+            return 0 == _.dashboard_visibility_action
+              ? (_.Info(
+                  "Route",
+                  "apply-locally (NoVisibilityChange stays on the server)",
+                  JSON.stringify(_),
+                  _.reason,
+                ),
+                void this.applyDashboardRequestLocally(_, _, _))
+              : _.eMode == _.Fzk.SteamVRClientLegacyDual
+                ? void this.applyLegacyDualServerRouting(_, _, _)
+                : _.strOverlayKey == _._
+                  ? (_.Info(
+                      "Route",
+                      "apply-locally (BShouldOpenVRLinkOverlayLocally)",
+                      JSON.stringify(_),
+                      _.reason,
+                    ),
+                    void this.applyDashboardRequestLocally(_, _, _))
+                  : _.bPeerSupportsDashboardRequests
+                    ? (_.Info(
+                        "Route",
+                        "forward-to-client",
+                        JSON.stringify(_),
+                        _.reason,
+                      ),
+                      void (0, _._)(_, _))
+                    : void this.applyOlderPeerServerRouting(_, _, _);
+          if (2 == _.vrlink_request_split)
+            return (
+              _.Assert(
+                _.bActiveServer,
+                "ForServer request on a non-server",
+                _.reason,
+              ),
+              _.Info("Route", "apply-ForServer", JSON.stringify(_), _.reason),
+              void this.applyDashboardRequestLocally(_, _, _)
+            );
+          if (1 == _.vrlink_request_split)
+            return (
+              _.Assert(
+                !_.bActiveServer,
+                "ForClient request on a VRLink server",
+                _.reason,
+              ),
+              _.Info("Route", "apply-ForClient", JSON.stringify(_), _.reason),
+              void this.applyDashboardRequestLocally(_, _, _)
+            );
+          if (
+            _.eMode == _.Fzk.SteamVRClientLegacyDual &&
+            _.bActiveClient &&
+            0 == _.vrlink_request_split &&
+            this.applyLegacyDualClientRouting(_, _, _)
+          )
+            return;
+          _.Info("Route", "split", JSON.stringify(_), _.reason);
+          const _ = (0, _._)(_, _, _);
+          _.server &&
+            (_.Assert(
+              _.bActiveClient,
+              "produced a server half with no VRLink server to send it to",
+              _.reason,
+            ),
+            (0, _._)(_.server)),
+            _.client &&
+              this.applyDashboardRequestLocally(
+                _.client,
+                (0, _._)(_.client, _),
+                _,
+              );
+        }
+        applyLegacyDualServerRouting(_, _, _) {
+          switch (_.dashboard_visibility_action) {
+            case 5:
+              _.Info(
+                "Route",
+                "LegacyDual server, no visibility routing -> apply locally",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                this.applyDashboardRequestLocally(_, _, _);
+              break;
+            case 1: {
+              const _ = _.frame;
+              if (!_) {
+                _.Info(
+                  "Dropped: LegacyDual server ShowOrHideDependingOnTarget with no resolved target",
+                  _.reason,
+                );
+                break;
+              }
+              _.page && _.SwitchToPage(_.page, _.strOverlayKey),
+                _.docking.dockLocation == _.yWq.Dashboard
+                  ? _.Info(
+                      "Dropped: LegacyDual server show-ish (old show path did nothing here)",
+                      _.reason,
+                    )
+                  : (0, _._)(_, _._.mainSteamFrame) ||
+                    (_.Info(
+                      "Route",
+                      "LegacyDual server ShowOrHideDependingOnTarget -> hide locally",
+                      JSON.stringify(_),
+                      _.reason,
+                    ),
+                    this.applyHideDashboardPath(
+                      Object.assign(Object.assign({}, _), {
+                        reason: `ShowGame/${_.yWq[_.docking.dockLocation]}`,
+                      }),
+                    ));
+              break;
+            }
+            case 3:
+              _.Info(
+                "Route",
+                "LegacyDual server Hide -> apply locally",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                this.applyHideDashboardPath(_);
+              break;
+            case 4:
+              _.Info("Dropped: LegacyDual server Toggle", _.reason);
+              break;
+            default:
+              _.Info(
+                "Dropped: LegacyDual server show-ish (old show path did nothing here)",
+                _.reason,
+              );
+          }
+        }
+        applyLegacyDualClientRouting(_, _, _) {
+          var _, _;
+          switch (_.dashboard_visibility_action) {
+            case 0:
+            case 5:
+            case 3:
+            default:
+              return !1;
+            case 1: {
+              const _ = _.frame;
+              return (
+                !(!_ || _.docking.dockLocation != _.yWq.Dashboard) &&
+                (_.page && _.SwitchToPage(_.page, _.strOverlayKey),
+                _.Info(
+                  "Route",
+                  "LegacyDual client ShowOrHideDependingOnTarget -> SendRemoteDashboardOpen",
+                  JSON.stringify(_),
+                  _.reason,
+                ),
+                null ===
+                  (_ =
+                    null === VRHTML || void 0 === VRHTML
+                      ? void 0
+                      : VRHTML.VRLink) ||
+                  void 0 === _ ||
+                  _.SendRemoteDashboardOpen(),
+                !0)
+              );
+            }
+            case 4:
+              return (
+                !_.bIsFullyVisible &&
+                (_.Info(
+                  "Route",
+                  "LegacyDual client Toggle -> SendRemoteDashboardToggle",
+                  JSON.stringify(_),
+                  _.reason,
+                ),
+                null === VRHTML ||
+                  void 0 === VRHTML ||
+                  VRHTML.VRLink.SendRemoteDashboardToggle(),
+                !0)
+              );
+            case 2:
+              return (
+                _.Info(
+                  "Route",
+                  "LegacyDual client Show -> SendRemoteDashboardOpen",
+                  JSON.stringify(_),
+                  _.reason,
+                ),
+                null ===
+                  (_ =
+                    null === VRHTML || void 0 === VRHTML
+                      ? void 0
+                      : VRHTML.VRLink) ||
+                  void 0 === _ ||
+                  _.SendRemoteDashboardOpen(),
+                !0
+              );
+          }
+        }
+        applyOlderPeerServerRouting(_, _, _) {
+          var _, _, _, _, _;
+          switch (_.dashboard_visibility_action) {
+            case 2:
+              _.Info(
+                "Route",
+                "older peer: Show -> SendRemoteDashboardOpen",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                null ===
+                  (_ =
+                    null === VRHTML || void 0 === VRHTML
+                      ? void 0
+                      : VRHTML.VRLink) ||
+                  void 0 === _ ||
+                  _.SendRemoteDashboardOpen();
+              break;
+            case 3:
+              _.Info(
+                "Route",
+                "older peer: Hide -> SendRemoteDashboardClose",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                null ===
+                  (_ =
+                    null === VRHTML || void 0 === VRHTML
+                      ? void 0
+                      : VRHTML.VRLink) ||
+                  void 0 === _ ||
+                  _.SendRemoteDashboardClose();
+              break;
+            case 4:
+              _.Info(
+                "Route",
+                "older peer: Toggle -> SendRemoteDashboardToggle",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                null ===
+                  (_ =
+                    null === VRHTML || void 0 === VRHTML
+                      ? void 0
+                      : VRHTML.VRLink) ||
+                  void 0 === _ ||
+                  _.SendRemoteDashboardToggle();
+              break;
+            case 1: {
+              const _ = _.frame;
+              if (!_) {
+                _.Info(
+                  "Dropped: older peer, ShowOrHideDependingOnTarget with no resolved target",
+                  _.reason,
+                );
+                break;
+              }
+              _.page && _.SwitchToPage(_.page, _.strOverlayKey),
+                _.docking.dockLocation == _.yWq.Dashboard
+                  ? (_.Info(
+                      "Route",
+                      "older peer: ShowOrHideDependingOnTarget -> SendRemoteDashboardOpen",
+                      JSON.stringify(_),
+                      _.reason,
+                    ),
+                    null ===
+                      (_ =
+                        null === VRHTML || void 0 === VRHTML
+                          ? void 0
+                          : VRHTML.VRLink) ||
+                      void 0 === _ ||
+                      _.SendRemoteDashboardOpen())
+                  : (0, _._)(_, _._.mainSteamFrame) ||
+                    (_.Info(
+                      "Route",
+                      "older peer: ShowOrHideDependingOnTarget -> SendRemoteDashboardClose",
+                      JSON.stringify(_),
+                      _.reason,
+                    ),
+                    null ===
+                      (_ =
+                        null === VRHTML || void 0 === VRHTML
+                          ? void 0
+                          : VRHTML.VRLink) ||
+                      void 0 === _ ||
+                      _.SendRemoteDashboardClose());
+              break;
+            }
+            case 5:
+              _.Info(
+                "Route",
+                "older peer: EnterDiminished -> apply locally",
+                JSON.stringify(_),
+                _.reason,
+              ),
+                this.applyDashboardRequestLocally(_, _, _);
+              break;
+            default:
+              this.applyDashboardRequestLocally(_, _, _);
+          }
+        }
+        applyDashboardRequestLocally(_, _, _) {
+          var _, _, _;
+          if (
+            (_.Assert(
+              0 != _.vrlink_request_split || !_.bActiveClient,
+              "NotSplit request reaching the apply path on a VRLink client",
+              _.reason,
+            ),
+            (0, _._)(_.dashboard_visibility_action))
+          ) {
+            switch (
+              ((null === (_ = _.target) || void 0 === _
+                ? void 0
+                : _.overlay_key) == _._ && (0, _._)(),
+              _.dashboard_visibility_action)
+            ) {
+              case 2:
+                this.applyShowOrSwitchDashboardPath(_, _, !0);
+                break;
+              case 1:
+                this.applyShowOrHideDependingOnTargetPath(_, _);
+                break;
+              case 3:
+                this.applyHideDashboardPath(_);
+                break;
+              case 4:
+                this.applyToggleDashboardPath(_, _);
+                break;
+              case 5:
+                this.applyEnterDiminishedPath(_, _);
+                break;
+              case 0:
+                if (!(0, _._)(_)) {
+                  _.Info(
+                    "Dropped: NoVisibilityChange with no target",
+                    _.reason,
+                  );
+                  break;
+                }
+                this.applyShowOrSwitchDashboardPath(_, _, !1);
+            }
+            1 ==
+              (null === (_ = _.relatch_dashboard) || void 0 === _
+                ? void 0
+                : _.condition) &&
+              (0, _.EmM)(
+                null === (_ = _.relatch_dashboard) || void 0 === _
+                  ? void 0
+                  : _.deadzone,
+              );
+          } else
+            _.Warning(
+              "Dropped: unrecognized dashboard_visibility_action",
+              _.dashboard_visibility_action,
+              _.reason,
+            );
+        }
+        applyShowOrHideDependingOnTargetPath(_, _) {
+          const _ = _.frame;
+          _
+            ? _.docking.dockLocation != _.yWq.Dashboard
+              ? (_.bSwitchPage &&
+                  __webpack_require__.SwitchToPage(_.page, _.strOverlayKey),
+                (0, _._)(_, _._.mainSteamFrame) ||
+                  (0, _._)(_, _._.remote_steam_frame) ||
+                  this.applyHideDashboardPath(
+                    Object.assign(Object.assign({}, _), {
+                      reason: `ShowGame/${_.yWq[_.docking.dockLocation]}`,
+                    }),
+                  ))
+              : this.applyShowOrSwitchDashboardPath(_, _, !0)
+            : _.Info(
+                "Dropped: ShowOrHideDependingOnTarget with no resolved target",
+                _.reason,
+              );
+        }
+        applyToggleDashboardPath(_, _) {
+          var _;
+          _.Info("[ToggleDashboard]", _.reason),
+            VRHTML.VROverlay.HideKeyboard(),
+            _._.shouldShowKeyboardForUndockedFrame_Hack ||
+              (_._.isFullyVisible
+                ? this.applyHideDashboardPath(_)
+                : this.applyShowOrSwitchDashboardPath(
+                    Object.assign(Object.assign({}, _), {
+                      relatch_dashboard: Object.assign(
+                        Object.assign({}, _.relatch_dashboard),
+                        {
+                          deadzone: _._.isDashboardDiminished
+                            ? 4
+                            : null === (_ = _.relatch_dashboard) || void 0 === _
+                              ? void 0
+                              : _.deadzone,
+                        },
+                      ),
+                    }),
+                    _,
+                    !0,
+                  ));
+        }
+        applyEnterDiminishedPath(_, _) {
+          var _, _;
+          const _ =
+            null !== (_ = _.page) && void 0 !== _
+              ? _
+              : null === (_ = _.frame) || void 0 === _
+                ? void 0
+                : _.activePage;
+          (null == _ ? void 0 : _.inputFocus.canEnterDiminishedMode)
+            ? _._.EnterDiminishedState()
+            : this.applyHideDashboardPath(_);
+        }
+        applyShowOrSwitchDashboardPath(_, _, _) {
+          var _, _, _, _, _;
           const _ = _._.m_bKeyboardVisible && _._.m_bKeyboardDockedInDashboard;
           if (
-            (_.Info(
-              "[ShowDashboardOverlay]",
-              JSON.stringify(_),
-              "bOpenDashboard",
-              _,
-            ),
+            (_.Info("[ShowDashboardOverlay]", _.reason, "bOpenDashboard", _, _),
             null ===
               (_ =
                 null === VRHTML || void 0 === VRHTML
                   ? void 0
                   : VRHTML.VRDashboardManager) || void 0 === _
               ? void 0
-              : __webpack_require__.GetExternalDashboardDisabled())
+              : _.GetExternalDashboardDisabled())
           )
             return;
           if (!_._.settings.get(_._)) return;
@@ -33507,170 +35349,73 @@ var CLSTAMP = "steamdb";
                 _._,
                 _.ZPA.SystemButtonShowDashboard,
               ));
-          const _ =
-            null !== (_ = _._.GetFrame(null == _ ? void 0 : _.frameId)) &&
-            void 0 !== _
-              ? _
-              : _._.GetFramesWithAssociatedSummonKeys(
-                  null == _ ? void 0 : _.overlayKey,
-                )[0];
+          const _ = _.frame;
           if (
-            (null == _ ? void 0 : _.docking.dockLocation) != _.yWq.Theater ||
-            _
+            ((null == _ ? void 0 : _.docking.dockLocation) != _.yWq.Theater ||
+              _) &&
+            (!(_ && _._.isFullyVisible && _._.hasActiveFrame) || (0, _._)(_))
           ) {
-            if (_) {
-              let _ = !1,
-                _ = !1,
-                _ = !1;
-              if (
-                (_._.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientUnified
-                  ? _._.m_bIsVRLinkServer &&
-                    !(null == _ ? void 0 : _.bSourceIsVRLinkRemote) &&
-                    (null == _ ? void 0 : _.overlayKey) != _._
-                    ? (_ = !0)
-                    : (_ = !0)
-                  : _._.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientLegacyDual
-                    ? (_._.m_bIsVRLinkServer &&
-                        !(null == _ ? void 0 : _.bSourceIsVRLinkRemote)) ||
-                      (_._.m_bIsVRLinkClient &&
-                      !(null == _ ? void 0 : _.bSourceIsVRLinkRemote)
-                        ? (_ = !0)
-                        : ((_ = !0), (_ = !0)))
-                    : (_ = !0),
-                _ &&
-                  (_.Info("[ShowDashboardOverlay]", "SendRemoteDashboardOpen"),
-                  null ===
-                    (_ =
-                      null === VRHTML || void 0 === VRHTML
-                        ? void 0
-                        : VRHTML.VRLink) ||
-                    void 0 === _ ||
-                    _.SendRemoteDashboardOpen()),
-                !_)
-              )
-                return void _.Info(
-                  "[ShowDashboardOverlay]",
-                  "open local is false. early return",
-                );
+            if (_ && !_._.isFullyVisible) {
+              _.instance.StartDashboardSession(
+                null !== (_ = _.reason) && void 0 !== _ ? _ : "",
+              );
+              const _ = _._.Instance.SceneAppKey,
+                _ = _._.Instance.SceneAppIsHome;
+              _ &&
+                _ != _._.m_sLastShownAppKey &&
+                ((_._.m_sLastShownAppKey = _),
+                _
+                  ? this.switchToHomeOverlay()
+                  : this.switchToOverlayInternal(_._, "show")),
+                (this.m_activeOverlayThatVanished = void 0),
+                _._.OnShown(),
+                0 ==
+                  (null === (_ = _.relatch_dashboard) || void 0 === _
+                    ? void 0
+                    : _.condition) &&
+                  (0, _.EmM)(
+                    null === (_ = _.relatch_dashboard) || void 0 === _
+                      ? void 0
+                      : _.deadzone,
+                  );
             }
-            if (
-              !(_ && _._.isFullyVisible && _._.hasActiveFrame) ||
-              (null == _ ? void 0 : _.overlayKey) ||
-              (null == _ ? void 0 : _.frameId)
-            ) {
-              if (_ && !_._.isFullyVisible) {
-                _.instance.StartDashboardSession(
-                  null !== (_ = null == _ ? void 0 : _.sReason) && void 0 !== _
-                    ? _
-                    : "",
-                );
-                const _ = _._.Instance.SceneAppKey,
-                  _ = _._.Instance.SceneAppIsHome;
-                _ &&
-                  _ != _._.m_sLastShownAppKey &&
-                  ((_._.m_sLastShownAppKey = _),
-                  _
-                    ? this.switchToHomeOverlay()
-                    : this.switchToOverlayInternal(_._, "show")),
-                  (this.m_activeOverlayThatVanished = void 0),
-                  _._.OnShown(),
-                  (0, _.EmM)(null == _ ? void 0 : _.eDashboardRelatch);
-              }
-              (null == _ ? void 0 : _.docking.dockLocation) != _.yWq.Boot &&
-                ((null == _ ? void 0 : _.overlayKey)
-                  ? this.switchToOverlayInternal(
-                      null == _ ? void 0 : _.overlayKey,
-                      null == _ ? void 0 : _.sReason,
-                    )
-                  : _
-                    ? this.switchToFrameInternal(
-                        _,
-                        void 0,
-                        null == _ ? void 0 : _.sReason,
-                      )
-                    : this.autoSwitchOverlayIfNeeded());
-            }
+            (null == _ ? void 0 : _.docking.dockLocation) != _.yWq.Boot &&
+              (_
+                ? this.switchToFrameInternal(
+                    _,
+                    null === (_ = _.page) || void 0 === _ ? void 0 : _.pageID,
+                    _.reason,
+                    _.strOverlayKey,
+                    _.bSwitchPage,
+                  )
+                : this.autoSwitchOverlayIfNeeded());
           }
         }
-        toggleDashboard(_, _) {
-          _.Info("[ToggleDashboard]", _, "bSourceIsVRLinkRemote", _);
-          let _ = !1;
+        applyHideDashboardPath(_) {
+          const _ = _.reason;
           if (
-            (_._.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientUnified &&
-              _._.m_bIsVRLinkServer &&
-              !_ &&
-              (_ = !0),
-            _._.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientLegacyDual)
-          ) {
-            if (_._.m_bIsVRLinkServer && !_) return;
-            !_._.m_bIsVRLinkClient || _ || _._.isFullyVisible || (_ = !0);
-          }
-          if (_)
-            return (
-              _.Info("[ToggleDashboard]", "SendRemoteDashboardToggle"),
-              void (
-                null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRLink.SendRemoteDashboardToggle()
-              )
-            );
-          VRHTML.VROverlay.HideKeyboard(),
-            _._.shouldShowKeyboardForUndockedFrame_Hack ||
-              (_._.isFullyVisible
-                ? this.hideDashboard(_, _)
-                : this.showDashboardOverlay(
-                    {
-                      sReason: _,
-                      bSourceIsVRLinkRemote: _,
-                      eDashboardRelatch: _._.isDashboardDiminished
-                        ? _.hqo.LargeDeadZone
-                        : _.ke3,
-                    },
-                    !0,
-                  ));
-        }
-        hideDashboard(_, _) {
-          if (
-            (_.Info("[HideDashboard]", _, "bSourceIsVRLinkRemote", _),
+            (_.Info("[HideDashboard]", _),
             _._.isOOBE || _._.isLocked || "recovery" == _._.bareSessionMode)
           )
-            return void _._.ForceRelatchDashboard();
-          if (_._.showLoadingThrobberOrBootOverlay) return;
-          if (_._.blockDashboardToggle) return;
-          if (
-            _._.guidedTourState <= _.ZPA.SystemButtonHideDashboard &&
-            _._.guidedTourState != _.ZPA.Invalid &&
-            "laser_mouse_click" == _
-          )
-            return;
-          _._.guidedTourState == _.ZPA.SystemButtonHideDashboard &&
-            (null === VRHTML ||
-              void 0 === VRHTML ||
-              VRHTML.VRPathProperties.SetInt32PathProperty(
-                _._,
-                _.ZPA.SystemButtonDashboardHidden,
-              ));
-          let _ = !1,
-            _ = !1;
-          if (
-            (_._.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientUnified
-              ? _._.m_bIsVRLinkClient
-                ? (_ = !0)
-                : _._.m_bIsVRLinkServer && !_
-                  ? (_ = !0)
-                  : _._.m_bIsVRLinkServer && _ && (_ = !0)
-              : (_ =
-                  _._.m_eVRLinkDashboardMode != _.Fzk.SteamVRClientLegacyDual ||
-                  ((_._.m_bIsVRLinkServer && !_) || _._.m_bIsVRLinkClient, !0)),
-            _ &&
-              (_.Info("[HideDashboard] SendRemoteDashboardClose"),
-              null === VRHTML ||
-                void 0 === VRHTML ||
-                VRHTML.VRLink.SendRemoteDashboardClose()),
-            _)
+            _._.ForceRelatchDashboard();
+          else if (
+            !_._.showLoadingThrobberOrBootOverlay &&
+            !(
+              _._.blockDashboardToggle ||
+              (_._.guidedTourState <= _.ZPA.SystemButtonHideDashboard &&
+                _._.guidedTourState != _.ZPA.Invalid &&
+                "laser_mouse_click" == _)
+            )
           )
             if (
-              (null === VRHTML ||
+              (_._.guidedTourState == _.ZPA.SystemButtonHideDashboard &&
+                (null === VRHTML ||
+                  void 0 === VRHTML ||
+                  VRHTML.VRPathProperties.SetInt32PathProperty(
+                    _._,
+                    _.ZPA.SystemButtonDashboardHidden,
+                  )),
+              null === VRHTML ||
                 void 0 === VRHTML ||
                 VRHTML.VRDashboardManager.CloseKeyboard(),
               _._.isFullyVisible && !_._.isDashboardDiminished)
@@ -33692,7 +35437,6 @@ var CLSTAMP = "steamdb";
                   _.docking && _.docking.SetJustFloatedFromDashboard(!1);
               }
             else _.Info("[HideDashboard] already hidden. skipping");
-          else _.Info("[HideDashboard] Early exit, no local close");
         }
         onVrCmdDockOverlayRequested(_) {
           var _;
@@ -33714,8 +35458,9 @@ var CLSTAMP = "steamdb";
             })(),
             _ =
               null !==
-                (_ = _._.GetFramesWithAssociatedSummonKeys(_.overlay_key)[0]) &&
-              void 0 !== _
+                (_ = _._.GetLocalFramesWithAssociatedSummonKeys(
+                  _.overlay_key,
+                )[0]) && void 0 !== _
                 ? _
                 : _._.activeFrame;
           _
@@ -34350,7 +36095,7 @@ var CLSTAMP = "steamdb";
         onGameLaunched(_) {
           (!_.is_dashboard_overlay ||
             (_.is_dashboard_overlay && !_.show_overlay_in_quicklaunch)) &&
-            this.hideDashboard("game_launched", !1);
+            (0, _._)(_._.HideDashboard("game_launched"));
         }
         renderDashboardContents() {
           var _, _, _;
@@ -34641,9 +36386,12 @@ var CLSTAMP = "steamdb";
           null,
         ),
         (0, _._)([_.action.bound], _.prototype, "switchToFrameInternal", null),
-        (0, _._)([_._], _.prototype, "showDashboardOverlay", null),
-        (0, _._)([_.action.bound], _.prototype, "toggleDashboard", null),
-        (0, _._)([_.action.bound], _.prototype, "hideDashboard", null),
+        (0, _._)(
+          [_._],
+          _.prototype,
+          "showOrHideDashboardOrFrameInternal",
+          null,
+        ),
         (0, _._)([_._], _.prototype, "onVrCmdDockOverlayRequested", null),
         (0, _._)([_._], _.prototype, "onLegacyQuickLaunchButtonClick", null),
         (0, _._)([_._], _.prototype, "renderLegacyPowerMenu", null),
@@ -35023,6 +36771,299 @@ var CLSTAMP = "steamdb";
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("DashboardRequest");
+      function _() {
+        const _ = Boolean(_._.m_bVRLinkStreamingActive);
+        return {
+          eMode: _._.m_eVRLinkDashboardMode,
+          bActiveServer: _ && Boolean(_._.m_bIsVRLinkServer),
+          bActiveClient: _ && Boolean(_._.m_bIsVRLinkClient),
+          bIsFullyVisible: _._.isFullyVisible,
+          bIsDiminished: _._.isDashboardDiminished,
+          bPeerSupportsDashboardRequests: _(),
+        };
+      }
+      function _() {
+        return _._.HasCapability(43, _.fkw.MutualSteamVR);
+      }
+      function _(_) {
+        var _, _;
+        return (
+          null !=
+            (null === (_ = _.target) || void 0 === _ ? void 0 : _.frame_id) ||
+          null !=
+            (null === (_ = _.target) || void 0 === _ ? void 0 : _.overlay_key)
+        );
+      }
+      function _(_) {
+        switch (_) {
+          case void 0:
+          case 0:
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+          case 5:
+            return !0;
+          default:
+            return !1;
+        }
+      }
+      function _() {
+        var _;
+        const _ = {
+          type: "show_app_binding",
+          app_key:
+            null !==
+              (_ =
+                null === VRHTML || void 0 === VRHTML
+                  ? void 0
+                  : VRHTML.VRApplications.GetSceneApplicationKey()) &&
+            void 0 !== _
+              ? _
+              : void 0,
+        };
+        _._.m_mailbox.SendMessage("bindingui/" + _.OH$[(0, _.R$f)()], _);
+      }
+      function _(_, _) {
+        var _, _, _, _, _, _, _, _, _;
+        let _ =
+          null === (_ = _.target) || void 0 === _ ? void 0 : _.overlay_key;
+        _ == _._ && (_ = _._);
+        const _ =
+            null !==
+              (_ = _._.GetFrame(
+                null === (_ = _.target) || void 0 === _ ? void 0 : _.frame_id,
+              )) && void 0 !== _
+              ? _
+              : (function (_, _, _) {
+                  var _;
+                  const _ = _._.GetFramesWithAssociatedSummonKeys(_);
+                  if (0 == _.length) return;
+                  let _;
+                  switch (
+                    null === (_ = _.target) || void 0 === _
+                      ? void 0
+                      : _.overlay_key_vrlink_namespace
+                  ) {
+                    case 2:
+                      _ = _.bActiveClient;
+                      break;
+                    case 1:
+                      _ = _.bActiveServer;
+                      break;
+                    default:
+                      _ = !1;
+                  }
+                  return _.filter((_) => _.isRemoteFrame == _)[0];
+                })(_, _, _),
+          _ = (
+            null === (_ = _.target) || void 0 === _
+              ? void 0
+              : _.overlay_key_references_entire_frame
+          )
+            ? void 0
+            : _;
+        let _;
+        null != _ &&
+          (_ =
+            null !==
+              (_ =
+                null !=
+                (null === (_ = _.target) || void 0 === _ ? void 0 : _.page_id)
+                  ? _.GetPageWithID(_.target.page_id)
+                  : void 0) && void 0 !== _
+              ? _
+              : null != _
+                ? _.GetPageWithOverlaySummonKey(_)
+                : void 0);
+        const _ = {
+          frame: _,
+          page: _,
+          strOverlayKey: _,
+          bSwitchPage: null != _ && (null != _ || null != _),
+        };
+        return (
+          _.Info(
+            "Resolve",
+            JSON.stringify({
+              frame_id:
+                null === (_ = _.target) || void 0 === _ ? void 0 : _.frame_id,
+              page_id:
+                null === (_ = _.target) || void 0 === _ ? void 0 : _.page_id,
+              overlay_key: _,
+              _:
+                null === (_ = _.target) || void 0 === _
+                  ? void 0
+                  : _.overlay_key_vrlink_namespace,
+            }),
+            "->",
+            null == _ ? void 0 : _.frameID,
+            null == _ ? void 0 : _.pageID,
+            _.reason,
+          ),
+          _
+        );
+      }
+      function _(_, _, _) {
+        const _ = (function (_, _) {
+          var _, _, _, _, _, _, _, _;
+          if (!_(_.dashboard_visibility_action))
+            return {
+              client: _(_),
+              sSplitReason: "unrecognized action",
+            };
+          if (null == _.frame)
+            return {
+              client: _(_),
+              sSplitReason: "no target",
+            };
+          if (!_.frame.isRemoteFrame)
+            return {
+              client: _(
+                Object.assign(Object.assign({}, _), {
+                  target: Object.assign(Object.assign({}, _.target), {
+                    frame_id: _.frame.frameID,
+                  }),
+                }),
+              ),
+              sSplitReason: "local frame",
+            };
+          const _ =
+              null !=
+                (null === (_ = _.target) || void 0 === _
+                  ? void 0
+                  : _.page_id) ||
+              (null !=
+                (null === (_ = _.target) || void 0 === _
+                  ? void 0
+                  : _.overlay_key) &&
+                !(null === (_ = _.target) || void 0 === _
+                  ? void 0
+                  : _.overlay_key_references_entire_frame)),
+            _ = _({
+              reason: _.reason,
+              target: {
+                frame_id: _.frame.frameID,
+                overlay_key:
+                  null === (_ = _.target) || void 0 === _
+                    ? void 0
+                    : _.overlay_key,
+                overlay_key_references_entire_frame: !0,
+                overlay_key_vrlink_namespace:
+                  null === (_ = _.target) || void 0 === _
+                    ? void 0
+                    : _.overlay_key_vrlink_namespace,
+              },
+              dashboard_visibility_action: _.dashboard_visibility_action,
+              relatch_dashboard: _.relatch_dashboard,
+            });
+          if (!_)
+            return {
+              client: _,
+              sSplitReason: "remote frame, no page",
+            };
+          return {
+            client: _,
+            server: _({
+              reason: _.reason,
+              target: {
+                frame_id: _.frame.frameID,
+                page_id:
+                  null === (_ = _.target) || void 0 === _ ? void 0 : _.page_id,
+                overlay_key:
+                  null === (_ = _.target) || void 0 === _
+                    ? void 0
+                    : _.overlay_key,
+                overlay_key_references_entire_frame:
+                  null === (_ = _.target) || void 0 === _
+                    ? void 0
+                    : _.overlay_key_references_entire_frame,
+                overlay_key_vrlink_namespace: 2,
+              },
+              dashboard_visibility_action: 0,
+            }),
+            sSplitReason: "remote frame, page switch on the server",
+          };
+        })(_, _);
+        return (
+          _.Info(
+            "Split",
+            _.sSplitReason,
+            "client:",
+            JSON.stringify(_.client),
+            "server:",
+            JSON.stringify(_.server),
+            _.reason,
+          ),
+          _
+        );
+      }
+      function _(_) {
+        return Object.assign(Object.assign({}, _), {
+          vrlink_request_split: 1,
+        });
+      }
+      function _(_) {
+        return Object.assign(Object.assign({}, _), {
+          vrlink_request_split: 2,
+        });
+      }
+      function _(_, _) {
+        var _;
+        _.Info(
+          "Send S->C",
+          JSON.stringify(_),
+          null != _ ? "(verbatim)" : "(re-serialized)",
+        ),
+          null ===
+            (_ =
+              null === VRHTML || void 0 === VRHTML ? void 0 : VRHTML.VRLink) ||
+            void 0 === _ ||
+            __webpack_require__.SendDashboardRequestToClient(
+              null != _ ? _ : _._.fromObject(_).serializeBase64String(),
+            );
+      }
+      function _(_) {
+        var _;
+        const _ = _(_);
+        _()
+          ? (_.Info("Send C->S", JSON.stringify(_)),
+            null ===
+              (_ =
+                null === VRHTML || void 0 === VRHTML
+                  ? void 0
+                  : VRHTML.VRLink) ||
+              void 0 === _ ||
+              _.SendDashboardRequestToServer(
+                _._.fromObject(_).serializeBase64String(),
+              ))
+          : _.Info(
+              "Dropped: Send C->S, the VRLink server predates VTE_DASHBOARD_REQUEST_C_TO_S",
+              JSON.stringify(_),
+            );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35251,6 +37292,8 @@ var CLSTAMP = "steamdb";
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -35322,6 +37365,13 @@ var CLSTAMP = "steamdb";
               : _.value) != _.ZPA.Invalid
           );
         }
+        get locksDashboardToSteamFrame() {
+          return (
+            this.isShowingVRGuidedTour &&
+            !_._.useRemoteDashboardState &&
+            null != _._.mainSteamFrame
+          );
+        }
       }
       (0, _._)([_.observable], _.prototype, "m_eGuidedTourState", void 0),
         (0, _._)(
@@ -35332,7 +37382,8 @@ var CLSTAMP = "steamdb";
         ),
         (0, _._)([_.computed], _.prototype, "isPastControllerPairing", null),
         (0, _._)([_.computed], _.prototype, "blockDashboardToggle", null),
-        (0, _._)([_.computed], _.prototype, "isShowingVRGuidedTour", null);
+        (0, _._)([_.computed], _.prototype, "isShowingVRGuidedTour", null),
+        (0, _._)([_.computed], _.prototype, "locksDashboardToSteamFrame", null);
       const _ = new _();
       function _(_) {
         _._.SetSettingsValue("/settings/steamvr/guidedTourPopup_" + _, !0);
@@ -35966,7 +38017,7 @@ var CLSTAMP = "steamdb";
             this.clearPopoverMenuTimeout();
         }
         get legacyFilteredOverlayTabs() {
-          return _._.frames
+          return _._.frames_local
             .filter(
               (_) =>
                 _.tab.visibleInDashboardBar ||
@@ -36870,6 +38921,21 @@ var CLSTAMP = "steamdb";
         get unifiedDashboardEnabled() {
           return this.m_eVRLinkDashboardMode == _.Fzk.SteamVRClientUnified;
         }
+        get chromaKeyPassthroughActive() {
+          var _;
+          return (
+            0 !==
+            (null !==
+              (_ =
+                null === VRHTML || void 0 === VRHTML
+                  ? void 0
+                  : VRHTML.VRPathProperties.GetInt32PathProperty(
+                      "/vrlink/steamvr/chromakey_passthrough_client_pid",
+                    )) && void 0 !== _
+              ? _
+              : 0)
+          );
+        }
         onVRLinkStreamStatusEvents(_) {
           var _;
           const _ = !!(1 & _),
@@ -36906,7 +38972,7 @@ var CLSTAMP = "steamdb";
             : _.Info("Unknown remote desktop window event", _);
         }
         onRemoteShowSteamVRSetting(_) {
-          var _, _;
+          var _;
           let _;
           if (null == _ ? void 0 : _.data)
             try {
@@ -36927,15 +38993,9 @@ var CLSTAMP = "steamdb";
                 null == _ ? void 0 : _.page,
                 null == _ ? void 0 : _.page_section,
               ),
-            null === (_ = _._.Instance) ||
-              void 0 === _ ||
-              __webpack_require__.showDashboardOverlay(
-                {
-                  overlayKey: _._,
-                  bSourceIsVRLinkRemote: !0,
-                },
-                !1,
-              ));
+            (0, _._)(
+              _._.SwitchDashboardToFrame(_._, "onRemoteShowSteamVRSetting"),
+            ));
         }
         ShowRemoteVRSettingsPage(_, _) {
           if (!this.m_bVRLinkStreamingActive) return;
@@ -36948,7 +39008,9 @@ var CLSTAMP = "steamdb";
             return void _.Info(
               "Cannot ShowRemoteVRSettingsPage, no remote steam frame",
             );
-          _._._setActiveFrame(_.frameID, void 0), _._.OnShown();
+          (0, _._)(
+            _._.ShowDashboardAndSwitchToFrame(_, "ShowRemoteVRSettingsPage"),
+          );
           const _ = {
               page: _,
               page_section: _,
@@ -36959,21 +39021,13 @@ var CLSTAMP = "steamdb";
             VRHTML.VRLink.SendShowSteamVRSettingsRequest(_);
         }
         OnVRLinkClientSessionEnd() {
-          var _;
           _.Info("OnVRLinkClientSessionEnd");
           const _ = null != _._.GetRemoteFrame(_._.activeFrameID);
           _._._clear_remote_frames(),
             _ &&
               (_.Info("Active Frame was remote"),
               _._._setActiveFrame(void 0, void 0)),
-            null === (_ = _._.Instance) ||
-              void 0 === _ ||
-              _.showDashboardOverlay(
-                {
-                  sReason: "vrlink client session ended",
-                },
-                !0,
-              );
+            (0, _._)(_._.ShowDashboard("vrlink client session ended"));
         }
         onRemoteDashboardFramesUpdate(_) {
           var _;

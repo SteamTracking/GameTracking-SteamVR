@@ -168,6 +168,16 @@ body {
 .SettingsMain .SettingsItem > .Label:not(.Spanning) + .Label:nth-child(2) {
   width: var(--settings-right-column-width);
 }
+.SettingsMain
+  .SettingsItem
+  > .Label:not(.Spanning)
+  + .SubsectionStem.Label:not(.Hidden):nth-child(2) {
+  width: calc(
+    var(--settings-right-column-width) +
+    2 *
+    var(--settings-subsection-stem-padding)
+  );
+}
 .SettingsMain .SettingsItem > :only-child,
 .SettingsMain .SettingsItem > .SubsectionStem,
 .SettingsMain .SettingsItem > .Spanning {
@@ -602,6 +612,9 @@ body.SGApp .SettingsSidebarButton .Label {
   font-weight: var(--settings-font-weight-title);
   opacity: 0.8;
 }
+.SettingsItem .Label.Title.Large {
+  font-size: calc(1.1 * var(--settings-font-size-title));
+}
 .SettingsItem .Label:first-child {
   padding-right: var(--settings-right-column-left-margin);
 }
@@ -836,6 +849,15 @@ body.SGApp .SettingsSidebarButton .Label {
 .SettingsItem.Slider .Handle > .RangeLabel {
   margin: auto;
   font-size: 0.95em;
+}
+.SettingsItem.Slider .SliderWithMinMaxLabels {
+  width: 100%;
+}
+.SettingsItem.Slider .SliderMinMaxLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  opacity: 0.7;
 }
 .SettingsItem.RadioButtons {
   display: flex;

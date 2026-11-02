@@ -1,4 +1,4 @@
-var CLSTAMP = "11139766";
+var CLSTAMP = "11196359";
 (() => {
   "use strict";
   var e,
@@ -63,6 +63,12 @@ var CLSTAMP = "11139766";
         r.s_Date = new Date();
         const o = new r();
         window.LocalizationManager = o;
+      },
+      4728: (e, t, n) => {
+        function r(e, t, n) {
+          return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
+        }
+        n.d(t, { OQ: () => r });
       },
       9513: (e, t, n) => {
         var r = n(1635),
@@ -741,7 +747,7 @@ var CLSTAMP = "11139766";
         n = (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var s = r.O(void 0, [967, 991, 602, 305, 170, 452, 797, 906, 300, 57], () =>
+  var s = r.O(void 0, [967, 991, 602, 305, 170, 452, 797, 148, 906, 57], () =>
     r(9513),
   );
   s = r.O(s);

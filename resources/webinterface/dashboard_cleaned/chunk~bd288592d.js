@@ -1469,7 +1469,7 @@ var CLSTAMP = "steamdb";
               this.m_ModifiedSimulatedActions.forEach((_) => {
                 if (this.GetActionTypeFromSimulatedActionType(_.type) == _) {
                   this.ComputeSimulatedActionPathFromId(_._),
-                    _.name ? _.name : ((0, _._)("UnnamedSimAction"), _._);
+                    _.name ? _.name : ((0, _._)("#UnnamedSimAction"), _._);
                   _.push(this.CreateActionDefinitionForSimulatedAction(_));
                 }
               }),
@@ -1490,7 +1490,7 @@ var CLSTAMP = "steamdb";
             name: this.ComputeSimulatedActionPathFromId(_._),
             localized_name: _.name
               ? _.name
-              : (0, _._)("UnnamedSimAction") + _._,
+              : (0, _._)("#UnnamedSimAction") + _._,
             type: this.GetActionTypeFromSimulatedActionType(_.type),
           };
         }
@@ -3296,6 +3296,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
@@ -3362,12 +3363,12 @@ var CLSTAMP = "steamdb";
             (0, _.autorun)(this.UpdateWindowTitle);
         }
         ShowOverlayInDashboard() {
-          null === _.Ay$ ||
-            void 0 === _.Ay$ ||
-            _.Ay$.VRClient.ShowDashboardOverlay({
-              overlayKey: "system.vrwebhelper.controllerbinding",
-              sReason: "cinputui_showoverlayindashboard",
-            });
+          (0, _._)(
+            _._.ShowDashboardAndSwitchToFrame(
+              "system.vrwebhelper.controllerbinding",
+              "cinputui_showoverlayindashboard",
+            ),
+          );
         }
         OnShowAppSelect(_) {
           (this.m_bStandaloneSettingsPage = !1), this.ShowAppSelect();

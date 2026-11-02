@@ -430,6 +430,7 @@ CAnimResource
 CBoneMaskResource
 CD3D11VRRenderer::CreateGPUSemaphore - Failed to allocate  semaphore handle\n
 CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to allocate  semaphore handle.\n
+CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to duplicate shared semaphore from pid %u (error %u)
 CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to import GPU  shared semaphore.\n
 CD3D11VRRenderer::Initialize(): Failed to create compute shader %s!\n
 CD3D11VRRenderer::Initialize(): Failed to create input layout for vertex shader %s!\n
@@ -1490,8 +1491,17 @@ shaders/d3d11/distort_geom_aurora_sky_notexture_ps.fxo
 shaders/d3d11/distort_geom_aurora_sky_ps.fxo
 shaders/d3d11/distort_geom_colormap_lines_ps.fxo
 shaders/d3d11/distort_geom_constant_ps.fxo
+shaders/d3d11/distort_geom_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_drawregion_multitap_ps.fxo
 shaders/d3d11/distort_geom_drawregion_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_drawregion_reflect_multitap_ps.fxo
 shaders/d3d11/distort_geom_drawregion_reflect_ps.fxo
 shaders/d3d11/distort_geom_drawregion_simplified_gamma_ps.fxo
@@ -1515,6 +1525,9 @@ shaders/d3d11/distort_geom_horizon_ps.fxo
 shaders/d3d11/distort_geom_ltc_diff_ps.fxo
 shaders/d3d11/distort_geom_ltc_ps.fxo
 shaders/d3d11/distort_geom_ltc_spec_ps.fxo
+shaders/d3d11/distort_geom_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_motes_ps.fxo
 shaders/d3d11/distort_geom_multitap_ps.fxo
 shaders/d3d11/distort_geom_pbr_ps.fxo
@@ -1523,6 +1536,10 @@ shaders/d3d11/distort_geom_ps.fxo
 shaders/d3d11/distort_geom_ps16.fxo
 shaders/d3d11/distort_geom_ps16_mv_split.fxo
 shaders/d3d11/distort_geom_ps_debug_depth.fxo
+shaders/d3d11/distort_geom_reflect_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_reflect_multitap_ps.fxo
 shaders/d3d11/distort_geom_reflect_ps.fxo
 shaders/d3d11/distort_geom_simplified_altcolorblend_ps.fxo
@@ -1551,8 +1568,12 @@ shaders/d3d11/distort_ps_achromatic_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_gamma_dr.fxo
 shaders/d3d11/distort_ps_achromatic_layered.fxo
 shaders/d3d11/distort_ps_achromatic_nd.fxo
+shaders/d3d11/distort_ps_achromatic_nd_alphaed.fxo
+shaders/d3d11/distort_ps_achromatic_nd_alphaed_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_nd_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_se2.fxo
+shaders/d3d11/distort_ps_achromatic_se2_ck.fxo
+shaders/d3d11/distort_ps_achromatic_se2_ck_dr.fxo
 shaders/d3d11/distort_ps_achromatic_se2_dr.fxo
 shaders/d3d11/distort_ps_gamma.fxo
 shaders/d3d11/distort_ps_gamma_mc.fxo
@@ -1576,6 +1597,9 @@ shaders/d3d11/distort_ps_scene_stencil_shadow_cell.fxo
 shaders/d3d11/distort_ps_scene_stencil_shadow_mask.fxo
 shaders/d3d11/distort_ps_scene_stencil_shadow_near.fxo
 shaders/d3d11/distort_vs.fxo
+shaders/d3d11/distort_vs_achromatic_se2.fxo
+shaders/d3d11/distort_vs_achromatic_se2_reproject.fxo
+shaders/d3d11/distort_vs_achromatic_se2_reproject_dp.fxo
 shaders/d3d11/distort_vs_latest_nd.fxo
 shaders/d3d11/distort_vs_layered.fxo
 shaders/d3d11/distort_vs_layered_nd.fxo
@@ -1655,7 +1679,24 @@ shaders/d3d11/msaa_resolve_8x_ps.fxo
 shaders/d3d11/msaa_resolve_vs.fxo
 shaders/d3d11/panel_mask_ps.fxo
 shaders/d3d11/panel_mask_vs.fxo
-shaders/d3d11/testgrid2_cs.fxo
+shaders/d3d11/resample_lanczos3_vs.fxo
+shaders/d3d11/resample_lanczos3_x_ps.fxo
+shaders/d3d11/resample_lanczos3_y_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_x_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_y_ps.fxo
+shaders/d3d11/stream_multi_view_inner_ps.fxo
+shaders/d3d11/stream_multi_view_inner_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_x_ps.fxo
+shaders/d3d11/stream_multi_view_reproject_x_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_y_ps.fxo
+shaders/d3d11/stream_multi_view_reproject_y_vs.fxo
+shaders/d3d11/stream_multi_view_resample_vs.fxo
+shaders/d3d11/stream_multi_view_resolve_4x_ps.fxo
+shaders/d3d11/stream_multi_view_resolve_vs.fxo
+shaders/d3d11/stream_view_combine_ps.fxo
+shaders/d3d11/stream_view_combine_vs.fxo
+shaders/d3d11/stream_view_inset_ps.fxo
+shaders/d3d11/stream_view_inset_vs.fxo
 shaders/d3d11/tracked_camera_edgefilter_ps.fxo
 shaders/d3d11/tracked_camera_edgefilter_vs.fxo
 shaders/d3d11/tracked_camera_lines_ps.fxo
@@ -1674,6 +1715,9 @@ shaders/d3d11/tracked_camera_reprojection_vs.fxo
 shaders/d3d11/tracked_camera_undistort_ps.fxo
 shaders/d3d11/tracked_camera_undistort_vs.fxo
 shaders/d3d11/tracked_camera_vs.fxo
+shaders/d3d11/unlit_2x_downsample_lanczos2_ps.fxo
+shaders/d3d11/unlit_2x_downsample_mks_u_ps.fxo
+shaders/d3d11/unlit_2x_downsample_mks_v_ps.fxo
 shaders/d3d11/unlit_2x_downsample_ps.fxo
 shaders/d3d11/unlit_convert_to_nv12_ps.fxo
 shaders/d3d11/unlit_gaussian_blur_u_ps.fxo

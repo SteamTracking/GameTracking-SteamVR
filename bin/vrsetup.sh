@@ -69,7 +69,7 @@ function SteamVRLauncherSetup()
 		log "Used holo-grant-cap-sys-nice to give ${STEAMVR_TOOLSDIR}/bin/linux64/vrcompositor-launcher binary cap_sys_nice privileges"
 	else
 		# FIXME: see steamrt#397, similar to steam_msg.sh, for prompts..
-		if ! "${VRBINDIR}/steamvr_question.sh" "SteamVR requires superuser access to finish setup. Proceed?"; then
+		if ! "${VRBINDIR}/steamvr_question.sh" "SteamVR requires superuser access to finish setup (permission will be granted to run with elevated priority to provide a smooth experience). Proceed?"; then
 			log 'Error: user declined superuser request.'
 			return 1
 		fi

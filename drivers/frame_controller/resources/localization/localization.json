@@ -1,5 +1,6 @@
 [
 
+
   {
     "language_tag": "en_US",
     "frame_controller": "Frame Controller",
@@ -217,7 +218,7 @@
   "/input/thumbstick": "Irányítókar",
   "/input/system": "Steam gomb",
   "/input/menu": "Menü gomb",
-  "/input/view": "„View” gomb",
+  "/input/view": "Nézet gomb",
   "/input/a": "„A” gomb",
   "/input/b": "„B” gomb",
   "/input/x": "„X” gomb",

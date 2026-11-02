@@ -6,8 +6,6 @@
         "loadPriority": 110,
         "spoofAtStart": false,
         "encodeWidth": 1536,
-        "renderWidth": 2048,
-        "renderHeight": 2048,
         "displayFrequency": 90,
         "enableTimedRetry": 1,
         "enableQoS": false,

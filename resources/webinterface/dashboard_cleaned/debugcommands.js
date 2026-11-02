@@ -68,6 +68,14 @@ var CLSTAMP = "steamdb";
         window.LocalizationManager = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
+        function _(_, _, _) {
+          return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
+        }
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -810,7 +818,7 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [967, 991, 602, 305, 170, 452, 797, 906, 300, 57], () =>
+  var _ = _._(void 0, [967, 991, 602, 305, 170, 452, 797, 148, 906, 57], () =>
     _(9513),
   );
   _ = _._(_);

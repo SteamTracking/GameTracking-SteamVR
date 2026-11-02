@@ -1,13 +1,7 @@
-var CLSTAMP = "11139766";
+var CLSTAMP = "11196359";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
-  [300],
+  [366, 148],
   {
-    4728: (e, t, s) => {
-      function n(e, t, s) {
-        return null == e || isNaN(e) ? e : Math.max(t, Math.min(s, e));
-      }
-      s.d(t, { OQ: () => n });
-    },
     6185: (e, t, s) => {
       s.d(t, { l: () => a });
       var n = s(6540);
@@ -21,25 +15,26 @@ var CLSTAMP = "11139766";
       }
     },
     1333: (e, t, s) => {
-      s.d(t, { Gz: () => d, HR: () => y });
+      s.d(t, { A5: () => _, Gz: () => S, HR: () => b });
       var n = s(1635),
         i = s(3236),
         a = s(2505),
         o = s.n(a),
         r = s(7813),
-        l = s(6090),
-        p = s(3606),
-        h = s(2402),
-        u = s(2336),
-        m = s(8803),
-        g = s(6013),
-        c = s(1909);
-      const d = 16,
-        S = "change_route";
-      class v {
+        l = s(9978),
+        p = s(6090),
+        h = s(3606),
+        u = s(2402),
+        m = s(881),
+        g = s(8803),
+        c = s(6013),
+        d = s(1909);
+      const S = 16,
+        v = "change_route";
+      class y {
         constructor() {
           (this.m_wsWebSocketToServer = void 0),
-            (this.m_mailbox = new l._nH()),
+            (this.m_mailbox = new p._nH()),
             (this.connected = !1),
             (this.settingsSchema = void 0),
             (this.settings = r.observable.map()),
@@ -59,7 +54,7 @@ var CLSTAMP = "11139766";
             (this.m_appFrameLimits = []),
             (this.m_mapRefreshRatesForFrameLimit = new Map()),
             (this.m_SteamClientUserInfoPathProperty =
-              m.m0.ListenToProtoPathProperty(g.qR)),
+              g.m0.ListenToProtoPathProperty(c.qR)),
             (this.GetAppList = function () {
               return new Promise(function (e, t) {
                 o()
@@ -114,7 +109,7 @@ var CLSTAMP = "11139766";
           var e, t;
           return (
             this.m_bSteamVRMain ||
-            y.settings.get(u.z.k_sShowInternalSettings) ||
+            b.settings.get(m.z.k_sShowInternalSettings) ||
             ((null === (e = this.m_SteamClientUserInfoPathProperty.value) ||
             void 0 === e
               ? void 0
@@ -146,6 +141,7 @@ var CLSTAMP = "11139766";
         }
         Init(e) {
           return (0, n.sH)(this, void 0, void 0, function* () {
+            var t;
             if (this.m_bInitStarted) return;
             (this.m_bInitStarted = !0),
               (this.m_bIsSettingApp = e),
@@ -176,18 +172,27 @@ var CLSTAMP = "11139766";
                 void 0 === VRHTML ||
                 VRHTML.RegisterForDisplayModeNotSupportedEvents(
                   this.SetRestartRequired,
-                );
-            let t = [];
-            this.m_mailbox.connected || t.push(this.ConnectMailbox()),
-              t.push(this.OpenWebSocketToHost()),
-              t.push(this.AwaitInitialSettingsSchema()),
-              c.p.SteamVR.SetImplementation("SetSpatializeEnabled", (e) => {
+                ),
+              null ===
+                (t =
+                  null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.RegisterForHmdFrameRateChanged) ||
+                void 0 === t ||
+                t.call(VRHTML, () => {
+                  b.GetSettingsInfo().then((e) => this.OnVRSystemInfo(e));
+                });
+            let s = [];
+            this.m_mailbox.connected || s.push(this.ConnectMailbox()),
+              s.push(this.OpenWebSocketToHost()),
+              s.push(this.AwaitInitialSettingsSchema()),
+              d.p.SteamVR.SetImplementation("SetSpatializeEnabled", (e) => {
                 this.audioDevices &&
                   ((this.audioDevices.spatialize =
                     (null == e ? void 0 : e.enabled) || !1),
                   console.log("SetSpatializeEnabled", e.enabled));
               }),
-              c.p.SteamVR.SetImplementation(
+              d.p.SteamVR.SetImplementation(
                 "SetSpatializeSurroundEnabled",
                 (e) => {
                   this.audioDevices &&
@@ -196,15 +201,15 @@ var CLSTAMP = "11139766";
                     console.log("SetSpatializeSurroundEnabled", e.enabled));
                 },
               ),
-              yield Promise.all(t);
+              yield Promise.all(s);
           });
         }
         get MailboxName() {
           if (!this.m_bIsSettingApp) return "settings";
-          switch ((0, l.R$f)()) {
-            case l.OH$.Overlay:
+          switch ((0, p.R$f)()) {
+            case p.OH$.Overlay:
               return "settings/overlay";
-            case l.OH$.Desktop:
+            case p.OH$.Desktop:
               return "settings/desktop";
             default:
               return "settings/unknown";
@@ -218,7 +223,7 @@ var CLSTAMP = "11139766";
                   "workshop_state_changed",
                   this.OnWorkshopStateChangedMessage,
                 ),
-                this.m_mailbox.RegisterHandler(S, this.OnChangeRouteMessage),
+                this.m_mailbox.RegisterHandler(v, this.OnChangeRouteMessage),
                 this.m_mailbox.RegisterHandler(
                   "app_config_changed",
                   this.OnAppConfigChangedMessage,
@@ -303,7 +308,7 @@ var CLSTAMP = "11139766";
           } else
             this.m_mailbox.connected &&
               this.m_mailbox.SendMessage(this.MailboxName, {
-                type: S,
+                type: v,
                 page: e,
                 section: t,
                 sectionParams: s,
@@ -311,16 +316,16 @@ var CLSTAMP = "11139766";
         }
         SetDashboardFadeSupression(e, t) {
           this.m_mailbox.connected &&
-            this.m_mailbox.SendMessage(l.M9N, {
-              type: h.E,
+            this.m_mailbox.SendMessage(p.M9N, {
+              type: u.E,
               suppress_dashboard_fade: t,
               for_id: e,
             });
         }
         SetDashboardForceBoundsVisible(e, t, s) {
           this.m_mailbox.connected &&
-            this.m_mailbox.SendMessage(l.M9N, {
-              type: h.Q,
+            this.m_mailbox.SendMessage(p.M9N, {
+              type: u.Q,
               force_bounds_visible: s,
               for_overlay_key: e,
               for_id: t,
@@ -335,10 +340,10 @@ var CLSTAMP = "11139766";
             window.addEventListener("beforeunload", () => {
               this.WebSocketSend("settings_close");
             }),
-            y.GetSettingsInfo().then((e) => {
+            b.GetSettingsInfo().then((e) => {
               this.OnVRSystemInfo(e);
             }),
-            y.GetAppList().then((e) => {
+            b.GetAppList().then((e) => {
               this.OnVRAppList({ jsonid: "vr_app_list", apps: e });
             });
         }
@@ -389,7 +394,7 @@ var CLSTAMP = "11139766";
           }
         }
         SetSettingValueFromServer(e, t) {
-          const s = 1e3 * v.SERVER_SETTING_MERGE_DEFER_DURATION;
+          const s = 1e3 * y.SERVER_SETTING_MERGE_DEFER_DURATION;
           if (this.m_mapSettingsLastWriteInfo.has(e)) {
             let n = this.m_mapSettingsLastWriteInfo.get(e);
             if (new Date().getTime() - n.nLastUserUpdateTime < s)
@@ -592,74 +597,77 @@ var CLSTAMP = "11139766";
             : t.name;
         }
         get showAdvancedSettings() {
-          return this.settings.get(p.F2);
+          return this.settings.get(h.F2);
         }
         set showAdvancedSettings(e) {
-          this.SetSettingsValue(p.F2, e);
+          this.SetSettingsValue(h.F2, e);
         }
         showBindingCallouts(e) {
           let t = { type: "request_binding_callouts", app_key: e };
-          this.m_mailbox.SendMessage(l.I0c, t);
+          this.m_mailbox.SendMessage(p.I0c, t);
         }
       }
-      (v.SERVER_SETTING_MERGE_DEFER_DURATION = 1),
-        (0, n.Cg)([r.observable], v.prototype, "connected", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "settingsSchema", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "settings", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "systemInfo", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "audioDevices", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "apps", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "probablyOwnedAppkeys", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "m_bSteamVRMain", void 0),
+      (y.SERVER_SETTING_MERGE_DEFER_DURATION = 1),
+        (0, n.Cg)([r.observable], y.prototype, "connected", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "settingsSchema", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "settings", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "systemInfo", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "audioDevices", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "apps", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "probablyOwnedAppkeys", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "m_bSteamVRMain", void 0),
         (0, n.Cg)(
           [r.observable],
-          v.prototype,
+          y.prototype,
           "workshopStateChangedCanary",
           void 0,
         ),
-        (0, n.Cg)([r.observable], v.prototype, "pendingChanges", void 0),
-        (0, n.Cg)([r.observable], v.prototype, "route", void 0),
-        (0, n.Cg)([r.computed], v.prototype, "showInternalSettings", null),
-        (0, n.Cg)([i.o], v.prototype, "OpenWebSocketToHost", null),
-        (0, n.Cg)([i.o], v.prototype, "OnWorkshopStateChangedMessage", null),
-        (0, n.Cg)([i.o], v.prototype, "OnChangeRouteMessage", null),
-        (0, n.Cg)([i.o], v.prototype, "OnAppConfigChangedMessage", null),
-        (0, n.Cg)([i.o], v.prototype, "OnRefreshRateChangeMessage", null),
-        (0, n.Cg)([r.action.bound], v.prototype, "onHashChanged", null),
-        (0, n.Cg)([r.computed], v.prototype, "routePage", null),
-        (0, n.Cg)([r.computed], v.prototype, "routePageSection", null),
-        (0, n.Cg)([r.computed], v.prototype, "routePageSectionParams", null),
-        (0, n.Cg)([r.action], v.prototype, "setRoutePage", null),
-        (0, n.Cg)([r.action], v.prototype, "setRoutePageSection", null),
-        (0, n.Cg)([r.action], v.prototype, "setRoutePageSectionParams", null),
-        (0, n.Cg)([r.action], v.prototype, "setRoute", null),
-        (0, n.Cg)([i.o], v.prototype, "SetDashboardFadeSupression", null),
-        (0, n.Cg)([i.o], v.prototype, "SetDashboardForceBoundsVisible", null),
-        (0, n.Cg)([i.o], v.prototype, "SetRestartRequired", null),
-        (0, n.Cg)([i.o], v.prototype, "OnWebSocketOpen", null),
-        (0, n.Cg)([i.o], v.prototype, "OnWebSocketClose", null),
-        (0, n.Cg)([i.o], v.prototype, "WebSocketSend", null),
-        (0, n.Cg)([i.o], v.prototype, "OnWebSocketMessage", null),
-        (0, n.Cg)([r.action], v.prototype, "OnVRSettings", null),
-        (0, n.Cg)([r.action], v.prototype, "SetSettingValueFromServer", null),
-        (0, n.Cg)([r.action], v.prototype, "OnVRSettingsSchema", null),
-        (0, n.Cg)([r.action.bound], v.prototype, "ResetSettingsValue", null),
-        (0, n.Cg)([r.action], v.prototype, "ResetSettingsValues", null),
-        (0, n.Cg)([r.action], v.prototype, "SetSettingsValue", null),
+        (0, n.Cg)([r.observable], y.prototype, "pendingChanges", void 0),
+        (0, n.Cg)([r.observable], y.prototype, "route", void 0),
+        (0, n.Cg)([r.computed], y.prototype, "showInternalSettings", null),
+        (0, n.Cg)([i.o], y.prototype, "OpenWebSocketToHost", null),
+        (0, n.Cg)([i.o], y.prototype, "OnWorkshopStateChangedMessage", null),
+        (0, n.Cg)([i.o], y.prototype, "OnChangeRouteMessage", null),
+        (0, n.Cg)([i.o], y.prototype, "OnAppConfigChangedMessage", null),
+        (0, n.Cg)([i.o], y.prototype, "OnRefreshRateChangeMessage", null),
+        (0, n.Cg)([r.action.bound], y.prototype, "onHashChanged", null),
+        (0, n.Cg)([r.computed], y.prototype, "routePage", null),
+        (0, n.Cg)([r.computed], y.prototype, "routePageSection", null),
+        (0, n.Cg)([r.computed], y.prototype, "routePageSectionParams", null),
+        (0, n.Cg)([r.action], y.prototype, "setRoutePage", null),
+        (0, n.Cg)([r.action], y.prototype, "setRoutePageSection", null),
+        (0, n.Cg)([r.action], y.prototype, "setRoutePageSectionParams", null),
+        (0, n.Cg)([r.action], y.prototype, "setRoute", null),
+        (0, n.Cg)([i.o], y.prototype, "SetDashboardFadeSupression", null),
+        (0, n.Cg)([i.o], y.prototype, "SetDashboardForceBoundsVisible", null),
+        (0, n.Cg)([i.o], y.prototype, "SetRestartRequired", null),
+        (0, n.Cg)([i.o], y.prototype, "OnWebSocketOpen", null),
+        (0, n.Cg)([i.o], y.prototype, "OnWebSocketClose", null),
+        (0, n.Cg)([i.o], y.prototype, "WebSocketSend", null),
+        (0, n.Cg)([i.o], y.prototype, "OnWebSocketMessage", null),
+        (0, n.Cg)([r.action], y.prototype, "OnVRSettings", null),
+        (0, n.Cg)([r.action], y.prototype, "SetSettingValueFromServer", null),
+        (0, n.Cg)([r.action], y.prototype, "OnVRSettingsSchema", null),
+        (0, n.Cg)([r.action.bound], y.prototype, "ResetSettingsValue", null),
+        (0, n.Cg)([r.action], y.prototype, "ResetSettingsValues", null),
+        (0, n.Cg)([r.action], y.prototype, "SetSettingsValue", null),
         (0, n.Cg)(
           [r.action],
-          v.prototype,
+          y.prototype,
           "SetSettingsStringValueWithoutSchema",
           null,
         );
-      const y = new v();
-      window.VRSettingsState = y;
+      const b = new y();
+      function _() {
+        return (0, l.useObserver)(() => b.showAdvancedSettings);
+      }
+      window.VRSettingsState = b;
     },
     9383: (e, t, s) => {
       s.d(t, {
-        CL: () => R,
+        CL: () => O,
         JP: () => n,
-        JQ: () => O,
+        JQ: () => R,
         P9: () => C,
         gU: () => P,
         sj: () => f,
@@ -921,7 +929,7 @@ var CLSTAMP = "11139766";
             l.createElement(r.IS7, { id: m }, s),
           );
         }),
-        O = l.forwardRef(function (e, t) {
+        R = l.forwardRef(function (e, t) {
           var s, n;
           const {
               requireExternalOverlay: a = !0,
@@ -948,7 +956,7 @@ var CLSTAMP = "11139766";
                 ? s
                 : 0,
             f = (16 & _) > 0,
-            O = (1073741824 & _) > 0;
+            R = (1073741824 & _) > 0;
           return a && !b
             ? null
             : l.createElement(
@@ -965,7 +973,7 @@ var CLSTAMP = "11139766";
                     inputFocus: Object.assign(
                       {
                         vrClientPID: f ? b.unClientPID : void 0,
-                        steamInputAppID: O ? b.unSteamInputAppID : void 0,
+                        steamInputAppID: R ? b.unSteamInputAppID : void 0,
                       },
                       null == g ? void 0 : g.inputFocus,
                     ),
@@ -979,7 +987,7 @@ var CLSTAMP = "11139766";
                 c.children,
               );
         });
-      function R(e) {
+      function O(e) {
         const { page: t } = (0, u.N)();
         if ((0, o.q3)(() => (null == t ? void 0 : t.isActiveAndVisiblePage)))
           return l.createElement(l.Fragment, null, e.children);
@@ -1000,31 +1008,5 @@ var CLSTAMP = "11139766";
           );
       }
     },
-    2741: (e, t, s) => {
-      s.d(t, { VB: () => a, gp: () => r, i_: () => o, kr: () => i });
-      var n = s(6090);
-      const i = 20,
-        a = [
-          "Steam",
-          "Desktop",
-          "Desktop 1",
-          "Desktop 2",
-          "Desktop 3",
-          "Now Playing",
-          "Old Library",
-          "Library",
-          "Settings",
-        ],
-        o = [
-          n.OiK.TopCenter,
-          n.OiK.CenterLeft,
-          n.OiK.CenterRight,
-          n.OiK.BottomCenter,
-          n.OiK.BottomRight,
-        ];
-      function r(e, t) {
-        return !!e && !!t && e.frameID === t.frameID;
-      }
-    },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/chunk~f620ae578.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/chunk~0d3b9ff33.js.map

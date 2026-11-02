@@ -1,4 +1,4 @@
-var CLSTAMP = "11139766";
+var CLSTAMP = "11196359";
 (() => {
   "use strict";
   var e,
@@ -62,7 +62,6 @@ var CLSTAMP = "11139766";
           Zkm: () => _.Zk,
           _1: () => I._1,
           _81: () => w._8,
-          _h3: () => _._h,
           _nH: () => o._n,
           aXN: () => u.aX,
           aqc: () => I.aq,
@@ -84,7 +83,6 @@ var CLSTAMP = "11139766";
           k2$: () => I.k2,
           kGj: () => I.kG,
           kSV: () => o.kS,
-          ke3: () => w.ke,
           kuU: () => I.ku,
           lo4: () => o.lo,
           lqd: () => m.l,
@@ -188,7 +186,8 @@ var CLSTAMP = "11139766";
             (e[(e.Auto = 0)] = "Auto"),
               (e[(e.Low = 1)] = "Low"),
               (e[(e.Medium = 2)] = "Medium"),
-              (e[(e.High = 3)] = "High");
+              (e[(e.High = 3)] = "High"),
+              (e[(e.Ultra = 4)] = "Ultra");
           })(i || (i = {})),
           (function (e) {
             (e[(e.TrackingResult_Uninitialized = 1)] =
@@ -1904,7 +1903,7 @@ var CLSTAMP = "11139766";
                 this.m_ModifiedSimulatedActions.forEach((t) => {
                   if (this.GetActionTypeFromSimulatedActionType(t.type) == e) {
                     this.ComputeSimulatedActionPathFromId(t.id),
-                      t.name ? t.name : ((0, c.we)("UnnamedSimAction"), t.id);
+                      t.name ? t.name : ((0, c.we)("#UnnamedSimAction"), t.id);
                     o.push(this.CreateActionDefinitionForSimulatedAction(t));
                   }
                 }),
@@ -1925,7 +1924,7 @@ var CLSTAMP = "11139766";
               name: this.ComputeSimulatedActionPathFromId(e.id),
               localized_name: e.name
                 ? e.name
-                : (0, c.we)("UnnamedSimAction") + e.id,
+                : (0, c.we)("#UnnamedSimAction") + e.id,
               type: this.GetActionTypeFromSimulatedActionType(e.type),
             };
           }
@@ -3859,7 +3858,7 @@ var CLSTAMP = "11139766";
         window.controllerBindingStore = N;
       },
       6795: (e, t, n) => {
-        n.d(t, { k: () => o, n: () => m });
+        n.d(t, { k: () => o, n: () => g });
         var o,
           i = n(1635),
           l = n(9118),
@@ -3869,7 +3868,8 @@ var CLSTAMP = "11139766";
           c = n(3714),
           d = n(5802),
           p = n(1532),
-          h = n(8108);
+          h = n(8108),
+          u = n(6759);
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.List = 1)] = "List"),
@@ -3878,7 +3878,7 @@ var CLSTAMP = "11139766";
             (e[(e.AppSelect = 4)] = "AppSelect"),
             (e[(e.Debugger = 5)] = "Debugger");
         })(o || (o = {}));
-        class u {
+        class m {
           constructor() {
             (this.m_State = o.None),
               (this.m_bLoading = !1),
@@ -3920,12 +3920,12 @@ var CLSTAMP = "11139766";
               (0, s.autorun)(this.UpdateWindowTitle);
           }
           ShowOverlayInDashboard() {
-            null === a.Ay$ ||
-              void 0 === a.Ay$ ||
-              a.Ay$.VRClient.ShowDashboardOverlay({
-                overlayKey: "system.vrwebhelper.controllerbinding",
-                sReason: "cinputui_showoverlayindashboard",
-              });
+            (0, u.Du)(
+              u.yM.ShowDashboardAndSwitchToFrame(
+                "system.vrwebhelper.controllerbinding",
+                "cinputui_showoverlayindashboard",
+              ),
+            );
           }
           OnShowAppSelect(e) {
             (this.m_bStandaloneSettingsPage = !1), this.ShowAppSelect();
@@ -4105,7 +4105,7 @@ var CLSTAMP = "11139766";
           }
           get CurrentBinding() {
             if (this.BindingQueryResults)
-              return m.BindingQueryResults.find(
+              return g.BindingQueryResults.find(
                 (e) => e.url == d.B$.SelectedBindingURL,
               );
           }
@@ -4209,56 +4209,56 @@ var CLSTAMP = "11139766";
             }, 0);
           }
         }
-        (0, i.Cg)([s.observable], u.prototype, "m_State", void 0),
-          (0, i.Cg)([s.observable], u.prototype, "m_bLoading", void 0),
-          (0, i.Cg)([s.observable], u.prototype, "m_rBindingList", void 0),
+        (0, i.Cg)([s.observable], m.prototype, "m_State", void 0),
+          (0, i.Cg)([s.observable], m.prototype, "m_bLoading", void 0),
+          (0, i.Cg)([s.observable], m.prototype, "m_rBindingList", void 0),
           (0, i.Cg)(
             [s.observable],
-            u.prototype,
+            m.prototype,
             "m_bShowBindingListError",
             void 0,
           ),
-          (0, i.Cg)([s.observable], u.prototype, "m_sBindingListError", void 0),
+          (0, i.Cg)([s.observable], m.prototype, "m_sBindingListError", void 0),
           (0, i.Cg)(
             [s.observable],
-            u.prototype,
+            m.prototype,
             "m_bCanCloseBindingListError",
             void 0,
           ),
-          (0, i.Cg)([s.observable], u.prototype, "m_bDesktopMode", void 0),
-          (0, i.Cg)([r.o], u.prototype, "OnShowAppSelect", null),
-          (0, i.Cg)([r.o], u.prototype, "OnShowInputDebugger", null),
-          (0, i.Cg)([r.o], u.prototype, "OnShowAppBinding", null),
-          (0, i.Cg)([r.o], u.prototype, "OnBindingLoadFailed", null),
-          (0, i.Cg)([s.computed], u.prototype, "DesktopMode", null),
-          (0, i.Cg)([r.o], u.prototype, "SetBindingListError", null),
-          (0, i.Cg)([s.computed], u.prototype, "ShowBindingListError", null),
-          (0, i.Cg)([s.computed], u.prototype, "BindingListError", null),
+          (0, i.Cg)([s.observable], m.prototype, "m_bDesktopMode", void 0),
+          (0, i.Cg)([r.o], m.prototype, "OnShowAppSelect", null),
+          (0, i.Cg)([r.o], m.prototype, "OnShowInputDebugger", null),
+          (0, i.Cg)([r.o], m.prototype, "OnShowAppBinding", null),
+          (0, i.Cg)([r.o], m.prototype, "OnBindingLoadFailed", null),
+          (0, i.Cg)([s.computed], m.prototype, "DesktopMode", null),
+          (0, i.Cg)([r.o], m.prototype, "SetBindingListError", null),
+          (0, i.Cg)([s.computed], m.prototype, "ShowBindingListError", null),
+          (0, i.Cg)([s.computed], m.prototype, "BindingListError", null),
           (0, i.Cg)(
             [s.computed],
-            u.prototype,
+            m.prototype,
             "CanCloseBindingListError",
             null,
           ),
-          (0, i.Cg)([r.o], u.prototype, "OnPopState", null),
-          (0, i.Cg)([r.o], u.prototype, "GoBackPage", null),
-          (0, i.Cg)([r.o], u.prototype, "GoForwardPage", null),
-          (0, i.Cg)([s.computed], u.prototype, "GetUIState", null),
-          (0, i.Cg)([s.computed], u.prototype, "BindingQueryResults", null),
-          (0, i.Cg)([s.computed], u.prototype, "Loading", null),
-          (0, i.Cg)([r.o], u.prototype, "IsSafeToResetControllerType", null),
-          (0, i.Cg)([s.action.bound], u.prototype, "EditCurrentBinding", null),
-          (0, i.Cg)([r.o], u.prototype, "ViewCurrentBinding", null),
-          (0, i.Cg)([r.o], u.prototype, "ShowBindingList", null),
-          (0, i.Cg)([s.computed], u.prototype, "CurrentBinding", null),
-          (0, i.Cg)([r.o], u.prototype, "ReturnToSettingsUI", null),
-          (0, i.Cg)([r.o], u.prototype, "ShowAppSelect", null),
-          (0, i.Cg)([r.o], u.prototype, "UpdatePathsTimeout", null),
-          (0, i.Cg)([r.o], u.prototype, "ShowDebugger", null),
-          (0, i.Cg)([r.o], u.prototype, "GetBindingList", null),
-          (0, i.Cg)([r.o], u.prototype, "UpdateWindowTitle", null);
-        const m = new u();
-        window.inputUI = m;
+          (0, i.Cg)([r.o], m.prototype, "OnPopState", null),
+          (0, i.Cg)([r.o], m.prototype, "GoBackPage", null),
+          (0, i.Cg)([r.o], m.prototype, "GoForwardPage", null),
+          (0, i.Cg)([s.computed], m.prototype, "GetUIState", null),
+          (0, i.Cg)([s.computed], m.prototype, "BindingQueryResults", null),
+          (0, i.Cg)([s.computed], m.prototype, "Loading", null),
+          (0, i.Cg)([r.o], m.prototype, "IsSafeToResetControllerType", null),
+          (0, i.Cg)([s.action.bound], m.prototype, "EditCurrentBinding", null),
+          (0, i.Cg)([r.o], m.prototype, "ViewCurrentBinding", null),
+          (0, i.Cg)([r.o], m.prototype, "ShowBindingList", null),
+          (0, i.Cg)([s.computed], m.prototype, "CurrentBinding", null),
+          (0, i.Cg)([r.o], m.prototype, "ReturnToSettingsUI", null),
+          (0, i.Cg)([r.o], m.prototype, "ShowAppSelect", null),
+          (0, i.Cg)([r.o], m.prototype, "UpdatePathsTimeout", null),
+          (0, i.Cg)([r.o], m.prototype, "ShowDebugger", null),
+          (0, i.Cg)([r.o], m.prototype, "GetBindingList", null),
+          (0, i.Cg)([r.o], m.prototype, "UpdateWindowTitle", null);
+        const g = new m();
+        window.inputUI = g;
       },
       3714: (e, t, n) => {
         n.d(t, { A0: () => l, uV: () => a, we: () => r });
@@ -4420,6 +4420,12 @@ var CLSTAMP = "11139766";
           );
         }
         window.LocalizationManager = s;
+      },
+      4728: (e, t, n) => {
+        function o(e, t, n) {
+          return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
+        }
+        n.d(t, { OQ: () => o });
       },
       1139: (e, t, n) => {
         n.d(t, {
@@ -5787,7 +5793,7 @@ var CLSTAMP = "11139766";
                 })
                 .catch((e) => {
                   this.setState({
-                    sError: (0, d.we)("InputDebugger_ActionManifestFailed"),
+                    sError: (0, d.we)("#InputDebugger_ActionManifestFailed"),
                   });
                 });
           }
@@ -14258,7 +14264,7 @@ var CLSTAMP = "11139766";
                   ref: this.BindDescriptionInput,
                   defaultValue: this.props.sDescription,
                   placeholder: (0, d.we)(
-                    "BindingUI_SaveDescriptionPlaceholder",
+                    "#BindingUI_SaveDescriptionPlaceholder",
                   ),
                 }),
                 i.createElement(
@@ -15371,7 +15377,7 @@ var CLSTAMP = "11139766";
         n = (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var i = o.O(void 0, [967, 991, 908, 305, 527, 170, 797, 906, 300], () =>
+  var i = o.O(void 0, [967, 991, 908, 305, 527, 170, 797, 148, 906], () =>
     o(9424),
   );
   i = o.O(i);

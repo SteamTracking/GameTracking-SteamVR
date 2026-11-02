@@ -39,17 +39,11 @@
   "SourceInputMode_East": "East",
   "SourceInputMode_West": "West",
   "SourceInputMode_Center": "Center",
-  "SourceInputMode_Scroll": "Scroll",
   "SourceInputMode_Trackpad_Scroll": "Scroll",
   "SourceInputMode_Position": "Position",
   "SourceInputMode_Pull": "Pull",
   "SourceInputMode_Force": "Force",
   "SourceInputMode_Proximity": "Proximity",
-  "SourceInputMode_Edit": "Edit",
-  "SourceInputMode_AddMode": "Add",
-  "SourceInputMode_Delete": "Delete",
-  "SourceInputMode_CancelEdit": "Done",
-  "SourceInputMode_Settings": "Settings",
   "SourceInputMode_Default": "Default",
   "SourceInputMode_Static_Bool": "Constant",
   "SourceInputMode_StaticBool": "Action To Set",
@@ -294,7 +288,6 @@
   "SourceInputMode_HapticFrequency": "Haptic Frequency",
 
   "SourceInputMode_MoreOptions": "More options",
-  "SourceInputMode_FewerOptions": "Fewer options",
 
   "SourceInputAction_none": "None",
   "SourceInputAction_NoItems": "None in action set",
@@ -307,18 +300,6 @@
   "SourceInputSubHeader_PoseActions": "Pose Actions",
   "SourceInputSubHeader_HapticsActions": "Haptic Actions",
 
-  "BindingUI_EditPoses": "Edit Action Poses",
-  "BindingUI_AddPoses": "Add Action Pose",
-  "BindingUI_ViewPoses": "View Action Poses",
-  "BindingUI_ViewHaptics": "View Haptics",
-  "BindingUI_AddHaptics": "Add Haptics",
-  "BindingUI_EditHaptics": "Edit Haptics",
-  "BindingUI_ViewSkeleton": "View Skeleton",
-  "BindingUI_AddSkeleton": "Add Skeleton",
-  "BindingUI_EditSkeleton": "Edit Skeleton",
-  "BindingUI_EditChords": "Edit Chords",
-  "BindingUI_ViewChords": "View Chords",
-  "BindingUI_AddChords": "Add Chords",
 
   "BindingUI_PoseTitle": "Pose Bindings",
   "BindingUI_HapticsTitle": "Haptics Bindings",
@@ -359,8 +340,6 @@
   "TrackedControllerRole_RightHand": "Right Hand",
 
   "BindingUI_ChordTitle": "Controller Chords",
-  "BindingUI_Chord_Action": "Action:",
-  "BindingUI_Chord_Inputs": "Inputs:",
   "BindingUI_Chord_SelectActionModalHeader": "Pick an action for this chord",
   "BindingUI_ExportBindingFile": "Export Binding File",
   "BindingUI_ReplaceDefaultFile": "Replace Default Binding",
@@ -408,7 +387,6 @@
   "BindingUI_List_PersonalSection": "Personal",
   "BindingUI_List_OwnedSection": "My Shared Bindings",
   "BindingUI_List_PublicSection": "Community Bindings",
-  "BindingUI_List_Delete": "Delete",
   "BindingUI_List_Edit": "Edit",
   "BindingUI_List_View": "View",
   "BindingUI_List_Select": "Activate",
@@ -441,19 +419,10 @@
   "BindingUI_List_OldVersionWarning": "These bindings were made with an older version of %1$s and need to be updated.",
   "BindingUI_List_OldVersionWarning_CurrentBinding": "These bindings were made with an older version of %1$s and may not include all necessary actions.",
   "BindingUI_SelectAction_Required": "Required",
-  "BindingUI_SelectAction_Suggested": "Suggested",
 
   "SaveError_BindingWriteFailed": "Failed to write binding file. Is it write-protected?",
   "SaveError_ActionManifestWriteFailed": "Failed to write action manifest file. Is it write-protected?",
-  "SaveError_BindingMissingRequiredActions": "Failed to save binding as it is missing required one or more required actions.",
-  "SaveError_BindingMissingActionsList": "Actions Missing",
 
-  "AppSelect_Title": "Controller Settings",
-  "AppSelect_CurrentApp": "Current Application",
-  "AppSelect_LastRunApp": "Last Run Application",
-  "AppSelect_RecentApp": "Recent Applications",
-  "AppSelect_CompositorName": "SteamVR Dashboard",
-  "AppSelect_CoreSteamVRApps": "SteamVR Core Applications",
   "AppSelect_ControllerTester": "Test Controller",
   "AppSelect_LegacyDebug": "Debug Legacy Input",
   "AppSelect_ShowMoreApps": "Show More Applications",
@@ -473,12 +442,10 @@
   "BindingUI_List_Legacy_Binding_Description": "These are the default bindings for this game.",
   "BindingUI_List_PublishedBy": "Created by %1$s",
   "BindingUI_List_Autosave": "%1$s (Local changes)",
-  "BindingList_TrackerEdit": "Manage Trackers",
   "Button_Import": "Import",
   "PreservedAutosaveName" : "Preserved local changes before upgrade",
 
   "BindingUI_SteamVRUnavailable": "Please run SteamVR to continue using the binding interface",
-  "BindingUI_ErrorLoadingBindingTitle": "Binding file failed to load",
   "BindingUI_WorkshopBindingLoadFailed": "Failed to load workshop bindings",
 
   "BindingUI_ConfirmSaveWithUnbound_Title": "Required actions are unbound",
@@ -493,7 +460,6 @@
 
   "unknown_application": "Unknown Application",
 
-  "TestController_Title": "Test Controllers",
 
   "InputDebugger_Title": "Input Debugger",
   "InputDebugger_Actions": "Actions",
@@ -541,34 +507,26 @@
 
   "InputDebugger_Priority_Overlay": "Global + %1$s",
 
-  "BindingUI_WindowTitle_ControllerSettings": "Controller Settings",
   "BindingUI_WindowTitle_ControllerBinding": "Controller Binding",
-  "BindingUI_WindowTitle_DisplaySettings": "Display Settings",
+  "BindingUI_WindowTitle_ControllerBindings": "Controller Bindings",
+  "BindingUI_Close": "Close",
 
   "ActionManifestError_UnknownError": "Failed to load action manifest. Try launching the app first.",
 
-  "TrackerEditor_Title": "Manage Trackers",
   "TrackerEditor_BuzzTracker": "Identify Tracker",
-  "TrackerEditor_SelectRole": "Select Role:",
-  "TrackerEditor_SelectControllerRole": "Which hands:",
 
-  "DisplaySettings_Title": "Display Settings",
   "DisplaySettings_DisplayBrightness": "Display Brightness",
   "DisplaySettings_IndexColumnCorrection": "Index Display Column Correction",
   "DisplaySettings_ColumnCorrection": "Column Correction",
   "DisplaySettings_ColumnCorrectionDesc": "Column Correction mitigates vertical \"screendoor\" during head motion. Most users should leave it enabled, with fine adjustment of 0.",
   "DisplaySettings_ColumnCorrectionEdit" : "Edit",
   "DisplaySettings_Error_FirmwareUpdateNeeded": "A firmware update is required to enable Display Settings customizations.",
-  "DisplaySettings_EnableColumnCorrection": "Column Correction",
   "DisplaySettings_ColumnCorrectionOff": "Off",
   "DisplaySettings_ColumnCorrectionAuto": "Auto",
-  "DisplaySettings_AdvancedSettings": "Advanced Settings",
   "DisplaySettings_ShowAdvancedSettings": "Show Advanced Settings",
   "DisplaySettings_HideAdvancedSettings": "Hide Advanced Settings",
-  "DisplaySettings_ResetAdvancedSettings": "Use Recommended Advanced Settings",
   "DisplaySettings_ColumnCorrectionBiasLeft": "Fine Adjustment (Left)",
   "DisplaySettings_ColumnCorrectionBiasRight": "Fine Adjustment (Right)",
-  "DisplaySettings_ColumnCorrectionBiasLinked": "Linked",
 
   "SaveNotice_Saving": "Saving...",
   "SaveNotice_Uploading": "Uploading...",
@@ -596,10 +554,6 @@
   "SecondaryController_ReturnWithRightHand": "Return bindings with right hand",
   "SecondaryController_ReturnWithHead": "Return bindings with HMD",
 
-  "Settings_ThumbstickDeadzone_Text": "Thumbstick Deadzone:",
-
-  "Settings_ControllerSettings_Title" : "Thumbstick Settings",
-  "Settings_ControllerSettings_Utilities": "Controller Utilities",
   "Settings_ControllerOverlayMagnetismEnabled": "Overlay Magnetism",
   "Settings_ControllerOverlayMagnetismLockDistance": "Cursor Lock Distance",
   "Settings_ControllerOverlayMagnetismDeadZoneRatio": "Cursor Lock Dead Zone",
@@ -608,14 +562,7 @@
   "Settings_ControllerOverlayFilteringBeta": "Filtering 1€ Beta",
   "Settings_ControllerOverlayFilteringDerivCutoff": "Filtering 1€ Deriv Cutoff",
 
-  "Settings_General_Cancel": "Cancel",
-  "Settings_General_Confirm": "Confirm",
   "Settings_General_Calibrate": "Calibrate",
-  "Settings_General_NotEnoughSamples" : "Please press up on the thumbstick at least %1$s more times to complete calibration.",
-  "Settings_General_InviteMoreSamples" : "Calculated angle of %1$s degrees. Keep pressing up to refine that value or press Confirm to accept this calibration.",
-  "Settings_General_LeftThumbstickAngle": "Left Thumbstick Angle: %1$s°",
-  "Settings_General_RightThumbstickAngle": "Right Thumbstick Angle: %1$s°",
-  "Settings_General_Reset": "Reset",
 
   "LegacyDebugger_NoApp": "Run any legacy input application to see its input data here.",
 
@@ -626,7 +573,5 @@
   "Roll": "Roll",
   "X": "X",
   "Y": "Y",
-  "Z": "Z",
-  "LeftController": "Left Controller Position Offset",
-  "RightController": "Right Controller Position Offset"
+  "Z": "Z"
 }

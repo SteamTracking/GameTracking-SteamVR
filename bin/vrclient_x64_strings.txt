@@ -9,15 +9,23 @@
     format: %d, sampleCount: %d\n
     size: %d %d\n
   %s -> %s\n
+  Comment started here.
   driver %s implements interfaces %s\n
  (Thumb)
  (does the path point to a directory?)
+ = { <proto text format> }". To set fields within it, use syntax like "
+ Outdent() without matching Indent().
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
+ Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer: 
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
  [CVRChaperoneClient] Failed to commit chaperone working set because message timed out\n
  [CVRChaperoneClient] Failed to commit chaperone working set because no universe was set\n
  [CVRChaperoneClient] Failed to committed chaperone working copy \n
  [CVRChaperoneClient] NotifyRoomSetupStep\n
  [CVRChaperoneClient] Succeeded to  committed chaperone working copy \n
  [CVRChaperoneClient] the chaperone bounds are removed successfully \n
+ [default = $0
+ args were given.  Full format string was: "
  at line 
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
  bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
@@ -29,9 +37,11 @@
  from xrWaitFrame
  in Buffer\n
  in Meta compatibility mode
+ is not valid for field 
  message of type "
  of the Protocol Buffer runtime library, but the installed version is 
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
+ of type 
 !! refusing to trigger minidump with debugger attached\n
 !( pDedicatedBuffer && pDedicatedImage )
 !(pCreateInfo->flags.bRenderable && pCreateInfo->flags.bDepthStencil)
@@ -47,15 +57,69 @@
 !m_stackFreeResources.empty()
 !std::isnan( flSystemTimeInSeconds )
 " because it is missing required fields: 
+" conflicts with the existing symbol "
 " does not.
+" for field "
+" for option "
+" has no field named "
+" has no value named "
+" has not been loaded.
+" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
+" imports "
+" in type "
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
+" is already defined in "
+" is already defined in file "
+" is already defined.
+" is an atomic type, not a message.
+" is not a field or extension of message "
+" is not a message type.
+" is not a type.
+" is not a valid identifier.
+" is not an enum type.
+" is not defined or is not an extension of "
+" is not defined.
+" is resolved to "
+" is resolved to "(
+" is specified along with field "
+" is specified multiple times.
+" must be unique within 
 " not found in the scene.
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" seems to be defined in "
+" unknown.
+" uses the same enum value as "
+" was already set.
+" was listed twice.
+" was not found or had errors.
+" which is not used.
+" which is.
+"$0" does not declare $1 as an extension number.
 "%/28;=#$019:>?
+") is not compatible with this reflection object (which is for type "
+") to start from the outermost scope.
+").  Note that the exact same class is required; not just the same descriptor.
+", another member of oneof "
+", but only 
+", field number 
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+", which is not imported by "
+".  To use it here, please add the necessary import.
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". Must be "perspective" or "orthographic"
+". This appears to be a value from a sibling type.
+". Value: "
+"/*" inside block comment.  Block comments cannot be nested.
+"0x" must be followed by hex digits.
+"MutableRawRepeatedField"
 "accessors" object not found in .gltf\n
 "asset" object not found in .gltf or not an object type\n
 "bufferViews" object not found in .gltf\n
 "buffers" object not found in .gltf\n
 "chords" member must be an array
+"e" must be followed by exponent.
 "eyetracking" member must be an array
 "haptics" member must be an array
 "nodes" object not found in .gltf\n
@@ -81,8 +145,17 @@
 #OriginString_HandController
 #OriginString_HandSource
 #OriginString_Source
-$tI(knN
+$0  extend .$1 {\n
+$0  extensions $1 to $2;\n
+$0  message $1
+$0 oneof $1 {\n
+$0$1$2 $3 = $4
+$0enum $1 {\n
+$0option $1;\n
+$tI(knN/chaperone/room_setup/transform
 %%.%dg
+%.*g
+%.1f
 %.2X
 %LocalAppData%
 %Y-%m-%d-%p_%I_%M_%S
@@ -96,6 +169,7 @@ $tI(knN
 %llu
 %s %s startup with PID=%u, config=%s, runtime=%s, arch=%s\n
 %s (%X)-> %s\n
+%s Mips View
 %s View
 %s called without first releasing previous slot!
 %s%d
@@ -169,9 +243,11 @@ $tI(knN
 %s: allocator not initialized
 %s: at least one signal point is required
 %s: attempt to block on incomplete query set: %s
+%s: can't flip a block compressed texture
 %s: cannot read back while recording into an external command buffer\n
 %s: cmdbuf references a resource that has been released: %s
 %s: concurrent sharing mode requires queue family indices
+%s: copying into a mappable texture is not supported
 %s: device does not support host query reset.
 %s: device does not support timeline semaphores.
 %s: device supports zero extensions
@@ -395,43 +471,25 @@ $tI(knN
 (Overcurrent)
 (Reset)
 (cannot determine missing fields for lite message)
+(merge 
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 **** JUDDER **** expected %u got %u\n
 ***** Reloading Shaders Begin\n
 ***** Reloading Shaders End\n
-+2cursor
-+clickstab
-+close
-+dash
-+interactive
-+keyboard
-+modal
-+pano
-+premult
-+protect
-+sbsc
-+sbsp
-+scroll
-+scrollwheel
-+smoothscroll
-+sortns
-+stereo
-+touch
-+xown
 , binary size = 
 , but got 
 , column 
+, from:
 , last executing in 
+, not just within "
 , requestedBytes 
 -1e+9999
 -IPCWrapper
 -Infinity
--alpha
--bar
--dash
 -disablewatchdogs
+-inf
 -lang="
--laser
 -nokillprocess
 -preloadonly -preloadvpks_all
 -startupappid
@@ -442,11 +500,25 @@ $tI(knN
 -waitformonitor
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . and .. are not allowed in binding_url
+..\src\google\protobuf\descriptor.cc
+..\src\google\protobuf\descriptor.pb.cc
+..\src\google\protobuf\descriptor_database.cc
+..\src\google\protobuf\dynamic_message.cc
+..\src\google\protobuf\extension_set.cc
+..\src\google\protobuf\extension_set_heavy.cc
+..\src\google\protobuf\generated_message_reflection.cc
 ..\src\google\protobuf\io\coded_stream.cc
+..\src\google\protobuf\io\strtod.cc
+..\src\google\protobuf\io\tokenizer.cc
 ..\src\google\protobuf\io\zero_copy_stream.cc
 ..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc
+..\src\google\protobuf\message.cc
 ..\src\google\protobuf\message_lite.cc
+..\src\google\protobuf\reflection_ops.cc
 ..\src\google\protobuf\stubs\common.cc
+..\src\google\protobuf\stubs\substitute.cc
+..\src\google\protobuf\text_format.cc
+..\src\google\protobuf\wire_format.cc
 ..\src\google\protobuf\wire_format_lite.cc
 .00cfg
 .?AU?$CFactoryMakerT@VCAnimSkeleton@@@?$CAnimFactoryBaseT@VCAnimResource@@@@
@@ -746,6 +818,7 @@ $tI(knN
 .?AV?$SteamPrivateInterfaceRegistration@VCVRSteamPrivate_028@@@@
 .?AV?$SteamPrivateInterfaceRegistration@VCVRSteamPrivate_029@@@@
 .?AV?$SteamPrivateInterfaceRegistration@VCVRSteamPrivate_030@@@@
+.?AV?$SteamPrivateInterfaceRegistration@VCVRSteamPrivate_031@@@@
 .?AV?$SystemInterfaceRegistration@VCHmdSystem_001@@@@
 .?AV?$SystemInterfaceRegistration@VCHmdSystem_004@@@@
 .?AV?$SystemInterfaceRegistration@VCVRClientCore_001@@@@
@@ -868,6 +941,9 @@ $tI(knN
 .?AV?$collate@D@std@@
 .?AV?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@nlohmann@@
 .?AV?$wstring_convert@V?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@_WV?$allocator@_W@2@V?$allocator@D@2@@std@@
+.?AVAggregateErrorCollector@?A0x247e964a@protobuf@google@@
+.?AVAggregateOptionFinder@OptionInterpreter@DescriptorBuilder@protobuf@google@@
+.?AVArrayInputStream@io@protobuf@google@@
 .?AVArrayOutputStream@io@protobuf@google@@
 .?AVCAnimResource@@
 .?AVCAnimSkeleton@@
@@ -944,6 +1020,9 @@ $tI(knN
 .?AVCSimulatedTrackpadClick@@
 .?AVCSimulatedTriggerPull@@
 .?AVCSingletonCriticalSection@@
+.?AVCSteamVR_DashboardRequest@@
+.?AVCSteamVR_DashboardRequest_Relatch@@
+.?AVCSteamVR_DashboardRequest_Target@@
 .?AVCSxrAction@@
 .?AVCSxrActionSet@@
 .?AVCSxrCompositorHeadless@@
@@ -1221,6 +1300,7 @@ $tI(knN
 .?AVCVRMsg_StartHomeAppResponse@@
 .?AVCVRMsg_StartVRCompositor@@
 .?AVCVRMsg_StartVRCompositorResponse@@
+.?AVCVRMsg_SystemSuspendImminent@@
 .?AVCVRMsg_TrackedCamera_AcquireVideoStreamingService@@
 .?AVCVRMsg_TrackedCamera_AcquireVideoStreamingServiceResponse@@
 .?AVCVRMsg_TrackedCamera_Enable@@
@@ -1344,6 +1424,7 @@ $tI(knN
 .?AVCVRSteamPrivate_028@@
 .?AVCVRSteamPrivate_029@@
 .?AVCVRSteamPrivate_030@@
+.?AVCVRSteamPrivate_031@@
 .?AVCVRSystemLatest@@
 .?AVCVRSystem_001@@
 .?AVCVRSystem_002@@
@@ -1402,12 +1483,36 @@ $tI(knN
 .?AVCharReader@Json@@
 .?AVCharReaderBuilder@Json@@
 .?AVClosure@protobuf@google@@
+.?AVDescriptorDatabase@protobuf@google@@
+.?AVDescriptorPoolExtensionFinder@internal@protobuf@google@@
+.?AVDescriptorProto@protobuf@google@@
+.?AVDescriptorProto_ExtensionRange@protobuf@google@@
+.?AVDynamicMessage@protobuf@google@@
+.?AVDynamicMessageFactory@protobuf@google@@
+.?AVEncodedDescriptorDatabase@protobuf@google@@
+.?AVEnumDescriptorProto@protobuf@google@@
+.?AVEnumOptions@protobuf@google@@
+.?AVEnumValueDescriptorProto@protobuf@google@@
+.?AVEnumValueOptions@protobuf@google@@
+.?AVErrorCollector@io@protobuf@google@@
 .?AVException@Json@@
+.?AVExtensionFinder@internal@protobuf@google@@
 .?AVFactory@CharReader@Json@@
 .?AVFactory@StreamWriter@Json@@
 .?AVFastWriter@Json@@
 .?AVFatalException@protobuf@google@@
+.?AVFieldDescriptorProto@protobuf@google@@
+.?AVFieldOptions@protobuf@google@@
+.?AVFieldSkipper@internal@protobuf@google@@
+.?AVFieldValuePrinter@TextFormat@protobuf@google@@
+.?AVFileDescriptorProto@protobuf@google@@
+.?AVFileDescriptorSet@protobuf@google@@
+.?AVFileOptions@protobuf@google@@
+.?AVFinder@TextFormat@protobuf@google@@
 .?AVFunctionClosure0@internal@protobuf@google@@
+.?AVGeneratedExtensionFinder@internal@protobuf@google@@
+.?AVGeneratedMessageFactory@?A0xaa88a5bd@protobuf@google@@
+.?AVGeneratedMessageReflection@internal@protobuf@google@@
 .?AVGenericInterfaceRegistration@@
 .?AVIEvent@IPC@@
 .?AVIFramerateGovernor@facet@@
@@ -1503,6 +1608,7 @@ $tI(knN
 .?AVIVRSteamPrivate_029@vr@@
 .?AVIVRSteamPrivate_030@vr@@
 .?AVIVRSteamPrivate_031@vr@@
+.?AVIVRSteamPrivate_032@vr@@
 .?AVIVRSystem@vr@@
 .?AVIVRTrackedCamera@vr@@
 .?AVIVRTrackedCameraInternal@vr@@
@@ -1520,18 +1626,35 @@ $tI(knN
 .?AVLogicError@Json@@
 .?AVMaterialReader@tinyobj@@
 .?AVMaterialUtf8FileReader@@
+.?AVMessage@protobuf@google@@
+.?AVMessageFactory@protobuf@google@@
 .?AVMessageLite@protobuf@google@@
+.?AVMessageOptions@protobuf@google@@
+.?AVMethodDescriptorProto@protobuf@google@@
+.?AVMethodOptions@protobuf@google@@
+.?AVNoResponse@@
+.?AVOneofDescriptorProto@protobuf@google@@
 .?AVOurCharReader@Json@@
+.?AVParserErrorCollector@ParserImpl@Parser@TextFormat@protobuf@google@@
+.?AVReflection@protobuf@google@@
 .?AVRuntimeError@Json@@
+.?AVServiceDescriptorProto@protobuf@google@@
+.?AVServiceOptions@protobuf@google@@
+.?AVSourceCodeInfo@protobuf@google@@
+.?AVSourceCodeInfo_Location@protobuf@google@@
 .?AVStreamWriter@Json@@
 .?AVStreamWriterBuilder@Json@@
 .?AVStringOutputStream@io@protobuf@google@@
 .?AVStyledWriter@Json@@
 .?AVTypeInfo@Reflection@@
+.?AVUninterpretedOption@protobuf@google@@
+.?AVUninterpretedOption_NamePart@protobuf@google@@
+.?AVUnknownFieldSetFieldSkipper@internal@protobuf@google@@
 .?AVWin32Event@IPC@@
 .?AVWin32Mutex@IPC@@
 .?AVWin32SharedMemory@IPC@@
 .?AVWriter@Json@@
+.?AVZeroCopyInputStream@io@protobuf@google@@
 .?AVZeroCopyOutputStream@io@protobuf@google@@
 .?AV_Facet_base@std@@
 .?AV_Generic_error_category@std@@
@@ -1587,13 +1710,16 @@ $tI(knN
 .P6A_NPEA_KPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV01@PEAX@Z
 .P6A_NPEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0PEBUImage@tinygltf@@_NPEBUFsCallbacks@3@PEBUURICallbacks@3@PEAV01@PEAX@Z
 .PEAVException@Json@@
+.PLACEHOLDER_VALUE
 .backup
 .bss
 .data
 .data$r
 .dds
 .dll
+.dummy
 .edata
+.foo = value".
 .idata$2
 .idata$3
 .idata$4
@@ -1603,6 +1729,7 @@ $tI(knN
 .json
 .obj
 .pdata
+.placeholder.proto
 .previous.txt
 .rdata
 .rdata$T
@@ -1658,7 +1785,6 @@ $tI(knN
 /chaperone/perimeter
 /chaperone/persistent_map_from_map/transform
 /chaperone/play_area
-/chaperone/room_setup/transform
 /chaperone/room_setup_done
 /chaperone/seated/transform
 /chaperone/setup_standing/transform
@@ -1752,6 +1878,9 @@ $tI(knN
 /legacy_debugger_pid
 /mailbox/
 /menu/click
+/openxr/driver_provided_stationary_reference_space/enabled
+/openxr/driver_provided_stationary_reference_space/origin_from_raw
+/openxr/driver_provided_stationary_reference_space/uuid
 /out/
 /output/haptic
 /perfmetrics_meta/app/gpu_frametime
@@ -2039,7 +2168,12 @@ $tI(knN
 /vrgamepadui/steamvr/vrlink_lasermouseoverlay_remote
 /vrgamepadui/steamvr/vrlink_lasermouseoverlay_tx
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
+/vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_client_refresh_rate_tx
+/vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_scene_app_showing
+/vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
 /x/click
 /x/touch
@@ -2048,7 +2182,9 @@ $tI(knN
 0 width
 0-pixel image
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899"
 0123456789ABCDEF
+0123456789abcdef
 0\tFAJ
 1.0.3.16
 1/2/4/8/16-bit only
@@ -2063,6 +2199,9 @@ $tI(knN
 8d8f13b1-60eb-4b6a-a433-de86104115ac
 8e8f13b1-60eb-4b6a-a433-de86104115ac
 : LUID=
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+: Tried to copy from a message with a different type. to: 
+: Tried to merge from a message with a different type.  to: 
 : exception thrown in JSON library
 : one or more FS callback not set
 ::GetSystemBaseTicks() == m_pRequirementsClient->GetCompositorBaseTicks()
@@ -2183,6 +2322,7 @@ $tI(knN
 ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
 @fff>fff>fff>fff>
+A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A valid JSON document must be either an array or an object value.
 A wireless HMD driver is present, but the wireless HMD has not connected and Steam is not running (216)
@@ -2216,12 +2356,23 @@ Activation threshold of %f in filter %s is outside the allowable range [ %f , %f
 Active pri %u, device=%s
 Adapter pointer is null
 AddAccessAllowedAce
+AddBool
+AddDouble
+AddEnum
+AddFloat
+AddInt32
+AddInt64
+AddMessage
 AddResourceBarrier: Failed to close command list with %i when setting barrier transition
+AddString
 AddSystemBehaviorFlag %s\n
+AddUInt32
+AddUInt64
 Adobe
 Alert
 Alias
 AllowSetForegroundWindow
+Already saw decimal point or exponent; can't have another one.
 Also failed (err=0x%X) to create with mipmaps disabled. Giving up.\n
 And filters need at least one input in filter %s\n
 AnimationChannel
@@ -2287,13 +2438,16 @@ BlankEyeBuffer
 BlankTexture
 BlockQueueHeaderMutex_
 BlockQueueHeader_
+Boolean default must be true or false.
 Bootstrapper init
 Buffer
 BufferView
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 CAnimResource
 CBoneMaskResource
 CD3D11VRRenderer::CreateGPUSemaphore - Failed to allocate  semaphore handle\n
 CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to allocate  semaphore handle.\n
+CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to duplicate shared semaphore from pid %u (error %u)
 CD3D11VRRenderer::ImportGPUSemaphoreFromSharedHandle - Failed to import GPU  shared semaphore.\n
 CD3D11VRRenderer::Initialize(): Failed to create compute shader %s!\n
 CD3D11VRRenderer::Initialize(): Failed to create input layout for vertex shader %s!\n
@@ -2309,18 +2463,64 @@ CFrameData::BWaitForStateReached
 CGpuTiming::EndFrame
 CGpuTiming::GetDeltas
 CHECK failed: !coded_out.HadError(): 
+CHECK failed: !out.HadError(): 
 CHECK failed: (&from) != (this): 
+CHECK failed: (&from) != (to): 
 CHECK failed: (&other) != (this): 
 CHECK failed: (buffer_size) >= (0): 
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
 CHECK failed: (count) <= (last_returned_size_): 
 CHECK failed: (count) <= (target_->size()): 
 CHECK failed: (count) >= (0): 
+CHECK failed: (field->message_type()) == (desc): 
+CHECK failed: (field->options().ctype()) == (ctype): 
+CHECK failed: (from.GetDescriptor()) == (descriptor): 
 CHECK failed: (last_returned_size_) > (0): 
+CHECK failed: (message1->GetReflection()) == (this): 
+CHECK failed: (message2->GetReflection()) == (this): 
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
+CHECK failed: (output->ByteCount()) == (expected_endpoint): 
+CHECK failed: (size) <= (6): 
+CHECK failed: (temp[0]) == ('1'): 
+CHECK failed: (temp[size-1]) == ('5'): 
+CHECK failed: (to->GetDescriptor()) == (descriptor): 
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
+CHECK failed: allow_unknown_field_: 
+CHECK failed: builder_: 
+CHECK failed: dynamic.get() != NULL: 
+CHECK failed: field != NULL: 
+CHECK failed: file != NULL: 
+CHECK failed: generated_database_->Add(encoded_file_descriptor, size): 
+CHECK failed: has_default_value(): 
+CHECK failed: is_prototype(): 
+CHECK failed: iter != extensions_.end(): 
+CHECK failed: options->ParseFromString(buf): 
+CHECK failed: options_descriptor: 
+CHECK failed: original_uninterpreted_options_field != NULL: 
+CHECK failed: output->message_prototype != NULL: 
+CHECK failed: prototype != NULL: 
+CHECK failed: result != NULL: 
+CHECK failed: trees: 
+CHECK failed: uninterpreted_options_field != NULL: 
 CHECK failed: value.size() <= kint32max: 
 CHmdSystemLatest::SubmitTextureSetInfo
 CKeyframedDataResource
 CLegacyInput::RunInputFrame
 COLOR
+CPPTYPE_BOOL
+CPPTYPE_DOUBLE
+CPPTYPE_ENUM
+CPPTYPE_FLOAT
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_MESSAGE
+CPPTYPE_STRING
+CPPTYPE_UINT32
+CPPTYPE_UINT64
 CPackedBoneTransforms
 CRenderModelManager::GetRenderModelAbsolutePath
 CRenderModelManager::LoadRenderModelInternal
@@ -2339,10 +2539,13 @@ CSharedResourceNamespaceClient::Init(): still waiting for vrserver to reply with
 CSharedResourceNamespaceClient::Init(): timed out contacting vrserver for a namespace\n
 CSharedResourceNamespaceClient::Init(): timed out waiting for server reply\n
 CSharedResourceNamespaceClient::InitIfNeeded
+CSteamVR_DashboardRequest
+CSteamVR_DashboardRequest.Relatch
+CSteamVR_DashboardRequest.Target
 CSxrAction
 CSxrActionSet
 CSxrCompositorOpenVR::ComposeLayerProjection
-CSxrCompositorOpenVR::ComposeLayerQuad
+CSxrCompositorOpenVR::ComposeLayerQuadOrCylinder
 CSxrCompositorOpenVR::CreateVulkanDevice: failed to create vulkan device\n
 CSxrCompositorOpenVR::CreateVulkanDevice: failed to query required vulkan extensions\n
 CSxrCompositorOpenVR::CreateVulkanInstance: failed to create vulkan instance\n
@@ -2596,6 +2799,7 @@ CVRMsg_StartDashboardResponse
 CVRMsg_StartHomeAppResponse
 CVRMsg_StartVRCompositor
 CVRMsg_StartVRCompositorResponse
+CVRMsg_SystemSuspendImminent
 CVRMsg_TrackedCamera_AcquireVideoStreamingService
 CVRMsg_TrackedCamera_AcquireVideoStreamingServiceResponse
 CVRMsg_TrackedCamera_Enable
@@ -2693,6 +2897,7 @@ CVulkanVRRenderer: CreateTexture called with a depth stencil flag for Vulkan for
 CVulkanVRRenderer::BeginCommandBuffer
 CVulkanVRRenderer::CopyConstantBufferRegion - copy offset (%d) + size (%d) exceeds dest size (%d)!\n
 CVulkanVRRenderer::CopyConstantBufferRegion - copy offset (%d) + size (%d) exceeds source size (%d)!\n
+CVulkanVRRenderer::CopyIntoTexture
 CVulkanVRRenderer::CreateAliasView
 CVulkanVRRenderer::CreateConstantBuffer - Failed to allocate shared buffer\n
 CVulkanVRRenderer::CreateConstantBuffer - failed to allocate shared resource\n
@@ -2707,6 +2912,7 @@ CVulkanVRRenderer::CreateTexture - Unable to allocate memory\n
 CVulkanVRRenderer::CreateTexture - Unable to bind memory\n
 CVulkanVRRenderer::CreateTexture - Unable to create VkImage\n
 CVulkanVRRenderer::CreateTexture - Unable to create image view\n
+CVulkanVRRenderer::CreateTexture - Unable to create mips image view
 CVulkanVRRenderer::CreateTexture - Unable to prepare image for export\n
 CVulkanVRRenderer::EndCommandBuffer
 CVulkanVRRenderer::GetTextureStencilLayer
@@ -2721,11 +2927,14 @@ CVulkanVRRenderer::SetImageLayout - unsupported new image layout: %d\n
 CVulkanVRRenderer::SetImageLayout - unsupported old image layout: %d\n
 CVulkanVRRenderer::UnampTexture: dangling data pointer\n
 CVulkanVRRenderer::UnmapTexture - bad parameter\n
+CVulkanVRRenderer::UpdateTexture
 Calibrating_InProgress
 Calibrating_OutOfRange
 Call from application to set %s.%s. Scene applications are not allowed to set most settings\n
 Camera
 Can't 
+Can't get here.
+Can't get here: failed to get default value as string
 Canceling filter %s\n
 Cannot allocate buffer larger than kint32max for 
 Cannot compress texture due to non-multiple of four dimensions! %s (%dx%d)\n
@@ -2736,6 +2945,7 @@ Changing app type from %s to %s
 Chaperone Universe was missing ID\n
 Checking input type %s::%s for path (%s)\n
 Chord for %s had %d bindings, which we don't know how to deal with yet\n
+ClearField
 ClearSkyboxOverride\n
 Client
 Client (%s) app container state: %d
@@ -2796,13 +3006,17 @@ Controller (%s) not available for input to chord, ignoring chord\n
 ConvertStringSidToSidA
 CopySid
 Could not create DXGI Factory 1.1
+Could not create an instance of 
 Could not create interface in driver %s from %s.\n
 Could not find factor function in driver %s from %s.\n
+Could not find field named "
+Could not find field type.
 Could not find named path %s when loading %s\n
 Could not read x for vec2\n
 Could not retrieve path from handle.
 Could not translate path %s. Trying the raw path\n
 Couldn't find action %s. Ignoring it.\n
+Couldn't parse default value "
 CreateDXGIFactory1
 CreateDirectoryW
 CreateEventA
@@ -2817,8 +3031,8 @@ CreateThread
 CreateVulkanImageFromD3D11TextureHandle: failed to find a LOCAL memory type\n
 CreateWellKnownSid
 CreateXrBinding: unsupported graphics binding type: %d\n
-Created depth texture '%s' %dx%d (Format=%d, SampleCount=%d)\n
-Created shared texture '%s' %dx%d (%d mips)\n
+Created depth texture '%s' %dx%d (Format=%d, SampleCount=%d)
+Created shared texture '%s' %dx%d (%d mips)
 D3D11CreateDevice
 D3D11On12CreateDevice
 D3D11On12CreateDevice failed\n
@@ -2841,11 +3055,13 @@ Deactivation threshold of %f will be set to the minimum allowed value %f in filt
 Debug utils: disabled, missing entrypoints
 Debug utils: enabled
 DebugMessengerCallback
+Default value for an enum field must be an identifier.
 DeleteCriticalSection
 DeleteFileW
 Deliberately hanging inside VR_Init because the caller asked us to
 Depth and color textures sets out of sync.
 Desktop Game Theater
+Destroying an overlay fence before its last copy signaled it
 Detail
 Determined this is a legacy app.
 Determined this is a steamvr_input app.
@@ -2916,33 +3132,29 @@ EXCESSIVE ERRORS FOR eraseProperty (%d). NO LONGER LOGGING ERRORS FOR THIS.
 Empty escape sequence in string
 Empty file.
 EnableFrameEndMarkers
-Enabling LiquidVR fallback path due to missing extension: %s
 Encountered error 
 Encountered unexpected delayed initialization of CPropertyManager\n
+End-of-file inside block comment.
 EndFrame called w/ incorrect client frame index.
 EnterCriticalSection
+Enum type "
+Enums must contain at least one value.
 Error
 Error calling pDownsampleRenderer->Draw()!\n
 Error creating VR renderer.\n
-Error creating depth texture '%s' %dx%d (Format=%d, SampleCount=%d)\n
-Error creating shared texture '%s' %dx%d (%d mips)\n
+Error creating depth texture '%s' %dx%d (Format=%d, SampleCount=%d)
+Error creating shared texture '%s' %dx%d (%d mips)
 Error erasing properties for device (%d): %s
 Error initializing CDownsampleRenderer\n
 Error initializing CMsaaResolveRenderer\n
+Error parsing text-format 
 Error vkEnumerateInstanceLayerProperties in %d\n
+Error while parsing option value for "
 Error! Cannot allocate %d bytes for full mip chain for %s\n
 Error! EventWriteString Severe: %s\n
 Error! Failed to create shader resource view for %s result %08x\n
 Error! Failed to load %s\n
 Error! Unable to load image %s: %s\n
-Error: LiquidVR CreateALVRDeviceExD3D11 failed (%d)\n
-Error: LiquidVR CreateALVRDeviceExVulkan failed (%d)\n
-Error: LiquidVR CreateALVRExtensionVulkan failed (%d)\n
-Error: LiquidVR CreateGpuSemaphore failed (%d)\n
-Error: LiquidVR OpenSharedImage failed (%d)\n
-Error: LiquidVR Vulkan OpenLVRSemaphore failed (%d)\n
-Error: LiquidVR Vulkan QueueSeamaphoreSignal failed (%d)\n
-Error: LiquidVR Vulkan QueueSeamaphoreWait failed (%d)\n
 Error: Multiple dpad modifications received for component [%s]
 Error: Provided dpad for (%s) is not valid for this interaction profile (%s)
 Error: Provided value %f for %s must be between %f and %f
@@ -2956,8 +3168,30 @@ EventWriteTransfer
 Exceeded stackLimit in readValue().
 Exception %08x\n
 Executable: %s\n
+Expect a decimal number.
+Expected "
 Expected color textures to have already been set above.
+Expected double.
+Expected eight hex digits up to 10ffff for \U escape sequence
+Expected four hex digits for \u escape sequence.
+Expected hex digits for escape sequence.
+Expected identifier.
+Expected integer or identifier.
+Expected integer.
 Expected response %s, received %s. Rejecting response.\n
+Expected string.
+Extension "
+Extension conflicts with extension already in database: extend 
+Extension factory's GetPrototype() returned NULL for extension: 
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Extension number $0 has already been used in "$1" by extension "$2".
+Extension numbers cannot be greater than $0.
+Extension numbers must be positive integers.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Extension range end number must be greater than start number.
+Extensions of MessageSets must be optional messages.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra non-whitespace after JSON value.
 FACET_VULKAN_VALIDATION
 FALSE
@@ -2993,7 +3227,6 @@ Failed to close command list when setting barrier transition\n
 Failed to connect to pipe %s because %s... retrying
 Failed to connect to pipe %s because %s\n
 Failed to convert event of type %s\n
-Failed to create AMD LiquidVR D3D11/Vulkan semaphore.\n
 Failed to create D3D11 device to share with OpenGL!\n
 Failed to create D3D12 blank texture\n
 Failed to create D3D12 swapchain image: Unsupported number of faces: %d\n
@@ -3002,7 +3235,6 @@ Failed to create DSV for texture lod=%d
 Failed to create DSV for texture lod=%d layer=%d
 Failed to create DXGIFactory1!\n
 Failed to create DepthStencilView for texture %s\n
-Failed to create LiquidVR GPU Semaphore.\n
 Failed to create RTV for texture lod=%d
 Failed to create RTV for texture lod=%d layer=%d
 Failed to create RTV for texture\n
@@ -3011,7 +3243,6 @@ Failed to create SRV for texture lod=%d layer=%d
 Failed to create SRV for texture\n
 Failed to create Vulkan depth image from D3D11 resource.  Depth image will not be updated.\n
 Failed to create Vulkan image from D3D11 resource.\n
-Failed to create Vulkan image with LiquidVR.\n
 Failed to create Vulkan motion image from D3D11 resource.  Motion image will not be updated.\n
 Failed to create compute shader module %s!\n
 Failed to create d3d11 swapchain image: Unsupported number of faces: %d\n
@@ -3033,6 +3264,7 @@ Failed to create pixel shader module %s!\n
 Failed to create prism swapchain: Unsupported number of faces: %d\n
 Failed to create readable frame info buffer (D3D10)!\n
 Failed to create readable frame info buffer (D3D11)!\n
+Failed to create shared texture '%s' %dx%d (Format=%d) with %d mips (0x%08x), retrying without mips
 Failed to create swapchain image: Foveation not supported
 Failed to create swapchain image: Unsupported format: %d\n
 Failed to create sync texture.  Ensure application was built using DXGI 1.1 or later (i.e. Call CreateDXGIFactory1).\n
@@ -3073,7 +3305,6 @@ Failed to init vrsteamprivate mailbox
 Failed to init vulkan binding: failed to get queue\n
 Failed to init vulkan binding: renderer init error\n
 Failed to init web server shared state\n
-Failed to initialize AMD LiquidVR Vulkan support.\n
 Failed to initialize logging\n
 Failed to load compute shader %s! (size=%d)\n
 Failed to load extension: GetBufferMemoryRequirements2KHR\n
@@ -3143,19 +3374,42 @@ Failed to write event process handle after connecting because %s\n
 Failed waiting for gpu to be finished for fence %ls. \n
 Failed when calling CheckFeatureSupport for %d
 Fallback_RotationOnly
+False
 Fatal
 Fatal : VkResult is "
+Field "
+Field does not match message type.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
+Field number $0 has already been used in "$1" by field "$2".
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+Field numbers cannot be greater than $0.
+Field numbers must be positive integers.
+Field with message or enum type missing type_name.
+Field with primitive type has type_name.
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldSize
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File Not Found (103)
+File already exists in database: 
+File appears to be in generated pool but wasn't registered: 
+File is already registered: 
 File is empty : 
 File not found : 
 File open error : 
 File open error for writing : 
 File read error : 
 File read error. Maybe empty file or invalid file : 
+File recursively imports itself: 
 File size 
 File size mismatch : 
 File was empty
 File write error: 
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
 Filter list was too gnarly. Not sorting the last %d filters\n
 FilterInputSourceName: Default flip: from %s to %s\n
 FilterInputSourceName: Explicit flip: from %s to %s\n
@@ -3166,6 +3420,8 @@ FindFirstFileW
 FindNextFileW
 Firmware Recovery In Progress (139)
 Firmware Update In Progress (138)
+First argument to Swap() (of type "
+First argument to SwapFields() (of type "
 FnTable:
 FnTable:%s
 FnTable:IVRApplications_004
@@ -3271,6 +3527,7 @@ GPUSemaphore::Wait(%llu)
 GPUSemaphore::Wait(%llu) FAILED!!
 GRGB
 Generated action manifest: %s\n
+GetBool
 GetCommandLineW
 GetCurrentProcess
 GetCurrentProcessId
@@ -3282,6 +3539,8 @@ GetDeviceExtensionProperties - failed to enumerate extensions\n
 GetDeviceExtensionProperties - failed to get extension count\n
 GetDeviceExtensionProperties - no instance extensions supported\n
 GetDeviceRemovedReason: 0x%X
+GetDouble
+GetEnum
 GetEnvironmentVariableA
 GetEnvironmentVariableAsBool(%s): Unable to parse value '%s', using default %d\n
 GetExitCodeProcess
@@ -3292,6 +3551,7 @@ GetFileInformationByHandleEx
 GetFileSizeEx
 GetFileVersionInfoSizeW
 GetFileVersionInfoW
+GetFloat
 GetFullPathNameW
 GetHiddenAreaMeshData: failed to invert projectin matrix\n
 GetHiddenAreaMeshData: no hidden area mesh data available\n
@@ -3299,8 +3559,11 @@ GetInputValue failed\n
 GetInstanceExtensionProperties - failed to enumerate extensions\n
 GetInstanceExtensionProperties - failed to get extension count\n
 GetInstanceExtensionProperties - no instance extensions supported\n
+GetInt32
+GetInt64
 GetLastError
 GetLengthSid
+GetMessage
 GetModuleFileNameA
 GetModuleFileNameW
 GetModuleHandleExA
@@ -3311,12 +3574,27 @@ GetProcAddress( "D3D11On12CreateDevice" ) failed.\n
 GetProcessHeap
 GetProcessId
 GetReferenceSpaceFromRaw: Failed to fetch transform for specified reference space type %u
+GetRepeatedBool
+GetRepeatedDouble
+GetRepeatedEnum
+GetRepeatedFloat
+GetRepeatedInt32
+GetRepeatedInt64
+GetRepeatedMessage
+GetRepeatedString
+GetRepeatedStringReference
+GetRepeatedUInt32
+GetRepeatedUInt64
+GetString
+GetStringReference
 GetSystemDirectoryW
 GetSystemTime
 GetSystemTimeAsFileTime
 GetTickCount64
 GetTokenInformation
 GetTokenInformation failed. GetLastError returned: %d\n
+GetUInt32
+GetUInt64
 GetVRTextureFromSharedTexuture: unsupported target texture type %d\n
 GetVulkanDeviceData( &textureData )
 GetVulkanDeviceExtensionsRequired - failed to initialize Vulkan.\n
@@ -3354,8 +3632,10 @@ HMD found, but unable to init ZLib (1106)
 HMD found, but unable to request config (1102)
 Haptic
 Haptic vibration had the wrong type tag: %u\n
+HasField
 HeapAlloc
 HeapFree
+Hex and octal numbers must be integers.
 Hi Joe(D). Your text goes here
 Hmd DriverId is invalid (125)
 Hmd DriverId is our of bounds (211)
@@ -3382,6 +3662,7 @@ IHmd_006
 ILiquidVR_001
 INCOMPLETE
 INFO
+INVALID_CPPTYPE
 IPC failure changing app type
 IPC failure when Steam asked to kill %u. Returning true
 IPC::CIPCHandle::InitForExport
@@ -3611,6 +3892,7 @@ IVRSteamPrivate_028
 IVRSteamPrivate_029
 IVRSteamPrivate_030
 IVRSteamPrivate_031
+IVRSteamPrivate_032
 IVRSystem::GetOutputDevice: Failed to get required Vulkan device function pointer (vkGetPhysicalDeviceProperties2KHR)!\n
 IVRSystem::GetOutputDevice: VkInstance_T *pInstance parameter is nullptr.  VkInstance must be specified for TextureType_Vulkan!\n
 IVRSystem::GetOutputDevice: failed to find VkPhysicalDevice matching adapter UUID\n
@@ -3668,9 +3950,11 @@ Image height mismatch. for image[
 Image width mismatch for image[
 ImageView%d[%d]
 ImageViewLOD%d
+Import "
 Incorrect action type for input binding, input type %s, input mode %s, action type %d on path %s\n
 Incorrect input type for input binding, input type %s on path %s\n
 Incorrect input type for input binding, input type %s, path %s\n
+Index out-of-bounds (field is empty).
 Infinity
 Info
 Init Success!\n
@@ -3698,8 +3982,10 @@ Installation Not Found (100)
 Installation path could not be located (110)
 Insufficient Chunk1(BIN) data size.
 Insufficient storage space for Chunk1(BIN data). At least Chunk1 Must have 8 or more bytes, but got 
+Integer out of range.
 Interface Not Found (105)
 Internal Retry (115)
+Interpreting non ascii codepoint %d.
 Invalid
 Invalid Application Type (130)
 Invalid Arguments
@@ -3716,9 +4002,13 @@ Invalid binary data in `Buffer', or GLB with empty BIN chunk.\n
 Invalid camera type: "
 Invalid chunkType for Chunk1.
 Invalid command buffer in CVRCompositorSharedTextures::EndCommandBuffer\n
+Invalid control characters encountered in text.
 Invalid dead zone %f\n
 Invalid direction in  '
+Invalid escape sequence in string literal.
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid file size : 
+Invalid float number: 
 Invalid glTF binary.
 Invalid glTF binary. GLB data exceeds 4GB.
 Invalid image data for image[
@@ -3727,10 +4017,21 @@ Invalid magic.
 Invalid max zone %f. Ignoring it.\n
 Invalid output hand 
 Invalid overlay index for handle %llx\n
+Invalid proto descriptor for file "
+Invalid public dependency index.
 Invalid response to connect message. Connect failed\n
+Invalid strings::Substitute() format string: "
+Invalid symbol name: 
 Invalid target queue mode during image transition: %d\n
 Invalid texture bounds( %f, %f, %f, %f ) from application\n
 Invalid type in  '
+Invalid value for boolean field "
+Invalid weak dependency index.
+Invalid wire type for CPPTYPE_INT32: 
+Invalid wire type for CPPTYPE_INT64: 
+Invalid wire type for CPPTYPE_MESSAGE: 
+Invalid wire type for CPPTYPE_UINT32: 
+Invalid wire type for CPPTYPE_UINT64: 
 IsDebuggerPresent
 IsDepthFormat( eVkFormat )
 IsDepthFormat( nTextureFormat )
@@ -3777,7 +4078,6 @@ Left_
 Legacy Overlay
 Line %d, Column %d
 LiquidVR did not return a factory function\n
-LiquidVR v1.0.8.0+ required for Vulkan supported on AMD.\n
 LoadDriver called when there is no user config directory set\n
 LoadLibraryA
 LoadLibraryExW
@@ -3812,7 +4112,14 @@ MSVCP140.dll
 MainThrd
 MapViewOfFile
 Material has extension MSFT_lod, but does not reference other materials via their ids.\n
+Message class "
+Message extensions cannot have required fields.
+Message missing required fields: 
+Message type "
 MessageBoxA
+MessageSets cannot have fields, only extensions.
+Messages can't have default values!
+Messages can't have default values.
 Microsoft/Windows/OpenVR/controller
 Minidump comment truncated
 Missing ',' or ']' in array declaration
@@ -3824,15 +4131,22 @@ Missing 'name' member on action
 Missing '}' or object member name
 Missing Skeleton for action '
 Missing expected "statusicons" from system resource manifest %s.\n
+Missing field: FileDescriptorProto.name.
 Missing haptic name in output of haptic filter %s\n
+Missing name.
 Missing support for vkGetPhysicalDeviceImageFormatProperties2
 MoveFileExW
 MultiByteToWideChar
+Multiple extension registrations for type "
+MutableRawRepeatedField
+MutableRepeatedMessage
 NONE
 NORMAL
 NOT_READY
 NULL
 NVAPI_SKIP_UNLOAD
+Need space between identifier and decimal point.
+Need space between number and identifier.
 Neither required `bufferView` nor `uri` defined for image[
 NextScanout: %dus NextScanoutIllumination: %dus ScanoutInterval: %dus
 No Error (0)
@@ -3840,7 +4154,11 @@ No LoadImageData callback specified.\n
 No VRSettings(), allowing Steam overlays by default.
 No active action set
 No command buffer open in EndCommandBuffer!\n
+No default value
 No drivers were capable of being watchdogs. Failing init.\n
+No field named "uninterpreted_option" in the Options proto.
+No open command buffer for copying a texture
+No open command buffer for layout transition
 No open command buffer for layout transition\n
 No open command buffer for updating a buffer!\n
 No open command buffer for updating a texture!\n
@@ -3848,6 +4166,8 @@ No open command buffer in CVRCompositorSharedTextures::EndCommandBuffer\n
 Node has extension KHR_audio, but does not reference a audio emitter.\n
 Node has extension KHR_lights_punctual, but does not reference a light source.\n
 Node has extension MSFT_lod, but does not reference other nodes via their ids.\n
+Non-primitive types can't be packed.
+Non-repeated field "
 None
 NormalTextureInfo
 Not Initialized (109)
@@ -3862,6 +4182,8 @@ Not writing boolean value because it couldn't be read\n
 Not writing boolean value because it didn't change\n
 Not writing scalar value because it couldn't be read\n
 Not writing scalar value because it didn't change\n
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+Numbers starting with leading zero must be in octal.
 NvAPI: EnumerateDirectModeDisplays reported more than 1024 entries for mode: %d!\n
 NvAPI: Skipping NvAPI_Unload
 OPAQUE
@@ -3869,6 +4191,7 @@ OPENGL32.dll
 Object
 OculusSDKStart
 On laptop, HMD detected over USB, but Monitor not found (213)
+Oneof must have at least one field.
 Only one of `bufferView` or `uri` should be defined, but both are defined for image[
 OpenEventA
 OpenFileMappingA
@@ -3883,6 +4206,10 @@ OpenXR::AddLegalInteractionProfile: g_pActiveInstance was unexpectedly null
 Opened keyboard for app.\n
 Opened keyboard for overlay %llX, forwarded from overlay %llX\n
 Opened keyboard for overlay %llX\n
+Option "
+Option field "
+Option must have a name.
+Option must not use reserved name "uninterpreted_option".
 Optional vulkan device extension is unavailable: %s\n
 Optional vulkan instance extension is unavailable: %s\n
 Or filters need at least one input in filter %s\n
@@ -3894,6 +4221,7 @@ OutputDebugStringW
 PATH_TO_LOCAL_STRING failed with %s
 PC_%08llx
 PICT
+PLACEHOLDER_VALUE
 PNG\r\n
 POSITION
 PS_AURORA
@@ -4149,6 +4477,9 @@ Prop_WillDriftInYaw_Bool
 Property container - found and recovered a locked container at generation %x\n
 PropertyContainer: High lock acquisition counters: sp:%u yd:%u re:%u\n
 PropertyContainerCreation
+Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Protocol message serialized itself in invalid fashion.
+Protocol message was modified concurrently during serialization.
 Purging all shared textures because the connection to vrserver was lost\n
 Quad
 QueryPerformanceCounter
@@ -4166,6 +4497,7 @@ RadialMenu missing Y axis input.\n
 RadialMenu setting 'num_buttons' not specified.\n
 RadialMenus can have a maximum of %d buttons, %d requested.\n
 RaiseException
+Reached an unintended state: CPPTYPE_MESSAGE
 ReadBooleanValue of %s path\n
 ReadBooleanValue returned %s, time=%llu, origin=%s\n
 ReadFile
@@ -4200,10 +4532,13 @@ Rejecting ShowKeyboard call from app because the dashboard is visible\n
 Rejecting attempt to ForceQuitProcess with 0\n
 Rejecting watchdog mode because vrmonitor is already running\n
 Rejecting watchdog mode because vrserver is already running\n
+ReleaseLast
+ReleaseMessage
 ReleaseMutex
 Releasing OS object failed: invalid parameter\n
 Releasing ref on rendermodel %s. New ref count %d\n
 Releasing ref on texture %s (id %zu). New ref count %d\n
+RemoveLast
 RemoveSystemBehaviorFlag %s\n
 Render model %s has %d vertices. Only 65k are supported\n
 Render model %s has %zd texture coordinates, expected %d\n
@@ -4225,6 +4560,7 @@ RendermodelManager: Unable to parse %s: %s\n
 RendermodelManager: name=%s inputRouting=%d filename=%s\n
 RendermodelManager: unsupported motion type: %s. { allowed: none, rotate, translate, trackpad }\n
 Reopening keyboard follow overlay focus: "%s"\n
+Repeated fields can't have default values.
 ReplaceFileW
 ReprojectVertices: Failed to invert projectin matrix\n
 Request for bool value from non-bool option %s\n
@@ -4288,29 +4624,50 @@ Screenshot: Screenshot submitted: handle=%u, type=%d, filename="%s" vrfilename="
 Screenshot: TakeStereoScreenshot requested, filename="%s" vrfilename="%s"\n
 Screenshot: UpdateScreenshotProgress progress=%4.2f\n
 Searching for LUID: 
+Second argument to Swap() (of type "
+Second argument to SwapFields() (of type "
 See 
 Sent message id %u, received %u (%s). Rejecting response.\n
 Server
 Server could not create read event %s\n
 Server somehow created read event before reader %s\n
 ServerEventSignal
+SetAllocatedMessage
+SetBool
+SetDouble
+SetEnum
 SetEnvironmentVariableA
 SetEvent
 SetFileAttributesW
 SetFilePointerEx
+SetFloat
 SetHandLocationsInactive: locations was nullptr
+SetInt32
+SetInt64
 SetLastError
 SetNamedPipeHandleState
 SetOverlayRaw can't take dimensions over %u, but was passed %u x %u. Really it shouldn't be called with anything over a hundred or two pixels in each direction.\n
 SetOverlayRaw failed to create a memory block for %u x %u texture\n
 SetOverlayRawBlock_
+SetRepeatedBool
+SetRepeatedDouble
+SetRepeatedEnum
+SetRepeatedFloat
+SetRepeatedInt32
+SetRepeatedInt64
+SetRepeatedString
+SetRepeatedUInt32
+SetRepeatedUInt64
 SetSceneAppDetails
 SetSecurityDescriptorDacl
 SetSkyboxOverride with %d textures\n
 SetStageOverride_Async: pid %u set the stage to '%s', displacing '%s' owned by pid %u\n
 SetStageOverride_Async: pid %u set the stage to '%s'\n
 SetStageOverride_Async: scene app %u owns the stage, refusing '%s'.\n
+SetString
 SetThreadPriority
+SetUInt32
+SetUInt64
 SetUnhandledExceptionFilter
 Setting max texture dimensions to %dx%d before requiring downsampling (%s)\n
 Settings manager init failed (118)
@@ -4382,6 +4739,7 @@ SteamVR@
 SteamVR_Namespace
 SteamXR Interop Device
 StencilImageView%d[%d]
+String literals cannot cross line boundaries.
 StringOutputStream.
 Submit
 SubmitExplicitTimingData - Explicit timing mode not enabled, must be enabled to submit explicit timing data.\n
@@ -4390,9 +4748,11 @@ Successfully changed app type
 Successfully reconnected to server\n
 Suggested binding for [%s] [%s]:\n%s\n
 Suggested bindings for %s:\n
+Swap
 SwapChainImage
 SwapChainImageView
 Swapchain%d
+Symbol name "
 Syntax error: value, object or array expected.
 System
 SystemBehaviorFlag_DashboardTutorial
@@ -4434,6 +4794,7 @@ This is not a D3D11 object
 This is not a Vulkan object
 This program requires version 
 This program was compiled against version 
+This shouldn't be called if all the sizes are equal.
 Thread exited immediately\n
 Thread failed to initialize 1\n
 Thread failed to initialize 2\n
@@ -4481,8 +4842,13 @@ TrackedProp_WrongDataType
 TrackedProp_WrongDeviceClass
 Transitioning XrSession from %s to %s\n
 Translating path: %s\t%s
+Tried to merge messages of different types 
+True
 Turning on pipe debugging at the server's request\n
 Tutorial
+Type appears to be in generated pool but wasn't 
+Type is already registered: 
+U:\p4clients\thirdpartycode\nonredist\protobuf\protobuf-2.6.1\src\google/protobuf/repeated_field.h
 UNKNOWN_ERROR
 UNNAMED
 USB Service Busy (140)
@@ -4504,6 +4870,7 @@ Unable to convert param value %s\n
 Unable to create %s\n
 Unable to create click handler for complex button %s, %s\n
 Unable to create event %s to go with pipe %s in WaitForConnection\n
+Unable to create external image with %u mip levels (max %u)
 Unable to create external image, VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT not supported for image.\n
 Unable to create internal OpenGL context: %d
 Unable to create legacy overlay because of %s\n
@@ -4587,10 +4954,13 @@ Unable to write %u bytes to offset %u in %s\n
 Unable to write action data\n
 Unable to write path registry (113)
 Unbound input (%s,%s) for chord, ignoring chord.
+Unexpected end of string.
 Unexpected error while trying to change the OpenXR application type: [%s]
 Unexpected failure when checking for timeline signal
+Unexpected failure while serializing option submessage 
 Unhandled sampler filter type %d!
 UnhandledExceptionFilter
+Unimplemented type: 
 Uninitialized
 Unknown
 Unknown EVRApplicationTransitionState
@@ -4607,6 +4977,7 @@ Unknown VRApplicationsError (%d)
 Unknown VRSettingsError (%d)
 Unknown VRTrackedCameraError (%d)
 Unknown compositor error (%d)
+Unknown enumeration value of "
 Unknown error (%d)
 Unknown exception
 Unknown fenced resource type: %d\n
@@ -5300,6 +5671,20 @@ VS_MOTION
 VS_PANORAMA
 VS_QUAD
 VS_STENCIL
+Value 
+Value must be "true" or "false" for boolean option "
+Value must be identifier for boolean option "
+Value must be identifier for enum-valued option "
+Value must be integer for int32 option "
+Value must be integer for int64 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for double option "
+Value must be number for float option "
+Value must be quoted string for string option "
+Value out of range for int32 option "
+Value out of range for int64 option "
+Value out of range for uint32 option "
 VerQueryValueA
 VerSetConditionMask
 VerifyVersionInfoW
@@ -5307,7 +5692,9 @@ VirtualDisplay_AllQueued
 VirtualDisplay_NewFrame
 VirtualDisplay_Presented
 VirtualQuery
+Vulkan interop requires missing extension: %s
 Vulkan missing requested extension '%s'.\n
+Vulkan overlay textures are unsynchronized: the app's device can't import a D3D11 fence
 Vulkan transfer ring buffer overflow; transfer size %u!\n
 VulkanVRRenderer::ImportConstantBufferFromSharedHandle - Failed to allocate constant buffer handle.\n
 VulkanVRRenderer::ImportConstantBufferFromSharedHandle - Failed to allocate shared buffer.\n
@@ -5345,10 +5732,12 @@ WaitNamedPipe %s failed because no one is listening at that name.\n
 WaitNamedPipeA
 WakeAllConditionVariable
 Warning
+Warning parsing text-format 
 Warning: Analog threshold added to [%s -> %s]. This method is deprecated. Please use XR_TYPE_BINDING_MODIFICATIONS_KHR instead\n
 Warning: Dpad bindings can only be added to a single action set.
 Warning: Dpad modifications already set for this component [%s]. Successive modification parameters for this component will be ignored.
 Warning: Provided input path (%s) is not valid for this interaction profile (%s)
+Warning: Unused import: "
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning: unexpected vulkan major version
 Watchdog disabled in settings (132)
@@ -5552,6 +5941,7 @@ XR_EXT_user_presence
 XR_EXT_uuid
 XR_EXT_view_configuration_views_change
 XR_EXT_win32_appcontainer_compatible
+XR_FB_composition_layer_image_layout
 XR_FB_display_refresh_rate
 XR_FB_foveation
 XR_FB_foveation_configuration
@@ -5566,6 +5956,7 @@ XR_HTC_vive_wrist_tracker_interaction
 XR_KHR_D3D11_enable
 XR_KHR_D3D12_enable
 XR_KHR_binding_modification
+XR_KHR_composition_layer_cylinder
 XR_KHR_composition_layer_depth
 XR_KHR_generic_controller
 XR_KHR_locate_spaces
@@ -6404,6 +6795,9 @@ YUY2
 [Compositor Client] ReleaseSync FAILED with unknown hr 0x%08x [OMITTING additional logs for %d seconds]
 [Compositor Client] Repredicting render poses (%d) to match simulation (%d)\n
 [Compositor Client] SceneTextureIndex=%d Id=%d Target=%d Predicted=%d Flags=(%d|%d)
+[Compositor Client] Signal D3D11 Overlay Copy Failed: %llu(%llu.%d) hr=%X
+[Compositor Client] Signal D3D11 Overlay Copy: %llu(%llu.%d)
+[Compositor Client] Signal Vulkan Overlay Copy: %llu
 [Compositor Client] Submit (suspended)
 [Compositor Client] Submit End
 [Compositor Client] Submit Left
@@ -6675,7 +7069,9 @@ YUY2
 [VirtualDisplay] Present took to long!
 [Warning] Invalid Interaction Profile suggested: %s\n
 [json.exception.
+[lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
+[packed = true] can only be specified for repeated primitive fields.
 [vrchaperoneclient] Collision bounds vector is too large.
 [xrLocateSpace/xrLocateSpaces] Location must be valid
 [xrLocateSpaces] required parameter was nullptr
@@ -6714,11 +7110,21 @@ YUY2
 [xrRenderModel] parameter was nullptr
 [xrRenderModel] renderModelIdCountOutput was nullptr
 [xrRenderModel] session is not running
+\%03o
+\U%08x
 \mfpmp.exe
+\n    Actual    : 
+\n    Field type: 
+\n  Field       : 
+\n  Message type: 
+\n  Problem     : 
+\n  Problem     : Enum value did not match field type:\n    Expected  : 
+\n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \t%s::%llx.\n
 \u%04x
 \u%04x\u%04x
 \ufffd
+\x%02x
 ] buffer "
 ] bufferView "
 ] invalid bufferView
@@ -6802,6 +7208,8 @@ _stickyclick
 _storage%llu
 _stricmp
 _strnicmp
+_strtoi64
+_strtoui64
 _table%llu
 _time64
 _tutorial
@@ -6831,6 +7239,8 @@ _wstat64i32
 `textures' does not contain an JSON object.
 a value in the array could not be converted to a number
 abort
+accept_gamepad_focus_steaminput
+accept_gamepad_focus_vrinput
 accessor[
 accessors
 acos
@@ -6992,7 +7402,11 @@ button_toggle
 byteLength
 byteOffset
 byteStride
+bytes
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\steammessages_unified_base.steamclient.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vr_messages.pb.cc
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_base.pb.cc
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_dashboardrequest.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\actionbindingconfig.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\blockqueue.cpp
@@ -7008,8 +7422,8 @@ c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\d3d11renderer.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\ivrrenderer.h
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\vulkanrenderer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\vulkanrenderer.cpp:4473
-c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\vulkanrenderer.cpp:4557
+c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\vulkanrenderer.cpp:4679
+c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrrenderer\vulkanrenderer.cpp:4763
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrsystem.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrsystemlayersharedstate.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vulkan.cpp
@@ -7190,20 +7604,20 @@ c:\buildslave\steamvr_rel_win64\build\src\vrclient\skeletalinpututils.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrchaperoneclient.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrclientcore.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1569
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1825
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:2682
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:464
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1595
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1851
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:2711
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:468
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp:2969
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp:4301
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp:3053
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp:4364
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrdebug.cpp:49
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrdebug.cpp:60
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrinput.cpp:1609
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrmailboxclient.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1175
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1206
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:977
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1192
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1223
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:979
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrsteamprivate.cpp
 c:\fake_app_container_config_path
 camera
@@ -7236,6 +7650,7 @@ click
 click_activate_threshold
 click_deactivate_threshold
 click_initial_state
+click_stab
 client
 close_requested
 cntrl
@@ -7292,7 +7707,6 @@ da_dk
 danish
 dashboard
 dashboard_overlay_destroyed
-dashboard_relatch
 data
 data->IsInitialized()
 data->vecBlocks[ unBlockIndex ].unReferences > 0
@@ -7414,10 +7828,13 @@ enableHmdLatencyHidingDisplayOffset
 enableHomeApp
 enableLegacyGameTheater
 enableYAMLCompatibility
+enable_close
+enable_keyboard
 enabled
 end of input
 english
 entries
+enum
 environmentMode
 error
 error %s when initing driver %s from %s.\n
@@ -7429,8 +7846,8 @@ expected marker
 expecting another \u token to begin the second half of a unicode surrogate pair
 exponent
 exponent_%s
-ext3
 ext_eye_gaze_interaction
+extend .$0 {\n
 extensions
 extensionsRequired
 extensionsUsed
@@ -7529,8 +7946,11 @@ finnish
 firmwarerecovery
 firmwareupdate
 first not IHDR
+fixed32
+fixed64
 flWaitTime < 1.0
 flags
+float
 floorf
 fmodf
 focus_panel
@@ -7614,6 +8034,16 @@ glTexStorage3D
 global
 globalActionSetPriority
 globalPriorityMap
+google.protobuf.Empty
+google.protobuf.EnumOptions
+google.protobuf.EnumValueOptions
+google.protobuf.FieldOptions
+google.protobuf.FileOptions
+google.protobuf.MessageOptions
+google.protobuf.MethodOptions
+google.protobuf.ServiceOptions
+google.protobuf.StreamOptions
+google/protobuf/descriptor.proto
 gpuSpeedRenderTargetScale
 gpuSpeedVendor
 gpu_profiler_capture
@@ -7624,6 +8054,7 @@ greek
 green
 grip
 gripLimitData
+group
 hand_interaction_ext
 hand_right_poses.glb
 handgrip
@@ -7639,7 +8070,7 @@ height
 held
 hidden
 hide_callout
-hide_dashboard_requested
+hide_laser
 high
 hmd_presence
 hmd_profile
@@ -7650,6 +8081,7 @@ https://
 hu_hu
 hungarian
 icon_steamvr_desktopgame.png
+ignore_alpha
 illegal code in raster
 illum
 image
@@ -7681,6 +8113,7 @@ index
 indexaccessor_
 indexbufferview_
 indices
+infinity
 initial_state
 innerConeAngle
 input
@@ -7692,8 +8125,11 @@ input_path
 input_source
 input_source_path
 inputs
+int32
+int64
 intensity
 interaction_profile
+interactive_if_visible
 internal
 internet
 interpolation
@@ -7760,6 +8196,7 @@ inverseBindMatrices
 invert
 is_active
 is_compositor
+is_premult
 is_system_process
 isalnum
 isalpha
@@ -7808,6 +8245,7 @@ latam
 latch
 launch_app_already_running
 ldexp
+ldiv
 left
 leftThumbstickRotation
 left_
@@ -7896,11 +8334,15 @@ magFilter
 malloc
 mandatory
 manufacturer_name
+map key must name a scalar or string field.
+map type is only allowed for fields with a message type.
+map type is only allowed for repeated fields.
 map/set<T> too long
 map_Ka
 map_Kd
 map_Ks
 map_Ns
+map_key must not name a repeated field.
 match_priority
 material
 materials
@@ -7919,6 +8361,7 @@ memset
 mesh
 mesh.pVertexData != nullptr && mesh.unTriangleCount > 0
 meshes
+message
 message_id
 message_overlay/main
 message_overlay_finished
@@ -7929,6 +8372,7 @@ microtxn_finished
 mimeType
 minFilter
 minVersion
+minimal_controlbar
 minimum_required_version
 mirror_actions
 mirror_mappings
@@ -7947,6 +8391,7 @@ motion
 motionSmoothing
 motionSmoothingOverride
 mtllib
+multi_cursor
 multiple IHDR
 multiple signals per batch not allowed
 mutualcaps.capabilities != 0
@@ -7983,6 +8428,10 @@ no SOI
 no clear code
 no header height
 no preset dict
+no_back
+no_dashboard
+no_depth_test
+no_depth_write
 node
 nodes
 none
@@ -8106,6 +8555,7 @@ pUpdateData
 pVertexBuffer
 pVertexBufferBase
 page
+panorama
 parameter must be a string or number / number array.\n
 parameters
 parse
@@ -8168,10 +8618,13 @@ priority
 priorityMap
 progress
 progress_icon
+protected
 pt_br
 pt_pt
+pulGeneration != nullptr
 pull
 punNextEvent
+punTextureIndex != nullptr
 punct
 qsort
 radial_menu
@@ -8179,19 +8632,22 @@ range
 read past buffer
 ready_ext
 realloc
-reason
 reboothmd
 redirectsDisplay
 refDistance
+registered: 
 registered_device_type
 rejectDupKeys
 render_message
 rendermodel
 rendermodels
+repeated
+request_base64
 request_binding_callouts
 request_handlers
 request_handlers_response
 request_tutorial_callout
+required
 required_options
 requirement
 resolutionOverride
@@ -8245,11 +8701,14 @@ schinese
 scope
 scroll
 scroll_mode
+scroll_wheel
 seated
 secondaryActionSet
 seconds
 section
 sendSystemButtonToAllApps
+send_discrete_scroll
+send_touchpad
 serialnumber
 server
 session_destroyed
@@ -8269,6 +8728,8 @@ settings
 settings/desktop
 setup_standing2
 setvbuf
+sfixed32
+sfixed64
 shaders/d3d11/distort_bounds_color_ps.fxo
 shaders/d3d11/distort_cs.fxo
 shaders/d3d11/distort_cs_mc.fxo
@@ -8290,8 +8751,17 @@ shaders/d3d11/distort_geom_aurora_sky_notexture_ps.fxo
 shaders/d3d11/distort_geom_aurora_sky_ps.fxo
 shaders/d3d11/distort_geom_colormap_lines_ps.fxo
 shaders/d3d11/distort_geom_constant_ps.fxo
+shaders/d3d11/distort_geom_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_drawregion_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_drawregion_multitap_ps.fxo
 shaders/d3d11/distort_geom_drawregion_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_drawregion_reflect_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_drawregion_reflect_multitap_ps.fxo
 shaders/d3d11/distort_geom_drawregion_reflect_ps.fxo
 shaders/d3d11/distort_geom_drawregion_simplified_gamma_ps.fxo
@@ -8315,6 +8785,9 @@ shaders/d3d11/distort_geom_horizon_ps.fxo
 shaders/d3d11/distort_geom_ltc_diff_ps.fxo
 shaders/d3d11/distort_geom_ltc_ps.fxo
 shaders/d3d11/distort_geom_ltc_spec_ps.fxo
+shaders/d3d11/distort_geom_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_motes_ps.fxo
 shaders/d3d11/distort_geom_multitap_ps.fxo
 shaders/d3d11/distort_geom_pbr_ps.fxo
@@ -8323,6 +8796,10 @@ shaders/d3d11/distort_geom_ps.fxo
 shaders/d3d11/distort_geom_ps16.fxo
 shaders/d3d11/distort_geom_ps16_mv_split.fxo
 shaders/d3d11/distort_geom_ps_debug_depth.fxo
+shaders/d3d11/distort_geom_reflect_debug_texel_ratio_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_catmullrom_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_ewa_ps.fxo
+shaders/d3d11/distort_geom_reflect_mip_lanczos2_ps.fxo
 shaders/d3d11/distort_geom_reflect_multitap_ps.fxo
 shaders/d3d11/distort_geom_reflect_ps.fxo
 shaders/d3d11/distort_geom_simplified_altcolorblend_ps.fxo
@@ -8351,8 +8828,12 @@ shaders/d3d11/distort_ps_achromatic_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_gamma_dr.fxo
 shaders/d3d11/distort_ps_achromatic_layered.fxo
 shaders/d3d11/distort_ps_achromatic_nd.fxo
+shaders/d3d11/distort_ps_achromatic_nd_alphaed.fxo
+shaders/d3d11/distort_ps_achromatic_nd_alphaed_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_nd_gamma.fxo
 shaders/d3d11/distort_ps_achromatic_se2.fxo
+shaders/d3d11/distort_ps_achromatic_se2_ck.fxo
+shaders/d3d11/distort_ps_achromatic_se2_ck_dr.fxo
 shaders/d3d11/distort_ps_achromatic_se2_dr.fxo
 shaders/d3d11/distort_ps_gamma.fxo
 shaders/d3d11/distort_ps_gamma_mc.fxo
@@ -8376,6 +8857,9 @@ shaders/d3d11/distort_ps_scene_stencil_shadow_cell.fxo
 shaders/d3d11/distort_ps_scene_stencil_shadow_mask.fxo
 shaders/d3d11/distort_ps_scene_stencil_shadow_near.fxo
 shaders/d3d11/distort_vs.fxo
+shaders/d3d11/distort_vs_achromatic_se2.fxo
+shaders/d3d11/distort_vs_achromatic_se2_reproject.fxo
+shaders/d3d11/distort_vs_achromatic_se2_reproject_dp.fxo
 shaders/d3d11/distort_vs_latest_nd.fxo
 shaders/d3d11/distort_vs_layered.fxo
 shaders/d3d11/distort_vs_layered_nd.fxo
@@ -8455,7 +8939,24 @@ shaders/d3d11/msaa_resolve_8x_ps.fxo
 shaders/d3d11/msaa_resolve_vs.fxo
 shaders/d3d11/panel_mask_ps.fxo
 shaders/d3d11/panel_mask_vs.fxo
-shaders/d3d11/testgrid2_cs.fxo
+shaders/d3d11/resample_lanczos3_vs.fxo
+shaders/d3d11/resample_lanczos3_x_ps.fxo
+shaders/d3d11/resample_lanczos3_y_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_x_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_y_ps.fxo
+shaders/d3d11/stream_multi_view_inner_ps.fxo
+shaders/d3d11/stream_multi_view_inner_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_x_ps.fxo
+shaders/d3d11/stream_multi_view_reproject_x_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_y_ps.fxo
+shaders/d3d11/stream_multi_view_reproject_y_vs.fxo
+shaders/d3d11/stream_multi_view_resample_vs.fxo
+shaders/d3d11/stream_multi_view_resolve_4x_ps.fxo
+shaders/d3d11/stream_multi_view_resolve_vs.fxo
+shaders/d3d11/stream_view_combine_ps.fxo
+shaders/d3d11/stream_view_combine_vs.fxo
+shaders/d3d11/stream_view_inset_ps.fxo
+shaders/d3d11/stream_view_inset_vs.fxo
 shaders/d3d11/tracked_camera_edgefilter_ps.fxo
 shaders/d3d11/tracked_camera_edgefilter_vs.fxo
 shaders/d3d11/tracked_camera_lines_ps.fxo
@@ -8474,6 +8975,9 @@ shaders/d3d11/tracked_camera_reprojection_vs.fxo
 shaders/d3d11/tracked_camera_undistort_ps.fxo
 shaders/d3d11/tracked_camera_undistort_vs.fxo
 shaders/d3d11/tracked_camera_vs.fxo
+shaders/d3d11/unlit_2x_downsample_lanczos2_ps.fxo
+shaders/d3d11/unlit_2x_downsample_mks_u_ps.fxo
+shaders/d3d11/unlit_2x_downsample_mks_v_ps.fxo
 shaders/d3d11/unlit_2x_downsample_ps.fxo
 shaders/d3d11/unlit_convert_to_nv12_ps.fxo
 shaders/d3d11/unlit_gaussian_blur_u_ps.fxo
@@ -8511,8 +9015,17 @@ shaders/vulkan/distort_geom_aurora_sky_notexture_ps.spv
 shaders/vulkan/distort_geom_aurora_sky_ps.spv
 shaders/vulkan/distort_geom_colormap_lines_ps.spv
 shaders/vulkan/distort_geom_constant_ps.spv
+shaders/vulkan/distort_geom_debug_texel_ratio_ps.spv
+shaders/vulkan/distort_geom_drawregion_debug_texel_ratio_ps.spv
+shaders/vulkan/distort_geom_drawregion_mip_catmullrom_ps.spv
+shaders/vulkan/distort_geom_drawregion_mip_ewa_ps.spv
+shaders/vulkan/distort_geom_drawregion_mip_lanczos2_ps.spv
 shaders/vulkan/distort_geom_drawregion_multitap_ps.spv
 shaders/vulkan/distort_geom_drawregion_ps.spv
+shaders/vulkan/distort_geom_drawregion_reflect_debug_texel_ratio_ps.spv
+shaders/vulkan/distort_geom_drawregion_reflect_mip_catmullrom_ps.spv
+shaders/vulkan/distort_geom_drawregion_reflect_mip_ewa_ps.spv
+shaders/vulkan/distort_geom_drawregion_reflect_mip_lanczos2_ps.spv
 shaders/vulkan/distort_geom_drawregion_reflect_multitap_ps.spv
 shaders/vulkan/distort_geom_drawregion_reflect_ps.spv
 shaders/vulkan/distort_geom_drawregion_simplified_gamma_ps.spv
@@ -8536,6 +9049,9 @@ shaders/vulkan/distort_geom_horizon_ps.spv
 shaders/vulkan/distort_geom_ltc_diff_ps.spv
 shaders/vulkan/distort_geom_ltc_ps.spv
 shaders/vulkan/distort_geom_ltc_spec_ps.spv
+shaders/vulkan/distort_geom_mip_catmullrom_ps.spv
+shaders/vulkan/distort_geom_mip_ewa_ps.spv
+shaders/vulkan/distort_geom_mip_lanczos2_ps.spv
 shaders/vulkan/distort_geom_motes_ps.spv
 shaders/vulkan/distort_geom_multitap_ps.spv
 shaders/vulkan/distort_geom_pbr_ps.spv
@@ -8554,6 +9070,10 @@ shaders/vulkan/distort_geom_ps_debug_mvsint16_magnitude.spv
 shaders/vulkan/distort_geom_ps_debug_stencil.spv
 shaders/vulkan/distort_geom_ps_debug_stencil_downsample.spv
 shaders/vulkan/distort_geom_psmvfloat.spv
+shaders/vulkan/distort_geom_reflect_debug_texel_ratio_ps.spv
+shaders/vulkan/distort_geom_reflect_mip_catmullrom_ps.spv
+shaders/vulkan/distort_geom_reflect_mip_ewa_ps.spv
+shaders/vulkan/distort_geom_reflect_mip_lanczos2_ps.spv
 shaders/vulkan/distort_geom_reflect_multitap_ps.spv
 shaders/vulkan/distort_geom_reflect_ps.spv
 shaders/vulkan/distort_geom_simplified_altcolorblend_ps.spv
@@ -8582,8 +9102,12 @@ shaders/vulkan/distort_ps_achromatic_gamma.spv
 shaders/vulkan/distort_ps_achromatic_gamma_dr.spv
 shaders/vulkan/distort_ps_achromatic_layered.spv
 shaders/vulkan/distort_ps_achromatic_nd.spv
+shaders/vulkan/distort_ps_achromatic_nd_alphaed.spv
+shaders/vulkan/distort_ps_achromatic_nd_alphaed_gamma.spv
 shaders/vulkan/distort_ps_achromatic_nd_gamma.spv
 shaders/vulkan/distort_ps_achromatic_se2.spv
+shaders/vulkan/distort_ps_achromatic_se2_ck.spv
+shaders/vulkan/distort_ps_achromatic_se2_ck_dr.spv
 shaders/vulkan/distort_ps_achromatic_se2_dr.spv
 shaders/vulkan/distort_ps_gamma.spv
 shaders/vulkan/distort_ps_gamma_mc.spv
@@ -8607,6 +9131,9 @@ shaders/vulkan/distort_ps_scene_stencil_shadow_cell.spv
 shaders/vulkan/distort_ps_scene_stencil_shadow_mask.spv
 shaders/vulkan/distort_ps_scene_stencil_shadow_near.spv
 shaders/vulkan/distort_vs.spv
+shaders/vulkan/distort_vs_achromatic_se2.spv
+shaders/vulkan/distort_vs_achromatic_se2_reproject.spv
+shaders/vulkan/distort_vs_achromatic_se2_reproject_dp.spv
 shaders/vulkan/distort_vs_latest_nd.spv
 shaders/vulkan/distort_vs_layered.spv
 shaders/vulkan/distort_vs_layered_nd.spv
@@ -8705,7 +9232,24 @@ shaders/vulkan/portal_stencil_apply_disp_vs.spv
 shaders/vulkan/portal_stencil_estimate_disp_ps.spv
 shaders/vulkan/portal_stencil_ps.spv
 shaders/vulkan/portal_stencil_vs.spv
-shaders/vulkan/testgrid_cs.spv
+shaders/vulkan/resample_lanczos3_vs.spv
+shaders/vulkan/resample_lanczos3_x_ps.spv
+shaders/vulkan/resample_lanczos3_y_ps.spv
+shaders/vulkan/stream_multi_view_downscale_x_ps.spv
+shaders/vulkan/stream_multi_view_downscale_y_ps.spv
+shaders/vulkan/stream_multi_view_inner_ps.spv
+shaders/vulkan/stream_multi_view_inner_vs.spv
+shaders/vulkan/stream_multi_view_reproject_x_ps.spv
+shaders/vulkan/stream_multi_view_reproject_x_vs.spv
+shaders/vulkan/stream_multi_view_reproject_y_ps.spv
+shaders/vulkan/stream_multi_view_reproject_y_vs.spv
+shaders/vulkan/stream_multi_view_resample_vs.spv
+shaders/vulkan/stream_multi_view_resolve_4x_ps.spv
+shaders/vulkan/stream_multi_view_resolve_vs.spv
+shaders/vulkan/stream_view_combine_ps.spv
+shaders/vulkan/stream_view_combine_vs.spv
+shaders/vulkan/stream_view_inset_ps.spv
+shaders/vulkan/stream_view_inset_vs.spv
 shaders/vulkan/tracked_camera_edgefilter_ps.spv
 shaders/vulkan/tracked_camera_edgefilter_vs.spv
 shaders/vulkan/tracked_camera_lines_ps.spv
@@ -8724,6 +9268,9 @@ shaders/vulkan/tracked_camera_reprojection_vs.spv
 shaders/vulkan/tracked_camera_undistort_ps.spv
 shaders/vulkan/tracked_camera_undistort_vs.spv
 shaders/vulkan/tracked_camera_vs.spv
+shaders/vulkan/unlit_2x_downsample_lanczos2_ps.spv
+shaders/vulkan/unlit_2x_downsample_mks_u_ps.spv
+shaders/vulkan/unlit_2x_downsample_mks_v_ps.spv
 shaders/vulkan/unlit_2x_downsample_ps.spv
 shaders/vulkan/unlit_convert_to_nv12_ps.spv
 shaders/vulkan/unlit_cs.spv
@@ -8744,8 +9291,10 @@ short_alloc: spilling into system allocator
 showCompatibilityModeNotification
 showEnableInSettings
 show_app_binding
-show_dashboard_requested
+show_or_hide_dashboard_or_frame
 side
+side_by_side_crossed
+side_by_side_parallel
 simple
 simulate_hmd
 simulate_rendermodel
@@ -8757,6 +9306,8 @@ simulated_controller_type
 simulation_settings
 sinf
 single
+sint32
+sint64
 skeleton
 skeletonDataWithController
 skeletonDataWithoutController
@@ -8766,6 +9317,7 @@ skins
 slData
 slot
 smooth
+smooth_scroll
 smooth_scroll_acceleration_power
 smooth_scroll_deceleration
 smooth_scroll_edge_min_swipe
@@ -8784,8 +9336,8 @@ smooth_scroll_min_throw_velocity
 smooth_scroll_multiplier
 smooth_scroll_thrown_termination_velocity
 smooth_scroll_trackpad_aspect_ratio
+sort_with_nonscene
 source
-source_is_vrlink_remote
 source_type
 sources
 south
@@ -8818,6 +9370,7 @@ steamMatchesHMDFramerate
 steam_overlay_handle
 steam_streaming_launch
 steamlink_openvr-overlay
+steammessages_unified_base.steamclient.proto
 steamtours.exe
 steamvr
 steamvr.vrsettings
@@ -8825,6 +9378,7 @@ steamvr_input
 steamvr_vrclient_interop
 steamxr_win32.json
 steamxr_win64.json
+stereo
 sticky
 sticky_activate_threshold
 sticky_click
@@ -8843,6 +9397,7 @@ strictRoot
 string
 string literal
 string too long
+strings::Substitute format string invalid: asked for "$
 strncat
 strncmp
 strncpy
@@ -8858,6 +9413,7 @@ strtoll
 strtoul
 strtoull
 sub_mode
+subtype mismatch
 suggested
 supersampleManualOverride
 supersampleScale
@@ -8867,7 +9423,6 @@ suppressedByPriority
 sv_se
 swapchainImage.GetState() != CSwapchain::CImage::State_t::ApplicationAcquired
 swedish
-switch_dashboard_overlay_requested
 sxr_xrAcquireSwapchainImage
 sxr_xrApplyHapticFeedback
 sxr_xrAttachSessionActionSets
@@ -8986,12 +9541,14 @@ tdh.dll
 terminate
 tessellation
 texCoord
+text format contains deprecated field "
 text/plain
 texture_handle
 textures
 th_th
 thai
 the array does not have 3 elements
+the global scope
 the sparse object of this accessor doesn't have indices
 the sparse object of this accessor doesn't have values
 the value is not an array
@@ -9010,7 +9567,6 @@ timeKillEvent
 timeSetEvent
 toggle_button
 toggle_camera_roomview_forsceneapps
-toggle_dashboard_requested
 tolower
 too large
 too many codes
@@ -9030,7 +9586,6 @@ toupper
 tr_tr
 tracked
 trackedCamera
-tracked_device_index
 trackers
 tracking
 trackingLevel
@@ -9041,6 +9596,7 @@ trackpad_scroll
 trackpad_scroll has been removed. Please use scroll instead\n
 trackpad_scroll_
 trackpad_touch
+transfer_ownership
 transform
 translate
 translation
@@ -9051,6 +9607,8 @@ true
 true literal
 turkish
 type
+uint32
+uint64
 uk_ua
 ukrainian
 ulFrameIndex=%lu eTargetState=%d
@@ -9068,6 +9626,7 @@ unable to allocate vkBuffer-associated memory\n
 uncbVREvent <= sizeof( vr::VREvent_t )
 unexpected 
 ungetc
+uninterpreted_option
 universe:
 universeID
 universes
@@ -9487,7 +10046,7 @@ vkCreateFramebuffer
 vkCreateGraphicsPipelines
 vkCreateHeadlessSurfaceEXT
 vkCreateImage
-vkCreateImage failed with result %d\n
+vkCreateImage failed
 vkCreateImageView
 vkCreateIndirectCommandsLayoutEXT
 vkCreateIndirectCommandsLayoutNV
@@ -9719,7 +10278,7 @@ vkGetPhysicalDeviceFormatProperties2KHR
 vkGetPhysicalDeviceFragmentShadingRatesKHR
 vkGetPhysicalDeviceImageFormatProperties
 vkGetPhysicalDeviceImageFormatProperties2
-vkGetPhysicalDeviceImageFormatProperties2 failed with result %d\n
+vkGetPhysicalDeviceImageFormatProperties2 failed with result %d
 vkGetPhysicalDeviceImageFormatProperties2KHR
 vkGetPhysicalDeviceMemoryProperties
 vkGetPhysicalDeviceMemoryProperties2
@@ -9893,12 +10452,14 @@ vroverlaylatest
 vrserver internal error (124)
 vrserver pid %d\n
 vrserver.exe
+vrshared_base.proto
 vrsteamprivate
 vrwebhelper
 vrwebhelper.exe
 vrwebui_dashboard
 vrwebui_dashboardstore
 vulkan-1.dll
+wants_modal
 watchdog_controller
 watchdog_hmd
 watchdog_unknown
@@ -9938,6 +10499,7 @@ wrapS
 wrapT
 wrong channel count
 wrong color format
+wrong submessage type
 wrong version
 x_path
 xdigit
@@ -10011,6 +10573,8 @@ xrDestroySpace
 xrDestroySwapchain
 xrEndFrame
 xrEndFrame : projection view %u has bounds (x=%u, y=%u, w=%u, h=%u) (%.3f, %.3f, %.3f, %.3f)
+xrEndFrame error: passed XrCompositionLayerCylinderKHR layer without enabling required XR_KHR_composition_layer_cylinder
+xrEndFrame error: passed XrCompositionLayerImageLayoutFB in next chain without enabling required XR_FB_composition_layer_image_layout
 xrEndFrame error: passed XrCompositionLayerSpaceWarpInfoFB in next chain without enabling required XR_FB_space_warp
 xrEndFrame error: passed XrFrameSynthesisInfoEXT in next chain without enabling required XR_EXT_frame_synthesis
 xrEndFrame: compositor failed EndFrame()

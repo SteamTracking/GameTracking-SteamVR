@@ -1,15 +1,7 @@
 var CLSTAMP = "steamdb";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
-  [300],
+  [148, 366],
   {
-    chunkid: (module, module_exports, __webpack_require__) => {
-      function _(_, _, _) {
-        return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -28,11 +20,13 @@ var CLSTAMP = "steamdb";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -153,6 +147,7 @@ var CLSTAMP = "steamdb";
         }
         Init(_) {
           return (0, _._)(this, void 0, void 0, function* () {
+            var _;
             if (this.m_bInitStarted) return;
             (this.m_bInitStarted = !0),
               (this.m_bIsSettingApp = _),
@@ -188,11 +183,21 @@ var CLSTAMP = "steamdb";
                 void 0 === VRHTML ||
                 VRHTML.RegisterForDisplayModeNotSupportedEvents(
                   this.SetRestartRequired,
-                );
+                ),
+              null ===
+                (_ =
+                  null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.RegisterForHmdFrameRateChanged) ||
+                void 0 === _ ||
+                _.call(VRHTML, () => {
+                  _.GetSettingsInfo().then((_) => this.OnVRSystemInfo(_));
+                });
             let _ = [];
-            this.m_mailbox.connected || _.push(this.ConnectMailbox()),
-              _.push(this.OpenWebSocketToHost()),
-              _.push(this.AwaitInitialSettingsSchema()),
+            this.m_mailbox.connected ||
+              __webpack_require__.push(this.ConnectMailbox()),
+              __webpack_require__.push(this.OpenWebSocketToHost()),
+              __webpack_require__.push(this.AwaitInitialSettingsSchema()),
               _._.SteamVR.SetImplementation("SetSpatializeEnabled", (_) => {
                 this.audioDevices &&
                   ((this.audioDevices.spatialize =
@@ -687,6 +692,9 @@ var CLSTAMP = "steamdb";
           null,
         );
       const _ = new _();
+      function _() {
+        return (0, _.useObserver)(() => _.showAdvancedSettings);
+      }
       window.VRSettingsState = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1045,37 +1053,6 @@ var CLSTAMP = "steamdb";
               }),
             ),
           );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = 20,
-        _ = [
-          "Steam",
-          "Desktop",
-          "Desktop 1",
-          "Desktop 2",
-          "Desktop 3",
-          "Now Playing",
-          "Old Library",
-          "Library",
-          "Settings",
-        ],
-        _ = [
-          _.OiK.TopCenter,
-          _.OiK.CenterLeft,
-          _.OiK.CenterRight,
-          _.OiK.BottomCenter,
-          _.OiK.BottomRight,
-        ];
-      function _(_, _) {
-        return !!_ && !!_ && _.frameID === _.frameID;
       }
     },
   },

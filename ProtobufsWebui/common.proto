@@ -15,6 +15,29 @@ message CClientMetrics_ReportClientError_Notification_Error {
 	optional string context = 4;
 }
 
+message CSteamVR_DashboardRequest {
+	optional string reason = 1;
+	optional .CSteamVR_DashboardRequest_Target target = 2;
+	optional int32 dashboard_visibility_action = 3 [(.description) = "enum"];
+	optional .CSteamVR_DashboardRequest_Relatch relatch_dashboard = 4;
+	optional int32 vrlink_request_split = 5 [(.description) = "enum"];
+}
+
+// Used by: common.proto
+message CSteamVR_DashboardRequest_Relatch {
+	optional int32 condition = 1 [(.description) = "enum"];
+	optional int32 deadzone = 2 [(.description) = "enum"];
+}
+
+// Used by: common.proto
+message CSteamVR_DashboardRequest_Target {
+	optional uint32 frame_id = 1;
+	optional uint32 page_id = 2;
+	optional string overlay_key = 3;
+	optional bool overlay_key_references_entire_frame = 4;
+	optional int32 overlay_key_vrlink_namespace = 5 [(.description) = "enum"];
+}
+
 // Used by: common.proto
 message CVRGamepadUI_Frame {
 	optional uint32 frame_id = 1;
@@ -23,7 +46,7 @@ message CVRGamepadUI_Frame {
 	optional .CVRGamepadUI_Frame_FrameControls controls = 4;
 	optional bool is_vrlink_remote = 5;
 	optional .CVRGamepadUI_Frame_FrameActions frame_actions = 6;
-	repeated string steamui_page_overlay_keys = 7;
+	repeated string overlay_keys = 7;
 	optional bool is_streaming_client = 8;
 	optional int32 dock_location = 9 [(.description) = "enum"];
 	optional uint32 game_app_id = 10;
@@ -332,6 +355,13 @@ message CVRGamepadUI_Message_ShowGame_Request {
 }
 
 message CVRGamepadUI_Message_ShowGame_Response {
+}
+
+message CVRGamepadUI_Message_ShowOrHideDashboardOrFrame_Request {
+	optional bytes request = 1;
+}
+
+message CVRGamepadUI_Message_ShowOrHideDashboardOrFrame_Response {
 }
 
 message CVRGamepadUI_Message_ShowOverlay_Request {

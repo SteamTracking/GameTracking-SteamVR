@@ -1,4 +1,4 @@
-var CLSTAMP = "11139766";
+var CLSTAMP = "11196359";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [57],
   {
@@ -60,7 +60,6 @@ var CLSTAMP = "11139766";
         Zkm: () => p.Zk,
         _1: () => H._1,
         _81: () => b._8,
-        _h3: () => p._h,
         _nH: () => o._n,
         aXN: () => S.aX,
         aqc: () => H.aq,
@@ -82,7 +81,6 @@ var CLSTAMP = "11139766";
         k2$: () => H.k2,
         kGj: () => H.kG,
         kSV: () => o.kS,
-        ke3: () => b.ke,
         kuU: () => H.ku,
         lo4: () => o.lo,
         lqd: () => _.l,
@@ -185,7 +183,8 @@ var CLSTAMP = "11139766";
           (e[(e.Auto = 0)] = "Auto"),
             (e[(e.Low = 1)] = "Low"),
             (e[(e.Medium = 2)] = "Medium"),
-            (e[(e.High = 3)] = "High");
+            (e[(e.High = 3)] = "High"),
+            (e[(e.Ultra = 4)] = "Ultra");
         })(i || (i = {})),
         (function (e) {
           (e[(e.TrackingResult_Uninitialized = 1)] =

@@ -341,6 +341,10 @@
     {
       "app_key": "steam.app.1178140",
       "binding_url": "pixelripped1995_bindings_frame_controller.json"
+    },
+    {
+      "app_key": "steam.app.650000",
+      "binding_url": "doomvfr_bindings_frame_controller.json"
     }
   ]
 }

@@ -60,7 +60,6 @@ var CLSTAMP = "steamdb";
         Zkm: () => _._,
         _: () => _._,
         _81: () => _._,
-        _h3: () => _._,
         _nH: () => _._,
         aXN: () => _._,
         aqc: () => _._,
@@ -82,7 +81,6 @@ var CLSTAMP = "steamdb";
         k2$: () => _._,
         kGj: () => _._,
         kSV: () => _._,
-        ke3: () => _._,
         kuU: () => _._,
         lo4: () => _._,
         lqd: () => _._,
@@ -195,7 +193,8 @@ var CLSTAMP = "steamdb";
           (_[(_.Auto = 0)] = "Auto"),
             (_[(_.Low = 1)] = "Low"),
             (_[(_.Medium = 2)] = "Medium"),
-            (_[(_.High = 3)] = "High");
+            (_[(_.High = 3)] = "High"),
+            (_[(_.Ultra = 4)] = "Ultra");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.TrackingResult_Uninitialized = 1)] =

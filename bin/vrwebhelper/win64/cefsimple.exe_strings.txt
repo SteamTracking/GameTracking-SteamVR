@@ -209,12 +209,12 @@
 0123456789ABCDEF
 0123456789abcdef
 0123456789abcdefABCDEFxX+-pPiInN
+0755a0099cb84cb99d91b47ab7b616435f207952
 1#IND
 1#INF
 1#QNAN
 1#SNAN
 6..\..\base\values.cc
-97314fe45c14007fca596262a64cad69467df21f
 ;base64,
 <NULL>
 <html><body bgcolor="white"><h2>Failed to load URL 
@@ -452,6 +452,7 @@ LCIDToLocaleName
 LCMapStringEx
 LCMapStringW
 LINEAR_HISTOGRAM
+LLD PDB.
 LOG_FATAL
 LeaveCriticalSection
 Limited
@@ -571,6 +572,7 @@ QueryInformationJobObject
 QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryThreadCycleTime
+RSDS0
 RaiseException
 Read-only file system
 ReadConsoleW
@@ -716,6 +718,7 @@ WideCharToMultiByte
 WriteConsoleW
 WriteFile
 WriteProcessMemory
+XQ1:
 [%03u.%03u] 
 [%s : %d] RAW: 
 [printf format error]

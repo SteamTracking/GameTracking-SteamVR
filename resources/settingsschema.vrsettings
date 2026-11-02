@@ -346,6 +346,11 @@
 			{ "name": "/settings/input/overlayFilteringDerivCutoff", "type": "number" },
 
 			{
+				"name": "/settings/driver_vrlink/*",
+				"type": "wildcard"
+			},
+
+			{
 				"name": "/settings/internal/*",
 				"type": "wildcard"
 			}

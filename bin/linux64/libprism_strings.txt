@@ -534,6 +534,7 @@ Failed to LockMgrMutex in AllocMutex
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to create socket for shared fd id: 0x%lx\n
 Failed to find suitable dbus connection for rtkit
+Failed to get credentials from SO_PEERCRED: errno=%d\n
 Failed to initialize client address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd id: 0x%lx\n
 Failed to open dbus session connection: %s
@@ -959,6 +960,7 @@ SV_Target
 SV_VertexBuffer
 SV_Viewport
 Saturday
+Seccomp:
 Semantic index range overlap
 September
 SetObjectDebugName
@@ -989,12 +991,15 @@ St12out_of_range
 St12system_error
 St13__ios_failure
 St13bad_exception
+St13basic_filebufIcSt11char_traitsIcEE
 St13basic_istreamIwSt11char_traitsIwEE
 St13basic_ostreamIwSt11char_traitsIwEE
 St13messages_base
 St13runtime_error
+St14basic_ifstreamIcSt11char_traitsIcEE
 St15basic_streambufIcSt11char_traitsIcEE
 St15basic_streambufIwSt11char_traitsIwEE
+St15basic_stringbufIcSt11char_traitsIcESaIcEE
 St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
 St17__timepunct_cacheIcE
@@ -1005,6 +1010,7 @@ St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
 St18__moneypunct_cacheIwLb1EE
 St19__iosfail_type_info
+St19basic_istringstreamIcSt11char_traitsIcESaIcEE
 St20bad_array_new_length
 St21__ctype_abstract_baseIwE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
@@ -1261,6 +1267,12 @@ atanf
 auto
 auto:
 bad_function_call
+basic_filebuf::_M_convert_to_external conversion error
+basic_filebuf::underflow codecvt::max_length() is not valid
+basic_filebuf::underflow error reading the file
+basic_filebuf::underflow incomplete character in file
+basic_filebuf::underflow invalid byte sequence in file
+basic_filebuf::xsgetn error reading the file
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -1468,6 +1480,7 @@ getppid
 getpriority
 getpwnam_r
 getrlimit
+getsockopt
 gettext
 gettimeofday
 getuid

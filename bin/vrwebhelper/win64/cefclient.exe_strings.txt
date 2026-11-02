@@ -283,13 +283,13 @@
 0123456789ABCDEF
 0123456789abcdef
 0123456789abcdefABCDEFxX+-pPiInN
+0755a0099cb84cb99d91b47ab7b616435f207952
 1#IND
 1#INF
 1#QNAN
 1#SNAN
 127.0.0.1
 6..\..\base\values.cc
-97314fe45c14007fca596262a64cad69467df21f
 : no conversion
 : out of range
 :' + prompt('
@@ -789,7 +789,6 @@ LCIDToLocaleName
 LCMapStringEx
 LCMapStringW
 LINEAR_HISTOGRAM
-LLD PDB.
 LOG_FATAL
 LeaveCriticalSection
 Level: 
@@ -960,7 +959,6 @@ QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryThreadCycleTime
 REPLACE_THIS_STRING
-RSDSl\vW|
 Radio Item 1
 Radio Item 2
 Radio Item 3

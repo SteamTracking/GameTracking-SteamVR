@@ -435,6 +435,7 @@ $0option $1;\n
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_StartAutolaunchOverlays@@VCVRMsg_NoResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@@Z@CConnectionThread@@
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_StartDashboard@@VCVRMsg_StartDashboardResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@AEAV4@@Z@CConnectionThread@@
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_StartVRCompositor@@VCVRMsg_StartVRCompositorResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@AEAV4@@Z@CConnectionThread@@
+.?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_SystemSuspendImminent@@VCVRMsg_NoResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@@Z@CConnectionThread@@
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_TrackedCamera_Enable@@VCVRMsg_TrackedCamera_EnableResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@AEAV4@@Z@CConnectionThread@@
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_TrackedCamera_GetDistortion@@VCVRMsg_TrackedCamera_GetDistortionResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@AEAV4@@Z@CConnectionThread@@
 .?AU?$FunctionMessageHandlerBase_t@VCVRClientContext@@VCVRServer@@VCVRMsg_TrackedCamera_GetFormatDimensions@@VCVRMsg_TrackedCamera_GetFormatDimensionsResponse@@P82@EAA_NV?$shared_ptr@VCVRClientContext@@@std@@AEBV3@AEAV4@@Z@CConnectionThread@@
@@ -530,6 +531,7 @@ $0option $1;\n
 .?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_PowerOffTrackedDevice@@VCVRMsg_NoResponse@@@CConnectionThread@@
 .?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_PrismPrioritySet@@VCVRMsg_NoResponse@@@CConnectionThread@@
 .?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_StartAutolaunchOverlays@@VCVRMsg_NoResponse@@@CConnectionThread@@
+.?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_SystemSuspendImminent@@VCVRMsg_NoResponse@@@CConnectionThread@@
 .?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_TriggerHapticPulse@@VCVRMsg_NoResponse@@@CConnectionThread@@
 .?AU?$FunctionNoResponseMessageHandler_t@VCVRClientContext@@VCWebMailbox@@VCVRMsg_SendWebMessage@@VCVRMsg_NoResponse@@@CConnectionThread@@
 .?AU?$FunctionWithPipeMessageHandler_t@VCVRClientContext@@VCVRServer@@VCVRMsg_Connect@@VCVRMsg_ConnectResponse@@@CConnectionThread@@
@@ -861,6 +863,9 @@ $0option $1;\n
 .?AVCSteamVR_ControllerUpdate_Request_StartUpdate@@
 .?AVCSteamVR_ControllerUpdate_Request_UpdateState@@
 .?AVCSteamVR_ControllerUpdate_State_Message@@
+.?AVCSteamVR_DashboardRequest@@
+.?AVCSteamVR_DashboardRequest_Relatch@@
+.?AVCSteamVR_DashboardRequest_Target@@
 .?AVCSteamVR_GuidedTour_StartPlayspaceSetup@@
 .?AVCSteamVR_Header@@
 .?AVCSteamVR_LinkInfo@@
@@ -1091,6 +1096,7 @@ $0option $1;\n
 .?AVCVRMsg_StartHomeAppResponse@@
 .?AVCVRMsg_StartVRCompositor@@
 .?AVCVRMsg_StartVRCompositorResponse@@
+.?AVCVRMsg_SystemSuspendImminent@@
 .?AVCVRMsg_TrackedCamera_AcquireVideoStreamingService@@
 .?AVCVRMsg_TrackedCamera_AcquireVideoStreamingServiceResponse@@
 .?AVCVRMsg_TrackedCamera_Enable@@
@@ -1475,8 +1481,10 @@ $0option $1;\n
 /controller_type/
 /dashboard/controllerbinding.html
 /dashboard/systemreportviewer.html
+/dashboard/visible
 /data
 /device_path
+/device_was_drawn
 /devices.json
 /devices/
 /devices/*
@@ -1688,7 +1696,12 @@ $0option $1;\n
 /vrgamepadui/steamvr/vrlink_lasermouseoverlay_remote
 /vrgamepadui/steamvr/vrlink_lasermouseoverlay_tx
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
+/vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_client_refresh_rate_tx
+/vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_scene_app_showing
+/vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
 /vrpathreg.json
 /without_controller_data
@@ -1703,7 +1716,7 @@ $0option $1;\n
 11 4 22 44 44 22 444444
 127.0.0.1
 127.0.0.1:
-13:51:51
+12:25:10
 1e+9999
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 5I)7
@@ -1813,6 +1826,7 @@ $0option $1;\n
 ?_Xregex_error@std@@YAXW4error_type@regex_constants@1@@Z
 ?always_noconv@codecvt_base@std@@QEBA_NXZ
 ?clear@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QEAAXH_N@Z
+?fff?
 ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
 ?getline@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEAD_J@Z
 ?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEBA?AVlocale@2@XZ
@@ -2137,6 +2151,9 @@ CSteamVR_ControllerUpdate_Request.IdentifyController
 CSteamVR_ControllerUpdate_Request.StartUpdate
 CSteamVR_ControllerUpdate_Request.UpdateState
 CSteamVR_ControllerUpdate_State_Message
+CSteamVR_DashboardRequest
+CSteamVR_DashboardRequest.Relatch
+CSteamVR_DashboardRequest.Target
 CSteamVR_GuidedTour_StartPlayspaceSetup
 CSteamVR_Header
 CSteamVR_LinkInfo
@@ -2327,6 +2344,7 @@ CVRMsg_StartDashboardResponse
 CVRMsg_StartHomeAppResponse
 CVRMsg_StartVRCompositor
 CVRMsg_StartVRCompositorResponse
+CVRMsg_SystemSuspendImminent
 CVRMsg_TrackedCamera_AcquireVideoStreamingService
 CVRMsg_TrackedCamera_AcquireVideoStreamingServiceResponse
 CVRMsg_TrackedCamera_Enable
@@ -2590,6 +2608,7 @@ Driver runtime is out of date (204)
 Driver unable to initialize video encoder (499)
 DriverDate
 DriverDirectMode::SubmitFrameThread sending legacy vsync events automatically.\n
+DriverDirectMode::SubmitFrameThread starting RenderDoc capture
 DriverDirect_Acquired
 DriverDirect_NewFrame
 DriverDirect_Presented
@@ -2840,6 +2859,8 @@ Format string parse failure
 FormatMessageA
 Found
 Found %s in cache, but buffer is empty.\n
+Found environment variable %s=1, but could not load renderdoc.dll
+Found environment variable %s=1. Loaded %s
 Found saved crash timestamp time %llu v%u uptime %llu%s\n
 Found universe %llu in chaperone file
 FreeLibrary
@@ -3477,6 +3498,7 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 NotificationCount
 Notification_BasestationsTooFarApart
 Notification_Detected
+Nov  2 2026
 NumDroppedFrames
 NumDroppedFrames: %d\n
 NumDroppedFramesLoading
@@ -3521,7 +3543,6 @@ OS made HMD audio %s endpoint default (%s). Taking responsibility for restoring 
 OSBuild
 OSType
 Object
-Oct 16 2026
 OculusSDKStart for %s\n
 Old connection found for pid %d. Forcing it to disconnect before processing Msg_Connect\n
 On laptop, HMD detected over USB, but Monitor not found (213)
@@ -3643,6 +3664,7 @@ ProcessDisconnected/simple quit
 Processing
 Processing Message of type %s (%u bytes) from %s\n
 Processing message %s from %s took %0.3g seconds\n
+ProgramFiles
 PropVariantClear
 Prop_
 Prop_ActualTrackingSystemName_String
@@ -3883,6 +3905,10 @@ Quit requested while app transition was in progress. Aborting transition\n
 QuitProcessRequested
 Quitting all OpenVR processes because master process %u disconnected\n
 Quitting parent process %u because a quit was requested for its child %u.\n
+RENDERDOC API Not Found\n
+RENDERDOC Enabled
+RENDERDOC_GetAPI
+RENDERDOC_GetAPI failed with code %d
 RGBG
 RPCRT4.dll
 RaiseException
@@ -3946,6 +3972,7 @@ Render model %s has %zd texture coordinates, expected %d\n
 Render model %s specifies multiple diffuse texture materials. Only one diffuse texture per model is supported.\n
 Render model from %s contained more than one shape. We only support one.\n
 Render model from %s contained no shapes\n
+RenderDoc
 RenderModel::Load
 RendermodelManager: 'components' json entry must be key/value map\n
 RendermodelManager: Both grip and aim are at 0, couldn't guess which direction is outwards for poke/pinch creation.\n
@@ -4038,6 +4065,7 @@ STEAMVR_DISABLE_THREAD_WATCHDOGS
 STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 STEAMVR_VERBOSE_HAPTIC_LOG
+STEAMVR_VRSERVER_RENDERDOC
 SafeMode
 Save failed
 SeatedResetViaAPICallCount
@@ -4193,6 +4221,8 @@ StartupReason
 Steam logging invalid\n
 Steam logging not valid\n
 Steam logging valid: %s\n
+Steam reports host suspend cancelled; fading in over %.1fs\n
+Steam reports host suspend imminent; fading to %.0f%% over %.1fs, then to black over %.1fs\n
 SteamAPI_GetHSteamPipe
 SteamAPI_GetHSteamUser
 SteamAPI_GetSteamInstallPath
@@ -5136,6 +5166,7 @@ VRMsg_StartAutolaunchOverlays
 VRMsg_StartHomeAppResponse
 VRMsg_StartVRCompositor
 VRMsg_StartVRCompositorResponse
+VRMsg_SystemSuspendImminent
 VRMsg_TrackedCamera_Enable
 VRMsg_TrackedCamera_EnableResponse
 VRMsg_TrackedCamera_GetDistortion
@@ -6049,6 +6080,7 @@ bindings
 bindingui/Overlay
 blank
 blocked_by_safe_mode
+blue
 bone_count
 bool
 boolean
@@ -6076,6 +6108,7 @@ c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\steammessag
 c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vr_messages.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_audiosettings.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_base.pb.cc
+c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_dashboardrequest.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_vrmessages.pb.cc
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\actionbindingconfig.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
@@ -6226,7 +6259,6 @@ czech
 da_dk
 danish
 dashboard
-dashboard_relatch
 data error
 data->vecBlocks[ unBlockIndex ].unReferences > 0
 data:application/gltf-buffer;base64,
@@ -6403,6 +6435,8 @@ external transition
 external_drivers
 extras
 eyetracking
+fade_to_color
+fade_type
 failIfExtra
 failed
 fakeHtcHmdMainboard
@@ -6523,6 +6557,7 @@ grab
 grab_value_and_force
 graph
 greek
+green
 grip
 grip_limit_transforms
 group
@@ -6551,7 +6586,6 @@ held
 hex_property
 hidden
 hide_callout
-hide_dashboard_requested
 hlvr/mailbox
 hlvr/webui
 hmdAllowsClientToControlTextureIndex
@@ -7285,7 +7319,6 @@ read_conn
 ready_ext
 readytoupdate
 realloc
-reason
 reboothmd
 recommended_resolution_pixels_steps
 record_devices
@@ -7309,12 +7342,14 @@ remote_perf_stats: dropped %d frames
 remove
 rename
 render_target_size
+renderdoc.dll
 rendermodels
 repeated
 replace
 replace_default
 request
 request error
+request_base64
 request_handlers
 request_handlers_response
 request_input_in_use_updates
@@ -7414,6 +7449,7 @@ scope
 scroll
 seated
 secondary_action_set
+seconds
 secondsPlayed
 secondsPlayedThisMonth
 secret=
@@ -7449,9 +7485,9 @@ should_show_binding_errors
 showEnableInSettings
 showHiddenInputs
 showOnAppExit
-show_dashboard_requested
 show_enable_in_settings
 show_hidden_inputs
+show_or_hide_dashboard_or_frame
 show_overlay_in_quicklaunch
 shtml
 shutdown
@@ -7482,7 +7518,6 @@ smoothing parameter out of range
 socket error
 socket: %d
 source
-source_is_vrlink_remote
 source_type
 sources
 south
@@ -7635,7 +7670,6 @@ toType
 to_controller_type
 to_profile_missing_from_component
 toggle_button
-toggle_dashboard_requested
 tolower
 too large
 too many codes

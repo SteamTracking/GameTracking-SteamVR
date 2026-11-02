@@ -1,19 +1,11 @@
 {
-  "UI_Unknown": "Unknown",
   "Now_Starting": "Next Up",
-  "Now_Starting_HomeApp": "Going Home To",
   "Now_Playing": "Now Playing",
-  "Now_Playing_HomeApp": "Home",
   "Now_Quitting": "Now Exiting",
   "Now_Waiting": "Waiting...",
-  "BackToApp": "Back to App",
   "Toggle_Room_View": "Toggle Room View",
   "RoomSetup": "Room Setup",
-  "GoHome": "Go Home",
   "QuitApp": "Quit App",
-  "DashboardPower_Header": "System",
-  "BindingCallout_Header": "Show Controls",
-  "MutedLabel": "Muted",
 
   "MuteAudioMirror": "Mute Audio Mirror",
   "UnmuteAudioMirror": "Unmute Audio Mirror",
@@ -30,7 +22,6 @@
   "Exit_Home": "Exit Home",
 
   "Enter_Gamepad_Mode": "Enter Gamepad Mode",
-  "Press_GamepadButton_To_Enter_Gamepad_Mode": "Press %1$s For Gamepad Mode",
   "Use_Laser_Mouse_To_Interact": "Use Laser Mouse to Interact",
 
   "Jump_To_DashboardBar": "Jump to dashboard bar",
@@ -45,74 +36,47 @@
 
   "X_More_Overlays": "%1$s More Overlays",
 
-  "BrowseAllGames": "Browse All Games",
-  "BrowseAll": "Browse All",
-  "StoreSection_TopSingleplayer": "Top Singleplayer",
-  "StoreSection_TopMultiplayer": "Top Multiplayer",
-  "StoreSection_TopFree": "Top Free",
 
   "PowerMenu": "Power",
 
   "Library": "Library",
   "OldLibrary": "Old Library",
-  "RecentlyPlayed": "Recently Played",
-  "SwitchDesktops": "Switch Desktops",
 
   "Return_To_Game": "Resume Game",
   "Return_To_Home": "Return to Home",
   "VR_Controller_Bindings": "VR Controller Bindings",
-  "Controller_Bindings": "Controller Bindings",
   "VR_App_Video_Settings": "VR Video Settings",
   "Clear_PerfCriteria_Status": "Clear Performance Assessment Status",
 
   "Desktop": "Desktop",
   "Desktop_X": "Desktop %1$s",
-  "NoDesktopFound": "No desktop found.",
-  "DesktopViewsUpdating": "Desktop views updating...",
   "AddView": "Add View",
   "CloseView": "Close View",
   "Close": "Close",
   "StopStreaming": "Stop Streaming",
   "MultitaskingView": "Multitasking View",
-  "DockHere": "Dock Here",
   "DockOnLeftController": "Dock on Left Controller",
-  "UndockFromLeftController": "Undock from Left Controller",
-  "DockedOnLeftController": "Docked on left controller.",
   "DockOnRightController": "Dock on Right Controller",
-  "UndockFromRightController": "Undock from Right Controller",
-  "DockedOnRightController": "Docked on right controller.",
-  "DockOnDashboard": "Dock on Dashboard",
   "ReturnToDashboard": "Return to Dashboard",
   "FloatInWorld": "Float in World",
-  "ShowTheaterScreen": "Show Theater Screen",
-  "HideTheaterScreen": "Hide Theater Screen",
   "ViewInTheater": "View in Theater",
-  "Undock": "Undock",
-  "ShowKeyboardLabel": "Keyboard",
   "ShowKeyboardTooltip": "Show Keyboard",
   "HideKeyboardTooltip": "Hide Keyboard",
-  "Size": "Size",
-  "Move": "Move",
   "EnableSpatialAudioTooltip": "Enable Spatial Audio",
   "DisableSpatialAudioTooltip": "Disable Spatial Audio",
   "AdditionalOptionsTooltip": "More Options",
   "ToggleCurvatureTooltip": "Toggle Curvature",
 
-  "Mute": "Mute",
-  "Unmute": "Unmute",
   "Mute_Headset": "Mute Headset",
   "Unmute_Headset": "Unmute Headset",
 
   "WelcomeToSteamVR": "Welcome to SteamVR",
   "LaunchSteamToFindGames": "Launch Steam to find and play games.",
 
-  "ShowSteamUI_Steam": "Open Steam Menu",
-  "ShowSteamUI_QAM": "Open Quick Access Menu",
 
-  "Chaperone_Bubble_Forbidden" : "Can't Hide Room View Outside the Play Area During VR Games.",
-  "Chaperone_Bubble_Create" : "Hide Room View",
-  "Chaperone_ReturnToPlayArea": "Return to the Play Area",
-  "Chaperone_CameraAutoEnabled": "Camera enabled outside playspace",
+  "Chaperone_CameraAutoEnabled": "Camera enabled: outside playspace",
+  "Chaperone_CameraAutoEnabled_TrackingLost": "Camera enabled: tracking lost",
+  "Chaperone_CameraAutoEnabled_ChaperoneLost": "Camera enabled: find or set up playspace",
 
   "RoomSetup_AdjustFloorHeight" : "Adjust Floor Height",
   "RoomSetup_AdjustFloorHeight_Details" : "Touch the floor (or use thumbstick) to adjust.",
@@ -129,7 +93,6 @@
   "Cancel" : "Cancel",
   "Accept" : "Accept",
   "Reset" : "Reset",
-  "Advanced" : "Advanced",
+  "Advanced" : "Advanced"
 
-  "Play": "Play"
 }

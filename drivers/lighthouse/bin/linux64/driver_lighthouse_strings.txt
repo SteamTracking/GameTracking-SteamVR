@@ -3024,6 +3024,7 @@ getppid
 getpriority
 getpwnam_r
 getrlimit
+getsockopt
 gettext
 gettimeofday
 getuid

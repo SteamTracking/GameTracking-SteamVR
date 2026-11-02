@@ -156,7 +156,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-13:51:51
+12:25:10
 1e+9999
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -318,6 +318,8 @@ FindFirstFileW
 FindNextFileW
 Format string parse failure
 FormatMessageA
+Found environment variable %s=1, but could not load renderdoc.dll
+Found environment variable %s=1. Loaded %s
 Found existing plugin %s. Not adding to the list
 FreeLibrary
 GetCurrentProcess
@@ -438,8 +440,8 @@ NoValidDisplays
 NoValidMotionEstimators
 NoValidRenderGraphs
 NotSupported
+Nov  2 2026
 NvAPI: Connected to renderdoc
-Oct 16 2026
 OpenEventA
 OpenFileMappingA
 OpenMutexA
@@ -490,6 +492,7 @@ Parsing of JSON string "%s" failed: %s\n
 PeekNamedPipe
 PhysicalDeviceMissingFeatures
 Predicting: %fms
+ProgramFiles
 QueryPerformanceCounter
 QueryPerformanceFrequency
 RENDERDOC API Not Found\n
@@ -506,6 +509,7 @@ RegCloseKey
 RegOpenKeyA
 RegQueryValueExA
 ReleaseMutex
+RenderDoc
 ResetEvent
 ResourceCreationFailed
 RtlCaptureContext

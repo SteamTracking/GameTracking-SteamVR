@@ -1375,6 +1375,8 @@ Flextronics
 Found Direct Mode Display\n
 Found default audio playback device %s, VID:%04x/PID:%04x %s\n
 Found default audio recording device %s, VID:%04x/PID:%04x %s\n
+Found environment variable %s=1, but could not load renderdoc.dll
+Found environment variable %s=1. Loaded %s
 Found per-device override of unhandled type %d\n
 Found two different DeviceIDs for monitor %s: %s and %s\n
 Found two slave bases (one oblivious cable sync slave and one confused optical sync slave).\n
@@ -1957,6 +1959,7 @@ PerspectiveCamera
 Positional emitter description not found.
 Primitive
 Pro Audio
+ProgramFiles
 PropVariantClear
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol message serialized itself in invalid fashion.
@@ -1996,6 +1999,7 @@ ReleaseLast
 ReleaseMessage
 RemindVersion
 RemoveLast
+RenderDoc
 RenderDoc connected\n
 Repeated fields can't have default values.
 ReplaceFileW

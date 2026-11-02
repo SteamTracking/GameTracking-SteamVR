@@ -1,6 +1,4 @@
 {
-   "action_manifest_version" : 0,
-   "alias_info" : {},
    "bindings" : {
       "/actions/main" : {
          "skeleton" : [
@@ -125,13 +123,7 @@
          ]
       }
    },
-   "controller_type" : "frame_controller",
+   "controller_type" : "knuckles",
    "description" : "(simulating Valve Index)",
-   "name" : "ArkhamVR Steam Frame Bindings",
-	"options": {
-		"mirror_actions": false,
-		"simulated_controller_type": "knuckles",
-		"simulate_rendermodel": "name_only"
-	},
-   "simulated_actions" : []
+   "name" : "ArkhamVR Steam Frame Bindings"
 }

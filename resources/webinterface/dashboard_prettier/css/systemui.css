@@ -520,4 +520,100 @@
   opacity: 0;
   transition: opacity 1000ms ease-out;
 }
+.vrlinkeyetracking_prompt_PromptContainer_2_Hst {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+    155.42% 100% at 0% 0%,
+    #060a0e 0 0%,
+    #0e141b 100%
+  );
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 28px 72px;
+  color: #fff;
+  font-size: 28px;
+}
+.vrlinkeyetracking_prompt_CloseButton_IEQDj {
+  position: absolute;
+  top: 30.8px;
+  right: 22px;
+  display: flex;
+  padding: 4px;
+  border-radius: 6px;
+  color: #67707b;
+}
+.vrlinkeyetracking_prompt_CloseButton_IEQDj:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.vrlinkeyetracking_prompt_CloseButton_IEQDj svg {
+  width: 20px;
+  height: 20px;
+}
+.vrlinkeyetracking_prompt_Body_2i0t8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6ch;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.vrlinkeyetracking_prompt_Body_2i0t8 svg {
+  width: 33.6px;
+  height: 33.6px;
+  flex-shrink: 0;
+}
+.vrlinkeyetracking_prompt_SettingHint_2FyGe {
+  max-width: 900px;
+  text-align: center;
+}
+.vrlinkeyetracking_prompt_ButtonRow_2FzzX {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+}
+.vrlinkeyetracking_prompt_TimeoutTrack_J87JE {
+  width: 60%;
+  height: 4px;
+  margin-top: 24px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.vrlinkeyetracking_prompt_TimeoutFill_3aNMF {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 1s linear;
+}
+.vrlinkeyetracking_prompt_ButtonControl_17i86 {
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: #23262e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 24px;
+}
+.vrlinkeyetracking_prompt_ButtonControl_17i86:hover {
+  background: #3d4450;
+}
+.vrlinkeyetracking_prompt_ButtonControl_17i86:active {
+  background: #67707b;
+}
+.vrlinkeyetracking_prompt_DefaultChoice_3kuZl {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+.vrlinkeyetracking_prompt_Colorful_SxEpI {
+  background: #0056d6;
+}
+.vrlinkeyetracking_prompt_Colorful_SxEpI:hover {
+  background: #1a9fff;
+}
+.vrlinkeyetracking_prompt_Colorful_SxEpI:active {
+  background: #0bf;
+}
 /*# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/css/systemui.css.map*/

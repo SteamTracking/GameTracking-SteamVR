@@ -22,29 +22,51 @@ log () {
     ( echo "${BASENAME}[$$]: $*" >&2 ) || :
 }
 
-# Require LDLP scout runtime environment
+RUNTIME_ID=$(grep -oP '(?<=^ID=).+' /etc/os-release | tr -d '"')
+if [ "${RUNTIME_ID}" == steamrt -a -z "${STEAM_RUNTIME-}" ]; then
+	log "====="
+	log "WARNING: We are in the steam runtime but we don't have a runtime path set. We'll probably fail to set our priority!"
+	log "This will happen if you run vrstartup.sh outside of Steam when using the SteamRT3 client, as we fail to properly escape."
+	log " "
+	log "If you see a 'Failed to set proc cap: -1' below, you will need to launch vrstartup.sh through Steam to ensure all environment variables are properly set."
+	log "====="
+fi
+
 # SteamVR is launching us via steam-runtime-launch-client, which is runtime neutral, so we are expected to have to relaunch
 if [ "${VALVE_SKIP_RUNTIME_SAFETY-0}" = "1" ]; then
 	log "WARNING: Skipping runtime relaunch (VALVE_SKIP_RUNTIME_SAFETY enabled)"
 elif [ -n "${STEAM_RUNTIME-}" ]; then
-	log "Detected scout LDLP runtime."
-	# We can only start logging once we have srt-logger availability, so we miss capturing the first LDLP relaunch
+	log "Detected that we're in the scout LDLP runtime: ${STEAM_RUNTIME}"
 	logger="${STEAM_RUNTIME}/amd64/usr/bin/srt-logger"
 	# continue
 elif [[ "${ARCH}" == x86_64* ]]; then
-	log "Relaunch under scout LDLP runtime."
-	# Prefer the LegacySteamRuntime compat tool (the supported modern path for
-	# scout LDLP) if it is installed, and fall back to the legacy location
-	# under ~/.steam/root otherwise.
-	LEGACY_RUNTIME="${STEAM_BASE_FOLDER}/steamapps/common/LegacySteamRuntime/legacy-steam-runtime"
-	if [ -x "${LEGACY_RUNTIME}" ]; then
+	LEGACY_RUNTIME="${STEAM_BASE_FOLDER}/steamapps/common/LegacySteamRuntime/steam-runtime/run.sh"
+
+	if [ ! -x ${LEGACY_RUNTIME} ]; then
+		log "Did not find LegacySteamRuntime in the default place, checking all libraries..."
+		for i in ${STEAM_COMPAT_LIBRARY_PATHS//:/}
+		do
+			TEST_RUNTIME="${i}/common/LegacySteamRuntime/steam-runtime/run.sh"
+			if [ -x ${TEST_RUNTIME} ]; then
+				LEGACY_RUNTIME=$TEST_RUNTIME
+				break
+			fi
+		done
+	fi
+
+	if [ -x "${LEGACY_RUNTIME}" ]; then 
+		log "Relaunching under Legacy runtime (to allow us to gain the CAP_SYS_NICE bit)"
 		log exec "${LEGACY_RUNTIME}" "$0" "$@"
 		exec "${LEGACY_RUNTIME}" "$0" "$@"
+	elif [ -f "$HOME/.steam/root/ubuntu12_32/steam-runtime/version.txt" ]; then
+		log "No LegacySteamRuntime install found, but we're not using the RT3 client, falling back to the built-in legacy runtime."
+		log exec "$HOME/.steam/root/ubuntu12_32/steam-runtime/run.sh" "$0" "$@"
+		exec "$HOME/.steam/root/ubuntu12_32/steam-runtime/run.sh" "$0" "$@"
+	else
+		# This means that the Steam client is SteamRT3, and LegacySteamRuntime isn't installed.
+		log "ERROR: We've seemingly been relaunched under the SteamRT3 legacy stub script without either Scout or Legacy runtimes installed, which means we're running directly on the host. Search for 'Legacy Steam Runtime' in your Steam library and install it to correct this."
+		exit 1
 	fi
-	log "LegacySteamRuntime compat tool not found at ${LEGACY_RUNTIME}, falling back to legacy scout path. This may fail under newer Steam client configurations."
-	log exec "$HOME/.steam/root/ubuntu12_32/steam-runtime/run.sh" "$0" "$@"
-	exec "$HOME/.steam/root/ubuntu12_32/steam-runtime/run.sh" "$0" "$@"
-	# unreachable
 else
 	# unexpected
 	log "No steam runtime detected, unknown arch ${ARCH} - continuing."

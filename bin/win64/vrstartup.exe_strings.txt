@@ -16,6 +16,8 @@
 -hang
 -keepalive
 -mutesettings
+-renderdoc
+-renderdoc: SteamVR is already running, so the running vrserver and vrcompositor won't load RenderDoc. Exit SteamVR first.
 -restart
 -shutdown
 -startupinfo
@@ -134,7 +136,7 @@
 /user/waist
 /user/wrist/left
 /user/wrist/right
-13:51:51
+12:25:10
 1e+9999
 : exception thrown in JSON library
 <unknown>
@@ -390,7 +392,7 @@ None
 Not Initialized (109)
 Not available to watchdog apps (131)
 Not starting vrserver for background app (121)
-Oct 16 2026
+Nov  2 2026
 On laptop, HMD detected over USB, but Monitor not found (213)
 OpenProcess
 Out of thread local storage!\n
@@ -422,6 +424,8 @@ STEAMVR_DISABLE_CRASH_REPORTING
 STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_GPUVIS_ON_ASSERT
 STEAMVR_VKVALIDATION
+STEAMVR_VRCOMPOSITOR_RENDERDOC
+STEAMVR_VRSERVER_RENDERDOC
 See 
 SetEnvironmentVariableA
 SetEvent
@@ -993,6 +997,7 @@ vietnamese
 vrclient Shared Lib Not Found (102)
 vrcombined_log.previous.txt
 vrcombined_log.txt
+vrcompositor.exe
 vrcompositor_mailbox
 vrpathreg
 vrserver

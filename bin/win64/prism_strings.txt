@@ -628,6 +628,8 @@ Failed to write event process handle after connecting because %s\n
 Foreign timelines unsupported. Leaking resource.
 Format string parse failure
 FormatMessageA
+Found environment variable %s=1, but could not load renderdoc.dll
+Found environment variable %s=1. Loaded %s
 Frame Hallucination Descriptor Allocator
 Frame Hallucination Pipeline
 FrameHallucination-Frag
@@ -816,6 +818,7 @@ Prism_Compute
 Prism_Graphics
 Prism_RPS: %s
 ProcessTransition(graph, nodeId, resState.access, currAccess.access, currAccess.resourceId, currAccess.range)
+ProgramFiles
 QueryPerformanceCounter
 QueryPerformanceFrequency
 R10G10B10A2_TYPELESS
@@ -933,6 +936,7 @@ RegCloseKey
 RegOpenKeyA
 RegQueryValueExA
 ReleaseMutex
+RenderDoc
 RenderGraph::AddPhase:
 RenderGraphSignature::Create(m_arena, pSignatureDesc, &pSignature)
 RenderTargetBlend
