@@ -1,4 +1,4 @@
-var CLSTAMP = "11196359";
+var CLSTAMP = "11214286";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [305],
   {
@@ -6702,7 +6702,7 @@ var CLSTAMP = "11196359";
           }),
           l.createElement(_.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_WebpackBuildTime"),
-            value: new Date(1793651043e3).toLocaleString() + "",
+            value: new Date(1793996672e3).toLocaleString() + "",
           }),
           l.createElement(_.WZ, {
             label: (0, p.we)("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -7665,6 +7665,8 @@ var CLSTAMP = "11196359";
           detents: void 0 !== e ? [e] : void 0,
           valueStyleVariant: f.Te.OnHandle,
           renderValue: (e) => e.toFixed(0),
+          minLabel: (25).toString(),
+          maxLabel: (350).toString(),
         });
       }
       const $e = (0, o.PA)(() => {
@@ -7728,6 +7730,8 @@ var CLSTAMP = "11196359";
           detents: void 0 !== r ? [r] : void 0,
           valueStyleVariant: f.Te.OnHandle,
           renderValue: (e) => e.toFixed(0),
+          minLabel: null == e ? void 0 : e.toFixed(0),
+          maxLabel: null == t ? void 0 : t.toFixed(0),
         });
       }
       const Ze = (0, o.PA)(() => {
@@ -14845,11 +14849,13 @@ var CLSTAMP = "11196359";
               }),
             ),
       );
-      class A extends s.Component {
+      let A = class extends s.Component {
         constructor(e) {
           super(e);
         }
         render() {
+          if (g.HR.settings.get("/settings/steamvr/enableSimplifiedShaders"))
+            return null;
           const e =
             null === VRHTML || void 0 === VRHTML
               ? void 0
@@ -14878,7 +14884,8 @@ var CLSTAMP = "11196359";
             visibility: _.Z3.Advanced,
           });
         }
-      }
+      };
+      A = (0, n.Cg)([i.PA], A);
       class O extends s.Component {
         constructor(e) {
           super(e);
@@ -16041,6 +16048,10 @@ var CLSTAMP = "11196359";
               "/user/head",
               o.fD8.Hmd_AllowSupersampleFiltering_Bool,
             );
+          VRHTML.VRProperties.GetBoolProperty(
+            "/user/head",
+            o.fD8.Hmd_SupportsGammaBlackMode_Bool,
+          );
           return s.createElement(
             s.Fragment,
             null,
@@ -17784,6 +17795,8 @@ var CLSTAMP = "11196359";
               "Hmd_CameraSettingsModel_Int32"),
             (e[(e.Hmd_EnablePerAppFPS_Bool = 2133)] =
               "Hmd_EnablePerAppFPS_Bool"),
+            (e[(e.Hmd_SupportsGammaBlackMode_Bool = 2134)] =
+              "Hmd_SupportsGammaBlackMode_Bool"),
             (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
               "DriverRequestedMuraCorrectionMode_Int32"),
             (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =

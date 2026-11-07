@@ -1513,6 +1513,8 @@ var CLSTAMP = "steamdb";
                 "Hmd_CameraSettingsModel_Int32"),
               (_[(_.Hmd_EnablePerAppFPS_Bool = 2133)] =
                 "Hmd_EnablePerAppFPS_Bool"),
+              (_[(_.Hmd_SupportsGammaBlackMode_Bool = 2134)] =
+                "Hmd_SupportsGammaBlackMode_Bool"),
               (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
                 "DriverRequestedMuraCorrectionMode_Int32"),
               (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -30573,11 +30575,13 @@ var CLSTAMP = "steamdb";
                 }),
               ),
         );
-        class _ extends _.Component {
+        let _ = class extends _.Component {
           constructor(_) {
             super(_);
           }
           render() {
+            if (_.settings.get("/settings/steamvr/enableSimplifiedShaders"))
+              return null;
             const _ =
               null === VRHTML || void 0 === VRHTML
                 ? void 0
@@ -30618,7 +30622,8 @@ var CLSTAMP = "steamdb";
               visibility: _.Advanced,
             });
           }
-        }
+        };
+        _ = (0, _._)([_._], _);
         class _ extends _.Component {
           constructor(_) {
             super(_);
@@ -31869,6 +31874,10 @@ var CLSTAMP = "steamdb";
                 "/user/head",
                 _.Hmd_AllowSupersampleFiltering_Bool,
               );
+            VRHTML.VRProperties.GetBoolProperty(
+              "/user/head",
+              _.Hmd_SupportsGammaBlackMode_Bool,
+            );
             return _.createElement(
               _.Fragment,
               null,
@@ -54973,7 +54982,7 @@ var CLSTAMP = "steamdb";
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1793651043e3).toLocaleString() + "",
+              value: new Date(1793996673e3).toLocaleString() + "",
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -56473,6 +56482,8 @@ var CLSTAMP = "steamdb";
             detents: void 0 !== _ ? [_] : void 0,
             valueStyleVariant: _.OnHandle,
             renderValue: (_) => _.toFixed(0),
+            minLabel: (25).toString(),
+            maxLabel: (350).toString(),
           });
         }
         const _ = (0, _._)(() => {
@@ -56537,6 +56548,8 @@ var CLSTAMP = "steamdb";
             detents: void 0 !== _ ? [_] : void 0,
             valueStyleVariant: _.OnHandle,
             renderValue: (_) => _.toFixed(0),
+            minLabel: null == _ ? void 0 : _.toFixed(0),
+            maxLabel: null == _ ? void 0 : _.toFixed(0),
           });
         }
         const _ = (0, _._)(() => {

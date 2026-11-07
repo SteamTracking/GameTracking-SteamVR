@@ -7604,9 +7604,9 @@ c:\buildslave\steamvr_rel_win64\build\src\vrclient\skeletalinpututils.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrchaperoneclient.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrclientcore.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1595
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1851
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:2711
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1599
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:1855
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:2715
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorclient.cpp:468
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrcompositorsharedtextures.cpp:3053
@@ -7615,8 +7615,8 @@ c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrdebug.cpp:49
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrdebug.cpp:60
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrinput.cpp:1609
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrmailboxclient.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1192
-c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1223
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1193
+c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:1224
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vroverlay.cpp:979
 c:\buildslave\steamvr_rel_win64\build\src\vrclient\vrsteamprivate.cpp
 c:\fake_app_container_config_path

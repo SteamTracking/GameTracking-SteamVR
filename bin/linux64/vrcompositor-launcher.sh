@@ -44,7 +44,8 @@ elif [[ "${ARCH}" == x86_64* ]]; then
 
 	if [ ! -x ${LEGACY_RUNTIME} ]; then
 		log "Did not find LegacySteamRuntime in the default place, checking all libraries..."
-		for i in ${STEAM_COMPAT_LIBRARY_PATHS//:/}
+		COMPAT_LIBRARY_PATHS="${STEAM_COMPAT_LIBRARY_PATHS-}"
+		for i in ${COMPAT_LIBRARY_PATHS//:/ }
 		do
 			TEST_RUNTIME="${i}/common/LegacySteamRuntime/steam-runtime/run.sh"
 			if [ -x ${TEST_RUNTIME} ]; then

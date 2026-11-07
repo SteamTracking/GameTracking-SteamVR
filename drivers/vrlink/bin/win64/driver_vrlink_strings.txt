@@ -365,6 +365,7 @@ $0option $1;\n
 .?AV<lambda_18a314cd491848b72f3b3e9798065abb>@@
 .?AV<lambda_18c16c7f54b6ef613ac8ab67a502910f>@@
 .?AV<lambda_1db60d98261e2e5ed663866066a32dcb>@@
+.?AV<lambda_1e8971f6e9ecb6c4f2e8923bace2093c>@@
 .?AV<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@
 .?AV<lambda_20e1bdb94718060666138843bb694dab>@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
@@ -381,7 +382,6 @@ $0option $1;\n
 .?AV<lambda_60cdc4cb8ee60094e6a0c866d2c0a211>@@
 .?AV<lambda_61a88cca90780c9ba5f69c4b0104d084>@@
 .?AV<lambda_68b991d696b8e2a81f80a7b175334808>@@
-.?AV<lambda_6e1e12d54acee9e31fde62e151aea9d9>@@
 .?AV<lambda_6ec17f223e26048c035c2b90927c525e>@@
 .?AV<lambda_6ee8ddb1e705c854f8d4f87755c0223f>@@
 .?AV<lambda_72dc3f5b1a8101cc2c468d2120a50486>@@
@@ -389,7 +389,6 @@ $0option $1;\n
 .?AV<lambda_758218a6081bd8528f1dbb1a976afb78>@@
 .?AV<lambda_7cb3ae86a555bd1884286d99351cb75a>@@
 .?AV<lambda_80ca4e5c2af80191d4f999830d198e9f>@@
-.?AV<lambda_823f80d24954081c7c7b42a3ad040a14>@@
 .?AV<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@
 .?AV<lambda_989ad3179003eb4da9febba03c4fa4ec>@@
 .?AV<lambda_99840cb531ef870a4cd596a96a725af6>@@
@@ -419,6 +418,7 @@ $0option $1;\n
 .?AV<lambda_f1435df8ebe7eb4c29dd8ade9d516875>@@
 .?AV<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@
 .?AV<lambda_f6b5d47df092c684e925186f68bd5c46>@@
+.?AV<lambda_f6b6588b8118f97bd3a0ae7e8fc492d4>@@
 .?AV<lambda_f73c3f420ca6d0536f438c9140780aed>@@
 .?AV<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@
 .?AV?$TypeInfoT@VCAnimResource@@@Detail@Reflection@@
@@ -458,6 +458,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_18a314cd491848b72f3b3e9798065abb>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_18c16c7f54b6ef613ac8ab67a502910f>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_1db60d98261e2e5ed663866066a32dcb>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_1e8971f6e9ecb6c4f2e8923bace2093c>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@HPEAEHG_K_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_20e1bdb94718060666138843bb694dab>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
@@ -474,7 +475,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_60cdc4cb8ee60094e6a0c866d2c0a211>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_61a88cca90780c9ba5f69c4b0104d084>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_68b991d696b8e2a81f80a7b175334808>@@X$$V@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_6e1e12d54acee9e31fde62e151aea9d9>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_6ec17f223e26048c035c2b90927c525e>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_6ee8ddb1e705c854f8d4f87755c0223f>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_72dc3f5b1a8101cc2c468d2120a50486>@@XAEBVValue@Json@@@std@@
@@ -482,7 +482,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_758218a6081bd8528f1dbb1a976afb78>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7cb3ae86a555bd1884286d99351cb75a>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_80ca4e5c2af80191d4f999830d198e9f>@@XW4ValueTransportID@@_N@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_823f80d24954081c7c7b42a3ad040a14>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_989ad3179003eb4da9febba03c4fa4ec>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_99840cb531ef870a4cd596a96a725af6>@@X$$V@std@@
@@ -512,6 +511,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_f1435df8ebe7eb4c29dd8ade9d516875>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f6b5d47df092c684e925186f68bd5c46>@@X_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_f6b6588b8118f97bd3a0ae7e8fc492d4>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f73c3f420ca6d0536f438c9140780aed>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V?$_Binder@U_Unforced@std@@P8CVRMailbox@@EAAXAEBVValue@Json@@@ZPEAV3@AEBU?$_Ph@$00@2@@std@@XAEBVValue@Json@@@std@@
@@ -4735,7 +4735,7 @@ ZUINT64
 [SVLFEC] Saw a re-accept in InternalAcceptFrameFromRX.
 [SVLFEC] accepting a frame for submission without metadata [ %d ]
 [SVLFEC] received late metadata for frame [ %d ]
-[SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i
+[SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
 [SVLS] ResetVideoStream
 [SVLServer] Switched active controller driver to: %i
@@ -5384,16 +5384,16 @@ c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_da
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1104
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1116
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:769
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3092
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3253
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3372
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3099
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3260
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3379
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1355
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1388
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1406
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1430
 cACertificate
 cAoption requires an argument -- %c
 cAudBufAvg

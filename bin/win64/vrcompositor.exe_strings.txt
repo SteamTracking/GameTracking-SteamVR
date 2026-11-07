@@ -386,7 +386,6 @@ $0option $1;\n
 .?AV<lambda_90fc3535dc7c0cc464257484bcfcd68b>@@
 .?AV<lambda_929ccfb98ae45cb471ca2ff43621385c>@@
 .?AV<lambda_97e897445855b5c257ab424cdd8c8578>@@
-.?AV<lambda_9cd9d7a35cb7e3ff03c03e1ffdf7880e>@@
 .?AV<lambda_a4a964ec4ce785b696b1db23877b2efa>@@
 .?AV<lambda_a5cdb1df8115f3f7ab134ea4d013146d>@@
 .?AV<lambda_a8830cb22678dec10d58e0cad1160c50>@@
@@ -396,6 +395,7 @@ $0option $1;\n
 .?AV<lambda_b6a49a309ad208974985388b8cfa7310>@@
 .?AV<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@
 .?AV<lambda_b999e20ffa6154705556996545c644f8>@@
+.?AV<lambda_c55479a671d6975aa15ff844b9798985>@@
 .?AV<lambda_c64c1a9cc02f8aeec11a8ac013daf78e>@@
 .?AV<lambda_c86511a2709f120373415027cb7bae9a>@@
 .?AV<lambda_d63a6a0b02fe18ae73a4fbbf54ba63e0>@@
@@ -469,7 +469,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_90fc3535dc7c0cc464257484bcfcd68b>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_929ccfb98ae45cb471ca2ff43621385c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_97e897445855b5c257ab424cdd8c8578>@@XAEBVValue@Json@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_9cd9d7a35cb7e3ff03c03e1ffdf7880e>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a4a964ec4ce785b696b1db23877b2efa>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a5cdb1df8115f3f7ab134ea4d013146d>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a8830cb22678dec10d58e0cad1160c50>@@X$$V@std@@
@@ -479,6 +478,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_b6a49a309ad208974985388b8cfa7310>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b999e20ffa6154705556996545c644f8>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_c55479a671d6975aa15ff844b9798985>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c64c1a9cc02f8aeec11a8ac013daf78e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_c86511a2709f120373415027cb7bae9a>@@_NAEAUVRFocusEntry_t@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_d63a6a0b02fe18ae73a4fbbf54ba63e0>@@XAEBVValue@Json@@@std@@
@@ -1225,8 +1225,8 @@ $0option $1;\n
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
+11:59:33
 123456789
-12:25:10
 1e+9999
 3333
 3333UUUU
@@ -3038,7 +3038,7 @@ Not starting vrserver for background app (121)
 Not writing %s because the texture was null
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notification mailbox init failed with %d\n
-Nov  2 2026
+Nov  6 2026
 Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:
@@ -5387,31 +5387,31 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\Retail\win64\2017\vrcompo
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\framemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\geometry.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10231
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10442
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10655
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10922
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11052
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12132
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14245
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14255
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14403
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15043
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15068
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15237
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20579
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21789
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22493
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23445
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23756
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4531
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5435
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5447
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10301
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10512
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10725
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10992
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11123
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12203
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14316
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14326
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14474
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15114
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15139
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15308
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20650
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21860
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22564
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23516
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23837
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4557
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5461
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5473
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:559
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6250
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8170
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8278
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8952
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6276
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8196
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8304
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8978
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\lasermouse.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:430
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:480
@@ -5425,8 +5425,8 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\simpledraw.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp:37
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1012
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1912
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1013
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1951
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:33
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:334
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1090
@@ -5437,7 +5437,7 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1722
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2068
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:247
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:458
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5873
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5881
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:827
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2182
@@ -5629,6 +5629,7 @@ driver.vrresources
 driver_
 driver_defaults.vrsettings
 driver_hmd
+driver_hmd/eyetracking
 driver_holographic
 driver_lighthouse
 driver_null
@@ -5773,6 +5774,7 @@ fwrite
 gamescope.gamescope-
 gazeDepMipgenEnable
 gazeDepReprojectEnable2
+gaze_overlay_fixation
 generic-geo
 german
 getDeviceProperty returned empty\n

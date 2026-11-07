@@ -325,11 +325,11 @@ $ORIGIN/../../../../bin/linux64
 /data/src/common/vrcore/src/ipcposix.cpp
 /data/src/common/vrcore/src/logbuffer.cpp
 /data/src/common/vrcore/src/vripcsharedstate.cpp
-/data/src/vrlink/common/SVLFEC.cpp:1104
+/data/src/vrlink/common/SVLFEC.cpp:1116
 /data/src/vrlink/common/SVLFEC.cpp:769
-/data/src/vrlink/driver_vrlink/hmd.cpp:3092
-/data/src/vrlink/driver_vrlink/hmd.cpp:3253
-/data/src/vrlink/driver_vrlink/hmd.cpp:3372
+/data/src/vrlink/driver_vrlink/hmd.cpp:3099
+/data/src/vrlink/driver_vrlink/hmd.cpp:3260
+/data/src/vrlink/driver_vrlink/hmd.cpp:3379
 /data/src/vrlink/driver_vrlink/hmdvulkan.cpp
 /data/src/vrlink/driver_vrlink/steamvrlink.cpp
 /data/src/vrlink/driver_vrlink/videovulkan.cpp
@@ -2340,7 +2340,7 @@ ZN13CommandThread8ShutdownEvEUlvE_
 [SVLFEC] Saw a re-accept in InternalAcceptFrameFromRX.
 [SVLFEC] accepting a frame for submission without metadata [ %d ]
 [SVLFEC] received late metadata for frame [ %d ]
-[SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i
+[SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
 [SVLS] ResetVideoStream
 [SVLServer] Switched active controller driver to: %i

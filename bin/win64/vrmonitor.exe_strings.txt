@@ -803,7 +803,7 @@ $0option $1;\n
 0x%llx
 100%
 1000
-12:25:10
+11:59:33
 1DoAcquireData()
 1DoInit()
 1DoParseString( const QString & )
@@ -5587,7 +5587,7 @@ Not yet implemented
 NotReady
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing set.
-Nov  2 2026
+Nov  6 2026
 Null element passed
 NumDroppedFrames
 NumFramePresents

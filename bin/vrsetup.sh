@@ -40,6 +40,20 @@ function SteamVRLauncherSetup()
 	if [ -z "${STEAM_RUNTIME-}" ]; then
 		log "Relaunching under scout LDLP runtime."
 		LEGACY_RUNTIME="${STEAM_BASE_FOLDER}/steamapps/common/LegacySteamRuntime/legacy-steam-runtime"
+
+		if [ ! -x ${LEGACY_RUNTIME} ]; then
+			log "Did not find LegacySteamRuntime in the default place, checking all libraries..."
+			COMPAT_LIBRARY_PATHS="${STEAM_COMPAT_LIBRARY_PATHS-}"
+			for i in ${COMPAT_LIBRARY_PATHS//:/ }
+			do
+				TEST_RUNTIME="${i}/common/LegacySteamRuntime/legacy-steam-runtime"
+				if [ -x ${TEST_RUNTIME} ]; then
+					LEGACY_RUNTIME=$TEST_RUNTIME
+					break
+				fi
+			done
+		fi
+
 		if [ -x "${LEGACY_RUNTIME}" ]; then
 			log exec "${LEGACY_RUNTIME}" "$0" "$@"
 			exec "${LEGACY_RUNTIME}" "$0" "$@"

@@ -199,6 +199,7 @@ QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryServiceConfigW
 RPCRT4.dll
+RSDS*f?F
 RaiseException
 RegCloseKey
 RegEnumValueW
@@ -1041,3 +1042,4 @@ vkWriteMicromapsPropertiesEXT
 vulkan-1.dll
 wcsrchr
 wcsstr
+~3DDh,

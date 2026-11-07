@@ -766,9 +766,9 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/vrchaperoneclient.cpp
 /data/src/vrclient/vrclientcore.cpp
 /data/src/vrclient/vrcompositorclient.cpp
-/data/src/vrclient/vrcompositorclient.cpp:1595
-/data/src/vrclient/vrcompositorclient.cpp:1851
-/data/src/vrclient/vrcompositorclient.cpp:2711
+/data/src/vrclient/vrcompositorclient.cpp:1599
+/data/src/vrclient/vrcompositorclient.cpp:1855
+/data/src/vrclient/vrcompositorclient.cpp:2715
 /data/src/vrclient/vrcompositorclient.cpp:468
 /data/src/vrclient/vrcompositorsharedtextures.cpp
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2678
@@ -781,8 +781,8 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/vrdebug.cpp:60
 /data/src/vrclient/vrinput.cpp:1609
 /data/src/vrclient/vrmailboxclient.cpp
-/data/src/vrclient/vroverlay.cpp:1192
-/data/src/vrclient/vroverlay.cpp:1223
+/data/src/vrclient/vroverlay.cpp:1193
+/data/src/vrclient/vroverlay.cpp:1224
 /data/src/vrclient/vroverlay.cpp:979
 /data/src/vrclient/vrsteamprivate.cpp
 /dev/null

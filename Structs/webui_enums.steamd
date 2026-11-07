@@ -798,7 +798,35 @@ enum UnnamedEnumc7f1efe7b096147c
 	VR = 3;
 }
 
-enum UnnamedEnumcaeaec4a6b6b4720
+enum UnnamedEnumce47e025623bf115
+{
+	Unknown = 0;
+	NVIDIA = 1;
+	AMD = 2;
+}
+
+enum UnnamedEnumd100a79ca34972c3
+{
+	ButtonPress_0 = 0;
+	ButtonPress_1 = 1;
+	ButtonPress_2 = 2;
+	ButtonPress_3 = 3;
+	CouldntFindSystemOverlay = 4;
+	CouldntFindOrCreateClientOverlay = 5;
+	ApplicationQuit = 6;
+}
+
+enum UnnamedEnumd2b4522526c2b206
+{
+	Dashboard = 1;
+	LeftHand = 2;
+	RightHand = 3;
+	World = 4;
+	Theater = 5;
+	Boot = 6;
+}
+
+enum UnnamedEnumd2f8ac2fd0476c40
 {
 	Invalid = 0;
 	TrackingSystemName_String = 1000;
@@ -949,6 +977,7 @@ enum UnnamedEnumcaeaec4a6b6b4720
 	Hmd_SupportsChromaKeyPassthrough_Bool = 2119;
 	Hmd_CameraSettingsModel_Int32 = 2122;
 	Hmd_EnablePerAppFPS_Bool = 2133;
+	Hmd_SupportsGammaBlackMode_Bool = 2134;
 	DriverRequestedMuraCorrectionMode_Int32 = 2200;
 	DriverRequestedMuraFeather_InnerLeft_Int32 = 2201;
 	DriverRequestedMuraFeather_InnerRight_Int32 = 2202;
@@ -1004,34 +1033,6 @@ enum UnnamedEnumcaeaec4a6b6b4720
 	SupportsInHMDRoomSetup_Bool = 11003;
 	VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004;
 	TrackedDeviceProperty_Max = 1000000;
-}
-
-enum UnnamedEnumce47e025623bf115
-{
-	Unknown = 0;
-	NVIDIA = 1;
-	AMD = 2;
-}
-
-enum UnnamedEnumd100a79ca34972c3
-{
-	ButtonPress_0 = 0;
-	ButtonPress_1 = 1;
-	ButtonPress_2 = 2;
-	ButtonPress_3 = 3;
-	CouldntFindSystemOverlay = 4;
-	CouldntFindOrCreateClientOverlay = 5;
-	ApplicationQuit = 6;
-}
-
-enum UnnamedEnumd2b4522526c2b206
-{
-	Dashboard = 1;
-	LeftHand = 2;
-	RightHand = 3;
-	World = 4;
-	Theater = 5;
-	Boot = 6;
 }
 
 enum UnnamedEnumd3dde09c34ccd726

@@ -1714,9 +1714,9 @@ $0option $1;\n
 1.2.5
 1/2/4/8/16-bit only
 11 4 22 44 44 22 444444
+11:59:33
 127.0.0.1
 127.0.0.1:
-12:25:10
 1e+9999
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 5I)7
@@ -3498,7 +3498,7 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 NotificationCount
 Notification_BasestationsTooFarApart
 Notification_Detected
-Nov  2 2026
+Nov  6 2026
 NumDroppedFrames
 NumDroppedFrames: %d\n
 NumDroppedFramesLoading
