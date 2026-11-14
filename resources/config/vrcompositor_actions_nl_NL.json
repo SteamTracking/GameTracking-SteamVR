@@ -7,8 +7,9 @@
 	"/actions/system/in/ToggleRoomView": "Kamerweergave wisselen",
 	"/actions/system/in/SystemButtonChord": "Systeemactiemodus",
 	"/actions/system/in/ShowPowerMenu": "Aan/uit",
-	"/actions/lasermouse/in/leftclick": "Linkermuisklik",
-	"/actions/lasermouse/in/rightclick": "Rechtermuisklik",
+	"/actions/lasermouse/in/leftclick": "Muisklik links",
+	"/actions/lasermouse/in/rightclick": "Muisklik rechts",
+	"/actions/lasermouse/in/middleclick": "Muisklik midden",
 	"/actions/lasermouse/in/lockmouseposition": "Muispositie vergrendelen",
 	"/actions/lasermouse/in/home": "Startpagina",
 	"/actions/lasermouse/in/back": "Terug",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Toetsenbordinvoer",
 	"/actions/system": "Systeemacties",
 	"/actions/scroll_discrete": "Scrollen met muiswiel",
-	"/actions/scroll_smooth": "Scrollen met trackpad"
+	"/actions/scroll_smooth": "Scrollen met trackpad",
+	"/actions/quickrecenter/in/Recenter": "Opnieuw centreren",
+	"/actions/roomsetup": "Kamerinstelling",
+	"/actions/roomsetup/in/FloorFineAdjust": "Fijnafstelling vloer",
+	"/actions/roomsetup/in/Accept": "Accepteren/volgende",
+	"/actions/roomsetup/in/Back": "Terug"
 }

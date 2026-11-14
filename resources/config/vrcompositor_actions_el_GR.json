@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Εμφάνιση μενού ενέργειας",
 	"/actions/lasermouse/in/leftclick": "Αριστερό πάτημα ποντικιού",
 	"/actions/lasermouse/in/rightclick": "Δεξί πάτημα ποντικιού",
+	"/actions/lasermouse/in/middleclick": "Μεσαίο πάτημα ποντικιού",
 	"/actions/lasermouse/in/lockmouseposition": "Κλείδωμα θέσης ποντικιού",
 	"/actions/lasermouse/in/home": "Μετάβαση στην αρχική",
 	"/actions/lasermouse/in/back": "Μετάβαση πίσω",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Είσοδος πληκτρολογίου",
 	"/actions/system": "Ενέργειες συστήματος",
 	"/actions/scroll_discrete": "Κύλιση σαν ροδέλα ποντικιού",
-	"/actions/scroll_smooth": "Κύλιση σαν Trackpad"
+	"/actions/scroll_smooth": "Κύλιση σαν Trackpad",
+	"/actions/quickrecenter/in/Recenter": "Επαναφορά στο κέντρο",
+	"/actions/roomsetup": "Ρύθμιση δωματίου",
+	"/actions/roomsetup/in/FloorFineAdjust": "Προσαρμογή ακριβείας του δαπέδου",
+	"/actions/roomsetup/in/Accept": "Αποδοχή/Επόμενο",
+	"/actions/roomsetup/in/Back": "Πίσω"
 }

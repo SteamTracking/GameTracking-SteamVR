@@ -684,9 +684,10 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {
         constructor() {
@@ -741,6 +742,23 @@ var CLSTAMP = "steamdb";
               })),
             _)
           : _;
+      }
+      function _(_, ..._) {
+        let _ = _.LocalizeString(_);
+        if (!_) return _;
+        let _,
+          _ = [],
+          _ = /(.*?)%(\d+)\$s/g,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), _.push(_[1]);
+          let _ = parseInt(_[2]);
+          _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
+        }
+        return (
+          _.push(__webpack_require__.substr(_)),
+          _.createElement(_.Fragment, null, ..._)
+        );
       }
       _.s_Date = new Date();
       const _ = new _();

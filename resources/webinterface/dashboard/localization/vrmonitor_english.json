@@ -196,6 +196,16 @@
 	"Settings_VRLink_EnableHmdAutoConnect_Explainer": "When SteamVR starts, invite your last used wireless headset to connect.",
 	"Settings_VRLink_HighlightFoveatedArea": "Highlight Foveated Areas (Debug)",
 	"Settings_VRLink_HighlightFoveatedArea_OnSolid": "On (Solid)",
+	"Settings_VRLink_RoomView": "Room View",
+	"Settings_VRLink_RoomViewTranslucentOnHeadset": "To enable chroma key settings here, select %1$s as the Room View Style in the headset's VR Settings > Camera. It's currently set to %2$s, which is incompatible.",
+	"Settings_VRLink_ChromaKeyMode": "Key Mode",
+	"Settings_VRLink_ChromaKeyMode_Auto": "Auto (Protect Content)",
+	"Settings_VRLink_ChromaKeyMode_ProtectContent": "Protect Content",
+	"Settings_VRLink_ChromaKeyMode_KeyContent": "Key Content",
+	"Settings_VRLink_ChromaKeyMode_Explainer": "%1$s shifts colors away from the key color so they don't become transparent. %2$s does not, allowing apps to show Room View simply by rendering the key color.",
+	"Settings_VRLink_ChromaKeyColor": "Key Color",
+	"Settings_VRLink_ChromaKeyThreshold": "Key Threshold",
+	"Settings_VRLink_ChromaKeyThreshold_Explainer": "Higher keys out fewer colors close to the key color, lower uses more colors for partial transparency.",
 	"Settings_VRLink_PreferredFoveatedSharpness": "Preferred Foveated Sharpness (System UI)",
 	"Settings_VRLink_PreferredFoveatedSharpness_MoreArea": "More Area",
 	"Settings_VRLink_PreferredFoveatedSharpness_MoreDetail": "More Detail",
@@ -551,5 +561,18 @@
 	"OpenXR_ApiLayers_Disabled": "Disabled",
 
 	"TestControllerTitle": "Testing Controller %1$s",
-	"TestController_NoController": "Turn on a controller to test it."
+	"TestController_NoController": "Turn on a controller to test it.",
+
+	"Settings_Accessibility": "Accessibility",
+	"Settings_PrismCorrection": "Prism Correction",
+	"Settings_PrismCorrection_Desc": "Shifts the image for each eye to match for people with double vision (diplopia). Enter the prism values from your prescription.",
+	"Settings_PrismCorrection_LeftEye": "Left Eye (OS)",
+	"Settings_PrismCorrection_RightEye": "Right Eye (OD)",
+	"Settings_PrismCorrection_Horizontal": "Horizontal",
+	"Settings_PrismCorrection_Vertical": "Vertical",
+	"Settings_PrismCorrection_BaseIn": "Base-In (BI)",
+	"Settings_PrismCorrection_BaseOut": "Base-Out (BO)",
+	"Settings_PrismCorrection_BaseUp": "Base-Up (BU)",
+	"Settings_PrismCorrection_BaseDown": "Base-Down (BD)",
+	"Settings_PrismCorrection_Amount": "%1$sΔ"
 }

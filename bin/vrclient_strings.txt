@@ -590,8 +590,8 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/common/vrcommon/vrrenderer/ivrrenderer.h
 /data/src/common/vrcommon/vrrenderer/sharedresource_linux.cpp
 /data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4679
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4763
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4727
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4817
 /data/src/common/vrcommon/vrsystem.cpp
 /data/src/common/vrcommon/vrsystemlayersharedstate.cpp
 /data/src/common/vrcommon/vulkan.cpp
@@ -765,10 +765,10 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/skeletalinpututils.cpp
 /data/src/vrclient/vrclientcore.cpp
 /data/src/vrclient/vrcompositorclient.cpp
-/data/src/vrclient/vrcompositorclient.cpp:1599
-/data/src/vrclient/vrcompositorclient.cpp:1855
-/data/src/vrclient/vrcompositorclient.cpp:2715
-/data/src/vrclient/vrcompositorclient.cpp:468
+/data/src/vrclient/vrcompositorclient.cpp:1605
+/data/src/vrclient/vrcompositorclient.cpp:1861
+/data/src/vrclient/vrcompositorclient.cpp:2722
+/data/src/vrclient/vrcompositorclient.cpp:470
 /data/src/vrclient/vrcompositorsharedtextures.cpp
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2678
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2874
@@ -1177,8 +1177,10 @@ $0rpc $1(.$2) returns (.$3)
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_chromakey_noise_floor
 /vrlink/steamvr/remote_client_refresh_rate_tx
 /vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_roomview_translucent
 /vrlink/steamvr/remote_scene_app_showing
 /vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
@@ -2663,6 +2665,7 @@ Compute Client
 Config path could not be located (111)
 Connect to VR Server Failed (301)
 ConnectToPrism
+Constant buffer %s is %u bytes, larger than k_unDummyConstantBufferSize (%u)
 Controller (%s) not available for input to chord, ignoring chord\n
 CopyIntoTexture
 Could not create an instance of 
@@ -2734,6 +2737,7 @@ DriverDirect_Acquired
 DriverDirect_NewFrame
 DriverDirect_Presented
 DriverManager %s load error %s
+DummyConstantBuffer
 Duplicate action '
 Duplicate key: '
 ERROR
@@ -2870,7 +2874,6 @@ Failed to allocate new VRCompositor semaphore\n
 Failed to bind client address for shared fd id: 0x%llx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to bind shared image memory\n
-Failed to change directory to '%s' when launching process '%s': %d
 Failed to convert event of type %s\n
 Failed to create CPU fallback texture, Vulkan/GL interop will not work.
 Failed to create OpenGL framebuffer for destination texture 0x%x.
@@ -2893,6 +2896,7 @@ Failed to create socket for shared fd: %d\n
 Failed to create swapchain image: Foveation not supported
 Failed to create swapchain image: Unsupported format: %d\n
 Failed to create sync texture.  Ensure application was built using DXGI 1.1 or later (i.e. Call CreateDXGIFactory1).\n
+Failed to create the dummy constant buffer
 Failed to create vertex shader module %s!\n
 Failed to create vk swapchain image: Unsupported number of faces: %d\n
 Failed to create vk swapchain image: failed to create %d\n
@@ -2901,7 +2905,6 @@ Failed to decode 'uri' for image[
 Failed to determine appropriate GL format for VkFormat: %d\n
 Failed to dup FD %d for plane %i.
 Failed to dup dmabuf fd for import\n
-Failed to execvp(): %s (%d)
 Failed to export vulkan memory for OGL interop\n
 Failed to export vulkan memory for interop\n
 Failed to export vulkan semaphore for OGL interop\n
@@ -4943,7 +4946,6 @@ Unable to find input '%s' in filter %s\n
 Unable to find path to current module, so vrserver can't be started\n
 Unable to find vrenv.sh at %s\n
 Unable to fork child to start process: %s\n
-Unable to fork grandchild to start process: %s\n
 Unable to get haptic vibration data\n
 Unable to get texture for overlay %s even though buffer should be big enough\n
 Unable to init (new) chaperone system\n
@@ -8977,6 +8979,7 @@ shaders/vulkan/fsharp_2d_ps.spv
 shaders/vulkan/fsharp_vr_depth_only_ps.spv
 shaders/vulkan/fsharp_vr_depth_ps.spv
 shaders/vulkan/fsharp_vr_ps.spv
+shaders/vulkan/fsharp_vr_se2_ps.spv
 shaders/vulkan/geom_aurora_vs.spv
 shaders/vulkan/geom_bounds_color_vs.spv
 shaders/vulkan/geom_curved_uvs_embedded_vs.spv
@@ -9213,6 +9216,7 @@ steam-runtime-launch-client
 steam.app.
 steam.overlay.
 steamMatchesHMDFramerate
+steam_input
 steam_overlay_handle
 steam_streaming_launch
 steamlink_openvr-overlay

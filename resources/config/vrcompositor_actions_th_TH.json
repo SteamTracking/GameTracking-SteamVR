@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "แสดงเมนูการเปิดทำงาน",
 	"/actions/lasermouse/in/leftclick": "คลิกเมาส์ซ้าย",
 	"/actions/lasermouse/in/rightclick": "คลิกเมาส์ขวา",
+	"/actions/lasermouse/in/middleclick": "คลิกเมาส์กลาง",
 	"/actions/lasermouse/in/lockmouseposition": "ล็อคตำแหน่งเมาส์",
 	"/actions/lasermouse/in/home": "ไปยังหน้าหลัก",
 	"/actions/lasermouse/in/back": "ย้อนกลับ",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "การป้อนผ่านคีย์บอร์ด",
 	"/actions/system": "คำสั่งระบบ",
 	"/actions/scroll_discrete": "การเลื่อนสไตล์ล้อเมาส์",
-	"/actions/scroll_smooth": "การเลื่อนสไตล์แทร็กแพด"
+	"/actions/scroll_smooth": "การเลื่อนสไตล์แทร็กแพด",
+	"/actions/quickrecenter/in/Recenter": "ปรับศูนย์อีกครั้ง",
+	"/actions/roomsetup": "การตั้งค่าห้อง",
+	"/actions/roomsetup/in/FloorFineAdjust": "การปรับระดับพื้นโดยละเอียด",
+	"/actions/roomsetup/in/Accept": "ยอมรับ/ถัดไป",
+	"/actions/roomsetup/in/Back": "ย้อนกลับ"
 }

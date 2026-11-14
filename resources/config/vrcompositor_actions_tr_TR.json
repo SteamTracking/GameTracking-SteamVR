@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Güç Menüsünü Göster",
 	"/actions/lasermouse/in/leftclick": "Sol Fare Tıklaması",
 	"/actions/lasermouse/in/rightclick": "Sağ Fare Tıklaması",
+	"/actions/lasermouse/in/middleclick": "Orta Fare Tıklaması",
 	"/actions/lasermouse/in/lockmouseposition": "Fare Konumu Kilitle",
 	"/actions/lasermouse/in/home": "Ana Sayfaya Git",
 	"/actions/lasermouse/in/back": "Geri Dön",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Klavye Girdisi",
 	"/actions/system": "Sistem Eylemleri",
 	"/actions/scroll_discrete": "Fare tekerleği gibi kaydırma",
-	"/actions/scroll_smooth": "Yön kumandası gibi kaydırma"
+	"/actions/scroll_smooth": "Yön kumandası gibi kaydırma",
+	"/actions/quickrecenter/in/Recenter": "Yeniden Ortala",
+	"/actions/roomsetup": "Oda Kurulumu",
+	"/actions/roomsetup/in/FloorFineAdjust": "İnce Zemin Ayarı",
+	"/actions/roomsetup/in/Accept": "Kabul Et/İleri",
+	"/actions/roomsetup/in/Back": "Geri"
 }

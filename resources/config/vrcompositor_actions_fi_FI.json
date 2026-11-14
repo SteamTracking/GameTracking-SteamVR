@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Näytä virranhallintavalikko",
 	"/actions/lasermouse/in/leftclick": "Hiiren vasen klikkaus",
 	"/actions/lasermouse/in/rightclick": "Hiiren oikea klikkaus",
+	"/actions/lasermouse/in/middleclick": "Hiiren keskipainikkeen klikkaus",
 	"/actions/lasermouse/in/lockmouseposition": "Lukitse hiiren sijainti",
 	"/actions/lasermouse/in/home": "Alkuun",
 	"/actions/lasermouse/in/back": "Takaisin",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Näppäimistösyöte",
 	"/actions/system": "Järjestelmätoiminnot",
 	"/actions/scroll_discrete": "Hiirirullan kaltainen vieritys",
-	"/actions/scroll_smooth": "Kosketuslevyn kaltainen vieritys"
+	"/actions/scroll_smooth": "Kosketuslevyn kaltainen vieritys",
+	"/actions/quickrecenter/in/Recenter": "Keskitä uudelleen",
+	"/actions/roomsetup": "Huoneen kartoitus",
+	"/actions/roomsetup/in/FloorFineAdjust": "Lattian hienosäätö",
+	"/actions/roomsetup/in/Accept": "Hyväksy / seuraava",
+	"/actions/roomsetup/in/Back": "Takaisin"
 }

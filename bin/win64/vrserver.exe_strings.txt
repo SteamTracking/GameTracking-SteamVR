@@ -1698,8 +1698,10 @@ $0option $1;\n
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_chromakey_noise_floor
 /vrlink/steamvr/remote_client_refresh_rate_tx
 /vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_roomview_translucent
 /vrlink/steamvr/remote_scene_app_showing
 /vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
@@ -1714,9 +1716,9 @@ $0option $1;\n
 1.2.5
 1/2/4/8/16-bit only
 11 4 22 44 44 22 444444
-11:59:33
 127.0.0.1
 127.0.0.1:
+12:33:34
 1e+9999
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 5I)7
@@ -3498,7 +3500,7 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 NotificationCount
 Notification_BasestationsTooFarApart
 Notification_Detected
-Nov  6 2026
+Nov 13 2026
 NumDroppedFrames
 NumDroppedFrames: %d\n
 NumDroppedFramesLoading

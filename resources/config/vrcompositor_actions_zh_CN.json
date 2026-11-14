@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "显示电源菜单",
 	"/actions/lasermouse/in/leftclick": "左鼠标点击",
 	"/actions/lasermouse/in/rightclick": "右鼠标点击",
+	"/actions/lasermouse/in/middleclick": "鼠标中键点击",
 	"/actions/lasermouse/in/lockmouseposition": "锁定鼠标位置",
 	"/actions/lasermouse/in/home": "返回主页",
 	"/actions/lasermouse/in/back": "返回",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "键盘输入",
 	"/actions/system": "系统操作",
 	"/actions/scroll_discrete": "鼠标滚轮式滚动",
-	"/actions/scroll_smooth": "触控板式滚动"
+	"/actions/scroll_smooth": "触控板式滚动",
+	"/actions/quickrecenter/in/Recenter": "重新居中",
+	"/actions/roomsetup": "房间设置",
+	"/actions/roomsetup/in/FloorFineAdjust": "地面微调",
+	"/actions/roomsetup/in/Accept": "接受/下一项",
+	"/actions/roomsetup/in/Back": "上一项"
 }

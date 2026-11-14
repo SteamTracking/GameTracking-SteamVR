@@ -353,7 +353,6 @@ $0option $1;\n
 .?AV<lambda_0e9c682e6668453b3ee5636a438a502c>@@
 .?AV<lambda_0edd1c727e57e3e264339f5f1157a7be>@@
 .?AV<lambda_120b3d875bfa3d97f012de77d5715840>@@
-.?AV<lambda_1632588a5637fc88bae8c08feee1c11c>@@
 .?AV<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@
 .?AV<lambda_2b6946a8720252ff5d48d62f7b228872>@@
 .?AV<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@
@@ -392,6 +391,7 @@ $0option $1;\n
 .?AV<lambda_aaaca516f2f91fc8de09669bb2e69866>@@
 .?AV<lambda_ad7047434dcfe52d943d224fd6ce987a>@@
 .?AV<lambda_b2db90e26f16d2df5d837253529ec0cb>@@
+.?AV<lambda_b536637ea5a386d57364b164c08ab496>@@
 .?AV<lambda_b6a49a309ad208974985388b8cfa7310>@@
 .?AV<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@
 .?AV<lambda_b999e20ffa6154705556996545c644f8>@@
@@ -436,7 +436,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_0e9c682e6668453b3ee5636a438a502c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_0edd1c727e57e3e264339f5f1157a7be>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_120b3d875bfa3d97f012de77d5715840>@@XAEBVValue@Json@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_1632588a5637fc88bae8c08feee1c11c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2b6946a8720252ff5d48d62f7b228872>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@XAEBVValue@Json@@@std@@
@@ -475,6 +474,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_aaaca516f2f91fc8de09669bb2e69866>@@XAEBUPendingOverlayLoad_t@vr@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ad7047434dcfe52d943d224fd6ce987a>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b2db90e26f16d2df5d837253529ec0cb>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_b536637ea5a386d57364b164c08ab496>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b6a49a309ad208974985388b8cfa7310>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b96d5fb16630f9a3cfc4c5059c1dea1e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_b999e20ffa6154705556996545c644f8>@@XAEBVValue@Json@@@std@@
@@ -1209,8 +1209,10 @@ $0option $1;\n
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_chromakey_noise_floor
 /vrlink/steamvr/remote_client_refresh_rate_tx
 /vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_roomview_translucent
 /vrlink/steamvr/remote_scene_app_showing
 /vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
@@ -1225,8 +1227,8 @@ $0option $1;\n
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
-11:59:33
 123456789
+12:33:34
 1e+9999
 3333
 3333UUUU
@@ -2304,7 +2306,7 @@ Failed to create splash overlay
 Failed to create swap chain!\n
 Failed to create system layer
 Failed to create texture: %s
-Failed to create the %dx%d stream view textures (foveated: %d)
+Failed to create the %dx%d stream view textures, outer %dx%d (foveated: %d)
 Failed to create tracked camera YUYV gamma decode texture map!\n
 Failed to create tracked camera constant buffer!\n
 Failed to create tracked camera decoded render texture (%d)
@@ -3038,7 +3040,7 @@ Not starting vrserver for background app (121)
 Not writing %s because the texture was null
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notification mailbox init failed with %d\n
-Nov  6 2026
+Nov 13 2026
 Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:
@@ -5387,31 +5389,31 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\Retail\win64\2017\vrcompo
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\framemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\geometry.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10301
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10512
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10514
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10725
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10992
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11123
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12203
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14316
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14326
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14474
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15114
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15139
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15308
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20650
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21860
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22564
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23516
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23837
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4557
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5461
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5473
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:559
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6276
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8196
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8304
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8978
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10938
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11221
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11366
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12446
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14535
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14545
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14693
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15333
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15358
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15527
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20871
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22081
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22788
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23799
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24120
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4770
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5674
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5686
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6489
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:659
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8409
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8517
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9191
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\lasermouse.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:430
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:480
@@ -5425,8 +5427,8 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\simpledraw.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\standaloneoverlays.cpp:37
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1013
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1951
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1018
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1956
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:33
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:334
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1090
@@ -5434,10 +5436,10 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1340
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1350
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1453
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1722
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2068
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2071
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:247
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:458
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5881
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5887
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:827
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2182
@@ -5476,7 +5478,6 @@ chevron-luma-scale
 chevron-reflection-scale
 child.get()
 children
-chromaKeyNoiseFloor
 circle-generic-geo
 circle-hue-speed
 circle-shadow-radius-delta
@@ -6937,6 +6938,7 @@ vrcompositor_mailbox
 vrcompositor_notification
 vrcompositor_systemlayer
 vrlink.client
+vrlink_roomview_request
 vrntfyimg#%d
 vrserver internal error (124)
 vrshared_base.proto

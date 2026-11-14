@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "電源メニューを表示",
 	"/actions/lasermouse/in/leftclick": "マウスの左クリック",
 	"/actions/lasermouse/in/rightclick": "マウスの右クリック",
+	"/actions/lasermouse/in/middleclick": "マウスのホイールクリック",
 	"/actions/lasermouse/in/lockmouseposition": "マウス位置をロック",
 	"/actions/lasermouse/in/home": "ホームに戻る",
 	"/actions/lasermouse/in/back": "戻る",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "キーボード入力",
 	"/actions/system": "システム操作",
 	"/actions/scroll_discrete": "マウスホイール式スクロール",
-	"/actions/scroll_smooth": "トラックパッド式スクロール"
+	"/actions/scroll_smooth": "トラックパッド式スクロール",
+	"/actions/quickrecenter/in/Recenter": "中央に戻す",
+	"/actions/roomsetup": "ルームセットアップ",
+	"/actions/roomsetup/in/FloorFineAdjust": "床の微調整",
+	"/actions/roomsetup/in/Accept": "承認／次へ",
+	"/actions/roomsetup/in/Back": "戻る"
 }

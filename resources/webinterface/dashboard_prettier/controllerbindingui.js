@@ -1,4 +1,4 @@
-var CLSTAMP = "11214286";
+var CLSTAMP = "11238649";
 (() => {
   "use strict";
   var e,
@@ -4261,11 +4261,11 @@ var CLSTAMP = "11214286";
         window.inputUI = g;
       },
       3714: (e, t, n) => {
-        n.d(t, { A0: () => l, uV: () => a, we: () => r });
-        n(6540);
-        var o = n(2505),
-          i = n.n(o);
-        class l {
+        n.d(t, { A0: () => r, PP: () => a, uV: () => d, we: () => s });
+        var o = n(6540),
+          i = n(2505),
+          l = n.n(i);
+        class r {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map());
@@ -4302,15 +4302,15 @@ var CLSTAMP = "11214286";
                   ? void 0
                   : VRHTML.GetSystemLocale();
               if (!t) return e;
-              l.s_Date.toLocaleTimeString(t);
+              r.s_Date.toLocaleTimeString(t);
               return t;
             } catch (t) {
               return e;
             }
           }
         }
-        function r(e, ...t) {
-          let n = s.LocalizeString(e);
+        function s(e, ...t) {
+          let n = c.LocalizeString(e);
           return n
             ? (t.length > 0 &&
                 (n = n.replace(/%(\d+)\$s/g, function (e, n) {
@@ -4319,9 +4319,23 @@ var CLSTAMP = "11214286";
               n)
             : e;
         }
-        l.s_Date = new Date();
-        const s = new l();
-        function a(e, t) {
+        function a(e, ...t) {
+          let n = c.LocalizeString(e);
+          if (!n) return e;
+          let i,
+            l = [],
+            r = /(.*?)%(\d+)\$s/g,
+            s = 0;
+          for (; (i = r.exec(n)); ) {
+            (s += i[0].length), l.push(i[1]);
+            let e = parseInt(i[2]);
+            e >= 1 && e <= t.length && l.push(t[e - 1]);
+          }
+          return l.push(n.substr(s)), o.createElement(o.Fragment, null, ...l);
+        }
+        r.s_Date = new Date();
+        const c = new r();
+        function d(e, t) {
           t ||
             (t = (function () {
               let e = new Map([
@@ -4364,15 +4378,15 @@ var CLSTAMP = "11214286";
           let n = [],
             o = (e, t, n) => {
               let o,
-                l = Date.now().toString();
+                i = Date.now().toString();
               return (
                 (o =
                   "drivers" == e
-                    ? `/input/localization.json?t=${l}`
+                    ? `/input/localization.json?t=${i}`
                     : "webhelper" == e
-                      ? `/dashboard/localization/${e}_${t}.json?t=${l}`
-                      : `localization/${e}_${t}.json?t=${l}`),
-                i()
+                      ? `/dashboard/localization/${e}_${t}.json?t=${i}`
+                      : `localization/${e}_${t}.json?t=${i}`),
+                l()
                   .get(o)
                   .then((e) => {
                     n(e.data);
@@ -4380,20 +4394,20 @@ var CLSTAMP = "11214286";
                   .catch(() => {})
               );
             },
-            l = [],
+            i = [],
             r = [],
-            a = [],
-            c = [];
-          for (let i of e)
+            s = [],
+            a = [];
+          for (let l of e)
             n.push(
-              o(i, t, (e) => {
-                l.push(e);
+              o(l, t, (e) => {
+                i.push(e);
               }),
             ),
               "english" != t &&
                 n.push(
-                  o(i, "english", (e) => {
-                    a.push(e);
+                  o(l, "english", (e) => {
+                    s.push(e);
                   }),
                 );
           for (let e of ["webhelper"])
@@ -4405,21 +4419,21 @@ var CLSTAMP = "11214286";
               "english" != t &&
                 n.push(
                   o(e, "english", (e) => {
-                    c.push(e);
+                    a.push(e);
                   }),
                 );
           return (
             n.push(
               o("drivers", "", (e) => {
-                l.push(e);
+                i.push(e);
               }),
             ),
             Promise.all(n).then(() => {
-              s.InitFromObjects(l, r, a, c);
+              c.InitFromObjects(i, r, s, a);
             })
           );
         }
-        window.LocalizationManager = s;
+        window.LocalizationManager = c;
       },
       4728: (e, t, n) => {
         function o(e, t, n) {

@@ -1,9 +1,9 @@
 ﻿{
 	"language_tag": "nb_NO",
 	"Settings_Title": "Steam Link",
-	"Setting_automaticStreamFormatWidth": "Kodet videostørrelse",
-	"Setting_foveatedStreamFormatWidth": "Størrelse på video med blikkpunkt (piksler)",
-	"Setting_nonFoveatedStreamFormatWidth": "Størrelse på video uten blikkpunkt (piksler)",
+	"Setting_automaticStreamFormatWidth": "Størrelse på kodet video",
+	"Setting_foveatedStreamFormatWidth": "Størrelse på kodet video med blikkpunkt (piksler)",
+	"Setting_nonFoveatedStreamFormatWidth": "Størrelse på kodet video uten blikkpunkt (piksler)",
 	"Setting_automaticBandwidth": "Målbåndbredde",
 	"Setting_effectiveFoveatedResolution": "Effektiv blikkbasert oppløsning",
 	"Setting_targetBandwidth": "Målbåndbredde (Mbps)",

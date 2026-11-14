@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Показване на менюто за захранване",
 	"/actions/lasermouse/in/leftclick": "Ляв клик с мишка",
 	"/actions/lasermouse/in/rightclick": "Десен клик с мишка",
+	"/actions/lasermouse/in/middleclick": "Кликване със средния бутон на мишката",
 	"/actions/lasermouse/in/lockmouseposition": "Заключване на позицията на мишката",
 	"/actions/lasermouse/in/home": "Към началото",
 	"/actions/lasermouse/in/back": "Назад",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Въвеждане с клавиатура",
 	"/actions/system": "Системни дейности",
 	"/actions/scroll_discrete": "Скролиране в стил колело на мишка",
-	"/actions/scroll_smooth": "Скролиране в стил тракпад"
+	"/actions/scroll_smooth": "Скролиране в стил тракпад",
+	"/actions/quickrecenter/in/Recenter": "Повторно центриране",
+	"/actions/roomsetup": "Стайна установка",
+	"/actions/roomsetup/in/FloorFineAdjust": "Фино коригиране на пода",
+	"/actions/roomsetup/in/Accept": "Приемане / следващо",
+	"/actions/roomsetup/in/Back": "Назад"
 }

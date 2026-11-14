@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Afficher le menu d'allumage",
 	"/actions/lasermouse/in/leftclick": "Clic gauche (souris)",
 	"/actions/lasermouse/in/rightclick": "Clic droit (souris)",
+	"/actions/lasermouse/in/middleclick": "Clic du milieu de la souris",
 	"/actions/lasermouse/in/lockmouseposition": "Verrouiller la position de la souris",
 	"/actions/lasermouse/in/home": "Retourner à l'accueil",
 	"/actions/lasermouse/in/back": "Retour",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Entrée au clavier",
 	"/actions/system": "Actions du système",
 	"/actions/scroll_discrete": "Défilement de type molette de souris",
-	"/actions/scroll_smooth": "Défilement de type trackpad"
+	"/actions/scroll_smooth": "Défilement de type trackpad",
+	"/actions/quickrecenter/in/Recenter": "Recentrer",
+	"/actions/roomsetup": "Configuration de la pièce",
+	"/actions/roomsetup/in/FloorFineAdjust": "Réglage précis du sol",
+	"/actions/roomsetup/in/Accept": "Accepter/Suivant",
+	"/actions/roomsetup/in/Back": "Retour"
 }

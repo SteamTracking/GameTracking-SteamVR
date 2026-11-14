@@ -1,12 +1,13 @@
-var CLSTAMP = "11214286";
+var CLSTAMP = "11238649";
 (() => {
   "use strict";
   var e,
     t = {
       3714: (e, t, n) => {
-        n.d(t, { A0: () => r, we: () => s });
-        n(6540), n(2505);
-        class r {
+        n.d(t, { A0: () => s, PP: () => a, we: () => o });
+        var r = n(6540);
+        n(2505);
+        class s {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map());
@@ -43,15 +44,15 @@ var CLSTAMP = "11214286";
                   ? void 0
                   : VRHTML.GetSystemLocale();
               if (!t) return e;
-              r.s_Date.toLocaleTimeString(t);
+              s.s_Date.toLocaleTimeString(t);
               return t;
             } catch (t) {
               return e;
             }
           }
         }
-        function s(e, ...t) {
-          let n = o.LocalizeString(e);
+        function o(e, ...t) {
+          let n = i.LocalizeString(e);
           return n
             ? (t.length > 0 &&
                 (n = n.replace(/%(\d+)\$s/g, function (e, n) {
@@ -60,9 +61,23 @@ var CLSTAMP = "11214286";
               n)
             : e;
         }
-        r.s_Date = new Date();
-        const o = new r();
-        window.LocalizationManager = o;
+        function a(e, ...t) {
+          let n = i.LocalizeString(e);
+          if (!n) return e;
+          let s,
+            o = [],
+            a = /(.*?)%(\d+)\$s/g,
+            c = 0;
+          for (; (s = a.exec(n)); ) {
+            (c += s[0].length), o.push(s[1]);
+            let e = parseInt(s[2]);
+            e >= 1 && e <= t.length && o.push(t[e - 1]);
+          }
+          return o.push(n.substr(c)), r.createElement(r.Fragment, null, ...o);
+        }
+        s.s_Date = new Date();
+        const i = new s();
+        window.LocalizationManager = i;
       },
       4728: (e, t, n) => {
         function r(e, t, n) {

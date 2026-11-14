@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Показати меню живлення",
 	"/actions/lasermouse/in/leftclick": "Ліва кнопка миші",
 	"/actions/lasermouse/in/rightclick": "Права кнопка миші",
+	"/actions/lasermouse/in/middleclick": "Середня кнопка миші",
 	"/actions/lasermouse/in/lockmouseposition": "Заблокувати позицію миші",
 	"/actions/lasermouse/in/home": "На домівку",
 	"/actions/lasermouse/in/back": "Назад",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Введення з клавіатури",
 	"/actions/system": "Дії системи",
 	"/actions/scroll_discrete": "Прокрутка мов коліщатком миші",
-	"/actions/scroll_smooth": "Прокрутка мов на трекпаді"
+	"/actions/scroll_smooth": "Прокрутка мов на трекпаді",
+	"/actions/quickrecenter/in/Recenter": "Відцентрувати",
+	"/actions/roomsetup": "Налаштування кімнати",
+	"/actions/roomsetup/in/FloorFineAdjust": "Точне налаштування підлоги",
+	"/actions/roomsetup/in/Accept": "Прийняти / Далі",
+	"/actions/roomsetup/in/Back": "Назад"
 }

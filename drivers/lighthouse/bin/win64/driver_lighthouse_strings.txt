@@ -2962,6 +2962,7 @@ asset
 atan
 atan2
 atan2f
+atanf
 atof
 atoi
 attached_device_id

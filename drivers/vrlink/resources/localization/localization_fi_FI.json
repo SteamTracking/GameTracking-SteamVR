@@ -16,7 +16,6 @@
 	"Setting_useOSC": "Ota OSC käyttöön",
 	"Setting_useOSCFace": "Jaa kasvojen seurantatiedot muille tämän tietokoneen sovelluksille OSC:n välityksellä",
 	"Setting_OSCOutPort": "OSC-ulostulon portti",
-	"Setting_shareEyeTrackingData": "Jaa silmien seurantatiedot muille tietokoneen sovelluksille",
 	"Setting_enableHandTracking": "Ota käsien seuranta käyttöön",
 	"Setting_WirelessShutdownTimeout": "Poistu SteamVR:stä, kun yhteys katkaistaan",
 	"Setting_AllowVolumeControlSync": "Hallitse kuulokkeiden äänenvoimakkuutta ja mykistystä SteamVR:n välityksellä",

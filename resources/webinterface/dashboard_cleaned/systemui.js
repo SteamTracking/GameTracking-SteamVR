@@ -3854,6 +3854,11 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
         });
         const _ = "openvr.tool.steamvr_environments",
           _ = "system.generated.steam.exe",
@@ -3950,6 +3955,11 @@ var CLSTAMP = "steamdb";
           _ = "/settings/steamvr/auroraPalette",
           _ = "/settings/steamvr/auroraUserColor",
           _ = "/settings/steamvr/allowEyeTracking",
+          _ = "/settings/steamvr/prismCorrectionEnable",
+          _ = "/settings/steamvr/prismCorrectionHL",
+          _ = "/settings/steamvr/prismCorrectionHR",
+          _ = "/settings/steamvr/prismCorrectionVL",
+          _ = "/settings/steamvr/prismCorrectionVR",
           _ = "/settings/driver_vrlink/shareEyeTrackingData",
           _ = "/settings/driver_vrlink/eyeTrackingPromptDontAsk",
           _ = "/settings/steamvr/eyeTrackingDominantEyeOnly",
@@ -13302,7 +13312,7 @@ var CLSTAMP = "steamdb";
                     _.OH$[(0, _.R$f)()],
                 );
               console.log("Bootstrapping " + _, _);
-              const _ = 1e3 * (null !== (_ = 1793996672) ? _ : 0);
+              const _ = 1e3 * (null !== (_ = 1794602049) ? _ : 0);
               console.log(
                 "SteamVR Version Info: " +
                   JSON.stringify({

@@ -238,7 +238,6 @@ $ORIGIN/../../../../bin/linux64
 *ZN8SVLAudioC4EP7SVLRootEUl16ValueTransportIDbE_
 *ZN9SVLDriver4InitEPN2vr16IVRDriverContextEEUlPKcE_
 *ZN9SVLServer24RequestDashboardTutorialEvEUlRKN4Json5ValueEE_
-*ZN9SVLServer4InitEvEUl16ValueTransportIDbE14_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE15_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE16_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE17_
@@ -247,11 +246,13 @@ $ORIGIN/../../../../bin/linux64
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE20_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE21_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE22_
+*ZN9SVLServer4InitEvEUl16ValueTransportIDbE23_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE0_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE10_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE11_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE12_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE13_
+*ZN9SVLServer4InitEvEUlRKN4Json5ValueEE14_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE1_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE2_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE3_
@@ -325,11 +326,9 @@ $ORIGIN/../../../../bin/linux64
 /data/src/common/vrcore/src/ipcposix.cpp
 /data/src/common/vrcore/src/logbuffer.cpp
 /data/src/common/vrcore/src/vripcsharedstate.cpp
-/data/src/vrlink/common/SVLFEC.cpp:1116
-/data/src/vrlink/common/SVLFEC.cpp:769
-/data/src/vrlink/driver_vrlink/hmd.cpp:3099
-/data/src/vrlink/driver_vrlink/hmd.cpp:3260
-/data/src/vrlink/driver_vrlink/hmd.cpp:3379
+/data/src/vrlink/driver_vrlink/hmd.cpp:3187
+/data/src/vrlink/driver_vrlink/hmd.cpp:3350
+/data/src/vrlink/driver_vrlink/hmd.cpp:3469
 /data/src/vrlink/driver_vrlink/hmdvulkan.cpp
 /data/src/vrlink/driver_vrlink/steamvrlink.cpp
 /data/src/vrlink/driver_vrlink/videovulkan.cpp
@@ -516,8 +515,10 @@ $ORIGIN/../../../../bin/linux64
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_chromakey_noise_floor
 /vrlink/steamvr/remote_client_refresh_rate_tx
 /vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_roomview_translucent
 /vrlink/steamvr/remote_scene_app_showing
 /vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
@@ -539,7 +540,6 @@ $ORIGIN/../../../../bin/linux64
 10bit
 11 4 22 44 44 22 444444
 11SVLDataLink
-11SVLFECRAID6
 11videovulkan
 127.
 127.0.0.1
@@ -548,7 +548,7 @@ $ORIGIN/../../../../bin/linux64
 12SVLHMDDriver
 13CAnimResource
 13CAnimSkeleton
-13SVLFECRXFrame
+13SVLFECRAID6TX
 13SVLFECTXFrame
 14CVRMailboxBase
 14IHandPoseLogic
@@ -560,7 +560,6 @@ $ORIGIN/../../../../bin/linux64
 16SVLAudioPipewire
 17CBoneMaskResource
 17CSharedImageLinux
-18SVLFECRAID6RXFrame
 18SVLFECRAID6TXFrame
 18SVLHMDDriverVulkan
 18SVLHmdNotConnected
@@ -584,10 +583,10 @@ $ORIGIN/../../../../bin/linux64
 30CHandPoseLogic_IndexController
 32CSteamVR_DashboardRequest_Target
 33CSteamVR_DashboardRequest_Relatch
-6SVLFEC
 7SVLRoot
 8SVLAudio
 8SVLCrypt
+8SVLFECTX
 8videoenc
 9CRefCount
 9SVLDriver
@@ -625,7 +624,6 @@ APing
 ASCII
 ASCII//TRANSLIT
 ASSERT: "%s" at %s:%d.\n
-AcceptVideoPacket
 Accessor
 AckTimeout
 Active Data Links: m_pLink:%p pTcpLink:%p pUdpLink:%p\n
@@ -654,6 +652,7 @@ Are you in text mode or using SSH without X11-Forwarding?\n
 Array length of `baseColorFactor` parameter in pbrMetallicRoughness must be 4, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 4\n
+Asking client to turn room view %s
 Asset
 Attempt to init shared state %s twice
 Attempted to write %zd bytes and ended up writing 0. Closing the pipe\n
@@ -888,7 +887,7 @@ Change frame phase of when waitgetposes is requested.
 Change target frame deadline.
 Changing tos opt = %d\n
 Channel: %d\n
-Chroma key passthrough: client supports=%d, client color=%d -> Prop_Hmd_SupportsChromaKeyPassthrough_Bool=%d%s
+Chroma key passthrough: client supports=%d (host noise floor %d), client requests=%d -> Prop_Hmd_SupportsChromaKeyPassthrough_Bool=%d%s
 ClearField
 Client HMD type (%d) supports eye tracking, creating input component
 Client Network Test Result: %s\n
@@ -903,7 +902,6 @@ Connection %s at %f\n
 Connection inactive for %f > %d seconds. Sending quit event.\n
 Connection inactive for %f > %d seconds. Waiting to quit for scene app %s.\n
 ConnectionLost
-Could not acquire encoded data buffer from codec for frame: %i\n
 Could not create OpenGL Context/Window + Debug Window\n
 Could not create an instance of 
 Could not find field named "
@@ -959,7 +957,6 @@ ERROR: Could not initialize UDP driver; unknown session type requested.
 ERROR: Failed to get encryption engine.
 ERROR: Failed to open log file %s, attempting timestamped filename\n
 ERROR: Shaders sum to > 64kB\n
-ERROR: While trying to request retransmission of packet #%d, too many packets were missing even to retransmit.  Aborting stream.\n
 ERROR: svl protocol version mismatch. Server expects %d, client is %d
 EVP_CIPHER_CTX_free
 EVP_CIPHER_CTX_new
@@ -983,7 +980,6 @@ Encryption mechanism failed encryption test.
 Encryption mechanism fialed to decode.
 Encryption mechanism fialed to encode.
 Encryption not giving expected result %x
-Encryption type: %s\n
 End-of-file inside block comment.
 Enum type "
 Enums must contain at least one value.
@@ -1016,7 +1012,7 @@ Error: Unknown transport mode (%s) requested
 Error: XOR0 transport specified, but len too short.
 Error: could not retrieve socket flags\n
 Error: coult not set socket nonblocking flag\n
-Error: m_fec not initialized!\n
+Error: m_fecTX not initialized!\n
 EstBW
 Event Rate
 EventsThread
@@ -1053,7 +1049,6 @@ F %d
 FATAL
 FATAL: Failed to open log file %s, failing out!\n
 FAULT: Packet too big!!! Can't send!!! Dropping\n
-FEC decode fail %d %d %d\n
 FORMAT=32-bit_rle_rgbe
 FPR: %5.0f%%
 FS callback[s] not set\n
@@ -1111,7 +1106,6 @@ False
 FastHexToBuffer() wants non-negative integers, not 
 Fatal
 Fatal: Bad server address with -c [server] : %s\n
-Fault, SVLFEC Received ExperiencedAnUnrecoverableError()\n
 FbPKSsS0_PKN8tinygltf5ImageEbPKNS1_11FsCallbacksEPKNS1_12URICallbacksEPSsPvE
 FbPN8tinygltf5ImageEiPSsS2_iiPKhiPvE
 FbPSsRKSsRKSt6vectorIhSaIhEEPvE
@@ -1221,6 +1215,7 @@ HistogramC
 HistogramH
 HmdDriverFactory
 Holdoff
+Host chroma key settings: mode %d, color %d, noise floor %d
 HostMacPrefix
 HostRxLoss
 IN %d
@@ -1299,7 +1294,6 @@ InputProfilePath %s\n
 Insufficient Chunk1(BIN) data size.
 Insufficient storage space for Chunk1(BIN data). At least Chunk1 Must have 8 or more bytes, but got 
 Integer out of range.
-InternalAcceptFrameFromRX
 Interpreting non ascii codepoint %d.
 Invalid `byteLength'. Must be equal or less than binary size: `byteLength' = 
 Invalid `byteStride' value. `byteStride' must be the multiple of 4 : 
@@ -1523,8 +1517,8 @@ NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
 NSt6thread11_State_implINS_8_InvokerISt5tupleIJM14SVLDataLinkUDPFPvvEPS3_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJM6SVLFECFvvEPS3_EEEEEE
 NSt6thread11_State_implINS_8_InvokerISt5tupleIJM7SVLRootFvvEPS3_EEEEEE
+NSt6thread11_State_implINS_8_InvokerISt5tupleIJM8SVLFECTXFvvEPS3_EEEEEE
 NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN13CommandThreadC4ESt8functionIFvvEEEUlvE_EEEEEE
 NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
@@ -1622,7 +1616,6 @@ PLACEHOLDER_VALUE
 Packet Ping
 Pairing to address: %s\n
 Pairing to broadcast address not allowed.\n
-Panic! Overwriting vCompleteFramePointer
 Parse error: 
 Parse failed for JSON message in mailbox %s: %s\n
 Parsing of JSON string "%s" failed: %s\n
@@ -1664,7 +1657,6 @@ RXThread
 Ran out of IPC SharedObjectManager entries!\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reading dangerously large protocol message.  If the message turns out to be larger than 
-Received frame outside of backtrack window.  Resetting.\n
 ReceivedHMDStaticProps. Model Number: %s, Serial Number: %s (%d)
 Release
 ReleaseLast
@@ -1768,11 +1760,7 @@ SVLDriver::Init() Complete\n
 SVLDriver::Init() failed. Returning failure from init so we'll be unloaded.
 SVLDriver::Init(): IVRChaperoneServerDriver unavailable!
 SVLDriver::Init()\n
-SVLFEC: frame %d was entirely dropped, initializing and re-requesting\n
-SVLFEC: substantive retry (%d packets) due to frame skip (skipped %d, last sub %d, group %d, expected size %d)\n
-SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
 SVLFEC::ReportStreamReset() (m_iLastAcknowledgeFrameNumber = %d)
-SVLFECRXFrame::AcceptVideoPacket: m_pData was not suitable for video (null or insufficient size)
 SVLHMDDriver::Activate: HMD did not support multiple framerates
 SVLHMDDriver::Activate: HMD informs framerates. Num supported: %d
 SVLHMDDriver::InitializeOSC: OSC failed to initialize: %i
@@ -1783,7 +1771,6 @@ SVLHMDDriver::PresentStreamMultiViews() can't find outer view texture
 SVLHMDDriver::UpdateDisplayFrequenciesList called before property container ready
 SVLReconstructionWindow::AddSequenceToWindow overflow\n
 SVLRoot::SVLRoot() Arg Parsed\n
-SVLRoot::SVLRoot() Parsing Arg (%d)\n
 SVLRoot::SVLRoot() Parsing Data\n
 SVLRoot::SVLRoot() Uber link enabled\n
 SVLRoot::SVLRoot() sReqEncMode = %s\n
@@ -1796,11 +1783,10 @@ SVLServer mailbox dashboard_tutorial_dismissed
 SVLServer mailbox handle_recenter
 SVLServer mailbox room_setup
 SVLServer mailbox user_interaction_click_info
+SVLServer mailbox vrlink_roomview_request
 SVLServer::RunFrame: ProcessMessages
 SVLServer::SVLServer(...)\n
 SVLServer::Shutdown()\n
-SVST_VIDEO_TRANSPORT: WARNING: Could not initialize frame on hardware.\n
-SVST_VIDEO_TRANSPORT_DESCRIPTION: WARNING: Could not initialize frame on hardware.\n
 Saturday
 Scaling %d
 Seccomp:
@@ -1957,7 +1943,6 @@ St9type_info
 Starting session in mode %d\n
 Starting session with AES Mode 0
 Starting session with ID: %08x
-Steam Argument Count: %d\n
 Steam Frame
 Steam Link
 SteamStreaming
@@ -1968,7 +1953,7 @@ SteamVRDriverVRLinkBwStats
 SteamVRDriverVrlink
 SteamVR_Namespace
 Stream view aspect ratio set to %.2f
-Stream views %dx%d (target square view size %d, aspect ratio %.2f), atlas %dx%d, mode %d
+Stream views %dx%d, outer %dx%d (target square view size %d, aspect ratio %.2f), atlas %dx%d, mode %d
 StreamReset
 String field
 String literals cannot cross line boundaries.
@@ -2013,7 +1998,6 @@ Transport
 Tried to merge messages of different types 
 Tried to register a non-generated type with the generated type registry.
 True
-Trying to submit frames out-of-order.  Only possible on catastrophic network failure\n
 Tuesday
 Type appears to be in generated pool but wasn't 
 Type is already registered: 
@@ -2162,7 +2146,6 @@ Vive Focus 3 (Left Controller)
 Vive Focus 3 (Right Controller)
 Vive Focus Vision
 WARNING
-WARNING Initializing frame number %d.  Expected size too large (%d > %d).\n
 WARNING: Corrupt UDP packet went long (%d size, %d left, %d total length)\n
 WARNING: Could not bind to hardware dev %s
 WARNING: Could not set IP_TOS on data link
@@ -2186,7 +2169,6 @@ Warning: Unused import: "
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x (Size=%d)
-Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
 Warning: res field incorrect [clear mode] %04x\n
 Warning: res field incorrect [encryption mode] %08x on packet size %d\n
@@ -2240,7 +2222,6 @@ ZN13CommandThread8ShutdownEvEUlvE_
 [%s] %u frames, no problems
 [%s] %u frames, outcomes:
 [%s] causes:
-[%s] tgid=%d file=%s %s
 [AnimSkeleton] Failed to load GLTF file: %s
 [Audio] Attempt to set audio rx channels to %d.
 [Audio] frame rate change, reinitializing: %d %d to %d %d\n
@@ -2337,9 +2318,6 @@ ZN13CommandThread8ShutdownEvEUlvE_
 [SVLController] Reported HMD model is %d\n
 [SVLController] Setting up HTC Vive Focus Controller: %s
 [SVLController] Unable to find override properties for unknown key: %s:%s
-[SVLFEC] Saw a re-accept in InternalAcceptFrameFromRX.
-[SVLFEC] accepting a frame for submission without metadata [ %d ]
-[SVLFEC] received late metadata for frame [ %d ]
 [SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
 [SVLS] ResetVideoStream
@@ -2713,6 +2691,9 @@ channels
 chdir
 children
 chmod
+chromaKeyColor
+chromaKeyMode
+chromaKeyNoiseFloor
 clientTCPEnable
 clientTCPRemote
 clientUDPEnable
@@ -2853,9 +2834,8 @@ driver_vrlink: IPD: %f\n
 driver_vrlink: Peer Minor Version Number: %d\n
 driver_vrlink: Render Target: %d %d\n
 driver_vrlink: Serial Number: %s\n
-driver_vrlink: client chroma key color=%d noise floor=%d\n
+driver_vrlink: client chroma key color=%d noise floor=%d flags=%d\n
 driver_vrlink: client room view %s\n
-driver_vrlink: unsupported client chroma key color %d, using green
 dummy
 dump_aftm_csv
 dumptextures
@@ -2930,7 +2910,6 @@ fputs
 fraction
 frame_controller
 frame_controller_
-frame_id=%d
 frameid
 frames
 fread
@@ -3049,8 +3028,6 @@ hist
 history
 hwnd
 iQ %5.2f
-iRXFrameID %d != pRXFrame->m_iFrameNumber %d
-iRXFrameID=%d
 iconv
 iconv_close
 iconv_open
@@ -3460,6 +3437,7 @@ received VTE_DASHBOARD_REQUEST_C_TO_S that failed to parse (%d bytes)
 received VTE_DRIVER_SYSTEM_FLAGS %d %d %d
 recommendedRenderHeight
 recommendedRenderWidth
+recommendedResolutionMultiplierSteps
 recv
 recvfrom
 recvmsg
@@ -3487,7 +3465,6 @@ resourceRoot
 result
 result failed! (VkResult: %d)
 returnAddress
-rexmitReq
 rexmitSent
 rift
 right
@@ -4550,6 +4527,7 @@ vrlink_output
 vrlink_pa_
 vrlink_pa_*.json
 vrlink_room_setup
+vrlink_roomview_request
 vrlink_show_steamvr_setting
 vrlink_store
 vrshared_base.proto

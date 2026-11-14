@@ -1,7 +1,7 @@
 ﻿{
 	"language_tag": "es_ES",
 	"Settings_Title": "Steam Link",
-	"Setting_automaticStreamFormatWidth": "Tamaño de vídeo codificado",
+	"Setting_automaticStreamFormatWidth": "Tamaño del vídeo codificado",
 	"Setting_foveatedStreamFormatWidth": "Tamaño del vídeo codificado foveado (píxeles)",
 	"Setting_nonFoveatedStreamFormatWidth": "Tamaño del vídeo codificado no foveado (píxeles)",
 	"Setting_automaticBandwidth": "Ancho de banda objetivo",

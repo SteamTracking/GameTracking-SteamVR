@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Показать меню выключения",
 	"/actions/lasermouse/in/leftclick": "Нажатие левой кнопки мыши",
 	"/actions/lasermouse/in/rightclick": "Нажатие правой кнопки мыши",
+	"/actions/lasermouse/in/middleclick": "Нажатие средней кнопки мыши",
 	"/actions/lasermouse/in/lockmouseposition": "Закрепить положение мыши",
 	"/actions/lasermouse/in/home": "На главную",
 	"/actions/lasermouse/in/back": "Назад",
@@ -48,6 +49,11 @@
 	"/actions/lasermouse_secondary": "Лазерная мышь на неосновной руке",
 	"/actions/dualanalog": "Ввод с клавиатуры",
 	"/actions/system": "Системные действия",
-	"/actions/scroll_discrete": "Прокрутка «колёсиком мыши»",
-	"/actions/scroll_smooth": "Прокрутка «трекпадом»"
+	"/actions/scroll_discrete": "Прокрутка «колесом мыши»",
+	"/actions/scroll_smooth": "Прокрутка «трекпадом»",
+	"/actions/quickrecenter/in/Recenter": "Центрировать заново",
+	"/actions/roomsetup": "Настройка пространства",
+	"/actions/roomsetup/in/FloorFineAdjust": "Точная регулировка пола",
+	"/actions/roomsetup/in/Accept": "Принять / Далее",
+	"/actions/roomsetup/in/Back": "Назад"
 }

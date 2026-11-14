@@ -1515,6 +1515,8 @@ var CLSTAMP = "steamdb";
                 "Hmd_EnablePerAppFPS_Bool"),
               (_[(_.Hmd_SupportsGammaBlackMode_Bool = 2134)] =
                 "Hmd_SupportsGammaBlackMode_Bool"),
+              (_[(_.Hmd_SupportsPrismCorrection_Bool = 2135)] =
+                "Hmd_SupportsPrismCorrection_Bool"),
               (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
                 "DriverRequestedMuraCorrectionMode_Int32"),
               (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -10188,6 +10190,7 @@ var CLSTAMP = "steamdb";
           _ = "/settings/camera/roomViewStyle",
           _ = "/settings/steamvr/backgroundCameraHeight",
           _ = "/settings/steamvr/backgroundDomeRadius",
+          _ = "/settings/steamvr/dominantEye",
           _ = "/settings/steamvr/analogGain",
           _ = "/settings/driver_lighthouse/indexHmdColumnCorrection",
           _ = "/settings/steamvr/showAdvancedSettings",
@@ -10201,6 +10204,7 @@ var CLSTAMP = "steamdb";
           _ = "/settings/camera/enableCamera",
           _ = "/settings/steamvr/maxRecommendedResolution",
           _ = "/settings/camera/lightSourceFrequency",
+          _ = "/settings/steamvr/ipdHUD",
           _ = "/settings/steamvr/inHMDRoomSetupDebug",
           _ = "/settings/steamvr/defaultPerAppRefreshRate",
           _ = "/settings/steamvr/unifiedPerAppRefreshRateAndThrottling",
@@ -10216,6 +10220,13 @@ var CLSTAMP = "steamdb";
           _ = "/settings/steamvr/envBrightnessSceneAppDimming",
           _ = "/settings/steamvr/backgroundUseDomeProjection",
           _ = "/settings/steamvr/auroraPalette",
+          _ = "/settings/steamvr/allowEyeTracking",
+          _ = "/settings/steamvr/prismCorrectionEnable",
+          _ = "/settings/steamvr/prismCorrectionHL",
+          _ = "/settings/steamvr/prismCorrectionHR",
+          _ = "/settings/steamvr/prismCorrectionVL",
+          _ = "/settings/steamvr/prismCorrectionVR",
+          _ = "/settings/steamvr/eyeTrackingDominantEyeOnly",
           _ = "/settings/dashboard/expectSteam",
           _ = "/steam/websocketconnected",
           _ = "/steam/oobe",
@@ -10223,6 +10234,7 @@ var CLSTAMP = "steamdb";
           _ = "/steam/guidedtour",
           _ = "/steam/streamingtodevice",
           _ = "/settings/perfcheck/drawPerfCriteriaOverlay",
+          _ = "/settings/perfcheck/drawPerfCriteriaGameTextures",
           _ = "/user/head",
           _ = "/user/hand/left",
           _ = "/user/hand/right",
@@ -16805,6 +16817,62 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "onOptionMouseEnter", null),
           (0, _._)([_], _.prototype, "onOptionMouseLeave", null),
           (_ = (0, _._)([_._], _));
+        const _ = (0, _._)((_) => {
+          const _ = _.settings.get(_.name),
+            _ = _.items.find((_) => _.value === _);
+          return _.createElement(
+            _,
+            {
+              className: "SettingsItem ColorSwatches",
+              title: _.title,
+              visibility: _.visibility,
+              explainer: _.explainer,
+            },
+            _.createElement(
+              "div",
+              {
+                className: "Label",
+              },
+              _.label,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: "ColorSwatchGroup",
+                role: "radiogroup",
+                "aria-label": _.label,
+              },
+              _.items.map((_, _) =>
+                _.createElement("div", {
+                  key: _,
+                  className: _("ColorSwatch", ["Active", _ === _]),
+                  role: "radio",
+                  "aria-checked": _ === _,
+                  "aria-label": _.sColor,
+                  title: _.sColor,
+                  style: {
+                    backgroundColor: _.sColor,
+                  },
+                  onClick: () =>
+                    ((_) => {
+                      _.value !== _ &&
+                        (_.SetSettingsValue(_.name, _.value),
+                        _() == _.Overlay &&
+                          (_.temporarilySuppressSoundEffect(),
+                          _.Instance.playSound(_.ButtonClick)));
+                    })(_),
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: "ColorSwatchValue",
+                },
+                null == _ ? void 0 : _.sColor,
+              ),
+            ),
+          );
+        });
         let _ = class extends _.Component {
           constructor(_) {
             if (
@@ -29434,6 +29502,8 @@ var CLSTAMP = "steamdb";
               _.SetSettingsValue(_, null),
               _.SetSettingsValue(_, null),
               _.SetSettingsValue(_, null),
+              _.SetSettingsValue(_, null),
+              _.SetSettingsValue(_, null),
               _.SetSettingsValue(_, null);
           }
           BrightnessUserToDriver(_) {
@@ -29648,7 +29718,20 @@ var CLSTAMP = "steamdb";
             );
           }
           setPerfGraphInHMD(_) {
-            _.SetSettingsValue(_, _);
+            _.SetSettingsValue(_, _),
+              _ || (_.SetSettingsValue(_, !1), _.SetSettingsValue(_, 0));
+          }
+          setDrawPerfCriteriaOverlay(_) {
+            _.SetSettingsValue(_, _), _ && this.setPerfGraphInHMD(!0);
+          }
+          get drawPerfCriteriaOverlay() {
+            return _.settings.get(_);
+          }
+          setDrawPerfCriteriaGameTextures(_) {
+            _.SetSettingsValue(_, _), _ > 0 && this.setPerfGraphInHMD(!0);
+          }
+          get drawPerfCriteriaGameTextures() {
+            return _.settings.get(_);
           }
           get perfGraphInHMD() {
             return _.settings.get(_);
@@ -29786,6 +29869,20 @@ var CLSTAMP = "steamdb";
           (0, _._)([_.computed], _.prototype, "performanceProfileName", null),
           (0, _._)([_.computed], _.prototype, "playtimeProfileName", null),
           (0, _._)([_.action], _.prototype, "setPerfGraphInHMD", null),
+          (0, _._)([_.action], _.prototype, "setDrawPerfCriteriaOverlay", null),
+          (0, _._)([_.computed], _.prototype, "drawPerfCriteriaOverlay", null),
+          (0, _._)(
+            [_.action],
+            _.prototype,
+            "setDrawPerfCriteriaGameTextures",
+            null,
+          ),
+          (0, _._)(
+            [_.computed],
+            _.prototype,
+            "drawPerfCriteriaGameTextures",
+            null,
+          ),
           (0, _._)([_.computed], _.prototype, "perfGraphInHMD", null),
           (0, _._)([_.action], _.prototype, "setPerfRecordVRStats", null),
           (0, _._)([_.computed], _.prototype, "perfRecordVRStats", null),
@@ -53374,30 +53471,155 @@ var CLSTAMP = "steamdb";
             (_[(_.Power50hz = 2)] = "Power50hz");
         })(_ || (_ = {}));
         const _ = (0, _._)(() => {
-          let _ = _.settings.get(_),
-            _ = [
-              {
-                value: _.Auto,
-                sLabel: _("#Settings_Camera_AntiFlickerSettingAuto"),
+            let _ = _.settings.get(_),
+              _ = [
+                {
+                  value: _.Auto,
+                  sLabel: _("#Settings_Camera_AntiFlickerSettingAuto"),
+                },
+                {
+                  value: _.Power60hz,
+                  sLabel: _("#Settings_Camera_AntiFlickerSetting60Hz"),
+                },
+                {
+                  value: _.Power50hz,
+                  sLabel: _("#Settings_Camera_AntiFlickerSetting50Hz"),
+                },
+              ];
+            return _.createElement(_, {
+              label: _("#Settings_Camera_AntiFlicker"),
+              title: _("#Settings_Camera_AntiFlicker_Desc"),
+              items: _,
+              value: _,
+              onChange: (_) => {
+                _.SetSettingsValue(_, _);
               },
+            });
+          }),
+          _ = "/settings/driver_vrlink/chromaKeyMode",
+          _ = "/settings/driver_vrlink/chromaKeyColor",
+          _ = "/settings/driver_vrlink/chromaKeyNoiseFloor";
+        var _;
+        !(function (_) {
+          (_[(_.Auto = 0)] = "Auto"),
+            (_[(_.ProtectContent = 1)] = "ProtectContent"),
+            (_[(_.KeyContent = 2)] = "KeyContent");
+        })(_ || (_ = {}));
+        const _ = [
+          {
+            value: 6,
+            sColor: "#FFFF00",
+          },
+          {
+            value: 4,
+            sColor: "#00FFFF",
+          },
+          {
+            value: 2,
+            sColor: "#00FF00",
+          },
+          {
+            value: 5,
+            sColor: "#FF00FF",
+          },
+          {
+            value: 1,
+            sColor: "#FF0000",
+          },
+          {
+            value: 3,
+            sColor: "#0000FF",
+          },
+        ];
+        function _() {
+          return !!_.m_bIsVRLinkServer && _.HasCapability(45, _.MutualSteamVR);
+        }
+        const _ = (0, _._)(() => {
+          const _ = _(47, _.MutualSteamVR),
+            _ = _("/vrlink/steamvr/remote_roomview_translucent");
+          if (!_()) return null;
+          const _ = _.createElement(
+              "div",
               {
-                value: _.Power60hz,
-                sLabel: _("#Settings_Camera_AntiFlickerSetting60Hz"),
+                className: "SettingsItemValueLabel",
               },
+              _(
+                "#Settings_VRLink_RoomViewTranslucentOnHeadset",
+                _("#Settings_Camera_RoomViewStyle_VideoOpaque"),
+                _("#Settings_Camera_RoomViewStyle_VideoTranslucent"),
+              ),
+            ),
+            _ = _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_ChromaKeyMode"),
+                items: [
+                  {
+                    value: _.Auto,
+                    sLabel: _("#Settings_VRLink_ChromaKeyMode_Auto"),
+                  },
+                  {
+                    value: _.ProtectContent,
+                    sLabel: _("#Settings_VRLink_ChromaKeyMode_ProtectContent"),
+                  },
+                  {
+                    value: _.KeyContent,
+                    sLabel: _("#Settings_VRLink_ChromaKeyMode_KeyContent"),
+                  },
+                ],
+                explainer: _(
+                  "#Settings_VRLink_ChromaKeyMode_Explainer",
+                  _.createElement(
+                    "b",
+                    null,
+                    _("#Settings_VRLink_ChromaKeyMode_ProtectContent"),
+                  ),
+                  _.createElement(
+                    "b",
+                    null,
+                    _("#Settings_VRLink_ChromaKeyMode_KeyContent"),
+                  ),
+                ),
+              }),
+              _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_ChromaKeyColor"),
+                items: _,
+              }),
+              _ &&
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_ChromaKeyThreshold"),
+                  min: 0.05,
+                  max: 0.5,
+                  step: 0.01,
+                  detents: [0.3],
+                  valueStyleVariant: _.OnHandle,
+                  renderValue: (_) => _.toFixed(2),
+                  explainer: _("#Settings_VRLink_ChromaKeyThreshold_Explainer"),
+                }),
+            );
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
               {
-                value: _.Power50hz,
-                sLabel: _("#Settings_Camera_AntiFlickerSetting50Hz"),
+                className: "SettingsItem",
               },
-            ];
-          return _.createElement(_, {
-            label: _("#Settings_Camera_AntiFlicker"),
-            title: _("#Settings_Camera_AntiFlicker_Desc"),
-            items: _,
-            value: _,
-            onChange: (_) => {
-              _.SetSettingsValue(_, _);
-            },
-          });
+              _.createElement(
+                "div",
+                {
+                  className: "Label Title Large",
+                },
+                _("#Settings_VRLink_RoomView"),
+              ),
+            ),
+            _ ? _ : _,
+            _.createElement("hr", null),
+          );
         });
         let _ = class extends _ {
           constructor(_) {
@@ -53619,11 +53841,16 @@ var CLSTAMP = "steamdb";
               )
             );
           }
+          ResetToDefaults() {
+            super.ResetToDefaults();
+            for (const _ of [_, _, _]) _.SetSettingsValue(_, null);
+          }
           render() {
             return this.props.active
               ? _.createElement(
                   _.Fragment,
                   null,
+                  _.createElement(_, null),
                   this.cameraEnabled() && this.renderEnabledSettings(),
                   this.cameraEnabled() &&
                     _.m_bAllowCameraToggle &&
@@ -53656,6 +53883,7 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "onStartCameraTest", null),
           (0, _._)([_], _.prototype, "onStopCameraTest", null),
           (0, _._)([_.computed], _.prototype, "currentRoomViewStyle", null),
+          (0, _._)([_], _.prototype, "ResetToDefaults", null),
           (_ = (0, _._)([_._], _));
         let _ = class extends _ {
           constructor(_) {
@@ -54766,7 +54994,7 @@ var CLSTAMP = "steamdb";
             ),
           );
         }
-        function _() {
+        const _ = (0, _._)(function () {
           const [_, _] = _.useState(!1);
           return (
             _.useEffect(() => {
@@ -54810,7 +55038,8 @@ var CLSTAMP = "steamdb";
                       className: "SettingsItem",
                     },
                     _.createElement(_, {
-                      name: _,
+                      value: _.drawPerfCriteriaOverlay,
+                      onChange: (_) => _.setDrawPerfCriteriaOverlay(_),
                       label: _("#Advanced_DrawPerfCriteriaOverlay"),
                     }),
                   ),
@@ -54820,7 +55049,8 @@ var CLSTAMP = "steamdb";
                       className: "SettingsItem",
                     },
                     _.createElement(_, {
-                      name: "/settings/perfcheck/drawPerfCriteriaGameTextures",
+                      value: _.drawPerfCriteriaGameTextures,
+                      onChange: (_) => _.setDrawPerfCriteriaGameTextures(_),
                       label: _("#Advanced_DrawPerfCriteriaGameTextures"),
                       items: [
                         {
@@ -54842,7 +55072,7 @@ var CLSTAMP = "steamdb";
                 )
               : null
           );
-        }
+        });
         function _() {
           return (
             null === VRHTML || void 0 === VRHTML
@@ -54982,7 +55212,7 @@ var CLSTAMP = "steamdb";
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1793996673e3).toLocaleString() + "",
+              value: new Date(1794602049e3).toLocaleString() + "",
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -54990,10 +55220,219 @@ var CLSTAMP = "steamdb";
             }),
           );
         });
+        let _ = class extends _.Component {
+          constructor(_) {
+            super(_),
+              (this.state = {
+                nDirection: this.props.firstDirection.nSign,
+              });
+          }
+          get value() {
+            var _;
+            return null !== (_ = _.settings.get(this.props.name)) &&
+              void 0 !== _
+              ? _
+              : 0;
+          }
+          get direction() {
+            return 0 != this.value
+              ? Math.sign(this.value)
+              : this.state.nDirection;
+          }
+          onDirectionChange(_) {
+            this.setState({
+              nDirection: _,
+            }),
+              0 != this.value &&
+                (_.SetSettingsValue(this.props.name, _ * Math.abs(this.value)),
+                _.SetRestartRequired());
+          }
+          onAmountChange(_) {
+            _.SetSettingsValue(this.props.name, this.direction * _);
+          }
+          render() {
+            return _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                label: this.props.label,
+                items: [
+                  {
+                    value: this.props.firstDirection.nSign,
+                    sLabel: this.props.firstDirection.sLabel,
+                  },
+                  {
+                    value: this.props.secondDirection.nSign,
+                    sLabel: this.props.secondDirection.sLabel,
+                  },
+                ],
+                value: this.direction,
+                onChange: this.onDirectionChange,
+              }),
+              _.createElement(_, {
+                value: Math.abs(this.value),
+                min: 0,
+                max: 10,
+                step: 0.5,
+                renderValue: (_) =>
+                  _("#Settings_PrismCorrection_Amount", _.toFixed(1)),
+                onChange: this.onAmountChange,
+                onFinalChange: _.SetRestartRequired,
+              }),
+            );
+          }
+        };
+        function _(_) {
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: "SettingsItem",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "Label Title",
+                },
+                _.label,
+              ),
+            ),
+            _.createElement(_, {
+              name: _.horizontalName,
+              label: _("#Settings_PrismCorrection_Horizontal"),
+              firstDirection: {
+                nSign: 1,
+                sLabel: _("#Settings_PrismCorrection_BaseIn"),
+              },
+              secondDirection: {
+                nSign: -1,
+                sLabel: _("#Settings_PrismCorrection_BaseOut"),
+              },
+            }),
+            _.createElement(_, {
+              name: _.verticalName,
+              label: _("#Settings_PrismCorrection_Vertical"),
+              firstDirection: {
+                nSign: -1,
+                sLabel: _("#Settings_PrismCorrection_BaseUp"),
+              },
+              secondDirection: {
+                nSign: 1,
+                sLabel: _("#Settings_PrismCorrection_BaseDown"),
+              },
+            }),
+          );
+        }
+        (0, _._)([_], _.prototype, "onDirectionChange", null),
+          (0, _._)([_], _.prototype, "onAmountChange", null),
+          (_ = (0, _._)([_._], _));
+        const _ = (0, _._)(function () {
+          if (!_()) return null;
+          const _ = !!(null === VRHTML || void 0 === VRHTML
+            ? void 0
+            : VRHTML.VRProperties.GetBoolProperty(
+                "/user/head",
+                _.Hmd_SupportsPrismCorrection_Bool,
+              ));
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement("hr", null),
+            _.createElement(
+              "div",
+              {
+                className: "SettingsItem",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "Label Title Large",
+                },
+                _("#Settings_Accessibility"),
+              ),
+            ),
+            _.createElement(_, {
+              name: _,
+              label: _("#Settings_DominantEye"),
+              explainer: _("#Settings_DominantEye_Explainer"),
+              visibility: _.Advanced,
+              items: [
+                {
+                  value: _.Eye_Left,
+                  sLabel: _("#Settings_EyeLeft"),
+                },
+                {
+                  value: _.Eye_Right,
+                  sLabel: _("#Settings_EyeRight"),
+                },
+              ],
+            }),
+            _.m_bSupportsEyeTracking &&
+              _.createElement(_, {
+                name: _,
+                label: _("#Settings_EyeTrackingDominantEyeOnly"),
+                explainer: _("#Settings_EyeTrackingDominantEyeOnly_Explainer"),
+                visibility: _.Advanced,
+              }),
+            _ &&
+              _.createElement(_, {
+                name: _,
+                label: _("#Settings_PrismCorrection"),
+                explainer: _("#Settings_PrismCorrection_Desc"),
+                requiresRestart: !0,
+                visibility: _.Advanced,
+                onSubsection: _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, {
+                    label: _("#Settings_PrismCorrection_LeftEye"),
+                    horizontalName: _,
+                    verticalName: _,
+                  }),
+                  _.createElement(_, {
+                    label: _("#Settings_PrismCorrection_RightEye"),
+                    horizontalName: _,
+                    verticalName: _,
+                  }),
+                ),
+              }),
+          );
+        });
         var _;
+        const _ = [
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          "/settings/notifications/DoNotDisturb",
+          "/settings/userinterface/StatusAlwaysOnTop",
+          "/settings/steamvr/allowDisplayLockedMode",
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+        ];
         let _ = (_ = class extends _ {
           constructor(_) {
             super(_);
+          }
+          ResetToDefaults() {
+            const _ = !!_.settings.get(_);
+            for (const _ of _) _.SetSettingsValue(_, null);
+            null === VRHTML ||
+              void 0 === VRHTML ||
+              VRHTML.VRDashboardManager.SetNightModeEnabled(!1),
+              _ && _.SetRestartRequired();
           }
           render() {
             return this.props.active
@@ -55068,7 +55507,7 @@ var CLSTAMP = "steamdb";
                       visibility: _.Advanced,
                     }),
                   _.createElement(_, {
-                    name: "/settings/steamvr/ipdHUD",
+                    name: _,
                     label: _("#Settings_IpdHUD"),
                     title: _("#Settings_IpdHUDDesc"),
                     visibility: _.Advanced,
@@ -55076,32 +55515,7 @@ var CLSTAMP = "steamdb";
                   _.m_bSupportsEyeTracking &&
                     _.createElement(_, {
                       label: _("#Settings_EyeTracking"),
-                      name: "/settings/steamvr/allowEyeTracking",
-                      visibility: _.Advanced,
-                    }),
-                  _.createElement(_, {
-                    name: "/settings/steamvr/dominantEye",
-                    label: _("#Settings_DominantEye"),
-                    explainer: _("#Settings_DominantEye_Explainer"),
-                    visibility: _.Advanced,
-                    items: [
-                      {
-                        value: _.Eye_Left,
-                        sLabel: _("#Settings_EyeLeft"),
-                      },
-                      {
-                        value: _.Eye_Right,
-                        sLabel: _("#Settings_EyeRight"),
-                      },
-                    ],
-                  }),
-                  _.m_bSupportsEyeTracking &&
-                    _.createElement(_, {
-                      name: "/settings/steamvr/eyeTrackingDominantEyeOnly",
-                      label: _("#Settings_EyeTrackingDominantEyeOnly"),
-                      explainer: _(
-                        "#Settings_EyeTrackingDominantEyeOnly_Explainer",
-                      ),
+                      name: _,
                       visibility: _.Advanced,
                     }),
                   VRHTML.VRMonitor.HasVRMonitor() &&
@@ -55130,11 +55544,15 @@ var CLSTAMP = "steamdb";
                         _("#MenuAction_Reset"),
                       ),
                     ),
+                  _.createElement(_, null),
+                  this.makeResetToDefaultButton(),
                 )
               : null;
           }
         });
-        (_.Name = "general_settings"), (_ = _ = (0, _._)([_._], _));
+        (_.Name = "general_settings"),
+          (0, _._)([_], _.prototype, "ResetToDefaults", null),
+          (_ = _ = (0, _._)([_._], _));
         const _ = (_) => {
           var _;
           const [_, _] = (0, _.useState)(!1);
@@ -56714,7 +57132,7 @@ var CLSTAMP = "steamdb";
           );
         }
         function _() {
-          return (0, _.useObserver)(() => _.showAdvancedSettings)
+          return _()
             ? _.createElement(
                 _.Fragment,
                 null,
@@ -57456,8 +57874,6 @@ var CLSTAMP = "steamdb";
               null,
               !1,
               _.createElement("hr", null),
-              !1,
-              !1,
               !1,
               !1,
               !1,
@@ -59251,7 +59667,8 @@ var CLSTAMP = "steamdb";
                 : _.VRProperties.GetBoolProperty(
                     "/user/head",
                     _.HasCamera_Bool,
-                  ))
+                  )) &&
+              !_()
             )
               return !1;
             if ("internet_settings" == _.controller) return !1;
@@ -59953,6 +60370,9 @@ var CLSTAMP = "steamdb";
             null,
           );
         const _ = new _();
+        function _() {
+          return (0, _.useObserver)(() => _.showAdvancedSettings);
+        }
         window.VRSettingsState = _;
         const _ =
           window.addEventListener ||
@@ -60975,6 +61395,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [851], () => _(5187));
+  var _ = _._(void 0, [851], () => _(4461));
   _ = _._(_);
 })();

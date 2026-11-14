@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Mostrar menu de inicialização",
 	"/actions/lasermouse/in/leftclick": "Clique esquerdo do mouse",
 	"/actions/lasermouse/in/rightclick": "Clique direito do mouse",
+	"/actions/lasermouse/in/middleclick": "Clique do meio do mouse",
 	"/actions/lasermouse/in/lockmouseposition": "Bloquear posição do mouse",
 	"/actions/lasermouse/in/home": "Início",
 	"/actions/lasermouse/in/back": "Voltar",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Entrada de teclado",
 	"/actions/system": "Ações do sistema",
 	"/actions/scroll_discrete": "Rolagem com a roda do mouse",
-	"/actions/scroll_smooth": "Rolagem com o trackpad"
+	"/actions/scroll_smooth": "Rolagem com o trackpad",
+	"/actions/quickrecenter/in/Recenter": "Recentralizar",
+	"/actions/roomsetup": "Preparação de cômodo",
+	"/actions/roomsetup/in/FloorFineAdjust": "Ajuste preciso do chão",
+	"/actions/roomsetup/in/Accept": "Aceitar / Avançar",
+	"/actions/roomsetup/in/Back": "Voltar"
 }

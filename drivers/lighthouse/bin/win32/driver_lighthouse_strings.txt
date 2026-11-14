@@ -2732,6 +2732,7 @@ __libm_sse2_acosf
 __libm_sse2_asin
 __libm_sse2_atan
 __libm_sse2_atan2
+__libm_sse2_atanf
 __libm_sse2_cos
 __libm_sse2_pow
 __libm_sse2_sin

@@ -36,6 +36,9 @@
 		"asyncStartEncode" : true,
         "enableHandTracking" : true,
         "allowMultipleLinks" :  true,
-	    "enableHmdAutoConnect" : true
+	    "enableHmdAutoConnect" : true,
+        "chromaKeyMode" : 0,
+        "chromaKeyColor" : 2,
+        "chromaKeyNoiseFloor" : 0.3
     }
 }

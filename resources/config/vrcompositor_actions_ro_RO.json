@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Arată meniul de alimentare",
 	"/actions/lasermouse/in/leftclick": "Clic stânga (mouse)",
 	"/actions/lasermouse/in/rightclick": "Clic dreapta (mouse)",
+	"/actions/lasermouse/in/middleclick": "Clic mijloc (mouse)",
 	"/actions/lasermouse/in/lockmouseposition": "Blochează poziția mouse-ului",
 	"/actions/lasermouse/in/home": "Mergi către pagina principală",
 	"/actions/lasermouse/in/back": "Mergi înapoi",
@@ -46,8 +47,13 @@
 	"/actions/chord": "Comenzi rapide ale butonului de sistem",
 	"/actions/lasermouse": "Mouse cu laser",
 	"/actions/lasermouse_secondary": "Mouse secundar cu laser",
-	"/actions/dualanalog": "Intrare tastatură",
+	"/actions/dualanalog": "Introducere de la tastatură",
 	"/actions/system": "Acțiuni de sistem",
 	"/actions/scroll_discrete": "Derulare ca rotiță de mouse",
-	"/actions/scroll_smooth": "Derulare ca trackpad"
+	"/actions/scroll_smooth": "Derulare ca trackpad",
+	"/actions/quickrecenter/in/Recenter": "Recentrare",
+	"/actions/roomsetup": "Configurarea încăperii",
+	"/actions/roomsetup/in/FloorFineAdjust": "Reglare precisă a podelei",
+	"/actions/roomsetup/in/Accept": "Acceptă/înainte",
+	"/actions/roomsetup/in/Back": "Înapoi"
 }

@@ -804,6 +804,39 @@ body.SGApp .SettingsSidebarButton .Label {
   + .SegmentedControlGroupOption:not(.Active)::before {
   opacity: 0.75;
 }
+.SettingsItem.ColorSwatches .ColorSwatchGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4em;
+  width: var(--settings-right-column-computed-width);
+}
+.SettingsItem.ColorSwatches .ColorSwatch {
+  flex: 1;
+  height: var(--settings-control-default-height);
+  border-radius: var(--settings-control-inner-border-radius);
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color var(--settings-control-hover-fade-duration)
+    var(--settings-control-hover-fade-ease);
+}
+.SettingsItem.ColorSwatches .ColorSwatch:hover {
+  outline-color: var(--gamepadui-darkish-grey);
+}
+.SettingsItem.ColorSwatches .ColorSwatch.Active {
+  outline-color: var(--text-color);
+  cursor: default;
+}
+.SettingsItem.ColorSwatches .ColorSwatchValue {
+  min-width: 5.5em;
+  text-align: right;
+  font-size: var(--settings-font-size);
+  font-variant-numeric: tabular-nums;
+  user-select: text;
+  cursor: text;
+}
 .SettingsMain .SettingsSidebar .SettingsItem {
   display: block;
 }

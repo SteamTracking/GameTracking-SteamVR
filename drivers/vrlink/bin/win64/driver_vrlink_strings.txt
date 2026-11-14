@@ -364,6 +364,7 @@ $0option $1;\n
 .?AV<lambda_091a95096c4d84b5e5bd0b9ad9faa18e>@@
 .?AV<lambda_18a314cd491848b72f3b3e9798065abb>@@
 .?AV<lambda_18c16c7f54b6ef613ac8ab67a502910f>@@
+.?AV<lambda_19b9dab83416377bad1b4bc9dd7b2b5a>@@
 .?AV<lambda_1db60d98261e2e5ed663866066a32dcb>@@
 .?AV<lambda_1e8971f6e9ecb6c4f2e8923bace2093c>@@
 .?AV<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@
@@ -414,11 +415,11 @@ $0option $1;\n
 .?AV<lambda_db99d3d0e9e843038cbeba219936706c>@@
 .?AV<lambda_e6c6d718dd3dc6eee0580ada32c627ff>@@
 .?AV<lambda_e90c1d83669a90c76e74f75cf4690e43>@@
+.?AV<lambda_ed78887109932cca287370beebcaed3c>@@
 .?AV<lambda_ef563500a89503df14b1e609de2ab40e>@@
 .?AV<lambda_f1435df8ebe7eb4c29dd8ade9d516875>@@
 .?AV<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@
 .?AV<lambda_f6b5d47df092c684e925186f68bd5c46>@@
-.?AV<lambda_f6b6588b8118f97bd3a0ae7e8fc492d4>@@
 .?AV<lambda_f73c3f420ca6d0536f438c9140780aed>@@
 .?AV<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@
 .?AV?$TypeInfoT@VCAnimResource@@@Detail@Reflection@@
@@ -457,6 +458,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_091a95096c4d84b5e5bd0b9ad9faa18e>@@XAEBUSVLReconstructionSequence@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_18a314cd491848b72f3b3e9798065abb>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_18c16c7f54b6ef613ac8ab67a502910f>@@XW4ValueTransportID@@_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_19b9dab83416377bad1b4bc9dd7b2b5a>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_1db60d98261e2e5ed663866066a32dcb>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_1e8971f6e9ecb6c4f2e8923bace2093c>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@HPEAEHG_K_N@std@@
@@ -507,11 +509,11 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_db99d3d0e9e843038cbeba219936706c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_e6c6d718dd3dc6eee0580ada32c627ff>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_e90c1d83669a90c76e74f75cf4690e43>@@XPEAUHKEY__@@PEB_W@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_ed78887109932cca287370beebcaed3c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ef563500a89503df14b1e609de2ab40e>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f1435df8ebe7eb4c29dd8ade9d516875>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f6b5d47df092c684e925186f68bd5c46>@@X_N@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_f6b6588b8118f97bd3a0ae7e8fc492d4>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f73c3f420ca6d0536f438c9140780aed>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V?$_Binder@U_Unforced@std@@P8CVRMailbox@@EAAXAEBVValue@Json@@@ZPEAV3@AEBU?$_Ph@$00@2@@std@@XAEBVValue@Json@@@std@@
@@ -519,7 +521,7 @@ $0option $1;\n
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLAudioWSAPI@@EAAPEAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLAudioWSAPI@@EAAPEAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLDataLinkUDP@@EAAPEAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLDataLinkUDP@@EAAPEAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLDataLinkUber@@EAAHXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLDataLinkUber@@EAAHXZPEAV1@@std@@@2@@std@@@std@@
-.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLFEC@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLFEC@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLFECTX@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLFECTX@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLRoot@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLRoot@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8videoamfenc@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8videoamfenc@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8videonvenc@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8videonvenc@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
@@ -645,11 +647,9 @@ $0option $1;\n
 .?AVSVLDataLinkUDP@@
 .?AVSVLDataLinkUber@@
 .?AVSVLDriver@@
-.?AVSVLFEC@@
-.?AVSVLFECRAID6@@
-.?AVSVLFECRAID6RXFrame@@
+.?AVSVLFECRAID6TX@@
 .?AVSVLFECRAID6TXFrame@@
-.?AVSVLFECRXFrame@@
+.?AVSVLFECTX@@
 .?AVSVLFECTXFrame@@
 .?AVSVLHMDDriver@@
 .?AVSVLHMDDriverD3D11@@
@@ -958,8 +958,10 @@ $0option $1;\n
 /vrgamepadui/steamvr/vrlink_lasermousestate_tx
 /vrlink/steamvr/chromakey_passthrough_client_pid
 /vrlink/steamvr/remoteClientRefreshRate
+/vrlink/steamvr/remote_chromakey_noise_floor
 /vrlink/steamvr/remote_client_refresh_rate_tx
 /vrlink/steamvr/remote_roomview_enabled
+/vrlink/steamvr/remote_roomview_translucent
 /vrlink/steamvr/remote_scene_app_showing
 /vrlink/steamvr/scene_app_showing_tx
 /vrlink_client_isSteamVR
@@ -1374,6 +1376,7 @@ Apple Vision Pro M5
 Array length of `baseColorFactor` parameter in pbrMetallicRoughness must be 4, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 4\n
+Asking client to turn room view %s
 Asset
 Attempting to SetPeer on link %s dev %s, but families do not match.
 Attempting to SetPeer on link %s dev %s, but it is not enabled.
@@ -1868,7 +1871,7 @@ Change frame phase of when waitgetposes is requested.
 Change target frame deadline.
 Channel: %d\n
 Char=
-Chroma key passthrough: client supports=%d, client color=%d -> Prop_Hmd_SupportsChromaKeyPassthrough_Bool=%d%s
+Chroma key passthrough: client supports=%d (host noise floor %d), client requests=%d -> Prop_Hmd_SupportsChromaKeyPassthrough_Bool=%d%s
 Classic
 ClearField
 Client HMD type (%d) supports eye tracking, creating input component
@@ -1906,7 +1909,6 @@ ConnectionLost
 Connector GetDeviceIdConnectedTo() failed: hr = 0x%08x\n
 Content-Type: application/ocsp-request\r\nContent-Length: %d\r\n\r\n
 ConvertFiberToThread
-Could not acquire encoded data buffer from codec for frame: %i\n
 Could not create OpenGL Context/Window + Debug Window\n
 Could not create an instance of 
 Could not find NvEncodeAPICreateInstance in nvEncodeAPI64.dll
@@ -2245,7 +2247,6 @@ ERROR: Failed to get encryption engine.
 ERROR: Failed to open log file %s, attempting timestamped filename\n
 ERROR: Requested GRT type is not supported (type != DIRECTX)\n
 ERROR: Shaders sum to > 64kB\n
-ERROR: While trying to request retransmission of packet #%d, too many packets were missing even to retransmit.  Aborting stream.\n
 ERROR: failed to create/reset encoder in videoamfenc::SubmitFrame()\n
 ERROR: frame metadata index mismatch\n
 ERROR: svl protocol version mismatch. Server expects %d, client is %d
@@ -2339,7 +2340,6 @@ Encryption mechanism failed encryption test.
 Encryption mechanism fialed to decode.
 Encryption mechanism fialed to encode.
 Encryption not giving expected result %x
-Encryption type: %s\n
 End-of-file inside block comment.
 Endpoint Activate(IDeviceTopology) failed: id = %s hr = 0x%08x\n
 Endpoint topology GetConnector(0) failed: hr = 0x%08x\n
@@ -2406,7 +2406,7 @@ Error: could not set socket nonblocking mode (%d)\n
 Error: detection unknown (%d)\n
 Error: enc failed to initialize the session.\n
 Error: enc uninitialized when submitting a frame\n
-Error: m_fec not initialized!\n
+Error: m_fecTX not initialized!\n
 Error: nvEncDestroyEncoder() failed to destroy. Error: %d\n
 Error: nvEncInitializeEncoder failed with %d\n
 Error: unsupported mode in CheckOrGenerateSpatialRateControl\n
@@ -2469,7 +2469,6 @@ FALSE
 FATAL
 FATAL: Failed to open log file %s, failing out!\n
 FAULT: Packet too big!!! Can't send!!! Dropping\n
-FEC decode fail %d %d %d\n
 FILE pointer
 FIPS routines
 FIPS_mode_set
@@ -2509,7 +2508,6 @@ Failed to set thread %p priority: invalid priority %d\n
 False
 Fatal
 Fatal: Bad server address with -c [server] : %s\n
-Fault, SVLFEC Received ExperiencedAnUnrecoverableError()\n
 Field "
 Field Type: %s\n
 Field does not match message type.
@@ -2695,6 +2693,7 @@ Hold Instruction Code
 Hold Instruction None
 Hold Instruction Reject
 Holdoff
+Host chroma key settings: mode %d, color %d, noise floor %d
 HostMacPrefix
 HostRxLoss
 IA5STRING
@@ -3532,7 +3531,6 @@ PUBLIC KEY
 Packet Ping
 Pairing to address: %s\n
 Pairing to broadcast address not allowed.\n
-Panic! Overwriting vCompleteFramePointer
 Parse error: 
 Parse failed for JSON message in mailbox %s: %s\n
 Parsing of JSON string "%s" failed: %s\n
@@ -3696,7 +3694,6 @@ ReadConsoleW
 Reading dangerously large protocol message.  If the message turns out to be larger than 
 Reasons
 Received GPU Architecture %d\n
-Received frame outside of backtrack window.  Resetting.\n
 Received mirror reset event after %u passes, %llu samples\n
 Received mirror reset event\n
 Received mirror stop event after %u passes, %llu samples\n
@@ -3979,14 +3976,8 @@ SVLDriver::Init()\n
 SVLDriver::UpdateConnectionQuitEvent
 SVLDriver::UpdateNetworkInfo
 SVLDriver::UpdateOGSStatistics
-SVLFEC: frame %d was entirely dropped, initializing and re-requesting\n
-SVLFEC: substantive retry (%d packets) due to frame skip (skipped %d, last sub %d, group %d, expected size %d)\n
-SVLFEC::AcceptVideoPacket
-SVLFEC::InternalAcceptFrameFromRX
-SVLFEC::InternalAcceptFrameFromRX: Failed to acquire pRender
-SVLFEC::ProcessTXVideoFrameThreadFunction
 SVLFEC::ReportStreamReset() (m_iLastAcknowledgeFrameNumber = %d)
-SVLFECRXFrame::AcceptVideoPacket: m_pData was not suitable for video (null or insufficient size)
+SVLFECTX::ProcessTXVideoFrameThreadFunction
 SVLHMDDriver::Activate: HMD did not support multiple framerates
 SVLHMDDriver::Activate: HMD informs framerates. Num supported: %d
 SVLHMDDriver::InitializeOSC: OSC failed to initialize: %i
@@ -4007,7 +3998,6 @@ SVLHMDDriverD3D11::SVLHMDDriverD3D11() %s\n
 SVLReconstructionWindow::AddSequenceToWindow overflow\n
 SVLRoot::EventsThread
 SVLRoot::SVLRoot() Arg Parsed\n
-SVLRoot::SVLRoot() Parsing Arg (%d)\n
 SVLRoot::SVLRoot() Parsing Data\n
 SVLRoot::SVLRoot() Uber link enabled\n
 SVLRoot::SVLRoot() sReqEncMode = %s\n
@@ -4020,6 +4010,7 @@ SVLServer mailbox dashboard_tutorial_dismissed
 SVLServer mailbox handle_recenter
 SVLServer mailbox room_setup
 SVLServer mailbox user_interaction_click_info
+SVLServer mailbox vrlink_roomview_request
 SVLServer::CreateConnectionInfo
 SVLServer::Init
 SVLServer::ProcessEvent
@@ -4029,8 +4020,6 @@ SVLServer::SVLServer(...)\n
 SVLServer::SendShutdownMessage
 SVLServer::Shutdown
 SVLServer::Shutdown()\n
-SVST_VIDEO_TRANSPORT: WARNING: Could not initialize frame on hardware.\n
-SVST_VIDEO_TRANSPORT_DESCRIPTION: WARNING: Could not initialize frame on hardware.\n
 SXNET
 SXNETID
 SXNET_add_id_INTEGER
@@ -4147,7 +4136,6 @@ Starting encoder reset with reallocate (%d)...\n
 Starting session in mode %d\n
 Starting session with AES Mode 0
 Starting session with ID: %08x
-Steam Argument Count: %d\n
 Steam Frame
 Steam Streaming Microphone
 Steam Streaming Speakers
@@ -4157,7 +4145,7 @@ SteamVRDriverVRLinkBwStats
 SteamVRDriverVrlink
 Stopping playback mirror thread\n
 Stream view aspect ratio set to %.2f
-Stream views %dx%d (target square view size %d, aspect ratio %.2f), atlas %dx%d, mode %d
+Stream views %dx%d, outer %dx%d (target square view size %d, aspect ratio %.2f), atlas %dx%d, mode %d
 StreamReset
 String literals cannot cross line boundaries.
 StringOutputStream.
@@ -4257,7 +4245,6 @@ Transport Check
 Tried to merge messages of different types 
 True
 Trust Root
-Trying to submit frames out-of-order.  Only possible on catastrophic network failure\n
 Type appears to be in generated pool but wasn't 
 Type is already registered: 
 Type=
@@ -4410,7 +4397,6 @@ Vive Focus 3 (Left Controller)
 Vive Focus 3 (Right Controller)
 Vive Focus Vision
 WARNING
-WARNING Initializing frame number %d.  Expected size too large (%d > %d).\n
 WARNING: Corrupt UDP packet went long (%d size, %d left, %d total length)\n
 WARNING: Could not find steam streaming microphone output.
 WARNING: Packet was XMITTed that was too big. [%d %d %d %d / %d]\n
@@ -4490,7 +4476,6 @@ Warning: Unused import: "
 Warning: Watchdog %s not properly cleaned up%s%s\n
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x
 Warning: packet received with wrong identifier. Expected 0x02...... got: %08x (Size=%d)
-Warning: received packet ID %d in frame %d, but packet id exceeded max frame size\n
 Warning: received packet with invalid session ID (%08x/%08x/%08x)\n
 Warning: res field incorrect [clear mode] %04x\n
 Warning: res field incorrect [encryption mode] %08x on packet size %d\n
@@ -4659,7 +4644,6 @@ ZLIB
 ZUINT32
 ZUINT64
 [%s]   %s (%u) with:
-[%s] %s file=%s
 [%s] %s=%s\n
 [%s] %u frames, no problems
 [%s] %u frames, outcomes:
@@ -4732,9 +4716,6 @@ ZUINT64
 [SVLController] Reported HMD model is %d\n
 [SVLController] Setting up HTC Vive Focus Controller: %s
 [SVLController] Unable to find override properties for unknown key: %s:%s
-[SVLFEC] Saw a re-accept in InternalAcceptFrameFromRX.
-[SVLFEC] accepting a frame for submission without metadata [ %d ]
-[SVLFEC] received late metadata for frame [ %d ]
 [SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
 [SVLS] ResetVideoStream
@@ -5384,16 +5365,14 @@ c:\buildslave\steamvr_rel_win64\build\src\common\generated_proto_x64\vrshared_da
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresourcemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:1116
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\common\svlfec.cpp:769
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3099
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3260
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3379
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3187
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3350
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3469
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1355
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1388
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1430
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1432
 cACertificate
 cAoption requires an argument -- %c
 cAudBufAvg
@@ -5518,6 +5497,9 @@ check_name_constraints
 check_padding_md
 check_policy
 children
+chromaKeyColor
+chromaKeyMode
+chromaKeyNoiseFloor
 cipher
 cipher has no object identifier
 cipher initialisation error
@@ -6195,9 +6177,8 @@ driver_vrlink: IPD: %f\n
 driver_vrlink: Peer Minor Version Number: %d\n
 driver_vrlink: Render Target: %d %d\n
 driver_vrlink: Serial Number: %s\n
-driver_vrlink: client chroma key color=%d noise floor=%d\n
+driver_vrlink: client chroma key color=%d noise floor=%d flags=%d\n
 driver_vrlink: client room view %s\n
-driver_vrlink: unsupported client chroma key color %d, using green
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -6573,7 +6554,6 @@ fr_fr
 fraction
 frame_controller
 frame_controller_
-frame_id=%d
 frameid
 frames
 fread
@@ -6738,8 +6718,6 @@ i2s_ASN1_INTEGER
 i2v_AUTHORITY_INFO_ACCESS
 iA5StringSyntax
 iQ %5.2f
-iRXFrameID %d != pRXFrame->m_iFrameNumber %d
-iRXFrameID=%d
 ia5org
 iana
 id-DHBasedMac
@@ -8220,6 +8198,7 @@ recipientinfo
 recommended-private-length: %d bits\n
 recommendedRenderHeight
 recommendedRenderWidth
+recommendedResolutionMultiplierSteps
 recursive directory include
 refDistance
 registered: 
@@ -8273,7 +8252,6 @@ revocationDate
 revocationReason
 revocationTime
 revoked
-rexmitReq
 rexmitSent
 rfc822Mailbox
 rift
@@ -9172,6 +9150,7 @@ vrlink_frame_preview_docklocation_request
 vrlink_pa_
 vrlink_pa_*.json
 vrlink_room_setup
+vrlink_roomview_request
 vrlink_show_steamvr_setting
 vrlink_store
 vrshared_base.proto

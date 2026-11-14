@@ -1,4 +1,4 @@
-var CLSTAMP = "11214286";
+var CLSTAMP = "11238649";
 (() => {
   "use strict";
   var e,
@@ -15,7 +15,7 @@ var CLSTAMP = "11214286";
           Ee9: () => M.Ee,
           EmM: () => c.Em,
           FbK: () => r.Fb,
-          FiV: () => _.Fi,
+          FiV: () => f.Fi,
           Fzk: () => M.Fz,
           GMj: () => d.GM,
           GQ2: () => C.GQ,
@@ -34,14 +34,14 @@ var CLSTAMP = "11214286";
           LdJ: () => y.L,
           LdK: () => r.Ld,
           M9N: () => o.M9,
-          MQJ: () => _.MQ,
+          MQJ: () => f.MQ,
           MVt: () => C.MV,
           N1A: () => p.N,
           NHZ: () => r.NH,
           O54: () => g.O,
           O6e: () => r.O6,
           OH$: () => C.OH,
-          OiK: () => _.Oi,
+          OiK: () => f.Oi,
           Op7: () => C.Op,
           OxZ: () => C.Ox,
           QB1: () => r.QB,
@@ -60,14 +60,14 @@ var CLSTAMP = "11214286";
           YsR: () => c.Ys,
           Yup: () => M.Yu,
           ZPA: () => M.ZP,
-          Zkm: () => _.Zk,
+          Zkm: () => f.Zk,
           _1: () => C._1,
           _81: () => M._8,
           _nH: () => o._n,
           aXN: () => h.aX,
           aqc: () => C.aq,
           b$J: () => O.b,
-          b4: () => f.b,
+          b4: () => _.b,
           ba0: () => C.b,
           dLy: () => u.d,
           ds4: () => M.ds,
@@ -88,15 +88,15 @@ var CLSTAMP = "11214286";
           lo4: () => o.lo,
           lqd: () => m.l,
           ltU: () => M.lt,
-          m$_: () => f.m,
+          m$_: () => _.m,
           mHe: () => h.mH,
           mXc: () => o.mX,
           muq: () => C.mu,
-          mw: () => _.mw,
+          mw: () => f.mw,
           nXw: () => c.nX,
           neN: () => C.ne,
           nqf: () => R.n,
-          o3u: () => _.o3,
+          o3u: () => f.o3,
           oN_: () => r.oN,
           pMg: () => C.pM,
           pgT: () => o.pg,
@@ -110,7 +110,7 @@ var CLSTAMP = "11214286";
           uS7: () => a.u,
           vxi: () => r.vx,
           wBp: () => M.wB,
-          xOm: () => _.xO,
+          xOm: () => f.xO,
           yWq: () => M.yW,
           zwf: () => M.zw,
         });
@@ -128,8 +128,8 @@ var CLSTAMP = "11214286";
           m = n(6847),
           p = n(5227),
           v = (n(10), n(1808)),
-          _ = n(7019),
-          f = (n(1988), n(2527), n(9864)),
+          f = n(7019),
+          _ = (n(1988), n(2527), n(9864)),
           S = (n(4189), n(322), n(1977), n(6417)),
           R = n(2303),
           y = n(8715),
@@ -153,15 +153,15 @@ var CLSTAMP = "11214286";
             : o.Unknown;
         }
         n.d(t, {
-          GQ: () => H,
+          GQ: () => P,
           Gz: () => u,
-          HW: () => _,
+          HW: () => f,
           Il: () => d,
           Kl: () => O,
           MV: () => a,
           OH: () => o,
-          Op: () => P,
-          Ox: () => f,
+          Op: () => H,
+          Ox: () => _,
           R$: () => i,
           Rk: () => m,
           Xl: () => R,
@@ -213,8 +213,8 @@ var CLSTAMP = "11214286";
         let s = 0,
           u = 0,
           c = 4294967295;
-        var d, g, h, m, p, v, _, f, S, R, y, O, k, T, C, M, b, w, B, A, H;
-        function P(e) {
+        var d, g, h, m, p, v, f, _, S, R, y, O, k, T, C, M, b, w, B, A, P;
+        function H(e) {
           let t = d.None;
           return (
             e.getModifierState("CapsLock") && (t |= 1),
@@ -273,7 +273,7 @@ var CLSTAMP = "11214286";
               (e[(e.Quitting = 2)] = "Quitting"),
               (e[(e.Running = 3)] = "Running"),
               (e[(e.Waiting = 4)] = "Waiting");
-          })(_ || (_ = {})),
+          })(f || (f = {})),
           (function (e) {
             (e[(e.ButtonPress_0 = 0)] = "ButtonPress_0"),
               (e[(e.ButtonPress_1 = 1)] = "ButtonPress_1"),
@@ -284,7 +284,7 @@ var CLSTAMP = "11214286";
               (e[(e.CouldntFindOrCreateClientOverlay = 5)] =
                 "CouldntFindOrCreateClientOverlay"),
               (e[(e.ApplicationQuit = 6)] = "ApplicationQuit");
-          })(f || (f = {})),
+          })(_ || (_ = {})),
           (function (e) {
             (e[(e.Accept = 0)] = "Accept"), (e[(e.Back = 1)] = "Back");
           })(S || (S = {})),
@@ -391,14 +391,14 @@ var CLSTAMP = "11214286";
               (e[(e.Large = 2)] = "Large"),
               (e[(e.Gigantic = 3)] = "Gigantic"),
               (e[(e.Standing = 4)] = "Standing");
-          })(H || (H = {}));
+          })(P || (P = {}));
       },
       3714: (e, t, n) => {
-        n.d(t, { A0: () => a, uV: () => s, we: () => l });
-        n(6540);
-        var o = n(2505),
-          r = n.n(o);
-        class a {
+        n.d(t, { A0: () => l, PP: () => s, uV: () => c, we: () => i });
+        var o = n(6540),
+          r = n(2505),
+          a = n.n(r);
+        class l {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map());
@@ -435,15 +435,15 @@ var CLSTAMP = "11214286";
                   ? void 0
                   : VRHTML.GetSystemLocale();
               if (!t) return e;
-              a.s_Date.toLocaleTimeString(t);
+              l.s_Date.toLocaleTimeString(t);
               return t;
             } catch (t) {
               return e;
             }
           }
         }
-        function l(e, ...t) {
-          let n = i.LocalizeString(e);
+        function i(e, ...t) {
+          let n = u.LocalizeString(e);
           return n
             ? (t.length > 0 &&
                 (n = n.replace(/%(\d+)\$s/g, function (e, n) {
@@ -452,9 +452,23 @@ var CLSTAMP = "11214286";
               n)
             : e;
         }
-        a.s_Date = new Date();
-        const i = new a();
-        function s(e, t) {
+        function s(e, ...t) {
+          let n = u.LocalizeString(e);
+          if (!n) return e;
+          let r,
+            a = [],
+            l = /(.*?)%(\d+)\$s/g,
+            i = 0;
+          for (; (r = l.exec(n)); ) {
+            (i += r[0].length), a.push(r[1]);
+            let e = parseInt(r[2]);
+            e >= 1 && e <= t.length && a.push(t[e - 1]);
+          }
+          return a.push(n.substr(i)), o.createElement(o.Fragment, null, ...a);
+        }
+        l.s_Date = new Date();
+        const u = new l();
+        function c(e, t) {
           t ||
             (t = (function () {
               let e = new Map([
@@ -497,15 +511,15 @@ var CLSTAMP = "11214286";
           let n = [],
             o = (e, t, n) => {
               let o,
-                a = Date.now().toString();
+                r = Date.now().toString();
               return (
                 (o =
                   "drivers" == e
-                    ? `/input/localization.json?t=${a}`
+                    ? `/input/localization.json?t=${r}`
                     : "webhelper" == e
-                      ? `/dashboard/localization/${e}_${t}.json?t=${a}`
-                      : `localization/${e}_${t}.json?t=${a}`),
-                r()
+                      ? `/dashboard/localization/${e}_${t}.json?t=${r}`
+                      : `localization/${e}_${t}.json?t=${r}`),
+                a()
                   .get(o)
                   .then((e) => {
                     n(e.data);
@@ -513,20 +527,20 @@ var CLSTAMP = "11214286";
                   .catch(() => {})
               );
             },
-            a = [],
+            r = [],
             l = [],
-            s = [],
-            u = [];
-          for (let r of e)
+            i = [],
+            s = [];
+          for (let a of e)
             n.push(
-              o(r, t, (e) => {
-                a.push(e);
+              o(a, t, (e) => {
+                r.push(e);
               }),
             ),
               "english" != t &&
                 n.push(
-                  o(r, "english", (e) => {
-                    s.push(e);
+                  o(a, "english", (e) => {
+                    i.push(e);
                   }),
                 );
           for (let e of ["webhelper"])
@@ -538,21 +552,21 @@ var CLSTAMP = "11214286";
               "english" != t &&
                 n.push(
                   o(e, "english", (e) => {
-                    u.push(e);
+                    s.push(e);
                   }),
                 );
           return (
             n.push(
               o("drivers", "", (e) => {
-                a.push(e);
+                r.push(e);
               }),
             ),
             Promise.all(n).then(() => {
-              i.InitFromObjects(a, l, s, u);
+              u.InitFromObjects(r, l, i, s);
             })
           );
         }
-        window.LocalizationManager = i;
+        window.LocalizationManager = u;
       },
       4728: (e, t, n) => {
         function o(e, t, n) {

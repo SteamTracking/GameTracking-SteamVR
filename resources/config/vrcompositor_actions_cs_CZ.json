@@ -9,7 +9,8 @@
 	"/actions/system/in/ShowPowerMenu": "Nabídka napájení",
 	"/actions/lasermouse/in/leftclick": "Levé tlačítko myši",
 	"/actions/lasermouse/in/rightclick": "Pravé tlačítko myši",
-	"/actions/lasermouse/in/lockmouseposition": "Uzamknout pozici myši",
+	"/actions/lasermouse/in/middleclick": "Prostřední tlačítko myši",
+	"/actions/lasermouse/in/lockmouseposition": "Uzamčení pozice myši",
 	"/actions/lasermouse/in/home": "Domů",
 	"/actions/lasermouse/in/back": "Zpět",
 	"/actions/lasermouse/in/moveright": "Pohyb doprava",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Klávesnice na obrazovce",
 	"/actions/system": "Systémové akce",
 	"/actions/scroll_discrete": "Scrollování (jako na myši)",
-	"/actions/scroll_smooth": "Scrollování (jako na trackpadu)"
+	"/actions/scroll_smooth": "Scrollování (jako na trackpadu)",
+	"/actions/quickrecenter/in/Recenter": "Vycentrovat",
+	"/actions/roomsetup": "Příprava místnosti",
+	"/actions/roomsetup/in/FloorFineAdjust": "Detailní nastavení podlahy",
+	"/actions/roomsetup/in/Accept": "Potvrdit / Další",
+	"/actions/roomsetup/in/Back": "Zpět"
 }

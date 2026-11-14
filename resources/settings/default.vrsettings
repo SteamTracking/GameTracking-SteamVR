@@ -316,6 +316,10 @@
         "hmdAllowsClientToControlTextureIndex" : false,
         "forceSystemLayerUseAppPoses" : false
     },
+    "driver_lighthouse": {
+        "hmdAllowsClientToControlTextureIndex" : false,
+        "forceSystemLayerUseAppPoses" : false
+    },
     "input": {
         "leftThumbstickRotation": 0,
         "rightThumbstickRotation": 0,

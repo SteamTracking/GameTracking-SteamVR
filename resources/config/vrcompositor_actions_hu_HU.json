@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Energia menü mutatása",
 	"/actions/lasermouse/in/leftclick": "Bal egérgomb kattintás",
 	"/actions/lasermouse/in/rightclick": "Jobb egérgomb kattintás",
+	"/actions/lasermouse/in/middleclick": "Középső egérgomb kattintás",
 	"/actions/lasermouse/in/lockmouseposition": "Egérpozíció rögzítése",
 	"/actions/lasermouse/in/home": "Kezdőoldalra",
 	"/actions/lasermouse/in/back": "Vissza",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Billentyűzetes bevitel",
 	"/actions/system": "Rendszerműveletek",
 	"/actions/scroll_discrete": "Egérgörgő stílusú görgetés",
-	"/actions/scroll_smooth": "Trackpad stílusú görgetés"
+	"/actions/scroll_smooth": "Trackpad stílusú görgetés",
+	"/actions/quickrecenter/in/Recenter": "Középpontba állítás",
+	"/actions/roomsetup": "Szobaelrendező",
+	"/actions/roomsetup/in/FloorFineAdjust": "Padló finombeállítása",
+	"/actions/roomsetup/in/Accept": "Elfogad / Tovább",
+	"/actions/roomsetup/in/Back": "Vissza"
 }

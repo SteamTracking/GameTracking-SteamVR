@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Mostra il menu di accensione",
 	"/actions/lasermouse/in/leftclick": "Clic sinistro del mouse",
 	"/actions/lasermouse/in/rightclick": "Clic destro del mouse",
+	"/actions/lasermouse/in/middleclick": "Clic centrale del mouse",
 	"/actions/lasermouse/in/lockmouseposition": "Blocca posizione del mouse",
 	"/actions/lasermouse/in/home": "Torna all'inizio",
 	"/actions/lasermouse/in/back": "Indietro",
@@ -43,11 +44,16 @@
 	"/actions/system/in/takescreenshot": "Fai uno screenshot",
 	"/actions/system/in/mutemicrophone": "Disattiva il microfono",
 	"/actions/normal": "Funzionamento normale",
-	"/actions/chord": "Tasti di sistema (pressione contemporanea)",
+	"/actions/chord": "Scorciatoie di sistema",
 	"/actions/lasermouse": "Mouse laser",
 	"/actions/lasermouse_secondary": "Mouse laser secondario",
 	"/actions/dualanalog": "Immissione da tastiera",
 	"/actions/system": "Azioni del sistema",
 	"/actions/scroll_discrete": "Scorrimento in stile rotellina del mouse",
-	"/actions/scroll_smooth": "Scorrimento in stile trackpad"
+	"/actions/scroll_smooth": "Scorrimento in stile trackpad",
+	"/actions/quickrecenter/in/Recenter": "Centra",
+	"/actions/roomsetup": "Configurazione della stanza",
+	"/actions/roomsetup/in/FloorFineAdjust": "Regolazione precisa del pavimento",
+	"/actions/roomsetup/in/Accept": "Accetta/successivo",
+	"/actions/roomsetup/in/Back": "Indietro"
 }

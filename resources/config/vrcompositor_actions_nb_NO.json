@@ -9,6 +9,7 @@
 	"/actions/system/in/ShowPowerMenu": "Vis strømmeny",
 	"/actions/lasermouse/in/leftclick": "Venstre museklikk",
 	"/actions/lasermouse/in/rightclick": "Høyre museklikk",
+	"/actions/lasermouse/in/middleclick": "Midtre museklikk",
 	"/actions/lasermouse/in/lockmouseposition": "Lås museposisjon",
 	"/actions/lasermouse/in/home": "Gå hjem",
 	"/actions/lasermouse/in/back": "Gå tilbake",
@@ -49,5 +50,10 @@
 	"/actions/dualanalog": "Tastaturoppføring",
 	"/actions/system": "Systemhandlinger",
 	"/actions/scroll_discrete": "Rulling som musehjul",
-	"/actions/scroll_smooth": "Rulling som styreplate"
+	"/actions/scroll_smooth": "Rulling som styreplate",
+	"/actions/quickrecenter/in/Recenter": "Midtstill",
+	"/actions/roomsetup": "Romoppsett",
+	"/actions/roomsetup/in/FloorFineAdjust": "Finjustering av gulv",
+	"/actions/roomsetup/in/Accept": "Godta / neste",
+	"/actions/roomsetup/in/Back": "Tilbake"
 }

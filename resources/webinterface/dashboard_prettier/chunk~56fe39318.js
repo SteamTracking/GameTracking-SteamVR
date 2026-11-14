@@ -1,9 +1,9 @@
-var CLSTAMP = "11214286";
+var CLSTAMP = "11238649";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [554],
   {
     9125: (e, t, r) => {
-      r.d(t, { aj: () => O, d4: () => W });
+      r.d(t, { aj: () => O, d4: () => V });
       var n = r(1635),
         i = r(6540),
         s = r(5339),
@@ -153,17 +153,17 @@ var CLSTAMP = "11214286";
       }
       var m = r(7600),
         h = r(4728),
-        p = r(1333),
-        g = r(9118),
+        g = r(1333),
+        p = r(9118),
         f = r(6090),
         _ = r(5026);
       const b =
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
       let w,
         R = [],
-        v = (e, t, r) =>
+        S = (e, t, r) =>
           R.push({ error: e, cCallsitesToIgnore: t, strComponentStack: r });
-      const S = !0;
+      const v = !0;
       class T extends Error {
         constructor(...e) {
           super(...e), (this.name = "Assertion Failed");
@@ -174,27 +174,27 @@ var CLSTAMP = "11214286";
         console.assert = (t, r, ...n) => {
           if (!t) {
             const e = M();
-            v(new T(E(r, ...n)), 2, e);
+            S(new T(E(r, ...n)), 2, e);
           }
           e.apply(console, [t, r, ...n]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
           const n = M();
-          v(new Error(E(e, ...r)), 1, n), t.apply(console, [e, ...r]);
+          S(new Error(E(e, ...r)), 1, n), t.apply(console, [e, ...r]);
         }),
           (console.clogerror = (e, r, ...n) => {
             const i = M();
-            v(new Error(E(r, ...n)), e + 1, i), t.apply(console, [r, ...n]);
+            S(new Error(E(r, ...n)), e + 1, i), t.apply(console, [r, ...n]);
           }),
           b("error", (e) => {
-            v(e.error, 0);
+            S(e.error, 0);
           }),
           b("unhandledrejection", (e) => {
-            v(e.reason, 0);
+            S(e.reason, 0);
           }),
           (w = window.setTimeout(() => {
-            (R = []), (v = () => {});
+            (R = []), (S = () => {});
           }, 3e4));
       }
       const y = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
@@ -245,12 +245,12 @@ var CLSTAMP = "11214286";
                       strComponentStack: r,
                     }),
                 ),
-                (v = (e, t, r) =>
+                (S = (e, t, r) =>
                   this.ReportError(e, {
                     cCallsitesToIgnore: t,
                     strComponentStack: r,
                   })))
-              : (v = () => {}),
+              : (S = () => {}),
             (R = []),
             clearTimeout(w),
             window.setTimeout(() => {
@@ -328,7 +328,7 @@ var CLSTAMP = "11214286";
                           };
                         });
                       })(e, t)
-                    : e.stack && e.stack.match(B)
+                    : e.stack && e.stack.match(z)
                       ? (function (e, t) {
                           return (0, n.sH)(this, void 0, void 0, function* () {
                             var r, n;
@@ -344,7 +344,7 @@ var CLSTAMP = "11214286";
                                       : r.split("\n")) && void 0 !== n
                                   ? n
                                   : [];
-                            let a = H(o.filter((e) => !!e.match(B))[i]);
+                            let a = H(o.filter((e) => !!e.match(z))[i]);
                             s && (a = `${a} ${e.message}`);
                             const l = o
                               .map((e) => {
@@ -367,7 +367,7 @@ var CLSTAMP = "11214286";
                             };
                           });
                         })(e, t)
-                      : e.stack && e.stack.match(z)
+                      : e.stack && e.stack.match(B)
                         ? (function (e, t) {
                             return (0, n.sH)(
                               this,
@@ -522,14 +522,14 @@ var CLSTAMP = "11214286";
               ((null === VRHTML || void 0 === VRHTML
                 ? void 0
                 : VRHTML.HasHMD()) || t.push("no_hmd"),
-              null === p.HR || void 0 === p.HR ? void 0 : p.HR.systemInfo)
+              null === g.HR || void 0 === g.HR ? void 0 : g.HR.systemInfo)
             ) {
               const e = -103;
-              p.HR.systemInfo.os_type > 0
+              g.HR.systemInfo.os_type > 0
                 ? t.push("windows")
-                : p.HR.systemInfo.os_type <= e && t.push("linux");
+                : g.HR.systemInfo.os_type <= e && t.push("linux");
             }
-            (null === g.W || void 0 === g.W ? void 0 : g.W.IsSteamAvailable) ||
+            (null === p.W || void 0 === p.W ? void 0 : p.W.IsSteamAvailable) ||
               t.push("no_steam");
             const r =
               null === VRHTML || void 0 === VRHTML
@@ -566,7 +566,7 @@ var CLSTAMP = "11214286";
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return S;
+          return v;
         }
       }
       function E(e, ...t) {
@@ -583,8 +583,8 @@ var CLSTAMP = "11214286";
           .join(", ");
       }
       const C = /^\s*at .*(\S+:\d+|\(native\))/m,
-        B = /(^|@)\S+:\d+/,
-        z = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+        z = /(^|@)\S+:\d+/,
+        B = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
       let L,
         N = !1;
       function H(e) {
@@ -619,7 +619,7 @@ var CLSTAMP = "11214286";
       function P() {
         return 1e3 * (0, h.Tg)(1, u.b - 1);
       }
-      class A {
+      class $ {
         constructor(e) {
           this.m_strWebAPIBaseURL = e;
         }
@@ -639,15 +639,15 @@ var CLSTAMP = "11214286";
               .catch((e) => {});
         }
       }
-      let V;
-      const W = () => (V || (V = new A("https://api.steampowered.com/")), V);
+      let A;
+      const V = () => (A || (A = new $("https://api.steampowered.com/")), A);
     },
     3714: (e, t, r) => {
-      r.d(t, { A0: () => s, uV: () => l, we: () => o });
-      r(6540);
-      var n = r(2505),
-        i = r.n(n);
-      class s {
+      r.d(t, { A0: () => o, PP: () => l, uV: () => u, we: () => a });
+      var n = r(6540),
+        i = r(2505),
+        s = r.n(i);
+      class o {
         constructor() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map());
@@ -684,15 +684,15 @@ var CLSTAMP = "11214286";
                 ? void 0
                 : VRHTML.GetSystemLocale();
             if (!t) return e;
-            s.s_Date.toLocaleTimeString(t);
+            o.s_Date.toLocaleTimeString(t);
             return t;
           } catch (t) {
             return e;
           }
         }
       }
-      function o(e, ...t) {
-        let r = a.LocalizeString(e);
+      function a(e, ...t) {
+        let r = c.LocalizeString(e);
         return r
           ? (t.length > 0 &&
               (r = r.replace(/%(\d+)\$s/g, function (e, r) {
@@ -701,9 +701,23 @@ var CLSTAMP = "11214286";
             r)
           : e;
       }
-      s.s_Date = new Date();
-      const a = new s();
-      function l(e, t) {
+      function l(e, ...t) {
+        let r = c.LocalizeString(e);
+        if (!r) return e;
+        let i,
+          s = [],
+          o = /(.*?)%(\d+)\$s/g,
+          a = 0;
+        for (; (i = o.exec(r)); ) {
+          (a += i[0].length), s.push(i[1]);
+          let e = parseInt(i[2]);
+          e >= 1 && e <= t.length && s.push(t[e - 1]);
+        }
+        return s.push(r.substr(a)), n.createElement(n.Fragment, null, ...s);
+      }
+      o.s_Date = new Date();
+      const c = new o();
+      function u(e, t) {
         t ||
           (t = (function () {
             let e = new Map([
@@ -746,15 +760,15 @@ var CLSTAMP = "11214286";
         let r = [],
           n = (e, t, r) => {
             let n,
-              s = Date.now().toString();
+              i = Date.now().toString();
             return (
               (n =
                 "drivers" == e
-                  ? `/input/localization.json?t=${s}`
+                  ? `/input/localization.json?t=${i}`
                   : "webhelper" == e
-                    ? `/dashboard/localization/${e}_${t}.json?t=${s}`
-                    : `localization/${e}_${t}.json?t=${s}`),
-              i()
+                    ? `/dashboard/localization/${e}_${t}.json?t=${i}`
+                    : `localization/${e}_${t}.json?t=${i}`),
+              s()
                 .get(n)
                 .then((e) => {
                   r(e.data);
@@ -762,20 +776,20 @@ var CLSTAMP = "11214286";
                 .catch(() => {})
             );
           },
-          s = [],
+          i = [],
           o = [],
-          l = [],
-          c = [];
-        for (let i of e)
+          a = [],
+          l = [];
+        for (let s of e)
           r.push(
-            n(i, t, (e) => {
-              s.push(e);
+            n(s, t, (e) => {
+              i.push(e);
             }),
           ),
             "english" != t &&
               r.push(
-                n(i, "english", (e) => {
-                  l.push(e);
+                n(s, "english", (e) => {
+                  a.push(e);
                 }),
               );
         for (let e of ["webhelper"])
@@ -787,21 +801,21 @@ var CLSTAMP = "11214286";
             "english" != t &&
               r.push(
                 n(e, "english", (e) => {
-                  c.push(e);
+                  l.push(e);
                 }),
               );
         return (
           r.push(
             n("drivers", "", (e) => {
-              s.push(e);
+              i.push(e);
             }),
           ),
           Promise.all(r).then(() => {
-            a.InitFromObjects(s, o, l, c);
+            c.InitFromObjects(i, o, a, l);
           })
         );
       }
-      window.LocalizationManager = a;
+      window.LocalizationManager = c;
     },
     4728: (e, t, r) => {
       function n(e, t) {
