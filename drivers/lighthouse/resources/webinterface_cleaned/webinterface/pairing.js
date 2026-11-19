@@ -1515,8 +1515,14 @@ var CLSTAMP = "steamdb";
                 "Hmd_EnablePerAppFPS_Bool"),
               (_[(_.Hmd_SupportsGammaBlackMode_Bool = 2134)] =
                 "Hmd_SupportsGammaBlackMode_Bool"),
+              (_[(_.Hmd_SupportsHwSharpening_Bool = 2127)] =
+                "Hmd_SupportsHwSharpening_Bool"),
+              (_[(_.Hmd_HwSharpeningDefault_Float = 2130)] =
+                "Hmd_HwSharpeningDefault_Float"),
               (_[(_.Hmd_SupportsPrismCorrection_Bool = 2135)] =
                 "Hmd_SupportsPrismCorrection_Bool"),
+              (_[(_.Hmd_SupportsHapticsSettings_Bool = 2136)] =
+                "Hmd_SupportsHapticsSettings_Bool"),
               (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
                 "DriverRequestedMuraCorrectionMode_Int32"),
               (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -15902,13 +15908,14 @@ var CLSTAMP = "steamdb";
             this.setState({
               m_bSliding: !0,
             }),
+              _.Instance.suppressHapticsExcept(
+                this,
+                this.props.disableHaptics
+                  ? []
+                  : [_.Sliding, _.SlidingEdge, _.Snap],
+              ),
               this.updateValueForMousePosition(_, !0),
               this.setDragElapsedSecondsCSSProperty(0),
-              _.Instance.suppressHapticsExcept(this, [
-                _.Sliding,
-                _.SlidingEdge,
-                _.Snap,
-              ]),
               (this.m_dragStartTime = new Date()),
               (this.m_nAnimationFrameCallback = window.requestAnimationFrame(
                 this.onDragAnimationFrame,
@@ -17116,8 +17123,12 @@ var CLSTAMP = "steamdb";
                 _.call(_);
           }
           get value() {
+            var _;
             if (this.props.name) {
-              let _ = _.settings.get(this.props.name);
+              let _ =
+                null !== (_ = _.settings.get(this.props.name)) && void 0 !== _
+                  ? _
+                  : this.props.defaultValue;
               return _ || 0;
             }
             return this.props.value;
@@ -17131,6 +17142,7 @@ var CLSTAMP = "steamdb";
                 __webpack_require__.call(_, _);
           }
           render() {
+            var _;
             let _ = Object.assign({}, this.props);
             return (
               (_.onInteractionStart = this.onInteractionStart),
@@ -17178,7 +17190,11 @@ var CLSTAMP = "steamdb";
                     )
                   : _.createElement(_, Object.assign({}, _)),
                 void 0 !== this.props.resetValue &&
-                  this.props.resetValue !== _.settings.get(this.props.name) &&
+                  this.props.resetValue !==
+                    (null !== (_ = _.settings.get(this.props.name)) &&
+                    void 0 !== _
+                      ? _
+                      : this.props.defaultValue) &&
                   _.createElement(
                     _.Fragment,
                     null,
@@ -24127,7 +24143,8 @@ var CLSTAMP = "steamdb";
             (_[(_.None = 0)] = "None"),
               (_[(_.OutsidePlayspace = 1)] = "OutsidePlayspace"),
               (_[(_.TrackingLost = 2)] = "TrackingLost"),
-              (_[(_.ChaperoneLost = 3)] = "ChaperoneLost");
+              (_[(_.ChaperoneLost = 3)] = "ChaperoneLost"),
+              (_[(_.TrackingStarting = 4)] = "TrackingStarting");
           })(_ || (_ = {}));
         class _ {
           constructor() {
@@ -30284,6 +30301,8 @@ var CLSTAMP = "steamdb";
             }
           }),
           _ = 3240,
+          _ = "/settings/steamvr/hwSharpening",
+          _ = "/settings/steamvr/sharpening",
           _ = () => {
             const [_, _] = _.useState(!1),
               _ = _("#Settings_Advanced_Supersampling_WidthByHeight", _, _);
@@ -31380,9 +31399,7 @@ var CLSTAMP = "steamdb";
                       _ &&
                         null !== this.m_eSharpening &&
                         _.createElement(_, {
-                          label: _(
-                            "#Settings_Advanced_FoveatedSharpening_Header",
-                          ),
+                          label: _("#Settings_Advanced_SGSRSharpening_Header"),
                           items: [
                             {
                               value: _.UseGlobal,
@@ -31948,153 +31965,186 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "show", null),
           (0, _._)([_], _.prototype, "close", null),
           (_ = _ = (0, _._)([_._], _));
-        let _ = (_ = class extends _ {
-          constructor() {
-            super(...arguments),
-              (this.m_refAppVideoSettingsModal = _.createRef());
-          }
-          render() {
-            if (!this.props.active) return null;
-            const _ = VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.Hmd_SupportsHDCP14LegacyCompat_Bool,
-              ),
-              _ = VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.Hmd_SupportsDisplayPortTrainingMode_Bool,
-              ),
-              _ = VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.Hmd_SupportsGpuBusMonitoring_Bool,
-              ),
-              _ = VRHTML.VRProperties.GetBoolProperty(
-                "/user/head",
-                _.Hmd_AllowSupersampleFiltering_Bool,
-              );
-            VRHTML.VRProperties.GetBoolProperty(
-              "/user/head",
-              _.Hmd_SupportsGammaBlackMode_Bool,
-            );
-            return _.createElement(
-              _.Fragment,
-              null,
-              _.isPlaytimeProfile &&
+        let _,
+          _ = (_ = class extends _ {
+            constructor() {
+              super(...arguments),
+                (this.m_refAppVideoSettingsModal = _.createRef());
+            }
+            ResetToDefaults() {
+              super.ResetToDefaults(),
+                _.SetSettingsValue(_, null),
+                _.SetSettingsValue(_, null);
+            }
+            render() {
+              var _;
+              if (!this.props.active) return null;
+              const _ = VRHTML.VRProperties.GetBoolProperty(
+                  "/user/head",
+                  _.Hmd_SupportsHDCP14LegacyCompat_Bool,
+                ),
+                _ = VRHTML.VRProperties.GetBoolProperty(
+                  "/user/head",
+                  _.Hmd_SupportsDisplayPortTrainingMode_Bool,
+                ),
+                _ = VRHTML.VRProperties.GetBoolProperty(
+                  "/user/head",
+                  _.Hmd_SupportsGpuBusMonitoring_Bool,
+                ),
+                _ = VRHTML.VRProperties.GetBoolProperty(
+                  "/user/head",
+                  _.Hmd_AllowSupersampleFiltering_Bool,
+                ),
+                _ = VRHTML.VRProperties.GetBoolProperty(
+                  "/user/head",
+                  _.Hmd_SupportsHwSharpening_Bool,
+                ),
+                _ =
+                  null !==
+                    (_ = VRHTML.VRProperties.GetFloatProperty(
+                      "/user/head",
+                      _.Hmd_HwSharpeningDefault_Float,
+                    )) && void 0 !== _
+                    ? _
+                    : 0;
+              return _.createElement(
+                _.Fragment,
+                null,
+                _.isPlaytimeProfile &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: "SettingsItem",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: "SettingsItemValueInfo Left",
+                      },
+                      _("#Settings_Unavailable_Playtime"),
+                    ),
+                  ),
+                _.createElement(_, {
+                  settingsPageName: _.Name,
+                }),
+                _.createElement(_, null),
+                _ &&
+                  _.createElement(_, {
+                    label: _("#Settings_Advanced_DisplaySharpeness_Header"),
+                    name: _,
+                    min: 0,
+                    max: 1,
+                    defaultValue: _,
+                    detents: [_],
+                    valueStyleVariant: _.OnHandle,
+                    renderValue: (_) => (100 * _).toFixed(0) + "%",
+                  }),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, {
+                  name: "/settings/steamvr/doNotFadeToGrid",
+                  label: _("#Settings_FadeToGrid"),
+                  swapOnOff: !0,
+                }),
+                _.m_bSupportsEyeTracking &&
+                  _.createElement(_, {
+                    name: _,
+                    label: _("#Settings_Advanced_SGSRSharpening_Header"),
+                    explainer: _("#Settings_Advanced_SGSRSharpening_Explainer"),
+                  }),
+                _.createElement(_, {
+                  ref: this.m_refAppVideoSettingsModal,
+                }),
                 _.createElement(
-                  "div",
+                  _,
                   {
                     className: "SettingsItem",
                   },
                   _.createElement(
-                    "div",
+                    _,
                     {
-                      className: "SettingsItemValueInfo Left",
+                      className: "ButtonControl",
+                      onClick: () => {
+                        var _;
+                        return null ===
+                          (_ = this.m_refAppVideoSettingsModal.current) ||
+                          void 0 === _
+                          ? void 0
+                          : _.show();
+                      },
                     },
-                    _("#Settings_Unavailable_Playtime"),
+                    _("#Settings_PerApplication_VideoSettings"),
                   ),
                 ),
-              _.createElement(_, {
-                settingsPageName: _.Name,
-              }),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, null),
-              _.createElement(_, {
-                name: "/settings/steamvr/doNotFadeToGrid",
-                label: _("#Settings_FadeToGrid"),
-                swapOnOff: !0,
-              }),
-              _.createElement(_, {
-                ref: this.m_refAppVideoSettingsModal,
-              }),
-              _.createElement(
-                _,
-                {
-                  className: "SettingsItem",
-                },
-                _.createElement(
-                  _,
-                  {
-                    className: "ButtonControl",
-                    onClick: () => {
-                      var _;
-                      return null ===
-                        (_ = this.m_refAppVideoSettingsModal.current) ||
-                        void 0 === _
-                        ? void 0
-                        : _.show();
-                    },
-                  },
-                  _("#Settings_PerApplication_VideoSettings"),
-                ),
-              ),
-              !1,
-              !1,
-              _.m_bSupportsEyeTracking &&
+                !1,
+                !1,
+                _ &&
+                  _.createElement(_, {
+                    name: "/settings/steamvr/allowSupersampleFiltering",
+                    label: _("#Settings_Advanced_AllowSupersampleFiltering"),
+                    visibility: _.Advanced,
+                  }),
+                _.createElement(_, null),
+                _ &&
+                  _.createElement(_, {
+                    name: "/settings/steamvr/hdcp14legacyCompatibility",
+                    label: _("#Settings_Video_HDCP14LegacyCompatibility"),
+                    visibility: _.Advanced,
+                    requiresRestart: !0,
+                  }),
+                _ &&
+                  _.createElement(_, {
+                    name: "/settings/steamvr/displayPortTrainingMode",
+                    label: _("#Settings_DisplayPortTrainingMode"),
+                    items: [
+                      {
+                        value: 0,
+                        sLabel: _(
+                          "#Settings_DisplayPortTrainingMode_Automatic",
+                        ),
+                      },
+                      _.Separator,
+                      {
+                        value: 1,
+                        sLabel: _(
+                          "#Settings_DisplayPortTrainingMode_CompatibilityModeA",
+                        ),
+                      },
+                      {
+                        value: 2,
+                        sLabel: _(
+                          "#Settings_DisplayPortTrainingMode_CompatibilityModeB",
+                        ),
+                      },
+                    ],
+                    visibility: _.Advanced,
+                    requiresRestart: !0,
+                  }),
                 _.createElement(_, {
-                  name: "/settings/steamvr/sharpening",
-                  label: _("#Settings_Advanced_FoveatedSharpening_Header"),
-                  title: _("#Settings_Advanced_FoveatedSharpening_Description"),
-                }),
-              _ &&
-                _.createElement(_, {
-                  name: "/settings/steamvr/allowSupersampleFiltering",
-                  label: _("#Settings_Advanced_AllowSupersampleFiltering"),
                   visibility: _.Advanced,
                 }),
-              _.createElement(_, null),
-              _ &&
                 _.createElement(_, {
-                  name: "/settings/steamvr/hdcp14legacyCompatibility",
-                  label: _("#Settings_Video_HDCP14LegacyCompatibility"),
-                  visibility: _.Advanced,
-                  requiresRestart: !0,
-                }),
-              _ &&
-                _.createElement(_, {
-                  name: "/settings/steamvr/displayPortTrainingMode",
-                  label: _("#Settings_DisplayPortTrainingMode"),
-                  items: [
-                    {
-                      value: 0,
-                      sLabel: _("#Settings_DisplayPortTrainingMode_Automatic"),
-                    },
-                    _.Separator,
-                    {
-                      value: 1,
-                      sLabel: _(
-                        "#Settings_DisplayPortTrainingMode_CompatibilityModeA",
-                      ),
-                    },
-                    {
-                      value: 2,
-                      sLabel: _(
-                        "#Settings_DisplayPortTrainingMode_CompatibilityModeB",
-                      ),
-                    },
-                  ],
-                  visibility: _.Advanced,
-                  requiresRestart: !0,
-                }),
-              _.createElement(_, {
-                visibility: _.Advanced,
-              }),
-              _.createElement(_, {
-                name: "/settings/power/pauseCompositorOnStandby",
-                label: _("#Settings_PauseOnStandby"),
-                visibility: _.Advanced,
-              }),
-              _ &&
-                _.createElement(_, {
-                  name: "/settings/perfcheck/gpuBusMonitoring",
-                  label: _("#Settings_GpuBusMonitoring"),
+                  name: "/settings/power/pauseCompositorOnStandby",
+                  label: _("#Settings_PauseOnStandby"),
                   visibility: _.Advanced,
                 }),
-              this.makeResetToDefaultButton(),
-            );
-          }
-        });
-        (_.Name = "video_settings"), (_ = _ = (0, _._)([_._], _));
+                _ &&
+                  _.createElement(_, {
+                    name: "/settings/perfcheck/gpuBusMonitoring",
+                    label: _("#Settings_GpuBusMonitoring"),
+                    visibility: _.Advanced,
+                  }),
+                this.makeResetToDefaultButton(),
+              );
+            }
+          });
+        function _() {
+          return _;
+        }
+        (_.Name = "video_settings"),
+          (0, _._)([_], _.prototype, "ResetToDefaults", null),
+          (_ = _ = (0, _._)([_._], _));
         class _ {
           constructor() {
             (this.m_InputState = void 0),
@@ -38041,7 +38091,7 @@ var CLSTAMP = "steamdb";
                 }),
             );
           });
-        function _(_) {
+        function _() {
           return _.createElement(
             _,
             {
@@ -38053,17 +38103,20 @@ var CLSTAMP = "steamdb";
               {
                 icon: _.PopOut,
                 onClick: function () {
+                  var _;
                   let _ = "bindingui/" + _[_()];
-                  _.mailbox.SendMessage(_, {
-                    type: "show_app_binding",
-                  });
+                  null === (_ = _()) ||
+                    void 0 === _ ||
+                    _.SendMessage(_, {
+                      type: "show_app_binding",
+                    });
                 },
               },
               _("#Settings_ShowBindingUI"),
             ),
           );
         }
-        function _(_) {
+        function _() {
           if (!_.BDevMode) return null;
           return _.createElement(
             _,
@@ -38075,6 +38128,7 @@ var CLSTAMP = "steamdb";
               {
                 icon: _.PopOut,
                 onClick: function () {
+                  var _;
                   if (VRHTML) {
                     switch (_()) {
                       case _.Desktop:
@@ -38084,9 +38138,11 @@ var CLSTAMP = "steamdb";
                         VRHTML.ShowBindingUI(!1);
                     }
                     let _ = "bindingui/" + _[_()];
-                    _.mailbox.SendMessage(_, {
-                      type: "show_input_debugger",
-                    });
+                    null === (_ = _()) ||
+                      void 0 === _ ||
+                      _.SendMessage(_, {
+                        type: "show_input_debugger",
+                      });
                   } else
                     window.open(
                       "/dashboard/controllerbinding.html?debugger=true",
@@ -38443,21 +38499,20 @@ var CLSTAMP = "steamdb";
                 });
               const _ = _.GetAppSettings(_.key).catch(() => null);
               let _ = yield this.loadAppActionManifest(_.key);
-              if (
-                (this.setState({
-                  currentActionManifest: _,
-                  bForceToggleToCustom: !1,
-                }),
-                _.supports_dominant_hand_setting)
-              ) {
-                let _ = yield _;
-                this.setState({
-                  eDominantHand: null == _ ? void 0 : _.dominant_hand,
-                });
-              } else
-                this.setState({
-                  eDominantHand: void 0,
-                });
+              this.setState({
+                currentActionManifest: _,
+                bForceToggleToCustom: !1,
+              });
+              let _ = yield _;
+              this.setState({
+                eDominantHand: _.supports_dominant_hand_setting
+                  ? null == _
+                    ? void 0
+                    : _.dominant_hand
+                  : void 0,
+                bHapticsEnabled: null == _ ? void 0 : _.haptics_enabled,
+                flHapticsStrength: null == _ ? void 0 : _.haptics_strength,
+              });
               let _ = yield this.loadBindingConfig(_.key, _);
               this.setState({
                 currentBinding: _,
@@ -38559,6 +38614,35 @@ var CLSTAMP = "steamdb";
             this.setAppState("dominant_hand", _),
               this.setState({
                 eDominantHand: _,
+              });
+          }
+          onToggleHapticsEnabled(_) {
+            this.setAppState("haptics_enabled", _),
+              this.setState({
+                bHapticsEnabled: _,
+              });
+          }
+          onHapticsStrengthChange(_) {
+            if (_ != this.state.flHapticsStrength && _() == _.Overlay) {
+              const _ = 0.1,
+                _ = 160;
+              null === VRHTML ||
+                void 0 === VRHTML ||
+                VRHTML.VROverlay.TriggerLaserMouseHapticVibration(
+                  VRHTML.VROverlay.ThisOverlayHandle(),
+                  _,
+                  _,
+                  _,
+                );
+            }
+            this.setState({
+              flHapticsStrength: _,
+            });
+          }
+          onHapticsStrengthFinalChange(_) {
+            this.setAppState("haptics_strength", _),
+              this.setState({
+                flHapticsStrength: _,
               });
           }
           get supportsVRGamepadMode() {
@@ -38707,6 +38791,12 @@ var CLSTAMP = "steamdb";
                   : _.supports_dominant_hand_setting) &&
                 null != this.state.eDominantHand,
               _ = this.state.eDominantHand == _.TrackedControllerRole_RightHand,
+              _ = !!(null === VRHTML || void 0 === VRHTML
+                ? void 0
+                : VRHTML.VRProperties.GetBoolProperty(
+                    _,
+                    _.Hmd_SupportsHapticsSettings_Bool,
+                  )),
               _ =
                 null === VRHTML || void 0 === VRHTML
                   ? void 0
@@ -38930,6 +39020,33 @@ var CLSTAMP = "steamdb";
                       onChange: this.onToggleDominantHand,
                       value: _,
                     }),
+                  this.state.currentBindingApp &&
+                    null != this.state.bHapticsEnabled &&
+                    _.createElement(_, {
+                      label: _("#Settings_Controller_UseHaptics"),
+                      title: _("#Settings_Controller_UseHaptics_Desc"),
+                      onChange: this.onToggleHapticsEnabled,
+                      value: this.state.bHapticsEnabled,
+                      onSubsection:
+                        this.state.bHapticsEnabled &&
+                        _ &&
+                        _.createElement(_, {
+                          min: 0.01,
+                          max: 1,
+                          step: 0.11,
+                          disableHaptics: !0,
+                          value: this.state.flHapticsStrength,
+                          onChange: this.onHapticsStrengthChange,
+                          onFinalChange: this.onHapticsStrengthFinalChange,
+                          label: _("#Settings_Controller_HapticStrength"),
+                          minLabel: _(
+                            "#Settings_Controller_HapticStrength_Minimum",
+                          ),
+                          maxLabel: _(
+                            "#Settings_Controller_HapticStrength_Maximum",
+                          ),
+                        }),
+                    }),
                 )
               : null;
           }
@@ -38944,6 +39061,9 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "close", null),
           (0, _._)([_], _.prototype, "showBindingCallouts", null),
           (0, _._)([_], _.prototype, "onToggleDominantHand", null),
+          (0, _._)([_], _.prototype, "onToggleHapticsEnabled", null),
+          (0, _._)([_], _.prototype, "onHapticsStrengthChange", null),
+          (0, _._)([_], _.prototype, "onHapticsStrengthFinalChange", null),
           (0, _._)([_], _.prototype, "onToggleUseGamepadInput", null),
           (_ = _ = (0, _._)([_._], _));
         const _ = (_) =>
@@ -39265,10 +39385,8 @@ var CLSTAMP = "steamdb";
         let _ = class extends _ {
           constructor(_) {
             super(_),
-              (this.m_mailbox = new _()),
               (this.m_refControllerSettingsSection = _.createRef()),
-              (this.m_refManageBindingsModal = _.createRef()),
-              this.m_mailbox.Init("settings_controller_page");
+              (this.m_refManageBindingsModal = _.createRef());
           }
           ResetToDefaults() {
             super.ResetToDefaults(),
@@ -39320,18 +39438,14 @@ var CLSTAMP = "steamdb";
                   _("#Settings_Controller_AdvancedControllerSettings"),
                 ),
               ),
-              _.createElement(_, {
-                mailbox: this.m_mailbox,
-              }),
+              _.createElement(_, null),
               _.createElement(_, {
                 ref: this.m_refControllerSettingsSection,
               }),
               _.createElement(_, null),
               _.createElement(_, null),
               _.createElement(_, null),
-              _.createElement(_, {
-                mailbox: this.m_mailbox,
-              }),
+              _.createElement(_, null),
               _ && _.createElement(_, null),
               _ && _.createElement(_, null),
             );
@@ -52535,17 +52649,19 @@ var CLSTAMP = "steamdb";
           }
           Init(_) {
             return (0, _._)(this, void 0, void 0, function* () {
-              var _;
-              this.m_mailbox.Init("vrlink_store").then(() => {
-                this.m_mailbox.RegisterHandler(
-                  "remote_desktop_window_event",
-                  this.onRemoteDesktopWindowEvent,
-                ),
+              var _, _;
+              (_ = this.m_mailbox),
+                (_ = _),
+                this.m_mailbox.Init("vrlink_store").then(() => {
                   this.m_mailbox.RegisterHandler(
-                    "vrlink_show_steamvr_setting",
-                    this.onRemoteShowSteamVRSetting,
-                  );
-              }),
+                    "remote_desktop_window_event",
+                    this.onRemoteDesktopWindowEvent,
+                  ),
+                    this.m_mailbox.RegisterHandler(
+                      "vrlink_show_steamvr_setting",
+                      this.onRemoteShowSteamVRSetting,
+                    );
+                }),
                 (this.m_bHandleVRLinkCommunications = _),
                 null === VRHTML ||
                   void 0 === VRHTML ||
@@ -53047,6 +53163,7 @@ var CLSTAMP = "steamdb";
               (this.m_eCameraExposure = null),
               (this.m_bDebugCameraViewEnabled = !1),
               (this.m_bRoomViewMonochrome = void 0),
+              (this.m_bSupportsChromaKeyPassthrough = !1),
               (this.m_bSupportsEyeTracking = void 0),
               (this.m_bVRLinkEyeTrackingActive = !1),
               (this.m_bRoomViewShowing = void 0),
@@ -53113,26 +53230,17 @@ var CLSTAMP = "steamdb";
                 _.bSupportsCompatibilityModes),
               (this.m_bSupportsRoomViewDepthProjection =
                 _.bSupportsRoomViewDepthProjection),
-              (this.m_bRoomViewMonochrome = _.bRoomViewMonochrome);
+              (this.m_bRoomViewMonochrome = _.bRoomViewMonochrome),
+              (this.m_bSupportsChromaKeyPassthrough =
+                _.bSupportsChromaKeyPassthrough);
           }
           onRoomViewChanged(_, _) {
             (this.m_bRoomViewShowing = _), (this.m_bRoomViewEnabled = _);
           }
           get showRoomViewButton() {
-            var _, _;
+            var _;
             return (
-              !(
-                null ===
-                  (_ =
-                    null === VRHTML || void 0 === VRHTML
-                      ? void 0
-                      : VRHTML.VRProperties.GetBoolProperty(
-                          "/user/head",
-                          _.Hmd_SupportsChromaKeyPassthrough_Bool,
-                        )) ||
-                void 0 === _ ||
-                !_
-              ) ||
+              !!this.m_bSupportsChromaKeyPassthrough ||
               (_.settings.get(_) &&
                 (null !== (_ = _.settings.get(_)) && void 0 !== _ ? _ : 0) >
                   0 &&
@@ -53185,6 +53293,12 @@ var CLSTAMP = "steamdb";
             [_.observable],
             _.prototype,
             "m_bRoomViewMonochrome",
+            void 0,
+          ),
+          (0, _._)(
+            [_.observable],
+            _.prototype,
+            "m_bSupportsChromaKeyPassthrough",
             void 0,
           ),
           (0, _._)(
@@ -55212,7 +55326,7 @@ var CLSTAMP = "steamdb";
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1794602049e3).toLocaleString() + "",
+              value: new Date(179511478e4).toLocaleString() + "",
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -55709,11 +55823,9 @@ var CLSTAMP = "steamdb";
           constructor(_) {
             super(_),
               (this.m_eyeTrackingServerStatusHandle = void 0),
-              (this.m_mailbox = new _()),
               (this.state = {
                 nStatus: null,
-              }),
-              this.m_mailbox.Init("eye_server_ui");
+              });
           }
           componentDidMount() {
             this.m_eyeTrackingServerStatusHandle =
@@ -55735,26 +55847,36 @@ var CLSTAMP = "steamdb";
             });
           }
           stopEyeTrackingServer() {
-            this.m_mailbox.SendMessage("driver_hmd/eyetracking", {
-              type: "stop_eye_server",
-            });
+            var _;
+            null === (_ = _()) ||
+              void 0 === _ ||
+              _.SendMessage("driver_hmd/eyetracking", {
+                type: "stop_eye_server",
+              });
           }
           startEyeTrackingServer() {
-            this.m_mailbox.SendMessage("driver_hmd/eyetracking", {
-              type: "start_eye_server",
-            });
+            var _;
+            null === (_ = _()) ||
+              void 0 === _ ||
+              _.SendMessage("driver_hmd/eyetracking", {
+                type: "start_eye_server",
+              });
           }
           doEyeTrackingCal() {
-            this.m_mailbox.SendMessage("driver_hmd/eyetracking", {
-              type: "perform_center_eye_cal",
-            });
+            var _;
+            null === (_ = _()) ||
+              void 0 === _ ||
+              _.SendMessage("driver_hmd/eyetracking", {
+                type: "perform_center_eye_cal",
+              });
           }
           SetEyeTrackingVisualization(_) {
+            var _;
             let _ = {
               type: "set_eye_tracking_debug_mode",
               mode: _,
             };
-            this.m_mailbox.SendMessage(_, _);
+            null === (_ = _()) || void 0 === _ || _.SendMessage(_, _);
           }
           render() {
             const _ = _() == _.Overlay;
@@ -56845,434 +56967,7 @@ var CLSTAMP = "steamdb";
                   _.createElement(_, null),
                 ),
             );
-          }),
-          _ = "/settings/driver_vrlink/automaticBandwidth",
-          _ = "/settings/driver_vrlink/targetBandwidth",
-          _ = "/settings/driver_vrlink/automaticStreamFormatWidth",
-          _ = "/settings/driver_vrlink/streamFormatWidth",
-          _ = "/settings/driver_vrlink/enableEncryption",
-          _ = "/settings/driver_vrlink/wirelessShutdownTimeout",
-          _ = "/settings/driver_vrlink/useSharpening",
-          _ = "/settings/driver_vrlink/sharpeningStrength",
-          _ = "/settings/steamvr/streamQuality",
-          _ = "/settings/steamvr/preferredFoveatedAngle",
-          _ = "/settings/driver_vrlink/useOSC",
-          _ = "/settings/driver_vrlink/useOSCFace",
-          _ = "/settings/driver_vrlink/OSCOutPort",
-          _ = "/settings/driver_vrlink/enableHandTracking",
-          _ = "/settings/driver_vrlink/showAdvancedGraphs",
-          _ = "/settings/driver_vrlink/allowVolumeSync",
-          _ = "/settings/driver_vrlink/enableQoS",
-          _ = "/settings/driver_vrlink/allowMultipleLinks",
-          _ = "/settings/driver_vrlink/enableHmdAutoConnect",
-          _ = "/settings/steamvr/highlightFoveatedArea",
-          _ = [
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            "/settings/steamvr/overlayRenderQuality_2",
-          ];
-        function _() {
-          const _ = _("/driver_vrlink/network_tested_bandwidth");
-          return _.createElement(_, {
-            name: _,
-            label: _("#Settings_VRLink_TargetBandwidthMbps"),
-            min: 25,
-            max: 350,
-            step: 5,
-            detents: void 0 !== _ ? [_] : void 0,
-            valueStyleVariant: _.OnHandle,
-            renderValue: (_) => _.toFixed(0),
-            minLabel: (25).toString(),
-            maxLabel: (350).toString(),
           });
-        }
-        const _ = (0, _._)(() => {
-          var _, _;
-          const _ = null !== (_ = _.settings.get(_)) && void 0 !== _ ? _ : 0,
-            _ = _("/driver_vrlink/foveation_enabled"),
-            _ = _("/driver_vrlink/default_inner_horizontal_degrees"),
-            _ = _("/driver_vrlink/default_stream_format_width"),
-            _ =
-              null === (_ = _.settings.get(_)) || void 0 === _ || _
-                ? _
-                : _.settings.get(_),
-            _ = 1 == _.settings.get(_);
-          if (!_ || !_ || !_ || _) return null;
-          const _ = Math.max(_ - 20, 20),
-            _ = Math.min(_ + 20, 90),
-            _ = Math.min(Math.max(_ + _, _), _),
-            _ = (_) =>
-              Math.round(
-                ((_ / (2 * Math.tan((0.5 * _ * Math._) / 180))) * Math._) / 180,
-              );
-          return _.createElement(_, {
-            label: _("#Settings_VRLink_PreferredFoveatedSharpness"),
-            value: -_,
-            onChange: (_) => _.SetSettingsValue(_, (-_ - _).toString()),
-            min: -_,
-            max: -_,
-            step: 1,
-            detents: [-_],
-            valueStyleVariant: _.OnHandle,
-            renderValue: (_) => _(-_).toFixed(0),
-            minLabel: _("#Settings_VRLink_PreferredFoveatedSharpness_MoreArea"),
-            maxLabel: _(
-              "#Settings_VRLink_PreferredFoveatedSharpness_MoreDetail",
-            ),
-            explainer: _.createElement(
-              "span",
-              {
-                style: {
-                  fontVariantNumeric: "tabular-nums",
-                },
-              },
-              _(
-                "#Settings_VRLink_FoveatedPixelsPerDegreeAndAngle",
-                _(_).toFixed(0),
-                _.toFixed(0),
-              ),
-            ),
-            enabled: _.m_bIsVRLinkServer,
-          });
-        });
-        function _() {
-          const _ = _("/driver_vrlink/min_stream_format_width"),
-            _ = _("/driver_vrlink/max_stream_format_width"),
-            _ = _("/driver_vrlink/default_stream_format_width") || void 0;
-          return _.createElement(_, {
-            name: _,
-            label: _("#Settings_VRLink_FoveatedEncodedVideoSize"),
-            min: null != _ ? _ : 0,
-            max: null != _ ? _ : 0,
-            step: 64,
-            detents: void 0 !== _ ? [_] : void 0,
-            valueStyleVariant: _.OnHandle,
-            renderValue: (_) => _.toFixed(0),
-            minLabel: null == _ ? void 0 : _.toFixed(0),
-            maxLabel: null == _ ? void 0 : _.toFixed(0),
-          });
-        }
-        const _ = (0, _._)(() => {
-          var _;
-          const _ = _("/driver_vrlink/foveation_enabled"),
-            _ = _("/driver_vrlink/default_stream_format_width"),
-            _ = null === (_ = _.settings.get(_)) || void 0 === _ || _,
-            _ = _ ? _ : "/settings/driver_vrlink/nonFoveatedStreamFormatWidth",
-            _ = _ ? _ : _.settings.get(_),
-            _ = _ ? (((_ ? 4 : 2) * _ * _) / 1e6).toFixed(1) : void 0;
-          return _.createElement(_, {
-            name: _,
-            label: _("#Settings_VRLink_EncodedVideoSize"),
-            onLabel: _("#Settings_Default"),
-            offLabel: _("#Settings_Manual"),
-            offSubsection: _.createElement(_, null),
-            explainer:
-              void 0 !== _ &&
-              _.createElement(
-                "span",
-                {
-                  style: {
-                    fontVariantNumeric: "tabular-nums",
-                  },
-                },
-                _("#Settings_VRLink_EncodedMegapixelsPerFrame", _),
-              ),
-          });
-        });
-        function _() {
-          return _("/driver_vrlink/supports_eye_and_face_tracking")
-            ? _.createElement(_, {
-                name: "/settings/driver_vrlink/shareEyeTrackingData",
-                label: _("#Settings_VRLink_ShareEyeTrackingData"),
-              })
-            : null;
-        }
-        function _() {
-          return _("/driver_vrlink/supports_eye_and_face_tracking")
-            ? _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_UseOSC"),
-                explainer: _("#Settings_VRLink_UseOSC_Explainer"),
-                visibility: _.Advanced,
-                onSubsection: _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    name: _,
-                    label: _("#Settings_VRLink_UseOSCFace"),
-                  }),
-                  _.createElement(_, {
-                    name: _,
-                    label: _("#Settings_VRLink_OSCOutPort"),
-                    items: [
-                      {
-                        value: 9e3,
-                        sLabel: "9000 (Direct)",
-                      },
-                      {
-                        value: 9015,
-                        sLabel: "9015 (Alt)",
-                      },
-                    ],
-                  }),
-                ),
-              })
-            : null;
-        }
-        function _() {
-          return _("/driver_vrlink/supports_hand_tracking")
-            ? _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_EnableHandTracking"),
-              })
-            : null;
-        }
-        function _() {
-          const _ = _("/driver_vrlink/client_version");
-          return _.createElement(_, {
-            label: _("#Settings_VRLink_ClientVersion"),
-            value: _,
-          });
-        }
-        function _() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: "SettingsItem",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "Label Title Large",
-                },
-                _("#Settings_VRLink_ImageQuality"),
-              ),
-            ),
-            _.createElement(_, {
-              name: _,
-              label: _("#Settings_VRLink_TargetBandwidth"),
-              onLabel: _("#Settings_Auto"),
-              offLabel: _("#Settings_Manual"),
-              offSubsection: _.createElement(_, null),
-            }),
-            _.createElement(_, null),
-            _.createElement(_, null),
-            _.createElement(_, {
-              name: _,
-              label: _("#Settings_VRLink_Sharpening"),
-              onSubsection: _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_SharpeningStrength"),
-                min: 0,
-                max: 1,
-                step: 0.05,
-                valueStyleVariant: _.OnHandle,
-                renderValue: (_) => _.toFixed(2),
-              }),
-            }),
-            !_.m_bIsVRLinkClient && _.createElement(_, null),
-            !_.m_bIsVRLinkClient &&
-              _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_HighlightFoveatedArea"),
-                visibility: _.Advanced,
-                items: [
-                  {
-                    value: _.Off,
-                    sLabel: _("#Settings_ToggleButton_Off"),
-                  },
-                  {
-                    value: _._,
-                    sLabel: _("#Settings_ToggleButton_On"),
-                  },
-                  {
-                    value: _.OnSolid,
-                    sLabel: _("#Settings_VRLink_HighlightFoveatedArea_OnSolid"),
-                  },
-                ],
-              }),
-            !_.m_bIsVRLinkClient &&
-              _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_StreamQuality"),
-                visibility: _.Advanced,
-                items: [
-                  {
-                    value: 1,
-                    sLabel: _("#Settings_VRLink_StreamQuality_Legacy"),
-                  },
-                  {
-                    value: 0,
-                    sLabel: _("#Settings_VRLink_StreamQuality_Default"),
-                  },
-                ],
-              }),
-            _.createElement("hr", null),
-          );
-        }
-        function _() {
-          return _()
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: "SettingsItem",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "Label Title",
-                    },
-                    _("#Settings_VRLink_Advanced"),
-                  ),
-                ),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_AllowVolumeControlSync"),
-                  items: [
-                    {
-                      value: !0,
-                      sLabel: _("#Settings_ToggleButton_Enable"),
-                    },
-                    {
-                      value: !1,
-                      sLabel: _("#Settings_ToggleButton_Disable"),
-                    },
-                  ],
-                  explainer: _(
-                    "#Settings_VRLink_AllowVolumeControlSync_Explainer",
-                  ),
-                  visibility: _.Advanced,
-                }),
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_EnableQoS"),
-                  explainer: _("#Settings_VRLink_EnableQoS_Explainer"),
-                  visibility: _.Advanced,
-                }),
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_AllowMultipleLinks"),
-                  items: [
-                    {
-                      value: !0,
-                      sLabel: _("#Settings_ToggleButton_Enable"),
-                    },
-                    {
-                      value: !1,
-                      sLabel: _("#Settings_ToggleButton_Disable"),
-                    },
-                  ],
-                  visibility: _.Advanced,
-                }),
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_Encryption"),
-                  requiresRestart: !0,
-                  visibility: _.Advanced,
-                }),
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_ShowAdvancedGraphs"),
-                  visibility: _.Advanced,
-                }),
-                _.createElement("hr", null),
-              )
-            : null;
-        }
-        let _ = class extends _ {
-          constructor(_) {
-            super(_);
-          }
-          ResetToDefaults() {
-            for (const _ of _) _.SetSettingsValue(_, null);
-          }
-          render() {
-            return this.props.active
-              ? _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, null),
-                  _.createElement(_, {
-                    name: _,
-                    label: _("#Settings_VRLink_WirelessShutdownTimeout"),
-                    items: [
-                      {
-                        value: 0,
-                        sLabel: _("#SettingsTime_Never"),
-                      },
-                      {
-                        value: 30,
-                        sLabel: _("#SettingsTime_30s"),
-                      },
-                      {
-                        value: 60,
-                        sLabel: _("#SettingsTime_1m"),
-                      },
-                      {
-                        value: 300,
-                        sLabel: _("#SettingsTime_5m"),
-                      },
-                      {
-                        value: 600,
-                        sLabel: _("#SettingsTime_10m"),
-                      },
-                      {
-                        value: 1200,
-                        sLabel: _("#SettingsTime_20m"),
-                      },
-                      {
-                        value: 1800,
-                        sLabel: _("#SettingsTime_30m"),
-                      },
-                      {
-                        value: 3600,
-                        sLabel: _("#SettingsTime_1h"),
-                      },
-                    ],
-                  }),
-                  _.createElement(_, {
-                    name: _,
-                    label: _("#Settings_VRLink_EnableHmdAutoConnect"),
-                    explainer: _(
-                      "#Settings_VRLink_EnableHmdAutoConnect_Explainer",
-                    ),
-                    visibility: _.Advanced,
-                  }),
-                  _.createElement("hr", null),
-                  _.createElement(_, null),
-                  _.createElement(_, null),
-                  _.createElement(_, null),
-                  this.makeResetToDefaultButton(),
-                )
-              : null;
-          }
-        };
         function _() {
           const [_, _] = _.useState();
           return _.createElement(
@@ -57310,9 +57005,6 @@ var CLSTAMP = "steamdb";
               ),
           );
         }
-        (_.Name = "driver_vrlink"),
-          (0, _._)([_], _.prototype, "ResetToDefaults", null),
-          (_ = (0, _._)([_._], _));
         const _ = (0, _._)(() =>
             _.createElement(
               _,
@@ -59262,8 +58954,420 @@ var CLSTAMP = "steamdb";
               : null;
           }
         };
-        var _;
         (_.Name = "startupshutdown_settings"), (_ = (0, _._)([_._], _));
+        const _ = "/settings/driver_vrlink/automaticBandwidth",
+          _ = "/settings/driver_vrlink/targetBandwidth",
+          _ = "/settings/driver_vrlink/automaticStreamFormatWidth",
+          _ = "/settings/driver_vrlink/streamFormatWidth",
+          _ = "/settings/driver_vrlink/enableEncryption",
+          _ = "/settings/driver_vrlink/wirelessShutdownTimeout",
+          _ = "/settings/driver_vrlink/useSharpening",
+          _ = "/settings/driver_vrlink/sharpeningStrength",
+          _ = "/settings/steamvr/preferredFoveatedAngle",
+          _ = "/settings/driver_vrlink/useOSC",
+          _ = "/settings/driver_vrlink/useOSCFace",
+          _ = "/settings/driver_vrlink/OSCOutPort",
+          _ = "/settings/driver_vrlink/enableHandTracking",
+          _ = "/settings/driver_vrlink/showAdvancedGraphs",
+          _ = "/settings/driver_vrlink/allowVolumeSync",
+          _ = "/settings/driver_vrlink/enableQoS",
+          _ = "/settings/driver_vrlink/allowMultipleLinks",
+          _ = "/settings/driver_vrlink/enableHmdAutoConnect",
+          _ = "/settings/steamvr/highlightFoveatedArea",
+          _ = [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            "/settings/steamvr/overlayRenderQuality_2",
+          ];
+        function _() {
+          const _ = _("/driver_vrlink/network_tested_bandwidth");
+          return _.createElement(_, {
+            name: _,
+            label: _("#Settings_VRLink_TargetBandwidthMbps"),
+            min: 25,
+            max: 350,
+            step: 5,
+            detents: void 0 !== _ ? [_] : void 0,
+            valueStyleVariant: _.OnHandle,
+            renderValue: (_) => _.toFixed(0),
+            minLabel: (25).toString(),
+            maxLabel: (350).toString(),
+          });
+        }
+        const _ = (0, _._)(() => {
+          var _, _;
+          const _ = null !== (_ = _.settings.get(_)) && void 0 !== _ ? _ : 0,
+            _ = _("/driver_vrlink/foveation_enabled"),
+            _ = _("/driver_vrlink/default_inner_horizontal_degrees"),
+            _ = _("/driver_vrlink/default_stream_format_width"),
+            _ =
+              null === (_ = _.settings.get(_)) || void 0 === _ || _
+                ? _
+                : _.settings.get(_);
+          if (!_ || !_ || !_) return null;
+          const _ = Math.max(_ - 20, 20),
+            _ = Math.min(_ + 20, 90),
+            _ = Math.min(Math.max(_ + _, _), _),
+            _ = (_) =>
+              Math.round(
+                ((_ / (2 * Math.tan((0.5 * _ * Math._) / 180))) * Math._) / 180,
+              );
+          return _.createElement(_, {
+            label: _("#Settings_VRLink_PreferredFoveatedSharpness"),
+            value: -_,
+            onChange: (_) => _.SetSettingsValue(_, (-_ - _).toString()),
+            min: -_,
+            max: -_,
+            step: 1,
+            detents: [-_],
+            valueStyleVariant: _.OnHandle,
+            renderValue: (_) => _(-_).toFixed(0),
+            minLabel: _("#Settings_VRLink_PreferredFoveatedSharpness_MoreArea"),
+            maxLabel: _(
+              "#Settings_VRLink_PreferredFoveatedSharpness_MoreDetail",
+            ),
+            explainer: _.createElement(
+              "span",
+              {
+                style: {
+                  fontVariantNumeric: "tabular-nums",
+                },
+              },
+              _(
+                "#Settings_VRLink_FoveatedPixelsPerDegreeAndAngle",
+                _(_).toFixed(0),
+                _.toFixed(0),
+              ),
+            ),
+            enabled: _.m_bIsVRLinkServer,
+          });
+        });
+        function _() {
+          const _ = _("/driver_vrlink/min_stream_format_width"),
+            _ = _("/driver_vrlink/max_stream_format_width"),
+            _ = _("/driver_vrlink/default_stream_format_width") || void 0;
+          return _.createElement(_, {
+            name: _,
+            label: _("#Settings_VRLink_FoveatedEncodedVideoSize"),
+            min: null != _ ? _ : 0,
+            max: null != _ ? _ : 0,
+            step: 64,
+            detents: void 0 !== _ ? [_] : void 0,
+            valueStyleVariant: _.OnHandle,
+            renderValue: (_) => _.toFixed(0),
+            minLabel: null == _ ? void 0 : _.toFixed(0),
+            maxLabel: null == _ ? void 0 : _.toFixed(0),
+          });
+        }
+        const _ = (0, _._)(() => {
+          var _;
+          const _ = _("/driver_vrlink/foveation_enabled"),
+            _ = _("/driver_vrlink/default_stream_format_width"),
+            _ = null === (_ = _.settings.get(_)) || void 0 === _ || _,
+            _ = _ ? _ : "/settings/driver_vrlink/nonFoveatedStreamFormatWidth",
+            _ = _ ? _ : _.settings.get(_),
+            _ = _ ? (((_ ? 4 : 2) * _ * _) / 1e6).toFixed(1) : void 0;
+          return _.createElement(_, {
+            name: _,
+            label: _("#Settings_VRLink_EncodedVideoSize"),
+            onLabel: _("#Settings_Default"),
+            offLabel: _("#Settings_Manual"),
+            offSubsection: _.createElement(_, null),
+            explainer:
+              void 0 !== _ &&
+              _.createElement(
+                "span",
+                {
+                  style: {
+                    fontVariantNumeric: "tabular-nums",
+                  },
+                },
+                _("#Settings_VRLink_EncodedMegapixelsPerFrame", _),
+              ),
+          });
+        });
+        function _() {
+          return _("/driver_vrlink/supports_eye_and_face_tracking")
+            ? _.createElement(_, {
+                name: "/settings/driver_vrlink/shareEyeTrackingData",
+                label: _("#Settings_VRLink_ShareEyeTrackingData"),
+              })
+            : null;
+        }
+        function _() {
+          return _("/driver_vrlink/supports_eye_and_face_tracking")
+            ? _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_UseOSC"),
+                explainer: _("#Settings_VRLink_UseOSC_Explainer"),
+                visibility: _.Advanced,
+                onSubsection: _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, {
+                    name: _,
+                    label: _("#Settings_VRLink_UseOSCFace"),
+                  }),
+                  _.createElement(_, {
+                    name: _,
+                    label: _("#Settings_VRLink_OSCOutPort"),
+                    items: [
+                      {
+                        value: 9e3,
+                        sLabel: "9000 (Direct)",
+                      },
+                      {
+                        value: 9015,
+                        sLabel: "9015 (Alt)",
+                      },
+                    ],
+                  }),
+                ),
+              })
+            : null;
+        }
+        function _() {
+          return _("/driver_vrlink/supports_hand_tracking")
+            ? _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_EnableHandTracking"),
+              })
+            : null;
+        }
+        function _() {
+          const _ = _("/driver_vrlink/client_version");
+          return _.createElement(_, {
+            label: _("#Settings_VRLink_ClientVersion"),
+            value: _,
+          });
+        }
+        function _() {
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: "SettingsItem",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "Label Title Large",
+                },
+                _("#Settings_VRLink_ImageQuality"),
+              ),
+            ),
+            _.createElement(_, {
+              name: _,
+              label: _("#Settings_VRLink_TargetBandwidth"),
+              onLabel: _("#Settings_Auto"),
+              offLabel: _("#Settings_Manual"),
+              offSubsection: _.createElement(_, null),
+            }),
+            _.createElement(_, null),
+            _.createElement(_, null),
+            _.createElement(_, {
+              name: _,
+              label: _("#Settings_VRLink_Sharpening"),
+              onSubsection: _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_SharpeningStrength"),
+                min: 0,
+                max: 1,
+                step: 0.05,
+                valueStyleVariant: _.OnHandle,
+                renderValue: (_) => _.toFixed(2),
+              }),
+            }),
+            !_.m_bIsVRLinkClient && _.createElement(_, null),
+            !_.m_bIsVRLinkClient &&
+              _.createElement(_, {
+                name: _,
+                label: _("#Settings_VRLink_HighlightFoveatedArea"),
+                visibility: _.Advanced,
+                items: [
+                  {
+                    value: _.Off,
+                    sLabel: _("#Settings_ToggleButton_Off"),
+                  },
+                  {
+                    value: _._,
+                    sLabel: _("#Settings_ToggleButton_On"),
+                  },
+                  {
+                    value: _.OnSolid,
+                    sLabel: _("#Settings_VRLink_HighlightFoveatedArea_OnSolid"),
+                  },
+                ],
+              }),
+            !1,
+            _.createElement("hr", null),
+          );
+        }
+        function _() {
+          return _()
+            ? _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: "SettingsItem",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: "Label Title",
+                    },
+                    _("#Settings_VRLink_Advanced"),
+                  ),
+                ),
+                _.createElement(_, null),
+                _.createElement(_, null),
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_AllowVolumeControlSync"),
+                  items: [
+                    {
+                      value: !0,
+                      sLabel: _("#Settings_ToggleButton_Enable"),
+                    },
+                    {
+                      value: !1,
+                      sLabel: _("#Settings_ToggleButton_Disable"),
+                    },
+                  ],
+                  explainer: _(
+                    "#Settings_VRLink_AllowVolumeControlSync_Explainer",
+                  ),
+                  visibility: _.Advanced,
+                }),
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_EnableQoS"),
+                  explainer: _("#Settings_VRLink_EnableQoS_Explainer"),
+                  visibility: _.Advanced,
+                }),
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_AllowMultipleLinks"),
+                  items: [
+                    {
+                      value: !0,
+                      sLabel: _("#Settings_ToggleButton_Enable"),
+                    },
+                    {
+                      value: !1,
+                      sLabel: _("#Settings_ToggleButton_Disable"),
+                    },
+                  ],
+                  visibility: _.Advanced,
+                }),
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_Encryption"),
+                  requiresRestart: !0,
+                  visibility: _.Advanced,
+                }),
+                _.createElement(_, {
+                  name: _,
+                  label: _("#Settings_VRLink_ShowAdvancedGraphs"),
+                  visibility: _.Advanced,
+                }),
+                _.createElement("hr", null),
+              )
+            : null;
+        }
+        let _ = class extends _ {
+          constructor(_) {
+            super(_);
+          }
+          ResetToDefaults() {
+            for (const _ of _) _.SetSettingsValue(_, null);
+          }
+          render() {
+            return this.props.active
+              ? _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, null),
+                  _.createElement(_, {
+                    name: _,
+                    label: _("#Settings_VRLink_WirelessShutdownTimeout"),
+                    items: [
+                      {
+                        value: 0,
+                        sLabel: _("#SettingsTime_Never"),
+                      },
+                      {
+                        value: 30,
+                        sLabel: _("#SettingsTime_30s"),
+                      },
+                      {
+                        value: 60,
+                        sLabel: _("#SettingsTime_1m"),
+                      },
+                      {
+                        value: 300,
+                        sLabel: _("#SettingsTime_5m"),
+                      },
+                      {
+                        value: 600,
+                        sLabel: _("#SettingsTime_10m"),
+                      },
+                      {
+                        value: 1200,
+                        sLabel: _("#SettingsTime_20m"),
+                      },
+                      {
+                        value: 1800,
+                        sLabel: _("#SettingsTime_30m"),
+                      },
+                      {
+                        value: 3600,
+                        sLabel: _("#SettingsTime_1h"),
+                      },
+                    ],
+                  }),
+                  _.createElement(_, {
+                    name: _,
+                    label: _("#Settings_VRLink_EnableHmdAutoConnect"),
+                    explainer: _(
+                      "#Settings_VRLink_EnableHmdAutoConnect_Explainer",
+                    ),
+                    visibility: _.Advanced,
+                  }),
+                  _.createElement("hr", null),
+                  _.createElement(_, null),
+                  _.createElement(_, null),
+                  _.createElement(_, null),
+                  this.makeResetToDefaultButton(),
+                )
+              : null;
+          }
+        };
+        var _;
+        (_.Name = "driver_vrlink"),
+          (0, _._)([_], _.prototype, "ResetToDefaults", null),
+          (_ = (0, _._)([_._], _));
         const _ = "vr_settings_top_center";
         let _ = class extends _.Component {
           constructor(_) {
@@ -61395,6 +61499,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [851], () => _(4461));
+  var _ = _._(void 0, [851], () => _(4455));
   _ = _._(_);
 })();

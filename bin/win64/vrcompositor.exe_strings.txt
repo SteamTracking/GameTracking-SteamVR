@@ -7,6 +7,9 @@
   driver %s implements interfaces %s\n
  - %dx%d format=%d refresh=%d/%d scan=%d scale=%d dsc: mode=%d version=%d slice=%d out16=%d
  = { <proto text format> }". To set fields within it, use syntax like "
+ Layout
+ Mip%u
+ Mip%u Layer%u
  Outdent() without matching Indent().
  PassthroughPortal Stencil Estimate Disp 
  PassthroughPortal Stencil Left 
@@ -128,8 +131,13 @@ $0option $1;\n
 %s Failed to write "%s".\n
 %s Giving up: %u frame(s) in a row reached no hook.\n
 %s No log path to write into.\n
+%s UAV
 %s Wrote %u file(s) to "%s".\n
+%s | %s
 %s%d
+%s%s DSV
+%s%s RTV
+%s%s SRV
 %s%s%s%s%s
 %s%s\n
 %s: %s
@@ -175,6 +183,7 @@ $0option $1;\n
 %u.%u.%u.%u
 ' is not a number.
 '.5<=6/7>????????????????
+'@ffffff+@
 ( int )vecVerts.size() <= UINT16_MAX
 ( uint32_t )m_winRTSurfaces.size() == nSurfaceCount
 (Enumerating)
@@ -348,11 +357,13 @@ $0option $1;\n
 .?AU_Crt_new_delete@std@@
 .?AV<lambda_04103da6412327e603633ce4cd0b1ff8>@@
 .?AV<lambda_06f7f03917f813d4acaea219b2a15de1>@@
+.?AV<lambda_0a15fb600b1d9ee79d3a8c2f1c2b9c6f>@@
 .?AV<lambda_0a502c52170ad99d551e3079a207cb8d>@@
 .?AV<lambda_0bf5a7df96a4fb61efd027f9ca188239>@@
 .?AV<lambda_0e9c682e6668453b3ee5636a438a502c>@@
 .?AV<lambda_0edd1c727e57e3e264339f5f1157a7be>@@
 .?AV<lambda_120b3d875bfa3d97f012de77d5715840>@@
+.?AV<lambda_172b330880f283bbb232be7e64b12454>@@
 .?AV<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@
 .?AV<lambda_2b6946a8720252ff5d48d62f7b228872>@@
 .?AV<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@
@@ -362,6 +373,7 @@ $0option $1;\n
 .?AV<lambda_34fefb42b515d6eacd9e2f709e8b040e>@@
 .?AV<lambda_365adaeade691c6cde68fb743fbb4d92>@@
 .?AV<lambda_389c8fe41f46b7f8c4c8989530d782e7>@@
+.?AV<lambda_3c85195176cd3898300602a21806a937>@@
 .?AV<lambda_4424f60dc6272e432e2332fad7aeb9c5>@@
 .?AV<lambda_4a9b2774a285f4dfe924e0309f606eba>@@
 .?AV<lambda_54acbce8f80b2b8330d7ca8793104353>@@
@@ -431,11 +443,13 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@P6AXPEBD0I_NPEAXPEA_N@ZXPEBDPEBDI_NPEAXPEA_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_04103da6412327e603633ce4cd0b1ff8>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_06f7f03917f813d4acaea219b2a15de1>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_0a15fb600b1d9ee79d3a8c2f1c2b9c6f>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_0a502c52170ad99d551e3079a207cb8d>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_0bf5a7df96a4fb61efd027f9ca188239>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_0e9c682e6668453b3ee5636a438a502c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_0edd1c727e57e3e264339f5f1157a7be>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_120b3d875bfa3d97f012de77d5715840>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_172b330880f283bbb232be7e64b12454>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_25430a8ba8254b9e2f7e202d7ed3a736>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2b6946a8720252ff5d48d62f7b228872>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d123b72a81c3a08505f3763cbbd4b1f>@@XAEBVValue@Json@@@std@@
@@ -445,6 +459,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_34fefb42b515d6eacd9e2f709e8b040e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_365adaeade691c6cde68fb743fbb4d92>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_389c8fe41f46b7f8c4c8989530d782e7>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_3c85195176cd3898300602a21806a937>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4424f60dc6272e432e2332fad7aeb9c5>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4a9b2774a285f4dfe924e0309f606eba>@@_NW4EVREye@vr@@W4EVRDistortionChannel@3@_NIPEBUDistortionCoordinate_t@3@PEAU53@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54acbce8f80b2b8330d7ca8793104353>@@XAEBVValue@Json@@@std@@
@@ -1109,7 +1124,7 @@ $0option $1;\n
 /chaperone/is_default_perimeter
 /chaperone/last_relocalization_time
 /chaperone/perimeter
-/chaperone/persistent_map_from_map/transform
+/chaperone/persistent_map_from_raw/transform
 /chaperone/play_area
 /chaperone/room_setup/transform
 /chaperone/room_setup_done
@@ -1227,8 +1242,8 @@ $0option $1;\n
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
+10:56:55
 123456789
-12:33:34
 1e+9999
 3333
 3333UUUU
@@ -1329,6 +1344,8 @@ $0option $1;\n
 ?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
 ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
+@ff>A
+@ffffff%@ffffff%@{
 A GrabTransform raycast did not find any intersections. %.3f
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
@@ -1369,6 +1386,9 @@ AllowAsyncRunningStart: %s\n
 AllowBubbleInImmersiveApps
 Already saw decimal point or exponent; can't have another one.
 Angular Debug Lines
+AngularDebugLineMesh
+AnisoClampToBorderSampler
+AnisoWrappedSampler
 Another app was already launching (117)
 Another copy of this program is already running on this machine. Only one instance at a time is allowed.
 App MV Dilation (Single Pass)
@@ -1384,11 +1404,13 @@ Attempted to read payload of %d bytes from pipe but failed\n
 Audio Transform Quad Debug
 Audio devices initialized
 AudioDeviceChangeNotice (noting refresh): %d, device = %s\n
+AudioSourceQuadDebug
 Aurora Far Floor Geom
 Aurora Horizon Floor Geom
 Aurora Horizon Sky Geom
 Aurora Sky Geom
 Aurora Sky and Floor
+AuroraBand
 AuroraNoise
 AvRevertMmThreadCharacteristics
 AvRevertMmThreadCharacteristics failed: last error is %d\n
@@ -1398,6 +1420,8 @@ BINORMAL
 BInputCaptureActive
 BMP RLE
 BackUp() can only be called after a successful Next().
+Backbuffer
+Backbuffer RTV
 Backbuffer count = %d
 Backbuffer-Depth
 Backbuffer-DepthStencil
@@ -1412,7 +1436,23 @@ Bad unicode escape sequence in string: four digits expected.
 Bad unicode escape sequence in string: hexadecimal digit expected.
 Begin
 Begin Draw
+BilinearClampSampler
+BilinearClampToBorderSampler
+BilinearClampYUVSampler
 Black level fixup enabled (detected known GPU/driver combination)
+BlendState
+BlendStateAdd
+BlendStateAlphaBlend
+BlendStateAlphaBlendNoAlphaWrite
+BlendStateMipDebug
+BlendStateNoAlphaWrite
+BlendStateNoBlending
+BlendStateNoBlendingNoColorWrite
+BlendStatePanelColorMaskBlue
+BlendStatePanelColorMaskGreen
+BlendStatePanelColorMaskRed
+BlendStatePremultiply
+BlendStatePremultiplyNoAlphaWrite
 Blur:ping
 Blur:pong
 Boolean default must be true or false.
@@ -1880,6 +1920,7 @@ Clearing splash overlay (received scenegraph update)
 Clearing stage override owned by pid %u because scene app %u is running\n
 Client
 Client (%s) app container state: %d
+ClientTextureIndexConstantBuffer
 CloseHandle
 CloseServiceHandle
 Closing pipe %s because it was broken from the other end\n
@@ -1928,13 +1969,19 @@ Connecting client (%s) app container status: %d\n
 Connection
 Connection - 
 Connector GetDeviceIdConnectedTo() failed: hr = 0x%08x\n
+Construct
 Construct Floor
 Construct Floor Edges
+ConstructFloorFar
+ConstructFloorNear
+ConstructFloorTileEdgesIndexBuffer
+ConstructQuads
 ControlTraceA
 ConvertStringSecurityDescriptorToSecurityDescriptorW
 ConvertStringSecurityDescriptorToSecurityDescriptorW failed while creating pipe %s\n
 ConvertStringSidToSidA
 CopySid
+CopyTextureData Staging
 Cost
 Could not create an instance of 
 Could not create interface in driver %s from %s.\n
@@ -2011,6 +2058,9 @@ Default value for an enum field must be an identifier.
 DeleteCriticalSection
 DeleteFileW
 Depth
+DepthStencilState
+DepthStencilStateNoDepthTest
+DepthStencilStateNoWrite
 DestroyWindow
 Destroying overlay %llX %s (%s)from pid %u because that process disconnected\n
 Destroying resources from %u now that %u is rendering\n
@@ -2039,6 +2089,11 @@ Display modes:\n
 DisplayPort_LinkInfo [0x%04x] = 
 Distort
 Distort initialized\n
+DistortMesh
+DistortMeshLayeredNoDistort
+DistortMeshSimple
+DistortQuad
+DistortionMeshConstantBuffer
 DoNotDisturb
 Done initializing CGraphicsDevice resources\n
 Done reading EDID vendor Id.\n
@@ -2051,6 +2106,7 @@ Driver requests system layer use app poses.
 Driver runtime is out of date (204)
 Driver unable to initialize video encoder (499)
 DriverDate
+DriverDirectSwapTextureSet%u-Image%u
 DriverManager %s init called SetUnhandledExceptionFilter\n
 DriverManager %s load error %s
 DriverVersion
@@ -2154,6 +2210,11 @@ Extensions to non-lite types can only be declared in non-lite files.  Note that 
 External connection from %s %u\n
 Extra non-whitespace after JSON value.
 Eye Tracking Debug
+Eye filtering %s
+EyeTrackingDebugIndexBuffer
+EyeTrackingDebugLineMesh
+EyeTrackingDebugMesh
+EyeTrackingDebugVertexBuffer
 FAILED
 FATAL
 FATAL: Failed to open log file %s, failing out!\n
@@ -2456,6 +2517,7 @@ Failed to write event salt value after a new connection on pipe %s because: %s\n
 Failed to write process id after connecting pipe %s because %s\n
 Failed with %s! Quitting.\n
 Failed with %s!\n
+FallbackSyncTexture
 False
 Fatal
 Feathering mura correction for %s\n - Inner(l=%d, r=%d, t=%d, b=%d)\n - Outer(l=%d, r=%d, t=%d, b=%d)\n
@@ -2492,7 +2554,9 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 Flush Text 
 Flush Text (mirror)
+FlushTexture
 FlushTraceA
+FontSampler
 Force application throttling: %d\n
 Forcing debug mode for %s driver because of Prop_DisplayDebugMode_Bool.\n
 Forcing mura correction %s because virtual display driver '%s' will apply it instead.\n
@@ -2509,7 +2573,10 @@ Found environment variable STEAMVR_GPU_FENCE_TIMEOUT=%d\n
 Found environment variable STEAMVR_MOTION_SMOOTHING_WIN7=1\n
 Found environment variable STEAMVR_USE_GPU_FENCE=0\n
 Fove-%s
+FoveFragConstantBuffer
+FoveVertConstantBuffer
 Foveated Sharpening
+FoveatedMesh
 Frame Warp
 Frame manager initialized
 FrameId,FinishedInTime,PreSubmit,PostSubmit,Compositor,ApplicationInterval\n
@@ -2519,6 +2586,8 @@ FrameInfoConstantBufferStaging[%d]
 FrameInfoConstantBuffer[%d]
 FreeLibrary
 Freeing displaced stage override model '%s' at the request of pid %u\n
+FullScreenLatLongQuad
+FullscreenQuadBuffer
 GC amount %0.2f\n
 GC: %d\n
 GPU Measurement
@@ -2603,6 +2672,13 @@ Getting devnode property store failed: hr = 0x%08x\n
 Getting render devnode via IMMDeviceEnumerator::GetDevice("%ls") failed: hr = 0x%08x\n
 Got new frame!
 GpuFenceWatchdog
+GpuMeasurementBlendState
+GpuMeasurementConstantBuffer
+GpuMeasurementDepthStencilState
+GpuMeasurementIndexBuffer
+GpuMeasurementRasterizerState
+GpuMeasurementSampler
+GpuMeasurementVertexBuffer
 GpuSpeed
 Graphics
 Grid
@@ -2638,6 +2714,7 @@ Headset is using driver direct mode\n
 Hex and octal numbers must be integers.
 Hidden Area Holdout Mask
 Hidden Area Mask (%s)
+HiddenAreaMesh
 Hmd DriverId is invalid (125)
 Hmd DriverId is our of bounds (211)
 Hmd Not Found (108)
@@ -2884,13 +2961,18 @@ KERNEL32.dll
 Kernel32.dll
 KillTimer
 L>333?
+L@vrwebhelper
 LTC Quad Debug
 LastKnown
+LatLongSamplerAniso
+LatLongSamplerBilinear
+LatlongSphere
 LayerComputeTextureIndexConstantBuffer
 LayerGraphicsTextureIndexConstantBuffer
 LeaveCriticalSection
 Left Eye Only
 Legacy Mirror
+Legacy stream quality %s
 Line %d, Column %d
 LiquidVR
 LiquidVR did not return a factory function\n
@@ -2937,6 +3019,7 @@ Log Level Set to %d\n
 Log path could not be located (112)
 Lost pipe connection from %s\n
 Low Power Watchdog Not Supported (129)
+LtcQuadDebug
 MC: %d\n
 MFCreateMediaType
 MFCreateMediaType failed hr = 0x%08x\n
@@ -2973,7 +3056,11 @@ Minidump comment truncated
 Mip downsample
 Mip downsample U
 Mirror Window
+MirrorBackbuffer
+MirrorBackbuffer RTV
+MirrorOverlayBlendVertexBuffer
 MirrorOverlayTexture
+MirrorOverlayVertexBuffer
 Mirroring from %s to %ls\n
 Mirroring is same as source %s, not mirroring\n
 Missing ',' or ']' in array declaration
@@ -2986,6 +3073,7 @@ Missing name.
 Missing sgid, m_ID=%s, type=%s
 Missing sgid: %s
 Mixed
+Motes
 Motion
 Motion Estimation Prepare Input
 Motion Smoothing Align Reference
@@ -3006,6 +3094,17 @@ Motion lock end
 Motion unlock begin
 Motion unlock end
 MotionVectorFilterConstantBuffer
+MotionVectorsAlignConstantBuffer
+MotionVectorsBilinearClampToBorderSampler
+MotionVectorsBlendStateAlpha
+MotionVectorsBlendStateNoBlending
+MotionVectorsConstantBuffer
+MotionVectorsDepthStencilState
+MotionVectorsDepthStencilStateNoDepthTest
+MotionVectorsDownsampleVertexBuffer
+MotionVectorsRasterizerState
+MotionVectorsVisibleAreaMaskConstantBuffer
+MotionVectorsVisibleAreaMaskVertexBuffer
 Mouse down count is %u but states are all false. What?\n
 MoveFileExW
 MoveWindow
@@ -3013,12 +3112,20 @@ MultiByteToWideChar
 Multiple extension registrations for type "
 MutableRawRepeatedField
 MutableRepeatedMessage
+MvChainDilationConstantBuffer
+MvDepthConsistencyConstantBuffer
+MvDilationConstantBuffer
+MvRepairConstantBuffer
+MvStaticRejectConstantBuffer
 NORMAL
 NOTPRESENT
 NULL
 NVAPI_DEBUG_DISPLAY_MODES
 NVAPI_SKIP_UNLOAD
 NVIDIA
+NearestClampToBorderSampler
+NearestClampedSampler
+NearestWrappedUSampler
 Need space between identifier and decimal point.
 Need space between number and identifier.
 New result of GetRecommendedRenderTargetSize for current app: %dx%d\n
@@ -3040,7 +3147,7 @@ Not starting vrserver for background app (121)
 Not writing %s because the texture was null
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notification mailbox init failed with %d\n
-Nov 13 2026
+Nov 19 2026
 Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:
@@ -3061,6 +3168,8 @@ NvAPI: VSync2Flip = %0.4fms\n
 NvAPI::DirectModeRenderWait
 NvAPI::Present
 NvAPI::WaitForPresent
+NvAPIScanout%d
+NvAPIScanout%d RTV
 NvEncodeAPICreateInstance
 NvOFAPICreateInstanceD3D11
 NvOpticalFlow %s\n
@@ -3101,8 +3210,15 @@ OutputDebugStringA
 OutputDebugStringW
 Overlay (panorama)
 Overlay mips (%.0fs): %d built (%d changed, %d other), %d reused
+Overlay%u-Image%u
+OverlayAnisoNearestSampler
+OverlayAnisoSampler
+OverlayAnisoSamplerMaxLod
 OverlayBuffer
+OverlayHaloMesh
 OverlayMipsTemp
+OverlayRectMesh
+OverlayTexturedMesh
 Overlays
 PICT
 PID_
@@ -3114,12 +3230,15 @@ POP! view moved %.2f deg vs head %.2f deg
 POSITION
 Panel Mask
 Panel Masks
+PanelColorMaskMeshIndexBuffer
+PanelColorMaskMeshVertexBuffer
 PanelMaskConstantBuffer
 Parse error in system resource manifest %s.\n
 Parse failed for JSON message in mailbox %s: %s\n
 Parsing of JSON file "%s" failed: %s\n
 Parsing of JSON string "%s" failed: %s\n
 Particles
+PassthroughPortalCenter
 PeekMessageA
 PeekNamedPipe
 Perf graph: %s
@@ -3127,6 +3246,9 @@ Play Area
 Playspace Area Mesh
 Playspace Mesh
 Playspace area SDF
+PlayspaceMeshIndexBuffer
+PlayspaceMeshVertexBuffer
+PolygonBuffer
 Post
 Post-clear
 Post-present
@@ -3147,6 +3269,7 @@ Process %s disconnected (%s)\n
 Processing Message of type %s (%u bytes) from %s\n
 Processing message %s from %s took %0.3g seconds\n
 ProgramFiles
+ProjectionQuadBuffer
 PropVariantClear
 Prop_
 Prop_ActualTrackingSystemName_String
@@ -3379,12 +3502,18 @@ RENDERDOC_GetAPI
 RENDERDOC_GetAPI failed with code %d
 RPCRT4.dll
 RaiseException
+RasterizerState
+RasterizerStateCullBackfaces
+RasterizerStateCullFrontfaces
+RasterizerStateWideLine
 Raw ideal render target scale = %.2f\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Read timestamps
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n
 ReadFile failed on %s read %u bytes when only %u bytes were available in the buffer\n
+ReadbackTexture Resolve
+ReadbackTexture Staging
 Reading EDID vendor Id timed out.\n
 Reading EDID vendor id from firmware...\n
 Reading dangerously large protocol message.  If the message turns out to be larger than 
@@ -3400,6 +3529,7 @@ Received update_scene_graph message without an owning overlay\n
 Recenter action triggered. Resetting zero pose
 Recreating swap texture sets FAILED: %d\n
 Reference
+Reflection%d
 Refreshing audio devices\n
 RegCloseKey
 RegEnumValueW
@@ -3431,6 +3561,7 @@ Render thread ending\n
 Render thread joined\n
 RenderDoc
 RenderModelComponent
+RenderModelMesh
 RenderThread
 Repeated fields can't have default values.
 ReplaceFileW
@@ -3475,6 +3606,7 @@ STEAMVR_USE_GPU_FENCE
 STEAMVR_VKVALIDATION
 STEAMVR_VRCOMPOSITOR_RENDERDOC
 SUCCEEDED
+Saccade prediction %s
 Scene
 Scene / Lens Distortion
 Scene Copy 1:1
@@ -3606,6 +3738,7 @@ Skybox (Cubemap)
 Skybox (Latlong)
 Skybox Geom
 Skybox Panorama
+Skybox%d
 Sleep
 SleepConditionVariableCS
 Software\Valve\Steam\ActiveProcess
@@ -3643,12 +3776,22 @@ Stream View Resolve
 StreamMultiView: %s Inner
 StreamMultiView: %s Outer
 StreamMultiViewColor4xMSAA
+StreamMultiViewCombineConstants
 StreamMultiViewCombined
 StreamMultiViewDepth
 StreamMultiViewDepth4xMSAA
+StreamMultiViewDownscaleConstants
+StreamMultiViewInnerConstants
+StreamMultiViewInsetConstants
+StreamMultiViewQuadBuffer
+StreamMultiViewReprojectConstants
+StreamMultiViewResampleConstants
 StreamMultiViewResampledX
+StreamMultiViewResolveConstants
+StreamMultiViewSet%u-Image%u
 String literals cannot cross line boundaries.
 StringOutputStream.
+SubdividedProjectionQuad
 Succesfully turned IGNORE_TIMER_RESOLUTION throttling off.
 Success
 Success!\n
@@ -3663,6 +3806,8 @@ TANGENT
 TEXCOORD
 TdhEnumerateManifestProviderEvents
 TerminateProcess
+TextIndexBuffer
+TextVertexBuffer
 Texture10pct1x1
 TextureBlack1x1
 TextureBlack1x1Compute
@@ -3765,8 +3910,28 @@ Tracked Camera: RoomView disabled due to incompatible HMD firmware (propertyErro
 Tracked Camera: RoomView disabled due to incompatible camera firmware (propertyError=%d, %llu).\n
 Tracked Camera: Unexpected or not-specified camera frame layout (propertyError=%d).\n
 Tracked Camera: Unexpected or not-specified number of cameras (propertyError=%d, %d).\n
+TrackedCameraAugmentedPassthroughIndexBuffer
+TrackedCameraAugmentedPassthroughVertexBuffer
+TrackedCameraConstantBuffer
+TrackedCameraPhysicalBoundsIndexBuffer
+TrackedCameraPhysicalBoundsVertexBuffer
+TrackedCamera_AlphaBlendState
+TrackedCamera_DecodeSampler
+TrackedCamera_EdgeFilterSampler
+TrackedCamera_EtronYUYVGammaDecodeSampler
+TrackedCamera_Left_QuadBuffer
+TrackedCamera_QuadBuffer
+TrackedCamera_Right_QuadBuffer
+TrackedCamera_RoomViewRasterizerState_FrontIsCW
+TrackedCamera_RoomViewRasterizerState_NoCull
+TrackedCamera_RoomViewSampler
+TrackedCamera_SrcOnlyBlendState
+TrackedCamera_SrcOnlyNoOutputBlendState
+TrackedCamera_UndistortSampler
 TranslateMessage
 Tried to merge messages of different types 
+TrilinearClampSampler
+TrilinearWrappedSampler
 True
 Truncating profile to actual length in iCCP chunk
 TryGetNotificationIndex( pState, unNotificationid, result )
@@ -4587,7 +4752,10 @@ Video Capture Quad Debug
 Video Capture View
 Video Feed
 Video capture view mesh exceeded its fixed capacity; some cells were dropped.\n
+VideoCaptureQuadDebug
 VideoCaptureView t=%.4f head(roll=%7.2f pitchY=%.3f lvl=%.2f d=%6.2f) comp=%6.2f lag=%6.2f offset(twist=%6.2f swing=%5.2f total=%6.2f) view(d=%6.2f)
+VideoCaptureViewIndexBuffer
+VideoCaptureViewVertexBuffer
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL [%u messages suppressed]
 VirtualDisplay AcquireSync FAILED with DXGI_ERROR_INVALID_CALL [OMITTING additional logs for %d seconds]
@@ -4613,6 +4781,7 @@ VirtualDisplay initial AcquireSync FAILED with hr 0x%08x
 VirtualDisplay initial AcquireSync FAILED with hr 0x%08x [%u messages suppressed]
 VirtualDisplay initial AcquireSync FAILED with hr 0x%08x [OMITTING additional logs for %d seconds]
 VirtualQuery
+VisibleAreaMesh
 VisitNodes
 WARNING
 WINMM.dll
@@ -4671,6 +4840,9 @@ WebInterface
 WideCharToMultiByte
 Win 10
 WinRT
+WinRTScanout%d
+WinRTScanout%d RTV
+WireframeRasterState
 Write Error
 WriteFile
 Writing zero-length unknown chunk
@@ -5389,31 +5561,31 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\Retail\win64\2017\vrcompo
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\framemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\geometry.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10514
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10725
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10938
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11221
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11366
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12446
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14535
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14545
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14693
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15333
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15358
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15527
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20871
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22081
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22788
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23799
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24120
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4770
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5674
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5686
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6489
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:659
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8409
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8517
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9191
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10464
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10675
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10888
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11171
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11316
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12396
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14485
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14495
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14643
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15283
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15308
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15477
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20829
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22038
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22745
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23756
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24050
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4717
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5623
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5635
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6438
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:663
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8359
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8467
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9141
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\lasermouse.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:430
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:480
@@ -5431,18 +5603,18 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1018
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1956
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:33
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:334
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1090
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1340
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1350
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1453
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1722
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2071
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:247
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:458
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:5887
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:827
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1103
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1353
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1363
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1466
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1735
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2095
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:259
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:470
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:6039
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:839
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2182
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2188
 cached.last.poseIsValid
 callout-transform
 camera
@@ -5699,6 +5871,7 @@ expecting another \u token to begin the second half of a unicode surrogate pair
 expf
 extend .$0 {\n
 external_drivers
+eye_filtering
 fHeight
 fWidth
 fade-distance
@@ -5942,6 +6115,7 @@ ldiv
 left eye
 legacy_mirror_view_cycle
 legacy_mirror_view_toggle
+legacy_stream_quality
 length
 length exceeds PNG maxima
 lerp-speed
@@ -6333,6 +6507,7 @@ runas
 runtime
 russian
 sDebugName
+saccade_prediction
 safe_mode_driver_whitelist.json
 sc_schinese
 scale
@@ -6692,7 +6867,6 @@ steam_api64
 steam_api64.dll
 steam_overlay_handle
 steam_overlay_key
-steamlink_openvr-overlay
 steammessages_unified_base.steamclient.proto
 steamvr
 steamvr.systemLayerHeight overridden %d\n
@@ -6713,7 +6887,6 @@ strcmp
 stream
 stream end
 stream error
-streamQuality
 strength
 strftime
 strictRoot
@@ -6943,7 +7116,6 @@ vrntfyimg#%d
 vrserver internal error (124)
 vrshared_base.proto
 vrsharedresourcemanager
-vrwebhelper
 vrwebui_dashboard
 vrwebui_dashboardstore
 vsync_to_photons_big_decrement

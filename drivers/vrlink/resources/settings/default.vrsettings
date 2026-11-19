@@ -27,6 +27,7 @@
         "asyncSend" : false,
         "backoffRecoveryCoefficient" : 3.5,
         "enableAmfEncoder" : true,
+        "enableIntelEncoder" : false,
         "useOSC": false,
         "useOSCFace": false,
         "OSCInPort": 9016,

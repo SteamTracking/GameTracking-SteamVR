@@ -98,6 +98,7 @@
         "trackingLossColor": "#4F5a64",
         "startColor": "#4F5a64",
         "analogGain": 1.3,
+        "hwSharpening": 0.0,
         "globalActionSetPriority": false,
         "noEdgeExitHaptics": true,
         "showAdvancedSettings": false,
@@ -128,7 +129,6 @@
         "performanceProfile": "Performance",
         "proxThresholdMode": 0,
         "preferredFoveatedAngle": 0.0,
-        "streamQuality": 0,
         "highlightFoveatedArea": 0
     },
     "openxr": {

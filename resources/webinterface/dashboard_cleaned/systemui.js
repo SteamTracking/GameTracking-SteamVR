@@ -4140,7 +4140,8 @@ var CLSTAMP = "steamdb";
           (_[(_.None = 0)] = "None"),
             (_[(_.OutsidePlayspace = 1)] = "OutsidePlayspace"),
             (_[(_.TrackingLost = 2)] = "TrackingLost"),
-            (_[(_.ChaperoneLost = 3)] = "ChaperoneLost");
+            (_[(_.ChaperoneLost = 3)] = "ChaperoneLost"),
+            (_[(_.TrackingStarting = 4)] = "TrackingStarting");
         })(_ || (_ = {}));
         class _ {
           constructor() {
@@ -10377,6 +10378,7 @@ var CLSTAMP = "steamdb";
                 null !== (_ = _._.m_eRoomViewForcedReason) && void 0 !== _
                   ? _
                   : _._.None,
+              _ = _ == _._.TrackingStarting ? _._.None : _,
               [_, _] = _.useState(_._.None);
             _ != _ && (_ == _._.UserInteraction && (_(5), _(!1)), _(_)),
               _ != _._.None && _ != _ && (_(5), _(!1), _(_));
@@ -13312,7 +13314,7 @@ var CLSTAMP = "steamdb";
                     _.OH$[(0, _.R$f)()],
                 );
               console.log("Bootstrapping " + _, _);
-              const _ = 1e3 * (null !== (_ = 1794602049) ? _ : 0);
+              const _ = 1e3 * (null !== (_ = 1795114779) ? _ : 0);
               console.log(
                 "SteamVR Version Info: " +
                   JSON.stringify({
@@ -15485,7 +15487,7 @@ var CLSTAMP = "steamdb";
     })();
   var _ = _._(
     void 0,
-    [967, 991, 267, 305, 527, 452, 500, 554, 366, 458, 17, 838],
+    [967, 991, 267, 305, 527, 452, 500, 554, 458, 366, 17, 838],
     () => _(4660),
   );
   _ = _._(_);

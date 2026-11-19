@@ -1,4 +1,4 @@
-var CLSTAMP = "11238649";
+var CLSTAMP = "11257731";
 (() => {
   var e,
     t = {
@@ -3877,7 +3877,8 @@ var CLSTAMP = "11238649";
           (e[(e.None = 0)] = "None"),
             (e[(e.OutsidePlayspace = 1)] = "OutsidePlayspace"),
             (e[(e.TrackingLost = 2)] = "TrackingLost"),
-            (e[(e.ChaperoneLost = 3)] = "ChaperoneLost");
+            (e[(e.ChaperoneLost = 3)] = "ChaperoneLost"),
+            (e[(e.TrackingStarting = 4)] = "TrackingStarting");
         })(o || (o = {}));
         class _ {
           constructor() {
@@ -4849,7 +4850,7 @@ var CLSTAMP = "11238649";
                 ? void 0
                 : e.call(VRHTML)) + "",
             ),
-              r.set_webpack_build_timestamp(1794602049);
+              r.set_webpack_build_timestamp(1795114779);
             const o =
               null ===
                 (t =
@@ -9790,42 +9791,43 @@ var CLSTAMP = "11238649";
                 null !== (t = c.H.m_eRoomViewForcedReason) && void 0 !== t
                   ? t
                   : c.N.None,
-              [g, C] = n.useState(c.N.None);
+              g = h == c.N.TrackingStarting ? c.N.None : h,
+              [C, v] = n.useState(c.N.None);
             o != m && (o == w.JR.UserInteraction && (d(5), a(!1)), p(o)),
-              h != c.N.None && h != g && (d(5), a(!1), C(h));
-            const v = !!(null === VRHTML || void 0 === VRHTML
+              g != c.N.None && g != C && (d(5), a(!1), v(g));
+            const _ = !!(null === VRHTML || void 0 === VRHTML
                 ? void 0
                 : VRHTML.VRProperties.GetBoolProperty(
                     "/user/head",
                     s.fD8.VRLinkClientHMDSupportsRoomSetupRequests_Bool,
                   )),
-              _ = null !== (r = f.HR.settings.get(u.QV)) && void 0 !== r && r;
+              y = null !== (r = f.HR.settings.get(u.QV)) && void 0 !== r && r;
             if (
-              !v ||
+              !_ ||
               M.SW.showLoadingThrobberOrBootOverlay ||
               L.T.isOOBE ||
               "recovery" == M.SW.bareSessionMode ||
               R.c.roomViewEnabled ||
-              _
+              y
             )
               return null;
             if (c.H.m_bIsSceneAppShowing) {
-              if (!h || 0 != c.H.roomSetupStep) return null;
+              if (!g || 0 != c.H.roomSetupStep) return null;
             } else if (
               i ||
               c.H.m_bOutOfBoundsPlayAllowed ||
-              !h ||
+              !g ||
               0 != c.H.roomSetupStep
             )
               return null;
             return n.createElement(F, {
-              key: h,
+              key: g,
               durationSec: l,
               onComplete: () => {
                 let e = Math.max(0, l - 2.501);
                 0 == e ? a(!0) : d(e);
               },
-              eReason: h,
+              eReason: g,
             });
           }),
           k = (0, l.PA)(function () {
@@ -12350,7 +12352,7 @@ var CLSTAMP = "11238649";
                     s.OH$[(0, s.R$f)()],
                 );
               console.log("Bootstrapping " + e, o);
-              const a = 1e3 * (null !== (t = 1794602049) ? t : 0);
+              const a = 1e3 * (null !== (t = 1795114779) ? t : 0);
               console.log(
                 "SteamVR Version Info: " +
                   JSON.stringify({
@@ -14417,7 +14419,7 @@ var CLSTAMP = "11238649";
     })();
   var n = o.O(
     void 0,
-    [967, 991, 267, 305, 527, 452, 500, 554, 366, 458, 17, 838],
+    [967, 991, 267, 305, 527, 452, 500, 554, 458, 366, 17, 838],
     () => o(4660),
   );
   n = o.O(n);

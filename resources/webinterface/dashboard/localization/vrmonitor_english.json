@@ -10,6 +10,11 @@
 	"Settings_Controller_PairControllers": "Pair Controllers",
 	"Settings_ThumbstickDeadzone_Text": "Thumbstick Deadzone",
 	"Settings_ThumbstickDeadzone_Desc": "Adjust the deadzone on all thumbsticks.",
+	"Settings_Controller_UseHaptics": "Use Controller Haptics",
+	"Settings_Controller_UseHaptics_Desc": "Let this application send vibrations to the controllers.",
+	"Settings_Controller_HapticStrength": "Haptics Strength",
+	"Settings_Controller_HapticStrength_Minimum": "Minimum",
+	"Settings_Controller_HapticStrength_Maximum": "Maximum",
 	"Settings_DominantHand": "Dominant Hand",
 	"Settings_DominantHand_Left": "Left",
 	"Settings_DominantHand_Right": "Right",
@@ -177,9 +182,6 @@
 	"Settings_VRLink_WirelessShutdownTimeout": "On disconnect, exit SteamVR after",
 	"Settings_VRLink_Sharpening": "Sharpen Image before encoding (FidelityFX CAS)",
 	"Settings_VRLink_SharpeningStrength": "Sharpening Strength",
-	"Settings_VRLink_StreamQuality": "Stream Quality (Debug)",
-	"Settings_VRLink_StreamQuality_Default": "Default",
-	"Settings_VRLink_StreamQuality_Legacy": "Legacy",
 	"Settings_VRLink_UseOSC": "Enable OSC",
 	"Settings_VRLink_UseOSC_Explainer": "Sends eye, face and other available tracking data to other apps on this PC, such as VRChat.",
 	"Settings_VRLink_UseOSCFace": "Share face tracking data to other apps on this PC via OSC",
@@ -279,6 +281,11 @@
 
 	"Settings_Advanced_FoveatedSharpening_Header": "Foveated Sharpening",
 	"Settings_Advanced_FoveatedSharpening_Description": "Sharpens the view of the running application where you are looking.",
+
+	"Settings_Advanced_SGSRSharpening_Header": "SGSR Sharpening (Foveated)",
+	"Settings_Advanced_SGSRSharpening_Explainer": "Apply SGSR sharpening to the running application, where you are looking.",
+
+	"Settings_Advanced_DisplaySharpeness_Header": "Display Sharpness",
 
 	"Settings_Advanced_Supersampling_Auto": "Auto",
 	"Settings_Advanced_Supersampling_Custom": "Custom",

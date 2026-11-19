@@ -1,4 +1,4 @@
-var CLSTAMP = "11238649";
+var CLSTAMP = "11257731";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [170],
   {
@@ -3096,7 +3096,8 @@ var CLSTAMP = "11238649";
         (e[(e.None = 0)] = "None"),
           (e[(e.OutsidePlayspace = 1)] = "OutsidePlayspace"),
           (e[(e.TrackingLost = 2)] = "TrackingLost"),
-          (e[(e.ChaperoneLost = 3)] = "ChaperoneLost");
+          (e[(e.ChaperoneLost = 3)] = "ChaperoneLost"),
+          (e[(e.TrackingStarting = 4)] = "TrackingStarting");
       })(o || (o = {}));
       class _ {
         constructor() {
@@ -4037,7 +4038,7 @@ var CLSTAMP = "11238649";
               ? void 0
               : e.call(VRHTML)) + "",
           ),
-            r.set_webpack_build_timestamp(1794602049);
+            r.set_webpack_build_timestamp(1795114779);
           const o =
             null ===
               (t =

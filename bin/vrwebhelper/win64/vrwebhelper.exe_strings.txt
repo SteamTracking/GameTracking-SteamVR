@@ -279,6 +279,7 @@ $0option $1;\n
 .?AV<lambda_9df7b4f6845299f71e97049e0e65eee6>@@
 .?AV<lambda_a2b462743aaf82eea204292e53a01661>@@
 .?AV<lambda_a2f15b0f5f1f2d2323951c3e3183064d>@@
+.?AV<lambda_a3c09418026628d5905d3dc283f5716b>@@
 .?AV<lambda_a3de5e78233a65e929c97ab8aed5f60e>@@
 .?AV<lambda_a4803314ae4174942aeeabc9b042dda8>@@
 .?AV<lambda_a595b643cd70003c698a1aa6ed4abd8a>@@
@@ -482,6 +483,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_9df7b4f6845299f71e97049e0e65eee6>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a2b462743aaf82eea204292e53a01661>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a2f15b0f5f1f2d2323951c3e3183064d>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_a3c09418026628d5905d3dc283f5716b>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a3de5e78233a65e929c97ab8aed5f60e>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a4803314ae4174942aeeabc9b042dda8>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a595b643cd70003c698a1aa6ed4abd8a>@@XPEAVCVRWebHelperRendererHandler@@V?$scoped_refptr@VCefV8Value@@@@AEBV?$vector@V?$scoped_refptr@VCefV8Value@@@@V?$allocator@V?$scoped_refptr@VCefV8Value@@@@@std@@@std@@AEAV3@AEAV?$CefStringBase@UCefStringTraitsUTF8@@@@@std@@
@@ -773,7 +775,7 @@ $0option $1;\n
 /chaperone/is_default_perimeter
 /chaperone/last_relocalization_time
 /chaperone/perimeter
-/chaperone/persistent_map_from_map/transform
+/chaperone/persistent_map_from_raw/transform
 /chaperone/play_area
 /chaperone/room_setup/transform
 /chaperone/room_setup_done
@@ -826,9 +828,9 @@ $0option $1;\n
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899"
 0123456789abcdef
 0755a0099cb84cb99d91b47ab7b616435f207952
+10:56:55
 126.0.0-HEAD.3183+g659afd3+chromium-126.0.6478.183
 127.0.0.1
-12:33:34
 1e+9999
 5I)7
 8c8f13b1-60eb-4b6a-a433-de86104115ac
@@ -1382,7 +1384,6 @@ Hmd Not Found (108)
 Hmd Not Found Presence Failed (126)
 Home
 Hooking back up to existing overlay %s\n
-I1~,F
 IAudioCaptureClient::GetBuffer failed on pass %u: hr = 0x%08x\n
 IAudioCaptureClient::GetBuffer said to read 0 frames on pass %u\n
 IAudioCaptureClient::GetBuffer() failed: hr = 0x%08x\n
@@ -1752,7 +1753,7 @@ Not available to watchdog apps (131)
 Not calling InitVRAndLogging() since VR is already initialized.\n
 Not starting vrserver for background app (121)
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 13 2026
+Nov 19 2026
 Num Lock
 Num Lock Toggle
 Numbers starting with leading zero must be in octal.
@@ -1797,7 +1798,6 @@ QueryPerformanceFrequency
 QuitSceneApp
 QuitSteamVR
 RPCRT4.dll
-RSDS
 RaiseException
 Reached an unintended state: CPPTYPE_MESSAGE
 ReadFile
@@ -2465,6 +2465,7 @@ VROverlay.ShowKeyboard
 VROverlay.ShowKeyboardForOverlay
 VROverlay.ThisOverlayHandle
 VROverlay.ThisOverlayKey
+VROverlay.TriggerLaserMouseHapticVibration
 VROverlay.TriggerOverlayHapticEffect
 VROverlayError_ArrayTooSmall
 VROverlayError_BadMaskPrimitive
@@ -2780,6 +2781,7 @@ bHasHMD %d bHasVRMonitor %d eEnvironment %d
 bHasTexture
 bPoseIsValid
 bRoomViewMonochrome
+bSupportsChromaKeyPassthrough
 bSupportsCompatibilityModes
 bSupportsDirectMode
 bSupportsMotionSmoothing
@@ -2821,9 +2823,9 @@ c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_app.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_app.cpp:410
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_app.cpp:740
 c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5009
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5119
-c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5569
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5025
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5135
+c:\buildslave\steamvr_rel_win64\build\src\vrwebhelper\vrwebhelper_javascript.cpp:5586
 cef_api_hash
 cef_browser_host_create_browser
 cef_command_line_create

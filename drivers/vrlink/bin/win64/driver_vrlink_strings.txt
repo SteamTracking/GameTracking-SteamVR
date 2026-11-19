@@ -250,10 +250,12 @@ $0option $1;\n
 %s:%d: OpenSSL internal error: %s\n
 %s[%s] %s file=%s
 %u of %u datalinks failed to initialize. Returning the last failure.
+%u,%d,%d,%d,%d,%d\n
 %u,%u
 %u,%u,%u,%u
-%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%d,%d,%d,%d,%llu,%llu,%u,%u,%u,%u,%u,%d,%llx\n
+%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%d,%d,%d,%d,%llu,%llu,%u,%u,%u,%u,%u,%d,%llx,%u\n
 %x%s
+%x/%d
 ' is not a number.
 ' property is missing
 ' property is missing in 
@@ -274,6 +276,7 @@ $0option $1;\n
 'id' or 'name' missing
 'uri' is missing from non binary glTF file buffer.\n
 ("<6PZDNxrlf
+()$^.*+?[]|\-{},:=!\n\r
 (Enumerating)
 (Failed Enumeration)
 (General Failure)
@@ -355,6 +358,7 @@ $0option $1;\n
 .?AUIAudioSessionNotification@@
 .?AUIMMNotificationClient@@
 .?AUIUnknown@@
+.?AULibInfo@@
 .?AUSVLDriverTextureSet_t@SVLHMDDriver@@
 .?AUTextureSet_t@SVLHMDDriverD3D11@@
 .?AUToBase_t@Detail@Reflection@@
@@ -390,6 +394,7 @@ $0option $1;\n
 .?AV<lambda_758218a6081bd8528f1dbb1a976afb78>@@
 .?AV<lambda_7cb3ae86a555bd1884286d99351cb75a>@@
 .?AV<lambda_80ca4e5c2af80191d4f999830d198e9f>@@
+.?AV<lambda_81c470c46a3ead630399065a6d3a0c8e>@@
 .?AV<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@
 .?AV<lambda_989ad3179003eb4da9febba03c4fa4ec>@@
 .?AV<lambda_99840cb531ef870a4cd596a96a725af6>@@
@@ -421,7 +426,9 @@ $0option $1;\n
 .?AV<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@
 .?AV<lambda_f6b5d47df092c684e925186f68bd5c46>@@
 .?AV<lambda_f73c3f420ca6d0536f438c9140780aed>@@
+.?AV<lambda_fa05b9c6c95f8687cf6873473c0f4385>@@
 .?AV<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@
+.?AV?$MFXVector@_W@MFX@@
 .?AV?$TypeInfoT@VCAnimResource@@@Detail@Reflection@@
 .?AV?$TypeInfoT@VCBoneMaskResource@@@Detail@Reflection@@
 .?AV?$TypeInfoT@VCKeyframedDataResource@@@Detail@Reflection@@
@@ -484,6 +491,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_758218a6081bd8528f1dbb1a976afb78>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7cb3ae86a555bd1884286d99351cb75a>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_80ca4e5c2af80191d4f999830d198e9f>@@XW4ValueTransportID@@_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_81c470c46a3ead630399065a6d3a0c8e>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_8d246f664ab8b141927d73bfbaaf70e9>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_989ad3179003eb4da9febba03c4fa4ec>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_99840cb531ef870a4cd596a96a725af6>@@X$$V@std@@
@@ -515,6 +523,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_f1bd55315318a2fd4bd380a2014d7aa1>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f6b5d47df092c684e925186f68bd5c46>@@X_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f73c3f420ca6d0536f438c9140780aed>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_fa05b9c6c95f8687cf6873473c0f4385>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ff49fdc0a25d90d881049bfb36e771d8>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V?$_Binder@U_Unforced@std@@P8CVRMailbox@@EAAXAEBVValue@Json@@@ZPEAV3@AEBU?$_Ph@$00@2@@std@@XAEBVValue@Json@@@std@@
 .?AV?$_Iosb@H@std@@
@@ -525,11 +534,14 @@ $0option $1;\n
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8SVLRoot@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8SVLRoot@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8videoamfenc@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8videoamfenc@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8videonvenc@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8videonvenc@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
+.?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@P8videovplenc@@EAAXXZPEAV1@@std@@U?$default_delete@V?$tuple@P8videovplenc@@EAAXXZPEAV1@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_26f98f60fcdc6a80e9e15c1ddbb76ce9>@@@std@@U?$default_delete@V?$tuple@V<lambda_26f98f60fcdc6a80e9e15c1ddbb76ce9>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3dd27e57506c0a6dcab00b8d41ac0e16>@@@std@@U?$default_delete@V?$tuple@V<lambda_3dd27e57506c0a6dcab00b8d41ac0e16>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_688183ccff0c2936f7ffcd467b71aa30>@@@std@@U?$default_delete@V?$tuple@V<lambda_688183ccff0c2936f7ffcd467b71aa30>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_93cd9be9198a79dcbbc191c2568dbfbf>@@@std@@U?$default_delete@V?$tuple@V<lambda_93cd9be9198a79dcbbc191c2568dbfbf>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_a13f60761dce9bff844f28e2e121f98d>@@@std@@U?$default_delete@V?$tuple@V<lambda_a13f60761dce9bff844f28e2e121f98d>@@@std@@@2@@std@@@std@@
+.?AV?$_Node_class@DV?$regex_traits@D@std@@@std@@
+.?AV?$_Node_str@D@std@@
 .?AV?$_Ref_count@UVariableTransportHolder@@@std@@
 .?AV?$_Ref_count_obj@UVariableTransportHolder@@@std@@
 .?AV?$_Ref_count_obj@V?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@nlohmann@@@std@@
@@ -538,17 +550,25 @@ $0option $1;\n
 .?AV?$basic_filebuf@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_ifstream@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_ios@DU?$char_traits@D@std@@@std@@
+.?AV?$basic_ios@_WU?$char_traits@_W@std@@@std@@
 .?AV?$basic_iostream@DU?$char_traits@D@std@@@std@@
+.?AV?$basic_iostream@_WU?$char_traits@_W@std@@@std@@
 .?AV?$basic_istream@DU?$char_traits@D@std@@@std@@
+.?AV?$basic_istream@_WU?$char_traits@_W@std@@@std@@
 .?AV?$basic_istringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
 .?AV?$basic_ofstream@DU?$char_traits@D@std@@@std@@
 .?AV?$basic_ostream@DU?$char_traits@D@std@@@std@@
+.?AV?$basic_ostream@_WU?$char_traits@_W@std@@@std@@
 .?AV?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
 .?AV?$basic_streambuf@DU?$char_traits@D@std@@@std@@
+.?AV?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@
 .?AV?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
+.?AV?$basic_stringbuf@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@
 .?AV?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
+.?AV?$basic_stringstream@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@
 .?AV?$codecvt@_WDU_Mbstatet@@@std@@
 .?AV?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@
+.?AV?$collate@D@std@@
 .?AV?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@nlohmann@@
 .?AV?$wstring_convert@V?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@_WV?$allocator@_W@2@V?$allocator@D@2@@std@@
 .?AVAMFFactoryHelper@@
@@ -578,6 +598,9 @@ $0option $1;\n
 .?AVCharReader@Json@@
 .?AVCharReaderBuilder@Json@@
 .?AVClosure@protobuf@google@@
+.?AVD3D9Device@MFX@@
+.?AVDXDevice@MFX@@
+.?AVDXGI1Device@MFX@@
 .?AVDescriptorDatabase@protobuf@google@@
 .?AVDescriptorPoolExtensionFinder@internal@protobuf@google@@
 .?AVDescriptorProto@protobuf@google@@
@@ -674,8 +697,18 @@ $0option $1;\n
 .?AVZeroCopyOutputStream@io@protobuf@google@@
 .?AV_Facet_base@std@@
 .?AV_Generic_error_category@std@@
+.?AV_Node_assert@std@@
+.?AV_Node_back@std@@
+.?AV_Node_base@std@@
+.?AV_Node_capture@std@@
+.?AV_Node_end_group@std@@
+.?AV_Node_end_rep@std@@
+.?AV_Node_endif@std@@
+.?AV_Node_if@std@@
+.?AV_Node_rep@std@@
 .?AV_Pad@std@@
 .?AV_Ref_count_base@std@@
+.?AV_Root_node@std@@
 .?AV_System_error@std@@
 .?AVbad_alloc@std@@
 .?AVbad_array_new_length@std@@
@@ -695,6 +728,7 @@ $0option $1;\n
 .?AVvideoamfenc@@
 .?AVvideoenc@@
 .?AVvideonvenc@@
+.?AVvideovplenc@@
 .CRT$XCA
 .CRT$XCL
 .CRT$XCU
@@ -792,6 +826,10 @@ $0option $1;\n
 /input/b/touch
 /input/bumper/click
 /input/bumper/touch
+/input/circle/click
+/input/circle/touch
+/input/cross/click
+/input/cross/touch
 /input/dpad_down/click
 /input/dpad_down/touch
 /input/dpad_left/click
@@ -803,6 +841,8 @@ $0option $1;\n
 /input/grip/click
 /input/grip/touch
 /input/grip/value
+/input/grip_sensor/click
+/input/grip_sensor/value
 /input/index_pinch/click
 /input/index_pinch/value
 /input/index_point/click
@@ -821,6 +861,8 @@ $0option $1;\n
 /input/ring_pinch/value
 /input/skeleton/left
 /input/skeleton/right
+/input/square/click
+/input/square/touch
 /input/squeeze/click
 /input/system/click
 /input/system/touch
@@ -829,9 +871,14 @@ $0option $1;\n
 /input/thumbstick/touch
 /input/thumbstick/x
 /input/thumbstick/y
+/input/triangle/click
+/input/triangle/touch
 /input/trigger/click
 /input/trigger/touch
 /input/trigger/value
+/input/trigger_sensor/click
+/input/trigger_sensor/touch
+/input/trigger_sensor/value
 /input/view/click
 /input/view/touch
 /input/x/click
@@ -980,6 +1027,7 @@ $0option $1;\n
 0x%I64x
 1 Sec
 1/2/4/8/16-bit only
+10-bit
 10-bit format isn't supported by H264 encoder(NV_ENC_ERR_INVALID_PARAM)\n
 10.35.78.0
 10bit
@@ -990,9 +1038,11 @@ $0option $1;\n
 169.254.
 1e+9999
 255.255.255.0
+265P
 3333333333333333333333333333333333333333333333333333333333333333
 33s?
 6666666666666666jjjjjjjjjjjjjjjj[
+8-bit
 8\vWzK
 8c8f13b1-60eb-4b6a-a433-de86104115ac
 8d8f13b1-60eb-4b6a-a433-de86104115ac
@@ -1025,15 +1075,22 @@ $0option $1;\n
 ================================================================================================\n
 ??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ
 ??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z
+??0?$basic_iostream@_WU?$char_traits@_W@std@@@std@@QEAA@PEAV?$basic_streambuf@_WU?$char_traits@_W@std@@@1@@Z
 ??0?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
 ??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
 ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ
+??0?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IEAA@XZ
 ??0?$codecvt@_WDU_Mbstatet@@@std@@QEAA@_K@Z
+??0_Locinfo@std@@QEAA@PEBD@Z
 ??0_Lockit@std@@QEAA@H@Z
+??0facet@locale@std@@IEAA@_K@Z
 ??1?$basic_iostream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+??1?$basic_iostream@_WU?$char_traits@_W@std@@@std@@UEAA@XZ
 ??1?$basic_istream@DU?$char_traits@D@std@@@std@@UEAA@XZ
 ??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ
 ??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ
+??1?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UEAA@XZ
+??1_Locinfo@std@@QEAA@XZ
 ??1_Lockit@std@@QEAA@XZ
 ??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z
 ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@G@Z
@@ -1044,6 +1101,7 @@ $0option $1;\n
 ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_K@Z
 ??Bid@locale@std@@QEAA_KXZ
 ??_7?$basic_ios@DU?$char_traits@D@std@@@std@@6B@
+??_7?$basic_ios@_WU?$char_traits@_W@std@@@std@@6B@
 ??_7?$codecvt@_WDU_Mbstatet@@@std@@6B@
 ??_7_Facet_base@std@@6B@
 ??_7codecvt_base@std@@6B@
@@ -1055,6 +1113,8 @@ $0option $1;\n
 ?_Fiopen@std@@YAPEAU_iobuf@@PEBDHH@Z
 ?_Fiopen@std@@YAPEAU_iobuf@@PEB_WHH@Z
 ?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z
+?_Getcat@?$ctype@D@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z
+?_Getcoll@_Locinfo@std@@QEBA?AU_Collvec@@XZ
 ?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ
 ?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ
 ?_Incref@facet@locale@std@@UEAAXXZ
@@ -1062,28 +1122,36 @@ $0option $1;\n
 ?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z
 ?_Ios_base_dtor@ios_base@std@@CAXPEAV12@@Z
 ?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA_N_N@Z
+?_Ipfx@?$basic_istream@_WU?$char_traits@_W@std@@@std@@QEAA_N_N@Z
 ?_Locimp_Addfac@_Locimp@locale@std@@CAXPEAV123@PEAVfacet@23@_K@Z
 ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+?_Lock@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UEAAXXZ
 ?_New_Locimp@_Locimp@locale@std@@CAPEAV123@AEBV123@@Z
 ?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ
 ?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ
+?_Pninc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IEAAPEA_WXZ
 ?_Random_device@std@@YAIXZ
 ?_Syserror_map@std@@YAPEBDH@Z
 ?_Throw_C_error@std@@YAXH@Z
 ?_Throw_Cpp_error@std@@YAXH@Z
 ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+?_Unlock@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UEAAXXZ
 ?_Xbad_alloc@std@@YAXXZ
 ?_Xbad_function_call@std@@YAXXZ
 ?_Xinvalid_argument@std@@YAXPEBD@Z
 ?_Xlength_error@std@@YAXPEBD@Z
 ?_Xout_of_range@std@@YAXPEBD@Z
+?_Xregex_error@std@@YAXW4error_type@regex_constants@1@@Z
 ?always_noconv@codecvt_base@std@@QEBA_NXZ
 ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
 ?getline@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEAD_J@Z
 ?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEBA?AVlocale@2@XZ
 ?id@?$codecvt@DDU_Mbstatet@@@std@@2V0locale@2@A
 ?id@?$codecvt@_WDU_Mbstatet@@@std@@2V0locale@2@A
+?id@?$collate@D@std@@2V0locale@2@A
+?id@?$ctype@D@std@@2V0locale@2@A
 ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z
+?imbue@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAAXAEBVlocale@2@@Z
 ?in@?$codecvt@DDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z
 ?in@?$codecvt@_WDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEA_W3AEAPEA_W@Z
 ?option requires an argument -- %c
@@ -1093,24 +1161,36 @@ $0option $1;\n
 ?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z
 ?read@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEAD_J@Z
 ?sbumpc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+?sbumpc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QEAAGXZ
 ?seekg@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@_JH@Z
 ?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z
+?setbuf@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAAPEAV12@PEA_W_J@Z
 ?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
+?setstate@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QEAAXH_N@Z
 ?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z
 ?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+?sgetc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QEAAGXZ
 ?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ
+?showmanyc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAA_JXZ
 ?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+?snextc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QEAAGXZ
 ?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z
 ?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z
 ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+?sync@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAAHXZ
 ?tellg@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA?AV?$fpos@U_Mbstatet@@@2@XZ
+?tolower@?$ctype@D@std@@QEBADD@Z
+?tolower@?$ctype@D@std@@QEBAPEBDPEADPEBD@Z
 ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+?uflow@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAAGXZ
 ?uncaught_exception@std@@YA_NXZ
 ?unshift@?$codecvt@DDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z
 ?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
 ?write@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEBD_J@Z
 ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
+?xsgetn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAA_JPEA_W_J@Z
 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
+?xsputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MEAA_JPEB_W_J@Z
 @fff>fff>fff>fff>
 @option requires an argument -- %c
 A file with this name is already in the pool.
@@ -1325,10 +1405,22 @@ AUDIO MIC FAILURE ON m_pAudioClient->Start HR Returned: %d\n
 AUDIO MIC FAULURE on m_pAudioClient->Initialize HR Returned: %d\n
 AUDIO: 
 AUDIO: %s
+AUDelimiter
 AUTHORITY_INFO_ACCESS
 AUTHORITY_KEYID
+AV1BitstreamParam
+AV1FilmGrainParam
+AV1ResolutionParam
+AV1Segmentation
+AV1TileParam
+AVCEncodedFrameInfo
+AVCRefListCtrl
+AVCRefLists
+AVCRoundingOffset
+AccelerationMode
 Acceptable OCSP Responses
 Accessor
+Accuracy
 AckTimeout
 AcquireSRWLockExclusive
 AcquireSRWLockShared
@@ -1347,6 +1439,12 @@ AcquireSync FAILED with unknown hr 0x%08x [OMITTING additional logs for %d secon
 Active Data Links: m_pLink:%p pTcpLink:%p pUdpLink:%p\n
 ActualHMDDriver
 Adapter is not supported by vrlink (vendor ID %d).\n
+AdaptiveB
+AdaptiveCQM
+AdaptiveI
+AdaptiveLTR
+AdaptiveMaxFrameSize
+AdaptiveRef
 AddBool
 AddDouble
 AddEnum
@@ -1363,21 +1461,35 @@ Adobe
 AdvancedFrameTimeMonitoring::SetCSVLogging
 Affiliation Changed
 AlexEkd JingThom
+Algorithm
 All VTEs Invalidated.
+AllocId
 Already saw decimal point or exponent; can't have another one.
+Angle
 AnimationChannel
 Any Extended Key Usage
 Any Purpose
 Any language
+ApiVersion
 AppSlow
 Apple Vision Pro
 Apple Vision Pro M2
 Apple Vision Pro M5
+ApplyLongTermIdx
+ArCoeffLag
+ArCoeffShiftMinus6
+ArCoeffsCbPlus128[]
+ArCoeffsCrPlus128[]
+ArCoeffsYPlus128[]
 Array length of `baseColorFactor` parameter in pbrMetallicRoughness must be 4, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 
 Array length of `emissiveFactor` parameter in material must be 3, but got 4\n
 Asking client to turn room view %s
+AspectRatioH
+AspectRatioInfoPresent
+AspectRatioW
 Asset
+AsyncDepth
 Attempting to SetPeer on link %s dev %s, but families do not match.
 Attempting to SetPeer on link %s dev %s, but it is not enabled.
 Audio
@@ -1427,6 +1539,7 @@ AvRevertMmThreadCharacteristics
 AvRevertMmThreadCharacteristics failed: last error is %d\n
 AvSetMmThreadCharacteristics failed: last error = %u
 AvSetMmThreadCharacteristicsA
+AvcTemporalLayers
 B-163
 B-233
 B-283
@@ -1539,6 +1652,9 @@ BN_to_felem
 BN_usub
 BOOL
 BOOLEAN
+BRCPanicMode
+BRCParamMultiplier
+BRefType
 BUF lib
 BUF_MEM_grow
 BUF_MEM_grow_clean
@@ -1550,18 +1666,30 @@ Bad time value
 Bad unicode escape sequence in string: four digits expected.
 Bad unicode escape sequence in string: hexadecimal digit expected.
 Bandwidth Selected: %f; Ratio above 60ms: %f\n
+BaseLayerPID
 Basic OCSP Response
 Basis Type: %s\n
+BiDirectionalPrediction
 BinW
 Binding UDP socket to %s\n
 Biometric Info
 BitBlt
+BitDepthChroma
+BitDepthLuma
+BitrateLimit
+BitstreamRestriction
+BlockSize
 Bookend
 Boolean default must be true or false.
+Brightness
 Broadcast
 Broadcast Reply
 Buffer
+BufferSize
+BufferSizeInKB
+BufferType
 BufferView
+BufferingPeriodSEI
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
 C420jpeg
 C420p10
@@ -1616,6 +1744,7 @@ CAST5-CBC
 CAST5-CFB
 CAST5-ECB
 CAST5-OFB
+CAVLC
 CAnimResource
 CAudioEndpointVolumeCallback::CAudioEndpointVolumeCallback
 CAudioEndpointVolumeCallback::Register
@@ -1762,6 +1891,10 @@ CMS_sign_receipt
 CMS_stream
 CMS_uncompress
 CMS_verify
+CM_Get_Device_ID_ListW
+CM_Get_Device_ID_List_SizeW
+CM_Locate_DevNodeW
+CM_Open_DevNode_Key
 CN Got Bookend0 %d
 CN Got Bookend1 %d
 CN Got Bookend2 %d
@@ -1859,6 +1992,9 @@ Can't get here: failed to get default value as string
 CancelIPChangeNotify
 Cannot allocate buffer larger than kint32max for 
 Cannot open file
+CbLumaMult
+CbMult
+CbOffset
 Certificate Hold
 Certificate Sign
 Cessation Of Operation
@@ -1870,8 +2006,18 @@ Change bandwidth limit.
 Change frame phase of when waitgetposes is requested.
 Change target frame deadline.
 Channel: %d\n
+ChannelId
+ChannelMapping
 Char=
 Chroma key passthrough: client supports=%d (host noise floor %d), client requests=%d -> Prop_Hmd_SupportsChromaKeyPassthrough_Bool=%d%s
+ChromaFormat
+ChromaLocInfo
+ChromaLocInfoPresentFlag
+ChromaLog2WeightDenom
+ChromaSampleLocTypeBottomField
+ChromaSampleLocTypeTopField
+ChromaSiting
+ChromaWeightFlag[]
 Classic
 ClearField
 Client HMD type (%d) supports eye tracking, creating input component
@@ -1892,9 +2038,23 @@ CoTaskMemAlloc
 CoTaskMemFree
 CoUninitialize
 Code Signing
+CodecID
+CodecId
+CodecLevel
+CodecProfile
 CodecSet
 CodecSetOVR
+CodingOption
+CodingOption2
+CodingOption3
+CodingOptionSPSPPS
+CodingOptionVPS
 Cofactor: 
+ColorConversion
+ColorFormat
+ColorFormats
+ColourDescriptionPresent
+ColourPrimaries
 Complete reinit success. Took: %0.1fms
 Completing videonvenc::GetEncodedDataThread
 Completing videonvenc::ManageFramesThread
@@ -1908,6 +2068,10 @@ Connection inactive for %f > %d seconds. Waiting to quit for scene app %s.\n
 ConnectionLost
 Connector GetDeviceIdConnectedTo() failed: hr = 0x%08x\n
 Content-Type: application/ocsp-request\r\nContent-Length: %d\r\n\r\n
+ContentInfo
+ContentLightLevelInfo
+Contrast
+Convergence
 ConvertFiberToThread
 Could not create OpenGL Context/Window + Debug Window\n
 Could not create an instance of 
@@ -1920,11 +2084,15 @@ Could not find universes in JSON.
 Could not load nvEncodeAPI64.dll; Error: %s\n
 Could not log to disk.\n
 Couldn't parse default value "
+CrLumaMult
+CrMult
+CrOffset
 CreateBitmap
 CreateCompatibleBitmap
 CreateCompatibleDC
 CreateConnectionInfo PermanentFailure.  Code %d\n
 CreateConnectionInfo failed.  Code %d\n
+CreateDXGIFactory1
 CreateDirectoryA
 CreateDirectoryW
 CreateEventA
@@ -1945,6 +2113,14 @@ CreateWindowExA
 Creating canvas"%s"\n
 Creating playback mirror thread for device %s\n
 CrlID
+CropH
+CropW
+CropX
+CropY
+Crops.Bottom
+Crops.Left
+Crops.Right
+Crops.Top
 CryptAcquireContextA
 CryptDecrypt
 CryptDestroyKey
@@ -2018,6 +2194,8 @@ DIST_POINT
 DIST_POINT_NAME
 DNS:
 DPing
+DRMPrimaryNodeNum
+DRMRenderNodeNum
 DSA lib
 DSA-Parameters
 DSA-SHA
@@ -2069,6 +2247,7 @@ DSTU curve 7
 DSTU curve 8
 DSTU curve 9
 DVCS
+DXGIAdapterIndex
 Dashboard tutorial dismissed\n
 Data Encipherment
 Data Link Startup with Options: nTimedRetryOption = %d, nQoSOption = %d
@@ -2080,9 +2259,13 @@ DataLinkUber:ScanForLinkChanges Done
 Datalink failed with %d\n
 DeadL %4.1fms
 Debug
+DecVideoProcessing
 Decipher Only
+DecodeErrorReport
 DecodeSlow
 Decoded
+DecodedFrameInfo
+DecodedOrder
 DefWindowProcA
 Default automatic encoded video size: %i
 Default value for an enum field must be an identifier.
@@ -2091,23 +2274,39 @@ DeleteCriticalSection
 DeleteFiber
 DeleteFileW
 DeleteObject
+DenoiseFactor
 DeregisterEventSource
 Description
 DestroySwapTextureSet()
 Detail
+DetailFactor
 Detected %d playback and %d record devices\n
+DeviceAffinityMask
+DeviceID
+DeviceID[]
+DeviceLUID
+DeviceName
 DeviceType %s\n
 Diffie-Hellman based MAC
 Diffie-Hellman routines
 Digital Signature
 DirName
 DirName:
+Direct3DCreate9
+Direct3DCreate9Ex
+DirectBiasAdjustment
 Directory
+DirtyRect
+DisableDeblockingIdc
 DisableThreadLibraryCalls
+DisableVUI
 Disconnected VRLink Headset
 DispatchMessageA
+DisplayPrimariesX[]
+DisplayPrimariesY[]
 DisplayedLate
 Domain
+DropFrameFlag
 Dump CSV %s
 Dump H265 %s
 Dump Hist
@@ -2250,6 +2449,7 @@ ERROR: Shaders sum to > 64kB\n
 ERROR: failed to create/reset encoder in videoamfenc::SubmitFrame()\n
 ERROR: frame metadata index mismatch\n
 ERROR: svl protocol version mismatch. Server expects %d, client is %d
+ERROR: videovplenc failed to create encoder; retrying in about a second\n
 EVP lib
 EVP_CIPHER_CTX_copy
 EVP_CIPHER_CTX_ctrl
@@ -2330,17 +2530,35 @@ EdiPartyName
 EdiPartyName:<unsupported>
 Empty escape sequence in string
 Empty file.
+Enable
+EnableMAD
+EnableMBForceIntra
+EnableMBQP
+EnableNalUnitType
+EnableQPOffset
+EnableReallocRequest
+EnableRoundingInter
+EnableRoundingIntra
 EncModeFromString is set to auto. Defaulting to open mode unless overridden.
 EncQueueOverflow
 EncQueueOverflows
 EncTimeHist
 Encipher Only
 EncodeSlow
+EncodedOrder
+EncodedSlicesInfo
+EncodedUnitsInfo
+EncoderCapability
+EncoderIPCMArea
+EncoderROI
+EncoderResetOption
 Encryption mechanism failed encryption test.
 Encryption mechanism fialed to decode.
 Encryption mechanism fialed to encode.
 Encryption not giving expected result %x
 End-of-file inside block comment.
+EndOfSequence
+EndOfStream
 Endpoint Activate(IDeviceTopology) failed: id = %s hr = 0x%08x\n
 Endpoint topology GetConnector(0) failed: hr = 0x%08x\n
 Enter 
@@ -2410,6 +2628,7 @@ Error: m_fecTX not initialized!\n
 Error: nvEncDestroyEncoder() failed to destroy. Error: %d\n
 Error: nvEncInitializeEncoder failed with %d\n
 Error: unsupported mode in CheckOrGenerateSpatialRateControl\n
+ErrorTypes
 EstBW
 Event Rate
 Event Write
@@ -2437,7 +2656,11 @@ Expected string.
 Expecting: 
 Experimental
 Exponent:
+ExtBRC
+ExtBrcAdaptiveLTR
+ExtBuffer
 Extended OCSP Status
+ExtendedPicStruct
 Extension
 Extension "
 Extension Request
@@ -2454,7 +2677,6 @@ Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra non-whitespace after JSON value.
 Eye Center Q Value
-Eye Filt %s
 Eye Pherphery Q Value
 Eye Trk %s
 Eye and Expressions
@@ -2478,6 +2700,7 @@ FORMAT=32-bit_rle_rgbe
 FPR: %5.0f%%
 FPR: UNSET
 FS callback[s] not set\n
+FadeDetection
 Fail this % of packets, incoming on this side.
 Fail to TX this % of packets on this side.
 Fail to Video TX this % of packets on this side
@@ -2524,6 +2747,7 @@ FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
 FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldOutput
 FieldSize
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 File already exists in database: 
@@ -2541,21 +2765,40 @@ File size mismatch :
 File write error: 
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
+FilmGrain
+FilmGrainFlags
+FilterFourCC
+FilterStrength
 FindClose
 FindFirstFileW
 FindNextFileW
 Finished encoder reinit (%d). Took: %0.3fms\n
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FixedFrameRate
 Flags
 Forced Stream reset has failed. Code: 0x13 
 Found properties for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to load.
 Found settings for unknown hmd. Attempting to retrieve serial number for activation.
+FourCC
 Frame Done
+FrameHeight
+FrameId.DependencyId
+FrameId.PriorityId
+FrameId.QualityId
+FrameId.TemporalId
+FrameId.ViewId
+FrameOrder
+FramePicture
+FrameRateExtD
+FrameRateExtN
+FrameType
+FrameWidth
 FreeLibrary
 Full Reinit
 Function not implemented
+FunctionsName
 GAME
 GDI32.dll
 GENERALIZEDTIME
@@ -2599,6 +2842,7 @@ GOST R 3410-2001 Parameter Set Cryptocom
 GPU Capabilities: 10-bit encode: %s, Maximum encode resolution: %dx%d, Maximum bandwidth: %dMB per frame / %dMB per second\n
 GPU Times %s
 GRAPHICSTRING
+GeneralConstraintFlags
 GeneralNames
 GeneralString
 Generator (compressed):
@@ -2639,6 +2883,7 @@ GetMessage
 GetModuleFileNameA
 GetModuleFileNameW
 GetModuleHandleA
+GetModuleHandleExW
 GetModuleHandleW
 GetProcAddress
 GetProcessWindowStation
@@ -2668,8 +2913,19 @@ GetWindowRect
 Getting devnode property store failed: hr = 0x%08x\n
 Getting file size failed : 
 Getting render devnode via IMMDeviceEnumerator::GetDevice("%ls") failed: hr = 0x%08x\n
+GlobalMotionBiasAdjustment
+GopOptFlag
+GopPicSize
+GopRefDist
 Got Debug message from client
+GrainScaleShift
+GrainScalingMinus8
+GrainSeed
+Granularity
 Grow
+HEVCParam
+HEVCRegion
+HEVCTiles
 HKDF
 HMAC
 HMAC DSTU Gost 34311-95
@@ -2683,6 +2939,7 @@ HandAnimEvaluator
 HandleUnrecoverableError( %d )\n
 HasField
 Hash Algorithm: 
+Height
 Hex and octal numbers must be integers.
 Hide Input
 HistogramC
@@ -2696,6 +2953,7 @@ Holdoff
 Host chroma key settings: mode %d, color %d, noise floor %d
 HostMacPrefix
 HostRxLoss
+HyperModeParam
 IA5STRING
 IANA
 IAudioCaptureClient::GetBuffer failed on pass %u: hr = 0x%08x\n
@@ -2738,10 +2996,12 @@ IAudioRenderClient::GetBuffer(%u) failed: AUDCLNT_E_BUFFER_TOO_LARGE, dropping b
 IAudioRenderClient::GetBuffer(%u) failed: hr = 0x%08x\n
 IAudioRenderClient::ReleaseBuffer(%u) failed: hr = 0x%08x\n
 ICC or token signature
+ICQQuality
 IDEA-CBC
 IDEA-CFB
 IDEA-ECB
 IDEA-OFB
+IDXGIFactory6 unavailable, using the default adapter.\n
 IEEE Security in Storage Working Group
 IMFMediaBuffer::GetCurrentLength failed: hr = 0x%08x\n
 IMFMediaBuffer::Lock failed: hr = 0x%08x\n
@@ -2769,6 +3029,7 @@ INT64
 INTEGER
 INVALID
 INVALID_CPPTYPE
+IOPattern
 IP Address
 IP Address:%d.%d.%d.%d
 IP Address:<invalid>
@@ -2845,10 +3106,23 @@ IVRSystem_026
 IVRTrackedCameraInternal_XXX
 IVRVirtualDisplay_002
 IVRWatchdogProvider_001
+IdrInterval
+IgnoreLevelConstrain
 Image data is empty for image[
 Image height mismatch. for image[
 Image width mismatch for image[
+Impl
+ImplName
 Import "
+In.CropH
+In.CropW
+In.CropX
+In.CropY
+In.NominalRange
+In.TransferMatrix
+InCrops
+InField
+InFormat
 Increment Byte Scaling.
 Independent
 Index Controller CreateSkeletonComponent failed.  Error: %i\n
@@ -2859,6 +3133,7 @@ Inherit all
 Inhibit Policy Mapping
 Init state
 Init took: %0.3fms.\n
+InitialDelayInKB
 InitializeConditionVariable
 InitializeCriticalSection
 InitializeCriticalSectionAndSpinCount
@@ -2868,12 +3143,23 @@ Initializing VRAudioDevices\n
 Initializing streaming microphone volume to 100\n
 Inner fade fraction set to %.2f
 InputProfilePath %s\n
+InsertHeaders
+InsertPayloadToggle
 Insufficient Chunk1(BIN) data size.
 Insufficient storage space for Chunk1(BIN data). At least Chunk1 Must have 8 or more bytes, but got 
+IntRefCycleDist
+IntRefCycleSize
+IntRefQPDelta
+IntRefType
 Integer out of range.
 Intel IPSEC AES PERF: %f MByte/s\n
+InterPredBlockSize
+Interleaved
+InterleavedDec
 International Organizations
+InterpolationMethod
 Interpreting non ascii codepoint %d.
+IntraPredBlockSize
 Invalid `byteLength'. Must be equal or less than binary size: `byteLength' = 
 Invalid `byteStride' value. `byteStride' must be the multiple of 4 : 
 Invalid `componentType` in accessor. Got 
@@ -2917,6 +3203,8 @@ Issues complete stream teardown and reinit
 Issues fast stream reset
 JFIF
 JOINT-ISO-ITU-T
+JPEGChromaFormat
+JPEGColorFormat
 JSON Chunk end does not aligned to a 4-byte boundary.
 JSON string too short.\n
 K-163
@@ -2934,6 +3222,7 @@ Key Compromise
 Key Encipherment
 Key setup failure in transport subsystem. RX Status: %d
 Key setup failure in transport subsystem. TX Status: %d
+Keywords
 Khronos Generic (Left Controller)
 Khronos Generic (Right Controller)
 Kr\t=o
@@ -2947,16 +3236,22 @@ KxPSK
 KxRSA
 KxRSA_PSK
 KxSRP
+LCUSize
 LEGACY_GOST_PKCS12
 LINEAR
 LIST_ADD
 LOAD
+LUIDDeviceNodeMask
 LaserMouseHmdAngleDegrees %f\n
 LastKnown
 Latency
+Layer[].FrameRateScale
+Layer[].Scale
+Layer[].TargetKbps
 LeaveCriticalSection
 Left Controller
 Legacy stream quality %s
+License
 Line %d, Column %d
 Link BW hist: w %f  %s\n
 Link BW: Est %0.01f Mbit/s (auto: %d)\n
@@ -2965,38 +3260,156 @@ LoadCursorA
 LoadIconA
 LoadLibraryA
 LoadLibraryExW
+LoaderCtxVPL::AddConfigFilter
+LoaderCtxVPL::BuildListOfCandidateLibs
+LoaderCtxVPL::CheckValidLibraries
+LoaderCtxVPL::CreateSession
+LoaderCtxVPL::FreeConfigFilters
+LoaderCtxVPL::LoadLibsLowLatency
+LoaderCtxVPL::PrioritizeImplList
+LoaderCtxVPL::QueryImpl
+LoaderCtxVPL::QueryLibraryCaps
+LoaderCtxVPL::ReleaseImpl
+LoaderCtxVPL::UnloadAllLibraries
+LoaderCtxVPL::UpdateValidImplList
 LocalAlloc
 LocalFree
 LocalKeySet
 LocalizationManager
+Log output will be sent to stdout\n
 Logic
+LongTermIdx
+LongTermRefList[].FrameOrder
+LongTermRefList[].LongTermIdx
+LongTermRefList[].PicStruct
+LongTermRefList[].ViewId
+LookAheadDS
+LookAheadDepth
+LowDelayBRC
+LowDelayHrd
+LowPower
+LumaLog2WeightDenom
+LumaWeightFlag[]
 MAJOR WARNING: Something went very wrong with the TX Frame queue\n
 MAT2
 MAT3
 MAT4
 MAX %3d mbit
+MBBRC
+MBDisableSkipMap
+MBForceIntra
+MBPerSec
+MBQP
 MD5-SHA1
 MDC2
+MECostType
+MESearchType
 MFCreateMediaType
 MFCreateMediaType failed hr = 0x%08x\n
 MFCreateMemoryBuffer
 MFCreateMemoryBuffer(%u) failed: hr = 0x%08x\n
 MFCreateSample
 MFCreateSample failed: hr = 0x%08x\n
+MFXCloneSession
+MFXClose
+MFXCreateConfig
+MFXCreateSession
+MFXDisjoinSession
+MFXDispReleaseImplDescription
+MFXEnumImplementations
+MFXGetPriority
+MFXInit
+MFXInitEx
+MFXInitialize
+MFXJoinSession
+MFXMemory_GetSurfaceForDecode
+MFXMemory_GetSurfaceForEncode
+MFXMemory_GetSurfaceForVPP
+MFXMemory_GetSurfaceForVPPOut
+MFXQueryIMPL
+MFXQueryImplsDescription
+MFXQueryVersion
+MFXReleaseImplDescription
+MFXSetConfigFilterProperty
+MFXSetPriority
+MFXVideoCORE_GetHandle
+MFXVideoCORE_QueryPlatform
+MFXVideoCORE_SetFrameAllocator
+MFXVideoCORE_SetHandle
+MFXVideoCORE_SyncOperation
+MFXVideoDECODE_Close
+MFXVideoDECODE_DecodeFrameAsync
+MFXVideoDECODE_DecodeHeader
+MFXVideoDECODE_GetDecodeStat
+MFXVideoDECODE_GetPayload
+MFXVideoDECODE_GetVideoParam
+MFXVideoDECODE_Init
+MFXVideoDECODE_Query
+MFXVideoDECODE_QueryIOSurf
+MFXVideoDECODE_Reset
+MFXVideoDECODE_SetSkipMode
+MFXVideoDECODE_VPP_Close
+MFXVideoDECODE_VPP_DecodeFrameAsync
+MFXVideoDECODE_VPP_GetChannelParam
+MFXVideoDECODE_VPP_Init
+MFXVideoDECODE_VPP_Reset
+MFXVideoENCODE_Close
+MFXVideoENCODE_EncodeFrameAsync
+MFXVideoENCODE_GetEncodeStat
+MFXVideoENCODE_GetVideoParam
+MFXVideoENCODE_Init
+MFXVideoENCODE_Query
+MFXVideoENCODE_QueryIOSurf
+MFXVideoENCODE_Reset
+MFXVideoVPP_Close
+MFXVideoVPP_GetVPPStat
+MFXVideoVPP_GetVideoParam
+MFXVideoVPP_Init
+MFXVideoVPP_ProcessFrameAsync
+MFXVideoVPP_Query
+MFXVideoVPP_QueryIOSurf
+MFXVideoVPP_Reset
+MFXVideoVPP_RunFrameVPPAsync
 MGF1
 MID0
 MIME MHS
+MSDK,x64
 MSFT_lod
 MSVCP140.dll
 MTU %s
+MVCostScalingFactor
+MVOverPicBoundaries
+MVPrecision
+MVSearchWindow.x
+MVSearchWindow.y
 Mail
 Mailbox %s received message %s, which it didn't have a handler for\n
 MainThrd
+Major
 Management
 ManufacturerName %s\n
+MapSize
 MapViewOfFile
 Mask Algorithm: 
+MasteringDisplayColourVolume
 Material has extension MSFT_lod, but does not reference other materials via their ids.\n
+MatrixCoefficients
+MaxContentLightLevel
+MaxDecFrameBuffering
+MaxDelayInFrames
+MaxDisplayMasteringLuminance
+MaxFrameSize
+MaxFrameSizeI
+MaxFrameSizeP
+MaxKbps
+MaxPicAverageLightLevel
+MaxQPB
+MaxQPI
+MaxQPP
+MaxSliceSize
+MaxcodecLevel
+MediaAdapterType
+MemHandleType
 Message Prompt
 Message class "
 Message extensions cannot have required fields.
@@ -3020,7 +3433,12 @@ Microsoft Smartcard Login
 Microsoft Trust List Signing
 Microsoft User Principal Name
 Min gaze depth override set to %.2f
+MinDisplayMasteringLuminance
+MinQPB
+MinQPI
+MinQPP
 Minimum
+Minor
 Mirroring from %s to %ls\n
 Mirroring is same as source %s, not mirroring\n
 Mispredicted
@@ -3031,9 +3449,12 @@ Missing '}' or object member name
 Missing field: FileDescriptorProto.name.
 Missing name.
 Missing required param "path"
+Mode
 ModelNumber %s\n
 Modulus:
+MotionVectorsOverPicBoundaries
 MoveFileExW
+MoveRect
 MoveWindow
 MultiByteToWideChar
 Multiple extension registrations for type "
@@ -3139,6 +3560,7 @@ NV_ENC_CAPS_SUPPORT_WEIGHTED_PREDICTION
 NV_ENC_CAPS_SUPPORT_YUV444_ENCODE
 NV_ENC_CAPS_WIDTH_MAX
 NV_ENC_CAPS_WIDTH_MIN
+NalHrdConformance
 Name
 Need space between identifier and decimal point.
 Need space between number and identifier.
@@ -3174,6 +3596,7 @@ No vrlink HMD
 Node has extension KHR_audio, but does not reference a audio emitter.\n
 Node has extension KHR_lights_punctual, but does not reference a light source.\n
 Node has extension MSFT_lod, but does not reference other nodes via their ids.\n
+NominalRange
 Non Repudiation
 Non-primitive types can't be packed.
 Non-repeated field "
@@ -3190,6 +3613,41 @@ Note
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NotifyAddrChange
 NotifyRouteChange
+NumAlg
+NumArea
+NumCbPoints
+NumCrPoints
+NumEncodedSlice
+NumExtParam
+NumInputStream
+NumLayers
+NumMbPerSlice
+NumQPAlloc
+NumROI
+NumRect
+NumRefActiveBL0[]
+NumRefActiveBL1[]
+NumRefActiveP[]
+NumRefFrame
+NumRefIdxL0Active
+NumRefIdxL1Active
+NumSegmentIdAlloc
+NumSegments
+NumSlice
+NumSliceB
+NumSliceI
+NumSliceNonCopliant
+NumSliceP
+NumSliceSizeAlloc
+NumSubDevices
+NumThread
+NumTileColumns
+NumTileGroups
+NumTileRows
+NumTiles
+NumUnitsAlloc
+NumUnitsEncoded
+NumYPoints
 Numbers starting with leading zero must be in octal.
 NvAPI_EnumPhysicalGPUs() returned %d\n
 NvEncodeAPICreateInstance
@@ -3248,6 +3706,8 @@ OCTET STRING
 OCTETSTRING
 OCTWRAP
 OGRN
+ONEVPL_DISPATCHER_LOG
+ONEVPL_DISPATCHER_LOG_FILE
 OPAQUE
 OPEN
 OPENSSL_CONF
@@ -3347,8 +3807,23 @@ Orthographic camera description not found.
 OrthographicCamera
 Other Encoder Sessions:
 Out of thread local storage!\n
+Out.ChromaFormat
+Out.CropH
+Out.CropW
+Out.CropX
+Out.CropY
+Out.FourCC
+Out.Height
+Out.NominalRange
+Out.TransferMatrix
+Out.Width
+OutField
+OutFormat
+OutFormats
 OutputDebugStringA
 OutputDebugStringW
+OverscanAppropriate
+OverscanInfoPresent
 P-192
 P-224
 P-256
@@ -3373,6 +3848,10 @@ PBES2
 PBKDF2
 PBKDF2PARAM
 PBMAC1
+PCIBus
+PCIDevice
+PCIDomain
+PCIFunction
 PEM lib
 PEM routines
 PEM type is '
@@ -3517,6 +3996,8 @@ POLICY_CONSTRAINTS
 POLICY_MAPPING
 POLICY_MAPPINGS
 POLY1305
+PPSBufSize
+PPSId
 PRINTABLE
 PRINTABLESTRING
 PRIVATE KEY
@@ -3524,6 +4005,7 @@ PRNG not seeded
 PROFESSION_INFO
 PROXY_CERT_INFO_EXTENSION
 PROXY_POLICY
+PRefType
 PSPECIFIED
 PSS parameter restrictions:
 PUBKEY
@@ -3534,6 +4016,7 @@ Pairing to broadcast address not allowed.\n
 Parse error: 
 Parse failed for JSON message in mailbox %s: %s\n
 Parsing of JSON string "%s" failed: %s\n
+PartialBitstreamParam
 Path_Exists( absFilePath )
 PeekMessageA
 Peer Address List
@@ -3543,9 +4026,22 @@ Permanent Identifier
 Permitted
 Perspective camera description not found.
 PerspectiveCamera
+PicHeightInLumaSamples
+PicStruct
+PicTimingSEI
+PicWidthInLumaSamples
 Pico 4
+PictureTimingSEI
 Ping Packet
 PingSpike
+PlayStation VR2 Sense (Left Controller)
+PlayStation VR2 Sense (Right Controller)
+PointCb[].Scaling
+PointCb[].Value
+PointCr[].Scaling
+PointCr[].Value
+PointY[].Scaling
+PointY[].Value
 Policy Qualifier CPS
 Policy Qualifier User Notice
 Poly1305
@@ -3561,9 +4057,15 @@ PreC %4.1fms
 PreDecodeSlow
 PreEncodeSlow
 PreH %4.1fms
-Present ID,WGP Release,App Submit,VrCompositor GPU Done,VrLink GPU Done,Encode Start,Encode End,Send Start,Send End,Receive,Decode Start,Decode End,Submit Illumination,Predicted Display,Decode Query,Run Start At WGP Degate,Ping At Send Start,Filter Ping At Send Start,Upstream Ping At Send Start,WGP Release (realtime),Receive (remote realtime),Receive (remote),Decode Start (remote),Decode End (remote),Submit Illumination (remote),Decode Query (remote),TX ID,Problem Flags\n
+PredWeightTable
+PreferredRefList[].FrameOrder
+PreferredRefList[].LongTermIdx
+PreferredRefList[].PicStruct
+PreferredRefList[].ViewId
+Present ID,WGP Release,App Submit,VrCompositor GPU Done,VrLink GPU Done,Encode Start,Encode End,Send Start,Send End,Receive,Decode Start,Decode End,Submit Illumination,Predicted Display,Decode Query,Run Start At WGP Degate,Ping At Send Start,Filter Ping At Send Start,Upstream Ping At Send Start,WGP Release (realtime),Receive (remote realtime),Receive (remote),Decode Start (remote),Decode End (remote),Submit Illumination (remote),Decode Query (remote),TX ID,Problem Flags,Gaze\n
 Prime:
 Primitive
+Priority
 Private
 Private-Key
 Private-Key: (%d bit, %d primes)\n
@@ -3574,7 +4076,9 @@ ProblemAttribution
 ProblemAttribution session total
 Proc-Type:
 Professional Information or basis for Admission
+Profile
 PropVariantClear
+Protected
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol message serialized itself in invalid fashion.
 Protocol message was modified concurrently during serialization.
@@ -3582,8 +4086,15 @@ Proxy Certificate Information
 Public
 Public-Key
 Public-Key: (%d bit)\n
+QIndexDeltaChromaAC
+QIndexDeltaChromaDC
+QIndexDeltaLumaDC
+QP map mode set to %d
+QPOffset[]
+QVBRQuality
 QoS is Disabled.  Not setting SIO_SET_QOS\n
 QoSEnabled
+Quality
 QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryServiceConfigW
@@ -3622,6 +4133,13 @@ RFC 5639 curve over a 384 bit prime field
 RFC 5639 curve over a 512 bit prime field
 RFOV: %d%%
 RIPEMD160
+ROIMode
+ROI[].Bottom
+ROI[].DeltaQP
+ROI[].Left
+ROI[].Priority
+ROI[].Right
+ROI[].Top
 RPCRT4.dll
 RR%%
 RSA Data Security, Inc.
@@ -3688,6 +4206,8 @@ RSA_verify_PKCS1_PSS_mgf1
 RX Done
 RX Fail:%d
 RaiseException
+RateControlMethod
+RateDistortionOpt
 Reached an unintended state: CPPTYPE_MESSAGE
 ReadConsoleA
 ReadConsoleW
@@ -3699,6 +4219,24 @@ Received mirror reset event\n
 Received mirror stop event after %u passes, %llu samples\n
 Received mirror stop event\n
 ReceivedHMDStaticProps. Model Number: %s, Serial Number: %s (%d)
+RecoveryPointSEI
+Rect[].Bottom
+Rect[].DestBottom
+Rect[].DestLeft
+Rect[].DestRight
+Rect[].DestTop
+Rect[].Left
+Rect[].Right
+Rect[].SourceLeft
+Rect[].SourceTop
+Rect[].Top
+RefIdx
+RefPicList0[].FrameOrder
+RefPicList0[].PicStruct
+RefPicList1[].FrameOrder
+RefPicList1[].PicStruct
+RefPicListReordering
+RefPicMarkRep
 Refreshing audio devices\n
 RegCloseKey
 RegDisableReflectionKey
@@ -3708,10 +4246,17 @@ RegGetValueA
 RegGetValueW
 RegOpenKeyExW
 RegQueryValueExW
+RegionEncoding
+RegionId
+RegionType
 RegisterClassA
 RegisterEventSourceW
 Registered ID
 Registered ID:
+RejectedRefList[].FrameOrder
+RejectedRefList[].LongTermIdx
+RejectedRefList[].PicStruct
+RejectedRefList[].ViewId
 Release
 ReleaseLast
 ReleaseMessage
@@ -3730,7 +4275,10 @@ Remove From CRL
 RemoveLast
 RenderGpuSlow
 RenderModelName %s\n
+RepartitionCheckEnable
+RepeatPPS
 Repeated fields can't have default values.
+RepeatedFrame
 ReportEventW
 ReqEncMode
 Requesting dashboard tutorial\n
@@ -3746,12 +4294,18 @@ Reset Stream
 Reset video stream because frame ID was not what we expected. wgp id (%d) - last id (%d) = diff: (%d)
 Reset video stream because we had a stream reset request [wgpReset:%d != lastReset:%d]\n
 ResetEvent
+ResetRefList
 ResourceRoot %s\n
+RestartInterval
 Retransmit Request
 RetransmitRequested
 Retry
+RevisionID
 RndGPU
 RootNode
+Rotation
+RoundingOffsetInter
+RoundingOffsetIntra
 RouterMacPrefix
 Routing Domain Identifiers
 RtlCaptureContext
@@ -3879,6 +4433,8 @@ SN Unknown1 %d
 SNILS
 SNMPv2
 SO_PATH
+SPSBufSize
+SPSId
 SR PostPresent %d
 SR PostPresent Hold %d
 SR Preesnt Done %d
@@ -4030,15 +4586,30 @@ SXNET_get_id_ulong
 SXNetID
 Sample #4
 Sample message for keylen=blocklen
+SampleAdaptiveOffset
+SamplingFactorH[]
+SamplingFactorV[]
+Saturation
 Scaling %d
 Scaling ?
+ScalingMode
+ScenarioInfo
+SceneChangeRate
+SchedulingType
 ScreenToClient
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
+SecondFieldOffset
 Secure Electronic Transactions
 Security
 See 
 Seed:
+SegmentIdBlockSize
+Segment[].AltQIndex
+Segment[].FeatureEnabled
+Segment[].LoopFilterLevelDelta
+Segment[].QIndexDelta
+Segment[].ReferenceFrame
 SelectObject
 Selected Attribute Types
 Send
@@ -4084,6 +4655,7 @@ SetRepeatedString
 SetRepeatedUInt32
 SetRepeatedUInt64
 SetString
+SetThreadErrorMode
 SetThreadPriority
 SetUInt32
 SetUInt64
@@ -4105,6 +4677,7 @@ SetupDiGetDevicePropertyW
 SetupDiGetDeviceRegistryPropertyW
 SetupGetInfDriverStoreLocationW
 ShellExecuteA
+Shift
 Show Input
 ShowWindow
 Shutdown
@@ -4114,21 +4687,28 @@ Signing KDC Response
 Signing Tool of Issuer
 Signing Tool of Subject
 Single block msg
+SingleSeiNalUnit
 SipHash
 Skin
+SkipFrame
+SkipOutput
 Sleep
 SleepConditionVariableCS
+SliceGroupsPresent
+SliceSizeOverflow
 Small
 Socket bound to port %d\n
 Soft AES PERF: %f MByte/s\n
 Software engine support
 Sound
 SparseAccessor
+SpatialComplexity
 Specifies an ENGINE id name for loading
 Specifies the path to the new ENGINE shared library
 Specifies to continue even if version checking fails (boolean)
 Specifies whether to load from 'DIR_ADD' directories (0=no,1=yes,2=mandatory)
 Spot light description not found.
+StartNewSequence
 StartNvEnc
 Starting NVENC reset configuration Cause Mask: %d%d%d%d%d%d\n
 Starting encoder reset (%d)...\n
@@ -4143,11 +4723,17 @@ SteamStreaming
 SteamVR Remote Detailed Debug
 SteamVRDriverVRLinkBwStats
 SteamVRDriverVrlink
+StickBottom
+StickLeft
+StickRight
+StickTop
 Stopping playback mirror thread\n
 Stream view aspect ratio set to %.2f
 Stream views %dx%d, outer %dx%d (target square view size %d, aspect ratio %.2f), atlas %dx%d, mode %d
 StreamReset
+Strength
 String literals cannot cross line boundaries.
+StringFromGUID2
 StringOutputStream.
 Strong Extranet ID
 SubFlags%d
@@ -4155,8 +4741,11 @@ Subject Information Access
 Submit
 Superseded
 Swap
+SwitchToThread
 Symbol name "
 Syntax error: value, object or array expected.
+SystemBuffer.Channel[].DataType
+SystemBuffer.Channel[].Size
 SystemTimeToFileTime
 T61STRING
 TELETEXSTRING
@@ -4209,7 +4798,16 @@ TX Fail:%d
 TX Failure Streak Hit %d; Aborting and reconnecting.\n
 TYPE=
 Target square view size %d
+TargetBitDepthChroma
+TargetBitDepthLuma
+TargetChromaFormatPlus1
+TargetKbps
+TargetUsage
 TdhEnumerateManifestProviderEvents
+TelecineLocation
+TelecinePattern
+TemporalComplexity
+TemporalLayers
 Temporary AMF encoder Init() succeeded for 10-bit\n
 Temporary AMF encoder Init() with 10-bit failed [ %s ]; forcing 8-bit.\n
 TerminateProcess
@@ -4221,14 +4819,36 @@ This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means 
 This program requires version 
 This program was compiled against version 
 This shouldn't be called if all the sizes are equal.
+ThreadsParam
 Time Stamp signing
 Time Stamping
+TimeCode
+TimeCodeHours
+TimeCodeMinutes
+TimeCodePictures
+TimeCodeSeconds
+TimeStampCalc
+TimeStamp[].ClockTimestampFlag
+TimeStamp[].CntDroppedFlag
+TimeStamp[].CountingType
+TimeStamp[].CtType
+TimeStamp[].DiscontinuityFlag
+TimeStamp[].FullTimestampFlag
+TimeStamp[].HoursFlag
+TimeStamp[].HoursValue
+TimeStamp[].MinutesFlag
+TimeStamp[].MinutesValue
+TimeStamp[].NFrames
+TimeStamp[].NuitFieldBasedFlag
+TimeStamp[].SecondsFlag
+TimeStamp[].SecondsValue
+TimeStamp[].TimeOffset
 Timed out waiting for another accepted video packet, trying to force the stream reset\n
+TimingInfoPresent
 TlsAlloc
 TlsFree
 TlsGetValue
 TlsSetValue
-Toggle Eye Filtering.
 Toggle GPU fences measuring RndGPU/CmpGPU.
 Toggle Input Latency Monitoring
 Toggle MTU Growth
@@ -4239,12 +4859,17 @@ Toggle foveated transmission (eye tracking).
 Too short data size for glTF Binary.
 TrackingSystemName %s\n
 Trailer Field: 0x
+TransferCharacteristics
+TransferMatrix
+TransformSkip
 TranslateMessage
 Transport
 Transport Check
+Trellis
 Tried to merge messages of different types 
 True
 Trust Root
+Type
 Type appears to be in generated pool but wasn't 
 Type is already registered: 
 Type=
@@ -4328,11 +4953,19 @@ Unsupported `type` for accessor object. Got "
 Unused
 UpdateChaperone got new universe (len %zu)\n
 UpdateWindow
+UseRawRef
+UsedRefListL0[].FrameOrder
+UsedRefListL0[].LongTermIdx
+UsedRefListL0[].PicStruct
+UsedRefListL1[].FrameOrder
+UsedRefListL1[].LongTermIdx
+UsedRefListL1[].PicStruct
 Using 10bit mode: %d\n
 Using AVX2\n
 Using AVX\n
 Using NOAESNI\n
 Using SSE\n
+Using adapter %ls (vendor 0x%x) for GPU preference %d.\n
 Using defaults as unknown headset: %d
 UuidFromStringA
 V?option requires an argument -- %c
@@ -4346,6 +4979,30 @@ VID_
 VID_%04X
 VISIBLE
 VISIBLESTRING
+VP9Param
+VP9Segmentation
+VP9TemporalLayers
+VPP3DLut
+VPPAIFrameInterpolation
+VPPAISuperResolution
+VPPColorFill
+VPPComposite
+VPPDeinterlacing
+VPPDenoise
+VPPDenoise2
+VPPDetail
+VPPDoNotUse
+VPPDoUse
+VPPFieldProcessing
+VPPFrameRateConversion
+VPPImageStab
+VPPMirroring
+VPPProcAmp
+VPPRotation
+VPPScaling
+VPPVideoSignalInfo
+VPSBufSize
+VPSId
 VR Path Registry node %s is not an array\n
 VRAudioDevices_Init
 VRLINK_DUMP_BISTREAM
@@ -4385,6 +5042,8 @@ Value must be quoted string for string option "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
+VendorID
+VendorImplID
 VerSetConditionMask
 Verify failure\n
 VerifyVersionInfoW
@@ -4393,9 +5052,19 @@ Version
 Video
 Video RX
 Video Reply
+VideoBuffer.DataType
+VideoBuffer.MemLayout
+VideoFormat
+VideoFullRange
+VideoSignalInfo
+ViewOutput
 Vive Focus 3 (Left Controller)
 Vive Focus 3 (Right Controller)
 Vive Focus Vision
+VppAuxData
+VppMctf
+VuiNalHrdParameters
+VuiVclHrdParameters
 WARNING
 WARNING: Corrupt UDP packet went long (%d size, %d left, %d total length)\n
 WARNING: Could not find steam streaming microphone output.
@@ -4456,6 +5125,7 @@ WaitForSingleObject
 WaitForSingleObjectEx
 WakeAllConditionVariable
 Warning
+Warning - unable to create logfile %s\n
 Warning on network test item #%d (Insufficient ping tests)
 Warning on network test item #%d (No:)
 Warning parsing text-format 
@@ -4483,14 +5153,23 @@ Warning: retransmit request for unknown message %d (frame number=%d\n
 Warning: unMaxBitRate (%u) over m_nMaxMBPerSecond (%u)\n
 Warning: unVbvBufferSizeBits (%u) over m_unMaxBitsPerFrame (%u)\n
 Waterfall
+WeightedBiPred
+WeightedPred
+Weights[]
 WgpGap
 WgpOutOfOrder
 Whether to add a loaded ENGINE to the internal list (0=no,1=yes,2=mandatory)
+WhitePointX
+WhitePointY
 WideCharToMultiByte
+Width
+WinBRCMaxAvgKbps
+WinBRCSize
 Wire
 WiredSession
 WirelessHost
 WriteFile
+WriteIVFHeaders
 X25519
 X400Name
 X400Name:<unsupported>
@@ -4648,6 +5327,8 @@ ZUINT64
 [%s] %u frames, no problems
 [%s] %u frames, outcomes:
 [%s] causes:
+[0-9a-fA-F]+
+[0-9a-fA-F]+/[0-9]+
 [Alloc] Created bitstream buffer = %p\n
 [Alloc] Created d3d11 texture = %p\n
 [Alloc] Created m_vpCompletionEvent %p\n
@@ -4715,6 +5396,7 @@ ZUINT64
 [SVLController] Overriding Quest specific properties for %s\n
 [SVLController] Reported HMD model is %d\n
 [SVLController] Setting up HTC Vive Focus Controller: %s
+[SVLController] Setting up PlayStation VR2 Sense Controller: %s
 [SVLController] Unable to find override properties for unknown key: %s:%s
 [SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
@@ -4814,6 +5496,8 @@ _OPENSSL_isservice
 _Query_perf_counter
 _Query_perf_frequency
 _RDATA
+_Strcoll
+_Strxfrm
 _Thrd_id
 _Thrd_join
 _Thrd_sleep
@@ -4885,6 +5569,7 @@ _wfopen
 _wfopen_s
 _wfsopen
 _wstat64i32
+_wtoi
 _yuv.png
 `accessors' does not contain an JSON object.
 `animations' does not contain an JSON object.
@@ -5008,6 +5693,8 @@ allowNumericKeys
 allowSingleQuotes
 allowSpecialFloats
 allowVolumeSync
+alnum
+alpha
 alphaCutoff
 alphaMode
 already instantiated
@@ -5272,6 +5959,7 @@ bits too small
 bitstr_cb
 blake2b512
 blake2s256
+blank
 block type is not 01
 block type is not 02
 blockSize
@@ -5366,13 +6054,13 @@ c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresource
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3187
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3350
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3469
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1355
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1388
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3210
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3369
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3488
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1419
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1452
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1432
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1435
 cACertificate
 cAoption requires an argument -- %c
 cAudBufAvg
@@ -5512,8 +6200,6 @@ clearance
 cleartext track 2
 client
 clientAuth
-clientTCPEnable
-clientTCPRemote
 clientUDPEnable
 clientUDPRemote
 close
@@ -5560,6 +6246,7 @@ cms_set1_ias
 cms_set1_keyid
 cms_signed_data_init
 cms_signerinfo_verify_cert
+cntrl
 codeSigning
 coefficient%d:
 coefficient:
@@ -6009,7 +6696,10 @@ dcobject
 de_de
 decipherOnly
 deckard
+decmemdesc
 decode error
+decoder
+decprofile
 decrypt error
 def_load
 def_load_bio
@@ -6048,6 +6738,7 @@ destinationIndicator
 desx
 desx-cbc
 detached content
+device
 dgram_sctp_new
 dgram_sctp_read
 dgram_sctp_write
@@ -6097,6 +6788,7 @@ digest_alg
 digest_enc_alg
 digest_update
 digestsize
+digit
 digital envelope routines
 digitalSignature
 dinfo
@@ -6219,6 +6911,7 @@ duplicate zone id
 duration
 dutch
 dvcs
+dxgi.dll
 dynamic
 dynamic_ctrl
 dynamic_get_data_ctx
@@ -6231,6 +6924,64 @@ eConsole
 eContent
 eContentType
 eMultimedia
+ePropDec_CodecID
+ePropDec_ColorFormats
+ePropDec_Height
+ePropDec_MaxcodecLevel
+ePropDec_MemHandleType
+ePropDec_Profile
+ePropDec_Width
+ePropDevice_DeviceID
+ePropDevice_DeviceIDStr
+ePropDevice_MediaAdapterType
+ePropEnc_BiDirectionalPrediction
+ePropEnc_CodecID
+ePropEnc_ColorFormats
+ePropEnc_Height
+ePropEnc_MaxcodecLevel
+ePropEnc_MemHandleType
+ePropEnc_Profile
+ePropEnc_Width
+ePropExtDev_DRMPrimaryNodeNum
+ePropExtDev_DRMRenderNodeNum
+ePropExtDev_DeviceID
+ePropExtDev_DeviceLUID
+ePropExtDev_DeviceName
+ePropExtDev_LUIDDeviceNodeMask
+ePropExtDev_PCIBus
+ePropExtDev_PCIDevice
+ePropExtDev_PCIDomain
+ePropExtDev_PCIFunction
+ePropExtDev_RevisionID
+ePropExtDev_VendorID
+ePropFunc_FunctionName
+ePropMain_AccelerationMode
+ePropMain_ApiVersion
+ePropMain_ApiVersion_Major
+ePropMain_ApiVersion_Minor
+ePropMain_Impl
+ePropMain_ImplName
+ePropMain_Keywords
+ePropMain_License
+ePropMain_PoolAllocationPolicy
+ePropMain_VendorID
+ePropMain_VendorImplID
+ePropSpecial_DXGIAdapterIndex
+ePropSpecial_DeviceCopy
+ePropSpecial_ExtBuffer
+ePropSpecial_Handle
+ePropSpecial_HandleType
+ePropSpecial_NumThread
+ePropSurface_SurfaceComponent
+ePropSurface_SurfaceFlags
+ePropSurface_SurfaceType
+ePropVPP_FilterFourCC
+ePropVPP_Height
+ePropVPP_InFormat
+ePropVPP_MaxDelayInFrames
+ePropVPP_MemHandleType
+ePropVPP_OutFormat
+ePropVPP_Width
 eRender
 ec group new by name failure
 ec_GF2m_montgomery_point_multiply
@@ -6341,6 +7092,7 @@ enableAmfEncoder
 enableEncryption
 enableEventDebugging
 enableHandTracking
+enableIntelEncoder
 enableQoS
 enableTimedRetry
 enabled
@@ -6352,9 +7104,12 @@ enc_key
 enc_new
 encapContentInfo
 encipherOnly
+encmemdesc
 encode error
 encode_pkcs1
+encoder
 encoding error
+encprofile
 encrypt error
 encrypted track 2
 encryptedContent
@@ -6525,6 +7280,7 @@ file_open
 file_read
 filename
 filename too big
+filter
 fingerprint size does not match digest
 finish failed
 finnish
@@ -6546,6 +7302,7 @@ fopen('
 fopen_s
 force10bit
 forceBaselineVideoFEC
+format
 foveationMode
 foxnet
 fputc
@@ -6572,6 +7329,8 @@ fstat
 ftell
 fullname
 func(%lu)
+function: %s (enter)
+function: %s (return)
 functionality not supported
 fwrite
 gLimitMBPS
@@ -6636,6 +7395,7 @@ gost89-ctr
 gost89-ecb
 gost94
 gost94cc
+graph
 grasshopper-cbc
 grasshopper-cfb
 grasshopper-ctr
@@ -7217,7 +7977,10 @@ invalid signed data type
 invalid signer certificate purpose
 invalid socket
 invalid stoi argument
+invalid stold argument
+invalid stoll argument
 invalid stoul argument
+invalid stoull argument
 invalid string
 invalid string position
 invalid string table value
@@ -7377,6 +8140,7 @@ ldexp
 ldiv
 left
 left_
+legacy_stream_quality
 length
 length too long
 level_add_node
@@ -7389,6 +8153,7 @@ linebuffer_new
 list cannot be null
 list error
 list<T> too long
+listed
 listen
 listen v6 only
 lm_haptic
@@ -7415,6 +8180,7 @@ long_c2i
 lookup returned nothing
 lookup_certs_sk
 loop
+lower
 lroundf
 mXRecord
 m_nMaxLogBufferingSize > 0
@@ -7478,6 +8244,7 @@ member-body
 memchr
 memcmp
 memcpy
+memdesc
 memmove
 memory buffer
 memory buffer routines
@@ -7491,6 +8258,9 @@ message digest
 message digest is null
 message extensions
 message imprint mismatch
+message:  extBuf enabled -- NumThread (%d)
+message:  low latency mode disabled
+message:  low latency mode enabled
 messageDigest
 message_id
 messagedigest attribute wrong length
@@ -7501,6 +8271,25 @@ meters
 method
 method not supported
 mfplat.dll
+mfx-gen
+mfxDecoderDescription
+mfxDeviceDescription
+mfxEncoderDescription
+mfxExt
+mfxExtendedDeviceId
+mfxExtendedDeviceId.DeviceLUID
+mfxHDL
+mfxHandleType
+mfxImplDescription
+mfxImplDescription.AccelerationMode
+mfxImplDescription.ApiVersion.Version
+mfxImplDescription.Impl
+mfxImplDescription.ImplName
+mfxImplDescription.mfxEncoderDescription.encoder.CodecID
+mfxImplementedFunctions
+mfxSurfacePoolMode
+mfxVPPDescription
+mfxhw64
 mgf1
 mgf1 digest not allowed
 mgf1 with sha1 (default)
@@ -7725,11 +8514,13 @@ not instantiated
 not kek
 not key agreement
 not key transport
+not listed
 not loaded
 not parameters
 not proc type
 not pwri
 not suitable generator
+not supported
 not supported for this key type
 notAfter
 notBefore
@@ -8038,6 +8829,8 @@ pkeyalg
 pkparameters2group failure
 pl_pl
 playing
+playstation_vr2_sense
+playstation_vr2_sense_controller
 point arithmetic failure
 point at infinity
 point coordinates blind failure
@@ -8088,6 +8881,7 @@ prime:
 prime_infos
 primitive indices accessor out of bounds
 primitives
+print
 priv:
 priv_key
 private
@@ -8127,10 +8921,12 @@ public-key:
 publicExponent:
 publicKey
 public_key
+punct
 pvk data too short
 pvk too short
 q not prime
 qcStatements
+qp_map_mode
 qsort
 qualifiers
 qualityLabelledData
@@ -8427,7 +9223,6 @@ server
 server response error
 server response parse error
 serverAuth
-serverTCPEnable
 serverUDPEnable
 serviceLocator
 session_id_field_name
@@ -8650,6 +9445,7 @@ socket
 soft_load
 source
 sources
+space
 spanish
 sparse
 spkac
@@ -8689,16 +9485,18 @@ steam://installaudiocapturedriver
 steammessages_unified_base.steamclient.proto
 steamvr
 stoi argument out of range
+stold argument out of range
+stoll argument out of range
 stopcapture
 store init error
 stoul argument out of range
+stoull argument out of range
 str=
 str_copy
 strchr
 strcmp
 strcspn
 streamFormatWidth
-streamQuality
 stream_view_aspect_ratio
 streaming not supported
 street
@@ -8723,6 +9521,7 @@ strspn
 strstr
 strtod
 strtol
+strtold
 strtoll
 strtoul
 strtoull
@@ -8741,6 +9540,7 @@ subtreeMinimumQuality
 subtype mismatch
 superseded
 suppPubInfo
+supported
 supportedAlgorithms
 supportedApplicationContext
 supports10bit
@@ -9026,6 +9826,7 @@ unused
 unwrap error
 unwrap failure
 update
+upper
 uri authority unsupported
 useOSC
 useOSCFace
@@ -9114,6 +9915,31 @@ videonvenc::GetEncodedDataThread
 videonvenc::ManageFramesThread
 videonvenc::StartEncodeData
 videonvenc::StartEncodeDataThread
+videovplenc: EncodeFrameAsync failed [ %d ]; rebuilding encoder\n
+videovplenc: MFXCreateSession failed [ %d ]\n
+videovplenc: MFXLoad failed\n
+videovplenc: MFXMemory_GetSurfaceForEncode failed [ %d ]\n
+videovplenc: MFXSetConfigFilterProperty( %s ) failed [ %d ]\n
+videovplenc: MFXVideoCORE_SetHandle( D3D11 device ) failed [ %d ]\n
+videovplenc: MFXVideoENCODE_Init failed [ %d ]\n
+videovplenc: MFXVideoENCODE_Init warning [ %d ]; some parameters were adjusted\n
+videovplenc: Main10 query [ %d ], 10-bit %s\n
+videovplenc: SyncOperation failed [ %d ]; rebuilding encoder\n
+videovplenc: bitrate Reset produced an IDR; bitrate is now fixed\n
+videovplenc: bitrate Reset query [ %d ], StartNewSequence %d; dynamic bitrate %s\n
+videovplenc: bitrate Reset to %.1f Mbit/s failed [ %d ]; bitrate is now fixed\n
+videovplenc: failed to get the adapter LUID\n
+videovplenc: max size %d x %d, Main10 P010 %s\n
+videovplenc: no VPL 2.x hardware HEVC encoder on adapter %ls [ %d ]\n
+videovplenc: no free encode surface, dropping frame\n
+videovplenc: requesting encoder ( %d x %d, format %d ), reset type %d\n
+videovplenc: unusable encode surface [ %d ], resource type %d, array size %u, %u x %u, format %d\n
+videovplenc: using %s, API %d.%d, on adapter %ls\n
+videovplenc::CreateEncoder( %d, %d ) succeeded, %s\n
+videovplenc::CreateEncoder( %d, %d, format %d )\n
+videovplenc::Init() succeeded\n
+videovplenc::Init()\n
+videovplenc::Resize( %d, %d )\n
 vietnamese
 vive_focus3_controller
 vive_focus3_off.png
@@ -9129,6 +9955,52 @@ vms_load
 vms_merger
 vms_unload
 vparams
+vpp.In.AspectRatioH
+vpp.In.AspectRatioW
+vpp.In.BitDepthChroma
+vpp.In.BitDepthLuma
+vpp.In.BufferSize
+vpp.In.ChannelId
+vpp.In.ChromaFormat
+vpp.In.CropH
+vpp.In.CropW
+vpp.In.CropX
+vpp.In.CropY
+vpp.In.FourCC
+vpp.In.FrameId.DependencyId
+vpp.In.FrameId.PriorityId
+vpp.In.FrameId.QualityId
+vpp.In.FrameId.TemporalId
+vpp.In.FrameId.ViewId
+vpp.In.FrameRateExtD
+vpp.In.FrameRateExtN
+vpp.In.Height
+vpp.In.PicStruct
+vpp.In.Shift
+vpp.In.Width
+vpp.Out.AspectRatioH
+vpp.Out.AspectRatioW
+vpp.Out.BitDepthChroma
+vpp.Out.BitDepthLuma
+vpp.Out.BufferSize
+vpp.Out.ChannelId
+vpp.Out.ChromaFormat
+vpp.Out.CropH
+vpp.Out.CropW
+vpp.Out.CropX
+vpp.Out.CropY
+vpp.Out.FourCC
+vpp.Out.FrameId.DependencyId
+vpp.Out.FrameId.PriorityId
+vpp.Out.FrameId.QualityId
+vpp.Out.FrameId.TemporalId
+vpp.Out.FrameId.ViewId
+vpp.Out.FrameRateExtD
+vpp.Out.FrameRateExtN
+vpp.Out.Height
+vpp.Out.PicStruct
+vpp.Out.Shift
+vpp.Out.Width
 vr_glove_left_skeleton.glb
 vr_glove_right_poses.glb
 vr_glove_right_skeleton.glb
@@ -9170,8 +10042,12 @@ wap-wsg-idm-ecid-wtls8
 wap-wsg-idm-ecid-wtls9
 warning: could not set socket buffer size\n
 watchForShaderChanges
+wcscat_s
+wcscpy_s
 wcsrchr
 wcsstr
+wcstombs_s
+wcstoul
 weights
 while 
 while parsing 
@@ -9220,6 +10096,7 @@ x509_name_ex_d2i
 x509_name_ex_new
 x509_pubkey_decode
 x931
+xdigit
 xmag
 xts duplicated keys
 y-au
@@ -9291,6 +10168,7 @@ zone
 {vrlink}/icons/right_handtracking_ready_info.png
 {vrlink}/icons/right_handtracking_searching.gif
 {vrlink}/input/pico_controller_profile.json
+{vrlink}/input/playstation_vr2_sense_controller_profile.json
 {vrlink}/input/svl_hand_interaction_augmented_input_profile.json
 {vrlink}/input/vive_focus3_controller_profile.json
 {vrlink}/rendermodels/pico_4_controller_

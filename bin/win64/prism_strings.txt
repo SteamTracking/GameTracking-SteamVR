@@ -236,7 +236,6 @@
 -IPCWrapper
 -VK_HEAP_INDEX_%d
 .00cfg
-.?AU_Crt_new_delete@std@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
 .?AV?$CVkPoolGarbageCollector@VCVkCommandBuffer@@@@
 .?AV?$CVkPoolableResource@VCVkCommandBufferPool@@@@
@@ -247,9 +246,6 @@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@U?$default_delete@V?$tuple@V<lambda_3f2c4069fe6247a8c253571d67800091>@@@std@@@2@@std@@@std@@
 .?AV?$_LaunchPad@V?$unique_ptr@V?$tuple@V<lambda_ad411c34508d3fca01cb19636afa7601>@@UPrismRunParameters_t@@@std@@U?$default_delete@V?$tuple@V<lambda_ad411c34508d3fca01cb19636afa7601>@@UPrismRunParameters_t@@@std@@@2@@std@@@std@@
-.?AV?$codecvt@_WDU_Mbstatet@@@std@@
-.?AV?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@
-.?AV?$wstring_convert@V?$codecvt_utf8_utf16@_W$0BAPPPP@$0A@@std@@_WV?$allocator@_W@2@V?$allocator@D@2@@std@@
 .?AVAccessDAGBuilderPass@rps@@
 .?AVCNonCopyable@@
 .?AVCPrism@@
@@ -291,15 +287,10 @@
 .?AVWin32Event@IPC@@
 .?AVWin32Mutex@IPC@@
 .?AVWin32SharedMemory@IPC@@
-.?AV_Facet_base@std@@
 .?AV_Pad@std@@
 .?AVbad_alloc@std@@
 .?AVbad_array_new_length@std@@
-.?AVcodecvt_base@std@@
 .?AVexception@std@@
-.?AVfacet@locale@std@@
-.?AVrange_error@std@@
-.?AVruntime_error@std@@
 .?AVtype_info@@
 .CRT$XCA
 .CRT$XCL
@@ -352,25 +343,11 @@
 <preamble>
 <unknown>
 <unused>
-??0?$codecvt@_WDU_Mbstatet@@@std@@QEAA@_K@Z
-??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z
-??Bid@locale@std@@QEAA_KXZ
-??_7?$codecvt@_WDU_Mbstatet@@@std@@6B@
-??_7_Facet_base@std@@6B@
-??_7codecvt_base@std@@6B@
-??_7facet@locale@std@@6B@
-?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ
-?_Incref@facet@locale@std@@UEAAXXZ
-?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z
-?_Locimp_Addfac@_Locimp@locale@std@@CAXPEAV123@PEAVfacet@23@_K@Z
-?_New_Locimp@_Locimp@locale@std@@CAPEAV123@AEBV123@@Z
 ?_Throw_C_error@std@@YAXH@Z
 ?_Throw_Cpp_error@std@@YAXH@Z
 ?_Xbad_function_call@std@@YAXXZ
 ?_Xlength_error@std@@YAXPEBD@Z
 ?_Xout_of_range@std@@YAXPEBD@Z
-?id@?$codecvt@_WDU_Mbstatet@@@std@@2V0locale@2@A
-?in@?$codecvt@_WDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEA_W3AEAPEA_W@Z
 A8P8
 A8_UNORM
 ADVAPI32.dll
@@ -1208,7 +1185,6 @@ atanf
 atoi
 bad allocation
 bad array new length
-bad conversion
 before
 blockId != pPrevBlock->blockId
 buffer

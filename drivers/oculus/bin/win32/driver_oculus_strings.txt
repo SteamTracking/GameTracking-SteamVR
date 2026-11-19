@@ -2,6 +2,9 @@
  (Left Controller)
  (Right Controller)
  (does the path point to a directory?)
+ Layout
+ Mip%u
+ Mip%u Layer%u
  at line 
  exceeds maximum allowed file size 
  in Buffer\n
@@ -31,6 +34,11 @@
 %a %b %d %H:%M:%S %Y
 %a %b %d %Y %H:%M:%S.%%03u
 %llu
+%s UAV
+%s | %s
+%s%s DSV
+%s%s RTV
+%s%s SRV
 %s: DXGI format %d has no single packed layout\n
 %s: failed to create a %ux%u staging texture\n
 %s: failed to create a resolve target\n
@@ -453,6 +461,7 @@ Camera
 CertGetNameStringW
 Chaperone updated with universe ID %d\n
 CloseHandle
+CopyTextureData Staging
 CreateDXGIFactory1
 CreateEventA
 CreateEventW
@@ -716,6 +725,8 @@ QueryPerformanceCounter
 QueryPerformanceFrequency
 RPCRT4.dll
 RaiseException
+ReadbackTexture Resolve
+ReadbackTexture Staging
 ResetEvent
 S-1-15-2-2765576060-2389096713-3079022642-4099546867-1445191215-3071396046-3987166893
 S-1-15-3-1024-2302894289-466761758-1166120688-1039016420-2430351297-4240214049-4028510897-3317428798

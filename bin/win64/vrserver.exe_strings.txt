@@ -1453,7 +1453,7 @@ $0option $1;\n
 /chaperone/is_default_perimeter
 /chaperone/last_relocalization_time
 /chaperone/perimeter
-/chaperone/persistent_map_from_map/transform
+/chaperone/persistent_map_from_raw/transform
 /chaperone/play_area
 /chaperone/room_setup/transform
 /chaperone/room_setup_done
@@ -1715,10 +1715,10 @@ $0option $1;\n
 0123456789abcdef
 1.2.5
 1/2/4/8/16-bit only
+10:56:55
 11 4 22 44 44 22 444444
 127.0.0.1
 127.0.0.1:
-12:33:34
 1e+9999
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 5I)7
@@ -2996,6 +2996,8 @@ HTTP/1.1 302 OK\r\nLocation: /%s\r\n\r\n
 HTTP_REQUEST %s
 HTTP_REQUEST Static Content %s
 Hang the server for the specified number of seconds (default 3600)
+HapticsEnabled
+HapticsStrength
 HasCamera
 HasField
 HeadsetActiveTime
@@ -3473,7 +3475,7 @@ No default value
 No field named "uninterpreted_option" in the Options proto.
 No image for this app
 No log file found.
-No matPersistentMapFromMap in VRPath, use the identity
+No matPersistentMapFromRaw in VRPath, use the identity
 Node has extension KHR_audio, but does not reference a audio emitter.\n
 Node has extension KHR_lights_punctual, but does not reference a light source.\n
 Node has extension MSFT_lod, but does not reference other nodes via their ids.\n
@@ -3500,7 +3502,7 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 NotificationCount
 Notification_BasestationsTooFarApart
 Notification_Detected
-Nov 13 2026
+Nov 19 2026
 NumDroppedFrames
 NumDroppedFrames: %d\n
 NumDroppedFramesLoading
@@ -5254,6 +5256,8 @@ VR_PATHREG_OVERRIDE
 VR_SETTINGSSCHEMA_FILE
 VR_SETTINGS_FILE
 VR_ServerPipe
+VR_Server_EyePoseUpdated0
+VR_Server_EyePoseUpdated1
 VR_SettingsMutex
 VR_SettingsState
 VR_SharedMutex
@@ -5483,12 +5487,12 @@ YUY2
 [IPC] SharedMem access invalid: %x\n
 [IPC] The owner SID is invalid.\n
 [IPC] Warning, existing file mapping for %s (%d) is too small (%d)\n
-[IVRChaperoneServerDriver] Failed to find the chaperone universe %lu in UpdatePersistentMapFromMapJumpHiding
-[IVRChaperoneServerDriver] Failed to load chaperone file in UpdatePersistentMapFromMapJumpHiding
-[IVRChaperoneServerDriver] Failed to query persistentMapFromMap and/or standing in UpdatePersistentMapFromMapJumpHiding
-[IVRChaperoneServerDriver] Failed to query persistentMapFromMap and/or standing, setup standing in EndPersistentMapFromMapJumpHiding
-[IVRChaperoneServerDriver] Failed to query setup standing in UpdatePersistentMapFromMapJumpHiding
-[IVRChaperoneServerDriver] Release persistentMapFromMap jump immediately since it is too large (translation %f, rotation %f)
+[IVRChaperoneServerDriver] Failed to find the chaperone universe %lu in UpdatePersistentMapFromRawJumpHiding
+[IVRChaperoneServerDriver] Failed to load chaperone file in UpdatePersistentMapFromRawJumpHiding
+[IVRChaperoneServerDriver] Failed to query persistentMapFromRaw and/or standing in UpdatePersistentMapFromRawJumpHiding
+[IVRChaperoneServerDriver] Failed to query persistentMapFromRaw and/or standing, setup standing in EndPersistentMapFromRawJumpHiding
+[IVRChaperoneServerDriver] Failed to query setup standing in UpdatePersistentMapFromRawJumpHiding
+[IVRChaperoneServerDriver] Release persistentMapFromRaw jump immediately since it is too large (translation %f, rotation %f)
 [IVRChaperoneServerDriver] update the standing for an invalid universe, failed
 [Init] %d: (%d, %d) %dx%d "%s" refresh %d\n
 [Init] Attached Displays:\n
@@ -6576,6 +6580,8 @@ hang_server
 haptic
 haptic_amplitude
 haptics
+haptics_enabled
+haptics_strength
 has_click
 has_force
 has_ready_ext

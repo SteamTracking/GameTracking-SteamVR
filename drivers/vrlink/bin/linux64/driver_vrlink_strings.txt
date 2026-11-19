@@ -154,7 +154,8 @@ $ORIGIN/../../../../bin/linux64
 %s: Clamping nHistoricalFrames to maximum value of %d
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %u of %u datalinks failed to initialize. Returning the last failure.
-%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%d,%d,%d,%d,%lu,%lu,%u,%u,%u,%u,%u,%d,%lx\n
+%u,%d,%d,%d,%d,%d\n
+%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%d,%d,%d,%d,%lu,%lu,%u,%u,%u,%u,%u,%d,%lx,%u\n
 ' is not a number.
 ' property is missing
 ' property is missing in 
@@ -238,8 +239,6 @@ $ORIGIN/../../../../bin/linux64
 *ZN8SVLAudioC4EP7SVLRootEUl16ValueTransportIDbE_
 *ZN9SVLDriver4InitEPN2vr16IVRDriverContextEEUlPKcE_
 *ZN9SVLServer24RequestDashboardTutorialEvEUlRKN4Json5ValueEE_
-*ZN9SVLServer4InitEvEUl16ValueTransportIDbE15_
-*ZN9SVLServer4InitEvEUl16ValueTransportIDbE16_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE17_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE18_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE19_
@@ -247,12 +246,16 @@ $ORIGIN/../../../../bin/linux64
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE21_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE22_
 *ZN9SVLServer4InitEvEUl16ValueTransportIDbE23_
+*ZN9SVLServer4InitEvEUl16ValueTransportIDbE24_
+*ZN9SVLServer4InitEvEUl16ValueTransportIDbE25_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE0_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE10_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE11_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE12_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE13_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE14_
+*ZN9SVLServer4InitEvEUlRKN4Json5ValueEE15_
+*ZN9SVLServer4InitEvEUlRKN4Json5ValueEE16_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE1_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE2_
 *ZN9SVLServer4InitEvEUlRKN4Json5ValueEE3_
@@ -326,9 +329,9 @@ $ORIGIN/../../../../bin/linux64
 /data/src/common/vrcore/src/ipcposix.cpp
 /data/src/common/vrcore/src/logbuffer.cpp
 /data/src/common/vrcore/src/vripcsharedstate.cpp
-/data/src/vrlink/driver_vrlink/hmd.cpp:3187
-/data/src/vrlink/driver_vrlink/hmd.cpp:3350
-/data/src/vrlink/driver_vrlink/hmd.cpp:3469
+/data/src/vrlink/driver_vrlink/hmd.cpp:3210
+/data/src/vrlink/driver_vrlink/hmd.cpp:3369
+/data/src/vrlink/driver_vrlink/hmd.cpp:3488
 /data/src/vrlink/driver_vrlink/hmdvulkan.cpp
 /data/src/vrlink/driver_vrlink/steamvrlink.cpp
 /data/src/vrlink/driver_vrlink/videovulkan.cpp
@@ -352,6 +355,10 @@ $ORIGIN/../../../../bin/linux64
 /input/b/touch
 /input/bumper/click
 /input/bumper/touch
+/input/circle/click
+/input/circle/touch
+/input/cross/click
+/input/cross/touch
 /input/dpad_down/click
 /input/dpad_down/touch
 /input/dpad_left/click
@@ -363,6 +370,8 @@ $ORIGIN/../../../../bin/linux64
 /input/grip/click
 /input/grip/touch
 /input/grip/value
+/input/grip_sensor/click
+/input/grip_sensor/value
 /input/index_pinch/click
 /input/index_pinch/value
 /input/index_point/click
@@ -381,6 +390,8 @@ $ORIGIN/../../../../bin/linux64
 /input/ring_pinch/value
 /input/skeleton/left
 /input/skeleton/right
+/input/square/click
+/input/square/touch
 /input/squeeze/click
 /input/system/click
 /input/system/touch
@@ -389,9 +400,14 @@ $ORIGIN/../../../../bin/linux64
 /input/thumbstick/touch
 /input/thumbstick/x
 /input/thumbstick/y
+/input/triangle/click
+/input/triangle/touch
 /input/trigger/click
 /input/trigger/touch
 /input/trigger/value
+/input/trigger_sensor/click
+/input/trigger_sensor/touch
+/input/trigger_sensor/value
 /input/view/click
 /input/view/touch
 /input/x/click
@@ -1042,7 +1058,6 @@ Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra non-whitespace after JSON value.
 Eye Center Q Value
-Eye Filt %s
 Eye Pherphery Q Value
 Eye Trk %s
 F %d
@@ -1625,6 +1640,8 @@ Perspective camera description not found.
 PerspectiveCamera
 Pico 4
 PingSpike
+PlayStation VR2 Sense (Left Controller)
+PlayStation VR2 Sense (Right Controller)
 Playback
 Positional emitter description not found.
 PostPresent
@@ -1636,7 +1653,7 @@ PreDecodeSlow
 PreEncodeSlow
 PreH %4.1fms
 Present
-Present ID,WGP Release,App Submit,VrCompositor GPU Done,VrLink GPU Done,Encode Start,Encode End,Send Start,Send End,Receive,Decode Start,Decode End,Submit Illumination,Predicted Display,Decode Query,Run Start At WGP Degate,Ping At Send Start,Filter Ping At Send Start,Upstream Ping At Send Start,WGP Release (realtime),Receive (remote realtime),Receive (remote),Decode Start (remote),Decode End (remote),Submit Illumination (remote),Decode Query (remote),TX ID,Problem Flags\n
+Present ID,WGP Release,App Submit,VrCompositor GPU Done,VrLink GPU Done,Encode Start,Encode End,Send Start,Send End,Receive,Decode Start,Decode End,Submit Illumination,Predicted Display,Decode Query,Run Start At WGP Degate,Ping At Send Start,Filter Ping At Send Start,Upstream Ping At Send Start,WGP Release (realtime),Receive (remote realtime),Receive (remote),Decode Start (remote),Decode End (remote),Submit Illumination (remote),Decode Query (remote),TX ID,Problem Flags,Gaze\n
 Primitive
 ProblemAttribution
 ProblemAttribution session total
@@ -1647,6 +1664,7 @@ Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Refle
 Protocol message serialized itself in invalid fashion.
 Protocol message was modified concurrently during serialization.
 Public
+QP map mode set to %d
 QoSEnabled
 RFOV: %d%%
 RGBAdobe
@@ -1983,7 +2001,6 @@ Timed out waiting for another accepted video packet, trying to force the stream 
 To google::protobuf::internal::down_cast(From*) [with To = const google::protobuf::Message*; From = const google::protobuf::MessageLite]
 To google::protobuf::internal::down_cast(From*) [with To = const google::protobuf::UninterpretedOption*; From = const google::protobuf::Message]
 To google::protobuf::internal::down_cast(From*) [with To = google::protobuf::Message*; From = google::protobuf::MessageLite]
-Toggle Eye Filtering.
 Toggle GPU fences measuring RndGPU/CmpGPU.
 Toggle Input Latency Monitoring
 Toggle MTU Growth
@@ -2317,6 +2334,7 @@ ZN13CommandThread8ShutdownEvEUlvE_
 [SVLController] Overriding Quest specific properties for %s\n
 [SVLController] Reported HMD model is %d\n
 [SVLController] Setting up HTC Vive Focus Controller: %s
+[SVLController] Setting up PlayStation VR2 Sense Controller: %s
 [SVLController] Unable to find override properties for unknown key: %s:%s
 [SVLHMD] Re-requesting static props: projectionParams: %i chaperone: %i power: %i statichmd: %i defaults: %i framerateUs: %i caps: %i chromaKey: %i/%i
 [SVLHandTrackingDriver] ~SVLHandTrackingDriver()
@@ -2694,8 +2712,6 @@ chmod
 chromaKeyColor
 chromaKeyMode
 chromaKeyNoiseFloor
-clientTCPEnable
-clientTCPRemote
 clientUDPEnable
 clientUDPRemote
 clock_gettime
@@ -3146,6 +3162,7 @@ ldexpf
 leading_comments
 left
 left_
+legacy_stream_quality
 libGL.so.1
 libX11.so.6
 libc.so.6
@@ -3337,6 +3354,8 @@ pico4u_
 pico_controller
 pipe2
 playing
+playstation_vr2_sense
+playstation_vr2_sense_controller
 poll
 positional
 posix_memalign
@@ -3412,6 +3431,7 @@ pw_stream_queue_buffer
 pw_stream_state_as_string
 pw_stream_update_params
 pw_stream_update_properties
+qp_map_mode
 qualitySharpeningThresholdMbit
 rand
 random_device could not be read
@@ -3534,7 +3554,6 @@ sent VTE_DASHBOARD_EVENT EVTYPE_CLOSE_DASHBOARD
 serialNumber
 serialize
 serializing
-serverTCPEnable
 serverUDPEnable
 service $0 {\n
 session_id_field_name
@@ -3603,7 +3622,6 @@ strcmp
 strcpy
 strdup
 streamFormatWidth
-streamQuality
 stream_view_aspect_ratio
 strength
 strerror
@@ -4634,6 +4652,7 @@ znear
 {vrlink}/icons/right_handtracking_ready_info.png
 {vrlink}/icons/right_handtracking_searching.gif
 {vrlink}/input/pico_controller_profile.json
+{vrlink}/input/playstation_vr2_sense_controller_profile.json
 {vrlink}/input/svl_hand_interaction_augmented_input_profile.json
 {vrlink}/input/vive_focus3_controller_profile.json
 {vrlink}/rendermodels/pico_4_controller_

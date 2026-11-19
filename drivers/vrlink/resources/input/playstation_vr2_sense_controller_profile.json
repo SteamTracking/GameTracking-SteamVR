@@ -1,0 +1,122 @@
+
+{
+  "jsonid": "input_profile",
+  "controller_type": "playstation_vr2_sense",
+  "device_class": "TrackedDeviceClass_Controller",
+  "resource_root": "vrlink",
+  "driver_name": "vrlink",
+  "legacy_binding": "{vrlink}/input/legacy_binding_playstation_vr2_sense_controller.json",
+  "remapping": "{vrlink}/input/playstation_vr2_sense_controller_remapping.json",
+  "input_bindingui_mode": "controller_handed",
+  "should_show_binding_errors": true,
+  "compatibility_mode_controller_type": "oculus_touch",
+  "input_bindingui_left": {
+    "image": "{vrlink}/icons/playstation_vr2_sense_left.svg"
+  },
+  "input_bindingui_right": {
+    "image": "{vrlink}/icons/playstation_vr2_sense_right.svg"
+  },
+  "input_source": {
+    "/input/joystick": {
+      "type": "joystick",
+      "click": true,
+      "touch": true,
+      "order": 2
+    },
+    "/input/trigger": {
+      "type": "trigger",
+      "value": true,
+      "touch": true,
+      "order": 5
+    },
+    "/input/grip": {
+      "type": "trigger",
+      "value": true,
+      "touch": true,
+      "order": 7
+    },
+    "/input/trigger_sensor": {
+      "type": "trigger",
+      "value": true,
+      "order": 6
+    },
+    "/input/grip_sensor": {
+      "type": "trigger",
+      "value": true,
+      "order": 8
+    },
+    "/input/cross": {
+      "type": "button",
+      "side": "right",
+      "click": true,
+      "touch": true,
+      "order": 4
+    },
+    "/input/circle": {
+      "type": "button",
+      "side": "right",
+      "click": true,
+      "touch": true,
+      "order": 3
+    },
+    "/input/square": {
+      "type": "button",
+      "side": "left",
+      "click": true,
+      "touch": true,
+      "order": 4
+    },
+    "/input/triangle": {
+      "type": "button",
+      "side": "left",
+      "click": true,
+      "touch": true,
+      "order": 3
+    },
+    "/input/ps": {
+      "type": "button",
+      "click": true,
+      "touch": true,
+      "order": 0
+    },
+    "/input/options": {
+      "type": "button",
+      "side": "right",
+      "click": true,
+      "touch": true,
+      "order": 1
+    },
+    "/input/create": {
+      "type": "button",
+      "side": "left",
+      "click": true,
+      "touch": true,
+      "order": 1
+    },
+    "/input/skeleton/right": {
+      "type": "skeleton",
+      "side": "right",
+      "skeleton": "/skeleton/hand/right"
+    },
+    "/input/skeleton/left": {
+      "type": "skeleton",
+      "side": "left",
+      "skeleton": "/skeleton/hand/left"
+    },
+    "/output/haptic": {
+      "type": "vibration"
+    },
+    "/pose/raw": {
+      "type": "pose"
+    },
+    "/pose/grip": {
+      "type": "pose"
+    },
+    "/pose/tip": {
+      "type": "pose"
+    },
+    "/pose/openxr_aim": {
+      "type": "pose"
+    }
+  }
+}

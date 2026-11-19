@@ -3333,7 +3333,8 @@ var CLSTAMP = "steamdb";
         (_[(_.None = 0)] = "None"),
           (_[(_.OutsidePlayspace = 1)] = "OutsidePlayspace"),
           (_[(_.TrackingLost = 2)] = "TrackingLost"),
-          (_[(_.ChaperoneLost = 3)] = "ChaperoneLost");
+          (_[(_.ChaperoneLost = 3)] = "ChaperoneLost"),
+          (_[(_.TrackingStarting = 4)] = "TrackingStarting");
       })(_ || (_ = {}));
       class _ {
         constructor() {

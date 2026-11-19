@@ -389,6 +389,7 @@ $0rpc $1(.$2) returns (.$3)
 %s: unsupported graphics binding type: %d
 %s: usage changed from quad to %s, sampler not updated
 %s: usage must be specified when allocating images
+%s: vkWaitForFences failed with %d
 %s: vkWaitForFences failed with %d\n
 %s:ForceAcquireImageTimeline
 %s:SyncTexture
@@ -408,6 +409,7 @@ $0rpc $1(.$2) returns (.$3)
 ' value is not an integer type.\n
 '. Must be /action/<set>/in/<action> or /action/<set>/out/<action>.
 '.5<=6/7>????????????????
+'@ffffff+@
 '[', '{', or a literal
 'action_sets' member found for legacy binding manifest. New action sets cannot be added.
 'action_sets' member is not an array
@@ -559,7 +561,7 @@ $0rpc $1(.$2) returns (.$3)
 /chaperone/is_default_perimeter
 /chaperone/last_relocalization_time
 /chaperone/perimeter
-/chaperone/persistent_map_from_map/transform
+/chaperone/persistent_map_from_raw/transform
 /chaperone/play_area
 /chaperone/room_setup/transform
 /chaperone/room_setup_done
@@ -590,8 +592,8 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/common/vrcommon/vrrenderer/ivrrenderer.h
 /data/src/common/vrcommon/vrrenderer/sharedresource_linux.cpp
 /data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4727
-/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4817
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:4970
+/data/src/common/vrcommon/vrrenderer/vulkanrenderer.cpp:5060
 /data/src/common/vrcommon/vrsystem.cpp
 /data/src/common/vrcommon/vrsystemlayersharedstate.cpp
 /data/src/common/vrcommon/vulkan.cpp
@@ -765,9 +767,9 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/skeletalinpututils.cpp
 /data/src/vrclient/vrclientcore.cpp
 /data/src/vrclient/vrcompositorclient.cpp
-/data/src/vrclient/vrcompositorclient.cpp:1605
-/data/src/vrclient/vrcompositorclient.cpp:1861
-/data/src/vrclient/vrcompositorclient.cpp:2722
+/data/src/vrclient/vrcompositorclient.cpp:1665
+/data/src/vrclient/vrcompositorclient.cpp:1921
+/data/src/vrclient/vrcompositorclient.cpp:2782
 /data/src/vrclient/vrcompositorclient.cpp:470
 /data/src/vrclient/vrcompositorsharedtextures.cpp
 /data/src/vrclient/vrcompositorsharedtextures.cpp:2678
@@ -775,14 +777,14 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/vrcompositorsharedtextures.cpp:3053
 /data/src/vrclient/vrcompositorsharedtextures.cpp:3057
 /data/src/vrclient/vrcompositorsharedtextures.cpp:3160
-/data/src/vrclient/vrcompositorsharedtextures.cpp:4364
+/data/src/vrclient/vrcompositorsharedtextures.cpp:4369
 /data/src/vrclient/vrdebug.cpp:49
 /data/src/vrclient/vrdebug.cpp:60
-/data/src/vrclient/vrinput.cpp:1609
+/data/src/vrclient/vrinput.cpp:1611
 /data/src/vrclient/vrmailboxclient.cpp
-/data/src/vrclient/vroverlay.cpp:1193
-/data/src/vrclient/vroverlay.cpp:1224
-/data/src/vrclient/vroverlay.cpp:979
+/data/src/vrclient/vroverlay.cpp:1197
+/data/src/vrclient/vroverlay.cpp:1228
+/data/src/vrclient/vroverlay.cpp:982
 /data/src/vrclient/vrsteamprivate.cpp
 /dev/null
 /device_was_drawn
@@ -2330,6 +2332,7 @@ CSxrSession
 CSxrSpace
 CSxrSwapchainBase
 CSxrSwapchainVulkanOpenVR
+CSxrSwapchainVulkanOpenVR rpo depth
 CVRApplicationsLatest
 CVRCompositorSharedTextures::GPUWaitForSharedVRTexture - no shared image provided\n
 CVRCompositorSharedTextures::GPUWaitForSharedVRTexture - platform missing\n
@@ -2693,9 +2696,11 @@ CreateVulkanDevice
 CreateVulkanInstance
 CreateVulkanResources
 CreateXrBinding: unsupported graphics binding type: %d\n
+Created descriptor pool %u (%d sets each); %u draw and %u dispatch descriptor sets cached
 Created injected depth image for GL swapchain %u image %u (format %d, %ux%u, %u layers)
 Created remote GL texture 0x%llx, dimensions %d x %d, format %d
 Created remote Vulkan image 0x%llx, dimensions %d x %d, format %d, memory size %d and memory type %d.\n
+Created rpo depth images for Vulkan swapchain %u (%ux%u, %u samples)
 Deactivation threshold of %f will be set to the minimum allowed value %f in filter %s.
 Debug utils: disabled, missing entrypoints
 Debug utils: enabled
@@ -2878,6 +2883,7 @@ Failed to convert event of type %s\n
 Failed to create CPU fallback texture, Vulkan/GL interop will not work.
 Failed to create OpenGL framebuffer for destination texture 0x%x.
 Failed to create PID pipe\n
+Failed to create a %u byte staging buffer
 Failed to create a new FD for resource 0x%llx\n
 Failed to create compute shader module %s!\n
 Failed to create image\n
@@ -2889,6 +2895,7 @@ Failed to create opengl swapchain image: failed to create %d\n
 Failed to create opengl swapchain image: sample count %d unsupported\n
 Failed to create pixel shader module %s!\n
 Failed to create prism swapchain: Unsupported number of faces: %d\n
+Failed to create rpo depth images for Vulkan swapchain %u (%ux%u, %u samples); disabling
 Failed to create shared vulkan buffer: size=%zu usage=0x%x\n
 Failed to create shared vulkan semaphore\n
 Failed to create socket for shared fd id: 0x%llx\n
@@ -3268,6 +3275,8 @@ HOME
 Had invalid FD %d for plane %u.
 Haptic
 Haptic vibration had the wrong type tag: %u\n
+HapticsEnabled
+HapticsStrength
 HasField
 Hex and octal numbers must be integers.
 Hi Joe(D). Your text goes here
@@ -4101,6 +4110,9 @@ No open command buffer for layout transition\n
 No open command buffer for updating a buffer!\n
 No open command buffer for updating a texture!\n
 No open command buffer in CVRCompositorSharedTextures::EndCommandBuffer\n
+No room in the transfer ring buffer for a %u byte upload; creating a staging buffer
+No room in the transfer ring buffer for a %u byte upload; creating a staging buffer [%u messages suppressed]
+No room in the transfer ring buffer for a %u byte upload; creating a staging buffer [OMITTING additional logs for %d seconds]
 No support for GL shared semaphores.
 Node has extension KHR_audio, but does not reference a audio emitter.\n
 Node has extension KHR_lights_punctual, but does not reference a light source.\n
@@ -4519,7 +4531,6 @@ Returning AlreadyRunning because process %u is running for process %s\n
 Returning AlreadyRunning for LaunchDashboardOverlay %s because that is running as %u\n
 Returning AlreadyRunning for LaunchTemplateApplication %s -> %s  because that new key exists already\n
 Right_
-Ring Buffer Wrapped!\n
 Root element is not a JSON object\n
 RootNode
 RtkitSetThreadPriority(%d, %d, %ld, %s): %s failed over all retries. Original OS function %s error: %d
@@ -4540,6 +4551,7 @@ STEAMVR_APPKEY
 STEAMVR_DISABLE_ASSERT_MINIDUMP
 STEAMVR_DISABLE_CRASH_REPORTING
 STEAMVR_DISABLE_DMABUF_MODIFIERS
+STEAMVR_DISABLE_LOG_RATE_LIMITING
 STEAMVR_DISABLE_THREAD_WATCHDOGS
 STEAMVR_ENABLE_THREAD_WATCHDOGS
 STEAMVR_ENV
@@ -4888,6 +4900,9 @@ TrackedProp_UnknownProperty
 TrackedProp_ValueNotProvidedByDevice
 TrackedProp_WrongDataType
 TrackedProp_WrongDeviceClass
+Transfer ring buffer full; waiting for queue %u command buffer %u
+Transfer ring buffer full; waiting for queue %u command buffer %u [%u messages suppressed]
+Transfer ring buffer full; waiting for queue %u command buffer %u [OMITTING additional logs for %d seconds]
 Transition
 Transitioning XrSession from %s to %s\n
 Translating path: %s\t%s
@@ -5710,6 +5725,8 @@ VR_OVERRIDE
 VR_PATHREG_OVERRIDE
 VR_SETTINGS_FILE
 VR_ServerPipe
+VR_Server_EyePoseUpdated0
+VR_Server_EyePoseUpdated1
 VR_SettingsMutex
 VR_SettingsState
 VR_SharedMutex
@@ -5757,13 +5774,13 @@ VirtualDisplay_AllQueued
 VirtualDisplay_NewFrame
 VirtualDisplay_Presented
 Vulkan missing requested extension '%s'.\n
-Vulkan transfer ring buffer overflow; transfer size %u!\n
 VulkanVRRenderer::ImportConstantBufferFromSharedHandle - Failed to import remote constant buffer.\n
 VulkanVRRenderer::ImportSemaphoreFromSharedHandle - Failed to import shared semaphore.\n
 VulkanVRRenderer::ImportTextureFromSharedHandle - Failed to import shared image.\n
 WARNING
 Wait
 WaitForBegin
+WaitForRingBufferSegments
 WaitForRunningStart nLastFrameIndex=%d nNextPrismWaitIndex=%d
 WaitForWork
 WaitFrame
@@ -9219,7 +9236,6 @@ steamMatchesHMDFramerate
 steam_input
 steam_overlay_handle
 steam_streaming_launch
-steamlink_openvr-overlay
 steammessages_unified_base.steamclient.proto
 steamtours
 steamvr
@@ -10442,7 +10458,6 @@ xrCreateInstance
 xrCreateInstance error: attempted to enable EXT_DPAD_BINDING_EXTENSION without enabling required KHR_BINDING_MODIFICATION_EXTENSION.
 xrCreateInstance error: attempted to enable XR_EXT_INTERACTION_RENDER_MODEL without enabling required XR_EXT_RENDER_MODEL \n
 xrCreateInstance error: attempted to enable XR_EXT_RENDER_MODEL without enabling required XR_EXT_UUID \n
-xrCreateInstance error: attempted to enable XR_EXT_stationary_reference_space without enabling required XR_EXT_UUID \n
 xrCreateInstance error: attempted to enable XR_FB_foveation without enabling required XR_FB_swapchain_update_state
 xrCreateInstance error: attempted to enable XR_FB_foveation_configuration without enabling required XR_FB_foveation
 xrCreateInstance error: attempted to enable XR_FB_foveation_vulkan without enabling required XR_FB_foveation

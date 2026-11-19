@@ -1,48 +1,48 @@
-var CLSTAMP = "11238649";
+var CLSTAMP = "11257731";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [906, 458],
   {
-    9864: (e, t, i) => {
-      i.d(t, { b: () => r, m: () => n });
+    9864: (e, t, o) => {
+      o.d(t, { b: () => r, m: () => a });
       var r,
-        o = i(6540),
-        s = i(3496);
+        i = o(6540),
+        n = o(3496);
       !(function (e) {
         (e[(e.Parent = 0)] = "Parent"), (e[(e.World = 1)] = "World");
       })(r || (r = {}));
-      class n extends s._J {
+      class a extends n._J {
         constructor(e) {
           super(e);
         }
         internalRender() {
           var e;
           const t = null === (e = this.props.enabled) || void 0 === e || e,
-            i = this.props.rotation_start_angle_threshold
+            o = this.props.rotation_start_angle_threshold
               ? (this.props.rotation_start_angle_threshold * Math.PI) / 180
               : null,
             r = this.props.rotation_stop_angle_threshold
               ? (this.props.rotation_stop_angle_threshold * Math.PI) / 180
               : null,
-            s = this.props.rotation_ease_out_angle_threshold
+            n = this.props.rotation_ease_out_angle_threshold
               ? (this.props.rotation_ease_out_angle_threshold * Math.PI) / 180
               : null,
-            n = this.props.rotation_min_angular_velocity
+            a = this.props.rotation_min_angular_velocity
               ? (this.props.rotation_min_angular_velocity * Math.PI) / 180
               : null,
-            p = this.props.rotation_max_angular_velocity
+            s = this.props.rotation_max_angular_velocity
               ? (this.props.rotation_max_angular_velocity * Math.PI) / 180
               : null;
-          return o.createElement(
+          return i.createElement(
             "vsg-elastic-head-transform",
             {
-              "rotation-start-angle-threshold": i,
+              "rotation-start-angle-threshold": o,
               "rotation-stop-angle-threshold": r,
               "rotation-ease-in-time": this.props.rotation_ease_in_time,
               "rotation-ease-in-power": this.props.rotation_ease_in_power,
-              "rotation-ease-out-angle-threshold": s,
+              "rotation-ease-out-angle-threshold": n,
               "rotation-ease-out-power": this.props.rotation_ease_out_power,
-              "rotation-min-angular-velocity": n,
-              "rotation-max-angular-velocity": p,
+              "rotation-min-angular-velocity": a,
+              "rotation-max-angular-velocity": s,
               "translation-start-distance-threshold":
                 this.props.translation_start_distance_threshold,
               "translation-stop-distance-threshold":
@@ -65,38 +65,38 @@ var CLSTAMP = "11238649";
         }
       }
     },
-    7019: (e, t, i) => {
-      i.d(t, {
-        Fi: () => s,
-        Lr: () => f,
-        MQ: () => o,
+    7019: (e, t, o) => {
+      o.d(t, {
+        Fi: () => n,
+        Lr: () => B,
+        MQ: () => i,
         Oi: () => r,
-        Zk: () => C,
-        mw: () => p,
-        o3: () => n,
-        xO: () => a,
+        Zk: () => I,
+        mw: () => s,
+        o3: () => a,
+        xO: () => l,
       });
       var r,
-        o,
-        s,
+        i,
         n,
-        p,
         a,
-        l = i(1635),
-        h = i(6540),
-        d = i(3496),
-        u = i(5178),
-        _ = i(3236),
-        c = i(5723),
-        m = i(7600),
-        v = i(7727),
-        g = i(1651),
-        b = i(7813),
-        y = i(9386);
-      function w(e) {
+        s,
+        l,
+        _ = o(1635),
+        p = o(6540),
+        d = o(3496),
+        u = o(5178),
+        m = o(3236),
+        c = o(5723),
+        h = o(7600),
+        g = o(7727),
+        S = o(1651),
+        v = o(7813),
+        D = o(9386);
+      function y(e) {
         if (e) return [e.u, e.v];
       }
-      function f(e) {
+      function B(e) {
         switch (e) {
           case r.TopLeft:
             return { x: -1, y: 1 };
@@ -135,36 +135,36 @@ var CLSTAMP = "11238649";
             (e[(e.Crossed = 2)] = "Crossed"),
             (e[(e.Panorama = 3)] = "Panorama"),
             (e[(e.StackedPanorama = 4)] = "StackedPanorama");
-        })(o || (o = {})),
+        })(i || (i = {})),
         (function (e) {
           (e[(e.Visible = 0)] = "Visible"),
             (e[(e.SkipInSceneGraph = 1)] = "SkipInSceneGraph"),
             (e[(e.Hidden = 2)] = "Hidden"),
             (e[(e.InvisibleButIntersectable = 3)] =
               "InvisibleButIntersectable");
-        })(s || (s = {})),
+        })(n || (n = {})),
         (function (e) {
           (e[(e.Default = 0)] = "Default"),
             (e[(e.Disabled = 1)] = "Disabled"),
             (e[(e.Low = 2)] = "Low");
-        })(n || (n = {})),
+        })(a || (a = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Auto = 1)] = "Auto"),
             (e[(e.PendingGamepadFocus = 2)] = "PendingGamepadFocus"),
             (e[(e.GamepadFocusNotSupported = 3)] = "GamepadFocusNotSupported");
-        })(p || (p = {})),
+        })(s || (s = {})),
         (function (e) {
           (e[(e.PixelOffset = 0)] = "PixelOffset"),
             (e[(e.ScaleAndCenter = 1)] = "ScaleAndCenter");
-        })(a || (a = {}));
-      class C extends d._J {
+        })(l || (l = {}));
+      class I extends d._J {
         constructor(e) {
           super(e),
             (this.m_Rect = { x: 0, y: 0, width: 0, height: 0 }),
             (this.m_nEmbeddedIndex = void 0),
             (this.m_LastDOMContentSize = void 0),
-            (this.m_DOMContentSizeChangedCallbacks = new g.l()),
+            (this.m_DOMContentSizeChangedCallbacks = new S.l()),
             (this.m_resizeObserver = null),
             (this.m_UVsMin = void 0),
             (this.m_UVsMax = void 0),
@@ -172,30 +172,30 @@ var CLSTAMP = "11238649";
             (this.m_overdragBlockingElements = []),
             (this.m_gamepadButtonHandlerHandle = void 0);
           const t = void 0 !== this.props.width || void 0 !== this.props.height,
-            i = void 0 !== this.props.meters_per_pixel,
+            o = void 0 !== this.props.meters_per_pixel,
             r = void 0 !== this.props.target_dpi_panel_id,
-            o =
+            i =
               void 0 !== this.props.rendermodel_component_device_index ||
               void 0 !== this.props.rendermodel_component_name,
-            s =
+            n =
               void 0 !== this.props.subview_parent_panel_id ||
               void 0 !== this.props.subview_parent_panel_key;
           if (
-            o &&
+            i &&
             (void 0 === this.props.rendermodel_component_device_index ||
               void 0 === this.props.rendermodel_component_name)
           )
             throw new Error(
               "Panel requires both rendermodel_component_device_index and rendermodel_component_name to be a rendermodel texture.",
             );
-          const n = [t, i, r, o, s].filter((e) => e).length,
-            p =
+          const a = [t, o, r, i, n].filter((e) => e).length,
+            s =
               "an (explicit width and/or height), an explicit meters_per_pixel, a target_panel_dpi panel ID, a rendermodel name, or a parent overlay of which to become a subview.";
-          if (0 == n)
-            throw new Error(`Panel requires one of the following props: ${p}.`);
-          if (n > 1)
+          if (0 == a)
+            throw new Error(`Panel requires one of the following props: ${s}.`);
+          if (a > 1)
             throw new Error(
-              `Panel cannot have more of the following of the following props: ${p}.`,
+              `Panel cannot have more of the following of the following props: ${s}.`,
             );
           super.setBuildNodeOverride(this.buildNode);
         }
@@ -215,24 +215,24 @@ var CLSTAMP = "11238649";
           return this.m_nEmbeddedIndex;
         }
         componentWillReceiveProps_UNSAFE() {
-          C.s_bPanelsAreDirty = !0;
+          I.s_bPanelsAreDirty = !0;
         }
         componentDidMount() {
           super.componentDidMount(),
             (this.m_resizeObserver = new ResizeObserver(this.onResizeObserved)),
             this.m_resizeObserver.observe(this.getCurrentRootElement()),
             (this.m_nEmbeddedIndex = u.O.Current().addEmbeddedPanelUVs(this)),
-            (C.s_bPanelsAreDirty = !0),
+            (I.s_bPanelsAreDirty = !0),
             this.getCurrentRootElement().addEventListener(
               "mousedown",
               this.onPanelMouseDown,
             ),
             this.forceUpdate(),
-            C.s_setAllPanels.add(this),
+            I.s_setAllPanels.add(this),
             (this.m_gamepadButtonHandlerHandle =
-              null === y.L || void 0 === y.L
+              null === D.L || void 0 === D.L
                 ? void 0
-                : y.L.RegisterGamepadButtonHandler(this.m_SGID, this, 0));
+                : D.L.RegisterGamepadButtonHandler(this.m_SGID, this, 0));
         }
         onResizeObserved(e, t) {
           u.O.Current().forceLayoutUpdate(),
@@ -246,7 +246,7 @@ var CLSTAMP = "11238649";
         }
         componentWillUnmount() {
           var e;
-          C.s_setAllPanels.delete(this),
+          I.s_setAllPanels.delete(this),
             this.m_resizeObserver &&
               (this.m_resizeObserver.disconnect(),
               (this.m_resizeObserver = null)),
@@ -255,7 +255,7 @@ var CLSTAMP = "11238649";
               "mousedown",
               this.onPanelMouseDown,
             ),
-            (C.s_bPanelsAreDirty = !0),
+            (I.s_bPanelsAreDirty = !0),
             u.O.Current().removeEmbeddedPanelUVs(this),
             this.m_DOMContentSizeChangedCallbacks.ClearAllCallbacks(),
             null === (e = this.m_gamepadButtonHandlerHandle) ||
@@ -299,16 +299,16 @@ var CLSTAMP = "11238649";
             ),
             (this.m_bOverdragBlocking = !1));
         }
-        createOverdragBlockingElement(e, t, i, r) {
-          let o = document.createElement("div");
-          (o.style.position = "absolute"),
-            (o.style.top = t + "px"),
-            (o.style.left = e + "px"),
-            (o.style.width = i + "px"),
-            (o.style.height = r + "px"),
-            (o.style.zIndex = "90019001"),
-            this.m_overdragBlockingElements.push(o),
-            document.body.appendChild(o);
+        createOverdragBlockingElement(e, t, o, r) {
+          let i = document.createElement("div");
+          (i.style.position = "absolute"),
+            (i.style.top = t + "px"),
+            (i.style.left = e + "px"),
+            (i.style.width = o + "px"),
+            (i.style.height = r + "px"),
+            (i.style.zIndex = "90019001"),
+            this.m_overdragBlockingElements.push(i),
+            document.body.appendChild(i);
         }
         onWindowMouseUp(e) {
           this.stopOverDragBlocking();
@@ -320,140 +320,140 @@ var CLSTAMP = "11238649";
           var e;
           return null !== (e = this.props.visibility) && void 0 !== e
             ? e
-            : s.Visible;
+            : n.Visible;
         }
         buildNode(e, t) {
-          var i, r, o, n, p, a, l, h, _, m, v, g, b;
+          var o, r, i, a, s, l, _, p, m, h, g, S, v;
           if (
             !(
-              this.visibility == s.Visible ||
-              this.visibility == s.InvisibleButIntersectable
+              this.visibility == n.Visible ||
+              this.visibility == n.InvisibleButIntersectable
             )
           )
             return [e, null];
-          let y = Object.assign(Object.assign({}, e), {
+          let D = Object.assign(Object.assign({}, e), {
               bInsideReparentedPanel: !1,
               currentPanel: this,
             }),
-            C = this.createSgNode(t),
-            x = { x: 0, y: 0 };
-          x =
+            I = this.createSgNode(t),
+            C = { x: 0, y: 0 };
+          C =
             "object" == typeof this.props.origin
               ? (0, d.PG)(this.props.origin)
-              : f(this.props.origin);
-          const k = this.props.overlay_key,
-            P = (0, c.w5)();
-          k && k.length > 0
-            ? (C.properties.key = k)
-            : P
-              ? (C.properties.key = P)
-              : (C.properties.overlay_handle = (0, c.X4)()),
+              : B(this.props.origin);
+          const f = this.props.overlay_key,
+            F = (0, c.w5)();
+          f && f.length > 0
+            ? (I.properties.key = f)
+            : F
+              ? (I.properties.key = F)
+              : (I.properties.overlay_handle = (0, c.X4)()),
             this.m_UVsMin &&
-              (C.properties.uv_min =
-                null !== (i = w(this.m_UVsMin)) && void 0 !== i ? i : void 0),
+              (I.properties.uv_min =
+                null !== (o = y(this.m_UVsMin)) && void 0 !== o ? o : void 0),
             this.m_UVsMax &&
-              (C.properties.uv_max =
-                null !== (r = w(this.m_UVsMax)) && void 0 !== r ? r : void 0);
-          const I = 1 / u.O.Current().m_fCurrentScale;
-          let O = this.props.frame_resize_scale_factor;
+              (I.properties.uv_max =
+                null !== (r = y(this.m_UVsMax)) && void 0 !== r ? r : void 0);
+          const M = 1 / u.O.Current().m_fCurrentScale;
+          let P = this.props.frame_resize_scale_factor;
           return (
-            this.props.is_frame_page_main_panel && (O = null != O ? O : 1),
-            (C.properties.width =
-              null !== (o = this.props.width) && void 0 !== o ? o : void 0),
-            (C.properties.height =
-              null !== (n = this.props.height) && void 0 !== n ? n : void 0),
-            (C.properties["scale-index"] =
-              null !== (p = this.props.scale_index) && void 0 !== p ? p : 0),
-            (C.properties["min-width"] =
-              null !== (a = this.props.min_width) && void 0 !== a ? a : void 0),
-            (C.properties["target-width-anchor-id"] = (0, c.bl)(
+            this.props.is_frame_page_main_panel && (P = null != P ? P : 1),
+            (I.properties.width =
+              null !== (i = this.props.width) && void 0 !== i ? i : void 0),
+            (I.properties.height =
+              null !== (a = this.props.height) && void 0 !== a ? a : void 0),
+            (I.properties["scale-index"] =
+              null !== (s = this.props.scale_index) && void 0 !== s ? s : 0),
+            (I.properties["min-width"] =
+              null !== (l = this.props.min_width) && void 0 !== l ? l : void 0),
+            (I.properties["target-width-anchor-id"] = (0, c.bl)(
               this.props.target_width_anchor_id,
             )),
-            (C.properties["target-dpi-panel-id"] = (0, c.bl)(
+            (I.properties["target-dpi-panel-id"] = (0, c.bl)(
               this.props.target_dpi_panel_id,
             )),
-            (C.properties["target-dpi-multiplier"] =
+            (I.properties["target-dpi-multiplier"] =
               this.props.target_dpi_multiplier),
-            (C.properties["meters-per-pixel"] =
+            (I.properties["meters-per-pixel"] =
               null != this.props.meters_per_pixel
-                ? this.props.meters_per_pixel * I
+                ? this.props.meters_per_pixel * M
                 : void 0),
-            (C.properties["subview-parent-panel-key"] =
+            (I.properties["subview-parent-panel-key"] =
               this.props.subview_parent_panel_key),
-            (C.properties["subview-parent-panel-id"] =
+            (I.properties["subview-parent-panel-id"] =
               this.props.subview_parent_panel_id),
-            (C.properties["subview-sizing"] = this.props.subview_sizing),
-            (C.properties.curvature = this.props.curvature),
-            (C.properties["curvature-origin-id"] = (0, c.bl)(
+            (I.properties["subview-sizing"] = this.props.subview_sizing),
+            (I.properties.curvature = this.props.curvature),
+            (I.properties["curvature-origin-id"] = (0, c.bl)(
               this.props.curvature_origin_id,
             )),
-            (C.properties["render-type"] = this.props.renderType),
-            (C.properties.interactive = this.props.interactive),
-            (C.properties.scrollable = this.props.scrollable),
-            (C.properties.undocked = this.props.undocked),
-            (C.properties.modal = this.props.modal),
-            (C.properties["only-visible-with-laser"] =
+            (I.properties["render-type"] = this.props.renderType),
+            (I.properties.interactive = this.props.interactive),
+            (I.properties.scrollable = this.props.scrollable),
+            (I.properties.undocked = this.props.undocked),
+            (I.properties.modal = this.props.modal),
+            (I.properties["only-visible-with-laser"] =
               this.props.only_visible_with_laser),
-            (C.properties["allow-input-capture"] =
+            (I.properties["allow-input-capture"] =
               this.props.allow_input_capture),
-            (C.properties["lasermouse-filtering"] =
-              null === (l = this.props) || void 0 === l
-                ? void 0
-                : l.lasermouse_filtering),
-            (C.properties["focus-outline"] =
-              null === (h = this.props) || void 0 === h ? void 0 : h.outline),
-            (C.properties["hide-laser-when-clicking"] =
-              this.props.hide_lasermouse_when_clicking),
-            (C.properties["hide-laser-intersection"] =
+            (I.properties["lasermouse-filtering"] =
               null === (_ = this.props) || void 0 === _
                 ? void 0
-                : _.hide_laser_intersection),
-            (C.properties["make-overlays-interactive-if-visible"] =
+                : _.lasermouse_filtering),
+            (I.properties["focus-outline"] =
+              null === (p = this.props) || void 0 === p ? void 0 : p.outline),
+            (I.properties["hide-laser-when-clicking"] =
+              this.props.hide_lasermouse_when_clicking),
+            (I.properties["hide-laser-intersection"] =
+              null === (m = this.props) || void 0 === m
+                ? void 0
+                : m.hide_laser_intersection),
+            (I.properties["make-overlays-interactive-if-visible"] =
               this.props.make_overlays_interactive_if_visible),
-            (C.properties["is-grab-handle"] = this.props.is_grab_handle),
-            (C.properties["embedded-uv-index"] = this.m_nEmbeddedIndex),
-            (C.properties.origin = (0, d.Hm)(x)),
-            (C.properties.debug_name = this.props.debug_name),
-            (C.properties.reflect = this.props.reflect),
-            (C.properties.stereoscopy = this.props.stereoscopy),
-            (C.properties.rendermodel_component_device_index =
+            (I.properties["is-grab-handle"] = this.props.is_grab_handle),
+            (I.properties["embedded-uv-index"] = this.m_nEmbeddedIndex),
+            (I.properties.origin = (0, d.Hm)(C)),
+            (I.properties.debug_name = this.props.debug_name),
+            (I.properties.reflect = this.props.reflect),
+            (I.properties.stereoscopy = this.props.stereoscopy),
+            (I.properties.rendermodel_component_device_index =
               this.props.rendermodel_component_device_index),
-            (C.properties.rendermodel_component_name =
+            (I.properties.rendermodel_component_name =
               this.props.rendermodel_component_name),
-            (C.properties["texture-id"] = (0, c.bl)(this.props.texture_id)),
-            (C.properties["sort-order"] = this.props.sort_order),
-            (C.properties["sort-depth-bias"] = this.props.sort_depth_bias),
-            (C.properties["no-depth-write"] = this.props.no_depth_write),
-            (C.properties["no-depth-test"] = this.props.no_depth_test),
-            (C.properties.visibility = this.visibility),
-            (C.properties["frame-resize-scale-factor"] = O),
-            (C.properties["main-panel-for-frame-page"] =
+            (I.properties["texture-id"] = (0, c.bl)(this.props.texture_id)),
+            (I.properties["sort-order"] = this.props.sort_order),
+            (I.properties["sort-depth-bias"] = this.props.sort_depth_bias),
+            (I.properties["no-depth-write"] = this.props.no_depth_write),
+            (I.properties["no-depth-test"] = this.props.no_depth_test),
+            (I.properties.visibility = this.visibility),
+            (I.properties["frame-resize-scale-factor"] = P),
+            (I.properties["main-panel-for-frame-page"] =
               this.props.is_frame_page_main_panel),
-            (C.properties["steam-input-appid"] =
-              null === (m = this.inputFocusParams) || void 0 === m
+            (I.properties["steam-input-appid"] =
+              null === (h = this.inputFocusParams) || void 0 === h
                 ? void 0
-                : m.unSteamInputAppID),
-            (C.properties["vr-input-pid"] =
-              null === (v = this.inputFocusParams) || void 0 === v
+                : h.unSteamInputAppID),
+            (I.properties["vr-input-pid"] =
+              null === (g = this.inputFocusParams) || void 0 === g
                 ? void 0
-                : v.unVRInputPID),
-            (C.properties["can-take-keyboard-focus"] =
+                : g.unVRInputPID),
+            (I.properties["can-take-keyboard-focus"] =
               null ===
-                (b =
-                  null === (g = this.inputFocusParams) || void 0 === g
+                (v =
+                  null === (S = this.inputFocusParams) || void 0 === S
                     ? void 0
-                    : g.bCanTakeKeyboardFocus) ||
-              void 0 === b ||
-              b),
-            (C.properties["focus-target-sgid"] = this.props.focus_target_sgid),
-            [y, C]
+                    : S.bCanTakeKeyboardFocus) ||
+              void 0 === v ||
+              v),
+            (I.properties["focus-target-sgid"] = this.props.focus_target_sgid),
+            [D, I]
           );
         }
         scaleLocalUVToGlobal(e) {
           if (!this.m_UVsMin || !this.m_UVsMax) return;
           const t = this.m_UVsMax.u - this.m_UVsMin.u,
-            i = this.m_UVsMax.v - this.m_UVsMin.v;
-          return { u: this.m_UVsMin.u + t * e.u, v: this.m_UVsMin.v + i * e.v };
+            o = this.m_UVsMax.v - this.m_UVsMin.v;
+          return { u: this.m_UVsMin.u + t * e.u, v: this.m_UVsMin.v + o * e.v };
         }
         updateLayoutValues() {
           if (this.props.overlay_key)
@@ -480,12 +480,12 @@ var CLSTAMP = "11238649";
           return !0;
         }
         internalRender() {
-          return h.createElement(
+          return p.createElement(
             "vsg-node",
-            { style: { display: this.visibility == s.Hidden ? "none" : null } },
-            h.createElement(m.tH, null, this.props.children),
+            { style: { display: this.visibility == n.Hidden ? "none" : null } },
+            p.createElement(h.tH, null, this.props.children),
             this.props.is_frame_page_main_panel &&
-              h.createElement(x, { panel: this, panelID: this.getID() }),
+              p.createElement(C, { panel: this, panelID: this.getID() }),
           );
         }
         get inputFocusParams() {
@@ -495,7 +495,7 @@ var CLSTAMP = "11238649";
           );
         }
         get isInputFocusable() {
-          var e, t, i;
+          var e, t, o;
           return (
             (null === (e = this.inputFocusParams) || void 0 === e
               ? void 0
@@ -503,115 +503,115 @@ var CLSTAMP = "11238649";
             (null === (t = this.inputFocusParams) || void 0 === t
               ? void 0
               : t.unVRInputPID) ||
-            (null === (i = this.inputFocusParams) || void 0 === i
+            (null === (o = this.inputFocusParams) || void 0 === o
               ? void 0
-              : i.bCanTakeKeyboardFocus)
+              : o.bCanTakeKeyboardFocus)
           );
         }
         get hasInputFocus() {
           return (
-            (null === y.L || void 0 === y.L
+            (null === D.L || void 0 === D.L
               ? void 0
-              : y.L.computedInputFocus.m_entryAtTopOfStack.m_unPanelSGID) ==
+              : D.L.computedInputFocus.m_entryAtTopOfStack.m_unPanelSGID) ==
             this.m_SGID
           );
         }
         get hasSubviewWithInputFocus() {
           return (
-            (null === y.L || void 0 === y.L
+            (null === D.L || void 0 === D.L
               ? void 0
-              : y.L.computedInputFocus.m_entryAtTopOfStack
+              : D.L.computedInputFocus.m_entryAtTopOfStack
                   .m_unSubviewParentPanelSGID) == this.m_SGID
           );
         }
         get hasGamepadFocus() {
           return (
             this.hasInputFocus &&
-            (null === y.L || void 0 === y.L
+            (null === D.L || void 0 === D.L
               ? void 0
-              : y.L.computedInputFocus.m_bPanelVisuallyHasActiveGamepadFocus)
+              : D.L.computedInputFocus.m_bPanelVisuallyHasActiveGamepadFocus)
           );
         }
         PushInputFocus() {
-          null === y.L || void 0 === y.L || y.L.PushInputFocus(this.m_SGID);
+          null === D.L || void 0 === D.L || D.L.PushInputFocus(this.m_SGID);
         }
         RemoveInputFocus() {
-          null === y.L || void 0 === y.L || y.L.RemoveInputFocus(this.m_SGID);
+          null === D.L || void 0 === D.L || D.L.RemoveInputFocus(this.m_SGID);
         }
         OnSystemGamepadButtonClick(e) {
-          var t, i, r;
+          var t, o, r;
           return (
             null !==
               (r =
-                null === (i = (t = this.props).onSystemGamepadButtonClick) ||
-                void 0 === i
+                null === (o = (t = this.props).onSystemGamepadButtonClick) ||
+                void 0 === o
                   ? void 0
-                  : i.call(t, e)) &&
+                  : o.call(t, e)) &&
             void 0 !== r &&
             r
           );
         }
         OnSystemGamepadButtonDown(e) {
-          var t, i, r;
+          var t, o, r;
           return (
             null !==
               (r =
-                null === (i = (t = this.props).onSystemGamepadButtonDown) ||
-                void 0 === i
+                null === (o = (t = this.props).onSystemGamepadButtonDown) ||
+                void 0 === o
                   ? void 0
-                  : i.call(t, e)) &&
+                  : o.call(t, e)) &&
             void 0 !== r &&
             r
           );
         }
         OnSystemGamepadButtonUp(e) {
-          var t, i, r;
+          var t, o, r;
           return (
             null !==
               (r =
-                null === (i = (t = this.props).onSystemGamepadButtonUp) ||
-                void 0 === i
+                null === (o = (t = this.props).onSystemGamepadButtonUp) ||
+                void 0 === o
                   ? void 0
-                  : i.call(t, e)) &&
+                  : o.call(t, e)) &&
             void 0 !== r &&
             r
           );
         }
       }
-      function x(e) {
-        const { panel: t, panelID: i } = e,
-          { page: r } = (0, v.N)();
+      function C(e) {
+        const { panel: t, panelID: o } = e,
+          { page: r } = (0, g.N)();
         return (
-          h.useEffect(() => {
+          p.useEffect(() => {
             const { Unset: e } = null == r ? void 0 : r.SetMainPanel(t);
             return e;
-          }, [r, t, i]),
+          }, [r, t, o]),
           null
         );
       }
-      (C.s_bPanelsAreDirty = !1),
-        (C.s_setAllPanels = new b.ObservableSet()),
-        (0, l.Cg)([_.o], C.prototype, "onResizeObserved", null),
-        (0, l.Cg)([_.o], C.prototype, "onPanelMouseDown", null),
-        (0, l.Cg)([_.o], C.prototype, "onWindowMouseUp", null),
-        (0, l.Cg)([_.o], C.prototype, "buildNode", null),
-        (0, l.Cg)([b.computed], C.prototype, "hasInputFocus", null),
-        (0, l.Cg)([b.computed], C.prototype, "hasSubviewWithInputFocus", null),
-        (0, l.Cg)([b.computed], C.prototype, "hasGamepadFocus", null),
-        (window.s_setAllPanels = C.s_setAllPanels);
+      (I.s_bPanelsAreDirty = !1),
+        (I.s_setAllPanels = new v.ObservableSet()),
+        (0, _.Cg)([m.o], I.prototype, "onResizeObserved", null),
+        (0, _.Cg)([m.o], I.prototype, "onPanelMouseDown", null),
+        (0, _.Cg)([m.o], I.prototype, "onWindowMouseUp", null),
+        (0, _.Cg)([m.o], I.prototype, "buildNode", null),
+        (0, _.Cg)([v.computed], I.prototype, "hasInputFocus", null),
+        (0, _.Cg)([v.computed], I.prototype, "hasSubviewWithInputFocus", null),
+        (0, _.Cg)([v.computed], I.prototype, "hasGamepadFocus", null),
+        (window.s_setAllPanels = I.s_setAllPanels);
     },
-    3361: (e, t, i) => {
-      i.d(t, { d: () => p });
+    3361: (e, t, o) => {
+      o.d(t, { d: () => s });
       var r,
-        o = i(6540),
-        s = i(3496),
-        n = i(6292);
+        i = o(6540),
+        n = o(3496),
+        a = o(6292);
       !(function (e) {
         (e[(e.Seated = 0)] = "Seated"),
           (e[(e.Standing = 1)] = "Standing"),
           (e[(e.Raw = 2)] = "Raw");
       })(r || (r = {}));
-      class p extends s._J {
+      class s extends n._J {
         constructor(e) {
           super(e);
           if (
@@ -625,53 +625,53 @@ var CLSTAMP = "11238649";
             );
         }
         internalRender() {
-          var e, t, i;
-          let p, a, l, h;
+          var e, t, o;
+          let s, l, _, p;
           this.props.transform
-            ? ((p = (0, s.j_)(this.props.transform.translation)),
-              (a = this.props.transform.rotation),
-              (l = this.props.transform.scale))
-            : ((p = (0, s.XI)(this.props.translation)
-                ? null === (e = (0, s.UM)(this.props.translation)) ||
+            ? ((s = (0, n.j_)(this.props.transform.translation)),
+              (l = this.props.transform.rotation),
+              (_ = this.props.transform.scale))
+            : ((s = (0, n.XI)(this.props.translation)
+                ? null === (e = (0, n.UM)(this.props.translation)) ||
                   void 0 === e
                   ? void 0
                   : e.join(" ")
-                : (0, s.j_)(
-                    (0, s.Wi)(this.props.translation, { x: 0, y: 0, z: 0 }),
+                : (0, n.j_)(
+                    (0, n.Wi)(this.props.translation, { x: 0, y: 0, z: 0 }),
                   )),
-              (a =
+              (l =
                 this.props.rotation && "w" in this.props.rotation
                   ? this.props.rotation
-                  : (0, n.Fb)(
-                      (0, n.tx)(
-                        (0, s.Wi)(this.props.rotation, { x: 0, y: 0, z: 0 }),
+                  : (0, a.Fb)(
+                      (0, a.tx)(
+                        (0, n.Wi)(this.props.rotation, { x: 0, y: 0, z: 0 }),
                         Math.PI / 180,
                       ),
                     )),
-              (l =
+              (_ =
                 "number" == typeof this.props.scale
                   ? {
                       x: this.props.scale,
                       y: this.props.scale,
                       z: this.props.scale,
                     }
-                  : (0, s.Wi)(this.props.scale, { x: 1, y: 1, z: 1 }))),
+                  : (0, n.Wi)(this.props.scale, { x: 1, y: 1, z: 1 }))),
             null !=
               (null === (t = this.props) || void 0 === t
                 ? void 0
                 : t.parent_origin) &&
-              (h =
+              (p =
                 r[
-                  null === (i = this.props) || void 0 === i
+                  null === (o = this.props) || void 0 === o
                     ? void 0
-                    : i.parent_origin
+                    : o.parent_origin
                 ]);
-          let d = (0, s.hi)(a),
-            u = (0, s.j_)(l);
-          return o.createElement(
+          let d = (0, n.hi)(l),
+            u = (0, n.j_)(_);
+          return i.createElement(
             "vsg-transform",
             {
-              translation: p,
+              translation: s,
               rotation: d,
               scale: u,
               "curvature-pitch": this.props.curvature_pitch,
@@ -679,7 +679,7 @@ var CLSTAMP = "11238649";
               "ignore-parent-scale": this.props.ignore_parent_scale,
               "transform-path": this.props.transform_path,
               "parent-path": this.props.parent_path,
-              "parent-origin": h,
+              "parent-origin": p,
               "parent-id": this.props.parent_id,
               "frame-resize-scale-factor": this.props.frame_resize_scale_factor,
             },
@@ -687,6 +687,642 @@ var CLSTAMP = "11238649";
           );
         }
       }
+    },
+    4367: (e, t, o) => {
+      var r,
+        i,
+        n,
+        a,
+        s,
+        l,
+        _,
+        p,
+        d,
+        u,
+        m,
+        c,
+        h,
+        g,
+        S,
+        v,
+        D,
+        y,
+        B,
+        I,
+        C,
+        f,
+        F,
+        M,
+        P,
+        R,
+        w,
+        b,
+        k;
+      function A(e) {
+        if (!e) return;
+        return Object.values(g)
+          .filter((e) => "number" == typeof e)
+          .includes(e)
+          ? e
+          : void 0;
+      }
+      o.d(t, {
+        $: () => u,
+        $Z: () => m,
+        Do: () => M,
+        Ee: () => b,
+        Fz: () => y,
+        JR: () => l,
+        KI: () => d,
+        QR: () => s,
+        YV: () => S,
+        Yu: () => w,
+        ZP: () => D,
+        _8: () => C,
+        ds: () => A,
+        en: () => a,
+        eo: () => c,
+        f9: () => P,
+        fD: () => r,
+        fk: () => h,
+        hm: () => i,
+        hq: () => f,
+        lt: () => R,
+        pF: () => B,
+        wB: () => v,
+        yW: () => g,
+        zw: () => k,
+      }),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.TrackingSystemName_String = 1e3)] =
+              "TrackingSystemName_String"),
+            (e[(e.ModelNumber_String = 1001)] = "ModelNumber_String"),
+            (e[(e.SerialNumber_String = 1002)] = "SerialNumber_String"),
+            (e[(e.RenderModelName_String = 1003)] = "RenderModelName_String"),
+            (e[(e.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
+            (e[(e.ManufacturerName_String = 1005)] = "ManufacturerName_String"),
+            (e[(e.TrackingFirmwareVersion_String = 1006)] =
+              "TrackingFirmwareVersion_String"),
+            (e[(e.HardwareRevision_String = 1007)] = "HardwareRevision_String"),
+            (e[(e.AllWirelessDongleDescriptions_String = 1008)] =
+              "AllWirelessDongleDescriptions_String"),
+            (e[(e.ConnectedWirelessDongle_String = 1009)] =
+              "ConnectedWirelessDongle_String"),
+            (e[(e.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
+            (e[(e.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
+            (e[(e.DeviceBatteryPercentage_Float = 1012)] =
+              "DeviceBatteryPercentage_Float"),
+            (e[(e.StatusDisplayTransform_Matrix34 = 1013)] =
+              "StatusDisplayTransform_Matrix34"),
+            (e[(e.Firmware_UpdateAvailable_Bool = 1014)] =
+              "Firmware_UpdateAvailable_Bool"),
+            (e[(e.Firmware_ManualUpdate_Bool = 1015)] =
+              "Firmware_ManualUpdate_Bool"),
+            (e[(e.Firmware_ManualUpdateURL_String = 1016)] =
+              "Firmware_ManualUpdateURL_String"),
+            (e[(e.HardwareRevision_Uint64 = 1017)] = "HardwareRevision_Uint64"),
+            (e[(e.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
+            (e[(e.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
+            (e[(e.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
+            (e[(e.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
+            (e[(e.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
+            (e[(e.BlockServerShutdown_Bool = 1023)] =
+              "BlockServerShutdown_Bool"),
+            (e[(e.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
+              "CanUnifyCoordinateSystemWithHmd_Bool"),
+            (e[(e.ContainsProximitySensor_Bool = 1025)] =
+              "ContainsProximitySensor_Bool"),
+            (e[(e.DeviceProvidesBatteryStatus_Bool = 1026)] =
+              "DeviceProvidesBatteryStatus_Bool"),
+            (e[(e.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
+            (e[(e.Firmware_ProgrammingTarget_String = 1028)] =
+              "Firmware_ProgrammingTarget_String"),
+            (e[(e.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
+            (e[(e.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
+            (e[(e.DriverVersion_String = 1031)] = "DriverVersion_String"),
+            (e[(e.Firmware_ForceUpdateRequired_Bool = 1032)] =
+              "Firmware_ForceUpdateRequired_Bool"),
+            (e[(e.ViveSystemButtonFixRequired_Bool = 1033)] =
+              "ViveSystemButtonFixRequired_Bool"),
+            (e[(e.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
+            (e[(e.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
+            (e[(e.RegisteredDeviceType_String = 1036)] =
+              "RegisteredDeviceType_String"),
+            (e[(e.InputProfilePath_String = 1037)] = "InputProfilePath_String"),
+            (e[(e.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
+            (e[(e.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
+            (e[(e.CameraFrameLayout_Int32 = 1040)] = "CameraFrameLayout_Int32"),
+            (e[(e.CameraStreamFormat_Int32 = 1041)] =
+              "CameraStreamFormat_Int32"),
+            (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
+              "AdditionalDeviceSettingsPath_String"),
+            (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+            (e[(e.ActualTrackingSystemName_String = 1054)] =
+              "ActualTrackingSystemName_String"),
+            (e[(e.AllowCameraToggle_Bool = 1055)] = "AllowCameraToggle_Bool"),
+            (e[(e.AllowLightSourceFrequency_Bool = 1056)] =
+              "AllowLightSourceFrequency_Bool"),
+            (e[(e.IsDedicatedVRHeadset_Bool = 1058)] =
+              "IsDedicatedVRHeadset_Bool"),
+            (e[(e.HasEyeTracker_Bool = 1060)] = "HasEyeTracker_Bool"),
+            (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
+              "ReportsTimeSinceVSync_Bool"),
+            (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
+              "SecondsFromVsyncToPhotons_Float"),
+            (e[(e.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
+            (e[(e.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
+            (e[(e.CurrentUniverseId_Uint64 = 2004)] =
+              "CurrentUniverseId_Uint64"),
+            (e[(e.PreviousUniverseId_Uint64 = 2005)] =
+              "PreviousUniverseId_Uint64"),
+            (e[(e.DisplayFirmwareVersion_Uint64 = 2006)] =
+              "DisplayFirmwareVersion_Uint64"),
+            (e[(e.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
+            (e[(e.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
+            (e[(e.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
+            (e[(e.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
+            (e[(e.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
+            (e[(e.DisplayMCImageLeft_String = 2012)] =
+              "DisplayMCImageLeft_String"),
+            (e[(e.DisplayMCImageRight_String = 2013)] =
+              "DisplayMCImageRight_String"),
+            (e[(e.DisplayGCBlackClamp_Float = 2014)] =
+              "DisplayGCBlackClamp_Float"),
+            (e[(e.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
+            (e[(e.CameraToHeadTransform_Matrix34 = 2016)] =
+              "CameraToHeadTransform_Matrix34"),
+            (e[(e.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
+            (e[(e.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
+            (e[(e.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
+            (e[(e.DisplayGCPrescale_Float = 2020)] = "DisplayGCPrescale_Float"),
+            (e[(e.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
+            (e[(e.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
+            (e[(e.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
+            (e[(e.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
+            (e[(e.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
+            (e[(e.UserHeadToEyeDepthMeters_Float = 2026)] =
+              "UserHeadToEyeDepthMeters_Float"),
+            (e[(e.CameraFirmwareVersion_Uint64 = 2027)] =
+              "CameraFirmwareVersion_Uint64"),
+            (e[(e.CameraFirmwareDescription_String = 2028)] =
+              "CameraFirmwareDescription_String"),
+            (e[(e.DisplayFPGAVersion_Uint64 = 2029)] =
+              "DisplayFPGAVersion_Uint64"),
+            (e[(e.DisplayBootloaderVersion_Uint64 = 2030)] =
+              "DisplayBootloaderVersion_Uint64"),
+            (e[(e.DisplayHardwareVersion_Uint64 = 2031)] =
+              "DisplayHardwareVersion_Uint64"),
+            (e[(e.AudioFirmwareVersion_Uint64 = 2032)] =
+              "AudioFirmwareVersion_Uint64"),
+            (e[(e.CameraCompatibilityMode_Int32 = 2033)] =
+              "CameraCompatibilityMode_Int32"),
+            (e[(e.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
+              "ScreenshotHorizontalFieldOfViewDegrees_Float"),
+            (e[(e.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
+              "ScreenshotVerticalFieldOfViewDegrees_Float"),
+            (e[(e.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
+            (e[(e.DisplayAllowNightMode_Bool = 2037)] =
+              "DisplayAllowNightMode_Bool"),
+            (e[(e.DisplayMCImageWidth_Int32 = 2038)] =
+              "DisplayMCImageWidth_Int32"),
+            (e[(e.DisplayMCImageHeight_Int32 = 2039)] =
+              "DisplayMCImageHeight_Int32"),
+            (e[(e.DisplayMCImageNumChannels_Int32 = 2040)] =
+              "DisplayMCImageNumChannels_Int32"),
+            (e[(e.DisplayMCImageData_Binary = 2041)] =
+              "DisplayMCImageData_Binary"),
+            (e[(e.SecondsFromPhotonsToVblank_Float = 2042)] =
+              "SecondsFromPhotonsToVblank_Float"),
+            (e[(e.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
+              "DriverDirectModeSendsVsyncEvents_Bool"),
+            (e[(e.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
+            (e[(e.GraphicsAdapterLuid_Uint64 = 2045)] =
+              "GraphicsAdapterLuid_Uint64"),
+            (e[(e.DriverProvidedChaperonePath_String = 2048)] =
+              "DriverProvidedChaperonePath_String"),
+            (e[(e.ExpectedTrackingReferenceCount_Int32 = 2049)] =
+              "ExpectedTrackingReferenceCount_Int32"),
+            (e[(e.ExpectedControllerCount_Int32 = 2050)] =
+              "ExpectedControllerCount_Int32"),
+            (e[(e.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
+              "NamedIconPathControllerLeftDeviceOff_String"),
+            (e[(e.NamedIconPathControllerRightDeviceOff_String = 2052)] =
+              "NamedIconPathControllerRightDeviceOff_String"),
+            (e[(e.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
+              "NamedIconPathTrackingReferenceDeviceOff_String"),
+            (e[(e.DoNotApplyPrediction_Bool = 2054)] =
+              "DoNotApplyPrediction_Bool"),
+            (e[(e.CameraToHeadTransforms_Matrix34_Array = 2055)] =
+              "CameraToHeadTransforms_Matrix34_Array"),
+            (e[(e.DistortionMeshResolution_Int32 = 2056)] =
+              "DistortionMeshResolution_Int32"),
+            (e[(e.DriverIsDrawingControllers_Bool = 2057)] =
+              "DriverIsDrawingControllers_Bool"),
+            (e[(e.DriverRequestsApplicationPause_Bool = 2058)] =
+              "DriverRequestsApplicationPause_Bool"),
+            (e[(e.DriverRequestsReducedRendering_Bool = 2059)] =
+              "DriverRequestsReducedRendering_Bool"),
+            (e[(e.MinimumIpdStepMeters_Float = 2060)] =
+              "MinimumIpdStepMeters_Float"),
+            (e[(e.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
+              "AudioBridgeFirmwareVersion_Uint64"),
+            (e[(e.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
+              "ImageBridgeFirmwareVersion_Uint64"),
+            (e[(e.ImuToHeadTransform_Matrix34 = 2063)] =
+              "ImuToHeadTransform_Matrix34"),
+            (e[(e.ImuFactoryGyroBias_Vector3 = 2064)] =
+              "ImuFactoryGyroBias_Vector3"),
+            (e[(e.ImuFactoryGyroScale_Vector3 = 2065)] =
+              "ImuFactoryGyroScale_Vector3"),
+            (e[(e.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
+              "ImuFactoryAccelerometerBias_Vector3"),
+            (e[(e.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
+              "ImuFactoryAccelerometerScale_Vector3"),
+            (e[(e.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
+              "ConfigurationIncludesLighthouse20Features_Bool"),
+            (e[(e.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
+              "Prop_AdditionalRadioFeatures_Uint64"),
+            (e[(e.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
+              "Prop_CameraWhiteBalance_Vector4_Array"),
+            (e[(e.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
+              "Prop_CameraDistortionFunction_Int32_Array"),
+            (e[(e.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
+              "Prop_CameraDistortionCoefficients_Float_Array"),
+            (e[(e.Prop_ExpectedControllerType_String = 2074)] =
+              "Prop_ExpectedControllerType_String"),
+            (e[(e.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
+            (e[(e.DriverProvidedChaperoneVisibility_Bool = 2076)] =
+              "DriverProvidedChaperoneVisibility_Bool"),
+            (e[(e.HmdColumnCorrectionSettingPrefix_String = 2077)] =
+              "HmdColumnCorrectionSettingPrefix_String"),
+            (e[(e.CameraSupportsCompatibilityModes_Bool = 2078)] =
+              "CameraSupportsCompatibilityModes_Bool"),
+            (e[(e.SupportsRoomViewDepthProjection_Bool = 2079)] =
+              "SupportsRoomViewDepthProjection_Bool"),
+            (e[(e.DisplayAvailableFrameRates_Float_Array = 2080)] =
+              "DisplayAvailableFrameRates_Float_Array"),
+            (e[(e.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
+              "DisplaySupportsRuntimeFramerateChange_Bool"),
+            (e[(e.DisplaySupportsAnalogGain_Bool = 2085)] =
+              "DisplaySupportsAnalogGain_Bool"),
+            (e[(e.DisplayMinAnalogGain_Float = 2086)] =
+              "DisplayMinAnalogGain_Float"),
+            (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
+              "DisplayMaxAnalogGain_Float"),
+            (e[(e.DashboardLinkSupport_Int32 = 2097)] =
+              "DashboardLinkSupport_Int32"),
+            (e[(e.DisplayMinUIAnalogGain_Float = 2098)] =
+              "DisplayMinUIAnalogGain_Float"),
+            (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
+            (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
+              "IpdUIRangeMinMeters_Float"),
+            (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
+              "IpdUIRangeMaxMeters_Float"),
+            (e[(e.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
+              "Hmd_SupportsHDCP14LegacyCompat_Bool"),
+            (e[(e.Hmd_SupportsMicMonitoring_Bool = 2103)] =
+              "Hmd_SupportsMicMonitoring_Bool"),
+            (e[(e.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
+              "Hmd_SupportsDisplayPortTrainingMode_Bool"),
+            (e[(e.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
+              "Hmd_SupportsRoomViewDirect_Bool"),
+            (e[(e.Hmd_SupportsAppThrottling_Bool = 2106)] =
+              "Hmd_SupportsAppThrottling_Bool"),
+            (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
+              "Hmd_SupportsGpuBusMonitoring_Bool"),
+            (e[(e.DriverProvidedIPDVisibility_Bool = 2108)] =
+              "DriverProvidedIPDVisibility_Bool"),
+            (e[(e.Hmd_AllowSupersampleFiltering_Bool = 2115)] =
+              "Hmd_AllowSupersampleFiltering_Bool"),
+            (e[(e.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+              "Prop_SupportsVRGamepadMode_Bool"),
+            (e[(e.Hmd_SupportsChromaKeyPassthrough_Bool = 2119)] =
+              "Hmd_SupportsChromaKeyPassthrough_Bool"),
+            (e[(e.Hmd_CameraSettingsModel_Int32 = 2122)] =
+              "Hmd_CameraSettingsModel_Int32"),
+            (e[(e.Hmd_EnablePerAppFPS_Bool = 2133)] =
+              "Hmd_EnablePerAppFPS_Bool"),
+            (e[(e.Hmd_SupportsGammaBlackMode_Bool = 2134)] =
+              "Hmd_SupportsGammaBlackMode_Bool"),
+            (e[(e.Hmd_SupportsHwSharpening_Bool = 2127)] =
+              "Hmd_SupportsHwSharpening_Bool"),
+            (e[(e.Hmd_HwSharpeningDefault_Float = 2130)] =
+              "Hmd_HwSharpeningDefault_Float"),
+            (e[(e.Hmd_SupportsPrismCorrection_Bool = 2135)] =
+              "Hmd_SupportsPrismCorrection_Bool"),
+            (e[(e.Hmd_SupportsHapticsSettings_Bool = 2136)] =
+              "Hmd_SupportsHapticsSettings_Bool"),
+            (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
+              "DriverRequestedMuraCorrectionMode_Int32"),
+            (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
+              "DriverRequestedMuraFeather_InnerLeft_Int32"),
+            (e[(e.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
+              "DriverRequestedMuraFeather_InnerRight_Int32"),
+            (e[(e.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
+              "DriverRequestedMuraFeather_InnerTop_Int32"),
+            (e[(e.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
+              "DriverRequestedMuraFeather_InnerBottom_Int32"),
+            (e[(e.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
+              "DriverRequestedMuraFeather_OuterLeft_Int32"),
+            (e[(e.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
+              "DriverRequestedMuraFeather_OuterRight_Int32"),
+            (e[(e.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
+              "DriverRequestedMuraFeather_OuterTop_Int32"),
+            (e[(e.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
+              "DriverRequestedMuraFeather_OuterBottom_Int32"),
+            (e[(e.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
+              "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+            (e[(e.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+              "Hmd_ForceRoomViewOutsideChaperone_Bool"),
+            (e[(e.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
+            (e[(e.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
+            (e[(e.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
+            (e[(e.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
+            (e[(e.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
+            (e[(e.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
+            (e[(e.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
+            (e[(e.ControllerRoleHint_Int32 = 3007)] =
+              "ControllerRoleHint_Int32"),
+            (e[(e.Prop_ControllerHasLargeStatusArea_Bool = 3008)] =
+              "Prop_ControllerHasLargeStatusArea_Bool"),
+            (e[(e.FieldOfViewLeftDegrees_Float = 4e3)] =
+              "FieldOfViewLeftDegrees_Float"),
+            (e[(e.FieldOfViewRightDegrees_Float = 4001)] =
+              "FieldOfViewRightDegrees_Float"),
+            (e[(e.FieldOfViewTopDegrees_Float = 4002)] =
+              "FieldOfViewTopDegrees_Float"),
+            (e[(e.FieldOfViewBottomDegrees_Float = 4003)] =
+              "FieldOfViewBottomDegrees_Float"),
+            (e[(e.TrackingRangeMinimumMeters_Float = 4004)] =
+              "TrackingRangeMinimumMeters_Float"),
+            (e[(e.TrackingRangeMaximumMeters_Float = 4005)] =
+              "TrackingRangeMaximumMeters_Float"),
+            (e[(e.ModeLabel_String = 4006)] = "ModeLabel_String"),
+            (e[(e.IconPathName_String = 5e3)] = "IconPathName_String"),
+            (e[(e.NamedIconPathDeviceOff_String = 5001)] =
+              "NamedIconPathDeviceOff_String"),
+            (e[(e.NamedIconPathDeviceSearching_String = 5002)] =
+              "NamedIconPathDeviceSearching_String"),
+            (e[(e.NamedIconPathDeviceSearchingAlert_String = 5003)] =
+              "NamedIconPathDeviceSearchingAlert_String"),
+            (e[(e.NamedIconPathDeviceReady_String = 5004)] =
+              "NamedIconPathDeviceReady_String"),
+            (e[(e.NamedIconPathDeviceReadyAlert_String = 5005)] =
+              "NamedIconPathDeviceReadyAlert_String"),
+            (e[(e.NamedIconPathDeviceNotReady_String = 5006)] =
+              "NamedIconPathDeviceNotReady_String"),
+            (e[(e.NamedIconPathDeviceStandby_String = 5007)] =
+              "NamedIconPathDeviceStandby_String"),
+            (e[(e.NamedIconPathDeviceAlertLow_String = 5008)] =
+              "NamedIconPathDeviceAlertLow_String"),
+            (e[(e.DisplayHiddenArea_Binary_Start = 5100)] =
+              "DisplayHiddenArea_Binary_Start"),
+            (e[(e.DisplayHiddenArea_Binary_End = 5150)] =
+              "DisplayHiddenArea_Binary_End"),
+            (e[(e.ParentContainer = 5151)] = "ParentContainer"),
+            (e[(e.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
+            (e[(e.InstallPath_String = 6001)] = "InstallPath_String"),
+            (e[(e.HasDisplayComponent_Bool = 6002)] =
+              "HasDisplayComponent_Bool"),
+            (e[(e.HasControllerComponent_Bool = 6003)] =
+              "HasControllerComponent_Bool"),
+            (e[(e.HasCameraComponent_Bool = 6004)] = "HasCameraComponent_Bool"),
+            (e[(e.HasDriverDirectModeComponent_Bool = 6005)] =
+              "HasDriverDirectModeComponent_Bool"),
+            (e[(e.HasVirtualDisplayComponent_Bool = 6006)] =
+              "HasVirtualDisplayComponent_Bool"),
+            (e[(e.HasSpatialAnchorsSupport_Bool = 6007)] =
+              "HasSpatialAnchorsSupport_Bool"),
+            (e[(e.SupportsXrEyeGazeInteraction_Bool = 6009)] =
+              "SupportsXrEyeGazeInteraction_Bool"),
+            (e[(e.ControllerType_String = 7e3)] = "ControllerType_String"),
+            (e[(e.LegacyInputProfile_String = 7001)] =
+              "LegacyInputProfile_String"),
+            (e[(e.VendorSpecific_Reserved_Start = 1e4)] =
+              "VendorSpecific_Reserved_Start"),
+            (e[(e.VendorSpecific_Reserved_End = 10999)] =
+              "VendorSpecific_Reserved_End"),
+            (e[(e.SupportsInHMDRoomSetup_Bool = 11003)] =
+              "SupportsInHMDRoomSetup_Bool"),
+            (e[(e.VRLinkClientHMDSupportsRoomSetupRequests_Bool = 11004)] =
+              "VRLinkClientHMDSupportsRoomSetupRequests_Bool"),
+            (e[(e.TrackedDeviceProperty_Max = 1e6)] =
+              "TrackedDeviceProperty_Max");
+        })(r || (r = {})),
+        (function (e) {
+          (e[(e.Eye_Left = 0)] = "Eye_Left"),
+            (e[(e.Eye_Right = 1)] = "Eye_Right");
+        })(i || (i = {})),
+        (function (e) {
+          (e[(e.k_EButton_System = 0)] = "k_EButton_System"),
+            (e[(e.k_EButton_ApplicationMenu = 1)] =
+              "k_EButton_ApplicationMenu"),
+            (e[(e.k_EButton_Grip = 2)] = "k_EButton_Grip"),
+            (e[(e.k_EButton_DPad_Left = 3)] = "k_EButton_DPad_Left"),
+            (e[(e.k_EButton_DPad_Up = 4)] = "k_EButton_DPad_Up"),
+            (e[(e.k_EButton_DPad_Right = 5)] = "k_EButton_DPad_Right"),
+            (e[(e.k_EButton_DPad_Down = 6)] = "k_EButton_DPad_Down"),
+            (e[(e.k_EButton_A = 7)] = "k_EButton_A"),
+            (e[(e.k_EButton_ProximitySensor = 31)] =
+              "k_EButton_ProximitySensor"),
+            (e[(e.k_EButton_Axis0 = 32)] = "k_EButton_Axis0"),
+            (e[(e.k_EButton_Axis1 = 33)] = "k_EButton_Axis1"),
+            (e[(e.k_EButton_Axis2 = 34)] = "k_EButton_Axis2"),
+            (e[(e.k_EButton_Axis3 = 35)] = "k_EButton_Axis3"),
+            (e[(e.k_EButton_Axis4 = 36)] = "k_EButton_Axis4"),
+            (e[(e.k_EButton_SteamVR_Touchpad = 32)] =
+              "k_EButton_SteamVR_Touchpad"),
+            (e[(e.k_EButton_SteamVR_Trigger = 33)] =
+              "k_EButton_SteamVR_Trigger"),
+            (e[(e.k_EButton_Dashboard_Back = 2)] = "k_EButton_Dashboard_Back"),
+            (e[(e.k_EButton_IndexController_A = 2)] =
+              "k_EButton_IndexController_A"),
+            (e[(e.k_EButton_IndexController_B = 1)] =
+              "k_EButton_IndexController_B"),
+            (e[(e.k_EButton_IndexController_JoyStick = 35)] =
+              "k_EButton_IndexController_JoyStick"),
+            (e[(e.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
+            (e[(e.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
+            (e[(e.k_EButton_Max = 64)] = "k_EButton_Max");
+        })(n || (n = {})),
+        (function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.ButtonEnter = 1)] = "ButtonEnter"),
+            (e[(e.ButtonLeave = 2)] = "ButtonLeave"),
+            (e[(e.Snap = 3)] = "Snap"),
+            (e[(e.Sliding = 4)] = "Sliding"),
+            (e[(e.SlidingEdge = 5)] = "SlidingEdge");
+        })(a || (a = {})),
+        (function (e) {
+          (e[(e.Minimal = 1)] = "Minimal"),
+            (e[(e.Modal = 2)] = "Modal"),
+            (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+            (e[(e.HideDoneKey = 8)] = "HideDoneKey");
+        })(s || (s = {})),
+        (function (e) {
+          (e[(e.Unknown = -1)] = "Unknown"),
+            (e[(e.Idle = 0)] = "Idle"),
+            (e[(e.UserInteraction = 1)] = "UserInteraction"),
+            (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (e[(e.Standby = 3)] = "Standby"),
+            (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(l || (l = {})),
+        (function (e) {
+          (e[(e.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (e[(e.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (e[(e.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
+        })(_ || (_ = {})),
+        (function (e) {
+          (e[(e.Notification_Shown = 600)] = "Notification_Shown"),
+            (e[(e.Notification_Hidden = 601)] = "Notification_Hidden"),
+            (e[(e.Notification_BeginInteraction = 602)] =
+              "Notification_BeginInteraction"),
+            (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
+        })(p || (p = {})),
+        (function (e) {
+          (e[(e.TheaterFast = 0)] = "TheaterFast"),
+            (e[(e.TheaterSlow = 1)] = "TheaterSlow");
+        })(d || (d = {})),
+        (function (e) {
+          (e[(e.Constant = 0)] = "Constant"),
+            (e[(e.Nearest = 1)] = "Nearest"),
+            (e[(e.Linear = 2)] = "Linear"),
+            (e[(e.SmoothStep = 3)] = "SmoothStep"),
+            (e[(e.SmootherStep = 4)] = "SmootherStep");
+        })(u || (u = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.RecenterCountdown = 1)] = "RecenterCountdown"),
+            (e[(e.FloorAdjustExisting = 2)] = "FloorAdjustExisting"),
+            (e[(e.RoomSetupFloor = 3)] = "RoomSetupFloor"),
+            (e[(e.ClearRoomSetup = 4)] = "ClearRoomSetup"),
+            (e[(e.RoomSetupFull = 5)] = "RoomSetupFull");
+        })(m || (m = {})),
+        (function (e) {
+          (e[(e.Near = 0)] = "Near"),
+            (e[(e.Middle = 1)] = "Middle"),
+            (e[(e.Far = 2)] = "Far"),
+            (e[(e.VRGamepadUI = 3)] = "VRGamepadUI");
+        })(c || (c = {})),
+        (function (e) {
+          (e[(e.__LocalSteamVR = 0)] = "__LocalSteamVR"),
+            (e[(e.__LocalSteam = 1)] = "__LocalSteam"),
+            (e[(e.__RemoteSteamVR = 2)] = "__RemoteSteamVR"),
+            (e[(e.__RemoteSteam = 3)] = "__RemoteSteam"),
+            (e[(e.MutualLocal = 4)] = "MutualLocal"),
+            (e[(e.MutualSteamVR = 5)] = "MutualSteamVR"),
+            (e[(e.MutualSteam = 6)] = "MutualSteam");
+        })(h || (h = {})),
+        (function (e) {
+          (e[(e.Dashboard = 1)] = "Dashboard"),
+            (e[(e.LeftHand = 2)] = "LeftHand"),
+            (e[(e.RightHand = 3)] = "RightHand"),
+            (e[(e.World = 4)] = "World"),
+            (e[(e.Theater = 5)] = "Theater"),
+            (e[(e.Boot = 6)] = "Boot");
+        })(g || (g = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.SceneApp = 1)] = "SceneApp"),
+            (e[(e.Panel = 2)] = "Panel");
+        })(S || (S = {})),
+        (function (e) {
+          (e[(e.Unknown = 0)] = "Unknown"),
+            (e[(e.LaserMouse = 1)] = "LaserMouse"),
+            (e[(e.Gamepad = 2)] = "Gamepad");
+        })(v || (v = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.ControllerPairing = 1)] = "ControllerPairing"),
+            (e[(e.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (e[(e.PlayspaceSetup = 3)] = "PlayspaceSetup"),
+            (e[(e.LaserMouse = 4)] = "LaserMouse"),
+            (e[(e.SystemButtonHideDashboard = 5)] =
+              "SystemButtonHideDashboard"),
+            (e[(e.SystemButtonDashboardHidden = 6)] =
+              "SystemButtonDashboardHidden"),
+            (e[(e.SystemButtonShowDashboard = 7)] =
+              "SystemButtonShowDashboard"),
+            (e[(e.PairWifiDongle = 8)] = "PairWifiDongle"),
+            (e[(e.TourSendOff = 9)] = "TourSendOff"),
+            (e[(e.SteamGuidedTourFinished = 10)] = "SteamGuidedTourFinished");
+        })(D || (D = {})),
+        (function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.ThirdPartyClient = 1)] = "ThirdPartyClient"),
+            (e[(e.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
+            (e[(e.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+        })(y || (y = {})),
+        (function (e) {
+          (e[(e.Off = 0)] = "Off"),
+            (e[(e.On = 1)] = "On"),
+            (e[(e.OnSolid = 2)] = "OnSolid");
+        })(B || (B = {})),
+        (function (e) {
+          (e[(e.Default = 0)] = "Default"),
+            (e[(e.AuroraFloor = 1)] = "AuroraFloor");
+        })(I || (I = {})),
+        (function (e) {
+          (e[(e.SceneAppNominal = 0)] = "SceneAppNominal"),
+            (e[(e.SceneAppDimming = 1)] = "SceneAppDimming"),
+            (e[(e.RoomSetup = 2)] = "RoomSetup"),
+            (e[(e.SystemDimming = 3)] = "SystemDimming"),
+            (e[(e.ConstructTheater = 4)] = "ConstructTheater"),
+            (e[(e.ConstructNominal = 5)] = "ConstructNominal");
+        })(C || (C = {})),
+        (function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.LargeDeadZone = 4)] = "LargeDeadZone"),
+            (e[(e.SmallDeadZone = 8)] = "SmallDeadZone"),
+            (e[(e.NoDeadZoneThenSmallElastic = 12)] =
+              "NoDeadZoneThenSmallElastic");
+        })(f || (f = {})),
+        (function (e) {
+          (e[(e.Rect = 0)] = "Rect"),
+            (e[(e.Panorama = 1)] = "Panorama"),
+            (e[(e.Projection = 2)] = "Projection"),
+            (e[(e.Spherical = 3)] = "Spherical");
+        })(F || (F = {})),
+        (function (e) {
+          (e[(e.Curved = 0)] = "Curved"), (e[(e.Flat = 1)] = "Flat");
+        })(M || (M = {})),
+        (function (e) {
+          (e[(e.Default = 0)] = "Default"), (e[(e.Aurora = 1)] = "Aurora");
+        })(P || (P = {})),
+        (function (e) {
+          (e[(e.Default = 0)] = "Default"),
+            (e[(e.Sensitive = 1)] = "Sensitive");
+        })(R || (R = {})),
+        (function (e) {
+          (e[(e.ECameraExposure_Unknown = 0)] = "ECameraExposure_Unknown"),
+            (e[(e.ECameraExposure_Nominal = 1)] = "ECameraExposure_Nominal"),
+            (e[(e.ECameraExposure_HighExposure = 2)] =
+              "ECameraExposure_HighExposure");
+        })(w || (w = {})),
+        (function (e) {
+          (e[(e.BULK_DEFAULT = 0)] = "BULK_DEFAULT"),
+            (e[(e.BULK_64K_DMA = 1)] = "BULK_64K_DMA"),
+            (e[(e.BULK_16K_DMA = 2)] = "BULK_16K_DMA"),
+            (e[(e.BULK_8K_DMA = 3)] = "BULK_8K_DMA"),
+            (e[(e.ISO_52FPS = 4)] = "ISO_52FPS"),
+            (e[(e.ISO_50FPS = 5)] = "ISO_50FPS"),
+            (e[(e.ISO_48FPS = 6)] = "ISO_48FPS"),
+            (e[(e.ISO_46FPS = 7)] = "ISO_46FPS"),
+            (e[(e.ISO_44FPS = 8)] = "ISO_44FPS"),
+            (e[(e.ISO_42FPS = 9)] = "ISO_42FPS"),
+            (e[(e.ISO_40FPS = 10)] = "ISO_40FPS"),
+            (e[(e.ISO_35FPS = 11)] = "ISO_35FPS"),
+            (e[(e.ISO_30FPS = 12)] = "ISO_30FPS"),
+            (e[(e.ISO_15FPS = 13)] = "ISO_15FPS"),
+            (e[(e.MAX_CAMERA_COMPAT_MODES = 14)] = "MAX_CAMERA_COMPAT_MODES");
+        })(b || (b = {})),
+        (function (e) {
+          (e[(e.ECameraSettingsModel_Default = 0)] =
+            "ECameraSettingsModel_Default"),
+            (e[(e.ECameraSettingsModel_SteamFrame = 1)] =
+              "ECameraSettingsModel_SteamFrame");
+        })(k || (k = {}));
     },
   },
 ]); //# sourceMappingURL=file:///home/buildbot/buildslave/steamvr_rel_npm_vrwebui/build/public/runtime/resources/webinterface/dashboard/sourcemaps/chunk~edeac9135.js.map
