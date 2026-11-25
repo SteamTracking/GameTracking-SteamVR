@@ -16825,7 +16825,7 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "onOptionMouseLeave", null),
           (_ = (0, _._)([_._], _));
         const _ = (0, _._)((_) => {
-          const _ = _.settings.get(_.name),
+          const _ = void 0 !== _.name ? _.settings.get(_.name) : _.value,
             _ = _.items.find((_) => _.value === _);
           return _.createElement(
             _,
@@ -16862,8 +16862,13 @@ var CLSTAMP = "steamdb";
                   },
                   onClick: () =>
                     ((_) => {
+                      var _;
                       _.value !== _ &&
-                        (_.SetSettingsValue(_.name, _.value),
+                        (void 0 !== _.name &&
+                          _.SetSettingsValue(_.name, _.value),
+                        null === (_ = _.onChange) ||
+                          void 0 === _ ||
+                          _.call(_, _.value),
                         _() == _.Overlay &&
                           (_.temporarilySuppressSoundEffect(),
                           _.Instance.playSound(_.ButtonClick)));
@@ -29739,7 +29744,7 @@ var CLSTAMP = "steamdb";
               _ || (_.SetSettingsValue(_, !1), _.SetSettingsValue(_, 0));
           }
           setDrawPerfCriteriaOverlay(_) {
-            _.SetSettingsValue(_, _), _ && this.setPerfGraphInHMD(!0);
+            _.SetSettingsValue(_, _), this.setPerfGraphInHMD(_);
           }
           get drawPerfCriteriaOverlay() {
             return _.settings.get(_);
@@ -30039,6 +30044,139 @@ var CLSTAMP = "steamdb";
             );
           }
         })();
+        var _;
+        !(function (_) {
+          (_[(_.Auto = 0)] = "Auto"),
+            (_[(_.ProtectContent = 1)] = "ProtectContent"),
+            (_[(_.KeyContent = 2)] = "KeyContent");
+        })(_ || (_ = {}));
+        const _ = [
+          {
+            value: 6,
+            sColor: "#FFFF00",
+          },
+          {
+            value: 4,
+            sColor: "#00FFFF",
+          },
+          {
+            value: 2,
+            sColor: "#00FF00",
+          },
+          {
+            value: 5,
+            sColor: "#FF00FF",
+          },
+          {
+            value: 1,
+            sColor: "#FF0000",
+          },
+          {
+            value: 3,
+            sColor: "#0000FF",
+          },
+        ];
+        function _() {
+          return !!_.m_bIsVRLinkServer && _.HasCapability(45, _.MutualSteamVR);
+        }
+        const _ = (0, _._)((_) => {
+          const _ = _(47, _.MutualSteamVR),
+            _ = _("/vrlink/steamvr/remote_roomview_translucent");
+          if (!_()) return null;
+          const _ = _.createElement(
+              "div",
+              {
+                className: "SettingsItemValueLabel",
+              },
+              _(
+                "#Settings_ChromaKey_TranslucentOnHeadset",
+                _("#Settings_Camera_RoomViewStyle_VideoOpaque"),
+                _("#Settings_Camera_RoomViewStyle_VideoTranslucent"),
+              ),
+            ),
+            _ = _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                name: _.mode.name,
+                value: _.mode.value,
+                onChange: _.mode.onChange,
+                label: _("#Settings_ChromaKey_Mode"),
+                items: [
+                  {
+                    value: _.Auto,
+                    sLabel: _("#Settings_ChromaKey_Mode_Auto"),
+                  },
+                  {
+                    value: _.ProtectContent,
+                    sLabel: _("#Settings_ChromaKey_Mode_ProtectContent"),
+                  },
+                  {
+                    value: _.KeyContent,
+                    sLabel: _("#Settings_ChromaKey_Mode_KeyContent"),
+                  },
+                ],
+                explainer: _(
+                  "#Settings_ChromaKey_Mode_Explainer",
+                  _.createElement(
+                    "b",
+                    null,
+                    _("#Settings_ChromaKey_Mode_ProtectContent"),
+                  ),
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement("br", null),
+                    _.createElement(
+                      "b",
+                      null,
+                      _("#Settings_ChromaKey_Mode_KeyContent"),
+                    ),
+                  ),
+                ),
+              }),
+              _.createElement(_, {
+                name: _.color.name,
+                value: _.color.value,
+                onChange: _.color.onChange,
+                label: _("#Settings_ChromaKey_Color"),
+                items: _,
+              }),
+              _ &&
+                _.createElement(_, {
+                  name: _.noiseFloor.name,
+                  value: _.noiseFloor.value,
+                  onChange: _.noiseFloor.onChange,
+                  label: _("#Settings_ChromaKey_Threshold"),
+                  min: 0,
+                  max: 0.5,
+                  step: 0.01,
+                  detents: [_.flDefaultNoiseFloor],
+                  valueStyleVariant: _.OnHandle,
+                  renderValue: (_) => _.toFixed(2),
+                  explainer: _("#Settings_ChromaKey_Threshold_Explainer"),
+                }),
+            );
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: "SettingsItem",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "Label Title Large",
+                },
+                _("#Settings_ChromaKey"),
+              ),
+            ),
+            _.intro,
+            _ ? _ : _,
+          );
+        });
         var _, _;
         function _() {
           VRHTML
@@ -30893,6 +31031,9 @@ var CLSTAMP = "steamdb";
               (this.m_disableAsyncReprojection = null),
               (this.m_eWorldScaleRange = _.Off),
               (this.m_flWorldScaleMultiplier = null),
+              (this.m_eChromaKeyMode = null),
+              (this.m_nChromaKeyColor = null),
+              (this.m_flChromaKeyNoiseFloor = null),
               (0, _.makeObservable)(this),
               (this.m_sAppKey = _.appKey);
           }
@@ -31034,6 +31175,9 @@ var CLSTAMP = "steamdb";
                 (this.m_flWorldScaleMultiplier = _.worldscale
                   ? _.worldscale
                   : 1),
+                (this.m_eChromaKeyMode = _.chroma_key_mode),
+                (this.m_nChromaKeyColor = _.chroma_key_color),
+                (this.m_flChromaKeyNoiseFloor = _.chroma_key_noise_floor),
                 (this.m_initialAppState = {
                   nFovScaleMultiplier: this.m_nFovScaleMultiplier,
                   disableAsyncReprojection: this.m_disableAsyncReprojection,
@@ -31138,6 +31282,17 @@ var CLSTAMP = "steamdb";
           }
           onMotionSmoothChange(_) {
             (this.m_eSmoothingMode = _), this.setAppState("smoothing", _);
+          }
+          onChromaKeyModeChange(_) {
+            (this.m_eChromaKeyMode = _), this.setAppState("chroma_key_mode", _);
+          }
+          onChromaKeyColorChange(_) {
+            (this.m_nChromaKeyColor = _),
+              this.setAppState("chroma_key_color", _);
+          }
+          onChromaKeyNoiseFloorChange(_) {
+            (this.m_flChromaKeyNoiseFloor = _),
+              this.setAppState("chroma_key_noise_floor", _);
           }
           onSharpeningChange(_) {
             (this.m_eSharpening = _), this.setAppState("sharpening", _);
@@ -31863,6 +32018,22 @@ var CLSTAMP = "steamdb";
                             ),
                           }),
                         ),
+                      null !== this.m_eChromaKeyMode &&
+                        _.createElement(_, {
+                          mode: {
+                            value: this.m_eChromaKeyMode,
+                            onChange: this.onChromaKeyModeChange,
+                          },
+                          color: {
+                            value: this.m_nChromaKeyColor,
+                            onChange: this.onChromaKeyColorChange,
+                          },
+                          noiseFloor: {
+                            value: this.m_flChromaKeyNoiseFloor,
+                            onChange: this.onChromaKeyNoiseFloorChange,
+                          },
+                          flDefaultNoiseFloor: 0,
+                        }),
                     ),
                   !this.hasCurrentApp() &&
                     _.createElement(
@@ -31937,6 +32108,14 @@ var CLSTAMP = "steamdb";
             "m_flWorldScaleMultiplier",
             void 0,
           ),
+          (0, _._)([_.observable], _.prototype, "m_eChromaKeyMode", void 0),
+          (0, _._)([_.observable], _.prototype, "m_nChromaKeyColor", void 0),
+          (0, _._)(
+            [_.observable],
+            _.prototype,
+            "m_flChromaKeyNoiseFloor",
+            void 0,
+          ),
           (0, _._)([_], _.prototype, "onApplicationChange", null),
           (0, _._)([_.action.bound], _.prototype, "updateAppState", null),
           (0, _._)([_.computed], _.prototype, "computedResolution", null),
@@ -31947,6 +32126,9 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "onFovScaleSliderChangeLower", null),
           (0, _._)([_], _.prototype, "onFovScaleFormatChange", null),
           (0, _._)([_], _.prototype, "onMotionSmoothChange", null),
+          (0, _._)([_], _.prototype, "onChromaKeyModeChange", null),
+          (0, _._)([_], _.prototype, "onChromaKeyColorChange", null),
+          (0, _._)([_], _.prototype, "onChromaKeyNoiseFloorChange", null),
           (0, _._)([_], _.prototype, "onSharpeningChange", null),
           (0, _._)([_], _.prototype, "onRefreshRateOverrideChange", null),
           (0, _._)([_], _.prototype, "onRefreshRateChange", null),
@@ -53585,155 +53767,30 @@ var CLSTAMP = "steamdb";
             (_[(_.Power50hz = 2)] = "Power50hz");
         })(_ || (_ = {}));
         const _ = (0, _._)(() => {
-            let _ = _.settings.get(_),
-              _ = [
-                {
-                  value: _.Auto,
-                  sLabel: _("#Settings_Camera_AntiFlickerSettingAuto"),
-                },
-                {
-                  value: _.Power60hz,
-                  sLabel: _("#Settings_Camera_AntiFlickerSetting60Hz"),
-                },
-                {
-                  value: _.Power50hz,
-                  sLabel: _("#Settings_Camera_AntiFlickerSetting50Hz"),
-                },
-              ];
-            return _.createElement(_, {
-              label: _("#Settings_Camera_AntiFlicker"),
-              title: _("#Settings_Camera_AntiFlicker_Desc"),
-              items: _,
-              value: _,
-              onChange: (_) => {
-                _.SetSettingsValue(_, _);
-              },
-            });
-          }),
-          _ = "/settings/driver_vrlink/chromaKeyMode",
-          _ = "/settings/driver_vrlink/chromaKeyColor",
-          _ = "/settings/driver_vrlink/chromaKeyNoiseFloor";
-        var _;
-        !(function (_) {
-          (_[(_.Auto = 0)] = "Auto"),
-            (_[(_.ProtectContent = 1)] = "ProtectContent"),
-            (_[(_.KeyContent = 2)] = "KeyContent");
-        })(_ || (_ = {}));
-        const _ = [
-          {
-            value: 6,
-            sColor: "#FFFF00",
-          },
-          {
-            value: 4,
-            sColor: "#00FFFF",
-          },
-          {
-            value: 2,
-            sColor: "#00FF00",
-          },
-          {
-            value: 5,
-            sColor: "#FF00FF",
-          },
-          {
-            value: 1,
-            sColor: "#FF0000",
-          },
-          {
-            value: 3,
-            sColor: "#0000FF",
-          },
-        ];
-        function _() {
-          return !!_.m_bIsVRLinkServer && _.HasCapability(45, _.MutualSteamVR);
-        }
-        const _ = (0, _._)(() => {
-          const _ = _(47, _.MutualSteamVR),
-            _ = _("/vrlink/steamvr/remote_roomview_translucent");
-          if (!_()) return null;
-          const _ = _.createElement(
-              "div",
+          let _ = _.settings.get(_),
+            _ = [
               {
-                className: "SettingsItemValueLabel",
+                value: _.Auto,
+                sLabel: _("#Settings_Camera_AntiFlickerSettingAuto"),
               },
-              _(
-                "#Settings_VRLink_RoomViewTranslucentOnHeadset",
-                _("#Settings_Camera_RoomViewStyle_VideoOpaque"),
-                _("#Settings_Camera_RoomViewStyle_VideoTranslucent"),
-              ),
-            ),
-            _ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_ChromaKeyMode"),
-                items: [
-                  {
-                    value: _.Auto,
-                    sLabel: _("#Settings_VRLink_ChromaKeyMode_Auto"),
-                  },
-                  {
-                    value: _.ProtectContent,
-                    sLabel: _("#Settings_VRLink_ChromaKeyMode_ProtectContent"),
-                  },
-                  {
-                    value: _.KeyContent,
-                    sLabel: _("#Settings_VRLink_ChromaKeyMode_KeyContent"),
-                  },
-                ],
-                explainer: _(
-                  "#Settings_VRLink_ChromaKeyMode_Explainer",
-                  _.createElement(
-                    "b",
-                    null,
-                    _("#Settings_VRLink_ChromaKeyMode_ProtectContent"),
-                  ),
-                  _.createElement(
-                    "b",
-                    null,
-                    _("#Settings_VRLink_ChromaKeyMode_KeyContent"),
-                  ),
-                ),
-              }),
-              _.createElement(_, {
-                name: _,
-                label: _("#Settings_VRLink_ChromaKeyColor"),
-                items: _,
-              }),
-              _ &&
-                _.createElement(_, {
-                  name: _,
-                  label: _("#Settings_VRLink_ChromaKeyThreshold"),
-                  min: 0.05,
-                  max: 0.5,
-                  step: 0.01,
-                  detents: [0.3],
-                  valueStyleVariant: _.OnHandle,
-                  renderValue: (_) => _.toFixed(2),
-                  explainer: _("#Settings_VRLink_ChromaKeyThreshold_Explainer"),
-                }),
-            );
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
               {
-                className: "SettingsItem",
+                value: _.Power60hz,
+                sLabel: _("#Settings_Camera_AntiFlickerSetting60Hz"),
               },
-              _.createElement(
-                "div",
-                {
-                  className: "Label Title Large",
-                },
-                _("#Settings_VRLink_RoomView"),
-              ),
-            ),
-            _ ? _ : _,
-            _.createElement("hr", null),
-          );
+              {
+                value: _.Power50hz,
+                sLabel: _("#Settings_Camera_AntiFlickerSetting50Hz"),
+              },
+            ];
+          return _.createElement(_, {
+            label: _("#Settings_Camera_AntiFlicker"),
+            title: _("#Settings_Camera_AntiFlicker_Desc"),
+            items: _,
+            value: _,
+            onChange: (_) => {
+              _.SetSettingsValue(_, _);
+            },
+          });
         });
         let _ = class extends _ {
           constructor(_) {
@@ -53955,16 +54012,11 @@ var CLSTAMP = "steamdb";
               )
             );
           }
-          ResetToDefaults() {
-            super.ResetToDefaults();
-            for (const _ of [_, _, _]) _.SetSettingsValue(_, null);
-          }
           render() {
             return this.props.active
               ? _.createElement(
                   _.Fragment,
                   null,
-                  _.createElement(_, null),
                   this.cameraEnabled() && this.renderEnabledSettings(),
                   this.cameraEnabled() &&
                     _.m_bAllowCameraToggle &&
@@ -53997,7 +54049,6 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "onStartCameraTest", null),
           (0, _._)([_], _.prototype, "onStopCameraTest", null),
           (0, _._)([_.computed], _.prototype, "currentRoomViewStyle", null),
-          (0, _._)([_], _.prototype, "ResetToDefaults", null),
           (_ = (0, _._)([_._], _));
         let _ = class extends _ {
           constructor(_) {
@@ -55326,7 +55377,7 @@ var CLSTAMP = "steamdb";
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(179511478e4).toLocaleString() + "",
+              value: new Date(1795573629e3).toLocaleString() + "",
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -58452,10 +58503,72 @@ var CLSTAMP = "steamdb";
                 }),
               )
             );
+          }),
+          _ = "/settings/steamvr/chromaKeyMode",
+          _ = "/settings/steamvr/chromaKeyColor",
+          _ = "/settings/steamvr/chromaKeyNoiseFloor",
+          _ = (0, _._)(() => {
+            const _ = _.useRef(null);
+            if (!_()) return null;
+            const _ = _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: "SettingsItemValueLabel Multiline",
+                },
+                _("#Settings_ChromaKey_ConstructDescription"),
+              ),
+              _.createElement(
+                _,
+                {
+                  className: "SettingsItem",
+                },
+                _.createElement(
+                  _,
+                  {
+                    className: "ButtonControl",
+                    onClick: () => {
+                      var _;
+                      return null === (_ = _.current) || void 0 === _
+                        ? void 0
+                        : _.show();
+                    },
+                  },
+                  _("#Settings_PerApplication_VideoSettings"),
+                ),
+              ),
+            );
+            return _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("hr", null),
+              _.createElement(_, {
+                mode: {
+                  name: _,
+                },
+                color: {
+                  name: _,
+                },
+                noiseFloor: {
+                  name: _,
+                },
+                flDefaultNoiseFloor: 0.3,
+                intro: _,
+              }),
+              _.createElement(_, {
+                ref: _,
+              }),
+            );
           });
         let _ = class extends _ {
           constructor(_) {
             super(_);
+          }
+          ResetToDefaults() {
+            super.ResetToDefaults();
+            for (const _ of [_, _, _]) _.SetSettingsValue(_, null);
           }
           render() {
             if (!this.props.active) return null;
@@ -58517,13 +58630,16 @@ var CLSTAMP = "steamdb";
                     label: _("#Settings_Appearance_PlayArea_FloorColor"),
                     name: "/settings/steamvr/playAreaColor",
                   }),
+                _.createElement(_, null),
                 this.makeResetToDefaultButton(),
               )
             );
           }
         };
         var _;
-        (_.Name = "playarea_settings"), (_ = (0, _._)([_._], _));
+        (_.Name = "playarea_settings"),
+          (0, _._)([_], _.prototype, "ResetToDefaults", null),
+          (_ = (0, _._)([_._], _));
         class _ {
           constructor() {
             (this.driverList = []),
@@ -59771,8 +59887,7 @@ var CLSTAMP = "steamdb";
                 : _.VRProperties.GetBoolProperty(
                     "/user/head",
                     _.HasCamera_Bool,
-                  )) &&
-              !_()
+                  ))
             )
               return !1;
             if ("internet_settings" == _.controller) return !1;
@@ -61499,6 +61614,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [851], () => _(4455));
+  var _ = _._(void 0, [851], () => _(5271));
   _ = _._(_);
 })();

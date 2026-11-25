@@ -329,9 +329,9 @@ $ORIGIN/../../../../bin/linux64
 /data/src/common/vrcore/src/ipcposix.cpp
 /data/src/common/vrcore/src/logbuffer.cpp
 /data/src/common/vrcore/src/vripcsharedstate.cpp
-/data/src/vrlink/driver_vrlink/hmd.cpp:3210
-/data/src/vrlink/driver_vrlink/hmd.cpp:3369
-/data/src/vrlink/driver_vrlink/hmd.cpp:3488
+/data/src/vrlink/driver_vrlink/hmd.cpp:3216
+/data/src/vrlink/driver_vrlink/hmd.cpp:3364
+/data/src/vrlink/driver_vrlink/hmd.cpp:3483
 /data/src/vrlink/driver_vrlink/hmdvulkan.cpp
 /data/src/vrlink/driver_vrlink/steamvrlink.cpp
 /data/src/vrlink/driver_vrlink/videovulkan.cpp
@@ -341,7 +341,6 @@ $ORIGIN/../../../../bin/linux64
 /driver_vrlink/client_version
 /driver_vrlink/default_inner_horizontal_degrees
 /driver_vrlink/default_stream_format_width
-/driver_vrlink/effective_foveated_resolution
 /driver_vrlink/foveation_enabled
 /driver_vrlink/max_stream_format_width
 /driver_vrlink/min_stream_format_width
@@ -2323,12 +2322,12 @@ ZN13CommandThread8ShutdownEvEUlvE_
 [SVLControllerHand] Activating hand tracking driver
 [SVLControllerHand] Error activating controller, Prop_ControllerType_String not set\n
 [SVLControllerHand] Error activating controller, Prop_ModelNumber_String not set\n
-[SVLControllerHand] Error activating controller, VTE_StaticProps_t not available\n
+[SVLControllerHand] Error activating controller, no hand tracking VTE_StaticProps_t captured\n
 [SVLController] Activate Error: Unsupported controller type "%s"\n
 [SVLController] Activating controller on TrackedDeviceIndex_t %d\n
 [SVLController] Error activating controller, Prop_ControllerType_String not set\n
 [SVLController] Error activating controller, Prop_ModelNumber_String not set\n
-[SVLController] Error activating controller, VTE_StaticProps_t not available\n
+[SVLController] Error activating controller, no controller VTE_StaticProps_t captured\n
 [SVLController] Finished activation
 [SVLController] Haptic Failed to send\n
 [SVLController] Overriding Quest specific properties for %s\n
@@ -3355,7 +3354,6 @@ pico_controller
 pipe2
 playing
 playstation_vr2_sense
-playstation_vr2_sense_controller
 poll
 positional
 posix_memalign
@@ -3367,6 +3365,12 @@ primitives
 print
 printf
 providesOffsetOverride
+psvr2_error.png
+psvr2_info.png
+psvr2_off.png
+psvr2_ready.png
+psvr2_ready_low.png
+psvr2_searching.gif
 pthread_attr_init
 pthread_attr_setstacksize
 pthread_cancel
@@ -4530,6 +4534,7 @@ vrlink-encwait
 vrlink-pw
 vrlink-sink
 vrlink-source
+vrlink.client
 vrlink_
 vrlink_aftm_
 vrlink_aftm_*.csv
@@ -4625,6 +4630,12 @@ znear
 {oculus}/input/touch_profile.json
 {vrlink}
 {vrlink}/icons/
+{vrlink}/icons/headset_applevisionpro_error.png
+{vrlink}/icons/headset_applevisionpro_info.png
+{vrlink}/icons/headset_applevisionpro_low.png
+{vrlink}/icons/headset_applevisionpro_off.png
+{vrlink}/icons/headset_applevisionpro_ready.png
+{vrlink}/icons/headset_applevisionpro_searching.gif
 {vrlink}/icons/headset_pico4_error.png
 {vrlink}/icons/headset_pico4_info.png
 {vrlink}/icons/headset_pico4_off.png

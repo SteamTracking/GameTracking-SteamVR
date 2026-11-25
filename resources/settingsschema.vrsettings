@@ -14,6 +14,10 @@
 			,{ "name": "/settings/steamvr/supersampleManualOverride", "type": "bool" }
 			,{ "name": "/settings/steamvr/supersampleScale", "type": "float" }
 
+			,{ "name": "/settings/steamvr/chromaKeyMode", "type": "int" }
+			,{ "name": "/settings/steamvr/chromaKeyColor", "type": "int" }
+			,{ "name": "/settings/steamvr/chromaKeyNoiseFloor", "type": "float" }
+
 			,{ "name": "/settings/LastKnown/HMDManufacturer", "type": "string" }
 			,{ "name": "/settings/LastKnown/HMDModel", "type": "string" }
 

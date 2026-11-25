@@ -27,7 +27,10 @@
         "asyncSend" : false,
         "backoffRecoveryCoefficient" : 3.5,
         "enableAmfEncoder" : true,
-        "enableIntelEncoder" : false,
+        "enableIntelEncoder" : true,
+        "frameFenceIntel" : true,
+        "frameFenceAmd" : false,
+        "frameFenceNvidia" : false,
         "useOSC": false,
         "useOSCFace": false,
         "OSCInPort": 9016,
@@ -37,9 +40,6 @@
 		"asyncStartEncode" : true,
         "enableHandTracking" : true,
         "allowMultipleLinks" :  true,
-	    "enableHmdAutoConnect" : true,
-        "chromaKeyMode" : 0,
-        "chromaKeyColor" : 2,
-        "chromaKeyNoiseFloor" : 0.3
+	    "enableHmdAutoConnect" : true
     }
 }

@@ -853,7 +853,6 @@ Qt5Gui.dll
 Qt5Widgets.dll
 QueryPerformanceCounter
 RPCRT4.dll
-RSDS
 RaiseException
 ReadFile
 ReadFile failed on %s after event was signaled because %s\n

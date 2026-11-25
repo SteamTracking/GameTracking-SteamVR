@@ -436,6 +436,7 @@ memcpy
 memmove
 memset
 multiple signals per batch not allowed
+nLevels == 1
 oldLeftLayers
 oldRightLayers
 pBindings != nullptr

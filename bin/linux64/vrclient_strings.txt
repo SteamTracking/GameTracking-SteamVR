@@ -768,17 +768,17 @@ $0rpc $1(.$2) returns (.$3)
 /data/src/vrclient/vrchaperoneclient.cpp
 /data/src/vrclient/vrclientcore.cpp
 /data/src/vrclient/vrcompositorclient.cpp
-/data/src/vrclient/vrcompositorclient.cpp:1665
-/data/src/vrclient/vrcompositorclient.cpp:1921
-/data/src/vrclient/vrcompositorclient.cpp:2782
-/data/src/vrclient/vrcompositorclient.cpp:470
+/data/src/vrclient/vrcompositorclient.cpp:1682
+/data/src/vrclient/vrcompositorclient.cpp:1954
+/data/src/vrclient/vrcompositorclient.cpp:2815
+/data/src/vrclient/vrcompositorclient.cpp:473
 /data/src/vrclient/vrcompositorsharedtextures.cpp
-/data/src/vrclient/vrcompositorsharedtextures.cpp:2678
-/data/src/vrclient/vrcompositorsharedtextures.cpp:2874
-/data/src/vrclient/vrcompositorsharedtextures.cpp:3053
-/data/src/vrclient/vrcompositorsharedtextures.cpp:3057
-/data/src/vrclient/vrcompositorsharedtextures.cpp:3160
-/data/src/vrclient/vrcompositorsharedtextures.cpp:4369
+/data/src/vrclient/vrcompositorsharedtextures.cpp:3009
+/data/src/vrclient/vrcompositorsharedtextures.cpp:3215
+/data/src/vrclient/vrcompositorsharedtextures.cpp:3394
+/data/src/vrclient/vrcompositorsharedtextures.cpp:3398
+/data/src/vrclient/vrcompositorsharedtextures.cpp:3501
+/data/src/vrclient/vrcompositorsharedtextures.cpp:4710
 /data/src/vrclient/vrdebug.cpp:49
 /data/src/vrclient/vrdebug.cpp:60
 /data/src/vrclient/vrinput.cpp:1611
@@ -2106,6 +2106,7 @@ Bindings from OpenXR for
 BlankEyeBuffer
 BlockQueueHeaderMutex_
 BlockQueueHeader_
+Blocking dashboard activated/deactivated events for F1 25
 Boolean default must be true or false.
 Bootstrapper init
 BorrowResource
@@ -2848,6 +2849,7 @@ Extension range end number must be greater than start number.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra non-whitespace after JSON value.
+F1_25
 FACET_VULKAN_VALIDATION
 FALSE
 FATAL
@@ -9007,6 +9009,7 @@ shaders/vulkan/fsharp_2d_ps.spv
 shaders/vulkan/fsharp_vr_depth_only_ps.spv
 shaders/vulkan/fsharp_vr_depth_ps.spv
 shaders/vulkan/fsharp_vr_ps.spv
+shaders/vulkan/fsharp_vr_se2_ck_ps.spv
 shaders/vulkan/fsharp_vr_se2_ps.spv
 shaders/vulkan/geom_aurora_vs.spv
 shaders/vulkan/geom_bounds_color_vs.spv
@@ -9073,12 +9076,16 @@ shaders/vulkan/portal_stencil_vs.spv
 shaders/vulkan/resample_lanczos3_vs.spv
 shaders/vulkan/resample_lanczos3_x_ps.spv
 shaders/vulkan/resample_lanczos3_y_ps.spv
+shaders/vulkan/stream_multi_view_downscale_x_mitchell_ps.spv
 shaders/vulkan/stream_multi_view_downscale_x_ps.spv
+shaders/vulkan/stream_multi_view_downscale_y_mitchell_ps.spv
 shaders/vulkan/stream_multi_view_downscale_y_ps.spv
 shaders/vulkan/stream_multi_view_inner_ps.spv
 shaders/vulkan/stream_multi_view_inner_vs.spv
+shaders/vulkan/stream_multi_view_reproject_x_mitchell_ps.spv
 shaders/vulkan/stream_multi_view_reproject_x_ps.spv
 shaders/vulkan/stream_multi_view_reproject_x_vs.spv
+shaders/vulkan/stream_multi_view_reproject_y_mitchell_ps.spv
 shaders/vulkan/stream_multi_view_reproject_y_ps.spv
 shaders/vulkan/stream_multi_view_reproject_y_vs.spv
 shaders/vulkan/stream_multi_view_resample_vs.spv
@@ -9245,6 +9252,7 @@ stdin
 stdout
 steam-runtime-launch-client
 steam.app.
+steam.app.3059520
 steam.overlay.
 steamMatchesHMDFramerate
 steam_input

@@ -1,14 +1,14 @@
 Content Manifest for Depot 250824 
 
-Manifest ID / date     : 405305742614047439 / 11/19/2026 19:20:02 
-Total number of files  : 3541 
-Total number of chunks : 3513 
-Total bytes on disk    : 700153336 
-Total bytes compressed : 367268880 
+Manifest ID / date     : 5688609332670814871 / 11/25/2026 02:47:35 
+Total number of files  : 3587 
+Total number of chunks : 3557 
+Total bytes on disk    : 700744906 
+Total bytes compressed : 367725248 
 
 
           Size Chunks File SHA                                 Flags Name
-            12      1 3e8b22d0c5ae4c4271a6e20939f294ed8eac604c     0 bin/version.txt
+            12      1 df1e59ffdeffe515e45eeb4324f623f67a763b30     0 bin/version.txt
              0      0 0000000000000000000000000000000000000000    40 content/vrmonitor/demoloop
          34709      1 f7557b27d169b830a48321e3760e38e08e771172     0 content/vrmonitor/demoloop/card_aperture.png
          21464      1 b32ccaa0cd6d5d8b4acbdb11ea0c28bfe2791d0d     0 content/vrmonitor/demoloop/card_archery.png
@@ -926,7 +926,7 @@ Total bytes compressed : 367268880
           5707      1 44f43289f6e2f1f15b3f8c778e6687289206db10     0 drivers/lighthouse/resources/webinterface/images/pairingui/vive_wand_callouts.svg
           6043      1 7ecb337cfd5795f7e0ff416225080f05797c35a4     0 drivers/lighthouse/resources/webinterface/images/pairingui/vive_wand_callouts_text.svg
              0      0 0000000000000000000000000000000000000000    40 drivers/lighthouse/resources/webinterface/libraries
-        325014      1 68c3aa6aaa9d7cc3c93f496367f6143a095d0a00     0 drivers/lighthouse/resources/webinterface/libraries/libraries~782e4a39d.js
+        325014      1 f1272ed5d6e377b429645feb0abaa0e01cf77ddd     0 drivers/lighthouse/resources/webinterface/libraries/libraries~782e4a39d.js
              0      0 0000000000000000000000000000000000000000    40 drivers/lighthouse/resources/webinterface/localization
           2643      1 f66cc2854a5164eb744d3b632b039659cb5c273b     0 drivers/lighthouse/resources/webinterface/localization/lighthouse_web_brazilian.json
           3753      1 06a8a651bf900cae9f77708ae450207b00153f9b     0 drivers/lighthouse/resources/webinterface/localization/lighthouse_web_bulgarian.json
@@ -956,8 +956,8 @@ Total bytes compressed : 367268880
           2873      1 8c4d7efbb7b1d73b8001765ae5c3999801ef0613     0 drivers/lighthouse/resources/webinterface/localization/lighthouse_web_turkish.json
           3570      1 df5830bbf45f712892f465b9485cc3555d0e3afb     0 drivers/lighthouse/resources/webinterface/localization/lighthouse_web_ukrainian.json
           3107      1 9720cf264a2f461590a5801d66acd1a650631599     0 drivers/lighthouse/resources/webinterface/localization/lighthouse_web_vietnamese.json
-          1622      1 e9eeae7be27f306125c9bf5758df63fa6f911db6     0 drivers/lighthouse/resources/webinterface/pairing.html
-       1245130      2 1affbb6a783bbb5f02a4ccab904d7fdea91ed778     0 drivers/lighthouse/resources/webinterface/pairing.js
+          1622      1 a48ff1d399041405e5a93ca885bc24096e97771c     0 drivers/lighthouse/resources/webinterface/pairing.html
+       1247198      2 1e4c1c35752e4bb689f7d2c1b2451bcb7072fd67     0 drivers/lighthouse/resources/webinterface/pairing.js
          21742      1 787df7b3fa16a276eb9f08474609b91613d5fef3     0 drivers/lighthouse/resources/webinterface/third_party_legal_notices_web.txt
              0      0 0000000000000000000000000000000000000000    40 drivers/null/bin
            136      1 22eb5482a4d344a6fe9a4ac2298639a76ce841a9     0 drivers/null/driver.vrdrivermanifest
@@ -1279,13 +1279,25 @@ Total bytes compressed : 367268880
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/bin
            132      1 4313cc5034939b7f9f308e019bd96dd67a74ef8f     0 drivers/vrlink/driver.vrdrivermanifest
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources
-      41614830     43 d7ecbd177fd54da9f2871e00410241c2fdc6ab59     0 drivers/vrlink/resources/android-steamlinkvr-release.apk
+      41924142     42 cee2ee1b86ed4434a5e6629f3bc318286cc2dfed     0 drivers/vrlink/resources/android-steamlinkvr-release.apk
           3023      1 37b130e9d3acdde1b0b6b8486995eadc4f286b78     0 drivers/vrlink/resources/driver.vrresources
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources/drivers
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources/icons
           2924      1 0b3a8c212e0019f328f76f10183fd9a2e0f822d7     0 drivers/vrlink/resources/icons/handtracking_left.svg
           2922      1 85c932f1a3b4074135581dd2c161f845d9fac917     0 drivers/vrlink/resources/icons/handtracking_right.svg
           2922      1 85c932f1a3b4074135581dd2c161f845d9fac917     0 drivers/vrlink/resources/icons/hand_tracking.svg
+          2591      1 cd7875081ec0581ed779823c03b0726fc32389d4     0 drivers/vrlink/resources/icons/headset_applevisionpro_error.png
+          1477      1 89a32b6c8435b9fdbd9716a46182c3d36840abd9     0 drivers/vrlink/resources/icons/headset_applevisionpro_error_2x.png
+          2124      1 5d8fd33b3057c8a464d93bff0fa8665e79e2a5ef     0 drivers/vrlink/resources/icons/headset_applevisionpro_info.png
+          1150      1 dd0ecabc818e61aece9c9fd1e3048b558d54c03e     0 drivers/vrlink/resources/icons/headset_applevisionpro_info_2x.png
+          1934      1 6dfcdf8fc565c7a4eb16840b8426b215541a232f     0 drivers/vrlink/resources/icons/headset_applevisionpro_off.png
+           854      1 0226b3f734b846bc675e6b35a8f34893883e0883     0 drivers/vrlink/resources/icons/headset_applevisionpro_off_2x.png
+           480      1 833176ca054fd17033f0b04cf20d35c61be11486     0 drivers/vrlink/resources/icons/headset_applevisionpro_ready.png
+           825      1 894174e73f2b9c24138a6c1bc646b7ff8955c162     0 drivers/vrlink/resources/icons/headset_applevisionpro_ready_2x.png
+           834      1 50820e354f591ddcea341b648628ba9830aac15f     0 drivers/vrlink/resources/icons/headset_applevisionpro_ready_low.png
+          1543      1 d5bdf64b5a94371244315945867f1ca134951a47     0 drivers/vrlink/resources/icons/headset_applevisionpro_ready_low_2x.png
+          9697      1 54e28cf6775e03ddec8f0f71ba47b5d71fe430a0     0 drivers/vrlink/resources/icons/headset_applevisionpro_searching.gif
+         14750      1 1065de6a08dada36d81c20c8668a00c7e6b669c0     0 drivers/vrlink/resources/icons/headset_applevisionpro_searching_2x.gif
           2763      1 090e022b1dacaf96113347f721cfa9f2ec7f51c7     0 drivers/vrlink/resources/icons/headset_pico4_error.png
           1771      1 8e42a70ec66dd25201db9f32ea30048a7017ead2     0 drivers/vrlink/resources/icons/headset_pico4_error_2x.png
           2323      1 cd6718fa0299378d00f7c11a02695fa3486adb36     0 drivers/vrlink/resources/icons/headset_pico4_info.png
@@ -1354,6 +1366,18 @@ Total bytes compressed : 367268880
           1785      1 40cd388220532dc12b9a684f8315575340909258     0 drivers/vrlink/resources/icons/left_pico4_ready_low_2x.png
          11300      1 f7280964593fecdd697a95b665352c62182e51f8     0 drivers/vrlink/resources/icons/left_pico4_searching.gif
          19759      1 79c5bc890ed8645c99dcf974e0739d594ac98282     0 drivers/vrlink/resources/icons/left_pico4_searching_2x.gif
+          2701      1 7a0cb430d0bda6a4e15f3c7488e7579f3b2d3c62     0 drivers/vrlink/resources/icons/left_psvr2_error.png
+          1778      1 829f618aa20412a66594422122dd72e0c60eaf9b     0 drivers/vrlink/resources/icons/left_psvr2_error_2x.png
+           753      1 46de43463ed92b9b95e12853728f4cf66621ce05     0 drivers/vrlink/resources/icons/left_psvr2_info.png
+          1778      1 829f618aa20412a66594422122dd72e0c60eaf9b     0 drivers/vrlink/resources/icons/left_psvr2_info_2x.png
+          2158      1 e22f36da79625ebf72d3099c99528bc914ccf951     0 drivers/vrlink/resources/icons/left_psvr2_off.png
+          1266      1 bd22cb909d0e68741fa9417be8cccbbac8177bfb     0 drivers/vrlink/resources/icons/left_psvr2_off_2x.png
+          2162      1 ba1161e34ae4510f0933a231ffcb7535910c012b     0 drivers/vrlink/resources/icons/left_psvr2_ready.png
+          1246      1 d0c268267c7fe25d3982bd491903cd4c2a895cc0     0 drivers/vrlink/resources/icons/left_psvr2_ready_2x.png
+           981      1 6a65f385f3cc92e807814c24b6007fcec9d98302     0 drivers/vrlink/resources/icons/left_psvr2_ready_low.png
+          1850      1 56219e28cb1197f49dc9ed12b26299d063d563dc     0 drivers/vrlink/resources/icons/left_psvr2_ready_low_2x.png
+         13269      1 2034e237fdb56da4aec2abdfdf1dcd9caf9b72b7     0 drivers/vrlink/resources/icons/left_psvr2_searching.gif
+         21672      1 4789d3d575f4bf0c9c4ccfc625e7629df517662a     0 drivers/vrlink/resources/icons/left_psvr2_searching_2x.gif
           8573      1 c5f063f7533285ba12176c41522c72866ae7873f     0 drivers/vrlink/resources/icons/left_vivefocusvisioncontroller.svg
           2710      1 597fd94d64ca39e0e56e43ed43731f8a5e86f4cd     0 drivers/vrlink/resources/icons/left_vivefocusvision_error.png
           1790      1 cbf536cf1cb3a9115b6de4d739e274e426e8efc8     0 drivers/vrlink/resources/icons/left_vivefocusvision_error_2x.png
@@ -1429,6 +1453,18 @@ Total bytes compressed : 367268880
           1832      1 a2c0549f9bd63bd6b7c77ae3338161a416bae222     0 drivers/vrlink/resources/icons/right_pico4_ready_low_2x.png
          11485      1 dbf1d04f069e05f329f5ec23419610132d1f0cbc     0 drivers/vrlink/resources/icons/right_pico4_searching.gif
          20029      1 ce7922c46fea5649eee35fc1560c37aca1f36354     0 drivers/vrlink/resources/icons/right_pico4_searching_2x.gif
+          2733      1 bed260cb22ffe613ad24e5c055286addc4970745     0 drivers/vrlink/resources/icons/right_psvr2_error.png
+          1858      1 50824496dfab670924ed6e4e37cd0e85f1d27537     0 drivers/vrlink/resources/icons/right_psvr2_error_2x.png
+          2270      1 8596b051027185eae87d03bd8321ff827a7187aa     0 drivers/vrlink/resources/icons/right_psvr2_info.png
+          1460      1 00e13be6f0451765628ff396e12b1c56e8485958     0 drivers/vrlink/resources/icons/right_psvr2_info_2x.png
+          2143      1 bf1a3d9fe5afeaab740a37778de2cb57786709f1     0 drivers/vrlink/resources/icons/right_psvr2_off.png
+          1222      1 43b046b091400dca4807da4804b4bd5b9f680d5e     0 drivers/vrlink/resources/icons/right_psvr2_off_2x.png
+          2147      1 5302d93872d346c37b21cadb1e40601642d6ebcb     0 drivers/vrlink/resources/icons/right_psvr2_ready.png
+          1203      1 c257b2e37250b6f22a565b15cc852357bc7fc4cb     0 drivers/vrlink/resources/icons/right_psvr2_ready_2x.png
+          2706      1 204522c6e43ba2ccae005063edf2e9a37457edaa     0 drivers/vrlink/resources/icons/right_psvr2_ready_low.png
+          1836      1 90a749b0ace325ce7777336e5d606d34b80aaf56     0 drivers/vrlink/resources/icons/right_psvr2_ready_low_2x.png
+         13157      1 91cad64a42d10dfd40dc4ad79ba058042a34e7ea     0 drivers/vrlink/resources/icons/right_psvr2_searching.gif
+         21420      1 71d47e8f2089b89d7637653e640441f45688f8c5     0 drivers/vrlink/resources/icons/right_psvr2_searching_2x.gif
           8230      1 116c2c598f5567f68ded92a33a8b5de10ac02e4e     0 drivers/vrlink/resources/icons/right_vivefocusvisioncontroller.svg
           2663      1 cd7318a75451e4910c6f24e540ced6f16777f277     0 drivers/vrlink/resources/icons/right_vivefocusvision_error.png
           1649      1 0ac21c2ee9d396ecd6f9d36f9a9cb4aba5295d7d     0 drivers/vrlink/resources/icons/right_vivefocusvision_error_2x.png
@@ -1448,8 +1484,8 @@ Total bytes compressed : 367268880
           8605      1 a4e4920101504419a3c5c48dd73928a44fdfcc34     0 drivers/vrlink/resources/input/legacy_bindings_vive_focus3_controller.json
           3108      1 619145b504582a01e3d3aab96f8f5e8ed8749aba     0 drivers/vrlink/resources/input/pico_controller_profile.json
           5978      1 a98c5fac9ff9f91278e8afb8e4bf5507a8394b92     0 drivers/vrlink/resources/input/pico_controller_remapping.json
-          2808      1 2eca0cf91b4a3445733984c3d0a1d18d69d74951     0 drivers/vrlink/resources/input/playstation_vr2_sense_controller_profile.json
-          5953      1 218f8f67cb7f4bfe9b024b254570f21c06845d44     0 drivers/vrlink/resources/input/playstation_vr2_sense_controller_remapping.json
+          3366      1 a966a815a38e6b31827409f4eed66ac666f283fd     0 drivers/vrlink/resources/input/playstation_vr2_sense_controller_profile.json
+         10360      1 82f8e99441582bc47d24fc99eba554f94c66ad32     0 drivers/vrlink/resources/input/playstation_vr2_sense_controller_remapping.json
          13954      1 22bb993678720ae926f4cf004a9008c51695daad     0 drivers/vrlink/resources/input/steam_app_450390_bindings_svl_hand_interaction_augmented.json
           2886      1 da0c38505ea4d85fe8bc68a93269fe19208e65d6     0 drivers/vrlink/resources/input/svl_hand_interaction_augmented_input_profile.json
           2910      1 67fc50f88db8b773b1c79d8e1359e65ccefaa8fd     0 drivers/vrlink/resources/input/svl_hand_interaction_augmented_remapping.json
@@ -1641,7 +1677,7 @@ Total bytes compressed : 367268880
            218      1 912ecd7999d76723d76eb5641e6aa5fcffc46a51     0 drivers/vrlink/resources/rendermodels/vive_focus3_controller_right/vive_focus3_controller_right_trigger.mtl
          34068      1 ee8319aa0efa9f14afdff3f909d3eb5abb04ea53     0 drivers/vrlink/resources/rendermodels/vive_focus3_controller_right/vive_focus3_controller_right_trigger.obj
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources/settings
-          1425      1 bb9a7a78a1bdc6a52a602d5cc6f471793c1da50e     0 drivers/vrlink/resources/settings/default.vrsettings
+          1431      1 5394dfc65cbc48fca832fd9b2b3b6001ea39f42c     0 drivers/vrlink/resources/settings/default.vrsettings
            215      1 c68352e6bd719b965876fe7f2eefd3d0213c713e     0 drivers/vrlink/resources/settings/settingsschema.vrsettings
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources/shaders
              0      0 0000000000000000000000000000000000000000    40 drivers/vrlink/resources/shaders/d3d11
@@ -2296,9 +2332,9 @@ Total bytes compressed : 367268880
         762744      1 5a1251449ec0efcdc31ee0a78905b36ed963fc97     0 resources/rendermodels/vr_glove/vr_glove_right_model_slim.glb
            188      1 9ef9809f83847d4beaf403fbecad7ae8eb0b0ebd     0 resources/safe_mode_driver_whitelist.json
              0      0 0000000000000000000000000000000000000000    40 resources/settings
-         11633      1 c00c92d31fe7dc6f095642ca92bbd88f32e9c12e     0 resources/settings/default.vrsettings
+         11803      1 453af6740c1e41639008822ef8b50863d5213371     0 resources/settings/default.vrsettings
            181      1 82fc369c6d891f2d251d3721856db84d30128539     0 resources/settings/driver_defaults.vrsettings
-         13055      1 0a0e75515cfaf64ccb4971221d9447f5c6acf389     0 resources/settingsschema.vrsettings
+         13264      1 539739425322f9a68301e961f35150a63ebd4bb3     0 resources/settingsschema.vrsettings
              0      0 0000000000000000000000000000000000000000    40 resources/shaders
              0      0 0000000000000000000000000000000000000000    40 resources/shaders/d3d11
           5948      1 44633881bc148b34fd6caa5cc488a0b09e84d0cd     0 resources/shaders/d3d11/camera_motion_backout_cs.fxo
@@ -2335,7 +2371,7 @@ Total bytes compressed : 367268880
           5020      1 4f7609a7a2551f649ec230c89c51fc8a646ee397     0 resources/shaders/d3d11/distort_geom_drawregion_debug_texel_ratio_ps.fxo
           8156      1 9a2e13b132a4a917856fc41cf1917aee4c21f410     0 resources/shaders/d3d11/distort_geom_drawregion_mip_catmullrom_ps.fxo
           6412      1 4455d00e4810e2b224699bd7d38201425f6a73ae     0 resources/shaders/d3d11/distort_geom_drawregion_mip_ewa_ps.fxo
-          8704      1 64e10bbedc07b0b356dc2f771aceaebd4289bc0f     0 resources/shaders/d3d11/distort_geom_drawregion_mip_lanczos2_ps.fxo
+          9988      1 79f3b41e9d41b5e13ee1bb03838d9d0e647e4254     0 resources/shaders/d3d11/distort_geom_drawregion_mip_lanczos2_ps.fxo
           5384      1 98ab32b98718410e9aa9ab691173abd58b28e902     0 resources/shaders/d3d11/distort_geom_drawregion_multitap_ps.fxo
           3852      1 799d3e98923cd1efe6ce3b38f411b9a6acfb662f     0 resources/shaders/d3d11/distort_geom_drawregion_ps.fxo
           9140      1 e645958168e48fd84888fabc29a5f96eed84116a     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_curved_uvs_embedded_vs.fxo
@@ -2343,7 +2379,7 @@ Total bytes compressed : 367268880
           5340      1 ee2faea18aa11b974262d5d780c6dcd08da2fdba     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_debug_texel_ratio_ps.fxo
           8476      1 e0d79c1fc5f5400dc5a656709413f1cd4432b2e4     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_mip_catmullrom_ps.fxo
           6732      1 ea7b1ffe880bbe06a2923eb87859cc028da03b42     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_mip_ewa_ps.fxo
-          9024      1 d073b62c6f60897f1835ba1c439fdb46efbb1b42     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_mip_lanczos2_ps.fxo
+         10308      1 e545396f4ac72b1b19e0f3b8ad96f7ac79f5bd5b     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_mip_lanczos2_ps.fxo
           5704      1 cbd114948652219d1b92d2cf9e3e0d9aed9760ac     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_multitap_ps.fxo
           4172      1 e50da1c0ec1545172403b2cb3fedecaaaf7aefde     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_ps.fxo
           8840      1 57c6a1c9bd1f969c9604a9d579c4aef4e1dea00e     0 resources/shaders/d3d11/distort_geom_drawregion_reflect_uvs_embedded_vs.fxo
@@ -2377,7 +2413,7 @@ Total bytes compressed : 367268880
           9352      1 07d41579787021afd03d2362caf0701993c831c2     0 resources/shaders/d3d11/distort_geom_ltc_spec_ps.fxo
           8452      1 2116b99bde0a4e9ea72d2394c5f3b05ee889b03a     0 resources/shaders/d3d11/distort_geom_mip_catmullrom_ps.fxo
           6708      1 ba8caacdf4b96f489693ebb4c3e52d2ab689b2cd     0 resources/shaders/d3d11/distort_geom_mip_ewa_ps.fxo
-          9000      1 c78aa8230a8c9265735554d5ffaa0498033420eb     0 resources/shaders/d3d11/distort_geom_mip_lanczos2_ps.fxo
+         10284      1 ef7df5b9c1f0e3b3ee2cf9cc8626bf6d03c36312     0 resources/shaders/d3d11/distort_geom_mip_lanczos2_ps.fxo
           4212      1 ebc47776bca7de44d78786fd8a3e72baf4f72b81     0 resources/shaders/d3d11/distort_geom_motes_ps.fxo
          15824      1 665a4f83122996159baa768fb6eb34c698f21e48     0 resources/shaders/d3d11/distort_geom_motes_vs.fxo
           5680      1 3c2169be1c62d1b772cf5246333bf09c0b8b9032     0 resources/shaders/d3d11/distort_geom_multitap_ps.fxo
@@ -2404,7 +2440,7 @@ Total bytes compressed : 367268880
           5584      1 3bd2c99ae854913057df00f1cc3d7bc5327358b1     0 resources/shaders/d3d11/distort_geom_reflect_debug_texel_ratio_ps.fxo
           8772      1 a67d0b208eb3481a9c8c90f6f955a9a1579b7d16     0 resources/shaders/d3d11/distort_geom_reflect_mip_catmullrom_ps.fxo
           7028      1 33330e9fb51aeb8790699fb79931a66e39b95850     0 resources/shaders/d3d11/distort_geom_reflect_mip_ewa_ps.fxo
-          9320      1 006a0f397b7a4d99fd2ad83a27f2000048e6694e     0 resources/shaders/d3d11/distort_geom_reflect_mip_lanczos2_ps.fxo
+         10604      1 319bcff023ecf07654639d6d38cd2eb38f7ce3f1     0 resources/shaders/d3d11/distort_geom_reflect_mip_lanczos2_ps.fxo
           6000      1 4615ec95718725747e5c9d11c41d46319376092d     0 resources/shaders/d3d11/distort_geom_reflect_multitap_ps.fxo
           4468      1 139443580685168416e43ff300af8654e5b03b99     0 resources/shaders/d3d11/distort_geom_reflect_ps.fxo
           8760      1 b6c263044ccd4a9858e4231e83e12f921cfe5c51     0 resources/shaders/d3d11/distort_geom_reflect_uvs_embedded_vs.fxo
@@ -2524,6 +2560,7 @@ Total bytes compressed : 367268880
           3992      1 0bfd0baf60f634d6e26b8c7239dea942b01e5123     0 resources/shaders/d3d11/fsharp_vr_depth_only_ps.fxo
          10488      1 b530b77c9a2c134f02d5e6cfca5d63a915c88483     0 resources/shaders/d3d11/fsharp_vr_depth_ps.fxo
           9504      1 33670a5f13439f5e6199f54d624b834564e9b340     0 resources/shaders/d3d11/fsharp_vr_ps.fxo
+         25584      1 f1217de29501b4e92157269e0bd3ced84170d294     0 resources/shaders/d3d11/fsharp_vr_se2_ck_ps.fxo
          11628      1 95e029df4d53e2f762693aeadf50908f226ee392     0 resources/shaders/d3d11/fsharp_vr_se2_ps.fxo
           4736      1 03dd3140a62d01e346e4177e450a91455ece113a     0 resources/shaders/d3d11/geom_aurora_vs.fxo
           3132      1 e9ffa2260f441a9ed395d8db36c14b3f70133dca     0 resources/shaders/d3d11/geom_bounds_color_vs.fxo
@@ -2595,12 +2632,16 @@ Total bytes compressed : 367268880
            608      1 76dc053be0202b0175d4d7c9b04543f955b50d51     0 resources/shaders/d3d11/resample_lanczos3_vs.fxo
           2224      1 ebf5dc592a46ec37818cd121cabc149e2544740d     0 resources/shaders/d3d11/resample_lanczos3_x_ps.fxo
           3620      1 13cc2d8bed276d0e9adf96fea311d8b725968d14     0 resources/shaders/d3d11/resample_lanczos3_y_ps.fxo
+          3132      1 9c2a9d612e1dfeb05e398a2676c2d37b1fc627a8     0 resources/shaders/d3d11/stream_multi_view_downscale_x_mitchell_ps.fxo
           2972      1 061b3a6afe3374c4210ea95fa8a17025bd76a1e1     0 resources/shaders/d3d11/stream_multi_view_downscale_x_ps.fxo
+          3564      1 86f0b55eb47c23d6b80dce7b910feb4e484b99d1     0 resources/shaders/d3d11/stream_multi_view_downscale_y_mitchell_ps.fxo
           3404      1 ec0bf799d989f91d228d59db10653ccb03e2d9c6     0 resources/shaders/d3d11/stream_multi_view_downscale_y_ps.fxo
           2968      1 5aee16571d7635f994200394dd1b44816f9c2c86     0 resources/shaders/d3d11/stream_multi_view_inner_ps.fxo
            608      1 76dc053be0202b0175d4d7c9b04543f955b50d51     0 resources/shaders/d3d11/stream_multi_view_inner_vs.fxo
+          6288      1 96f7450396b4468744b2b1bc3f37a62c0b7a0198     0 resources/shaders/d3d11/stream_multi_view_reproject_x_mitchell_ps.fxo
           6128      1 d04a165c7ba5602ee275027a1dbff5118a78d5ed     0 resources/shaders/d3d11/stream_multi_view_reproject_x_ps.fxo
           8488      1 3a39cae554f6bfa6d4a5157328b2925aade360bb     0 resources/shaders/d3d11/stream_multi_view_reproject_x_vs.fxo
+          4628      1 09dd8f63cae5a844208a1bdc16949afbc4bc975e     0 resources/shaders/d3d11/stream_multi_view_reproject_y_mitchell_ps.fxo
           4468      1 b78d70db25a9d7b83d4b9d79747ba51fdf6cbe1f     0 resources/shaders/d3d11/stream_multi_view_reproject_y_ps.fxo
           8312      1 ac05f795092337cea8a967b8973a9d4d02fa5fea     0 resources/shaders/d3d11/stream_multi_view_reproject_y_vs.fxo
            608      1 76dc053be0202b0175d4d7c9b04543f955b50d51     0 resources/shaders/d3d11/stream_multi_view_resample_vs.fxo
@@ -2616,14 +2657,14 @@ Total bytes compressed : 367268880
           2632      1 e55a2250e0c0e7e353835c5511baf36c2362b2d4     0 resources/shaders/d3d11/tracked_camera_lines_vs.fxo
           3856      1 475ae120a8b7e4daa4be46393f7fff68b439e4a0     0 resources/shaders/d3d11/tracked_camera_ps.fxo
           5684      1 84c267f7df1c7f0a90c7289f766ccfe6fb742c46     0 resources/shaders/d3d11/tracked_camera_reprojection_ps.fxo
-          3376      1 7a9a7dba0e2530cf28e4d830aafa482bbcfc4a2e     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_monochrome_nv12_ps.fxo
-          3376      1 3c732c1b52384856c55e416aeb891ae80635c35e     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_monochrome_ps.fxo
-          3952      1 9b35821891c85250ee76e0f8e010892419e87fb1     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_rgb_nv12_ps.fxo
-          9132      1 c63a86919637e65cc54496d6686cf1fe4e6dcd65     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_monochrome_nv12_ps.fxo
-          9132      1 0508080c0952d74c3362d08a05a5f011a07b7165     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_monochrome_ps.fxo
-          9764      1 ab345faafa37e1b655177bbb6240a6744e7222c7     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_rgb_nv12_ps.fxo
-          5084      1 627b6802dd4cb530fc6961509c56b50689696188     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_vs.fxo
-          4940      1 4e40931b3720a12c439a10666d88a786be87d5f7     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_vs.fxo
+          3720      1 9945a7631a3fd7dd44c70c73a3440eb2544b7ea6     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_monochrome_nv12_ps.fxo
+          3720      1 828bc686f03ba572198d26e1513640e9c244bfc8     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_monochrome_ps.fxo
+          4296      1 9d034fd5437523bb86f1047dee1fd2d9e22a0a8f     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_rgb_nv12_ps.fxo
+          9476      1 ce0645a9162b5189a064c366af814cb820e11dd6     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_monochrome_nv12_ps.fxo
+          9476      1 9e888729070970f5fe55dcba3b02e0c82d14d121     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_monochrome_ps.fxo
+         10108      1 5199fb379f2c29e007c247996055ee4010de3095     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_rgb_nv12_ps.fxo
+          5148      1 e849b6ad67ef9f3331d4af86d6536058f07cc187     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_sharpen_vs.fxo
+          5004      1 e2e20a78f7fd30ff6a3c907c46abfead1cc9d1fe     0 resources/shaders/d3d11/tracked_camera_reprojection_simplified_vs.fxo
           2632      1 e55a2250e0c0e7e353835c5511baf36c2362b2d4     0 resources/shaders/d3d11/tracked_camera_reprojection_vs.fxo
           2588      1 356dfd5423ad7072a64905cb98b97b32d9b2a388     0 resources/shaders/d3d11/tracked_camera_undistort_ps.fxo
            648      1 bd4d2ccf45aace8208ad06e55258975037dcae66     0 resources/shaders/d3d11/tracked_camera_undistort_vs.fxo
@@ -2681,7 +2722,7 @@ Total bytes compressed : 367268880
           6440      1 459011390aad5c47befea5ff152312cf40a1d56e     0 resources/shaders/vulkan/distort_geom_drawregion_debug_texel_ratio_ps.spv
          10360      1 0f8981b99f7690bf669db47b0b72548f1e610f7b     0 resources/shaders/vulkan/distort_geom_drawregion_mip_catmullrom_ps.spv
           7820      1 7a70c2c1de7d90f6578df3fe742eed47cc9d45ef     0 resources/shaders/vulkan/distort_geom_drawregion_mip_ewa_ps.spv
-         10492      1 b14d7eb6bcb9ae3a32bfe0d8691b8ce14df248a0     0 resources/shaders/vulkan/distort_geom_drawregion_mip_lanczos2_ps.spv
+         12164      1 cd72d7eb19695d8e326dc556221d38e1151829fd     0 resources/shaders/vulkan/distort_geom_drawregion_mip_lanczos2_ps.spv
           6468      1 658ac19a9c06ea60131f82dfc08d53eb85b952f2     0 resources/shaders/vulkan/distort_geom_drawregion_multitap_ps.spv
           4444      1 8ec07d8fa283968d1ff192248277c4df899696d2     0 resources/shaders/vulkan/distort_geom_drawregion_ps.spv
          11092      1 f8349f5cac84c9bbdb8cd688da1ca35421f227b9     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_curved_uvs_embedded_vs.spv
@@ -2689,7 +2730,7 @@ Total bytes compressed : 367268880
           7028      1 99404ea0cb90396e483d34f4f6966dbdba2f0adc     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_debug_texel_ratio_ps.spv
          10948      1 eeaa43ce7b7f1b3da8270edfd9a78b7f41f22147     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_mip_catmullrom_ps.spv
           8408      1 8c97c6115aa9a5efbf98d6c8d6e671599bb13d40     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_mip_ewa_ps.spv
-         11116      1 c9462585281934bfd5b2dc3cc495a6e9c7f9cf51     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_mip_lanczos2_ps.spv
+         12788      1 caacb22d41f5e642a9d6459764e397812d19981b     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_mip_lanczos2_ps.spv
           7056      1 e6a4bbb52602127f465eaf8b55efb8b6e6ebea14     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_multitap_ps.spv
           5032      1 96cf03a0dae96533296a81642b0d87663311cf9f     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_ps.spv
          10528      1 edfd4c479c2a865b15efb8ab0d612ab6b5f260fa     0 resources/shaders/vulkan/distort_geom_drawregion_reflect_uvs_embedded_vs.spv
@@ -2723,7 +2764,7 @@ Total bytes compressed : 367268880
          10328      1 f737faea1f96a3bd283a9c6b0ebee84be381b72f     0 resources/shaders/vulkan/distort_geom_ltc_spec_ps.spv
          10936      1 d3c0b0792ffa51f2e92b599580f3dccc930dc918     0 resources/shaders/vulkan/distort_geom_mip_catmullrom_ps.spv
           8396      1 fe452f5134696a29b12440cf177aaecc76b42286     0 resources/shaders/vulkan/distort_geom_mip_ewa_ps.spv
-         11052      1 df704f2a59f35ce9a58ab4b704d10155009900cb     0 resources/shaders/vulkan/distort_geom_mip_lanczos2_ps.spv
+         12724      1 0b914fe1895c924d299c025790798cea57fd77f5     0 resources/shaders/vulkan/distort_geom_mip_lanczos2_ps.spv
           5272      1 60cd36032cc0fec2e5f7cbd4e846ff95523fada1     0 resources/shaders/vulkan/distort_geom_motes_ps.spv
          17056      1 a267ceb06000d9e6f30e0cb49430aa728410045f     0 resources/shaders/vulkan/distort_geom_motes_vs.spv
           7044      1 21a5f02ff418355d8d080716d350250675dea1dc     0 resources/shaders/vulkan/distort_geom_multitap_ps.spv
@@ -2750,7 +2791,7 @@ Total bytes compressed : 367268880
           7524      1 d5147176b1b892508d26e4934ae0c9aa9b61f7cc     0 resources/shaders/vulkan/distort_geom_reflect_debug_texel_ratio_ps.spv
          11524      1 937e35a4813e6eebffe6ac8b210b5851cf2db6d3     0 resources/shaders/vulkan/distort_geom_reflect_mip_catmullrom_ps.spv
           8984      1 a959ef2657ed7142223a7d70a366c1fb02f5b439     0 resources/shaders/vulkan/distort_geom_reflect_mip_ewa_ps.spv
-         11676      1 0e967f0f42467b57f0b497558b3d73a1fc21ccd7     0 resources/shaders/vulkan/distort_geom_reflect_mip_lanczos2_ps.spv
+         13348      1 6fb7818f3d0feda6c0045aaa88f7888acf11d90a     0 resources/shaders/vulkan/distort_geom_reflect_mip_lanczos2_ps.spv
           7632      1 39f33d67de266e239f584977c2c3c05c9ac80a39     0 resources/shaders/vulkan/distort_geom_reflect_multitap_ps.spv
           5608      1 3ca6a1e6b13faaf4ecac21ab3a96b0d42fb31f54     0 resources/shaders/vulkan/distort_geom_reflect_ps.spv
          10360      1 f221c47ead2d4f73a1080dcf9a90a65866547bb3     0 resources/shaders/vulkan/distort_geom_reflect_uvs_embedded_vs.spv
@@ -2870,7 +2911,8 @@ Total bytes compressed : 367268880
           8468      1 51ccd4ddfec5d3e27de0634bc4703c05c68cecd2     0 resources/shaders/vulkan/fsharp_vr_depth_only_ps.spv
          19308      1 c056a76cf18dec0a27a92776c68e4938212ad49e     0 resources/shaders/vulkan/fsharp_vr_depth_ps.spv
          13236      1 f5b0cc6f88ee7874d77a30704645212a0107a620     0 resources/shaders/vulkan/fsharp_vr_ps.spv
-         19532      1 68fd150a2687a91d1f31ea0df9f21cc66b43d6fe     0 resources/shaders/vulkan/fsharp_vr_se2_ps.spv
+         44008      1 d8c6fca404655d26f5223c77ec23a5302fffb761     0 resources/shaders/vulkan/fsharp_vr_se2_ck_ps.spv
+         20060      1 661949038d01737e438d409a62892c1ae34ad4da     0 resources/shaders/vulkan/fsharp_vr_se2_ps.spv
           4432      1 5b6cf87a9a785427530aceb33b63b250589d2da5     0 resources/shaders/vulkan/geom_aurora_vs.spv
           2000      1 0075317f990765dcc56c316fc56ed2f2ffb2d14f     0 resources/shaders/vulkan/geom_bounds_color_vs.spv
           9308      1 f5c00694160586b6912eded220e815499ef5da63     0 resources/shaders/vulkan/geom_curved_uvs_embedded_vs.spv
@@ -2941,13 +2983,17 @@ Total bytes compressed : 367268880
            528      1 dcaf021b09629311d7e8e60314b2c90e16f56113     0 resources/shaders/vulkan/resample_lanczos3_vs.spv
           2372      1 f33c47ccb907bf89d668fd01d18ed7e62d09a0a1     0 resources/shaders/vulkan/resample_lanczos3_x_ps.spv
           4700      1 3ca9c8c3f3d9b0b69a51ac44bff9449cd10e9672     0 resources/shaders/vulkan/resample_lanczos3_y_ps.spv
-          3940      1 265ceb7fd494f9b538ac7aad2e3970649166467f     0 resources/shaders/vulkan/stream_multi_view_downscale_x_ps.spv
-          3884      1 412f1a6fdf8b2ffdeae23035b41038e0ed64d874     0 resources/shaders/vulkan/stream_multi_view_downscale_y_ps.spv
+          4132      1 dd3a9cd28eaf2371876d2ecdf629c56763e0583a     0 resources/shaders/vulkan/stream_multi_view_downscale_x_mitchell_ps.spv
+          3940      1 de3c40a6e9b8f5984cd23070c3e52e188cf952e6     0 resources/shaders/vulkan/stream_multi_view_downscale_x_ps.spv
+          4060      1 54ed57e0f5192f8bc52c0fb82b198986d1a0c06c     0 resources/shaders/vulkan/stream_multi_view_downscale_y_mitchell_ps.spv
+          3884      1 9eaa34587c1f5538cd1d07adebc392d297a36af9     0 resources/shaders/vulkan/stream_multi_view_downscale_y_ps.spv
           4072      1 0e6a91f4cb6a1e4c8767422b638a1e4f81490451     0 resources/shaders/vulkan/stream_multi_view_inner_ps.spv
            528      1 24c3e34fc00b98359857a7db31a2e08a7bd89c8d     0 resources/shaders/vulkan/stream_multi_view_inner_vs.spv
-          9344      1 e6a6471862d9d696f09bcf0517605219267de459     0 resources/shaders/vulkan/stream_multi_view_reproject_x_ps.spv
+          9536      1 bd2f24851a1d5a75cbc71f66567e1723b9e76846     0 resources/shaders/vulkan/stream_multi_view_reproject_x_mitchell_ps.spv
+          9344      1 499d834cd30fab042b687b691926b32df03c616c     0 resources/shaders/vulkan/stream_multi_view_reproject_x_ps.spv
           6820      1 262f386df3321fdd141b308af401f45dfeb23f95     0 resources/shaders/vulkan/stream_multi_view_reproject_x_vs.spv
-          5444      1 b54f58aacb8c0f3fde6bdb5ec63951fa12e34b79     0 resources/shaders/vulkan/stream_multi_view_reproject_y_ps.spv
+          5620      1 4d7117801d081e90410c247487528b562cf0cdce     0 resources/shaders/vulkan/stream_multi_view_reproject_y_mitchell_ps.spv
+          5444      1 2e90213b579767e5615a632c13aad2b8dfa1f7f9     0 resources/shaders/vulkan/stream_multi_view_reproject_y_ps.spv
           6640      1 f0185e9631e176f254424fd04b559a0788338c7b     0 resources/shaders/vulkan/stream_multi_view_reproject_y_vs.spv
            528      1 588aa5936dd88d0f55fa917b5a4d78c48538fa3a     0 resources/shaders/vulkan/stream_multi_view_resample_vs.spv
           3448      1 27cfcf6aa59b1163a1107dbd9ef71658e837c985     0 resources/shaders/vulkan/stream_multi_view_resolve_4x_ps.spv
@@ -2962,14 +3008,14 @@ Total bytes compressed : 367268880
           1676      1 d1aad23621b107f0a0c5daa94153244805c93c3b     0 resources/shaders/vulkan/tracked_camera_lines_vs.spv
           4812      1 15b5e017992975204bfd8305f510a1fc24bd4982     0 resources/shaders/vulkan/tracked_camera_ps.spv
           9456      1 1a8453482194afab974d5c82fb757aaf1aa00e9d     0 resources/shaders/vulkan/tracked_camera_reprojection_ps.spv
-          3484      1 b7bdd251884d577c56ce7deef01f852160f6ac63     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_monochrome_nv12_ps.spv
-          3484      1 7100a11769b08870b21112ae0faee1350c390817     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_monochrome_ps.spv
-          4932      1 4f20e1157fd16516aaa64eac834994940e8a846b     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_rgb_nv12_ps.spv
-         13904      1 c5ea54bcb6663c29f1c767a7af24d031886bff9d     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_monochrome_nv12_ps.spv
-         13904      1 35b39a3114233db9b9755a87ec9e0af27b838884     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_monochrome_ps.spv
-         15400      1 a860c4206156025f6926fb77587b236774e2f74b     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_rgb_nv12_ps.spv
-          5932      1 1a789e61351788a06637a84347ebc22d4e96f186     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_vs.spv
-          5592      1 fed7e943321f3038f8aebc5aa3f981f6ad07f1cc     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_vs.spv
+          4000      1 9551479a8116044af9275029444ba533b0eb8322     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_monochrome_nv12_ps.spv
+          4000      1 b4a45f489ed9d28b503d7b94a87e18c58f4b8bc5     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_monochrome_ps.spv
+          5448      1 d55ae753cf640c20526e139dae4462ec80424de6     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_rgb_nv12_ps.spv
+         14420      1 67cb5bc67ab8155df175c748d5faba420216ac11     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_monochrome_nv12_ps.spv
+         14420      1 79f226b1519ff52a0ceb3554831dbe29e74486c7     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_monochrome_ps.spv
+         15916      1 46ff2d16bd1133c3f7976f587aa8fdd993466ba2     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_rgb_nv12_ps.spv
+          5956      1 e95965a71160b42af315879ebe669e6eade0dbaa     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_sharpen_vs.spv
+          5616      1 4a8bdbde9aadcda48f25d216d5b84e9c3a705108     0 resources/shaders/vulkan/tracked_camera_reprojection_simplified_vs.spv
           1676      1 63d2cbdfb91edb40730c7cec5db48df8f2ffc00a     0 resources/shaders/vulkan/tracked_camera_reprojection_vs.spv
           1980      1 2d72ea0ff09ac8fef828a1ee604a34d131501d67     0 resources/shaders/vulkan/tracked_camera_undistort_ps.spv
            532      1 048bfc9fb97260d00773094d2a346d6bcfd1afd9     0 resources/shaders/vulkan/tracked_camera_undistort_vs.spv
@@ -3006,25 +3052,25 @@ Total bytes compressed : 367268880
            985      1 e40938f3cce2387e1b2d9b22056e66574f508731     0 resources/webinterface/console/console_colors.js
           2021      1 bd3b80338a12c2e5f06e6ec8d22f157cbde8060b     0 resources/webinterface/console/index.html
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard
-          2562      1 e2d0d8f2550eecde74d5e9b148391dcb82049e48     0 resources/webinterface/dashboard/bindingcallouts.html
-         27322      1 a1f3c0610dd5008bd37a27c4a69d8a5bb15029ef     0 resources/webinterface/dashboard/bindingcallouts.js
-         21921      1 a489336078a988adce36c4586c99a053fd341456     0 resources/webinterface/dashboard/chunk~0d3b9ff33.js
-         35874      1 109b5ff318727662f4244aae13f42950525eba8a     0 resources/webinterface/dashboard/chunk~1a88854fa.js
-        257822      1 3757c1d8104e0b9fc71cc82e4e0558105ae23c4b     0 resources/webinterface/dashboard/chunk~2e670652e.js
-         13827      1 317b8050e9e8246e96ea9073a96f3a5c0b488d2c     0 resources/webinterface/dashboard/chunk~336cd93ad.js
-         14568      1 ec3354194f1b8da090eab1e053d55471cf12d3c0     0 resources/webinterface/dashboard/chunk~56fe39318.js
-         10152      1 d904dc2fe307ca05a4e6b162b3b391cb51e053eb     0 resources/webinterface/dashboard/chunk~5c2db6fe6.js
-         10172      1 e6e159f588ee3edcc84eb8a28a9b45039b1ea9eb     0 resources/webinterface/dashboard/chunk~7f75cbff5.js
-        688872      1 385be8c31c5a4e8e11929e55062117808f2ab7f1     0 resources/webinterface/dashboard/chunk~8012d0c89.js
-         21921      1 034d8cd87489f570837a15adbb96dd0e340a18d4     0 resources/webinterface/dashboard/chunk~b7706121d.js
-         86750      1 05b80bd1e3320f7eebb0ca67e894165a57009a67     0 resources/webinterface/dashboard/chunk~bd288592d.js
-         37787      1 af2842587d3cbc28c4c40a477307e7d5f16eb9fe     0 resources/webinterface/dashboard/chunk~edeac9135.js
-          2396      1 623cf64f578ed2baa8cb6f3d40df830a33d37956     0 resources/webinterface/dashboard/controllerbinding.html
-        309650      1 c476eca8b9518d06bf25ebaa7d55c2b8c49002c0     0 resources/webinterface/dashboard/controllerbindingui.js
+          2562      1 c29a3203e63109ad624fbbd3ece5040b36d998c6     0 resources/webinterface/dashboard/bindingcallouts.html
+         27322      1 7b33000f781efc8b1cab56f3549af11d98d0050f     0 resources/webinterface/dashboard/bindingcallouts.js
+         21921      1 cf7acccd64d32230e601c08f046efed805a25bbe     0 resources/webinterface/dashboard/chunk~0d3b9ff33.js
+         35874      1 ce8ef6398886a3bc83bdab6ef5118d3d9e932c06     0 resources/webinterface/dashboard/chunk~1a88854fa.js
+        257822      1 0b7ce21246494004bd41e4f8948cbc8a78c041ff     0 resources/webinterface/dashboard/chunk~2e670652e.js
+         13827      1 d4314a0f13e843a0f3b23236461da459dbcede7f     0 resources/webinterface/dashboard/chunk~336cd93ad.js
+         14568      1 01964aafba542e22206dddcf6e611a7e1b79f5a8     0 resources/webinterface/dashboard/chunk~56fe39318.js
+         10152      1 6796c9826db6869b3290a367f438621e4a938ee0     0 resources/webinterface/dashboard/chunk~5c2db6fe6.js
+         10172      1 ad6d94d97a17eeaf08d313c4ee9c0c11376fb19e     0 resources/webinterface/dashboard/chunk~7f75cbff5.js
+        691131      1 038a74d186683dfef1a9c1668dc931ff80f89ed4     0 resources/webinterface/dashboard/chunk~8012d0c89.js
+         21921      1 be89e2dba2fdb8a50c1928b6fb7c17c4984c2f3c     0 resources/webinterface/dashboard/chunk~b7706121d.js
+         86750      1 6cdf816465ece7b5c33c6a72a9edc76fdcd2ab8f     0 resources/webinterface/dashboard/chunk~bd288592d.js
+         37787      1 605d22d9a9f89ae9464aa39970a7140b27a8fc33     0 resources/webinterface/dashboard/chunk~edeac9135.js
+          2396      1 141a2e5b918482dc5a2d0f6a6de449b773025c4a     0 resources/webinterface/dashboard/controllerbinding.html
+        309650      1 d33500003aff87faa06ee0036c75464dd603c62e     0 resources/webinterface/dashboard/controllerbindingui.js
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/css
          22285      1 c8524f296a642b2d10171107e00b96da327247bf     0 resources/webinterface/dashboard/css/chunk~66c0d1388.css
          64359      1 05b47ffe0601ca9abc3651a0db3c672c1c0aed7a     0 resources/webinterface/dashboard/css/chunk~93a8598f9.css
-         44789      1 2b4d21051e1312fa026e3997afe33190d3bc54d4     0 resources/webinterface/dashboard/css/chunk~b48d3fba7.css
+         44844      1 8b8b825dfb54f5d0545458d7555157adb576f669     0 resources/webinterface/dashboard/css/chunk~b48d3fba7.css
          61008      1 be8744349cc909ed3b529d7f781106a5039ccbad     0 resources/webinterface/dashboard/css/controllerbindingui.css
          27321      1 9befa34cf04dfea444b04e921e82ec094d97da79     0 resources/webinterface/dashboard/css/debugcommands.css
           1944      1 d7aa265f507dddf02e0ef2634fe1df724386b997     0 resources/webinterface/dashboard/css/keyboard.css
@@ -3032,8 +3078,8 @@ Total bytes compressed : 367268880
          17597      1 e3b16742bf9efd42c8537543cf82f6952d3d39e0     0 resources/webinterface/dashboard/css/settings_desktop.css
           7434      1 db11f3b87380bee0b79208e94b38568de0f05ab9     0 resources/webinterface/dashboard/css/systemreportviewer.css
          12493      1 050a1a65767ddc95e632a0c3e45ce6b75aa4c416     0 resources/webinterface/dashboard/css/systemui.css
-          2469      1 f5b5da14987d7138045f0fc5a618932d662f1337     0 resources/webinterface/dashboard/debugcommands.html
-         14350      1 c6f5448c88035c00781adae97b8418844b048f16     0 resources/webinterface/dashboard/debugcommands.js
+          2469      1 16c721939b7545017e0bd2ceac5a147fa76334da     0 resources/webinterface/dashboard/debugcommands.html
+         14350      1 afee420a1b0fc53859232b982f46ff21c1fe5bb1     0 resources/webinterface/dashboard/debugcommands.js
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/images
         161535      1 be0971632f9eeb21c69f21bca2e07b94e7689489     0 resources/webinterface/dashboard/images/appimage_default.png
           4488      1 c34f552b150f52c5b54a17a9542b356797653b6b     0 resources/webinterface/dashboard/images/appimage_default_portrait.png
@@ -3240,8 +3286,8 @@ Total bytes compressed : 367268880
           2694      1 9ffc0fa19e2a436b6e40a667a55aa6bc392a1e8f     0 resources/webinterface/dashboard/images/vrkeyboard/shift.png
           1779      1 5556d5b252131a74fc73ad0f4e4b4fbf39ca413f     0 resources/webinterface/dashboard/images/vrkeyboard/symbols.png
           2372      1 4ade0a5e8df8a980597e0d56ecf739dda27691d1     0 resources/webinterface/dashboard/images/vrkeyboard/textinput_touchpointer.png
-          2628      1 c2dd00445f55c907fdfa3746bdcc2006b6a837c6     0 resources/webinterface/dashboard/keyboard.html
-         25448      1 2b94aebece79273375e297d53bf6cc190603df7c     0 resources/webinterface/dashboard/keyboard.js
+          2628      1 6a1a341fcadc0607a57eac9033d8f27ad08f4ffa     0 resources/webinterface/dashboard/keyboard.html
+         25448      1 146395b2aeee11ac365a1e7eb6fbb196bf64a7ad     0 resources/webinterface/dashboard/keyboard.js
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/keyboards
           3481      1 53406bba10a649542c44da02b3e69e2c4cb3541f     0 resources/webinterface/dashboard/keyboards/layout_base_overlay.json
           7074      1 2fe200da46cbf0660aa2daae3a52cfaf749a9138     0 resources/webinterface/dashboard/keyboards/layout_brazilian_overlay.json
@@ -3263,17 +3309,17 @@ Total bytes compressed : 367268880
           7065      1 24ed81cb282a08a0c670f4762d9d5cc67f0b3412     0 resources/webinterface/dashboard/keyboards/layout_turkish_overlay.json
           7123      1 af317dd439c8c7bff954a1de199a988fbd588541     0 resources/webinterface/dashboard/keyboards/layout_ukranian_overlay.json
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/libraries
-         13241      1 737b72509b4ad091bfbc3a96fa87b8854ba01264     0 resources/webinterface/dashboard/libraries/libraries~2f4d5a466.js
-         13241      1 9b8f15a73166b57b69ee50ce10a15481afc92f25     0 resources/webinterface/dashboard/libraries/libraries~384a8a9f6.js
-         13241      1 c43cdf02963f991e39c57edbbdfce39d7ecbf961     0 resources/webinterface/dashboard/libraries/libraries~462078e7f.js
-         13241      1 2f87f1ec6b06aeaab58cfbb76d9921f5a84457cb     0 resources/webinterface/dashboard/libraries/libraries~7316aad94.js
-        160399      1 6c21833743a1e2109006dccf334ac585e6f9201a     0 resources/webinterface/dashboard/libraries/libraries~8012d0c89.js
-         15832      1 242f9ebd075aaca2b7e0d53aba55cda89a232f2c     0 resources/webinterface/dashboard/libraries/libraries~837d8d061.js
-        152426      1 4281276b5d9ea20b7cfeaf6bfc653cdd159807b2     0 resources/webinterface/dashboard/libraries/libraries~989880c99.js
-         13241      1 a8b2401b250e2499a25f15e6c1c9954312661a6b     0 resources/webinterface/dashboard/libraries/libraries~b09699436.js
-         13241      1 3b55bc36576bbab0b0da356318f5501854d35a38     0 resources/webinterface/dashboard/libraries/libraries~d57015099.js
-         57352      1 9f13a7aac535352971114db61f6925b9b8ce505c     0 resources/webinterface/dashboard/libraries/libraries~e59f90316.js
-         61424      1 172110a6a15c6720b18ce5c2ea01db0a7bb4e346     0 resources/webinterface/dashboard/libraries/libraries~f9de2b6b6.js
+         13241      1 8b5e97c97231874e7fc361688815301124961856     0 resources/webinterface/dashboard/libraries/libraries~2f4d5a466.js
+         13241      1 662d73c8ab24d0725ce4ee45ddff876774724173     0 resources/webinterface/dashboard/libraries/libraries~384a8a9f6.js
+         13241      1 dfcdcec90ee3f4f8dc4628f21f68d1aee2a088d7     0 resources/webinterface/dashboard/libraries/libraries~462078e7f.js
+         13241      1 f9088d70cf1722a3e35ba1bf486c6348899ef6d6     0 resources/webinterface/dashboard/libraries/libraries~7316aad94.js
+        160399      1 3a287fee71592800c10a25624545e61d712192c9     0 resources/webinterface/dashboard/libraries/libraries~8012d0c89.js
+         15832      1 1e3702ae93eabd992204f3df90b9d02097eff7c1     0 resources/webinterface/dashboard/libraries/libraries~837d8d061.js
+        152426      1 5c00122ffddaec09ccc19506c774ffb9f12e9707     0 resources/webinterface/dashboard/libraries/libraries~989880c99.js
+         13241      1 97d3cc6af9fcd91bca31fe52bf1f52dab25c3a9a     0 resources/webinterface/dashboard/libraries/libraries~b09699436.js
+         13241      1 23a98d023a7d19f79b3905fbecb295617b2d77ba     0 resources/webinterface/dashboard/libraries/libraries~d57015099.js
+         57352      1 ce57e49c8859d7c695788f84520dccee429d9a8d     0 resources/webinterface/dashboard/libraries/libraries~e59f90316.js
+         61424      1 e1208e47ec502ce6e3e8f8565de06cad6355b3c8     0 resources/webinterface/dashboard/libraries/libraries~f9de2b6b6.js
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/localization
          41530      1 eaa1b90aad257e631b90c1d31ed7bfab7ceea22a     0 resources/webinterface/dashboard/localization/bindingui_brazilian.json
          58319      1 c4357419b3577e1987576d735f2828c624c325c2     0 resources/webinterface/dashboard/localization/bindingui_bulgarian.json
@@ -3336,7 +3382,7 @@ Total bytes compressed : 367268880
          39251      1 043e57b3e472e21696d2e1f41ef9723296e3c9b6     0 resources/webinterface/dashboard/localization/vrmonitor_czech.json
          37600      1 1fef0d1ff9237bdee292e17c6198aefd6e496df0     0 resources/webinterface/dashboard/localization/vrmonitor_danish.json
          39045      1 18c593ea7c41e4cf3c43eff90e66e87954ec4416     0 resources/webinterface/dashboard/localization/vrmonitor_dutch.json
-         36426      1 6c7d8af41d699879bcf38c9f9a8c8f7f12d6c2f5     0 resources/webinterface/dashboard/localization/vrmonitor_english.json
+         36684      1 0dc72d88a3a2e2afa8d567e565caa873b227e6f7     0 resources/webinterface/dashboard/localization/vrmonitor_english.json
          39062      1 1e2760b84e4685348271115fe6bb98fa8ed4b487     0 resources/webinterface/dashboard/localization/vrmonitor_finnish.json
          41714      1 c73fcd51420612486b7d17e8c3a8b93a7e5c48f8     0 resources/webinterface/dashboard/localization/vrmonitor_french.json
          39828      1 445f060799ead858878f0c6359e2f62f0674402a     0 resources/webinterface/dashboard/localization/vrmonitor_german.json
@@ -3387,12 +3433,12 @@ Total bytes compressed : 367268880
           4041      1 f1d7a222f5030d71ee1530ac44d04d58d589bea9     0 resources/webinterface/dashboard/localization/webhelper_turkish.json
           5069      1 a263c91f0ea8e86d8ab78e33812d4b5c29486661     0 resources/webinterface/dashboard/localization/webhelper_ukrainian.json
           4254      1 68f090a1656fbcd410073ec5620a2766d51379f3     0 resources/webinterface/dashboard/localization/webhelper_vietnamese.json
-          2471      1 364121a4a7028cbf321879fd6171593680846160     0 resources/webinterface/dashboard/messageoverlay.html
-         18192      1 0a0405679e4904b084b36c17aa19bdcbc646b441     0 resources/webinterface/dashboard/messageoverlay.js
-          2744      1 c54b82838870c884bd39ca5930ae11c972e266cd     0 resources/webinterface/dashboard/notificationtoast.html
-          3402      1 56daff1f647cbc5d5bd10c3339d69a478b576e57     0 resources/webinterface/dashboard/notificationtoast.js
-          2741      1 b0019544499f79261d119cffa39b70c9c8bd2e26     0 resources/webinterface/dashboard/settings_desktop.html
-          2550      1 025cb4d47f7716f7855162349d5c30054684dc1f     0 resources/webinterface/dashboard/settings_desktop.js
+          2471      1 2614d2e5f267daa13fd55462c1b02598457790b5     0 resources/webinterface/dashboard/messageoverlay.html
+         18192      1 267ad6252f59cebed1b45999ae91d8d6d3786f3f     0 resources/webinterface/dashboard/messageoverlay.js
+          2744      1 bbe8730407ed0259b712703a1c0097f4ce109d57     0 resources/webinterface/dashboard/notificationtoast.html
+          3402      1 70bc9eed4c5d611ddb719b994827c2acb9dc3a3d     0 resources/webinterface/dashboard/notificationtoast.js
+          2741      1 e75db7462bebf25ebdff8a2ef1859aa2120e2b80     0 resources/webinterface/dashboard/settings_desktop.html
+          2550      1 05638ffbc3ed99f7754d0743006558d233ebd1d1     0 resources/webinterface/dashboard/settings_desktop.js
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/dashboard/sounds
         151956      1 caf6737eafb496dc300b7d7e0ec7a9e8f87f799e     0 resources/webinterface/dashboard/sounds/activation.wav
         118218      1 7641783cfac973ee2cd4bde3825e50dce3947e6b     0 resources/webinterface/dashboard/sounds/activation_change_fail.wav
@@ -3445,10 +3491,10 @@ Total bytes compressed : 367268880
        2089014      2 e57e3548b85061188a27d73ef3f6c222db732d61     0 resources/webinterface/dashboard/suggestions/russian_compiled_words.dict
        1899183      2 ea052b25ca43011621259565e168992670d09030     0 resources/webinterface/dashboard/suggestions/spanish_compiled_words.dict
        1844461      2 ba84b935f9aef2457d8e030f3e97ab663924c442     0 resources/webinterface/dashboard/suggestions/swedish_compiled_words.dict
-          1845      1 07f7d455a13a0488578f8c41e6f790bbf8a78ac2     0 resources/webinterface/dashboard/systemreportviewer.html
-         17308      1 66caa0ff32282599498616de1615b8055b203cc7     0 resources/webinterface/dashboard/systemreportviewer.js
-          2626      1 a02b5f4780d7f9ef6e900517237a527d92ba2d85     0 resources/webinterface/dashboard/systemui.html
-        348967      1 3eef9e3d2f4ec010a1dc258002fc77d8bd2a89eb     0 resources/webinterface/dashboard/systemui.js
+          1845      1 82e195ed0d463978c40301b276c31d33b5177895     0 resources/webinterface/dashboard/systemreportviewer.html
+         17308      1 b99e2994c88837acba5ecea2113314141d05f177     0 resources/webinterface/dashboard/systemreportviewer.js
+          2626      1 4ebc77b3c2620f3c0bafb95db502bb68545e52b8     0 resources/webinterface/dashboard/systemui.html
+        348967      1 d2de67a2d7ef1df1c452cfdcd21eb8e2f3aaa39a     0 resources/webinterface/dashboard/systemui.js
           1406      1 57477c2180cc7b6b9e3064a46cf8da4ad7555540     0 resources/webinterface/favicon.ico
              0      0 0000000000000000000000000000000000000000    40 resources/webinterface/fonts
              0      0 0000000000000000000000000000000000000000     0 resources/webinterface/fonts/empty.dir

@@ -374,6 +374,7 @@ $0option $1;\n
 .?AV<lambda_365adaeade691c6cde68fb743fbb4d92>@@
 .?AV<lambda_389c8fe41f46b7f8c4c8989530d782e7>@@
 .?AV<lambda_3c85195176cd3898300602a21806a937>@@
+.?AV<lambda_4382378447db82575f2f4d648d18aed5>@@
 .?AV<lambda_4424f60dc6272e432e2332fad7aeb9c5>@@
 .?AV<lambda_4a9b2774a285f4dfe924e0309f606eba>@@
 .?AV<lambda_54acbce8f80b2b8330d7ca8793104353>@@
@@ -418,7 +419,6 @@ $0option $1;\n
 .?AV<lambda_ebfb3060989199463f5c1ef7bf995d6c>@@
 .?AV<lambda_ef6977c74465a2876672a374c84289d2>@@
 .?AV<lambda_f49b65d11ef2d167ad4f340ec140166d>@@
-.?AV<lambda_f707efaa7b1d67d6501f147667ecf0ae>@@
 .?AV<lambda_f766ba2fe7f115e7e0195e573d627269>@@
 .?AV<lambda_f960a9807a457412c4e279036762f0c8>@@
 .?AV<lambda_fc516da81c825e807315d1c3a1bd8f7a>@@
@@ -460,6 +460,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_365adaeade691c6cde68fb743fbb4d92>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_389c8fe41f46b7f8c4c8989530d782e7>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3c85195176cd3898300602a21806a937>@@XAEBVValue@Json@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_4382378447db82575f2f4d648d18aed5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4424f60dc6272e432e2332fad7aeb9c5>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4a9b2774a285f4dfe924e0309f606eba>@@_NW4EVREye@vr@@W4EVRDistortionChannel@3@_NIPEBUDistortionCoordinate_t@3@PEAU53@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54acbce8f80b2b8330d7ca8793104353>@@XAEBVValue@Json@@@std@@
@@ -504,7 +505,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_ebfb3060989199463f5c1ef7bf995d6c>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ef6977c74465a2876672a374c84289d2>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f49b65d11ef2d167ad4f340ec140166d>@@XAEBVValue@Json@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_f707efaa7b1d67d6501f147667ecf0ae>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f766ba2fe7f115e7e0195e573d627269>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f960a9807a457412c4e279036762f0c8>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_fc516da81c825e807315d1c3a1bd8f7a>@@XAEBVValue@Json@@@std@@
@@ -1242,8 +1242,8 @@ $0option $1;\n
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
-10:56:55
 123456789
+18:26:32
 1e+9999
 3333
 3333UUUU
@@ -1257,6 +1257,7 @@ $0option $1;\n
 : Tried to merge from a message with a different type.  to: 
 : exception thrown in JSON library
 :focus
+<ffv?
 <unknown>
 ================================================================================================\n
 ====> Detected GPU deadlock.. breaking cycle: %llu\n
@@ -1525,7 +1526,7 @@ CGraphicsDevice::ReadBackbufferSinglePixel
 CGraphicsDevice::ReleaseSync
 CGraphicsDevice::RenderDistort
 CGraphicsDevice::RenderStreamMultiViewsDirect
-CGraphicsDevice::RenderSystemLayer
+CGraphicsDevice::RenderSystemLayerEye
 CGraphicsDevice::RenderSystemLayerView
 CGraphicsDevice::SetDisplayModeWinRT
 CGraphicsDevice::SignalPresentFence
@@ -2715,6 +2716,8 @@ Hex and octal numbers must be integers.
 Hidden Area Holdout Mask
 Hidden Area Mask (%s)
 HiddenAreaMesh
+HiddenAreaSDFLeft
+HiddenAreaSDFRight
 Hmd DriverId is invalid (125)
 Hmd DriverId is our of bounds (211)
 Hmd Not Found (108)
@@ -3147,7 +3150,7 @@ Not starting vrserver for background app (121)
 Not writing %s because the texture was null
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notification mailbox init failed with %d\n
-Nov 19 2026
+Nov 24 2026
 Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:
@@ -3490,7 +3493,6 @@ ProtoFloatVec
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol message serialized itself in invalid fashion.
 Protocol message was modified concurrently during serialization.
-Q8ffv?
 QueryPerformanceCounter
 QueryPerformanceFrequency
 QueryServiceConfigW
@@ -5059,6 +5061,7 @@ Your OS does not support TdhEnumerateManifestProviderEvents.\n
 [Compositor] !!!! AcquireSync FAILED with unknown hr
 [Compositor] !!!! ReleaseSync FAILED with E_FAIL
 [Compositor] !!!! ReleaseSync FAILED with unknown hr
+[Compositor] !!!! Scene frame fence FAILED
 [Compositor] !!!! VirtualDisplay ReleaseSync FAILED
 [Compositor] AcquireSync FAILED with E_FAIL
 [Compositor] AcquireSync FAILED with E_FAIL [%u messages suppressed]
@@ -5119,9 +5122,22 @@ Your OS does not support TdhEnumerateManifestProviderEvents.\n
 [Compositor] Predicting for client:%fms Next:%fms Predict:%d Throttle:%d
 [Compositor] Predicting( %f ms )
 [Compositor] Predicting: %fms %fms
+[Compositor] QueueSceneFrameFenceWait:%llu
 [Compositor] Re-predicting( %f ms )
 [Compositor] Running Start - Async
+[Compositor] Scene apps stay on their sync textures: failed to create the scene frame fence
+[Compositor] Scene frame fence FAILED: couldn't signal it ourselves either
+[Compositor] Scene frame fence FAILED: couldn't signal it ourselves either [%u messages suppressed]
+[Compositor] Scene frame fence FAILED: couldn't signal it ourselves either [OMITTING additional logs for %d seconds]
+[Compositor] Scene frame fence FAILED: couldn't wait on it
+[Compositor] Scene frame fence FAILED: couldn't wait on it [%u messages suppressed]
+[Compositor] Scene frame fence FAILED: couldn't wait on it [OMITTING additional logs for %d seconds]
+[Compositor] Scene frame fence FAILED: the app didn't finish its frame, signaling it ourselves
+[Compositor] Scene frame fence FAILED: the app didn't finish its frame, signaling it ourselves [%u messages suppressed]
+[Compositor] Scene frame fence FAILED: the app didn't finish its frame, signaling it ourselves [OMITTING additional logs for %d seconds]
 [Compositor] SendOverlayVSyncEvent[%d]
+[Compositor] Signaling the driver's frame fence instead of sharing a sync texture
+[Compositor] The driver keeps getting a sync texture: failed to open its frame fence (pid %u)
 [Compositor] Throttle++: Predict=%d Throttle=%d
 [Compositor] TimeSinceLastVSync: %f(%d)
 [Compositor] TotalRenderGpuMs: %f (Last=%f)
@@ -5134,6 +5150,7 @@ Your OS does not support TdhEnumerateManifestProviderEvents.\n
 [Compositor] VirtualDisplay:CopyPixel:AcquireSync(end)
 [Compositor] VirtualDisplay:CopyPixel:ReleaseSync(begin)
 [Compositor] VirtualDisplay:CopyPixel:ReleaseSync(end)
+[Compositor] Waiting on the scene frame fence instead of the app's sync texture
 [Compositor] WinRT::WaitForPresent failed!
 [Compositor] frameTimeout( %d ms )
 [Driver Direct] SubmitLayerClassic - Begin
@@ -5561,31 +5578,31 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\Retail\win64\2017\vrcompo
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\framemanager.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\geometry.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10464
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10675
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10888
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11171
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11316
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12396
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14485
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14495
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14643
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15283
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15308
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15477
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:20829
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22038
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22745
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23756
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24050
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4717
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5623
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5635
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6438
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:663
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8359
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8467
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9141
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10704
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:10915
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11128
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11434
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:11600
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:12676
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14763
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14773
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:14924
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15581
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15606
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:15775
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:21134
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:22346
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:23048
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24051
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:24347
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:4734
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5640
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:5652
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:6455
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:668
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8572
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:8680
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\graphicsdevice.cpp:9381
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\lasermouse.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:430
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\newframehandler.cpp:480
@@ -5603,16 +5620,16 @@ c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1018
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\systemlayer.cpp:1956
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:33
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\trackeddevicerenderer.cpp:334
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1103
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1353
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1363
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1466
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1735
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2095
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1118
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1368
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1378
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1481
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:1750
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:2031
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:259
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:470
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:6039
-c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:839
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:6019
+c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrcompositor.cpp:860
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrcompositor\vrmotionvectors.cpp:2188
 cached.last.poseIsValid
@@ -6767,12 +6784,16 @@ shaders/d3d11/panel_mask_vs.fxo
 shaders/d3d11/resample_lanczos3_vs.fxo
 shaders/d3d11/resample_lanczos3_x_ps.fxo
 shaders/d3d11/resample_lanczos3_y_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_x_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_downscale_x_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_y_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_downscale_y_ps.fxo
 shaders/d3d11/stream_multi_view_inner_ps.fxo
 shaders/d3d11/stream_multi_view_inner_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_x_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_x_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_x_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_y_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_y_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_y_vs.fxo
 shaders/d3d11/stream_multi_view_resample_vs.fxo
@@ -6887,6 +6908,8 @@ strcmp
 stream
 stream end
 stream error
+streamingSamplerInner
+streamingSamplerOuter
 strength
 strftime
 strictRoot

@@ -21,102 +21,110 @@
       "type": "joystick",
       "click": true,
       "touch": true,
-      "order": 2
-    },
-    "/input/trigger": {
-      "type": "trigger",
-      "value": true,
-      "touch": true,
-      "order": 5
-    },
-    "/input/grip": {
-      "type": "trigger",
-      "value": true,
-      "touch": true,
-      "order": 7
+      "order": 2,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/trigger_sensor": {
       "type": "trigger",
       "value": true,
-      "order": 6
+      "click": true,
+      "touch": true,
+      "order": 6,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/grip_sensor": {
       "type": "trigger",
       "value": true,
-      "order": 8
+      "click": true,
+      "order": 8,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/cross": {
       "type": "button",
       "side": "right",
       "click": true,
       "touch": true,
-      "order": 4
+      "order": 4,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/circle": {
       "type": "button",
       "side": "right",
       "click": true,
       "touch": true,
-      "order": 3
+      "order": 3,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/square": {
       "type": "button",
       "side": "left",
       "click": true,
       "touch": true,
-      "order": 4
+      "order": 4,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/triangle": {
       "type": "button",
       "side": "left",
       "click": true,
       "touch": true,
-      "order": 3
+      "order": 3,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/ps": {
       "type": "button",
       "click": true,
       "touch": true,
-      "order": 0
+      "order": 0,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/options": {
       "type": "button",
       "side": "right",
       "click": true,
       "touch": true,
-      "order": 1
+      "order": 1,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/create": {
       "type": "button",
       "side": "left",
       "click": true,
       "touch": true,
-      "order": 1
+      "order": 1,
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/skeleton/right": {
       "type": "skeleton",
       "side": "right",
-      "skeleton": "/skeleton/hand/right"
+      "skeleton": "/skeleton/hand/right",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/input/skeleton/left": {
       "type": "skeleton",
       "side": "left",
-      "skeleton": "/skeleton/hand/left"
+      "skeleton": "/skeleton/hand/left",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/output/haptic": {
-      "type": "vibration"
+      "type": "vibration",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/pose/raw": {
-      "type": "pose"
+      "type": "pose",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/pose/grip": {
-      "type": "pose"
+      "type": "pose",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/pose/tip": {
-      "type": "pose"
+      "type": "pose",
+      "binding_image_point" : [ 75, 22 ]
     },
     "/pose/openxr_aim": {
-      "type": "pose"
+      "type": "pose",
+      "binding_image_point" : [ 75, 22 ]
     }
   }
 }

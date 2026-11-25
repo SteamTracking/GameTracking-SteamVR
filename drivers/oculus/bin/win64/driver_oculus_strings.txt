@@ -1693,12 +1693,16 @@ shaders/d3d11/panel_mask_vs.fxo
 shaders/d3d11/resample_lanczos3_vs.fxo
 shaders/d3d11/resample_lanczos3_x_ps.fxo
 shaders/d3d11/resample_lanczos3_y_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_x_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_downscale_x_ps.fxo
+shaders/d3d11/stream_multi_view_downscale_y_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_downscale_y_ps.fxo
 shaders/d3d11/stream_multi_view_inner_ps.fxo
 shaders/d3d11/stream_multi_view_inner_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_x_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_x_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_x_vs.fxo
+shaders/d3d11/stream_multi_view_reproject_y_mitchell_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_y_ps.fxo
 shaders/d3d11/stream_multi_view_reproject_y_vs.fxo
 shaders/d3d11/stream_multi_view_resample_vs.fxo

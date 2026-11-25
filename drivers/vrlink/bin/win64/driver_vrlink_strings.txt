@@ -374,7 +374,6 @@ $0option $1;\n
 .?AV<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@
 .?AV<lambda_20e1bdb94718060666138843bb694dab>@@
 .?AV<lambda_2d4b9bd805c205933c366a2a96e134e0>@@
-.?AV<lambda_32e5c6af8154400f9c9f730f600844a6>@@
 .?AV<lambda_3775199eb374ee8b8777545cef56c745>@@
 .?AV<lambda_3a1191368f2f8e8f851d1ab47ccdcdec>@@
 .?AV<lambda_3fd6e5ca82e0518e289160675f532929>@@
@@ -386,6 +385,7 @@ $0option $1;\n
 .?AV<lambda_5f2f38a9153843ca6d4ff208fbcf0120>@@
 .?AV<lambda_60cdc4cb8ee60094e6a0c866d2c0a211>@@
 .?AV<lambda_61a88cca90780c9ba5f69c4b0104d084>@@
+.?AV<lambda_620f1a7e38f093f7f1b9cb15ade7e20d>@@
 .?AV<lambda_68b991d696b8e2a81f80a7b175334808>@@
 .?AV<lambda_6ec17f223e26048c035c2b90927c525e>@@
 .?AV<lambda_6ee8ddb1e705c854f8d4f87755c0223f>@@
@@ -471,7 +471,6 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_2059f72672dc22d0b0f88a2edd0014c8>@@HPEAEHG_K_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_20e1bdb94718060666138843bb694dab>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2d4b9bd805c205933c366a2a96e134e0>@@XW4ELogLevel@@PEBDPEAX@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_32e5c6af8154400f9c9f730f600844a6>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3775199eb374ee8b8777545cef56c745>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3a1191368f2f8e8f851d1ab47ccdcdec>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3fd6e5ca82e0518e289160675f532929>@@_NPEAXPEAU_SP_DEVINFO_DATA@@@std@@
@@ -483,6 +482,7 @@ $0option $1;\n
 .?AV?$_Func_impl_no_alloc@V<lambda_5f2f38a9153843ca6d4ff208fbcf0120>@@XAEBVValue@Json@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_60cdc4cb8ee60094e6a0c866d2c0a211>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_61a88cca90780c9ba5f69c4b0104d084>@@XW4ValueTransportID@@_N@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_620f1a7e38f093f7f1b9cb15ade7e20d>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_68b991d696b8e2a81f80a7b175334808>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_6ec17f223e26048c035c2b90927c525e>@@XW4ValueTransportID@@_N@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_6ee8ddb1e705c854f8d4f87755c0223f>@@XW4ValueTransportID@@_N@std@@
@@ -812,7 +812,6 @@ $0option $1;\n
 /driver_vrlink/client_version
 /driver_vrlink/default_inner_horizontal_degrees
 /driver_vrlink/default_stream_format_width
-/driver_vrlink/effective_foveated_resolution
 /driver_vrlink/foveation_enabled
 /driver_vrlink/max_stream_format_width
 /driver_vrlink/min_stream_format_width
@@ -2728,6 +2727,12 @@ Failed to send link bandwidth measurement\n
 Failed to set QoS on socket (%s)\n
 Failed to set thread %p priority: SetThreadPriority failed with %x\n
 Failed to set thread %p priority: invalid priority %d\n
+Failed to signal the frame done fence
+Failed to signal the frame done fence [%u messages suppressed]
+Failed to signal the frame done fence [OMITTING additional logs for %d seconds]
+Failed to wait on the frame fence
+Failed to wait on the frame fence [%u messages suppressed]
+Failed to wait on the frame fence [OMITTING additional logs for %d seconds]
 False
 Fatal
 Fatal: Bad server address with -c [server] : %s\n
@@ -2795,6 +2800,7 @@ FrameRateExtD
 FrameRateExtN
 FrameType
 FrameWidth
+Frames stay on the sync texture: failed to create shared frame fences
 FreeLibrary
 Full Reinit
 Function not implemented
@@ -5385,12 +5391,12 @@ ZUINT64
 [SVLControllerHand] Activating hand tracking driver
 [SVLControllerHand] Error activating controller, Prop_ControllerType_String not set\n
 [SVLControllerHand] Error activating controller, Prop_ModelNumber_String not set\n
-[SVLControllerHand] Error activating controller, VTE_StaticProps_t not available\n
+[SVLControllerHand] Error activating controller, no hand tracking VTE_StaticProps_t captured\n
 [SVLController] Activate Error: Unsupported controller type "%s"\n
 [SVLController] Activating controller on TrackedDeviceIndex_t %d\n
 [SVLController] Error activating controller, Prop_ControllerType_String not set\n
 [SVLController] Error activating controller, Prop_ModelNumber_String not set\n
-[SVLController] Error activating controller, VTE_StaticProps_t not available\n
+[SVLController] Error activating controller, no controller VTE_StaticProps_t captured\n
 [SVLController] Finished activation
 [SVLController] Haptic Failed to send\n
 [SVLController] Overriding Quest specific properties for %s\n
@@ -6054,11 +6060,11 @@ c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\animation\animresource
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcommon\vrmailbox.cpp
 c:\buildslave\steamvr_rel_win64\build\src\common\vrcore\src\logbuffer.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\Retail\win64\2017\driver_vrlink.pdb
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3210
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3369
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3488
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1419
-c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1452
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3216
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3364
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmd.cpp:3483
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1443
+c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\hmdd3d11.cpp:1519
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\steamvrlink.cpp
 c:\buildslave\steamvr_rel_win64\build\src\vrlink\driver_vrlink\videonvenc.cpp:1435
 cACertificate
@@ -7309,6 +7315,9 @@ fputc
 fputs
 fr_fr
 fraction
+frameFenceAmd
+frameFenceIntel
+frameFenceNvidia
 frame_controller
 frame_controller_
 frameid
@@ -8830,7 +8839,6 @@ pkparameters2group failure
 pl_pl
 playing
 playstation_vr2_sense
-playstation_vr2_sense_controller
 point arithmetic failure
 point at infinity
 point coordinates blind failure
@@ -8909,6 +8917,12 @@ proxyCertInfo
 proxyPolicy
 pseudonym
 pss saltlen too small
+psvr2_error.png
+psvr2_info.png
+psvr2_off.png
+psvr2_ready.png
+psvr2_ready_low.png
+psvr2_searching.gif
 pt_br
 pt_pt
 pub: 
@@ -10009,6 +10023,7 @@ vrcombined_log.txt
 vrcompositor
 vrcompositor_systemlayer
 vrlink
+vrlink.client
 vrlink_
 vrlink_aftm_
 vrlink_aftm_*.csv
@@ -10028,6 +10043,7 @@ vrlink_store
 vrshared_base.proto
 vrwebui_dashboard
 vrwebui_dashboardactionstore
+waiting on the frame fence instead of the sync texture
 wap-wsg
 wap-wsg-idm-ecid-wtls1
 wap-wsg-idm-ecid-wtls10
@@ -10141,6 +10157,12 @@ zone
 {oculus}/input/touch_profile.json
 {vrlink}
 {vrlink}/icons/
+{vrlink}/icons/headset_applevisionpro_error.png
+{vrlink}/icons/headset_applevisionpro_info.png
+{vrlink}/icons/headset_applevisionpro_low.png
+{vrlink}/icons/headset_applevisionpro_off.png
+{vrlink}/icons/headset_applevisionpro_ready.png
+{vrlink}/icons/headset_applevisionpro_searching.gif
 {vrlink}/icons/headset_pico4_error.png
 {vrlink}/icons/headset_pico4_info.png
 {vrlink}/icons/headset_pico4_off.png

@@ -90,6 +90,9 @@
         "enableLinuxVulkanAsync": false,
         "enableSafeMode": false,
         "preferredRefreshRate": 90.0,
+        "chromaKeyMode": 0,
+        "chromaKeyColor": 2,
+        "chromaKeyNoiseFloor": 0.3,
         "hmdDisplayColorGainR": 1.0,
         "hmdDisplayColorGainG": 1.0,
         "hmdDisplayColorGainB": 1.0,
@@ -129,7 +132,9 @@
         "performanceProfile": "Performance",
         "proxThresholdMode": 0,
         "preferredFoveatedAngle": 0.0,
-        "highlightFoveatedArea": 0
+        "highlightFoveatedArea": 0,
+        "streamingSamplerOuter": 0,
+        "streamingSamplerInner": 0
     },
     "openxr": {
         "metaUnityPluginCompatibility": 0

@@ -1715,10 +1715,10 @@ $0option $1;\n
 0123456789abcdef
 1.2.5
 1/2/4/8/16-bit only
-10:56:55
 11 4 22 44 44 22 444444
 127.0.0.1
 127.0.0.1:
+18:26:32
 1e+9999
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 5I)7
@@ -3502,7 +3502,7 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 NotificationCount
 Notification_BasestationsTooFarApart
 Notification_Detected
-Nov 19 2026
+Nov 24 2026
 NumDroppedFrames
 NumDroppedFrames: %d\n
 NumDroppedFramesLoading
@@ -6176,6 +6176,15 @@ chaperone_info.vrchap
 children
 chord_%d_%lu
 chords
+chromaKeyColor
+chromaKeyMode
+chromaKeyNoiseFloor
+chroma_key_color
+chroma_key_color parameter out of range
+chroma_key_mode
+chroma_key_mode parameter out of range
+chroma_key_noise_floor
+chroma_key_noise_floor parameter out of range
 chunked
 class
 classicDashboardLayout

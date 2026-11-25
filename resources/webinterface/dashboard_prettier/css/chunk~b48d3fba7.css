@@ -642,6 +642,9 @@ body.SGApp .SettingsSidebarButton .Label {
   max-width: 26rem;
   text-align: left;
 }
+.SettingsItemValueLabel.Multiline {
+  white-space: pre-line;
+}
 .SettingsItem + .SettingsItemValueLabel {
   margin-top: calc(var(--settings-control-spacing) * -0.5);
 }
