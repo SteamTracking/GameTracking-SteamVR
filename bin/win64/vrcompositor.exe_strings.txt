@@ -1242,8 +1242,8 @@ $0option $1;\n
 1.2.5
 1.5.26
 1/2/4/8/16-bit only
+10:35:49
 123456789
-18:26:32
 1e+9999
 3333
 3333UUUU
@@ -3150,7 +3150,7 @@ Not starting vrserver for background app (121)
 Not writing %s because the texture was null
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Notification mailbox init failed with %d\n
-Nov 24 2026
+Nov 26 2026
 Numbers starting with leading zero must be in octal.
 NvAPI
 NvAPI DisplayModes:

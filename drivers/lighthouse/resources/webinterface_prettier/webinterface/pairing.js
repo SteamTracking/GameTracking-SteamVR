@@ -1,4 +1,4 @@
-var CLSTAMP = "11274938";
+var CLSTAMP = "11280111";
 (() => {
   var e,
     t = {
@@ -23733,7 +23733,7 @@ var CLSTAMP = "11274938";
                 ? void 0
                 : e.call(VRHTML)) + "",
             ),
-              n.set_webpack_build_timestamp(1795573629);
+              n.set_webpack_build_timestamp(1795717871);
             const r =
               null ===
                 (t =
@@ -51447,7 +51447,7 @@ var CLSTAMP = "11274938";
             }),
             i.createElement(Co, {
               label: d("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1795573629e3).toLocaleString() + "",
+              value: new Date(1795717871e3).toLocaleString() + "",
             }),
             i.createElement(Co, {
               label: d("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),

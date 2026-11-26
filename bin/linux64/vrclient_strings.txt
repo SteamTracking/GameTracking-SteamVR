@@ -1984,7 +1984,7 @@ $0rpc $1(.$2) returns (.$3)
 ?FbPKSsS0_PKN8tinygltf5ImageEbPKNS1_11FsCallbacksEPKNS1_12URICallbacksEPSsPvE
 ?N2vr10IVRMCStoreE
 ?N5facet15IVkInteropImageE
-@ffffff%@ffffff%@
+@ffffff%@ffffff%@sm9
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than 
 A valid JSON document must be either an array or an object value.

@@ -1,4 +1,4 @@
-var CLSTAMP = "11274938";
+var CLSTAMP = "11280111";
 (self.webpackChunkvrwebui = self.webpackChunkvrwebui || []).push([
   [170],
   {
@@ -4038,7 +4038,7 @@ var CLSTAMP = "11274938";
               ? void 0
               : e.call(VRHTML)) + "",
           ),
-            r.set_webpack_build_timestamp(1795573629);
+            r.set_webpack_build_timestamp(1795717871);
           const o =
             null ===
               (t =
